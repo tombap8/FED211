@@ -2,13 +2,19 @@
 
 - 다운로드 설치후
 1. 확장프로그램 설치
- 1)왼쪽 메뉴 중 extension 버튼을 클릭
+ 1) 왼쪽 메뉴 중 extension(확장) 버튼을 클릭
  2) 검색으로 확장 플러그인 선택
- 3) install버튼으로 선택
+ 3) install(설치)버튼으로 선택
 
 2. 필수 플러그인
  1) korean language pack : 한국어팩
-   : 
+   : 모든 메뉴 등 한국어 지원
+ 2) image preview
+   : 이미지 미리보기 기능 지원
+ 3) Live Server
+   : 브라우저 실시간 미리보기
+ 4) Beautify : 자동줄맞춤
+  -> 단축키 지정하기
 
 
 
