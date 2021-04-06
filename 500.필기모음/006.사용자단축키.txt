@@ -1,3 +1,4 @@
 [ 사용자 단축키 ]
 1. 모두 저장 : ctrl+alt+S
-2. Beautify 플러그인 : 
+2. Beautify 플러그인 : ctrl+alt+B
+3. Wrap with Abbreviation(약어로 랩핑) : ctrl+shift+A
