@@ -14,4 +14,16 @@ https://github.com/tombap8/FED211
 - 개별 페이지에서 저장하기 :
     Raw버튼 클릭 후 나온 페이지에서 오른쪽 버튼
     "다른 이름으로 저장"
+7. 사이트 벤치마킹 포털
+(1) 디비컷
+https://www.dbcut.com/bbs/index.php
+(2) 굿디자인웹
+http://www.gdweb.co.kr/main/
+(3) 어워즈
+https://www.awwwards.com/
+
+8. 무료호스팅
+- 닷홈
+https://www.dothome.co.kr/index.php
+- 회원가입 후 무료호스팅
 
