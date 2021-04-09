@@ -118,7 +118,34 @@ css상에 명시하기 위해 사용하거나
             한번에 보내기값-left,center,right
     - 세로값: 위쪽끝기준 +값은 아래쪽방향(-는 윗쪽)
             한번에 보내기값-top,center,bottom
+    - %단위 일경우 정중앙은 50%임! (상대적으로 계산함)
+ 6) 배경크기 - background-size: 가로크기 세로크기;
+    - 가로크기: px, %, auto
+    - 세로크기: px, %, auto
+    - auto값은 이미지 고유비율을 유지한다는 의미
+    - cover값을 사용하면 이미지를 비율유지하여 
+    정중앙으로 채우기를 해준다.
 
+    [ 실제 적용코드 ]
+        /* background 설정 */
+
+        /* 1.배경색 (bgc) */
+        background-color: #e465dd;
+
+        /* 2.배경이미지 (bgi) */
+        background-image: url(imgs/dc1.png);
+
+        /* 3.배경반복 (bgr) */
+        background-repeat: no-repeat;
+
+        /* 4.배경고정 (bga) */
+        /* background-attachment: fixed; */
+
+        /* 5.배경위치 (bgp) */
+        background-position: center;
+
+        /* 6.배경크기 (bgz) */
+        background-size: cover;
 
 
  
