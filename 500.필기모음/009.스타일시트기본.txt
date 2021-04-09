@@ -113,6 +113,11 @@ css상에 명시하기 위해 사용하거나
             repeat-y (y축반복)
  4) 배경고정 - background-attachment: fixed;
     - 스크롤시에 배경이 보이는 화면에 고정됨
+ 5) 배경위치 - background-position: 가로값 세로값;
+    - 가로값: 왼쪽끝기준 +값은 오른쪽방향(-는 왼쪽)
+            한번에 보내기값-left,center,right
+    - 세로값: 위쪽끝기준 +값은 아래쪽방향(-는 윗쪽)
+            한번에 보내기값-top,center,bottom
 
 
 
