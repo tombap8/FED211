@@ -5,21 +5,77 @@
         <meta charset="UTF-8">
         <title>쓸쓸하고 찬란하신(神) 도깨비</title>
         <style>
+            [ css를 쓰는 3가지 방법 ]
+
+            1. 인라인방식 : 요소에 style속성으로 셋팅
+            예) <div style="width:300px"></div>
+
+            2. 인터널방식 : style요소를 사용하여 셋팅
+            예) <style>
+                    h1{color: red;}
+                </style>
+
+            3. 익스터널방식 : 외부CSS파일을 불러와서 사용하는 방식
+            예) <link rel="stylesheet" href="css/style.css">
+
+            [ 기본 표현법 ]
+
+            선택자 {
+                속성명: 값;
+            }
+
+            [ 선택자 사용법 ]
+            1. 타입 선택자 : 요소명 하나만 쓰기
+            예) h1{}
+
+            2. 자손 선택자 : 띄어쓰기
+            예) ul li a{}
+
+            3. 자식 선택자 : 꺽쇠사용
+            - 직계자식을 선택
+            예) ul>li{}
+
+            4. 인접선택자 : 플러스 기호 사용
+            - 앞의 형제요소가 있는 요소 선택
+            예) h1+div{}
+
+            5. 인접다중선택자 : 틸드(~) 사용
+            : 선택요소 다음부터 끝까지 선택함
+            예) li:nth-child(4)~li{}
+
+            6. 그룹 선택자 : 콤마(,) 사용
+            - 다중요소 선택시
+            예) h1, h4, span {}
+
+            7. 아이디선택자 : 아이디요소
+            - #을 사용(한 페이지 안에 하나만 사용!)
+            예) #mlogo{}
+
+            8. 클래스선택자 : 클래스요소
+            - .을 사용(여러번 사용가능)
+            예) .cat{}
+
+
+
+
 
         </style>
     </head>
-    <body>
+    <body>       
         <!-- 1.타이틀 -->
-        <h1>
+        <h1 id="mlogo">
             <img src="imgs/bg_logo_a_01.png" alt="쓸쓸하고 찬란하신(神) 도깨비">
         </h1>
         <!-- 2.컨텐츠 영역 -->
         <div>
-
+            <div class="cat"></div>
+            <div class="cat"></div>
+            <div class="cat"></div>
+            <div class="cat"></div>
         </div>
         <!-- 3. 하단 영역 -->
-        <div>
-            
+        <div id="info">
+
         </div>
     </body>
 </html>
