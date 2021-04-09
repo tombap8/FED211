@@ -80,3 +80,22 @@ css상에 명시하기 위해 사용하거나
 -> :nth-child(n) 몇번째 자식요소
 
 11. CSS주석은 슬래쉬 사이에 별두개! /*주석*/
+
+12. CSS 속성들
+(1) 마진(margin) : 요소 바깥쪽 여백
+- margin: 값1; 4방설정
+- margin: 값1 값2; 위아래 양쪽
+- margin: 값1 값2 값3; 위 양쪽 아래
+- margin: 값1 값2 값3 값4; 위 오른 아래 왼 
+- 방향별로 설정값을 따로 할 수 있음
+    margin-top, margin-right, 
+    margin-bottom, margin-left
+
+(2) 패딩(padding) : 요소 안쪽 여백
+- padding: 값1; 4방설정
+- padding: 값1 값2; 위아래 양쪽
+- padding: 값1 값2 값3; 위 양쪽 아래
+- padding: 값1 값2 값3 값4; 위 오른 아래 왼 
+- 방향별로 설정값을 따로 할 수 있음
+    padding-top, padding-right, 
+    padding-bottom, padding-left
