@@ -89,6 +89,51 @@
                 overflow: hidden;
             }
 
+            /* 네번째 큰 박스 하위 */
+            .bx13{
+                background-image: url(imgs/dc1.png);
+            }
+            .bx14{
+                background-image: url(imgs/dc2.png);
+            }
+            .bx15{
+                background-image: url(imgs/dc3.png);
+            }
+            .bx16{
+                background-image: url(imgs/dc4.png);
+            }
+
+            /* 네번째 박스 하위 .bx는 float:left */
+            .wrap4 .bx{
+                float: left;
+            }
+            /* 네번째 박스에 가상요소로 clear:both
+            설정하기 */
+            .wrap4::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            /* 
+                 가상요소 after
+                 - 모든 요소는 가상요소를 2개 쓸 수 있다
+                 - 맨앞은 before
+                 - 맨뒤는 after
+                 - 표기법은 콜론을 2개하고 사용한다
+                 요소명::before / 요소명::after
+                 - 가상요소는 필수 속성으로 content를
+                 반드시 써야한다!!!
+                 - 일반적으로 content만 사용하면
+                 span태그를 쓴것과 비슷하게 inline임
+                 - display:block으로 설정하면
+                 마치 div태그를 쓴것과 비슷해진다
+                 - 맨끝에 오는 가상요소 after에다가
+                 clear:both를 적용하여 float을 해제함
+                 - 태그요소로 보이지 않기 때문에
+                 지워지거나 변경될 염려가 전혀없다!
+             */
+            
+
             /* 
                 block 박스를 옆으로 흘러가게하기
                 float속성을 사용한다!
