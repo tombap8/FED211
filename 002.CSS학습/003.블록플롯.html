@@ -62,8 +62,33 @@
             }
             .bx8{
                 background-image: url(imgs/dc4.png);
-                clear: both;                
+                clear: both;
+                
             }
+            /* 세번째 큰 박스 하위 */
+            .bx9{
+                background-image: url(imgs/dc1.png);
+            }
+            .bx10{
+                background-image: url(imgs/dc2.png);
+            }
+            .bx11{
+                background-image: url(imgs/dc3.png);
+            }
+            .bx12{
+                background-image: url(imgs/dc4.png);
+            }
+
+            /* 세번째 박스 하위 .bx는 float:left */
+            .wrap3 .bx{
+                float: left;
+            }
+            /* float으로 인한 부모박스가 자식요소의 
+            높이값을 인식못할 경우 넘치는 자식요소 숨기기 설정을 해준다! */
+            .wrap3{
+                overflow: hidden;
+            }
+
             /* 
                 block 박스를 옆으로 흘러가게하기
                 float속성을 사용한다!
@@ -101,6 +126,13 @@
             <div class="bx bx6"></div>
             <div class="bx bx7"></div>
             <div class="bx bx8"></div>
+        </div>
+        <div class="wrap wrap3">
+            <div class="bx bx9"></div>
+            <div class="bx bx10"></div>
+            <div class="bx bx11"></div>
+            <div class="bx bx12"></div>
+            <!-- <div style="clear: both;"></div> -->
         </div>
     </body>
 </html>
