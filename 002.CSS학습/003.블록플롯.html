@@ -42,11 +42,49 @@
             }
             .bx3{
                 background-image: url(imgs/dc3.png);
-                clear: left;
+                clear: both;
             }
             .bx4{
                 background-image: url(imgs/dc4.png);
             }
+            /* 두번째 큰 박스 하위 */
+            .bx5{
+                background-image: url(imgs/dc1.png);
+                float: left;
+            }
+            .bx6{
+                background-image: url(imgs/dc2.png);
+                float: left;
+            }
+            .bx7{
+                background-image: url(imgs/dc3.png);
+                float: left;
+            }
+            .bx8{
+                background-image: url(imgs/dc4.png);
+                clear: both;                
+            }
+            /* 
+                block 박스를 옆으로 흘러가게하기
+                float속성을 사용한다!
+                - block 요소를 옆으로 흐르게함
+                - 옵션: left - 나는 왼쪽에 있고
+                            너는 오른쪽으로 흘러가!
+                        right - 나는 오른쪽에 있고
+                            너는 왼쪽으로 흘러가!
+                - 블록요소 두개를 하나는 float:left
+                 또 하나는 float:right를 쓸 경우
+                 부모박스 양쪽 끝에 위치하게 된다!
+                - [중요사항!]
+                 -> float설정을 한 블록요소 아래의 
+                 형제 블록요소가 위의 float의 영향을
+                 받기 때문에 이를 지워야 한다!!!
+                 -> 지우는 방법은 clear속성을 사용함
+                 clear:both -> 양쪽방향의 float을
+                 모두 지운다는 의미
+                 (개별적으로 left,right가 있지만
+                  both일반적으로 많이 사용함!)
+             */
         </style>
     </head>
     <body>
@@ -57,6 +95,12 @@
             <div class="bx bx2"></div>
             <div class="bx bx3"></div>
             <div class="bx bx4"></div>
+        </div>
+        <div class="wrap">
+            <div class="bx bx5"></div>
+            <div class="bx bx6"></div>
+            <div class="bx bx7"></div>
+            <div class="bx bx8"></div>
         </div>
     </body>
 </html>
