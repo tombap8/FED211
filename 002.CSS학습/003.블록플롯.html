@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS 블록요소의 float</title>
+        <style>
+            h1{
+                text-align: center;
+                /* 글자정렬 중앙 */
+            }
+            /* 부모박스 */
+            .wrap{
+                border: 5px dashed #e416c8;
+                /* 경계선 */
+                margin: 10px;
+                /* 바깥여백 */
+                padding: 10px;
+                /* 안쪽여백 */
+            }
+            /* 블록박스 공통 디자인 */
+            .bx{
+                width: 300px;
+                height: 200px;
+                border: 5px ridge #ccc;
+
+                /* 배경이미지공통 */
+                background-repeat: no-repeat;
+                /* 배경반복여부 */
+                background-position: center;
+                /* 배경위치 */
+                background-size: cover;
+                /* 배경크기 */
+            }
+            /*  개별박스 디자인 */
+            .bx1{
+                background-image: url(imgs/dc1.png);
+            }
+            .bx2{
+                background-image: url(imgs/dc2.png);
+            }
+            .bx3{
+                background-image: url(imgs/dc3.png);
+            }
+            .bx4{
+                background-image: url(imgs/dc4.png);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS 블록요소의 float</h1>
+
+        <div class="wrap">
+            <div class="bx bx1"></div>
+            <div class="bx bx2"></div>
+            <div class="bx bx3"></div>
+            <div class="bx bx4"></div>
+        </div>
+    </body>
+</html>
