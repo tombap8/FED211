@@ -100,6 +100,7 @@
                 - 블록요소 두개를 하나는 float:left
                  또 하나는 float:right를 쓸 경우
                  부모박스 양쪽 끝에 위치하게 된다!
+
                 - [중요사항!]
                  -> float설정을 한 블록요소 아래의 
                  형제 블록요소가 위의 float의 영향을
@@ -109,6 +110,20 @@
                  모두 지운다는 의미
                  (개별적으로 left,right가 있지만
                   both일반적으로 많이 사용함!)
+
+                [중요사항 또하나!]
+                - 자식 블록요소가 모두 float:left로
+                흘러갈 경우 부모박스는 자식요소의 
+                높이값을 인식하지 못하고 높이값을
+                가지지 않게 된다. 자식요소는 모두
+                부모요소 바깥으로 나가 있게 된다!
+                -> 해결방법은?
+                1) 부모요소에게 overflow:hidden
+                을 준다. 즉 넘치는 자식요소 숨기기설정
+                으로 이 문제를 해결
+                2) float을 적용한 요소 아래에 
+                다른 블록요소를 만들고 clear:both를
+                설정한다.(일반적으로 가상요소로 처리함)
              */
         </style>
     </head>
@@ -133,6 +148,12 @@
             <div class="bx bx11"></div>
             <div class="bx bx12"></div>
             <!-- <div style="clear: both;"></div> -->
+        </div>
+        <div class="wrap wrap4">
+            <div class="bx bx13"></div>
+            <div class="bx bx14"></div>
+            <div class="bx bx15"></div>
+            <div class="bx bx16"></div>
         </div>
     </body>
 </html>
