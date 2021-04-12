@@ -3,10 +3,43 @@
     <head>
         <meta charset="utf-8">
         <title>웹퍼블리셔과정 - 탐쌤</title>
+        <style>
+            html,body{
+                margin: 0;
+                padding: 0;
+            }
+            /* 전체부모박스 */
+            .wrap{
+                width: 1200px;
+                border: 2px solid #ccc;
+
+                /* 블록박스 가로중앙정렬 - 마영오씨! */
+                margin: 0 auto;
+                /* 마진: 위아래0 양쪽auto */
+
+                /* float으로 인한 높이값 상실처리 */
+                overflow: hidden;
+            }
+
+            /* 타이틀 */
+            #tit{
+                text-align: center;
+            }
+
+            /* 프로젝트 박스 공통 */
+            .pjbx{
+                width: 50%;
+                float: left;
+            }
+
+
+
+        </style>
+        
     </head>
     <body>
         <div class="wrap">
-            <h1>웹퍼블리셔과정 - 탐쌤</h1>
+            <h1 id="tit">웹퍼블리셔과정 - 탐쌤</h1>
             <!-- 1. 공통 프로젝트 박스 -->
             <div class="pjbx cpj">
                 <h2>공통 프로젝트</h2>
