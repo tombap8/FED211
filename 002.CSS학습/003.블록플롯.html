@@ -98,6 +98,20 @@
             }
             .bx15{
                 background-image: url(imgs/dc3.png);
+                clear: left;
+                /* 
+                    [블록요소가 float:left로 옆으로
+                    흐르다가 줄바꿈을 하고 싶은 경우]
+
+                    줄바꿈을 할 요소에 clear를 셋팅함
+                    이때, left/right/both 중 무엇을 사용하나?
+
+                    직전요소의 float이 무엇인지가 중요!
+                    
+                    float:left 이므로 clear:left로함
+                    clear:both도 되는데 이유는
+                    양쪽을 모두 지우니 left도 지워짐
+                 */
             }
             .bx16{
                 background-image: url(imgs/dc4.png);
