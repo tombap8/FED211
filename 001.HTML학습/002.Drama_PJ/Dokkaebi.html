@@ -87,9 +87,10 @@
         }
 
         /* 2-1-1.캐릭터이미지 */
-        div.cat > div:first-child > img {
+        div.cat>div:first-child>img {
             width: 100%;
         }
+
         /* 직계자식(>)으로 이미지요소를 선택해야
         그 하위의 자손이미지는 선택되지 않는다! */
         /* 
@@ -108,21 +109,43 @@
             이렇게 선택할 수 있다!
 
          */
-         /* 2-1-2.캐릭터이름 */
-         div.cat > div:first-child > span{
-             display: block;
-             /* span은 원래 inline이므로 width가
+        /* 2-1-2.캐릭터이름 */
+        div.cat>div:first-child>span {
+            display: block;
+            /* span은 원래 inline이므로 width가
              적용되지 않으므로 block으로 변경함 */
-             width: 100%;
-             text-align: center;
-             /* text-align 속성은 텍스트뿐 아니라 
+            width: 100%;
+            text-align: center;
+            /* text-align 속성은 텍스트뿐 아니라 
              인라인요소들을 블록박스에서 정렬을 변경함 */
-         }
-         /* 캐릭터이름 첫번째 이미지 숨기기 */
-         div.cat > div:first-child > span > img:first-child{
-             display: none;
-             /* 요소의 화면출력을 없애줌 */
-         }
+        }
+
+        /* 캐릭터이름 첫번째 이미지 숨기기 */
+        div.cat>div:first-child>span>img:first-child {
+            display: none;
+            /* 요소의 화면출력을 없애줌 */
+        }
+
+        /* 캐릭터 박스에 마우스 오버시 
+         첫번째 이름 이미지 보이고
+         두번째 이름 이미지 숨기기 */
+        div.cat:hover>div:first-child>span>img:first-child {
+            display: inline;
+            /* 이미지는 원래 inline이므로 다시돌아감 */
+        }
+
+        div.cat:hover>div:first-child>span>img:last-child {
+            display: none;
+        }
+
+        /* 
+            마우스 오버 가상클래스
+            :hover
+            - 기존 상태와 마우스가 올라간 상태를 구분
+            하여 디자인요소를 변경해주는 가상클래스
+            - 표현시 요소명 반드시 붙여서 사용함!
+            요소명:hover
+          */
     </style>
 </head>
 
