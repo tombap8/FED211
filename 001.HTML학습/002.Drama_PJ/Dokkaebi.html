@@ -87,9 +87,11 @@
         }
 
         /* 2-1-1.캐릭터이미지 */
-        div.cat > div:first-child img {
+        div.cat > div:first-child > img {
             width: 100%;
         }
+        /* 직계자식(>)으로 이미지요소를 선택해야
+        그 하위의 자손이미지는 선택되지 않는다! */
         /* 
             자식요소 선택하는 가상클래스
             - 가상클래스라는 이름은 마치 클래스를
@@ -106,6 +108,16 @@
             이렇게 선택할 수 있다!
 
          */
+         /* 2-1-2.캐릭터이름 */
+         div.cat > div:first-child > span{
+             display: block;
+             /* span은 원래 inline이므로 width가
+             적용되지 않으므로 block으로 변경함 */
+             width: 100%;
+             text-align: center;
+             /* text-align 속성은 텍스트뿐 아니라 
+             인라인요소들을 블록박스에서 정렬을 변경함 */
+         }
     </style>
 </head>
 
