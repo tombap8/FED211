@@ -59,7 +59,52 @@
         /* :link보다 일반적으로 a요소에 셋팅함 */
        color: green; 
        /* color는 글자색(예전엔 색은 모두 글자색임) */
+       text-decoration: none;
+       /* a요소는 기본적으로 밑줄이 셋팅되어 있으므로
+       이것을 없앤다 */
     }
+    /* 마우스 오버시 */
+    h2 a:hover{
+        color: hotpink;
+        text-decoration: underline;
+        /* underline(밑줄)/overline(윗줄)
+        line-through(중간줄) */
+    }
+
+    /* 보통 :active, :visited 는 잘 셋팅하지 않는다 */
+    /* 마우스를 누르고 있을때 */
+    /* h2 a:active{
+        color: red;
+    } */
+    /* 방문후 변경 */
+    /* h2 a:visited{
+        color: purple;
+    } */
+
+    /* 시인이름 */
+    h3{
+        width: 800px;
+        margin: 0 auto;
+        /* 마영오! 블록박스 가로중앙 */
+        /* 마영오를 쓸때는 가로크기가 있어야함! */
+        outline: 1px solid red;
+        /* 아웃라인은 보더와 셋팅법은 같으나
+        주변요소에 아무런 영향을 주지 않는다!
+        반면 보더는 박스크기나 주변요소에 영향을 준다
+        박스모델의 포함속성이다! */
+
+        /* 내부 인라인 컨텐츠 정렬 */
+        text-align: right;
+    }
+
+    /* 첫번째 파트 */
+    ul.part1{
+        width: 800px;
+        margin: 0 auto;
+        /* 마영오! */
+    }
+
+
 
 
 
