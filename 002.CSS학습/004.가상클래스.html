@@ -134,7 +134,57 @@
         color: blueviolet;
         font-weight: bold;
     }
+    /* 마우스 오버시 글자색 skyblue */
+    ul.part1 li:nth-child(2):hover{
+        color: skyblue;
+    }
 
+    /* 3번 li */
+    /* 글자크기 24px, 글자체 "돋움",
+    글자색 "brown", 글자두껍게, 이탤릭체 */
+    ul.part1 li:nth-child(3){
+        font-size: 24px;
+        font-family: "돋움";
+        color: brown;
+        font-weight: bold;
+        font-style: italic;
+    }
+    /* 마우스 오버시 이탤릭을 노멀로! */
+    ul.part1 li:nth-child(3):hover{
+        font-style: normal;
+    }
+
+    /* 4번 li */
+    /* 글자크기 50px, 글자체 "궁서",
+    글자색 "dodgerblue" */
+    ul.part1 li:nth-child(4){
+        font-size: 50px;
+        font-family: "궁서";
+        color: dodgerblue;
+    }
+    /* 마우스 오버시 배경색 yellow */
+    ul.part1 li:nth-child(4):hover{
+        background-color: #ff0;
+    }
+    /* 처음에 한글숨기기 */
+
+    /* 마우스 오버시 한글보이고 한자숨기기 */
+
+
+
+    /* 4번 이후 모든 li 전부셋팅 */
+    /* 틸드(~)를 사용한 다중형제요소 선택 */
+    ul.part1 li:nth-child(4)~li{
+        font-size: 25px;
+        font-family: "궁서";
+        color: orangered;
+    }
+    /* 4번 이후 li에 오버시 */
+    /* 글자크기 28px, 글자색 blue */
+    ul.part1 li:nth-child(4)~li:hover{
+        font-size: 28px;
+        color: blue;
+    }
 
 
 
@@ -155,7 +205,7 @@
         <li>나 보기가 역겨워</li>
         <li>가실 때에는</li>
         <li>말없이 고이 보내 드리우리다</li>
-        <li>영변에 약산</li>
+        <li><b>영변</b><span>寧邊</span>에 <b>약산</b><span>藥山</span></li>
         <li>진달래꽃</li>
         <li>아름 따다 가실 길에 뿌리우리다</li>
         <li>가시는 걸음 걸음</li>
