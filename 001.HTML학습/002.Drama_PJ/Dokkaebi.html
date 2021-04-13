@@ -20,7 +20,15 @@
      */
     body{
         /* 배경: 색이반고윙/크 */
-        background: url(imgs/bg_mainvisual.jpg) no-repeat fixed 0/cover;
+        background: url(imgs/bg_mainvisual.jpg) no-repeat fixed center/cover;
+
+        /* 배경 개별설정일 경우! */
+        /* background-color: transparent;
+        background-image: url(imgs/bg_mainvisual.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover; */
     }
 
 
@@ -50,6 +58,16 @@
             (width의 크기가 있어야함!)
          */
 
+         /* float설정의 자식요소 높이값 인식 */
+         overflow: hidden;
+         /* overflow는 박스가 넘치는 컨텐츠를 어떻게
+         보이게 할지에 대한 속성임! 
+            - 옵션: hidden(숨김)
+                    scroll(스크롤바)
+                    visible(보임)
+         */
+
+
         outline: 5px dotted red;
         /* 아웃라인(외곽선): 두께 종류 색상
         박스크기나 주변에 영향을 주지 않는다! */
@@ -58,6 +76,10 @@
     #cont > div.cat{
         width: 25%;
         height: 250px;
+
+        /* 블록요소를 옆으로 흐르게 */
+        float: left;
+
         outline: 2px dashed blue;
     }
 
