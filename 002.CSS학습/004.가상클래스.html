@@ -87,7 +87,8 @@
         margin: 0 auto;
         /* 마영오! 블록박스 가로중앙 */
         /* 마영오를 쓸때는 가로크기가 있어야함! */
-        outline: 1px solid red;
+
+        /* outline: 1px solid red; */
         /* 아웃라인은 보더와 셋팅법은 같으나
         주변요소에 아무런 영향을 주지 않는다!
         반면 보더는 박스크기나 주변요소에 영향을 준다
@@ -102,8 +103,11 @@
         width: 800px;
         margin: 0 auto;
         /* 마영오! */
-        border: 1px solid #ccc;
+        margin-top: 20px;
+        border: 2px solid #ccc;
         /* 테두리(보더) */
+        border-radius: 15px;
+        /* 모서리 둥글게 */
 
         /* 기본값 없애기 */
         padding: 20px 0;/* 위아래20px, 양쪽0 */
@@ -167,9 +171,16 @@
         background-color: #ff0;
     }
     /* 처음에 한글숨기기 */
-
+    ul.part1 li:nth-child(4) b{
+        display: none;
+    }
     /* 마우스 오버시 한글보이고 한자숨기기 */
-
+    ul.part1 li:nth-child(4):hover b{
+        display: inline;
+    }
+    ul.part1 li:nth-child(4):hover span{
+        display: none;
+    }
 
 
     /* 4번 이후 모든 li 전부셋팅 */
@@ -185,6 +196,16 @@
         font-size: 28px;
         color: blue;
     }
+
+    /* 마지막 li */
+    /* 
+        글자크기 40px, 글자체 "맑은 고딕", 글자색 coral
+     */
+     ul.part1 li:last-child{
+         font-size: 40px;
+         font-family: "맑은 고딕";
+         color: coral;
+     }
 
 
 
