@@ -70,7 +70,7 @@
             /* float설정의 자식요소 높이값 인식하기
             위해 overflow:hidden을 설정하였으나 캐릭터박스가 위로 올라갈때 가려지는 문제로 이 방법을 쓰지 않기로한다!*/
             /* overflow: hidden; */
-            
+
             /* overflow는 박스가 넘치는 컨텐츠를 어떻게
          보이게 할지에 대한 속성임! 
             - 옵션: hidden(숨김)
@@ -106,6 +106,9 @@
 
             /* 블록요소를 옆으로 흐르게 */
             float: left;
+
+            /* 트랜지션 설정 */
+            transition: margin-top .8s;
 
             outline: 2px dashed blue;
         }
@@ -251,8 +254,8 @@
                     소문자를 대문자로 바꿔서 작은글씨로
                     출력하는 속성이다.
                 */
-
-
+            /* 트랜지션 설정 */
+            transition: height .8s;
 
         }
         /* 캐릭터 박스에 오버시 설명박스 보이기 */
