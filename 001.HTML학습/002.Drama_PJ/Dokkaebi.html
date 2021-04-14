@@ -300,6 +300,50 @@
             위아래 마진은 적용되지 않는다!*/
         }
 
+        /* 
+        [ CSS 변화상태를 애니메이션 하기 ]
+
+        CSS 트랜지션(transition)
+        - css 설정을 변경할 경우 중간 변화과정을 
+        애니메이션으로 처리하는 CSS 표현기법
+
+        - 사용법:
+        transition : 속 시 이 지;
+                    (속성값 시간 이징 지연시간)
+
+        1. 속성값 (transition-property)
+        - 변화과정을 보여줄 속성값을 지정
+        예) height, width, margin 등
+        - 모든 여러가지 변화를 다 보여주고 싶을땐 all
+        - 만약 아무것도 안쓰면 all이다!
+
+        2. 시간 (transition-duration)
+        - 변화시간 (단위: 초단위로 끝에 s표기)
+        예) 3s, 7s, 0.5s, .4s 등
+        - 소수점 앞이 0일경우 생략가능
+
+        3. 이징(easing) (transition-timing-function)
+        - 애니메이션 가속도
+        1) ease-in : 처음에 느리게
+        2) ease-out : 끝날때 느리게
+        3) ease-in-out : 처음과 끝에 느리게
+        4) linear : 같은 속도로(등속도)
+
+        4. 지연시간 (transition-delay)
+        - 시간표기법과 같고 처음에 등장전
+        지연되는 시간을 셋팅함
+        예) 3s, .6s 등
+
+        [ 통합표기법 예시 ]
+        transition: all .5s ease-in-out 1s;
+        - 모든 변화과정을 0.5초동안 처음과 나중에
+        천천히 동작하며 1초후에 시작하라
+
+        transition: height .4s ease-out;
+        - 높이값 변화과정을 0.4초 동안 마지막에 천천히
+        동작하게 하라
+    */
+
 
     </style>
 </head>
