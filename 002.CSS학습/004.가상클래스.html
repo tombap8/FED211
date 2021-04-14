@@ -218,6 +218,40 @@
             color: coral;
         }
 
+        /* 두번째 파트 */
+        div.part2{
+            width: 800px;
+            /* 가로크기를 주지 않으면
+            기본 auto이므로 화면끝까지 자동채움
+            중앙정렬하려면(마영오를 쓰려면) 
+            반드시 가로 사이즈를 설정해야함*/
+            
+            border: 2px solid #ccc;
+            /* 
+                보더(테두리) : 두께 종류 색;
+                1. 두께 - 테두리 두께 (px)
+                2. 종류 - solid(선형), dotted(점선형)
+                          dashed(데쉬형), ridge(액자형)
+                          double(이중선형)
+                3. 색 - 보더색 (해시코드,reb등)
+             */
+
+            margin: 0 auto;
+            /* 블록박스 가로중앙정렬(마영오!) */
+            margin-top: 50px;/* 마진탑값만 덮어씀 */
+            margin-bottom: 120px;/* 마진버텀(아래쪽) */
+            border-radius: 15px;
+            /* 모서리 둥글게 */
+            text-align: center;
+            /* 인라인요소가 블록박스안에서 가로정렬 */
+
+        }
+
+
+
+
+
+
         /* 
         [ CSS 선택자 우선순위 ]
 
@@ -280,6 +314,8 @@
             /* 같은 선택자일때 아래코딩 한것이 덮어씀 */
             color: blue !important;
         }
+
+
     </style>
 </head>
 
