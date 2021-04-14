@@ -11,8 +11,8 @@
         body {
             margin: 0;
             padding: 0;
-            /* height: 100%; */
-            /* 모든 박스이 기본높이값은 auto임
+            height: 100%;
+            /* 모든 박스의 기본높이값은 auto임
         내용만큼 늘어남, 이것을 100%로 주면 보이는 화면
         크기를 기준하여 꽉채운다는 뜻 */
         }
@@ -31,6 +31,13 @@
         background-attachment: fixed;
         background-position: center;
         background-size: cover; */
+        }
+
+        /* 상단영역박스 */
+        #wrap{
+            height: 100%;
+            /* html,body에 설정된 보이는 화면높이를
+            꽉채운다 */
         }
 
 
@@ -176,6 +183,11 @@
 
         /* 2-2.캐릭터 설명박스 */
         div.cat>div:last-child {
+            height: 250px;
+            overflow-y: scroll;
+            /* 넘치는 자식요소 y축으로 스크롤표시 */
+
+
             /* 배경: 색이반고윙/크 */
             background: url(imgs/eachBG.jpg) no-repeat center/cover;
 
