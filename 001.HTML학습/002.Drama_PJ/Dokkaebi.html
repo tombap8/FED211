@@ -67,8 +67,9 @@
             (width의 크기가 있어야함!)
          */
 
-            /* float설정의 자식요소 높이값 인식 */
-            overflow: hidden;
+            /* float설정의 자식요소 높이값 인식하기
+            위해 overflow:hidden을 설정하였으나 캐릭터박스가 위로 올라갈때 가려지는 문제로 이 방법을 쓰지 않기로한다!*/
+            /* overflow: hidden; */
             /* overflow는 박스가 넘치는 컨텐츠를 어떻게
          보이게 할지에 대한 속성임! 
             - 옵션: hidden(숨김)
@@ -80,6 +81,14 @@
             outline: 5px dotted red;
             /* 아웃라인(외곽선): 두께 종류 색상
         박스크기나 주변에 영향을 주지 않는다! */
+        }
+
+        /* float해제 가상요소 
+        - 부모의 자식요소 높이값 인식가능 */
+        #cont::after{
+            content: '';
+            display: block;
+            clear: both;
         }
 
         /* 캐릭터박스 공통 */
@@ -252,7 +261,9 @@
         }
         /* 캐릭터 박스에 마우스 오버시 자기자신의 
         마진탑을 마이너스로 윗방향 이동하기 */
-        div.cat:hover{
+        /* 우선순위 올리기: 이미 위에서 #cont아래로
+        선택하였기에 부모요소를 써서 우선순위를 높인다 */
+        #cont>div.cat:hover{
             margin-top: -50px;
         }
 
