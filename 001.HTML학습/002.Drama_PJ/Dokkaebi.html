@@ -183,7 +183,9 @@
 
         /* 2-2.캐릭터 설명박스 */
         div.cat>div:last-child {
-            height: 250px;
+            height: 0px;
+            /* 처음에 높이값 0으로 숨겼다가
+            캐릭터박스에 마우스 오버시 높이값 250px */
             overflow-y: scroll;
             /* 넘치는 자식요소 y축으로 스크롤표시 */
 
@@ -242,6 +244,11 @@
 
 
 
+        }
+        /* 캐릭터 박스에 오버시 설명박스 보이기 */
+        /* 가상클래스 :hover사용 */
+        div.cat:hover>div:last-child{
+            height: 250px;
         }
 
         /* 2-2-1.캐릭터 타이틀 */
