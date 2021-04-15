@@ -348,13 +348,27 @@
 
         /* 주소박스 */
         #info address{
-            width: 90%;
+            width: 1000px;
+            max-width: 90%;
+            /* 최대 가로크기 속성에 %를 주면
+            설정된 가로크기 보다 작아질 경우 %전환하여
+            화면에 맞추게 된다 (가로스크롤 안생김)*/
             border: 2px double #000;
             margin: 0 auto;
             /* 블록요소 가로중앙정렬 - 마영오! */
             padding: 15px;
-            font-style: italic;
+            font-style: normal;
             /* address요소의 기본 이탤릭없앰 */
+            font-size: 12px;
+            /* 글자크기 */
+            letter-spacing: -1px;
+            /* 글자간격(자간-기본값0) */
+            word-spacing: 2px;
+            /* 단어간격(기본값0) */
+            line-height: 18px;
+            /* 줄간격(행간) - px/em/%단위,숫자만씀(배수)*/
+            text-align: center;
+            /* 글자정렬(중앙) */
         }
 
 
