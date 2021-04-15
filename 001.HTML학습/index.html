@@ -16,20 +16,59 @@
                 /* 블록박스 가로중앙정렬 - 마영오씨! */
                 margin: 0 auto;
                 /* 마진: 위아래0 양쪽auto */
+                padding: 20px;
 
                 /* float으로 인한 높이값 상실처리 */
                 overflow: hidden;
+                box-sizing: border-box;
+                /* 크기유지박스 */
+                background-color: #ebf9ff;
+                min-height: 700px;
+                /* 최소높이값(많아지면 늘어남!) */
             }
 
             /* 타이틀 */
             #tit{
                 text-align: center;
+                border-bottom: 2px solid #ccc;
+                padding-bottom: 20px;
             }
 
             /* 프로젝트 박스 공통 */
             .pjbx{
                 width: 50%;
                 float: left;
+                padding: 15px;
+                /* 
+                    50%로 옆으로 흐르면 
+                    2개의 블록박스가 나란히 오는데
+                    이때 패딩을 주면 박스가 커지므로
+                    하나가 아래로 내려간다
+                    (50%넘으므로!)
+                    이때 해결책!!!
+                    보더나 패딩이 지정한 사이즈
+                    내부로 포함되게 하는속성이 있다
+                    box-sizing:border-box
+                 */
+                 box-sizing: border-box;
+                 /* 기본값은 content-box(커지는박스) */
+            }
+
+            /* 각 박스의 ol리스트 */
+            .pjbx>ol{
+                font-size: 24px;
+                line-height: 40px;
+            }
+            /* 각 박스의 a링크 */
+            .pjbx a{
+                color: darkblue;
+                text-decoration: none;
+            }
+            /* 오버시 */
+            .pjbx a:hover{
+                color: darkorange;
+                text-decoration: overline;
+                /* 윗줄 */
             }
 
 
