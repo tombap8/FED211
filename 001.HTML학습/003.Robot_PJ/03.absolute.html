@@ -22,7 +22,8 @@
 
         #a1{
             position: absolute;
-            
+            bottom: 0;
+            right: 0;
             /* 
                 [ absolute 포지션 ]
 
@@ -46,6 +47,9 @@
                 앱솔루트가 위치를 잡을때의 부모요소는.......
                 static이 아닌 포지션을 가진 요소가 부모이다!!!
                 (만약 부모자격이 모두 없으면 보이는 화면을 기준한다!)
+                -> 보이는 화면은 body를 말하는 것이 아니다!!! 보이는 브라우저 window화면
+                이다! body에 position:relative를
+                줘 보면 알 수 있다!
             
              */
 
@@ -110,6 +114,18 @@
     <div id="r2">r2</div>
     <div id="s3">s3</div>
     <div id="a2">a2</div>
+
+    <!-- 부모를 찾는 absolute요소 -->
+    <div class="s5">s5
+        <div class="s6">s6
+            <div class="s7">s7
+                <div class="s8">s8
+                    <div class="a3">a3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
