@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Position - absolute</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 2px solid blue;
+            /* 경계선:두께 종류 색 */
+            text-align: center;
+            /* 인라인요소 가로중앙정렬 */
+            font-size: 24px;
+            /* 글자크기 */
+            font-weight: bold;
+            /* 글자 두껍게 */
+            line-height: 100px;
+            /* 줄간격 - 글자세로 중앙시 응용 */
+        }
+
+        #a1{
+            position: absolute;
+            
+            /* 
+                [ absolute 포지션 ]
+
+                1. absolute 포지션은 위치이동값을
+                쓰기전과 쓴후로 나누어 볼 수 있다!
+
+                1) 위치이동값을 쓰지 않은 경우
+                - 자기보다 위에 있는 요소를 존중하여
+                그 아래에 위치한다!(젠틀앱솔루트)
+                - 자기보다 아랫쪽에 있는 요소는 
+                앱솔루트요소를 인식하지 못하여 같은
+                자리에 올라온다!
+
+                2) 위치이동값을 사용한 경우
+                - 위치값을 사용한 부분에 대하여!!!!!!!!!!!만!!!!
+                위치값 이동의 기준이 되는 부모요소를 찾!는!다!
+                (부모찾아 삼만리!!!)
+
+                -> 부모자격을 가진 요소의 조건은 무엇인가?
+                >>>> 일반적인 부모요소는 싸고 있는 요소이지만
+                앱솔루트가 위치를 잡을때의 부모요소는.......
+                static이 아닌 포지션을 가진 요소가 부모이다!!!
+                (만약 부모자격이 모두 없으면 보이는 화면을 기준한다!)
+            
+             */
+
+
+
+            background-color: greenyellow;
+        }
+
+        #a2{
+            background-color: orangered;
+        }
+
+
+
+        #r1 {
+            position: relative;
+            /* top: 50px;
+            left: 50px; */
+            /* 
+                    위치이동속성:
+                    - 선택요소의 위치를 이동하기위한 속성
+                    - 포지션에 따라 달리 적용된다
+
+                    종류: 4가지
+                    - top, bottom, left, right
+                 */
+            background-color: red;
+
+            z-index: 1;
+            /* 1만써도 위로 올라옴
+            다른 static아닌 포지션이 z-index가
+            있다면 숫자를 비교하여 위아래 관계를
+            디스플레이한다! */
+
+        }
+
+        #s2 {
+            background-color: green;
+        }
+
+        #s3 {
+            background-color: yellow;
+        }
+
+        #r2 {
+            position: relative;
+            /* bottom: 75px;
+            right: -86px; */
+
+            background-color: skyblue;
+            z-index: -1;
+            /* z-index가 마이너스이면 static요소
+            보다 아래로 내려간다!!! */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="r1">r1</div>
+    <div id="s2">s2</div>
+    <div id="a1">a1</div>
+    <div id="r2">r2</div>
+    <div id="s3">s3</div>
+    <div id="a2">a2</div>
+</body>
+
+</html>
