@@ -26,8 +26,26 @@
 
         #f1{
             position: fixed;
+            /* 
+                [ fixed 포지션 ]
+                1. 위치설정값을 쓰지 않았을때
+                - 자신보다 위에 있는 static한 요소
+                아래에 그대로 있다가 스크롤시
+                그 자리를 지키고 움직이지 않음!
+                -> 젠틀앱솔루트와 유사!
+
+                2. 위치이동값을 썼을때
+             */
 
             background-color: lime;
+        }
+        #f2{
+            position: fixed;
+            bottom: 20%;
+            right: 0;
+            width: 200px;
+            height: 400px;
+            background-color: orange;
         }
 
 
@@ -147,6 +165,7 @@
     <div id="r2">r2</div>
     <div id="s3">s3</div>
     <span id="a2">a2</span>
+    <div id="f2">f2</div>
 
     <!-- 부모를 찾는 absolute요소 -->
     <div class="s5">s5
