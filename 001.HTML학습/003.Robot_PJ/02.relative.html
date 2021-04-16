@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Position - static</title>
+        <title>Position - relative</title>
         <style>
             div{
                 width: 100px;
@@ -19,19 +19,24 @@
                 /* 줄간격 - 글자세로 중앙시 응용 */
             }
 
-            #s1{
-                position: static;
+            #r1{
+                position: relative;
                 /* 
-                    static 포지션
-                    - 설정하지 않아도 기본값
-                    - 위치이동속성이 적용안됨!
-                    - 위치이동하려면 margin을 사용
-                    -> 마진으로 위치를 이동시키면
-                    아래 또는 옆에 있는 요소가 영향을
-                    받는다!!!
+                    [ relative 포지션 ]
+                    1. 위치이동속성이 적용된다!!!
+
+                    2. 위치이동의 기준은 원래 있던위치임
+                    (그래서 상대적인 즉, relative 랠러티브 라는
+                    명칭이 사용됨)
+
+                    3. 이동시에 다른 요소에 영향없이 겹쳐질 수 있다!!!
+
+                    4. 원래 자신이 있던 위치는 그대로 보존된다!!!
+                
                  */
-                top: 100px;
-                left: 100px;
+
+                top: 50px;
+                left: 50px;
                 /* 
                     위치이동속성:
                     - 선택요소의 위치를 이동하기위한 속성
@@ -40,17 +45,18 @@
                     종류: 4가지
                     - top, bottom, left, right
                  */
-
-                /* 마진으로 위치이동 */
-                margin-top: 100px;
-                margin-left: 100px;
-
-
+                background-color: red;
+            }
+            #s2{
+                background-color: green;
+            }
+            #s3{
+                background-color: yellow;
             }
         </style>
     </head>
     <body>
-        <div id="s1">s1</div>
+        <div id="r1">r1</div>
         <div id="s2">s2</div>
         <div id="s3">s3</div>
     </body>
