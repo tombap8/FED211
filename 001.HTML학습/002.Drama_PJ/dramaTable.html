@@ -102,6 +102,18 @@
           #drama tbody tr:nth-child(even) td{
               background-color: #ebebeb;
           }
+          /* 중요내용은 글자두껍게하기(2,7,10번글) */
+          #drama tbody tr:nth-child(2) td,
+          #drama tbody tr:nth-child(7) td,
+          #drama tbody tr:nth-child(10) td{
+            font-weight: bold;
+          }
+          /* 글 표시를 이탤릭으로 하기 */
+          /* 클래스로 디자인 설정후 html요소에 직접 클래스를 주면
+          디자인이 적용된다!-클래스사용의 일반적인 예 */
+          .itc{
+              font-style: italic;
+          }
 
     </style>
 </head>
