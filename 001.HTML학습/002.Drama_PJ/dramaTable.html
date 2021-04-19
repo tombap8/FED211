@@ -27,7 +27,7 @@
         }
 
         /* 개별테이블 */
-        #drama{
+        #drama {
             /* 테이블 중앙정렬 */
             margin: 0 auto;
             /* 블록요소의 가로 중앙정렬시 마영오! 사용함
@@ -44,8 +44,9 @@
             */
             width: 600px;
         }
+
         /* 테이블 타이틀 */
-        #drama caption{
+        #drama caption {
             font-size: 24px;
             font-weight: bold;
             padding: 10px 0;
@@ -55,13 +56,16 @@
             word-spacing: -2px;
             /* 단어간격 */
         }
+
         /* td와 th에 패딩 */
-        #drama td, #drama th{
+        #drama td,
+        #drama th {
             padding: 5px 10px;
             /* 패딩: 위아래 양쪽 */
         }
+
         /* td에 밑줄넣기 */
-        #drama tbody tr td{
+        #drama tbody tr td {
             border-bottom: 1px solid #ccc;
             /* 
                 border 는 경계선
@@ -82,48 +86,72 @@
             
              */
         }
+
         /* tbody의 마지막tr의  td의 아랫줄 두꺼운 보더넣기 */
-        #drama tbody tr:last-child td{
+        #drama tbody tr:last-child td {
             border-bottom: 2px solid #999;
         }
+
         /* 
             가상클래스는 콜론을 한번만씀
             요소:last-child{}
          */
-         /* th의 위아래줄 두껍게하기 */
-         #drama th{
-             border-bottom: 2px solid #999;
-             border-top: 2px solid #999;
-         }
-         /* 테이블 본문 짝수번째에 배경색 넣기 */
-         /* 
+        /* th의 위아래줄 두껍게하기 */
+        #drama th {
+            border-bottom: 2px solid #999;
+            border-top: 2px solid #999;
+        }
+
+        /* 테이블 본문 짝수번째에 배경색 넣기 */
+        /* 
             :nth-child(짝수/홀수)
             짝수 even, 홀수 odd
           */
-          #drama tbody tr:nth-child(even) td{
-              background-color: #ebebeb;
-          }
-          /* 중요내용은 글자두껍게하기(2,7,10번글) */
-          #drama tbody tr:nth-child(2) td,
-          #drama tbody tr:nth-child(7) td,
-          #drama tbody tr:nth-child(10) td{
-            font-weight: bold;
-          }
-          /* 글 표시를 이탤릭으로 하기 */
-          /* 클래스로 디자인 설정후 html요소에 직접 클래스를 주면
-          디자인이 적용된다!-클래스사용의 일반적인 예 */
-          .itc{
-              font-style: italic;
-          }
+        #drama tbody tr:nth-child(even) td {
+            background-color: #ebebeb;
+        }
 
-          /* 테이블 하단영역 td 디자인 */
-          #drama tfoot td{
-              text-align: center;
-              line-height: 50px;
-              /* 줄간격으로 위아래 밀기 */
-              font-family: "맑은 고딕";
-              font-weight: bold;
-          }
+        /* 중요내용은 글자두껍게하기(2,7,10번글) */
+        #drama tbody tr:nth-child(2) td,
+        #drama tbody tr:nth-child(7) td,
+        #drama tbody tr:nth-child(10) td {
+            font-weight: bold;
+        }
+
+        /* 글 표시를 이탤릭으로 하기 */
+        /* 클래스로 디자인 설정후 html요소에 직접 클래스를 주면
+          디자인이 적용된다!-클래스사용의 일반적인 예 */
+        .itc {
+            font-style: italic;
+        }
+
+        /* 테이블 하단영역 td 디자인 */
+        #drama tfoot td {
+            text-align: center;
+            line-height: 50px;
+            /* 줄간격으로 위아래 밀기 */
+            font-family: "맑은 고딕";
+            font-weight: bold;
+        }
+
+        /* 구분박스 */
+        div.gubun{
+            width: 600px;
+            margin: 0 auto;
+        }
+        /* 구분테이블 */
+        table#gubun{
+            border: 1px solid #ccc;
+            font-size: 12px;
+        }
+        table#gubun td{
+            padding: 5px 7px;
+        }
+        /* 구분오른쪽 보더 넣기 */
+        table#gubun tr:first-child td:first-child{
+            border-right: 1px solid #ccc;
+        }
+
 
     </style>
 </head>
@@ -270,6 +298,35 @@
 
     </table>
 
+    <!-- 구분테이블 박스 -->
+    <div class="gubun">
+        <table id="gubun" class="tbl">
+            <tr>
+                <td rowspan="4">구분</td>
+                <!-- rowspan속성으로 아래쪽 4개의 줄을
+                터서 하나로 사용한다. 따라서 아래쪽
+                tr 3개는 첫번째 td가 필요하지 않다 
+                    row는 줄(라인)
+                    span는 범위를 말한다!
+                    rowspan="개수" -> 적용할 줄수를 숫자로씀
+                
+                -->
+                <td>월화:월화드라마</td>
+            </tr>
+            <tr>
+                <!-- <td>구분</td> -->
+                <td>수목:수목드라마</td>
+            </tr>
+            <tr>
+                <!-- <td>구분</td> -->
+                <td>금토:금토드라마</td>
+            </tr>
+            <tr>
+                <!-- <td>구분</td> -->
+                <td>토일:토일드라마</td>
+            </tr>
+        </table>
+    </div>
 
 
 
