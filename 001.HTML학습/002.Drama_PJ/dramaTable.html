@@ -59,6 +59,42 @@
             padding: 5px 10px;
             /* 패딩: 위아래 양쪽 */
         }
+        /* td에 밑줄넣기 */
+        #drama tbody tr td{
+            border-bottom: 1px solid #ccc;
+            /* 
+                border 는 경계선
+                따로 설정시엔
+                border-width(선두께)
+                border-style(선종류)
+                border-color(선색상)
+
+                한번에 
+                border : 두께 종류 색상;
+                1) 두께: 선두께로 px등 단위상용
+                2) 종류: solid(선형), dotted(점선형)
+                        dashed(데쉬형), ridge(액자형)
+                3) 색상: hash코드, rgb코드 등으로 표시
+                -> 기본적으로 보더는 박스크기에 포함된다!
+                - 박스크기를 주고 보더를 주면 박스크기가 
+                보더만큼 늘어남!
+            
+             */
+        }
+        /* tbody의 마지막tr의  td의 아랫줄 두꺼운 보더넣기 */
+        #drama tbody tr:last-child td{
+            border-bottom: 2px solid #999;
+        }
+        /* 
+            가상클래스는 콜론을 한번만씀
+            요소:last-child{}
+         */
+         /* th의 위아래줄 두껍게하기 */
+         #drama th{
+             border-bottom: 2px solid #999;
+             border-top: 2px solid #999;
+         }
+
     </style>
 </head>
 
@@ -203,6 +239,7 @@
 
 
     </table>
+
 
 
 
