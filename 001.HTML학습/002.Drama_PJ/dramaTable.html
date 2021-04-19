@@ -151,6 +151,12 @@
         table#gubun tr:first-child td:first-child{
             border-right: 1px solid #ccc;
         }
+        /* 앞에 tr이 있는 형제 tr요소의 td에 위쪽보더주기 */
+        /* tr+tr td 는 앞에 tr형제 있는 tr의 하위 td만 선택 */
+        /* +플러스는 형제 선택자 */
+        table#gubun tr+tr td{
+            border-top: 1px solid #ccc;
+        }
 
 
     </style>
