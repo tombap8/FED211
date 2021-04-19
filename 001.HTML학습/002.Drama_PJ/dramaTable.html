@@ -3,10 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <title>한국 최신 드라마 리스트</title>
+        <style>
+            /* 테이블 공통 디자인 */
+            .tbl{
+                /* 테이블 td사이공백 없애기 */
+                border-collapse: collapse;
+
+                /* border: 1px solid #000; */
+            }
+        </style>
     </head>
     <body>
         <!-- 한국 최신 드라마 리스트 테이블 -->
-        <table id="drama" class="tbl">
+        <table id="drama" class="tbl" border="1">
+            <!-- 
+                table border속성을 주면 전체 테이블
+                td까지 개별 셀이 모두 보더를 가지는데
+                td사이에 여백이 있음을 확인해 볼 수 있다!
+                (숫자는 px두께)
+             -->
             <!-- 테이블제목 -->
             <caption>한국 최신 드라마 리스트</caption>
             <!-- 테이블 머릿부분 -->
