@@ -48,6 +48,39 @@
                 color: green;
                 text-decoration: underline;
             }
+            /* 글자크기만 변경한 클래스 */
+            .fz1{
+                font-size: 38px;
+            }
+
+            /* 보더관련 클래스 */
+            /* 상위요소로 기존에 셋팅되어서 하위요소 class적용이 되지않는다
+            따라서 상위요소를 위에 써주면 적용된다(우선순위) */
+            .bx .bd1{
+                border-style: dotted;
+                border-color: purple;
+            }
+            .bx .bd2{
+                border-style: dashed;
+                border-color: blue;
+            }
+            .bx .bd3{
+                border-style: ridge;
+                border-color: plum;
+            }
+
+            /* 
+                [ 클래스 다중사용 가이드 ]
+                1. 디자인분야별 별도작성된 클래스를 조합할때 사용함
+                2. 클래스 다중 사용법은 요소에 클래스속성에
+                띄어쓰기로 여러개의 클래스를 적용할 수 있다
+                예) <div class="cls1 cls2 cls3"></div>
+                3. 클래스를 다중 사용할 경우
+                같은 레벨이라면 나중에쓴 클래스가 덮어쓴다
+                상위 레벨의 디자인이 있을경우 우선순위를 높이기
+                위한 코딩이 필요하다
+                - 상위레벨 요소 선택자를 같이 쓰는 경우 순위가 올라감
+             */
 
         </style>
     </head>
@@ -55,13 +88,13 @@
         <h1>클래스 다중적용</h1>
         <ul class="bx">
             <li>클래스적용1</li>
-            <li>클래스적용2</li>
+            <li class="fcls2">클래스적용2</li>
             <li>클래스적용3</li>
-            <li>클래스적용4</li>
-            <li>클래스적용5</li>
-            <li>클래스적용6</li>
-            <li>클래스적용7</li>
-            <li>클래스적용8</li>
+            <li class="fcls3 bd1 fz1">클래스적용4</li>
+            <li class="fcls1 bd3">클래스적용5</li>
+            <li class="fcls2">클래스적용6</li>
+            <li class="fcls1 bd2">클래스적용7</li>
+            <li class="fcls3 bd3">클래스적용8</li>
             <li>클래스적용9</li>
         </ul>
     </body>
