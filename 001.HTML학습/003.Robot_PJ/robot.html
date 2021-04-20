@@ -90,7 +90,9 @@
         }
 
         /* 로봇 몸통 */
-        #body{
+        #body {
+            position: relative;
+            /* 부모자격 */
             width: 250px;
             height: 300px;
             margin: 0 auto;
@@ -98,33 +100,46 @@
             margin-top: 50px;
             background: url(images/metal01.jpg) no-repeat center/cover;
         }
+
         /* 목 */
-        #neck{
+        #neck {
+            position: absolute;
+            top: -50px;
+            left: 100px;
+            /* 나의 부모는? #body */
             width: 50px;
             height: 50px;
             background: url(images/metal02.jpg) no-repeat 0/100% 100%;
         }
+
         /* 팔다리 공통 */
-        .part{
+        .part {
+            position: absolute;
+            /* 나의 부모는? #body */
             width: 50px;
             height: 250px;
             background: url(images/metal02.jpg) repeat-y 0/100%;
         }
+
         /* 왼팔 */
-        #arm1{
-
+        #arm1 {
+            left: -50px;
         }
+
         /* 오른팔 */
-        #arm2{
-
+        #arm2 {
+            right: -50px;
         }
+
         /* 왼다리 */
-        #leg1{
-
+        #leg1 {
+            top: 300px;
         }
+
         /* 오른다리 */
-        #leg2{
-            
+        #leg2 {
+            top: 300px;
+            right: 0;
         }
     </style>
 </head>
