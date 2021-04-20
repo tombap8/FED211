@@ -11,7 +11,7 @@
         }
 
         div {
-            outline: 2px solid lime;
+            /* outline: 2px solid lime; */
         }
 
         /* 로봇머리 */
@@ -166,6 +166,16 @@
             height: 97px;
             background-color: #000;
         }
+
+        /* 스크린 iframe */
+        #screen iframe {
+            position: relative;
+            top: -21%;
+            left: -47%;
+            /* 현재위치로 부터이동 */
+            width: 193%;
+            height: 134%;
+        }
     </style>
 </head>
 
@@ -189,7 +199,14 @@
         <div id="leg2" class="part"></div>
         <div id="tv">
             <div id="screen">
-
+                <!-- 유튜브동영상 -->
+                <iframe src="https://www.youtube.com/embed/pBuZEGYXA6E"></iframe>
+                <!-- 
+                    iframe 요소: inline frame
+                    - 웹 페이지 내부에 다른 페이지를
+                    삽입하여 표시할 수 있는 요소
+                    - src속성 : 페이지경로
+                 -->
             </div>
         </div>
     </div>
