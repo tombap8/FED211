@@ -141,6 +141,31 @@
             top: 300px;
             right: 0;
         }
+
+        /* TV */
+        #tv {
+            position: absolute;
+            /* 부모자격 */
+            top: 50px;
+            left: 25px;
+            /* 나의 부모는? #body */
+            width: 200px;
+            height: 150px;
+            background: url(images/tv.jpg) no-repeat 0/100% 100%;
+        }
+
+        /* 스크린 */
+        #screen {
+            position: absolute;
+            top: 21px;
+            left: 13px;
+            /* 나의 부모는? #tv */
+            border-radius: 10px;
+            /* 모서리 둥글게 */
+            width: 136px;
+            height: 97px;
+            background-color: #000;
+        }
     </style>
 </head>
 
@@ -162,7 +187,11 @@
         <div id="arm2" class="part"></div>
         <div id="leg1" class="part"></div>
         <div id="leg2" class="part"></div>
-        <div id="tv"></div>
+        <div id="tv">
+            <div id="screen">
+
+            </div>
+        </div>
     </div>
 
 
