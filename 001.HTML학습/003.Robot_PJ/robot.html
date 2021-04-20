@@ -234,8 +234,31 @@
         }
         /* 로봇 설명 작은글자 */
         #rdesc small{
+            display: block;
+            /* 원래 inline이어서 글자중앙정렬 적용위해 
+            block으로 전환함 - width:auto이므로 끝까지감 */
             color: #ff0;
             text-align: center;
+        }
+        /* 로봇 설명 문단박스 */
+        #rdesc p{
+            font-size: 15px;
+            /* 글자크기 */
+            line-height: 25px;
+            /* 줄간격 */
+            letter-spacing: 1px;
+            /* 자간 */
+            word-spacing: 2px;
+            /* 단어간격 */
+
+            /* 다단표기(다중열속성) */
+            column-count: 3;
+            /* 다중열개수 */
+            column-rule: 5px dotted lime;
+            /* 다중열구분선 - 값은 보더와 같다! */
+            /* column-rule: 두께 종류 색상; */
+            column-gap: 50px;
+            /* 다중열 사이간격 */
         }
 
 
