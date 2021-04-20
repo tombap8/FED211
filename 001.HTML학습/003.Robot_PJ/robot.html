@@ -1,62 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Robot PJ</title>
-        <style>
-            body{
-                /* 배경: 색이반고윙/크 */
-                background: url(images/bg.jpg) no-repeat fixed top/cover;
-            }
-            div{
-                outline: 2px solid lime;
-            }
-            /* 로봇머리 */
-            #head{
-                width: 250px;
-                height: 250px;
-                margin: 0 auto;
-                /* 블록박스 가로중앙정렬 - 마영오 */
-                background: url(images/metal01.jpg) no-repeat center/cover;
-            }
-            /* 왼눈 */
-            #eye1{
-                width: 50px;
-                height: 50px;
-                background: url(images/e1.jpg) no-repeat 0/100% 100%;
-            }
-            /* 오른눈 */
-            #eye2{
-                width: 50px;
-                height: 50px;
-                background: url(images/e2.jpg) no-repeat 0/100% 100%;
-            }
-            /* 코 */
-            #nose{
-                width: 50px;
-                height: 70px;
-                background: url(images/nose.jpg) no-repeat 0/110% 100%;
-            }
-            /* 입 */
-            #mouth{
-                width: 100px;
-                height: 50px;
-                background: url(images/mouth.png) no-repeat 0/100% 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- 로봇머리 -->
-        <div id="head">
-            <div id="eye1"></div>
-            <div id="eye2"></div>
-            <div id="nose"></div>
-            <div id="mouth"></div>
-            <div id="ear1"></div>
-            <div id="ear2"></div>
-        </div>
+
+<head>
+    <meta charset="utf-8">
+    <title>Robot PJ</title>
+    <style>
+        body {
+            /* 배경: 색이반고윙/크 */
+            background: url(images/bg.jpg) no-repeat fixed top/cover;
+        }
+
+        div {
+            outline: 2px solid lime;
+        }
+
+        /* 로봇머리 */
+        #head {
+            position: relative;
+            /* 부모자격 */
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            /* 블록박스 가로중앙정렬 - 마영오 */
+            background: url(images/metal01.jpg) no-repeat center/cover;
+        }
+
+        /* 왼눈 */
+        #eye1 {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            /* 나의부모는? #head */
+            width: 50px;
+            height: 50px;
+            background: url(images/e1.jpg) no-repeat 0/100% 100%;
+        }
+
+        /* 오른눈 */
+        #eye2 {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            /* 나의부모는? #head */
+            width: 50px;
+            height: 50px;
+            background: url(images/e2.jpg) no-repeat 0/100% 100%;
+        }
+
+        /* 코 */
+        #nose {
+            position: absolute;
+            top: 108px;
+            left: 100px;
+            /* 나의부모는? #head */
+            width: 50px;
+            height: 70px;
+            background: url(images/nose.jpg) no-repeat 0/110% 100%;
+        }
+
+        /* 입 */
+        #mouth {
+            position: absolute;
+            bottom: 9px;
+            left: 74px;
+            /* 나의부모는? #head */
+            width: 100px;
+            height: 50px;
+            background: url(images/mouth.png) no-repeat 0/100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 로봇머리 -->
+    <div id="head">
+        <div id="eye1"></div>
+        <div id="eye2"></div>
+        <div id="nose"></div>
+        <div id="mouth"></div>
+        <div id="ear1"></div>
+        <div id="ear2"></div>
+    </div>
 
 
-        
-    </body>
+
+</body>
+
 </html>
