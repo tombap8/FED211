@@ -8,6 +8,9 @@
                 margin: 0;
                 padding: 0;
             }
+            body{
+                background: url(./intro_img/worksbg.jpg) no-repeat center/cover;
+            }
             /* 전체부모박스 */
             .wrap{
                 width: 1200px;
@@ -22,9 +25,11 @@
                 overflow: hidden;
                 box-sizing: border-box;
                 /* 크기유지박스 */
-                background-color: #ebf9ff;
+                background-color: rgba(235, 249, 255, 0.561);
                 min-height: 700px;
                 /* 최소높이값(많아지면 늘어남!) */
+                border-radius: 20px;
+                margin-top: 50px;
             }
 
             /* 타이틀 */
@@ -78,7 +83,9 @@
     </head>
     <body>
         <div class="wrap">
-            <h1 id="tit">웹퍼블리셔과정 - 탐쌤</h1>
+            <h1 id="tit">
+                <img src="./intro_img/mylogo_14.png" alt="나의 아카이브 로고">
+            </h1>
             <!-- 1. 공통 프로젝트 박스 -->
             <div class="pjbx cpj">
                 <h2>공통 프로젝트</h2>
@@ -94,6 +101,9 @@
                     </li>
                     <li>
                         <a href="./002.Drama_PJ/Dokkaebi.html" target="_blank">도깨비 캐릭터 소개 사이트</a>
+                    </li>
+                    <li>
+                        <a href="./003.Robot_PJ/robot.html" target="_blank">로봇PJ</a>
                     </li>
                 </ol>
             </div>
