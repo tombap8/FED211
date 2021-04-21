@@ -48,7 +48,22 @@
             #tr3:hover span{
                 left: 70%;
                 background-color: pink;
+                border-radius: 0;
                 transition: 1s;/* 오버시에 트랜지션설정 */
+            }
+            /* #tr4에 트랜지션 설정 */
+            /* 여러가지 속성을 별도로 트랜지션 주고자 할 경우
+            속시이지 순으로 셋팅하고 콤마로 구분한다! */
+            #tr4 span{
+                transition: left 5s,/* left 5초간 변경 */
+                background-color 2s 3s,/* 배경색 3초후 2초간변경 */
+                border-radius 1s 4s;/* 모서리둥글게 4초후 1초간변경 */
+                /* 원본에 트랜지션 */
+            }
+            #tr4:hover span{
+                left: 70%;
+                background-color: hotpink;
+                border-radius: 0;
             }
 
         </style>
@@ -68,6 +83,11 @@
 
         <h2>3.원본과 오버시 트랜지션을 각각 잡아준다</h2>
         <div id="tr3">
+            <span></span>
+        </div>
+
+        <h2>4.원본에 트랜지션을 각 속성별로 다르게 준다</h2>
+        <div id="tr4">
             <span></span>
         </div>
     </body>
