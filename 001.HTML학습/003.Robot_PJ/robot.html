@@ -8,6 +8,8 @@
         body {
             /* 배경: 색이반고윙/크 */
             background: url(images/bg.jpg) no-repeat fixed top/cover;
+            overflow-x: hidden;
+            /* x축 스크롤 안생김 */
         }
 
         /* div {
@@ -121,18 +123,22 @@
         }
 
 
-
-
         /* 로봇머리 */
         #head {
             position: relative;
             /* 부모자격 */
+            left: 100%;
+            /* 오른쪽 바깥에 처음에 나가있음 
+            가로스크롤바가 생기므로 body에 x축 스크롤바 숨기기*/
             width: 250px;
             height: 250px;
             margin: 0 auto;
             /* 블록박스 가로중앙정렬 - 마영오 */
             margin-top: 100px;
             background: url(images/metal01.jpg) no-repeat center/cover;
+
+            /* 트랜지션: 속시이지 */
+            transition: left 1s;
         }
 
         /* 왼눈 */
