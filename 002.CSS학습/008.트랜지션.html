@@ -32,13 +32,42 @@
                 left: 50%;
                 background-color: red;
             }
+            /* #tr2에 트랜지션 설정 */
+            #tr2 span{
+                
+            }
+            #tr2:hover span{
+                left: 50%;
+                background-color: red;
+                transition: 2s;/* 오버시에 트랜지션설정 */
+            }
+            /* #tr3에 트랜지션 설정 */
+            #tr3 span{
+                transition: 5s;/* 원본에 트랜지션 */
+            }
+            #tr3:hover span{
+                left: 70%;
+                background-color: pink;
+                transition: 1s;/* 오버시에 트랜지션설정 */
+            }
 
         </style>
     </head>
     <body>
         <h1>트랜지션</h1>
+
         <h2>1.원본에 트랜지션 주고 양방향이 동일함</h2>
         <div id="tr1">
+            <span></span>
+        </div>
+
+        <h2>2.오버시에 트랜지션 주고 원본엔 없음</h2>
+        <div id="tr2">
+            <span></span>
+        </div>
+
+        <h2>3.원본과 오버시 트랜지션을 각각 잡아준다</h2>
+        <div id="tr3">
             <span></span>
         </div>
     </body>
