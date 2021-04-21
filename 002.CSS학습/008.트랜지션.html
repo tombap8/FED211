@@ -23,10 +23,21 @@
                 background-color: #ff0;
                 border-radius: 50%;/* 원 */
             }
+
+            /* #tr1에 트랜지션 설정 */
+            #tr1 span{
+                transition: 2s;
+            }
+            #tr1:hover span{
+                left: 50%;
+                background-color: red;
+            }
+
         </style>
     </head>
     <body>
         <h1>트랜지션</h1>
+        <h2>1.원본에 트랜지션 주고 양방향이 동일함</h2>
         <div id="tr1">
             <span></span>
         </div>
