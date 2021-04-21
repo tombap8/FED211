@@ -84,9 +84,25 @@
             box-shadow: 0 0 20px pink;
             /* 박스그림자를 이용한 글로우효과! */
 
-
             /* outline: 2px dotted lime; */
+            /* 
+            [트랜지션: 둘 사이의 속성변화를 애니메이션으로 보여주기]
+            1) 한번에 쓰기
+            transition: 속성 시간 이징 지연; 
+            2) 각각 쓰기
+            transition-property: 속성값;
+            transition-duration: 시간초단위s;
+            transition-timing-function: 가속도옵션(이징);
+            transition-delay: 지연시간초단위s;
+             */
+            transition: all 2s ease-in-out 2s;
 
+        }
+
+        /* body에 마우스 오버시 로고 왼쪽 위 위치로 이동하기 */
+        body:hover #logo {
+            top: 50px;
+            left: 50px;
         }
 
         /* 위로가기 버튼 */
@@ -169,7 +185,7 @@
             background: url(images/metal01.jpg) no-repeat center/cover;
 
             /* 트랜지션: 속시이지 */
-            transition: left 2s ease-in-out;
+            transition: left 2s ease-in-out 3s;
         }
         /* body에 마우스 오버시 로봇머리,몸통 등장 */
         body:hover #head,
@@ -257,7 +273,7 @@
             background: url(images/metal01.jpg) no-repeat center/cover;
 
             /* 트랜지션: 속시이지 */
-            transition: left 2s ease-in-out;
+            transition: left 2s ease-in-out 3s;
         }
 
         /* 목 */
