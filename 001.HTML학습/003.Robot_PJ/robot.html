@@ -184,8 +184,8 @@
             margin-top: 100px;
             background: url(images/metal01.jpg) no-repeat center/cover;
 
-            /* 트랜지션: 속시이지 */
-            transition: left 2s ease-in-out 3s;
+            /* 트랜지션: 속시이지 - 나갈때는 지연시간 없음 */
+            transition: left 2s ease-in-out;
         }
         /* body에 마우스 오버시 로봇머리,몸통 등장 */
         body:hover #head,
@@ -193,6 +193,14 @@
             left: 0;
             /* 포지션이 relative 이므로 left값을 0으로하면
             원래있던 위치로 돌아온다! */
+
+            /* 트랜지션: 속시이지 */
+            transition: left 2s ease-in-out 3.5s;
+            /* 
+                마우스 오버시 트랜지션은 오버시에 셋팅
+                마우스 아웃시 트랜지션은 오버아닌 원본에 셋팅
+                (단, 원본에만 셋팅시 오버/아웃시 동일함)
+             */
         }
 
         /* 왼눈 */
@@ -272,8 +280,8 @@
             margin-top: 50px;
             background: url(images/metal01.jpg) no-repeat center/cover;
 
-            /* 트랜지션: 속시이지 */
-            transition: left 2s ease-in-out 3s;
+            /* 트랜지션: 속시이지 - 나갈때는 지연시간 없음 */
+            transition: left 2s ease-in-out;
         }
 
         /* 목 */
