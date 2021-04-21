@@ -138,7 +138,13 @@
             background: url(images/metal01.jpg) no-repeat center/cover;
 
             /* 트랜지션: 속시이지 */
-            transition: left 1s;
+            transition: left 2s ease-in-out;
+        }
+        /* body에 마우스 오버시 로봇머리 등장 */
+        body:hover #head{
+            left: 0;
+            /* 포지션이 relative 이므로 left값을 0으로하면
+            원래있던 위치로 돌아온다! */
         }
 
         /* 왼눈 */
