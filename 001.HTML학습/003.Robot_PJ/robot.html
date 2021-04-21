@@ -97,6 +97,30 @@
             color: #00f;
         }
 
+        /* 컨텐츠 유도 버튼(이동버튼) */
+        #goCont{
+            position: absolute;
+            top: 100px;
+            right: 50px;
+            /* 나의 부모는? 보이는 화면(body조차 포지션없음) */
+
+            color: #fff;
+            /* 글자색 흰색 */
+            text-decoration: none;
+            /* 밑줄없앰 */
+            font: bold 40px arial;
+            /* 글자풀셋팅: 스두크/줄체 */
+            text-shadow: 0 0 10px #000;
+
+        }
+
+        /* 컨텐츠 유도 버튼 마우스 오버시 글자색변경, 밑줄넣기 */
+        #goCont:hover {
+            color: #f00;
+            text-decoration: underline;
+        }
+
+
 
 
         /* 로봇머리 */
@@ -451,8 +475,15 @@
     <a href="#" id="tbtn">TOP</a>
 
     <!-- 글 내용 유도 메뉴 -->
-    <a href="#" id="goCont">What is Robot?</a>
+    <a href="#rdesc" id="goCont">What is Robot?</a>
 
+    <!-- 
+        a요소의 href 값의 #은 무엇인가?
+        - 원래 가지고 있는 이동 속성 중 같은 페이지내의
+        아이디요소로 바로 이동하는 href="#아이디명" 으로 표기시
+        클릭하면 바로 해당컨텐츠 박스의 위치로 이동한다
+        (#만 쓸 경우엔 맨위로 이동됨)
+     -->
 
 
 </body>
