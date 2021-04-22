@@ -3,3 +3,35 @@
 지정해야만 문자가 깨짐없이 잘 실행된다 */
 
 /* CGV 메인 페이지 CSS - main.css */
+body {
+    background-color: #000;
+    margin: 0;
+    /* body의 기본마진 없애기 */
+}
+
+/* 레이아웃 공통 */
+.part {
+    width: 1200px;
+    margin: 0 auto;
+    /* 블록요소 가로 중앙정렬 */
+    outline: 3px dotted yellow;
+}
+
+/* 1. 상단부분 */
+#top {
+    height: 80px;
+    background: url(../images/curtain.jpg) repeat-x;
+    /* 외부CSS일 경우 이미지폴더는 CSS문서의 위치에서
+     찾아야 정확하게 표시된다! */
+}
+
+/* 2. 메인부분 */
+#cont {
+    height: 788px;
+    background: url(../images/bg.jpg) no-repeat;
+}
+
+/* 3. 하단부분 */
+#info {
+    height: 100px;
+}
