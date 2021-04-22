@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>겨울왕국2</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            /*보이는화면 기준*/
+        }
+
+        /*
+        [웹색상표현법] 
+        
+        1. 웹색상명 - 웹에서 지정된 색상명을 사용 
+        (red, green, blue, navy, purple, ...) 
+        
+        2. 해시코드 - RGB 표현방식 
+        #RGB 한단위마다 2자리씩 16진수를 사 용하여 표현 
+        (16진수: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F) - 두자리수가 같은 경우 3자리수로 표 현가능 (#223344=#234) 
+        
+        3. rgb 표기법 
+        - Red,Green,Blue 
+        rgb(숫자, 숫자, 숫자) 
+        - 숫자는 0~255(256가지 사용) 
+        - 투명도를 표현하려면 아래와 같다 rgba(숫자, 숫자, 숫자, 알파값) 
+        알파값은 0~1사이의 숫자를 사용 
+        
+        4. hsl 표기법 
+        - hue,saturation,lightness 
+        색상,채도,명도 
+        - hsl(숫자, 숫자, 숫자) 
+        - 단위가 %도 가 능 
+        - 투명도는 아래와 같다 
+        hsla(숫자, 숫자, 숫자, 알파값) 
+        */
+
+        body {
+            /*background설정*/
+            /*1.배경색*/
+            /*            background-color: #a2c2ed;*/
+            /*2.배경이미지*/
+            /*            background-image: url(imgs/bg_mainvisual.jpg);*/
+            /*3.배경반복여부*/
+            /*            background-repeat: no-repeat;*/
+            /*no-repeat반복없음,
+            repeat-x/repeat-y 한쪽반복*/
+            /*4.배경고정여부*/
+            /*            background-attachment: fixed;*/
+            /*5.배경위치*/
+            /*            background-position: center;*/
+            /*background-position: 가로축 세로축;
+            값- px,%,top,bottom,right,left,center*/
+            /*6.배경크기*/
+            /*            background-size: 100%;*/
+            /*background-size: 가로크기 세로크기;
+            값- px,%,auto(이미지비율유지)
+            값을 하나만 쓰면 가로크기(세로는 자동)
+            특별한 셋팅-화면채우기
+            (cover-빈공간 없이 사진비율유지,
+            contain-빈공간 생기며 비율유지)*/
+
+            /*배경 한번에 셋팅하기*/
+            /*background: 색 이미지 반복여부 고정 위치/크기;
+            (색이반고윙/크)*/
+            background: url(images/main_bg.jpg) no-repeat fixed center/cover;
+
+            /*항상스크롤트랙 보이기*/
+            overflow-y: scroll;
+        }
+
+        /*1. 큰제목*/
+        /*
+            h1#tit - 아이디가 tit인 h1태그
+            h1 #tit - h1태그의 자손 중 아이디가 tit인 요소
+        */
+        h1#tit {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+/*            margin: 50px 0 0 100px;*/
+            /*마진- 위 오른 아래 왼*/
+        }
+
+        /*2.캐릭터부모박스*/
+        #cont {
+            position: relative;
+            /*포지션을 주면 포지션이 없는(static)요소들 보다 위에 위치한다. 
+            포지션있는 것 간의 위치관계는 z-index로 정함*/
+            width: 90%;
+            /*            height: 190px;*/
+            /*width-가로, height-세로크기설정*/
+            margin: 0 auto;
+            /*마영오-block박스 가로 중앙정렬*/
+/*            outline: 2px solid red;*/
+            /*outline: 두께 종류 색상;
+            outline은 border와 비슷하나 박스 바깥쪽에
+            선이 생기며 박스크기에 영향을 미치지 않음!*/
+            /*overflow: hidden;*/
+            /*넘치는 자식요소 숨기기- float된 자식요소를 인식함!- 개별적으로 숨기기/보이기를 해야하므로 전체 박스에 숨기기를 줄 수 없다....*/
+            margin-top: 200px;
+        }
+
+        /*가상요소로 float해제하기*/
+        #cont::after {
+            content: "";
+            display: block;
+            clear: both;
+            /*
+                float으로 흘러가는 요소 끝에 해제하는 설정
+                clear:(left/right/both) - 편의상 양쪽끊기
+            */
+        }
+
+
+        /*캐릭터박스 공통*/
+        /*
+            > 오른쪽꺾쇠 - 직계자식요소선택
+            - #cont 바로 밑에 있는 div만 선택함!
+            - 하위에 있는 자손div는 선택하지 않음!
+        */
+        #cont>div {
+            width: 23%;
+            /*양쪽마진 2%를 빼야함*/
+            /*            height: 189px;*/
+            /*높이값을 안주면 auto로 내용만큼 늘어남*/
+            margin: 0 1%;
+            /*양쪽 1%*/
+/*            outline: 2px dotted blue;*/
+            float: left;
+            /*
+                블록 요소는 옆에 아무것도 못오지만
+                float 설정으로 옆으로 흐르게 함
+                float: left 나는 왼쪽에 다른요소는 오른쪽으로 흘러가게함
+            
+            float을 설정한 경우 부모요소가 자식을 인식못함!
+            해결방법은?
+            1. 부모요소에게 overflow:hidden 준다.
+            2. 맨 끝에 가상요소를 사용하여 clear:both처리
+            
+            */
+            
+            /*자식요소 숨기기-높이값+overflow:hidden*/
+/*            height: 200px;*/
+/*            overflow: hidden;*/
+            /*트랜지션*/
+            transition: margin-top .3s ease-out;
+            outline: 4px ridge #ccc;
+        }
+        
+        /*캐릭터박스에 마우스 오버시 margin-top값을 마이너스로 위로올리기*/
+        #cont>div:hover {
+            margin-top: -400px;
+            /*트랜지션*/
+            transition: margin-top .6s ease-in-out .1s;
+        }
+        
+        
+        
+        
+        
+        
+        
+        /*
+            overflow 속성 : 넘치는 자식요소 처리에 대한 속성
+            - visible -> 부모의 높이값 보다 넘치는 자식이 보이는 상태(기본값)
+            - hidden -> 부모의 높이값 보다 넘치면 넘치는 부분을 숨김
+            - scroll -> 무조건 스크롤바롤 가로,세로에 만들고 넘칠경우 
+                    스크롤바가 생성됨(overflow-x, overflow-y 따로 설정가능)
+            - auto -> 부모의 높이값 보다 넘칠 경우에만 스크롤바가 생성됨
+            
+        
+        */
+        
+        
+        /*캐릭터이미지 공통*/
+        #cont>div>img {
+            width: 100%;
+            /*이미지의 높이값,가로값 중 하나만 주면 비율에 맞게 나머지 하나가 크기를 설정함*/
+        }
+
+        /*캐릭터이름박스*/
+        .nbox {
+            font-family: 'Indie Flower', cursive;
+            /*위의 이미지와 겹치게 마진top값을 마이너스로!*/
+            margin-top: -20%;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 3px #777;
+            font-size: 42px;
+        }
+
+        .nbox img {
+            width: 35%;
+        }
+
+        .nbox img:last-child {
+            display: none;
+            /*
+                display 속성 - 요소의 자리차지 방법
+                - block 한줄차지
+                - inline 컨텐츠 나열
+                - inline-block 인라인이면서 block디자인 적용
+                - none 화면표시 안함
+            */
+        }
+
+        /*
+            가상클래스 :hover
+            - 마우스 오버시 마치 클래스 주고 디자인 변경을
+                한것 처럼 셋팅할 수 있는 CSS 확장기법
+            
+        */
+        /*첫째자식이미지 숨기기*/
+        #cont>div:hover .nbox img:first-child {
+            display: none;
+        }
+
+        /*마지막자식 이미지 보이기*/
+        #cont>div:hover .nbox img:last-child {
+            display: inline;
+        }
+        
+        /*캐릭터설명박스 랩핑박스*/
+        .dwrap{
+            height: 0;/*높이값 없애기*/
+            overflow: hidden;/*넘치는 자식요소 숨기기*/
+            transition: height .8s ease-out;
+            /*시간설정시 0.몇 이면 0을 생략하기도 함*/
+            /*트랜지션설정으로 애니메이션 하기!*/
+            /*
+            transition: 속성 시간 이징 지연;
+            - 속성: 변화를 줄 css속성명(안쓰면 all)
+            - 시간: 초단위로 숫자뒤에 s를 사용
+            - 이징: 애니메이션 시에 가속도
+                ease-in, ease-out, ease-in-out, linear
+                시작때 느림, 끝날때 느림, 시작끝에 느림,등속도
+            - 지연: 지연시간(초단위s)
+            */
+        }
+        /*캐릭터설명박스*/
+        .dbox{
+            font-family: 'Nanum Brush Script', cursive;
+            font-size: 13px;
+            color: #fff;
+            text-shadow: 0 0 1px #777;
+            padding: 15px;
+            line-height: 22px;/*줄간격*/
+            background-color: rgba(0, 0, 0, 0.66);
+            margin-top: 20px;/*상단밀기*/
+            /*display: none;*/
+            
+            /*문제점! 패딩값이 있는 박스는 높이값을 0으로 해도 없어지지 않음!*/
+        }
+        #cont>div:hover .dwrap{
+            height: 800px;
+        }
+        
+        /*추가구현 .cbox 캐릭터박스*/
+        .cbox{
+            width: 100%;
+            padding-top: 70%;
+        }
+        #elsa{
+            background: url(images/elsa.jpg) no-repeat top/cover;
+        }
+        #anna{
+            background: url(images/anna.jpg) no-repeat top/cover;
+        }
+        #kristoff{
+            background: url(images/kristoff.jpg) no-repeat top/cover;
+        }
+        #olaf{
+            background: url(images/olaf.jpg) no-repeat top/cover;
+        }
+        
+        
+        
+    </style>
+
+</head>
+
+<body>
+    <!--1.큰제목 넣기-->
+    <h1 id="tit">
+        <img src="images/frozen2_logo.png" alt="겨울왕국2">
+    </h1>
+    <!--2.캐릭터 소개박스-->
+    <div id="cont">
+        <!--2-1.엘사-->
+        <div id="elsa">
+            <!--캐릭터이미지-->
+            <div class="cbox"></div>
+<!--            <img src="images/elsa.png" alt="엘사">-->
+            <!--캐릭터이름박스-->
+            <div class="nbox">
+                ELSA
+            </div>
+            <!--캐릭터설명박스-->
+            <div class="dwrap">
+                <div class="dbox">
+                    <h3>도깨비(김신), 939세</h3>
+                
+                    <p>백성들은 그를 신(神)이라고 불렀다. 시뻘건 피를 뒤집어쓴 채 푸르게 안광을 빛내며 적들을 베는 그는 문자 그대로의 무신(武神)이었으나, 자신이 지키던 주군의 칼날에 죽었다. 영웅으로 살다 역적으로 죽어가던 김신에게 천상의 존재는 상인지 벌인지 모를 늙지도 죽지도 않는 생을 주었고, 그로부터 935년 동안 도깨비로 살았다. 심장에 검을 꽂은 채로.</p>
+                
+                    <p>“오직 도깨비 신부만이 그 검을 뽑을 것이다.” 지독히 낭만적인 저주였다. 그래서 쉬울 줄 알았지만 그가 만난 어떤 여자도 검을 발견하지 못한 채 불멸을 살던 어느 날. 자신을 도깨비 신부라고 소개하는 열아홉 살 소녀 은탁과 맞닥뜨린다. 그에게 도깨비 신부는 고통에서 벗어나 소멸할 수 있는 도구였다. 달리 말하면 은탁은 자신을 죽일 수 있는 유일무이한 무기였다.</p>
+                
+                    <p>죽고 싶게 괴로운 날은 은탁의 환심을 샀다가 아직 죽긴 일러 싶은 날은 멀리 했다가 하루에도 열 두 번씩 마음이 오락가락 했다. 은탁의 웃음에 그는 몇 번이나 어딘가를 돌아보고 싶은 마음에 사로잡혔다. 돌아서 한 번 더 보려는 것이 불멸의 삶인가, 너의 얼굴인가. 아, 너의 얼굴인 것 같다</p>
+                </div>
+            </div>
+        </div>
+        <!--2-2.안나-->
+        <div id="anna">
+            <!--캐릭터이미지-->
+            <div class="cbox"></div>
+<!--            <img src="images/anna.jpg" alt="안나">-->
+            <!--캐릭터이름박스-->
+            <div class="nbox">
+                ANNA
+            </div>
+            <!--캐릭터설명박스-->
+            <div class="dwrap">
+                <div class="dbox">
+                    <h3>지은탁, 19세</h3>
+                
+                    <p>대한민국의 평범한 고3 수험생, 이고 싶지만 그녀의 인생은 태어날 때부터 평범하지 않았다. 어려서부터 다른 사람들 눈엔 보이지 않는 죽은 혼들이 보였고, 때문에 친구들 사이에선 늘 외톨이였다. 엄마 없는 하늘 아래 못된 이모와 이모를 꼭 닮은 이모 자식들의 모진 구박을 견디며 지낸 지 꼬박 십년. 온갖 불행 소스를 다 때려 넣은 잡탕 같은 이 인생이 어이가 없는 와중에, 도깨비를 만났다. 그리고 은탁은 도깨비 신부가 될 운명이란다.</p>
+                
+                    <p>미스터리 호러 가난물이었던 인생에 갑자기 판타지라는 이상한 장르가 끼었다. 촛불을 끄면 항상 도깨비가 나타났다. 호기심에 불러냈던 게 습관이 되고, 안 보면 보고 싶고, 도깨비를 기다리는 일은 아직 오지 않은 좋은 미래를 기다리는 것처럼 설렜다. 감정 기복이 심해서 성가실 때도 있지만, 가슴에 검이 꽂힌 채로 살면 그렇게 되겠거니 싶어 봐주기로 한다. 근데 그 검을 나보고 뽑아달란다. 그 말이 꼭 끝내자는 말처럼 아프다.</p>
+                
+                </div>
+            </div>
+        </div>
+        <!--2-3.크리스토프-->
+        <div id="kristoff">
+            <!--캐릭터이미지-->
+            <div class="cbox"></div>
+<!--            <img src="images/kristoff.jpg" alt="크리스토프">-->
+            <!--캐릭터이름박스-->
+            <div class="nbox">
+                KRISTOFF
+            </div>
+            <!--캐릭터설명박스-->
+            <div class="dwrap">
+                <div class="dbox">
+                    <h3>저승사자, 30대 후반 추정</h3>
+                
+                    <p>죽는다는 건, 그와 선약이 생기는 거다. 누구나 그를 보면 놀란다. 처음엔 잘생겨서, 그 다음엔 내가 죽었구나 싶어서. 생의 마지막 순간에 마중 나오면서까지 저렇게 섹시할 필요가 있을까 싶다. 도깨비인 김신과 함께 살면서 하루에 열두 번씩 바뀌는 신의 변덕에 인내심이 한계를 느낄 때마다, 전생에 뭔 큰 죄를 짓긴 지었구나 싶지만 전생에 무엇이었는지, 인간이긴 했는지, 어떻게 저승사자가 됐는지 전혀 모른다.</p>
+                
+                    <p>죽음에서 눈을 떠보니 이미 저승사자였다. 저승사자가 되고 나선 날을 세는 것을 잊어버렸다. 그가 세어나가는 것은 무수한 망자들의 혼뿐.</p>
+                
+                    <p>그러던 어느 날, 우연히 마주친 한 여자, 써니에 현기증을 느꼈다. 처음 보는 게 분명한데 오래 그리워한 기분이었다. 써니의 예측 불가한 행동들은 상상력을 발휘해야 했고, 그의 서툰 행동들은 하나같이 오답이었다. 이게 다 연애를 드라마로만 배운 탓이다. 그는 헷갈렸다. 이것은 신의 계획일까, 실수일까.</p>
+                </div>
+            </div>
+        </div>
+        <!--2-4.올라프-->
+        <div id="olaf">
+            <!--캐릭터이미지-->
+            <div class="cbox"></div>
+<!--            <img src="images/olaf.jpg" alt="올라프">-->
+            <!--캐릭터이름박스-->
+            <div class="nbox">
+                OLAF
+            </div>
+            <!--캐릭터설명박스-->
+            <div class="dwrap">
+                <div class="dbox">
+                    <h3>써니, 20대 중후반</h3>
+                
+                    <p>혈혈단신 천애고아. 철없이 사는 여자가 세상 살기 가장 편하다는 걸 일찍부터 깨달았다. 남자의 외모는 내면으로 들어가는 창이고, 김중배의 다이아몬드는 잡는 게 당연한 거고, 진정한 사랑은 통장 잔고에서 느껴진다. 누군가의 첫사랑이 되는 게 세상에서 제일 쉬웠던 써니의 나이 곧 서른이었다.</p>
+                
+                    <p>그 남자, 저승사자를 처음 만난 건 갖고 싶은 반지를 발견했을 때였다. 그는 그녀에게 양보하지 않은 최초의 남자였다. 첫눈에 반했다고 넘겨짚기엔 너무, 슬픈 눈이었다. 시계며 차림새만 대충 훑어도 연봉 1억에 딱 봐도 연애 못해본 모태솔로인 줄만 알았는데, 만날수록 이상한 남자다. 두문불출하기 일쑤고 직업, 나이, 과거사 그 무엇도 알려주지 않는다. 처음엔 그저 잘생긴 호구로 생각했는데, 그 슬펐던 눈이 자꾸 눈에 밟힌다. 동정은 특기가 아닌데도.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body></html>
