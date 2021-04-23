@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>CSS 가상요소</title>
-        <style>
-            /* 
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS 가상요소</title>
+    <style>
+        /* 
                 [ 가상요소란? ]
                 - Pseudo-element:슈도엘러먼트
                 : 데이터를 담을 수 있는 요소일 경우
@@ -23,58 +24,90 @@
             (하나만 써도 적용은 된다...)
 
             1. ::before -> ~전에 의 뜻이므로 요소 맨앞에 뭔가추가
-            -> content 속성에 
+            -> 필수속성 content 속성에 
             content: "글자" -> 글자출력
             content: url(이미지경로) -> 이미지출력
 
              */
-             /* h2요소 맨앞에 이미지 넣기 */    
-             h2::before{
-                 content: url(imgs/blogo.png);
-                 /* 이미지를 직접불러오면 크기설정이 안됨! */
-                 margin-right: 20px;
-                 /* 마진적용! */
+        /* h2요소 맨앞에 이미지 넣기 */
+        h2::before {
+            content: url(imgs/blogo.png);
+            /* 이미지를 직접불러오면 크기설정이 안됨! */
+            margin-right: 20px;
+            /* 오른쪽 마진적용! */
+            vertical-align: middle;
+            /* 
+                    vertical-align 은 인라인 요소에서 옆에오는 
+                    인라인요소의 세로방향 정렬을 정의한다
+                    - 사용가능값: top/bottom/middle/px값 등
+                    - 예외적용: table의 td에 사용하면 셀데이터의 
+                                세로 정렬이 변경된다
+                  */
 
-             }
-        </style>
-    </head>
-    <body>
-        <h1>CSS 가상요소</h1>
+        }
 
-        <h2>[ 드라마 "도깨비" 제작발표회 ]</h2>
-        <dl>
-            <dt>등장인물</dt>
-            <dd>김신</dd>
-            <dd>저승사자</dd>
-            <dd>지은탁</dd>
-            <dd>써니</dd>
-            <dd>유덕화</dd>
+        /* 맨뒤 추가요소 ::after */
+        h2::after {
+            content: '';
+            /* 이미지를 url로 넣을 경우 크기변경이 안되므로
+                 박스로 만들고 배경이미지로 넣어서 크기를 변경한다! */
+            display: inline-block;
+            /* display설정을 안하면 inline이어서
+                 크기적용이 되지 않는다. 따라서 block을 해야
+                 디자인이 적용되는데 줄바꿈이된다. 따라서
+                 줄바꿈도 안되는 인라인인데 디자인도 되는 블록인
+                 인라인블록을 사용한다! */
+            width: 50px;
+            height: 25px;
+            background: url(imgs/blogo.png) no-repeat 0/100%;
 
-            <dt>출연배우</dt>
-            <dd>공유</dd>
-            <dd>이동욱</dd>
-            <dd>김고은</dd>
-            <dd>유인나</dd>
-            <dd>육성재</dd>
+            margin-left: 22px;/* 왼쪽마진 */
+            vertical-align: -5px;/* 세로정렬 */
+            outline: 2px dotted red;
+        }
+    </style>
+</head>
 
-            <dt>OST 아티스트</dt>
-            <dd>헤이즈</dd>
-            <dd>마마무</dd>
-            <dd>찬열,펀치</dd>
+<body>
+    <h1>CSS 가상요소</h1>
 
-            <dt>스토리</dt>
-            <dd>
-                <h3>시놉시스</h3>
-                <p>
-                    불멸의 삶을 끝내기 위해 인간 신부가 필요한 도깨비, 그와 기묘한 동거를 시작한 기억상실증 저승사자. 그런 그들 앞에 '도깨비 신부'라 주장하는 '죽었어야 할 운명'의 소녀가 나타나며 벌어지는 신비로운 낭만 설화
+    <h2>[ 드라마 "도깨비" 제작발표회 ]</h2>
+    <dl>
+        <dt>등장인물</dt>
+        <dd>김신</dd>
+        <dd>저승사자</dd>
+        <dd>지은탁</dd>
+        <dd>써니</dd>
+        <dd>유덕화</dd>
 
-                    <br><br>
+        <dt>출연배우</dt>
+        <dd>공유</dd>
+        <dd>이동욱</dd>
+        <dd>김고은</dd>
+        <dd>유인나</dd>
+        <dd>육성재</dd>
 
-                    불멸의 삶을 끝내기 위해 인간 신부가 필요한 도깨비, 그와 기묘한 동거를 시작한 기억상실증 저승사자. 그런 그들 앞에 '도깨비 신부'라 주장하는 '죽었어야 할 운명'의 소녀가 나타나며 벌어지는 신비로운 낭만 설화
-                </p>
+        <dt>OST 아티스트</dt>
+        <dd>헤이즈</dd>
+        <dd>마마무</dd>
+        <dd>찬열,펀치</dd>
 
-            </dd>
+        <dt>스토리</dt>
+        <dd>
+            <h3>시놉시스</h3>
+            <p>
+                불멸의 삶을 끝내기 위해 인간 신부가 필요한 도깨비, 그와 기묘한 동거를 시작한 기억상실증 저승사자. 그런 그들 앞에 '도깨비 신부'라 주장하는 '죽었어야 할 운명'의 소녀가 나타나며
+                벌어지는 신비로운 낭만 설화
 
-        </dl>
-    </body>
+                <br><br>
+
+                불멸의 삶을 끝내기 위해 인간 신부가 필요한 도깨비, 그와 기묘한 동거를 시작한 기억상실증 저승사자. 그런 그들 앞에 '도깨비 신부'라 주장하는 '죽었어야 할 운명'의 소녀가 나타나며
+                벌어지는 신비로운 낭만 설화
+            </p>
+
+        </dd>
+
+    </dl>
+</body>
+
 </html>
