@@ -47,10 +47,21 @@
                 /* 만약 오른쪽에서 조금 떨어져야할 경우 
                 margin-right으로 조정한다! */
             }
+
+            /* 인라인요소의 오른쪽 정렬 */
+            h1 span{
+                color: red;
+                float: right;
+                /* 인라인요소를 오른쪽 끝으로 보낼때 float을 사용한다 */
+                margin-right: 50px;/* 오른쪽여백 */
+            }
         </style>
     </head>
     <body>
-        <h1>블록요소의 정렬</h1>
+        <h1>
+            블록요소의 정렬
+            <span>♥♥♥♥♥♥♥</span>
+        </h1>
         <div class="bx">
             <div class="sbx sbx1"></div>
         </div>
