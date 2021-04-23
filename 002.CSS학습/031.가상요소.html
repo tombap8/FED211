@@ -65,6 +65,22 @@
             vertical-align: -5px;/* 세로정렬 */
             outline: 2px dotted red;
         }
+
+        /* dl요소 디자인 */
+        dl{
+            width: 800px;
+            font-size: 24px;
+            margin-left: 50px;
+        }
+        /* 반복되는 요소의 앞에 아이콘 가상요소로 넣기 */
+        dt::before{
+            content: "♣";
+            color: blue;
+            vertical-align: 3px;
+            margin-right: 5px;
+        }
+
+
     </style>
 </head>
 
