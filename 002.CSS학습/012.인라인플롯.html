@@ -14,6 +14,7 @@
         .bx {
             width: 800px;
             max-width: 100%;
+            /* 박스크기 보다 화면이 작아지면 100%로 전환 */
             margin: 0 auto;
             /* 마영오 - 박스중앙 */
             border: 3px solid #ccc;
@@ -21,6 +22,15 @@
             padding: 15px;
             margin-bottom: 50px;
             /* 마진하단 */
+
+            /* 보더, 패딩 내부포함 설정 */
+            box-sizing: border-box;
+            /* 
+                box-sizing: border-box;
+                - 설정한 박스크기 유지(보더,패딩포함)
+                box-sizing: content-box;-> 안줘도 기본값!
+                - 설정한 박스크기가 커짐(보더,패딩불포함)
+             */
 
             font-size: 18px;
             /* 기본글자 크기는 16px */
