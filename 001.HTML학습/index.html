@@ -4,6 +4,14 @@
         <meta charset="utf-8">
         <title>웹퍼블리셔과정 - 탐쌤</title>
         <style>
+            /* 웹폰트 CDN */
+            @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Gugi&display=swap');
+            /* 
+                웹폰트 설정
+                font-family: 'Black And White Picture', sans-serif;
+                font-family: 'Gugi', cursive;
+             */
+
             html,body{
                 margin: 0;
                 padding: 0;
@@ -59,13 +67,32 @@
                  /* 기본값은 content-box(커지는박스) */
             }
 
+            /* 프로젝트 영역 타이틀 */
+            .pjbx h2{                
+                font-family: 'Gugi', cursive;
+                font-size: 32px;
+                color: rgb(0, 86, 224);
+                text-align: center;
+                border: 2px double darkslateblue;
+                border-radius: 20px;
+                line-height: 40px;
+            }
+
             /* 각 박스의 ol리스트 */
             .pjbx>ol{
                 font-size: 24px;
                 line-height: 40px;
+
+                /* 기본 ol셋팅 초기화 */
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                /* 맨앞 표시자 없앰 */
             }
             /* 각 박스의 a링크 */
             .pjbx a{
+                font-family: 'Black And White Picture', sans-serif;
+                font-size: 34px;
                 color: darkblue;
                 text-decoration: none;
             }
