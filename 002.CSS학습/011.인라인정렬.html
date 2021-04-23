@@ -4,6 +4,43 @@
         <meta charset="utf-8">
         <title>인라인 요소의 정렬</title>
         <style>
+            h1,h2{
+                text-align: center;
+            }
+            /* 박스공통 */
+            .bx{
+                border: 5px dotted darkblue;
+                width: 600px;
+                margin: 50px auto;/* 블록중앙정렬 */
+                padding: 5px;
+            }
+            /* 기본적으로 인라인요소나 글자는 박스의 텍스트정렬로 셋팅한다! */
+            /* 1번박스 - 가로중앙정렬*/
+            .bx1{
+                text-align: center;
+                height: 100px;
+            }
+            /* 2번박스 - 가로오른쪽정렬 */
+            .bx2{
+                text-align: right;
+                height: 100px;
+            }
+            /* 3번박스 - 이미지 가로중앙정렬 */
+            .bx3{
+                text-align: center;
+                height: 200px;
+            }
+            /* 인라인 요소의 세로정렬은 일반적으로 line-height를 사용한다! */
+            /* 4번박스 - 글자정중앙 */
+            .bx4{
+                width: 400px;
+                height: 400px;
+                /* 박스자식요소 인라인 가로중앙 - text-align */
+                text-align: center;
+                /* 박스자식요소 인라인 세로중앙 - line-height */
+                line-height: 400px;
+                /* 세로중앙은 높이값과 같은 값으로 설정! */
+            }
 
         </style>
     </head>
