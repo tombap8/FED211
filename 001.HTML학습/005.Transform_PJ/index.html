@@ -20,6 +20,36 @@
                         0 2px #000, 0 -2px #000;
             background-color: rgba(0, 0, 0, 0.459);
         }
+        /* 전체부모박스 */
+        .cont{
+            width: 1500px;
+            max-width: 80%;
+            box-sizing: border-box;
+            padding: 20px;
+            border: 10px solid lime;
+            border-radius: 20px;
+            margin: 100px auto;
+            /* 블록가로중앙 - 마영오 */
+        }
+        /* 가상요소로 float해제하기 - 부모요소가 자식요소 높이값인식*/
+        .cont::after{
+            content: '';/* 필수속성 */
+            display: block;/* clear속성적용위해 */
+            clear: both;/* float해제 */
+        }
+        /* 캐릭터박스 공통 */
+        .cont>div{
+            width: 200px;
+            height: 200px;
+            margin: 44px;
+            float: left;
+            /* 블록박스를 옆으로 흐르게 */
+        }
+        /* 이미지 맞춤 */
+        .cont>div>img{
+            width: 100%;
+            border-radius: 50%;/* 원 */
+        }
         
     </style>
 </head>
