@@ -156,6 +156,21 @@
                 transform: skewX(-30deg);
                 /* x축으로 오른쪽방향 기울임 */
             }
+            /* 
+               8. scale(배수)
+               - 배수가 1보다 크면 확대, 작으면 축소
+               - scaleX(배수), scaleY(배수) - x,y축별
+               - 값이 0이면 사라짐
+             */
+             #trans8 img{
+                 transform: scale(.5);
+                 /* 0.5배 -> 축소 */
+             }
+             #trans8:hover img{
+                 transform: scale(2);
+                 /* 2배 -> 확대 */
+             }
+
     </style>
 </head>
 
