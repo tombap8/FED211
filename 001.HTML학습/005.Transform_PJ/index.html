@@ -49,8 +49,45 @@
         .cont>div>img{
             width: 100%;
             border-radius: 50%;/* 원 */
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            /* 
+                [ 밴더 프레픽스(Vender Prefix) ]
+                - 브라우저 제조사(Vender) 별로
+                새로운 CSS 속성을 지원하는 경우
+                이전 브라우저 버전에 적용될 수
+                있도록 접두어를 사용한다
+                (W3C에서 확인 후 사용한다!)
+
+                [ 각 밴더별 접두어 ]
+                -webkit- : 크롬, 사파리
+                (크롱과 사파리로 웹킷을 가지고 놀러간다~!)
+                -moz- : 파이어폭스(모질라 불여우!)
+                -o- : 오페라
+                -ms- : 익스플로러
+             */
+
+            /* 트랜지션: 속시이지 */
+            transition: transform .6s;
         }
-        
+        /* 
+            [ Transform 효과주기 ]
+            - 선택요소의 크기, 회전, 이동, 기울임
+            등 변형을 하기위한 속성
+            - 2D, 3D 지원됨
+
+            1. rotateY(각도deg) - Y축회전
+            - deg는 각도의 단위(도:degree)
+         */
+         #trans1:hover img{
+             transform: rotateY(180deg);
+         }
+        /* 
+            2. rotateX(각도deg) - X축회전
+         */
+         #trans2:hover img{
+             transform: rotateX(180deg);
+         }
     </style>
 </head>
 
