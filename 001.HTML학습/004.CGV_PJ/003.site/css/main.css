@@ -89,7 +89,17 @@ body {
     /* z-index를 적용하기 위해 */
     width: 50px;
     z-index: 1;
-    /* 빔박스보다 위에 */
+    /* 빔박스보다 위에 - 마우스 오버시 회전 0도*/
+    transform: rotate(20deg);
+
+    /* 트랜지션: 속시이지 */
+    transition: transform .5s .3s;
+}
+/* 마우스오버시 이미지회전 */
+#cam:hover img{
+    transform: rotate(0deg);
+    transition-delay: 0;
+    /* 오버시엔 지연시간 없음 */
 }
 /* 빔박스 */
 .bim{
@@ -97,13 +107,21 @@ body {
     top: -17px;
     right: 7%;
     /* 나의 부모는? #cam */
-    width: 200px;
+    width: 0px;/* 200px로 마우스 오버시 변경 */
     height: 71px;
     background: url(../images/bim.png) no-repeat;
     background-position: right center;
     background-size: auto 100%;/* 세로크기에 맞춤 */
 
     /* outline: 1px solid yellow; */
+    /* 트랜지션: 속시이지 */
+    transition: width .3s linear;
+}
+/* 마우스 오버시 빔등장 */
+#cam:hover .bim{
+    width: 200px;
+    transition-delay: .5s;
+    /* 마우스오버시 0.5초 지연시간 설정 */
 }
 
 /* 2. 메인부분 */
