@@ -2,11 +2,22 @@
 /* 외부 CSS 파일 상단에는 반드시 인코딩형식을
 지정해야만 문자가 깨짐없이 잘 실행된다 */
 
+/* 초기화 CSS 호출 */
+@import url(reset.css);
+/* 
+    @import url(경로)
+
+    import방식을 사용하는 이유는
+    html에서 link방식으로 웹요청(http request)을
+    하게 되면 html에서의 디스플레이 속도가 느려진다
+    따라서 CSS파일에서 이를 import하여 합친형태로
+    html로 가져가면 속도가 향상된다
+    - 주의: import는 css파일 상단에 코딩해야함!
+*/
+
 /* CGV 메인 페이지 CSS - main.css */
 body {
     background-color: #000;
-    margin: 0;
-    /* body의 기본마진 없애기 */
 }
 
 /* 레이아웃 공통 */
