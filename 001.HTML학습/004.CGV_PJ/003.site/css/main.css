@@ -76,6 +76,16 @@ body {
     /* 웹폰트 : Jua체 적용 */
     /* 글자크기는 미지정시 기본크기 16px적용됨! */
 }
+/* 1-3. 영사기 */
+#cam{
+    position: absolute;
+    bottom: 0px;
+    right: -50px;
+    /* 나의 부모는? #top */
+}
+#cam img{
+    width: 50px;
+}
 
 /* 2. 메인부분 */
 #cont {
