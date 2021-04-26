@@ -35,6 +35,17 @@ body {
     /* 외부CSS일 경우 이미지폴더는 CSS문서의 위치에서
      찾아야 정확하게 표시된다! */
 }
+/* 1-1. 페이지타이틀 */
+.tit{
+    color: aquamarine;
+    /* 글자색 */
+    font-size: 40px;
+    /* 글자크기 */
+    line-height: 80px;
+    /* 줄간격(세로중앙) */
+    text-align: center;
+    /* 인라인요소 가로중앙 */
+}
 
 /* 2. 메인부분 */
 #cont {
