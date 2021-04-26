@@ -225,7 +225,8 @@
                #trans10:hover img:last-child{
                    transform: rotateY(90deg);
                    /* 트랜지션:속시이지 */
-                   transition: transform .4s;
+                   transition: transform .4s ease-in;
+                   /* 가속도 - 처음에 천천히 나중에 원속도 */
                }
                /* 3. 유정이 처음상태(돌아옴) */
                /* 처음에 이미 Y축 90도 회전상태 - 안보임 */
@@ -240,7 +241,8 @@
                #trans10:hover img:first-child{
                    transform: rotateY(0deg);
                    /* 트랜지션: 속시이지 */
-                   transition: transform .4s .4s;
+                   transition: transform .4s ease-out .4s;
+                   /* 가속도 - 보거미 원속도를 받아서 마지막에 천천히 */
                 }
 
                 /* 
