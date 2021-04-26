@@ -7,3 +7,23 @@ html,body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd{
     margin: 0;
     padding: 0;
 }
+/* a요소 */
+a{
+    color: #fff;
+    text-decoration: none;
+}
+/* ul,ol요소 */
+ul,ol{
+    list-style: none;
+    /* 블릿/숫자표시 제거 */
+}
+/* float해제-가상요소로 설정 */
+ol::after, ul::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/* li요소 */
+li{
+    float: left;
+}
