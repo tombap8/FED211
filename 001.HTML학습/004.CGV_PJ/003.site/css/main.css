@@ -67,6 +67,15 @@ body {
     right: 15px;
     /* 나의 부모는? #top */
 }
+.gnb li{
+    padding: 0 10px;
+    /* 패딩 양쪽10px */
+}
+.gnb a{
+    font-family: 'Jua', sans-serif;
+    /* 웹폰트 : Jua체 적용 */
+    /* 글자크기는 미지정시 기본크기 16px적용됨! */
+}
 
 /* 2. 메인부분 */
 #cont {
