@@ -110,6 +110,20 @@
           #trans4:hover img{
               transform: translateY(200%);
           }
+           /* 
+            5. translate(X축거리,Y축거리) - X,Y축이동
+            - 단위: px, %
+            - 현재 위치로부터 이동
+            - 기준점은 요소의 왼쪽선과 윗선
+            - % 단위를 쓸 경우 기준은 
+                요소의 width와 height
+            - 이동방향: + 는 오른쪽/아랫쪽, 
+                        - 는 왼쪽/윗쪽
+          */
+          #trans5:hover img{
+              transform: translate(-200%,100%);
+              /* 왼쪽으로 2배, 아랫쪽으로 1배 이동 */
+          }
     </style>
 </head>
 
