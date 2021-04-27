@@ -57,7 +57,21 @@
         /* 캐릭터 각 박스 공통 */
         .abg>div {
             position: absolute;
+            top: 128px;
+            left: 105px;
             /* 나의 부모는? .abg */
+
+            /* 처음에 투명 */
+            opacity: 0;
+
+            /* 트랜지션: 속시이지 */
+            transition: all 2s ease-in-out;
+
+        }
+        /* body에 마우스 오버시 캐릭터박스 보이기 */
+        /* 공통이어서 한번에 줌! */
+        body:hover .abg>div{
+            opacity: 1;
         }
 
         /* 캐릭터 이미지 공통 */
@@ -78,6 +92,8 @@
             border-radius: 5px;
             font-family: 'Single Day', cursive;
             /* 웹폰트 적용 */
+            background-color: rgba(255, 255, 255, .4);
+            /* 흰색반투명 배경 */
 
             /* 처음에는 투명하게 안보임 */
             opacity: 0;
@@ -88,50 +104,52 @@
                     0~1 사이의 소수점 반투명
              */
 
-             transform: translateY(50px);
-             /* 현재위치에서 Y축 아래쪽으로 이동 */
+            transform: translateY(50px);
+            /* 현재위치에서 Y축 아래쪽으로 이동 */
 
-             /* 트랜지션: 속시이지 */
-             transition: all .6s ease-in-out;
-             /* 현재 opacity와 transform 2가지를
+            /* 트랜지션: 속시이지 */
+            transition: all .6s ease-in-out;
+            /* 현재 opacity와 transform 2가지를
              애니메이션 해야하므로 all(모두)를
              속성부분에 쓴다(또는 안쓰면 기본값 all) */
 
         }
+
         /* 각 캐릭터 박스에 오버시 설명박스 보이기 */
-        .abg>div:hover .cat{
+        .abg>div:hover .cat {
             opacity: 1;
             /* 투명도 복원 */
             transform: translateY(0);
             /* 위치 복원 */
         }
 
+        /* body에 마우스 오버시 */
         /* 각 캐릭터 박스 위치이동 */
-        .abg>div:first-child {
+        body:hover .abg>div:first-child {
             /* 아이언맨 */
             top: -100px;
             left: -100px;
         }
 
-        .abg>div:nth-child(2) {
+        body:hover .abg>div:nth-child(2) {
             /* 타노스 */
             top: 300px;
             left: -100px;
         }
 
-        .abg>div:nth-child(3) {
+        body:hover .abg>div:nth-child(3) {
             /* 토르 */
             top: 450px;
             left: 120px;
         }
 
-        .abg>div:nth-child(4) {
+        body:hover .abg>div:nth-child(4) {
             /* 토르 */
             top: 300px;
             left: 320px;
         }
 
-        .abg>div:last-child {
+        body:hover .abg>div:last-child {
             /* 스타로드 */
             top: -100px;
             left: 320px;
@@ -152,7 +170,8 @@
             margin-right: 10px;
         }
 
-        .rtxt {/*  설명박스 오른쪽위치 */
+        .rtxt {
+            /*  설명박스 오른쪽위치 */
             top: 0;
             left: 119px;
         }
