@@ -1,4 +1,8 @@
-유튜브 옵션
+[ 유튜브 옵션 ]
+
+-> 유튜브 옵션 설명 사이트참조
+https://developers.google.com/youtube/player_parameters?hl=ko
+
     autoplay=1 // 자동플레이
     loop=1 //반복재생하기(playlist=같은동영상id) 
     showinfo=0 //상단 정보바 없애기
