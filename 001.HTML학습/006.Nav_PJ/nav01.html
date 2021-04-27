@@ -28,8 +28,30 @@
                 width: 800px;
                 margin: 0 auto;
                 /* 블록가로중앙정렬 - 마영오! */
-                outline: 2px solid #000;
+                outline: 2px solid lime;
             }
+        .gnb>ul>li{
+            width: 200px;
+            text-align: center;
+        }
+        /* a요소 - 글자색, 밑줄처리 */
+        .gnb>ul>li>a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            text-decoration: none;
+            font: bold 14px/50px "맑은 고딕",Verdana;
+            /* font: 스 두 크/줄 체 */
+
+            /* 트랜지션: 속시이지 */
+            transition: all .4s;
+        }
+        /* 마우스오버시 글자색, 배경색변경 */
+        .gnb>ul>li:hover>a{
+            color: #001795;
+            background-color: #bdd1ff;
+        }
 
 
         </style>
@@ -71,6 +93,21 @@
                 </li>
                 <li>
                     <a href="#">웹개발</a>
+                    <!-- 서브메뉴 -->
+                    <ol class="smenu">
+                        <li>
+                            <a href="#">웹디자인</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML5+CSS3</a>
+                        </li>
+                        <li>
+                            <a href="#">jQuery</a>
+                        </li>
+                        <li>
+                            <a href="#">웹+모바일</a>
+                        </li>
+                    </ol>
                 </li>
                 <li>
                     <a href="#">게시판</a>
