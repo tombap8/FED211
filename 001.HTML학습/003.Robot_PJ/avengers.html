@@ -78,6 +78,32 @@
             border-radius: 5px;
             font-family: 'Single Day', cursive;
             /* 웹폰트 적용 */
+
+            /* 처음에는 투명하게 안보임 */
+            opacity: 0;
+            /* 
+                opacity 속성
+                - 요소의 투명도를 조정함
+                - 0 투명, 1 불투명, 
+                    0~1 사이의 소수점 반투명
+             */
+
+             transform: translateY(50px);
+             /* 현재위치에서 Y축 아래쪽으로 이동 */
+
+             /* 트랜지션: 속시이지 */
+             transition: all .6s ease-in-out;
+             /* 현재 opacity와 transform 2가지를
+             애니메이션 해야하므로 all(모두)를
+             속성부분에 쓴다(또는 안쓰면 기본값 all) */
+
+        }
+        /* 각 캐릭터 박스에 오버시 설명박스 보이기 */
+        .abg>div:hover .cat{
+            opacity: 1;
+            /* 투명도 복원 */
+            transform: translateY(0);
+            /* 위치 복원 */
         }
 
         /* 각 캐릭터 박스 위치이동 */
