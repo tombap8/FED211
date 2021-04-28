@@ -28,6 +28,13 @@
             font-size: 100%;
         }
 
+        /* ul요소 초기화 */
+        ul{/* 3無 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
         /* 전체 타이틀 */
         .tit{
             position: fixed;
@@ -53,6 +60,36 @@
             내용만큼만 자동크기 설정되므로 글자
             가운데 정렬 설정시 적용이 안되어 보인다
             이럴경우엔 반드시 가로 크기를 크게만들어준다 */
+        }
+
+        /* 메뉴 공통 */
+        .gnb li{
+            position: fixed;
+            /* fixed는 화면기준 */
+            width: 100px;
+            height: 100px;
+            outline: 5px dotted red;
+        }
+        /* 메뉴 각 위치 */
+        /* Home - 왼쪽위 */
+        .gnb li:first-child{
+            top: 0;
+            left: 0;
+        }
+        /* HTML - 오른쪽위*/
+        .gnb li:nth-child(2){
+            top: 0;
+            right: 0;
+        }
+        /* CSS - 왼쪽아래*/
+        .gnb li:nth-child(3){
+            bottom: 0;
+            left: 0;
+        }
+        /* JS - 오른쪽아래*/
+        .gnb li:last-child{
+            bottom: 0;
+            right: 0;
         }
 
 
