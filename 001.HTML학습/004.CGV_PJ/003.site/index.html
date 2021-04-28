@@ -25,8 +25,12 @@
         // 수행 코드는 바로 실행되지 않는다
         // 실행코드 저장구역을 "함수"라고 한다
         // 함수는 영어로 "function"이라고 한다
+        // 멍멍은 함수명, 먹이는 전달변수
+        // 함수는 코드 저장소
+        // 변수는 전달값을 담는 저장소
         function 멍멍(먹이){
             alert(먹이);
+            // alert(메시지) - 팝업경고창 띄움
         }////// 멍멍 함수 /////////////
 
     </script>
@@ -102,17 +106,24 @@
             <!-- 2-2.예고편선택메뉴 -->
             <nav class="mlist">
                 <ul>
+                    <!-- 
+                        onclick 이벤트속성의 값은 JS구역이다 
+                        onclick은 클릭이벤트가 발생하면 값이 실행된다
+                        쌍따옴표 안에 값으로 "함수명(전달값)"
+                        전달값이 문자일 경우 따옴표로 싸준다
+                        쌍따옴표가 바깥에 있으면 홑따옴표를 쓴다
+                    -->
                     <li onclick="멍멍('개뼈다구')"><!-- p6j5IqJw5Ck -->
                         <img src="images/m1.jpg" alt="비와 당신의 이야기"></li>
-                    <li><!-- O0s8Btiv_Dg -->
+                    <li onclick="멍멍('개뼈다구')"><!-- O0s8Btiv_Dg -->
                         <img src="images/m2.jpg" alt="서복"></li>
-                    <li><!-- lPYxbbKYYmE -->
+                    <li onclick="멍멍('개뼈다구')"><!-- lPYxbbKYYmE -->
                         <img src="images/m3.jpg" alt="미나리"></li>
-                    <li><!-- Qh4bQK_PY90 -->
+                    <li onclick="멍멍('개뼈다구')"><!-- Qh4bQK_PY90 -->
                         <img src="images/m4.jpg" alt="더 스파이"></li>
-                    <li><!-- tfmRVC_GADw -->
+                    <li onclick="멍멍('개뼈다구')"><!-- tfmRVC_GADw -->
                         <img src="images/m5.jpg" alt="노매드랜드"></li>
-                    <li><!-- R5sTnuMODDw -->
+                    <li onclick="멍멍('개뼈다구')"><!-- R5sTnuMODDw -->
                         <img src="images/m6.jpg" alt="귀멸의 칼날"></li>
                 </ul>
             </nav>
