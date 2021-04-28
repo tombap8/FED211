@@ -31,6 +31,16 @@
         function 멍멍(먹이){
             alert(먹이);
             // alert(메시지) - 팝업경고창 띄움
+
+            // document는 현재 html문서 전체
+            // 점(.)은 그 하위세계
+            // getElementById(아이디명) - 아이디요소
+            // src 속성명
+            // = (이퀄) 은 오른쪽의 값이 왼쪽으로 들어감
+            document
+            .getElementById("mv")
+            .src = "https://www.youtube.com/embed/"+먹이+"?autoplay=1";
+
         }////// 멍멍 함수 /////////////
 
     </script>
@@ -75,7 +85,7 @@
             <!-- 2-1.스크린박스 -->
             <div id="screen">
                 <!-- 유튜브 동영상 -->
-                <iframe src="https://www.youtube.com/embed/vteD1f-SV5I?autoplay=1" allow="autoplay"></iframe>
+                <iframe id="mv" src="https://www.youtube.com/embed/vteD1f-SV5I?autoplay=1" allow="autoplay"></iframe>
                 <!-- 
                     [ iframe 으로 유튜브 동영상 가져오기 ]
 
@@ -113,17 +123,17 @@
                         전달값이 문자일 경우 따옴표로 싸준다
                         쌍따옴표가 바깥에 있으면 홑따옴표를 쓴다
                     -->
-                    <li onclick="멍멍('개뼈다구')"><!-- p6j5IqJw5Ck -->
+                    <li onclick="멍멍('p6j5IqJw5Ck')"><!-- p6j5IqJw5Ck -->
                         <img src="images/m1.jpg" alt="비와 당신의 이야기"></li>
-                    <li onclick="멍멍('개뼈다구')"><!-- O0s8Btiv_Dg -->
+                    <li onclick="멍멍('O0s8Btiv_Dg')"><!-- O0s8Btiv_Dg -->
                         <img src="images/m2.jpg" alt="서복"></li>
-                    <li onclick="멍멍('개뼈다구')"><!-- lPYxbbKYYmE -->
+                    <li onclick="멍멍('lPYxbbKYYmE')"><!-- lPYxbbKYYmE -->
                         <img src="images/m3.jpg" alt="미나리"></li>
-                    <li onclick="멍멍('개뼈다구')"><!-- Qh4bQK_PY90 -->
+                    <li onclick="멍멍('Qh4bQK_PY90')"><!-- Qh4bQK_PY90 -->
                         <img src="images/m4.jpg" alt="더 스파이"></li>
-                    <li onclick="멍멍('개뼈다구')"><!-- tfmRVC_GADw -->
+                    <li onclick="멍멍('tfmRVC_GADw')"><!-- tfmRVC_GADw -->
                         <img src="images/m5.jpg" alt="노매드랜드"></li>
-                    <li onclick="멍멍('개뼈다구')"><!-- R5sTnuMODDw -->
+                    <li onclick="멍멍('R5sTnuMODDw')"><!-- R5sTnuMODDw -->
                         <img src="images/m6.jpg" alt="귀멸의 칼날"></li>
                 </ul>
             </nav>
