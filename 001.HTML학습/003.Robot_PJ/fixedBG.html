@@ -6,14 +6,16 @@
     <title>Fixed Background</title>
     <style>
         /* 웹폰트 CDN */
-        @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Orbitron&display=swap');
 
         /* 
             웹폰트 글자이름
             font-family: 'Black And White Picture', sans-serif;
+            font-family: 'Orbitron', sans-serif;
          */
 
-        html,body{
+        html,
+        body {
             margin: 0;
             padding: 0;
             height: 100%;
@@ -22,24 +24,29 @@
         }
 
         /* 타이틀요소 초기화 */
-        h1,h2,h3,h4{
+        h1,
+        h2,
+        h3,
+        h4 {
             margin: 0;
             padding: 0;
             font-size: 100%;
         }
 
         /* ul요소 초기화 */
-        ul{/* 3無 */
+        ul {
+            /* 3無 */
             margin: 0;
             padding: 0;
             list-style: none;
         }
 
         /* 전체 타이틀 */
-        .tit{
+        .tit {
             position: fixed;
             top: 50px;
-            left: 50%;/* 화면의 절반만큼 이동 */
+            left: 50%;
+            /* 화면의 절반만큼 이동 */
             /* fixed의 부모는 항상 보이는화면(window) */
             transform: translateX(-50%);
             /* 위치이동시 -50%는 자신의 가로크기기준 
@@ -48,9 +55,10 @@
             font-family: 'Black And White Picture', sans-serif;
             /* 웹폰트 적용 */
             font-size: 50px;
+            font-weight: normal;/* 볼드해제 */
             color: #fff;
             text-shadow: 1px 0 #000, -1px 0 #000,
-            0 1px #000, 0 -1px #000;
+                0 1px #000, 0 -1px #000;
             /* 그림자를 이용한 테두리주기 */
 
 
@@ -63,24 +71,29 @@
         }
 
         /* 메뉴 공통 */
-        .gnb li{
+        .gnb li {
             position: fixed;
             /* fixed는 화면기준 */
             width: 100px;
             height: 100px;
             /* outline: 5px dotted red; */
+            box-shadow: inset 0 0 10px #fff;
+            /* 내부그림자 밝게주기 */
         }
 
         /* 메뉴 공통 a */
-        .gnb a{
+        .gnb a {
             color: #fff;
             /* 글자색 */
             text-decoration: none;
             /* 밑줄없앰 */
             text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            /* 웹폰트적용 */
             font-weight: bold;
-            font-size: 25px;
-            line-height: 100px;/* 글자세로중앙 */
+            font-size: 20px;
+            line-height: 100px;
+            /* 글자세로중앙 */
             text-shadow: 2px 2px 1px #777;
             /* 글자그림자 */
 
@@ -93,11 +106,12 @@
 
         /* 메뉴 각 위치 */
         /* Home - 왼쪽위 */
-        .gnb li:first-child{
+        .gnb li:first-child {
             top: 0;
             left: 0;
             background-color: plum;
-            border-radius: 0 0 50% 0;/* 오른아래만 */
+            border-radius: 0 0 50% 0;
+            /* 오른아래만 */
             /* 
                 모서리 둥글게 4방향 셋팅하기
                 border-radius : 왼위 오른위 오른아래 왼아래;
@@ -105,35 +119,52 @@
                 -> 완전원형으로 주려면 50%값을 준다
              */
         }
+
         /* home메뉴 이미지 */
-        .gnb li:first-child img{
+        .gnb li:first-child img {
             height: 80px;
+            margin-top: 8px;
         }
+
         /* HTML - 오른쪽위*/
-        .gnb li:nth-child(2){
+        .gnb li:nth-child(2) {
             top: 0;
             right: 0;
             background-color: lightskyblue;
-            border-radius: 0 0 0 50%;/* 왼아래만 */
+            border-radius: 0 0 0 50%;
+            /* 왼아래만 */
         }
+
         /* CSS - 왼쪽아래*/
-        .gnb li:nth-child(3){
+        .gnb li:nth-child(3) {
             bottom: 0;
             left: 0;
             background-color: lightgreen;
-            border-radius: 0 50% 0 0;/* 오른위만 */
+            border-radius: 0 50% 0 0;
+            /* 오른위만 */
         }
+
         /* JS - 오른쪽아래*/
-        .gnb li:last-child{
+        .gnb li:last-child {
             bottom: 0;
             right: 0;
             background-color: lightsalmon;
-            border-radius: 50% 0 0 0;/* 왼위만 */
+            border-radius: 50% 0 0 0;
+            /* 왼위만 */
         }
 
+        /* 페이지 타이틀 */
+        .pgtit{
+            position: absolute;
+
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            font-size: 30px;
+            text-shadow: 1px 1px 2px #000;
+        }
 
         /* 공통페이지 */
-        .page{
+        .page {
             height: 100%;
             /* body셋팅을 기준함! */
 
@@ -150,33 +181,31 @@
 
         /* 각 페이지 */
         /* 1. Home */
-        #home{
+        #home {
             background-image: url(images2/001.jpg);
         }
 
         /* 2. HTML 소개 */
-        #html{
+        #html {
             background-image: url(images2/002.jpg);
         }
 
         /* 3.  CSS 소개 */
-        #css{
+        #css {
             background-image: url(images2/005.jpg);
         }
 
         /* 4. JS 소개 */
-        #js{
+        #js {
             background-image: url(images2/004.jpg);
         }
-
-
     </style>
 </head>
 
 <body>
     <!-- 1. 전체 타이틀 -->
     <h1 class="tit">
-        웹 퍼블리싱 개발
+        { 웹 퍼블리싱 개발 }
     </h1>
     <!-- 2. 메뉴 -->
     <nav class="gnb">
@@ -204,15 +233,15 @@
     </section>
     <!-- 3-2.HTML소개 -->
     <section id="html" class="page">
-        <h2>HTML</h2>
+        <h2 class="pgtit">HTML</h2>
     </section>
     <!-- 3-3.CSS소개 -->
     <section id="css" class="page">
-        <h2>CSS</h2>
+        <h2 class="pgtit">CSS</h2>
     </section>
     <!-- 3-4.JS소개 -->
     <section id="js" class="page">
-        <h2>Javascript</h2>
+        <h2 class="pgtit">Javascript</h2>
     </section>
 </body>
 
