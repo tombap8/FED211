@@ -70,11 +70,36 @@
             height: 100px;
             outline: 5px dotted red;
         }
+
+        /* 메뉴 공통 a */
+        .gnb a{
+            color: #fff;
+            /* 글자색 */
+            text-decoration: none;
+            /* 밑줄없앰 */
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+            line-height: 100px;/* 글자세로중앙 */
+            text-shadow: 2px 2px 1px #777;
+            /* 글자그림자 */
+
+            display: block;
+            /* 크기디자인 적용위해 */
+            width: 100%;
+            height: 100%;
+        }
+
+
         /* 메뉴 각 위치 */
         /* Home - 왼쪽위 */
         .gnb li:first-child{
             top: 0;
             left: 0;
+        }
+        /* home메뉴 이미지 */
+        .gnb li:first-child img{
+            height: 80px;
         }
         /* HTML - 오른쪽위*/
         .gnb li:nth-child(2){
