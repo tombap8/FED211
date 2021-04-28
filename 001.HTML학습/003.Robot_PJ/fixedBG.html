@@ -68,6 +68,36 @@
             내용만큼만 자동크기 설정되므로 글자
             가운데 정렬 설정시 적용이 안되어 보인다
             이럴경우엔 반드시 가로 크기를 크게만들어준다 */
+
+            z-index: 1;
+            /* 이걸 왜줬지?
+            부모자격위해 .page에 relative를 주었다
+            이것때문에 위치관계가 성립이 되어
+            나중에 코딩된 .page가 .tit와 .gnb li
+            보다 위에 오게됨
+            따라서 위치관계를 위에 오도록 z-index: index:1 로 설정함
+            
+            z-index는 반드시 static이 아닌
+            포지션 즉, 겹칠수 있는 포지션
+            relative/ absolute /fixed 이런거...
+            이런 포지션에서만 성립된다!
+
+            z-index를 안준경우 모두 0층에 있다!
+            1만 줘도 위로 올라온다!
+            여러개를 비교할 경우엔 숫자가 크면
+            위로 온다!
+            같은 형제 요소간 위아래 관계를 따진다!
+            
+            z-index없이 static이 아닌 요소는
+             일반 static요소보다
+            무조건 위에 온다!
+
+            단, static 요소보다 아래쪽에 가는방법은
+            z-index를 마이너스 값을 주면 된다!
+            예) z-index: -1;
+            
+            
+             */
         }
 
         /* 메뉴 공통 */
@@ -79,6 +109,9 @@
             /* outline: 5px dotted red; */
             box-shadow: inset 0 0 10px #fff;
             /* 내부그림자 밝게주기 */
+            
+            z-index: 1;
+            /* .page보다 위 */
         }
 
         /* 메뉴 공통 a */
@@ -156,7 +189,7 @@
         /* 페이지 타이틀 */
         .pgtit{
             position: absolute;
-            top: 100px;
+            top: 150px;
             left: 50%;
             /* 나의 부모는? .page */
             transform: translateX(-50%);
@@ -170,6 +203,8 @@
 
         /* 공통페이지 */
         .page {
+            position: relative;
+            /* 부모자격 */
             height: 100%;
             /* body셋팅을 기준함! */
 
