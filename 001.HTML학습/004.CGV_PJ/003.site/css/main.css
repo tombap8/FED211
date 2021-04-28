@@ -149,6 +149,30 @@ body {
     /* 기본 프레임 보더를 없앰 */
 }
 
+/* 2-2.예고편선택메뉴 */
+.mlist{
+    position: absolute;
+    bottom: 56px;
+    left: 252px;
+    /* 나의 부모는? #cont */
+}
+/* li 디자인 */
+.mlist ul>li{
+    padding: 0 10px;/* 양쪽패딩 */
+    cursor: pointer;
+    /* 마우스 오버시 손가락모양 */
+    /* 
+        커서값 옵션은?
+        https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor
+    */
+}
+/* 이미지 크기 지정 */
+.mlist img{
+    width: 99px;
+    height: 140px;
+}
+
+
 /* 3. 하단부분 */
 #info {
     height: 100px;
