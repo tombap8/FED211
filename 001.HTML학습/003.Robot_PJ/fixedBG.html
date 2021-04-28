@@ -5,6 +5,35 @@
     <meta charset="utf-8">
     <title>Fixed Background</title>
     <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* 높이값을 100%로 html,body에 동시에 주는 이유는?
+            자식요소의 높이값을 보이는 화면에 채우기 위함 */
+        }
+        /* 공통페이지 */
+        .page{
+            height: 100%;
+            /* body셋팅을 기준함! */
+
+            /* 배경디자인 공통 */
+            background-repeat: no-repeat;
+            /* 반복여부 */
+            background-attachment: fixed;
+            /* 배경고정 */
+            background-position: center;
+            /* 배경위치 */
+            background-size: cover;
+            /* 배경크기 */
+        }
+
+        /* 각 페이지 */
+        /* 1. Home */
+        #home{
+
+        }
+
 
     </style>
 </head>
