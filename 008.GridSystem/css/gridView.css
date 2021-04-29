@@ -34,7 +34,7 @@
     padding: 0 10px;
 
     background-clip: content-box;
-    /* 패딩영역은 배경색 빼기 */
+    /* 패딩영역의 배경색 빼기 */
     /* 
         CSS 3에서 추가된 새로운 배경속성!
         
