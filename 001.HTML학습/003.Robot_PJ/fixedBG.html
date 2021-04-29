@@ -281,6 +281,15 @@
 
             border: 1px solid #ccc;
             border-radius: 5px;
+            /* 
+                보더와 아웃라인과의 차이점
+                - 보더는 디자인요소에 포함되고 아웃라인은 아니다
+                - 보더는 박스크기에 영향을 주고 아웃라인은 아니다
+                - 보더는 테두리 둥글게가 되고 아웃라인 아니다
+                - 따라서 테두리 디자인은 반드시 보더로 준다
+                - 아웃라인은 외곽라인 표시자로 사용한다
+                (예: 크롬브라우저 포커스 표시를 아웃라인으로 함)
+             */
         }
 
         /* 인박스의 가상요소로 중앙분리선 만들기 */
@@ -318,7 +327,7 @@
             position: absolute;
             /* 스크롤시 고정하기 위해 */
             /* 젠틀앱솔루트 - 하단요소들은 이 존재를 모름 */
-            background-color: lightcoral;
+            /* background-color: lightcoral; - 배경색 파트별로 각각넣기 */
             padding: 10px;
             color: #fff;
             font-family: 'Cute Font', cursive;
@@ -349,6 +358,18 @@
             font-size: 14px;
             margin-right: 5px;
             color: blue;
+        }
+
+        
+        /* 공통 내용 중제목 배경색 각각 넣기 */
+        #html .inbox>div>h3 {
+            background-color: lightskyblue;
+        }
+        #css .inbox>div>h3 {
+            background-color: lightgreen;
+        }
+        #js .inbox>div>h3 {
+            background-color: lightsalmon;
         }
     </style>
 </head>
@@ -427,10 +448,68 @@
     <!-- 3-3.CSS소개 -->
     <section id="css" class="page">
         <h2 class="pgtit">CSS</h2>
+        <!-- 내용박스 -->
+        <article class="inbox">
+            <div class="descL scbar">
+                <!-- 중제목 -->
+                <h3>CSS 란 무엇입니까?</h3>
+                <!-- 소제목 -->
+                <h4>CSS는 의미 Cascading Style Sheets이다.</h4>
+                <!-- 세부항목리스트 -->
+                <ul>
+                    <li>CSS는 HTML 요소가 화면, 종이 또는 기타 미디어에 표시되는 방법을 설명 합니다.</li>
+                    <li>CSS 는 많은 작업을 절약합니다 . 한 번에 여러 웹 페이지의 레이아웃을 제어 할 수 있습니다.</li>
+                    <li>외부 스타일 시트는 CSS 파일에 저장됩니다.</li>
+                </ul>
+            </div>
+            <div class="descR scbar">
+                <!-- 중제목 -->
+                <h3>What is CSS?</h3>
+                <!-- 소제목 -->
+                <h4>CSS stands for Cascading Style Sheets</h4>
+                <!-- 세부항목리스트 -->
+                <ul>
+                    <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+                    <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+                    <li>External stylesheets are stored in CSS files</li>
+                </ul>
+            </div>
+        </article>
     </section>
     <!-- 3-4.JS소개 -->
     <section id="js" class="page">
         <h2 class="pgtit">Javascript</h2>
+        <!-- 내용박스 -->
+        <article class="inbox">
+            <div class="descL scbar">
+                <!-- 중제목 -->
+                <h3>자바스크립트란 무엇입니까?</h3>
+                <!-- 소제목 -->
+                <h4>JavaScript는 세계에서 가장 널리 사용되는 프로그래밍 언어입니다.</h4>
+                <!-- 세부항목리스트 -->
+                <ul>
+                    <li>JavaScript는 웹의 프로그래밍 언어입니다.</li>
+                    <li>JavaScript는 배우기 쉽습니다.</li>
+                    <li>JavaScript와 Java 는 개념과 디자인면에서 완전히 다른 언어입니다.</li>
+                    <li>JavaScript는 1995 년 Brendan Eich에 의해 발명되었으며 1997 년 ECMA 표준이되었습니다.</li>
+                    <li>ECMA-262는 표준의 공식 이름입니다. ECMAScript는 언어의 공식 이름입니다.</li>
+                </ul>
+            </div>
+            <div class="descR scbar">
+                <!-- 중제목 -->
+                <h3>What is Javascript?</h3>
+                <!-- 소제목 -->
+                <h4>JavaScript is the world's most popular programming language.</h4>
+                <!-- 세부항목리스트 -->
+                <ul>
+                    <li>JavaScript is the programming language of the Web.</li>
+                    <li>JavaScript is easy to learn.</li>
+                    <li>JavaScript and Java are completely different languages, both in concept and design.</li>
+                    <li>JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.</li>
+                    <li>ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.</li>
+                </ul>
+            </div>
+        </article>
     </section>
 </body>
 
