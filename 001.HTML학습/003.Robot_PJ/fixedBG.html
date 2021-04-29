@@ -401,23 +401,33 @@
             line-height: 90px;
             color: #fff;
             text-shadow: 2px 2px 2px #000;
-            outline: 2px solid red;
+            /* outline: 2px solid red; */
         }
         /* 각 글자색 셋팅 */
         .itxt li:nth-child(1){
             color: plum;
-            transform: translate(0%,0%);
+            transform: translate(-39%,219%);
         }
         .itxt li:nth-child(2){
             color: lightskyblue;
-            transform: translate(0%,0%);
+            transform: translate(51%,247%);
         }
         .itxt li:nth-child(3){
             color: lightgreen;
-            transform: translate(0%,0%);
+            transform: translate(30%,-138%);
         }
         .itxt li:nth-child(4){
             color: lightsalmon;
+            transform: translate(-50%,-293%);
+        }
+
+        /* 공통 트랜지션 */
+        .itxt li{
+            transition: transform 3s ease-in-out;
+        }
+
+        /* 마우스 오버시 원래위치로 돌아가기 */
+        #home .inbox:hover .itxt li{
             transform: translate(0%,0%);
         }
 
