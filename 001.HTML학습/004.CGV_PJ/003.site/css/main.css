@@ -172,6 +172,28 @@ body {
     height: 140px;
 }
 
+/* 영화정보박스 */
+.movtxt{
+    position: absolute;
+    /* 젠틀앱솔루트! */
+    top: 0;
+    width: 99px;
+    height: 140px;
+
+    /* 글자셋팅 */
+    font-family: 'Cute Font', cursive;
+    font-size: 14px;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0.705);
+}
+.movtxt li{
+    float: none;
+    /* float해제 */
+}
+
 
 /* 3. 하단부분 */
 #info {
