@@ -379,6 +379,46 @@
         #js .inbox>div>h3 {
             background-color: lightsalmon;
         }
+
+        /* 첫 페이지 구성하기 */
+        /* 인박스의 중앙분리선 가상요소 없애기 */
+        #home .inbox::before{
+            display: none;
+        }
+        /* 인트로 텍스트 박스 */
+        .itxt{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            /* 세로중앙이동 */
+            width: 500px;
+            margin: 0 auto;
+            /* 마영오 - 가로중앙 */
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 90px;
+            color: #fff;
+            text-shadow: 2px 2px 2px #000;
+            outline: 2px solid red;
+        }
+        /* 각 글자색 셋팅 */
+        .itxt li:nth-child(1){
+            color: plum;
+        }
+        .itxt li:nth-child(2){
+            color: lightskyblue;
+        }
+        .itxt li:nth-child(3){
+            color: lightgreen;
+        }
+        .itxt li:nth-child(4){
+            color: lightsalmon;
+        }
+
+
+
     </style>
 </head>
 
@@ -413,7 +453,14 @@
     <!-- 3. 각 페이지 -->
     <!-- 3-1.홈 -->
     <section id="home" class="page">
-
+        <article class="inbox">
+            <ul class="itxt">
+                <li>웹퍼블리싱</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+            </ul>
+        </article>
     </section>
     <!-- 3-2.HTML소개 -->
     <section id="html" class="page">
