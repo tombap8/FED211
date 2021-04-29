@@ -6,12 +6,14 @@
     <title>Fixed Background</title>
     <style>
         /* 웹폰트 CDN */
-        @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Orbitron&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Orbitron&family=Cute+Font&family=Single+Day&display=swap');
 
         /* 
             웹폰트 글자이름
             font-family: 'Black And White Picture', sans-serif;
             font-family: 'Orbitron', sans-serif;
+            font-family: 'Cute Font', cursive;
+            font-family: 'Single Day', cursive;
          */
 
         html,
@@ -63,7 +65,7 @@
             /* 그림자를 이용한 테두리주기 */
 
             background-color: #ffffff70;
-            /* 해시코드로 반투명 주기 : #6자리+2자리(%수치) */
+            /* 해시코드로 반투명 주기 : #6자리+2자리(%수치-해시값) */
             padding: 10px;
             border-radius: 10px;
 
@@ -256,6 +258,8 @@
             height: 50%;
             margin: 0 auto;
             /* 가로중앙정렬 */
+            background-color: #ffffff80;
+
             outline: 2px solid lime;
         }
         /* 인박스 내부의 2개의 div를 옆으로 흐르게 */
@@ -269,6 +273,26 @@
             box-sizing: border-box;
             /* 보더박스는 보더와 패딩을 내부로 포함한다(크기유지!) */
             /* 이 속성을 안주면 기본값 content-box임(커지는박스) */
+        }
+
+        /* 공통 내용 중제목 */
+        .inbox>div>h3{
+            position: absolute;
+            /* 스크롤시 고정하기 위해 */
+            /* 젠틀앱솔루트 - 하단요소들은 이 존재를 모름 */
+            background-color: lightcoral;
+            padding: 10px;
+            color: #fff;            
+            font-family: 'Cute Font', cursive;
+            font-size: 30px;
+        }
+        /* 공통 내용 소제목 */
+        .inbox>div>h4{
+            font-family: 'Single Day', cursive;
+            margin-top: 100px;
+            /* 중제목이 앱솔루트 이므로
+            아래있는 소제목은 중제목을 인식하지 못한다!
+            따라서 마진으로 위쪽여백을 준다! */
         }
 
 
