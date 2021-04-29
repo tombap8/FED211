@@ -64,7 +64,8 @@
         /* 전체 타이틀 */
         .tit {
             position: fixed;
-            top: 50px;
+            top: 2%;
+            /* 기준은 보이는화면의 높이값 */
             left: 50%;
             /* 화면의 절반만큼 이동 */
             /* fixed의 부모는 항상 보이는화면(window) */
@@ -214,7 +215,8 @@
         /* 페이지 타이틀 */
         .pgtit {
             position: absolute;
-            top: 150px;
+            top: 16%;
+            /* 기준은 부모의 높이값 */
             left: 50%;
             /* 나의 부모는? .page */
             transform: translateX(-50%);
@@ -327,11 +329,15 @@
             position: absolute;
             /* 스크롤시 고정하기 위해 */
             /* 젠틀앱솔루트 - 하단요소들은 이 존재를 모름 */
-            /* background-color: lightcoral; - 배경색 파트별로 각각넣기 */
+            /* background-color: lightcoral; 
+            - 배경색 파트별로 각각넣기 */
             padding: 10px;
             color: #fff;
             font-family: 'Cute Font', cursive;
             font-size: 30px;
+            text-shadow: 1px 0 #000, -1px 0 #000,
+                0 1px #000, 0 -1px #000;
+            /* 글자 그림자를 이용한 글자테두리 */
         }
 
         /* 공통 내용 소제목 */
@@ -360,14 +366,16 @@
             color: blue;
         }
 
-        
+
         /* 공통 내용 중제목 배경색 각각 넣기 */
         #html .inbox>div>h3 {
             background-color: lightskyblue;
         }
+
         #css .inbox>div>h3 {
             background-color: lightgreen;
         }
+
         #js .inbox>div>h3 {
             background-color: lightsalmon;
         }
@@ -506,7 +514,8 @@
                     <li>JavaScript is easy to learn.</li>
                     <li>JavaScript and Java are completely different languages, both in concept and design.</li>
                     <li>JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.</li>
-                    <li>ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.</li>
+                    <li>ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.
+                    </li>
                 </ul>
             </div>
         </article>
