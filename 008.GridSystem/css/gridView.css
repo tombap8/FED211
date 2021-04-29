@@ -46,9 +46,9 @@
 
         background-origin : 배경이미지 영역설정 속성
         선택값 옵션:
-        1) border-box 는 보더영역까지 배경색 넣기
-        2) padding-box 는 패딩영역까지 배경색 넣기(기본값)
-        3) content-box 는 컨텐트 영역까지만 배경색 넣기(보더,패딩제외)
+        1) border-box 는 보더영역까지 배경이미지 넣기
+        2) padding-box 는 패딩영역까지 배경이미지 넣기(기본값)
+        3) content-box 는 컨텐트 영역까지만 배경이미지 넣기(보더,패딩제외)
 
     */
 }
