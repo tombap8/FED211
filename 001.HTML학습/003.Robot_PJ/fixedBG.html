@@ -43,6 +43,24 @@
             list-style: none;
         }
 
+        /* 스크롤바 트랙 디자인변경 class */
+        .scbar::-webkit-scrollbar {
+            width: 5px;
+            /* 스크롤바 가로크기 */
+        }
+
+        .scbar::-webkit-scrollbar-thumb {
+            background: #666;
+            border-radius: 5px;
+            /* 스크롤바 배경색, 모서리 둥글게 */
+        }
+
+        .scbar::-webkit-scrollbar-track {
+            background: #ddd;
+            border-radius: 5px;
+            /* 스크롤바 트랙 배경색, 모서리 둥글게 */
+        }
+
         /* 전체 타이틀 */
         .tit {
             position: fixed;
@@ -248,10 +266,11 @@
         }
 
         /* 내용박스 공통 */
-        .inbox{
+        .inbox {
             position: relative;
             /* top값으로 현재위치로부터 위치이동하려고 설정함 */
-            top: 25%;/* 싸고있는 박스 높이값의 25% */
+            top: 25%;
+            /* 싸고있는 박스 높이값의 25% */
             /* 박스높이값이 50%이므로 남은 공간 50%의 절반인 25%
             를 밀어주면 중앙에 오게된다 */
             width: 70%;
@@ -262,13 +281,14 @@
 
             outline: 2px solid lime;
         }
+
         /* 인박스의 가상요소로 중앙분리선 만들기 */
-        .inbox::before{
+        .inbox::before {
             content: '';
             display: block;
             position: absolute;
             top: 10%;
-            left: 49%;
+            left: 50%;
             /* 나의 부모는? .inbox */
             width: 0;
             height: 80%;
@@ -276,31 +296,36 @@
         }
 
         /* 인박스 내부의 2개의 div를 옆으로 흐르게 */
-        .inbox>div{
+        .inbox>div {
             width: 50%;
             height: 100%;
             float: left;
-            padding: 15px;
+            padding: 25px;
             /* 패딩을 주면 일반적으로 박스가 커짐 - 플롯된 박스가
             아래로 떨어짐(왜? 좁으니까) */
             box-sizing: border-box;
             /* 보더박스는 보더와 패딩을 내부로 포함한다(크기유지!) */
             /* 이 속성을 안주면 기본값 content-box임(커지는박스) */
+            overflow: auto;
+            /* 내용이 넘치면 보통 박스바깥으로 나가는데
+            이것이 visible 값이다.(기본값)
+            넘치면 스크롤바가 생기게 해주는 옵션이 auto임 */
         }
 
         /* 공통 내용 중제목 */
-        .inbox>div>h3{
+        .inbox>div>h3 {
             position: absolute;
             /* 스크롤시 고정하기 위해 */
             /* 젠틀앱솔루트 - 하단요소들은 이 존재를 모름 */
             background-color: lightcoral;
             padding: 10px;
-            color: #fff;            
+            color: #fff;
             font-family: 'Cute Font', cursive;
             font-size: 30px;
         }
+
         /* 공통 내용 소제목 */
-        .inbox>div>h4{
+        .inbox>div>h4 {
             font-family: 'Single Day', cursive;
             margin-top: 70px;
             /* 중제목이 앱솔루트 이므로
@@ -308,24 +333,22 @@
             따라서 마진으로 위쪽여백을 준다! */
             font-size: 20px;
         }
+
         /* 공통 내용 상세리스트 */
-        .inbox>div>ul{
+        .inbox>div>ul {
             font-family: 'Cute Font', cursive;
             font-size: 24px;
             line-height: 34px;
             padding-top: 20px;
         }
+
         /* 가상요소로 li블릿만들기 */
-        .inbox>div>ul>li::before{
+        .inbox>div>ul>li::before {
             content: "◈";
             font-size: 14px;
             margin-right: 5px;
             color: blue;
         }
-
-
-
-
     </style>
 </head>
 
@@ -367,7 +390,7 @@
         <h2 class="pgtit">HTML</h2>
         <!-- 내용박스 -->
         <article class="inbox">
-            <div class="descL">
+            <div class="descL scbar">
                 <!-- 중제목 -->
                 <h3>HTML이란 무엇입니까?</h3>
                 <!-- 소제목 -->
@@ -382,7 +405,7 @@
                     <li>HTML 요소는 "이것은 제목입니다", "이것은 단락입니다", "이것은 링크입니다"등과 같은 콘텐츠 조각에 레이블을 지정합니다.</li>
                 </ul>
             </div>
-            <div class="descR">
+            <div class="descR scbar">
                 <!-- 중제목 -->
                 <h3>What is HTML?</h3>
                 <!-- 소제목 -->
@@ -394,7 +417,8 @@
                     <li>HTML describes the structure of a Web page</li>
                     <li>HTML consists of a series of elements</li>
                     <li>HTML elements tell the browser how to display the content</li>
-                    <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+                    <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this
+                        is a link", etc.</li>
                 </ul>
             </div>
         </article>
