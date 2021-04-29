@@ -262,6 +262,19 @@
 
             outline: 2px solid lime;
         }
+        /* 인박스의 가상요소로 중앙분리선 만들기 */
+        .inbox::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10%;
+            left: 49%;
+            /* 나의 부모는? .inbox */
+            width: 0;
+            height: 80%;
+            border-right: 5px dotted blue;
+        }
+
         /* 인박스 내부의 2개의 div를 옆으로 흐르게 */
         .inbox>div{
             width: 50%;
@@ -289,10 +302,25 @@
         /* 공통 내용 소제목 */
         .inbox>div>h4{
             font-family: 'Single Day', cursive;
-            margin-top: 100px;
+            margin-top: 70px;
             /* 중제목이 앱솔루트 이므로
             아래있는 소제목은 중제목을 인식하지 못한다!
             따라서 마진으로 위쪽여백을 준다! */
+            font-size: 20px;
+        }
+        /* 공통 내용 상세리스트 */
+        .inbox>div>ul{
+            font-family: 'Cute Font', cursive;
+            font-size: 24px;
+            line-height: 34px;
+            padding-top: 20px;
+        }
+        /* 가상요소로 li블릿만들기 */
+        .inbox>div>ul>li::before{
+            content: "◈";
+            font-size: 14px;
+            margin-right: 5px;
+            color: blue;
         }
 
 
