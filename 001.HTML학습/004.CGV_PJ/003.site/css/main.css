@@ -82,7 +82,40 @@ body {
 /* 하위메뉴 */
 .smenu{
     position: absolute;
-    width: 100px;
+    width: 110px;
+    padding: 5px;
+    background: url(../images/bg_smenu.png) no-repeat center/cover;
+    font-size: 11px;
+}
+/* 하위메뉴 li요소 */
+.smenu li{
+    float: none;
+    /* float해제 */
+}
+/* 하위메뉴 a요소 */
+.smenu a{
+    display: inline-block;
+    /* 인라인인데 디자인 적용하기 */
+    width: 100%;
+    /* li박스 끝까지가기 */
+}
+
+/* 하위메뉴에 오버시 글자색변경 */
+.smenu a:hover{
+    color: #f00;
+}
+/* 하위메뉴에 가상요소로 손가락 넣기 */
+.smenu a::after{
+    content: '☞';
+    font-size: 15px;
+    float: right;
+    transform: translateY(-5px);
+    /* 현재위치에서 Y축 이동하기 */
+    opacity: 0;/* 투명처리 */
+}
+/* 하위메뉴에 마우스 오버시 가상요소 손가락 보이기 */
+.smenu a:hover::after{
+    opacity: 1;/* 보이게함 */
 }
 
 
