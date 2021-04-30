@@ -271,7 +271,7 @@ body {
     height: 34px;
     float: left;
     margin: 2px;
-    outline: 2px solid lime;
+    /* outline: 2px solid lime; */
 
     /* 배경이미지 넣기 - 스프라이츠! */
     background: url(../images/sprites_logo.png) no-repeat;
@@ -285,14 +285,14 @@ body {
 */
 /* 페이스북 */
 .sns li:nth-child(1){
-    background-position: -505px -429px;
+    background-position: -509px -429px;
 }
 /* 트위터 */
 .sns li:nth-child(2){
-    background-position: -548px -429px;
+    background-position: -551px -429px;
 }
 /* 인스타그램 */
 .sns li:nth-child(3){
-    background-position: -589px -429px;
+    background-position: -593px -429px;
 }
 
