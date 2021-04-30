@@ -123,15 +123,24 @@ body {
     content: '';
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -10px;
+    left: calc(50% - 10px);
+    /* calc는 %수치에서 특정px을 뺀 표현이다(중앙에 오도록!) */
     /* 부모는? .smenu */
     width: 0;
     height: 0;
     /* 정삼각형 보더로 만들기 */
-    border-bottom: 10px solid red;
+    border-bottom: 10px solid rgb(53 53 53);
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
+    /* 역삼각형은 border-top에 준다! */
+    /* border-top: 10px solid red; */
+
+}
+/* 하위메뉴 내부 테두리는 ol에 준다 */
+.smenu ol{
+    border: 2px solid #ccc;
+    padding: 10px 0;
 }
 
 
