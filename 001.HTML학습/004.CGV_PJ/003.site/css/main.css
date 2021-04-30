@@ -152,10 +152,14 @@ body {
 /* 2-2.예고편선택메뉴 */
 .mlist{
     position: absolute;
-    /* 부모자격도 됨! */
+    /* 부모자격도 됨! .movtxt의 부모*/
     bottom: 56px;
     left: 252px;
     /* 나의 부모는? #cont */
+    overflow: hidden;
+    /* 넘치는 자식요소 숨기기
+    - .movtxt를 숨기기위해 설정. 
+    부모자격요소에 이 설정을 해야 적용된다! */
 }
 /* li 디자인 */
 .mlist ul>li{
@@ -183,7 +187,7 @@ body {
     한쪽에 모두 몰리게 된다. 바로위의 li를 부모로
     만들고 또한 left값도 조정이 필요하다! 따라서
     젠틀앱솔루트를 이용해야 구현이 편리하다!!!*/
-    top: 0;
+    top: 100%;/* 부모요소의 높이값이 기준 */
     /* top에 대한 부모는? .mlist */
     width: 99px;
     height: 140px;
@@ -198,7 +202,15 @@ body {
     background-color: rgba(0, 0, 0, 0.705);
     /* 반투명배경 */
 
+    /* 트랜지션:속시이지 */
+    transition: top .4s ease-out;
+
 }
+/* 부모 li에 마우스 오버시 .movtxt 올라오기 */
+.mlist>ul>li:hover .movtxt{
+    top: 0;
+}
+
 .movtxt li{
     float: none;
     /* float해제 */
@@ -209,6 +221,7 @@ body {
     color: aqua;
     font-size: 17px;
     /* 기본글자크기는 16px */
+    letter-spacing: -1px;
 }
 
 
