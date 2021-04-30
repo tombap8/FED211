@@ -125,7 +125,9 @@ body {
     position: absolute;
     top: -10px;
     left: calc(50% - 10px);
-    /* calc는 %수치에서 특정px을 뺀 표현이다(중앙에 오도록!) */
+    /* calc는 %수치에서 특정px을 뺀 표현이다(중앙에 오도록!) 
+        calc로 빼기할때 주의사항: 마이너스 앞뒤에 공백필수!!!
+    */
     /* 부모는? .smenu */
     width: 0;
     height: 0;
