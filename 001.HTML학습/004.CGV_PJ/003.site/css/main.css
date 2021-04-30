@@ -152,6 +152,7 @@ body {
 /* 2-2.예고편선택메뉴 */
 .mlist{
     position: absolute;
+    /* 부모자격도 됨! */
     bottom: 56px;
     left: 252px;
     /* 나의 부모는? #cont */
@@ -177,6 +178,7 @@ body {
     position: absolute;
     /* 젠틀앱솔루트! */
     top: 0;
+    /* top에 대한 부모는? .mlist */
     width: 99px;
     height: 140px;
 
@@ -200,6 +202,7 @@ body {
     margin-top: 30px;
     color: aqua;
     font-size: 17px;
+    /* 기본글자크기는 16px */
 }
 
 
