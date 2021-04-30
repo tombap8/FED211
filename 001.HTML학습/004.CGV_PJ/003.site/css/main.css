@@ -296,3 +296,10 @@ body {
     background-position: -593px -429px;
 }
 
+/* sns a요소 확장 */
+.sns a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
