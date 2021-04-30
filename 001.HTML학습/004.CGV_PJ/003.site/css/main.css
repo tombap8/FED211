@@ -32,7 +32,7 @@ body {
     width: 1200px;
     margin: 0 auto;
     /* 블록요소 가로 중앙정렬 */
-    outline: 3px dotted yellow;
+    /* outline: 3px dotted yellow; */
 }
 
 /* 1. 상단부분 */
