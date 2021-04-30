@@ -229,3 +229,23 @@ body {
 #info {
     height: 100px;
 }
+/* 3-1.회사정보박스 */
+#info address{
+    font-style: normal;
+    /* address요소의 기본 이탤릭 해제 */
+    color: #fff;
+    font-family: 'Cute Font', cursive;
+    font-size: 18px;
+    line-height: 20px;
+
+    /* 안쪽여백 */
+    padding-top: 20px;
+    padding-left: 20px;
+}
+/* 하단로고 이미지 */
+#info address img{
+    float: left;
+    /* 이미지는 왼쪽에 글자는 오른쪽으로 흐르게 */
+    /* CSS학습>012.인라인플롯 참조 */
+    margin-right: 20px;
+}
