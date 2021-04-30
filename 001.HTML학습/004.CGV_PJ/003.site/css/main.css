@@ -94,7 +94,16 @@ body {
     padding: 5px;
     background: url(../images/bg_smenu.png) no-repeat center/cover;
     font-size: 11px;
+
+    /* 처음에 모두 안보이게 처리 */
+    display: none;
+    /* opacity:0은 투명하게 하는 것이고 이것은 아예출력을 안되게함 */
 }
+/* 상위메뉴 li에 마우스 오버시 하위메뉴 보이기 */
+.gnb>ul>li:hover .smenu{
+    display: block;
+}
+
 /* 하위메뉴 li요소 */
 .smenu li{
     float: none;
