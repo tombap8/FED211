@@ -82,6 +82,7 @@ body {
 /* 하위메뉴 */
 .smenu{
     position: absolute;
+    /* 부모자격도 있음! */
     width: 110px;
     padding: 5px;
     background: url(../images/bg_smenu.png) no-repeat center/cover;
@@ -116,6 +117,21 @@ body {
 /* 하위메뉴에 마우스 오버시 가상요소 손가락 보이기 */
 .smenu a:hover::after{
     opacity: 1;/* 보이게함 */
+}
+/* 가상요소로 삼각형 만들기 */
+.smenu::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 부모는? .smenu */
+    width: 0;
+    height: 0;
+    /* 정삼각형 보더로 만들기 */
+    border-bottom: 10px solid red;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 
 
