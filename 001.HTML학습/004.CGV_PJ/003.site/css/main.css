@@ -71,6 +71,8 @@ body {
     /* 나의 부모는? #top */
 }
 .gnb li{
+    position: relative;
+    /* 부모자격 */
     padding: 0 10px;
     /* 패딩 양쪽10px */
 }
@@ -83,6 +85,11 @@ body {
 .smenu{
     position: absolute;
     /* 부모자격도 있음! */
+    top: 27px;
+    left: 50%;
+    /* 부모는? 싸고 있는 li */
+    transform: translateX(-50%);
+    /* 가로중앙이동(내크기의 절반을 왼쪽으로 이동) */
     width: 110px;
     padding: 5px;
     background: url(../images/bg_smenu.png) no-repeat center/cover;
@@ -143,6 +150,11 @@ body {
 .smenu ol{
     border: 2px solid #ccc;
     padding: 10px 0;
+}
+/* 하위메뉴 가로구분선 class */
+.hline{
+    border-top: 2px solid #ccc;
+    padding-top: 9px;
 }
 
 
