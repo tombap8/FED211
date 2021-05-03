@@ -1,2 +1,23 @@
 @charset "utf-8";
 /* 웹 다이어리 메인 CSS - main.css */
+/* 메인페이지에서만 등장하는 디자인 */
+
+/* 다른 외부 CSS 합치기 */
+@import url(reset.css);
+@import url(common.css);
+/* 
+    [ CSS 임포트방식이란? ]
+    1. 형식 : @import url(경로)
+    2. 위치 : CSS파일 최상단(@charset) 아래에 위치
+    3. 사용횟수 : 무제한
+    4. 사용이유 : 별도의 CSS외부파일을 html에 넣을때
+        link 요소를 이용하여 넣으면 웹요청(http requeset)이
+        증가함에따라 html파일의 랜더링 속도가 느려지게 된다!
+        따라서 @import로 하나의 CSS파일에서 다른 CSS파일을
+        합쳐서(머징하여marging) link하면 속도향상에 도움이 된다!
+*/
+
+/* 전체 배경색 */
+body{
+    background-color: #4d7bf3;
+}
