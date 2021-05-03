@@ -81,14 +81,28 @@ body{
     height: 235px;
     background: url(../images/pola1.png) no-repeat;
 }
+/* 폴라1 타이틀 이미지 */
+.pola1 img{    
+    position: absolute;
+    bottom: 4px;
+    left: 60%;
+    /* 부모는? .pola1 */
+}
 /* 4-2.폴라2 */
 .pola2{
     position: absolute;
     top: 29px;
-    left: 124px;
+    left: 106px;
     width: 210px;
     height: 200px;
     background: url(../images/pola2.png) no-repeat;
+}
+/* 폴라2 타이틀 이미지 */
+.pola2 img{
+    position: absolute;
+    top: 6px;
+    left: 75%;
+    /* 부모는? .pola2 */
 }
 
 
