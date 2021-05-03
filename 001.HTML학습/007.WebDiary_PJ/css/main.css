@@ -71,6 +71,28 @@ body{
     /* 위치가 가장위에 와야 하므로 (하단바다박스보다 위!) */
     z-index: 1;
 }
+/* 다이어리 직계하위 박스요소는 모두 앱솔루트로 #diary가 부모다! */
+/* 4-1.폴라1 */
+.pola1{
+    position: absolute;
+    top: 45px;
+    left: 5px;
+    width: 223px;
+    height: 235px;
+    background: url(../images/pola1.png) no-repeat;
+}
+/* 4-2.폴라2 */
+.pola2{
+    position: absolute;
+    top: 29px;
+    left: 124px;
+    width: 210px;
+    height: 200px;
+    background: url(../images/pola2.png) no-repeat;
+}
+
+
+
 /* 5.하단바다박스 */
 #sea{
     position: absolute;
