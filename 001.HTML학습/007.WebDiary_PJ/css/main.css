@@ -120,6 +120,14 @@ body{
     z-index: 1;
 }
 
+/* 4-3.스케줄박스 */
+.schedule{
+    position: absolute;
+    bottom: 42px;
+    left: 64px;
+    /* 부모는? #diary */
+}
+
 
 
 /* 5.하단바다박스 */
