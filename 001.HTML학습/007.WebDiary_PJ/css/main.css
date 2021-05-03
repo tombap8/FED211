@@ -150,7 +150,13 @@ body{
     height: 171px;
     background: url(../images/post1.png) no-repeat;
     z-index: 1;/* 처음에 위 */
+
 }
+/* 포스트잍1에 마우스 오버시 회전하며 확대 */
+.post1:hover{
+    transform: rotate(-11deg) scale(1.2);
+}
+
 .post2{
     position: absolute;
     top: 75px;
@@ -158,6 +164,16 @@ body{
     width: 160px;
     height: 145px;
     background: url(../images/post2.png) no-repeat;
+}
+/* 포스트잍2에 마우스 오버시 확대하기 */
+.post2:hover{
+    transform: scale(1.2);
+    z-index: 1;/* 위로 올라옴 */
+}
+/* 포스트잍 공통 트랜지션주기 */
+.post{
+    transition: transform .6s ease-out;
+    /* 트랜지션 : 속시이지 */
 }
 
 
