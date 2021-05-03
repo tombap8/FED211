@@ -175,6 +175,43 @@ body{
     transition: transform .6s ease-out;
     /* 트랜지션 : 속시이지 */
 }
+/* 포스트잍 이미지 공통 */
+.post img{
+    position: absolute;
+    /* 위치이동 포지션 */
+    width: 70%;
+    border-radius: 50%;
+    /* 경계선 둥글게 - 50%는 원형 */
+    box-shadow: 2px 2px 3px #333;
+    /* 박스그림자: 가로 세로 블러 (퍼짐) 색 */
+
+    /* 공통트랜지션 */
+    transition: all .6s ease-out;
+}
+.post1 img{/* 둘째날일정 이미지 */
+    bottom: 0;
+    right: 0;
+    opacity: 0;/* 투명 */
+}
+/* 오버시 -위치이동+보이게+회전 */
+.post1:hover img{
+    bottom: 37px;
+    right: -62px;
+    transform: rotate(11deg);
+    opacity: 1;
+}
+
+.post2 img{/* 셋째날일정 이미지 */
+    top: 0;
+    left: 0;
+    opacity: 0;/* 투명 */
+}
+/* 오버시 -위치이동+보이게 */
+.post2:hover img{
+    top: 16px;
+    left: -83px;
+    opacity: 1;
+}
 
 
 
