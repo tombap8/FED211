@@ -67,6 +67,9 @@ body{
     width: 834px;
     height: 500px;
     background: url(../images/diary.png) no-repeat;
+
+    /* 위치가 가장위에 와야 하므로 (하단바다박스보다 위!) */
+    z-index: 1;
 }
 /* 5.하단바다박스 */
 #sea{
