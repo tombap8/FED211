@@ -213,6 +213,13 @@ body{
     opacity: 1;
 }
 
+/* 4-6.스페인음식 */
+.food{
+    position: absolute;
+    bottom: 40px;
+    right: 92px;
+}
+
 
 
 /* 5.하단바다박스 */
