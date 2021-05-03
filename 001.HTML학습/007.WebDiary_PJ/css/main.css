@@ -123,9 +123,22 @@ body{
 /* 4-3.스케줄박스 */
 .schedule{
     position: absolute;
+    /* 부모자격도 있음! */
     bottom: 42px;
     left: 64px;
     /* 부모는? #diary */
+}
+/* 스케줄체크표시 이미지 겹치게하기(숨기기) */
+.schedule img:last-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 부모는? .schedule */
+    display: none;
+}
+/* 스케줄박스에 마우스 오버시 스케줄체크표시 이미지 보이기 */
+.schedule:hover img:last-child{
+    display: block;
 }
 
 
