@@ -141,6 +141,25 @@ body{
     display: block;
 }
 
+/* 4-4.포스트잍1 */
+.post1{
+    position: absolute;
+    top: 88px;
+    right: 140px;
+    width: 167px;
+    height: 171px;
+    background: url(../images/post1.png) no-repeat;
+    z-index: 1;/* 처음에 위 */
+}
+.post2{
+    position: absolute;
+    top: 75px;
+    right: 246px;
+    width: 160px;
+    height: 145px;
+    background: url(../images/post2.png) no-repeat;
+}
+
 
 
 /* 5.하단바다박스 */
