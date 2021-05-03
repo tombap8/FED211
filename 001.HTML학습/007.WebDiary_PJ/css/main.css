@@ -38,12 +38,29 @@ body{
 #check{
     position: absolute;
     top: 0;
-    left: 0;
+    left: -384px;/* 왼쪽에 나가있음! */
     /* 부모는? .cont */
     width: 384px;
     height: 345px;
     background: url(../images/check.png) no-repeat;
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: chkAni 1s ease-out 2s forwards;
+    /* forwards는 마지막상태유지! */
+    /* animation: chkAni 2s ease-in-out 2s 2 alternate forwards; */
 }
+/* 체크배경박스 키프레임 */
+@keyframes chkAni {
+    /* 초기값과 from값이 같으면 생략한다! */
+    /* from{
+        left: -384px;
+    } */
+    to{
+        left: 0;
+    }
+}/* 키프레임 */
+
+
 /* 3.타이틀박스 */
 #tit{
     position: absolute;
