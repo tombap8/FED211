@@ -21,3 +21,38 @@
 body{
     background-color: #4d7bf3;
 }
+
+/* 1. 전체 컨텐츠 박스 */
+.cont{
+    width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+    /* 블록요소 가로중앙정렬 - 마영오! */
+    background-color: #fff;
+
+    outline: 2px solid red;
+}
+/* 2.체크배경박스 */
+#check{
+    width: 384px;
+    height: 345px;
+    background: url(../images/check.png) no-repeat;
+}
+/* 3.타이틀박스 */
+#tit{
+    width: 620px;
+    height: 198px;
+    background: url(../images/title.png) no-repeat;
+}
+/* 4.다이어리박스 */
+#diary{
+    width: 834px;
+    height: 500px;
+    background: url(../images/diary.png) no-repeat;
+}
+/* 5.하단바다박스 */
+#sea{
+    width: 1000px;
+    height: 219px;
+    background: url(../images/sea.png) no-repeat;
+}
