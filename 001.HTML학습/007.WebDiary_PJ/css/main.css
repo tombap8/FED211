@@ -24,6 +24,8 @@ body{
 
 /* 1. 전체 컨텐츠 박스 */
 .cont{
+    position: relative;
+    /* 부모자격 */
     width: 1000px;
     height: 800px;
     margin: 0 auto;
@@ -34,24 +36,44 @@ body{
 }
 /* 2.체크배경박스 */
 #check{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 부모는? .cont */
     width: 384px;
     height: 345px;
     background: url(../images/check.png) no-repeat;
 }
 /* 3.타이틀박스 */
 #tit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* 부모는? .cont */
     width: 620px;
     height: 198px;
     background: url(../images/title.png) no-repeat;
 }
 /* 4.다이어리박스 */
 #diary{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 부모는? .cont */
+    transform: translate(-50%,-50%);
+    /* 정중앙이동(내크기의 절반가로,세로 이동) */
+    margin-left: 15px;
+    /* 오른쪽 책갈피 만큼 오른쪽으로 이동 */
     width: 834px;
     height: 500px;
     background: url(../images/diary.png) no-repeat;
 }
 /* 5.하단바다박스 */
 #sea{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* 부모는? .cont */
     width: 1000px;
     height: 219px;
     background: url(../images/sea.png) no-repeat;
