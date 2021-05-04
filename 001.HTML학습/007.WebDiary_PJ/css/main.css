@@ -113,6 +113,25 @@ body {
     }
 }/* 키프레임 */
 
+/* 걷는남자 */
+#man{
+    position: absolute;
+    top: 23px;
+    right: 0;
+    /* 부모는? #tit */
+    transform: rotate(10deg);
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: manWalk 1s linear 2.5s infinite alternate;
+}
+/* 걷는남자 걷기 키프레임 */
+@keyframes manWalk {
+    to{
+        transform: rotate(-10deg);
+    }
+}/* 키프레임 */
+
+
 
 
 /* 4.다이어리박스 */
