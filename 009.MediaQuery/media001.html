@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>미디어쿼리란?</title>
-        <style>
-            /* 
+
+<head>
+    <meta charset="utf-8">
+    <title>미디어쿼리란?</title>
+    <style>
+        /* 
                 [ 미디어쿼리(Media Query)란? ]
 
                 - 디바이스의 가로 사이즈에 대해 계속된
@@ -51,9 +52,36 @@
                 - 주의사항: and 앞뒤에 공백필수!
 
             */
-        </style>
-    </head>
-    <body>
-        
-    </body>
+
+        /* 배경이미지 박스 */
+        .bx {
+            position: relative;
+            /* 부모자격 */
+            width: 1000px;
+            height: 1000px;
+            background: url(./images/oldTVON.png) no-repeat center/auto 100%;
+            margin: 0 auto;
+            /* 마영오! 블록가로중앙 */
+        }
+
+        /* 스크린 */
+        .screen {
+            position: absolute;
+            top: 307px;
+            left: 288px;
+            width: 345px;
+            height: 258px;
+            outline: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bx">
+        <div class="screen"></div>
+    </div>
+
+</body>
+
 </html>
