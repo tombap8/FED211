@@ -375,20 +375,27 @@ body {
     left: 100%;/* 왼쪽에 나가있음 */
     /* 부모는? #sea */
     height: 150px;
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: sharkAni 10s ease-in-out 3s infinite;
 }
 /* 상어 키프레임 */
 @keyframes sharkAni {
     0%{/* 오른쪽 바깥 */
         left: 100%;
+        transform: rotateY(0deg);
     }
     20%{
         left: 67%;
+        transform: rotateY(0deg);
     }
     40%{
         left: 16%;
+        transform: rotateY(0deg);
     }
     50%{/* 왼쪽화면바깥 */
         left: -30%;
+        transform: rotateY(0deg);
     }
     51%{/* 왼쪽화면바깥에서 방향뒤집기 */
         left: -30%;
@@ -396,11 +403,14 @@ body {
     }
     60%{
         left: 6%;
+        transform: rotateY(180deg);
     }
     80%{
         left: 53%;
+        transform: rotateY(180deg);
     }
     100%{/* 오른쪽 화면 바깥 */
         left: 100%;
+        transform: rotateY(180deg);
     }
 }
