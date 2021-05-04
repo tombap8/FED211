@@ -79,7 +79,8 @@ body {
     /* 트랜스폼 세로 기준축 하단으로 변경 */
 
     /* 애니메이션: 이시이지반방마 */
-    animation: catAni .4s ease-in-out 3s infinite;
+    animation: catAni 1.5s ease-in-out 10s infinite alternate;
+    /* alternate 는 from->to,to->from으로 되돌아온다! */
 
 }
 /* 고양이 키프레임 */
