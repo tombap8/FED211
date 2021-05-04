@@ -67,6 +67,15 @@ body {
 
 /* 키프레임 */
 
+/* 고양이 */
+#cat{
+    position: absolute;    
+    bottom: 107px;
+    left: -77px;
+    transform: rotate(50deg);
+    transform-origin: bottom;
+}
+
 
 /* 3.타이틀박스 */
 #tit {
