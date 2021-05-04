@@ -95,7 +95,7 @@ body {
 /* 4.다이어리박스 */
 #diary {
     position: absolute;
-    top: 50%;
+    top: 80%;/* 원래값 50%에서 아래로 내려가 있음 */
     left: 50%;
     /* 부모는? .cont */
     transform: translate(-50%, -50%);
@@ -108,7 +108,19 @@ body {
 
     /* 위치가 가장위에 와야 하므로 (하단바다박스보다 위!) */
     z-index: 1;
+    opacity: 0;
+    /* 처음에 투명도 0 */
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: diaryAni 3s ease-in-out 3.5s forwards;
 }
+/* 다이어리 키프레임 */
+@keyframes diaryAni {
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+}/* 키프레임 */
 
 /* 다이어리 직계하위 박스요소는 모두 앱솔루트로 #diary가 부모다! */
 /* 4-1.폴라1 */
