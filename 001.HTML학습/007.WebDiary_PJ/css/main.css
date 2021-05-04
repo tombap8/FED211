@@ -31,8 +31,9 @@ body {
     margin: 0 auto;
     /* 블록요소 가로중앙정렬 - 마영오! */
     background-color: #fff;
-
-    outline: 2px solid red;
+    overflow: hidden;
+    /* 넘치는 자식요소 숨기기 */
+    /* outline: 2px solid red; */
 }
 
 /* 2.체크배경박스 */
