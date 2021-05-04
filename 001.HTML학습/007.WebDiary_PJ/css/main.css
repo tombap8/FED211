@@ -72,8 +72,10 @@ body {
     position: absolute;    
     bottom: 107px;
     left: -77px;
+    /* 부모는? #check */
     transform: rotate(50deg);
     transform-origin: bottom;
+    /* 트랜스폼 세로 기준축 하단으로 변경 */
 }
 
 
