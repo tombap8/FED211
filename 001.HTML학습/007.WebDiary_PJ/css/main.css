@@ -126,8 +126,8 @@ body {
     /* 2개이상 애니메이션 주기 - 콤마로 구분한다! */
     animation: manWalk .6s linear 8s infinite alternate,
                 /* 8초후 0.6초간 rotate변경으로 계속 애니메이션 */
-                manAni 3s linear 8s forwards;
-                /* 8초후 3초간 right값 변경으로 등장하기 */
+                manAni 5s linear 8s forwards;
+                /* 8초후 5초간 right값 변경으로 등장하기 */
 }
 /* 걷는남자 걷기 키프레임 */
 @keyframes manWalk {
