@@ -18,12 +18,12 @@
 */
 
 /* 전체 배경색 */
-body{
+body {
     background-color: #4d7bf3;
 }
 
 /* 1. 전체 컨텐츠 박스 */
-.cont{
+.cont {
     position: relative;
     /* 부모자격 */
     width: 1000px;
@@ -34,11 +34,13 @@ body{
 
     outline: 2px solid red;
 }
+
 /* 2.체크배경박스 */
-#check{
+#check {
     position: absolute;
     top: 0;
-    left: -384px;/* 왼쪽에 나가있음! */
+    left: -384px;
+    /* 왼쪽에 나가있음! */
     /* 부모는? .cont */
     width: 384px;
     height: 345px;
@@ -49,35 +51,53 @@ body{
     /* forwards는 마지막상태유지! */
     /* animation: chkAni 2s ease-in-out 2s 2 alternate forwards; */
 }
+
 /* 체크배경박스 키프레임 */
 @keyframes chkAni {
+
     /* 초기값과 from값이 같으면 생략한다! */
     /* from{
         left: -384px;
     } */
-    to{
+    to {
         left: 0;
     }
-}/* 키프레임 */
+}
+
+/* 키프레임 */
 
 
 /* 3.타이틀박스 */
-#tit{
+#tit {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -620px;
+    /* 오른쪽에 나가있음 */
     /* 부모는? .cont */
     width: 620px;
     height: 198px;
     background: url(../images/title.png) no-repeat;
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: titAni 1s ease-out 2.5s forwards;
 }
+
+/* 타이틀 키프레임 */
+@keyframes titAni {
+    to {
+        right: 0;
+    }
+}/* 키프레임 */
+
+
+
 /* 4.다이어리박스 */
-#diary{
+#diary {
     position: absolute;
     top: 50%;
     left: 50%;
     /* 부모는? .cont */
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     /* 정중앙이동(내크기의 절반가로,세로 이동) */
     margin-left: 15px;
     /* 오른쪽 책갈피 만큼 오른쪽으로 이동 */
@@ -88,9 +108,10 @@ body{
     /* 위치가 가장위에 와야 하므로 (하단바다박스보다 위!) */
     z-index: 1;
 }
+
 /* 다이어리 직계하위 박스요소는 모두 앱솔루트로 #diary가 부모다! */
 /* 4-1.폴라1 */
-.pola1{
+.pola1 {
     position: absolute;
     top: 45px;
     left: 5px;
@@ -98,15 +119,17 @@ body{
     height: 235px;
     background: url(../images/pola1.png) no-repeat;
 }
+
 /* 폴라1 타이틀 이미지 */
-.pola1 img{    
+.pola1 img {
     position: absolute;
     bottom: 4px;
     left: 60%;
     /* 부모는? .pola1 */
 }
+
 /* 4-2.폴라2 */
-.pola2{
+.pola2 {
     position: absolute;
     top: 29px;
     left: 106px;
@@ -114,67 +137,75 @@ body{
     height: 200px;
     background: url(../images/pola2.png) no-repeat;
 }
+
 /* 폴라2 타이틀 이미지 */
-.pola2 img{
+.pola2 img {
     position: absolute;
     top: 6px;
     left: 75%;
     /* 부모는? .pola2 */
 }
+
 /* 폴라 공통 */
 /* 이미지 처음에 안보임(그 자리에 없음) */
-.pola img{
+.pola img {
     display: none;
 }
+
 /* 폴라에 오버시 이미지 보이기 */
-.pola:hover img{
+.pola:hover img {
     display: block;
     /* 인라인인 이미지가 앱솔루트이면 블록으로 자동변환된다!
     따라서 다시 보이게 할때도 블록으로! */
 }
+
 /* 폴라에 오버시 z-index올려서 위로 오게하기 */
-.pola:hover{
+.pola:hover {
     z-index: 1;
 }
 
 /* 4-3.스케줄박스 */
-.schedule{
+.schedule {
     position: absolute;
     /* 부모자격도 있음! */
     bottom: 42px;
     left: 64px;
     /* 부모는? #diary */
 }
+
 /* 스케줄체크표시 이미지 겹치게하기(숨기기) */
-.schedule img:last-child{
+.schedule img:last-child {
     position: absolute;
     top: 0;
     left: 0;
     /* 부모는? .schedule */
     display: none;
 }
+
 /* 스케줄박스에 마우스 오버시 스케줄체크표시 이미지 보이기 */
-.schedule:hover img:last-child{
+.schedule:hover img:last-child {
     display: block;
 }
 
 /* 4-4.포스트잍1 */
-.post1{
+.post1 {
     position: absolute;
     top: 88px;
     right: 140px;
     width: 167px;
     height: 171px;
     background: url(../images/post1.png) no-repeat;
-    z-index: 1;/* 처음에 위 */
+    z-index: 1;
+    /* 처음에 위 */
 
 }
+
 /* 포스트잍1에 마우스 오버시 회전하며 확대 */
-.post1:hover{
+.post1:hover {
     transform: rotate(-11deg) scale(1.2);
 }
 
-.post2{
+.post2 {
     position: absolute;
     top: 75px;
     right: 246px;
@@ -182,18 +213,22 @@ body{
     height: 145px;
     background: url(../images/post2.png) no-repeat;
 }
+
 /* 포스트잍2에 마우스 오버시 확대하기 */
-.post2:hover{
+.post2:hover {
     transform: scale(1.2);
-    z-index: 1;/* 위로 올라옴 */
+    z-index: 1;
+    /* 위로 올라옴 */
 }
+
 /* 포스트잍 공통 트랜지션주기 */
-.post{
+.post {
     transition: transform .6s ease-out;
     /* 트랜지션 : 속시이지 */
 }
+
 /* 포스트잍 이미지 공통 */
-.post img{
+.post img {
     position: absolute;
     /* 위치이동 포지션 */
     width: 70%;
@@ -205,33 +240,40 @@ body{
     /* 공통트랜지션 */
     transition: all .6s ease-out;
 }
-.post1 img{/* 둘째날일정 이미지 */
+
+.post1 img {
+    /* 둘째날일정 이미지 */
     bottom: 0;
     right: 0;
-    opacity: 0;/* 투명 */
+    opacity: 0;
+    /* 투명 */
 }
+
 /* 오버시 -위치이동+보이게+회전 */
-.post1:hover img{
+.post1:hover img {
     bottom: 37px;
     right: -62px;
     transform: rotate(11deg);
     opacity: 1;
 }
 
-.post2 img{/* 셋째날일정 이미지 */
+.post2 img {
+    /* 셋째날일정 이미지 */
     top: 0;
     left: 0;
-    opacity: 0;/* 투명 */
+    opacity: 0;
+    /* 투명 */
 }
+
 /* 오버시 -위치이동+보이게 */
-.post2:hover img{
+.post2:hover img {
     top: 16px;
     left: -83px;
     opacity: 1;
 }
 
 /* 4-6.스페인음식 */
-.food{
+.food {
     position: absolute;
     bottom: 40px;
     right: 92px;
@@ -240,7 +282,7 @@ body{
 
 
 /* 5.하단바다박스 */
-#sea{
+#sea {
     position: absolute;
     bottom: 0;
     left: 0;
