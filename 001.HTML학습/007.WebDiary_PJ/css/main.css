@@ -367,3 +367,40 @@ body {
         bottom: 0;
     }
 }/* 키프레임 */
+
+/* 상어 */
+#shark{
+    position: absolute;
+    bottom: -20px;
+    left: 100%;/* 왼쪽에 나가있음 */
+    /* 부모는? #sea */
+    height: 150px;
+}
+/* 상어 키프레임 */
+@keyframes sharkAni {
+    0%{/* 오른쪽 바깥 */
+        left: 100%;
+    }
+    20%{
+        left: 67%;
+    }
+    40%{
+        left: 16%;
+    }
+    50%{/* 왼쪽화면바깥 */
+        left: -30%;
+    }
+    51%{/* 왼쪽화면바깥에서 방향뒤집기 */
+        left: -30%;
+        transform: rotateY(180deg);
+    }
+    60%{
+        left: 6%;
+    }
+    80%{
+        left: 53%;
+    }
+    100%{/* 오른쪽 화면 바깥 */
+        left: 100%;
+    }
+}
