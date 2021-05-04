@@ -284,10 +284,19 @@ body {
 /* 5.하단바다박스 */
 #sea {
     position: absolute;
-    bottom: 0;
+    bottom: -219px;/* 아래쪽에 나가있음 */
     left: 0;
     /* 부모는? .cont */
     width: 1000px;
     height: 219px;
     background: url(../images/sea.png) no-repeat;
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: seaAni 1s ease-out 3s forwards;
 }
+/* 하단바다 키프레임 */
+@keyframes seaAni {
+    to{
+        bottom: 0;
+    }
+}/* 키프레임 */
