@@ -117,17 +117,29 @@ body {
 #man{
     position: absolute;
     top: 23px;
-    right: 0;
+    right: -80px;
+    /* 오른쪽에 나가있음(80px로 들어옴) */
     /* 부모는? #tit */
     transform: rotate(10deg);
 
     /* 애니메이션: 이시이지반방마 */
-    animation: manWalk 1s linear 2.5s infinite alternate;
+    /* 2개이상 애니메이션 주기 - 콤마로 구분한다! */
+    animation: manWalk .6s linear 8s infinite alternate,
+                /* 8초후 0.6초간 rotate변경으로 계속 애니메이션 */
+                manAni 3s linear 8s forwards;
+                /* 8초후 3초간 right값 변경으로 등장하기 */
 }
 /* 걷는남자 걷기 키프레임 */
 @keyframes manWalk {
     to{
         transform: rotate(-10deg);
+    }
+}/* 키프레임 */
+
+/* 걷는남자 등장 키프레임 */
+@keyframes manAni {
+    to{
+        right: 80px;
     }
 }/* 키프레임 */
 
