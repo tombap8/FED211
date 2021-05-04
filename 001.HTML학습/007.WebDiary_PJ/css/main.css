@@ -377,7 +377,7 @@ body {
     height: 150px;
 
     /* 애니메이션: 이시이지반방마 */
-    animation: sharkAni 10s ease-in-out 3s infinite;
+    animation: sharkAni 20s ease-in-out 3s infinite;
 }
 /* 상어 키프레임 */
 @keyframes sharkAni {
