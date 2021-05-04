@@ -57,7 +57,7 @@
         .bx {
             position: relative;
             /* 부모자격 */
-            width: 1000px;
+            width: 100%;
             height: 1000px;
             margin: 0 auto;
             /* 마영오! 블록가로중앙 */
@@ -77,7 +77,8 @@
         .screen {
             position: absolute;
             top: 307px;
-            left: 288px;
+            left: 50%;
+            transform: translateX(-61%);
             width: 345px;
             height: 258px;
             /* outline: 2px solid red; */
@@ -109,6 +110,30 @@
 
 
         }/* 미디어쿼리 1200px이하 */
+
+        /* 1100px 이하 */
+        @media only screen and (max-width:1100px) {
+            /* 이정재 1번이미지 숨기기 */
+            .screen img:nth-child(2){
+                display: none;
+            }
+            /* 이정재 2번이미지 보이기 */
+            .screen img:nth-child(3){
+                display: inline;
+            }
+        }/* 미디어쿼리 1100px 이하 */
+
+        /* 1000px 이하 */
+        @media only screen and (max-width:1000px) {
+            /* 이정재 2번이미지 숨기기 */
+            .screen img:nth-child(3){
+                display: none;
+            }
+            /* 이정재 3번이미지 보이기 */
+            .screen img:nth-child(4){
+                display: inline;
+            }
+        }/* 미디어쿼리 1000px 이하 */
 
 
 
