@@ -19,7 +19,8 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
+    z-index: 99999;
+    /* display: none; */
 }
 
 /* li 12컬럼 설정 */
