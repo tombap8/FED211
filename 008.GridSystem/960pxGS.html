@@ -17,10 +17,29 @@
                 /* 마영오! 가로중앙정렬! */
                 outline: 2px dotted red;
             }
+            /* 속박스에 가상요소로 자식파티션 박스 float해제하기 */
+            .ibx::after{
+                content: '';
+                display: block;
+                clear: both;/* float지우기 */
+            }
+            /* 
+                float:left처리된 자식요소의 부모 박스는
+                overflow:hidden 처리하거나
+                가상요소로 clear:both해야 자식요소의 높이를
+                인식한다!
+            */
+
             /* 파티션박스 */
             /* 옆으로 흘러가는 블록박스이므로 float설정함 */
             .pbx{
+                /* 1.옆으로 흐르게 */
                 float: left;
+                /* 2.박스크기유지 */
+                box-sizing: border-box;
+                /* 3.패딩 */
+                padding: 10px;/* 수치는 달라질 수 있음 */
+
                 outline: 3px dotted blue;
             }
 
@@ -29,18 +48,19 @@
                 background-color: rgb(255, 218, 218);
             }
             .top{/* 속박스 */
+                /* height: 87px; */
+            }
+            .top>.pbx{
                 height: 87px;
             }
             /* 개별 파티션박스 */
             .top1{
                 width: 20%;
-                height: 100%;
-                padding: 10px;
-                box-sizing: border-box;
+                /* height: 87px; */
             }
             .top2{
                 width: 80%;
-                height: 100%;
+                /* height: 87px; */
             }
 
             /* 2.배너영역 */
