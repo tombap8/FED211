@@ -4,25 +4,67 @@
         <meta charset="utf-8">
         <title>960px Grid System</title>
         <style>
+            html,body{
+                margin: 0;
+                padding: 0;
+            }
+            /* 공통 class */
+            /* 속박스 */
+            .ibx{
+                width: 960px;
+                margin: 0 auto;
+                /* 마영오! 가로중앙정렬! */
+                outline: 2px dotted red;
+            }
+
+            /* 1.상단영역 */
+            #top{/* 겉박스 */
+                background-color: rgb(255, 218, 218);
+            }
+            .top{/* 속박스 */
+                height: 87px;
+            }
+            /* 2.배너영역 */
+            #ban{
+                background-color: rgb(209, 209, 255);
+            }
+            .ban{
+                height: 415px;
+            }
+            /* 3.컨텐츠영역 */
+            #cont{
+                background-color: rgb(247, 187, 255);
+            }
+            .cont{
+                height: 256px;
+            }
+            /* 4.하단영역 */
+            #info{
+                background-color: rgb(200, 244, 255);
+            }
+            .info{
+                height: 130px;
+            }
 
         </style>
     </head>
     <body>
+        <div></div>
         <!-- 1.상단영역 -->
-        <div>
-
+        <div id="top">
+            <header class="ibx top"></header>
         </div>
         <!-- 2.배너영역 -->
-        <div>
-
+        <div id="ban">
+            <section class="ibx ban"></section>
         </div>
         <!-- 3.컨텐츠영역 -->
-        <div>
-
+        <div id="cont">
+            <main class="ibx cont"></main>
         </div>
         <!-- 4.하단영역 -->
-        <div>
-
+        <div id="info">
+            <footer class="ibx info"></footer>
         </div>
     </body>
 </html>
