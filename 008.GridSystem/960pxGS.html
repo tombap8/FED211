@@ -8,6 +8,7 @@
                 margin: 0;
                 padding: 0;
             }
+
             /* 공통 class */
             /* 속박스 */
             .ibx{
@@ -17,8 +18,10 @@
                 outline: 2px dotted red;
             }
             /* 파티션박스 */
-            .ibx>div{
-
+            /* 옆으로 흘러가는 블록박스이므로 float설정함 */
+            .pbx{
+                float: left;
+                outline: 3px dotted blue;
             }
 
             /* 1.상단영역 */
@@ -28,6 +31,18 @@
             .top{/* 속박스 */
                 height: 87px;
             }
+            /* 개별 파티션박스 */
+            .top1{
+                width: 20%;
+                height: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .top2{
+                width: 80%;
+                height: 100%;
+            }
+
             /* 2.배너영역 */
             #ban{
                 background-color: rgb(209, 209, 255);
@@ -57,8 +72,8 @@
         <!-- 1.상단영역 -->
         <div id="top">
             <header class="ibx top">
-                <div class="pbx top1"></div>
-                <div class="pbx top2"></div>
+                <div class="pbx top1">로고</div>
+                <div class="pbx top2">메뉴</div>
             </header>
         </div>
         <!-- 2.배너영역 -->
