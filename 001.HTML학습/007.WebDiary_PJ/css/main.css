@@ -428,34 +428,34 @@ body {
 /* 자유로운 애니 캐릭터 */
 #act1{
     position: fixed;
-    top: 20%;
+    top: 10%;
     left: 100%;
     /* fixed는 부모가 무조건 보이는 화면(window)이다! */
     z-index: 100;/* 맨위! */
 
     /* 애니메이션: 이시이지반방마 */
-    animation: freeAni 15s ease-in-out 5s infinite;
+    animation: freeAni 15s ease-in-out 5s infinite alternate;
 }
 /* 자유로운 캐릭터 키프레임 */
 @keyframes freeAni {
     0%{/* 오른쪽위 바깥 */
-        top: 20%;
+        top: 10%;
         left: 100%;
         transform: rotate(0deg);
     }
     30%{/* 왼쪽위 바깥 */
         top: 30%;
         left: -10%;
-        transform: rotate(0deg);
+        transform: rotate(720deg);
     }
     60%{/* 왼쪽아래 */
         top: 70%;
         left: 30%;
-        transform: rotate(0deg);
+        transform: rotate(-360deg);
     }
     100%{/* 오른쪽위 바깥 */
         top: 30%;
         left: 110%;
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
 }/* 키프레임 */
