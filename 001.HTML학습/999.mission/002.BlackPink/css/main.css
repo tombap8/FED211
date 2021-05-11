@@ -1,0 +1,146 @@
+@charset "utf-8";
+/*CGV PJ 디자인코드*/
+/*공통*/
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body{
+    overflow: hidden;
+    background: url(../images/bg.jpg) no-repeat top/cover;
+}
+
+/*전체부모박스*/
+#screenbg{
+    position: relative;/*부모자격!*/
+    width: 1200px;
+    height: 788px;
+    margin: 0 auto;/*block박스 가로중앙정렬*/
+/*    outline: 2px solid lime;*/
+}
+/*스크린박스*/
+.screen{
+    position: absolute;/*나의부모는?*/
+    top: 135px;
+    left: 257px;
+    width: 702px;
+    height: 399px;
+}
+/*가상요소로 로고넣기*/
+.screen::before{
+    content: "";/*필수요소*/
+    display: block;
+    position: absolute;/*부모가누구?*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);/*중앙이동*/
+    width: 375px;
+    height: 360px;
+    background: url(../images/logo_cgv.png) no-repeat center;
+/*    outline: 1px solid #ff0;*/
+}
+/*스크린 자식 iframe*/
+.screen>iframe{
+    position: relative;/*위치관계(나중것이 위로!)*/
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/*메뉴박스*/
+.menu{
+    position: fixed;/*나의부모는? #screenbg*/
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1100px; 
+}
+.menu>ul{/*3무*/
+    margin: 0px;/*기본마진없앰*/
+    padding: 0px;/*기본패딩없앰*/
+    list-style: none;/*블릿없앰*/
+}
+/*가상요소추가하여 float해제하기*/
+.menu>ul::after{
+    content: "";
+    display: block;/*block요소여야함!*/
+    clear: both;/*float해제!!!!*/
+}
+/*
+
+가상요소란?
+선택된 특정요소 내부에 태그가 아닌 글자나 이미지를 추가하여
+사용할 수 있도록 만들어진 특별한 추가기능
+콜론을 두번사용하여 가상클래스와 구분함!
+::after(요소뒤에 추가)
+::before(요소앞에 추가)
+- 이것을 응용하여 박스나 float해제요소 등을 삽입한다.
+- 응용하여 활용되는 경우가 매우많다!!!!
+*/
+
+.menu>ul>li{
+    position: relative;/*부모자격*/
+    float: left;/*옆으로흐르게*/
+    padding: 0px 10px;/*위아래,우좌*/
+    overflow: hidden;/*넘치는 자식요소 숨기기*/
+}
+.menu>ul>li img{/*썸네일 이미지*/
+    width: 200px;
+    height: 120px;
+}
+/*메뉴의 li에 마우스 오버시 영화텍스트박스 올라오기*/
+.menu>ul>li:hover .movtxt{
+    top: 0%;/*보이는 위치로 이동*/
+}
+
+/*영화텍스트박스*/
+.movtxt{
+    position: absolute;/*내부모는 누구?*/
+    /*위치이동속성을 주지 않으면 기존의 static요소를 존중하여 그 아래에 위치한다.(젠틀absolute) 위치값을 주는 순간 부모기준 이동한다.*/
+    top: 100%;/*처음에 내려가 있게함!*/
+    /*left값을 안써야 padding을 고려해서 나온다!*/
+    width: 200px;/*99-25=74px(패딩값을 뺀다)*/
+    box-sizing: border-box;
+    /*원래는 패딩만큼 늘어난 사이즈를 width에서 빼줘야하지만 CSS3에서 이것을 안늘어나게 기본 크기유지 속성을 만들줬다! 
+    (기본값은 box-sizing: content-box)-늘어나는 박스*/
+    height: 120px;
+    margin: 0;/*기본마진없앰*/
+    padding: 0;/*기본패딩없앰*/
+    list-style: none;
+    color: #fff;/*글자색 흰색*/
+    
+    /*font속성*/
+    
+    /*font-style: italic;*//*글자스타일(기울임)*/
+    /*font-weight: bold;*//*글자두께*/
+    /*font-size: 10px;*//*글자크기(기본크기16px)*/
+    /*line-height: 25px;*//*줄간격*/
+    /*font-family: "맑은 고딕","굴림";*/
+    
+/*    font: 스두크/줄체;*/
+    font: 10px/25px "맑은 고딕","굴림";
+    text-align: center;
+    /*반투명 배경색넣기 - a가 alpha값임*/
+    background-color: rgba(0,0,0,0.7);/*hsla방법도 있음!*/
+    /*트랜지션 애니메이션*/
+    transition: top .4s ease-out ;/*속시이지*/
+    
+    cursor: pointer;/*손가락모양*/
+    
+/*    outline: 1px solid red;*/
+}
+/*첫번째 li만 마진값 밀기(아래li는 같이밀림)*/
+.movtxt li:first-child{
+    margin-top: 25px;
+}
+
+
+
+
+
+
+
+
+
