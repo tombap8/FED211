@@ -426,6 +426,7 @@ body {
 
 
 /* 자유로운 애니 캐릭터 */
+/* 날날이 */
 #act1{
     position: fixed;
     top: 10%;
@@ -457,5 +458,58 @@ body {
         top: 30%;
         left: 110%;
         transform: rotate(360deg);
+    }
+}/* 키프레임 */
+
+/* 망아지박스 */
+#act2{
+    position: fixed;
+    top: 40%;
+    left: 100%;
+    /* fixed는 부모가 무조건 보이는 화면(window)이다! */
+    z-index: 100;/* 맨위! */
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: mvAni 40s linear 7s infinite;
+}
+/* 움직이는 망아지박스 키프레임 */
+@keyframes mvAni {
+    0%{/* 오른쪽 바깥 */
+        top: 40%;
+        left: 110%;
+        transform: rotateY(0deg);
+    }
+    50%{/* 왼쪽바깥 */
+        top: 30%;
+        left: -10%;
+        transform: rotateY(0deg);
+    }
+    50.1%{/* 왼쪽바깥 */
+        top: 60%;
+        left: -10%;
+        transform: rotateY(180deg);
+        /* 반대로 뒤집기 */
+    }
+    100%{/* 오른쪽 바깥 */
+        top: 50%;
+        left: 110%;
+        transform: rotateY(180deg);
+        /* 반대로 뒤집기 */
+    }
+    
+}/* 키프레임 */
+
+/* 망아지 이미지 */
+#act2 img{
+    /* 애니메이션: 이시이지반방마 */
+    animation: runAni .2s ease-in-out 7s infinite alternate;
+}
+/* 망아지 뛰는 키프레임 */
+@keyframes runAni {
+    from{
+        transform: rotate(-15deg);
+    }
+    to{
+        transform: rotate(15deg);
     }
 }/* 키프레임 */
