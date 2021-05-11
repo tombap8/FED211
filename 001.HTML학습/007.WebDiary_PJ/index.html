@@ -51,7 +51,11 @@
                 </div>
                 <!-- 4-6.스페인음식 -->
                 <div class="food">
-                    <img src="images/food.png" alt="스페인음식">
+                    <img src="images/food.png" alt="스페인음식" usemap="#fmap">
+                    <!-- 이미지맵설정(코딩위치는 아무데나가능) -->
+                    <map name="fmap">
+                        <area shape="rect" coords="9,33,109,123" href="" alt="">
+                    </map>
                 </div>
             </main>
             <!-- 5.하단바다박스 : footer#sea -->
@@ -66,6 +70,39 @@
         <img id="act1" src="images/actor1.png" alt="날날이">
         <div id="act2"><img src="images/actor3.png" alt="망아지"></div>
 
+        <!--   
+            [ 이미지맵이란? ]
+            - 이미지를 자르지 않고 이미지 안에 도형모양의 링크영역을
+            지정하여 여러개의 링크를 한 이미지에 생성하는 기법
+
+            [ 이미지맵 사용법 ]
+            1. img 태그에 usemap 속성에 "#맵이름"을 쓴다.
+            2. map태그에 name값을 #이 없는 같은 이름으로 지정한다.
+            3. area 요소의 하위 속성들을 셋팅한다.
+            1) shape 속성 : 링크가 걸릴 영역을 도형으로 지정한다
+            - rect(사각형), circle(원), poly(다각형)
+            2) coords 속성 : 도형의 위치값
+            3) href 속성 : 이동할 페이지 url
+            4) target 속성 : 새창열기 등 옵션 지정(_blank새창)
+            5) alt 속성 : 영역이 잡힌 이미지에 대한 설명
+                            (웹접근성 필수!!!)
+                            
+            [ 맵모양에 따른 coords 설정법 ]
+            - 위치값은 포토샵 info(F8)에서 읽어온다!
+            1. rect : 사각형
+            - 기준: 왼쪽위의 x,y좌표, 오른쪽 아래의 x,y좌표값을
+                    단위없는 px값으로 지정함
+                    예) coords = "x1,y1,x2,y2"
+            2. circle : 원
+            - 기준: 원의 중심점 x,y좌표값과 반지름을 
+                    단위없는 px값으로 지정함
+                    예) coords = "x,y,r"
+            3. poly : 다각형
+            - 기준: 다각형의 각 점을 x,y 좌표 순으로 나열하여 
+                    단위없는 px값으로 지정함
+                    예) coords = "x1,y1,x2,y2,x3,y3,....."
+            
+          -->
         
     </body>
 </html>
