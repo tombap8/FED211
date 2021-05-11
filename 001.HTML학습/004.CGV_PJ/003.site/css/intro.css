@@ -3,6 +3,9 @@
 
 @import url(reset.css);
 
+/* 웹폰트 CDN */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 html,body{
     height: 100%;
     /* 높이값 보이는 화면에 채우기 */
@@ -49,8 +52,18 @@ body::after{
 
     outline: 10px dotted lime;
 
+    z-index: 1;/* body의 after가상요소보다 위! */
+
     /* h1요소 리셋 */
     margin: 0;
     padding: 0;
     font-size: 100%;
+}
+
+/* Click Here 글자박스 */
+#enter span{
+    display: block;
+    text-align: center;
+    font: bold 34px/40px 'Audiowide';
+    
 }
