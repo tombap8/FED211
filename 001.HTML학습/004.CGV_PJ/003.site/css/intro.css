@@ -65,7 +65,19 @@ body::after{
     display: block;
     text-align: center;
     font: bold 34px/40px 'Audiowide';
+    /* font: 스타일 두께 크기/줄간격 글자체 -> 스두크/줄체 */
+
+    /* 트랜지션:속시이지 */
+    transition: all .4s ease-out .2s;/* 지연시간 0.2초 */
+
 }
+
+/* 박스에 오버시 span 변형하기 */
+#enter:hover span{
+    transform: scale(2);
+    color: chartreuse;
+}
+
 
 /* 로고이미지 */
 #enter img{
