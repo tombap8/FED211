@@ -500,6 +500,8 @@ body {
 }/* 키프레임 */
 
 /* 망아지 이미지 */
+/* 이미지 망아지박스에 transform이 적용되어 있으므로
+내부의 이미지에 별도의 애니메이션을 적용하여 계속 뛰는 모습을 연출한다 */
 #act2 img{
     /* 애니메이션: 이시이지반방마 */
     animation: runAni .2s ease-in-out 7s infinite alternate;
