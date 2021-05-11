@@ -50,7 +50,7 @@ body::after{
     transform: translate(-50%, -50%);
     /* 박스크기의 절반씩 왼쪽과 위로 이동(정중앙이동) */
 
-    outline: 10px dotted lime;
+    /* outline: 10px dotted lime; */
 
     z-index: 1;/* body의 after가상요소보다 위! */
 
@@ -65,5 +65,4 @@ body::after{
     display: block;
     text-align: center;
     font: bold 34px/40px 'Audiowide';
-    
 }
