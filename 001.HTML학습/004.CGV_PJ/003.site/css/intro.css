@@ -37,3 +37,20 @@ body::after{
         (위아래나 양옆에 공백이 생길 수 있음)-기본값
     */
 }
+
+/* 들어가기 버튼 박스 */
+#enter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 부모? 화면 */
+    transform: translate(-50%, -50%);
+    /* 박스크기의 절반씩 왼쪽과 위로 이동(정중앙이동) */
+
+    outline: 10px dotted lime;
+
+    /* h1요소 리셋 */
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
