@@ -87,7 +87,25 @@
             // 함수 /////////////////////////
             function gogo(){
                 // 1. 함수호출확인
-                alert("나 불렀수?");
+                //alert("나 불렀수?");
+
+                // 2. 변경대상선정
+
+                // html변경하기
+                // 2-1. #name 요소 내부에 이미지태그 넣기
+                document
+                //전체 html문서 객체를 로딩함!
+                //DOM(Document Object Model)을 통하여 각 요소에 접근
+                .getElementById("name")
+                //JS에서 점(.)은 하위객체나 요소로 접근함을 말한다!
+                //getElementById(아이디명)
+                //get 가져와라
+                //Element 요소를
+                //By ~에 의하여
+                //Id 아이디요소
+                .innerHTML = '<img src="./images/kim.png" alt="김비서가 왜그럴까?">';
+                // innerHTML 선택요소 내부에 html태그넣는 속성
+                // 이퀄(=)의 의미는 오르쪽 값을 왼쪽에 할당(넣는다!)
 
             }////// gogo함수 /////////////////
             /////////////////////////////////
@@ -110,7 +128,6 @@
             나는 요즘 매일 생각한다! <br>
             도대체 <span id="name"></span>
         </p>
-
         <!-- 
             onclick=""
             이벤트 속성의 값 내부는 JS코딩구역이다!
