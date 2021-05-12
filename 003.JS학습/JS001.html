@@ -210,13 +210,22 @@
 
                 // 선택요소가 tg라는 변수에 들어가 있으므로
                 // 변수명으로 호출하면 된다!!!
-                tg.style.color = "red";
+                tg.style.color = "lime";
 
                 // 2-3. 글자크기 변경하기(font-size:50px)
                 tg.style.fontSize = "50px";
 
                 // 2-4. 트랜지션주기(2초)
                 tg.style.transition = "all 2s";
+
+                //2-5. 배경이미지 넣기
+                tg.style.background = "url(./images/kimbs.jpg) no-repeat top/cover"; 
+
+                //2-6. 원모양만들기
+                tg.style.borderRadius = "50%";
+
+                //2-7. 글자중앙정렬
+                tg.style.textAlign = "center";
 
             }////// gogo함수 /////////////////
             /////////////////////////////////
@@ -231,6 +240,7 @@
                 border: 4px solid purple;
                 color: #ff0;
                 text-shadow: 1px 1px 1px #000;
+                /* background: url(./images/kimbs.jpg) no-repeat top/cover; */
             }
         </style>
     </head>
