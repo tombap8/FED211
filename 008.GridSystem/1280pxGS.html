@@ -30,6 +30,19 @@
                 /* 마영오! */
                 outline: 2px dotted red;
             }
+            /* 파티션박스 */
+            .pbx{
+                /* 1.옆으로흐르게 */
+                float: left;
+                /* 2.박스크기유지 */
+                box-sizing: border-box;
+                /* 3.패딩-그리드 패딩이 10px이기때문 */
+                padding: 10px;
+                /* 4.높이값설정-여기서 안줄수도 있음 */
+                height: 100%;/* 속박스 높이에 맞춤 */
+
+                outline: 2px dashed blue;
+            }
 
             /* 개별 영역 셋팅 */
             /* 1.상단영역 */
@@ -74,7 +87,10 @@
     <body>
         <!-- 1.상단영역 -->
         <div id="top">
-            <header class="ibx top"></header>
+            <header class="ibx top">
+                <div class="pbx col-2"></div>
+                <div class="pbx col-10"></div>
+            </header>
         </div>
         <!-- 2.컨텐츠영역1 -->
         <div id="cont1">
