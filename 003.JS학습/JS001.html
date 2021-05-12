@@ -112,6 +112,55 @@
                     넣어주는게 좋다!!!
                 )
 
+                [ JS에서 요소를 선택하는 방법 ]
+
+                - document 객체 : html문서 전체를 담고 있는 DOM객체
+                - DOM(Document Object Model)
+                    : 문서에 있는 각 요소로 접근할 수 있는 방법론을
+                    가지는 모델링
+
+                1. 아이디요소 선택법 (getElementById 메서드)
+                document.getElementById(아이디명)
+                - html요소 중 아이디요소는 유일하므로 한번에 선택 가능
+                
+                - get 가져와라
+                - Element 요소 하나를
+                - By Id 아이디에 의한 것으로
+
+                2. 클래스요소 선택법 (getElementsByClassName 메서드)
+                document.getElementsByClassName(클래스명)
+                - html요소 중 클래스요소는 여러개 올 수 있기때문에
+                컬렉션집합을 만들어서 관리하므로 순번으로 선택해야함!
+                - .item(순번) 또는 [순번]
+                - 순번은 0부터!!!
+
+                - get 가져와라
+                - Elements 요소들을
+                - By ClassName 클래스명에 의한 것으로
+
+                예) 해당클래스명을 가진 요소 중 첫번째 것 선택
+                document.getElementsByClassName(클래스명).item(0)
+                또는
+                document.getElementsByClassName(클래스명)[0]
+                - 클래스를 단 하나만 사용했어도 0번이라고 해야함!
+
+                3. 태그요소 선택법(getElementsByTagName 메서드)
+                document.getElementsByTagName(요소명)
+                - html요소 중 태그요소는 여러개 올 수 있기에
+                컬렉션 집합을 만들어서 관리하므로 순번으로 선택해야함!
+                - .item(순번) 또는 [순번]
+                - 순번은 0부터!!!
+
+                - get 가져와라
+                - Elements 요소들을
+                - By TagName 태그명에 의한 것으로
+
+                예) 해당요소명을 가진 요소들 중 세번째 것 선택
+                document.getElementsByTagName(태그명).item(2)
+                또는
+                document.getElementsByTagName(태그명)[2]
+
+
 
 
              */
