@@ -81,11 +81,26 @@
             background-color: #97e7ff;
         }
         /* 상위메뉴 li에 오버시 서브메뉴 높이값 변경 */
-        /* 유형변경4-높이값 50px로 통합변경(nth-child선택 불필요) */
+        /* 유형변경4 - 높이값 50px로 통합변경(nth-child선택 불필요) */
         .gnb>ul>li:hover .smenu{
             height: 50px;
         }
 
+        /* 유형변경5 
+        - a요소가 기존 block에서 inline으로 변경 
+        - 이유는 width,height 디자인 미적용을 위함
+        - 적용 우선순위를 높이기 위해 .gnb를 상위에 써준다! */
+        .gnb .smenu a{
+            display: inline;
+            padding: 0 10px;
+            margin: 0 10px;
+        }
+        /* 유형변경6 - 서브메뉴 시작위치변경을 위해
+        .smenu 첫번째 li에 왼쪽마진주기 */
+        /* 두번째 메뉴 서브 */
+        .gnb>ul>li:nth-child(2) .smenu>li:first-child{
+            margin-left: 200px;
+        }
 
         </style>
     </head>
