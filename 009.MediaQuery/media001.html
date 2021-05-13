@@ -73,6 +73,16 @@
                 - 주의사항: and 앞뒤에 공백필수!
 
             */
+        /* 초기화 */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+        }
 
         /* 배경이미지 박스 */
         .bx {
@@ -150,6 +160,7 @@
         /* 1200px 이하 */
         @media only screen and (max-width:1200px) {
 
+            /* 타이틀가상요소 변경 */
             .tit::after {
                 content: "1200px 이하";
                 color: pink;
@@ -173,6 +184,12 @@
         /* 1100px 이하 */
         @media only screen and (max-width:1100px) {
 
+            /* 타이틀가상요소 변경 */
+            .tit::after {
+                content: "1100px 이하";
+                color: lime;
+            }
+
             /* 이정재 1번이미지 숨기기 */
             .screen img:nth-child(2) {
                 display: none;
@@ -188,6 +205,12 @@
 
         /* 1000px 이하 */
         @media only screen and (max-width:1000px) {
+
+            /* 타이틀가상요소 변경 */
+            .tit::after {
+                content: "1000px 이하";
+                color: lightsalmon;
+            }
 
             /* 이정재 2번이미지 숨기기 */
             .screen img:nth-child(3) {
@@ -205,6 +228,12 @@
         /* 900px 이하 */
         @media only screen and (max-width:900px) {
 
+            /* 타이틀가상요소 변경 */
+            .tit::after {
+                content: "900px 이하";
+                color: rgb(0, 183, 255);
+            }
+
             /* 이정재 3번이미지 숨기기 */
             .screen img:nth-child(4) {
                 display: none;
@@ -220,6 +249,12 @@
 
         /* 850px 이하 */
         @media only screen and (max-width:850px) {
+
+            /* 타이틀가상요소 변경 */
+            .tit::after {
+                content: "850px 이하";
+                color: rgb(255, 0, 191);
+            }
 
             /* 이정재 4번이미지 숨기기 */
             .screen img:nth-child(5) {
@@ -237,6 +272,12 @@
         /* 830px 이하 */
         @media only screen and (max-width:830px) {
 
+            /* 타이틀가상요소 변경 */
+            .tit::after {
+                content: "830px 이하";
+                color: rgb(81, 255, 0);
+            }
+
             /* 이정재 5번이미지 숨기기 */
             .screen img:nth-child(6) {
                 display: none;
@@ -252,6 +293,12 @@
 
         /* 810px 이하 */
         @media only screen and (max-width:810px) {
+
+            /* 타이틀가상요소 변경 */
+            .tit::after {
+                content: "810px 이하";
+                color: rgb(255, 230, 0);
+            }
 
             /* 이정재 6번이미지 숨기기 */
             .screen img:nth-child(7) {
@@ -269,6 +316,12 @@
         /* 790px 이하 */
         @media only screen and (max-width:790px) {
 
+            /* 타이틀가상요소 변경 */
+            .tit::after {
+                content: "790px 이하";
+                color: rgb(255, 115, 0);
+            }
+
             /* 이정재 7번이미지 숨기기 */
             .screen img:nth-child(8) {
                 display: none;
@@ -285,6 +338,12 @@
         /* 770px 이하 */
         @media only screen and (max-width:770px) {
 
+            /* 타이틀가상요소 변경 */
+            .tit::after {
+                content: "770px 이하";
+                color: rgb(0, 255, 234);
+            }
+
             /* 이정재 8번이미지 숨기기 */
             .screen img:nth-child(9) {
                 display: none;
@@ -294,6 +353,20 @@
             .screen img:nth-child(10) {
                 display: inline;
             }
+
+            /* 박스가상요소 변경하기 */
+            /* 기존속성 중 변경할 요소 덮어쓰기 */
+            .bx::after {
+                background-position: top;
+                background-size: auto 60%;
+            }
+
+            /* 스크린박스 위치변경 */
+            .screen {
+                top: 135px;
+            }
+
+
         }
 
         /* 미디어쿼리 770px 이하 */
