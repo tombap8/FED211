@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* 서울랜드 공통 CSS - common.css */
+/* 공통 CSS 범위 : 상단영역, 하단영역(메인,서브공통) */
+
+/* 상단영역 */
+.top{
+    height: 87px;
+}
+
+/* 하단영역 */
+.info{
+    height: 130px;
+}

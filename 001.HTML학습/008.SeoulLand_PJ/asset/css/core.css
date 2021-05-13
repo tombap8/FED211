@@ -1,33 +1,32 @@
 @charset "utf-8";
-/*서울랜드 core.css - 웹폰트,전체설정*/
+/*서울랜드 핵심 CSS - core.css */
+/* 핵심 CSS 범위 : 공통모듈 클래스, 웹폰트 */
 
-/*웹폰트*/
+/* 웹폰트 - 나눔고딕체 */
 @font-face {
-    font-family: Nanum;
+    font-family: ng;/* 내가지은이름 */
     src: url(../fonts/NanumGothic.woff) format("woff");
 }
 
-/*공통*/
-body {
-    font-family: dotum, "돋움", sans-serif;
-    color: #808080;
-/*    word-spacing: -0.2em;*/
-    line-height: 136%;
-    font-size: 12px;
-}
-
-/*공통 class*/
-/*속박스*/
+/* 속박스 클래스 */
 .ibx{
     width: 960px;
-    max-width: 100%;
-    /*설정된 width보다 작아질때 화면에 꽉참*/
     margin: 0 auto;
-    /*가로중앙*/
-    /*outline: 2px dashed blue;*/
+    outline: 2px dotted red;
+}
+/* 파티션 박스 클래스 */
+.pbx{
+    float: left;/* 옆으로 */
+    box-sizing: border-box;/* 크기유지 */
+    padding: 10px;/* 패딩 */
+    outline: 2px dashed blue;
 }
 
-/*IR배경이미지설명*/
+
+
+
+/* IR 클래스 (배경이미지 설명 숨기기) */
+/* IR(Image Replacement) */
 .bld{
     display: block;
     width: 0;
@@ -35,18 +34,11 @@ body {
     overflow: hidden;
 }
 
-/*부모자격 부여 class*/
-.prt{
-    position: relative;
+/* float해제 클래스 */
+.clb::after{
+    content: '';
+    display: block;
+    clear: both;
 }
-
-
-
-
-
-
-
-
-
 
 

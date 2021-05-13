@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* 서울랜드 메인페이지 CSS - main.css */
+
+/* 외부CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/* 메인페이지(index.html)에만 나오는 요소 css */
+
+/* 배너영역 */
+.ban{
+    height: 415px;
+}
+
+/* 컨텐츠 영역 */
+.cont{
+    height: 256px;
+}
