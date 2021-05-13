@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 모바일 뷰포트필수! -->
     <title>글자단위</title>
     <style>
         /* 
@@ -26,6 +27,21 @@
             ※ 참고: em 단위의 em은 "엠"으로 발음되고 실제로 "M"문자를
             지칭한다. 활자를 만들때 기본 크기를 "M"문자를 기준한데서
             유래됨
+
+            [ em 또는 rem , % 와 같이 상대단위를 쓰는 이유는? ]
+
+            - 웹 사이트에서 글자크기를 화면에 따라 변경할 경우
+            절대단위를 쓰면 모두 하나씩 변경해야 하는 번거로움이 있다!
+            (유지보수의 어려움!)
+
+            - 이때 상대 단위를 쓰면 최상위 하나의 절대단위의 크기만
+            변경해 주면 모두 상대적으로 그 크기를 변경하게 된다!
+            구현과 유지보수의 편리함 때문에 쓰는 것이다!
+
+
+
+
+
          */
 
         /* em단위 */
@@ -82,15 +98,46 @@
             원하는 px / html px (기본값 16px)
 
          */
-         .rf1{/* 32px */
-             font-size: rem;
+         .rf1{/* 32px / 16px = 2rem */
+             font-size: 2rem;
          }
-         .rf2{/* 24px */
-             font-size: rem;
+         .rf2{/* 24px / 16px = 1.5rem */
+             font-size: 1.5rem;
          }
-         .rf3{/* 14px */
-             font-size: rem;
+         .rf3{/* 14px / 16px = 0.87rem */
+             font-size: .87rem;
          }
+
+         /* 
+            % 단위 : em단위 계산법에 100을 곱한 것과 같다!
+            즉, 부모요소에서 상속된 글자 크기의 상대적인 크기단위다!
+          */
+          .pf1{/* 2em === 200% */
+              font-size: 200%;
+          }
+          .pf2{/* 0.75em === 75% */
+              font-size: 75%;
+          }
+          .pf3{/* 0.58em === 58% */
+              font-size: 58%;
+          }
+
+          /* 미디어쿼리 */
+          @media only screen and (max-width:1000px) {
+              /* 
+                최상위 root만 건드려서 기본값 16px을 변경한다!
+                왜냐하면 모든 상대단위가 html에 의존하고 있기때문이다!
+               */
+                html{
+                    font-size: 12px;
+                }
+          }/* 미디어쿼리 */
+
+          @media only screen and (max-width:800px) {
+              html{
+                  font-size: 10px;
+              }
+          }/* 미디어쿼리 */
 
 
 
@@ -110,6 +157,15 @@
     <div class="rf1">1.큰 제목입니다. 
         <div class="rf2">2.작은 제목입니다. 
             <div class="rf3">3.내용입니다.</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h1>%단위</h1>
+    <div class="pf1">1.큰 제목입니다. 
+        <div class="pf2">2.작은 제목입니다. 
+            <div class="pf3">3.내용입니다.</div>
         </div>
     </div>
 
