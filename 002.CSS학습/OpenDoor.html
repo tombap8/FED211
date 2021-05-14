@@ -92,6 +92,7 @@
             /* 애니메이션: 이시이지반방마 */
             animation: openDoor 2s ease-in-out infinite alternate;
 
+            z-index: 1;/* 엘사보다 위 */
         }
         /* 문짝열기 키프레임 */
         @keyframes openDoor {
@@ -116,6 +117,34 @@
             background-color: #00f;
         }
 
+        /* 엘사박스 */
+        #elsa{
+            position: absolute;
+            top: 0;
+            /* 나의부모? .frame */
+            width: 150px;
+            height: 280px;
+            overflow: hidden;/* 넘치는 엘사이미지 숨기기 */
+        }
+        /* 엘사 이미지 */
+        #elsa img{
+            margin-left: 150px;
+            margin-top: 50px;
+            transform: rotate(0deg);
+            /* 반시계방향회전을 애니메이션에서 함 */
+            transform-origin: bottom;/* 기준축변경 */
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: elsa 2s ease-in-out infinite alternate;
+        }
+
+        /* 엘사 키프레임 */
+        @keyframes elsa {
+            to{
+                transform: rotate(-15deg);
+            }
+        }/* 키프레임 */
+
     </style>
 </head>
 <body>
@@ -136,6 +165,18 @@
             </div>
         </div><!-- .frame -->
     </div><!-- .cont -->
+
+    <!-- 창문만들기 -->
+    <div class="cont2">
+        <!-- 문열었을때 뚫린부분 -->
+        <div class="frame2">
+            <!-- 문짝 -->
+            <div class="door2">
+                <!-- 손잡이 -->
+                <div class="handle2"></div>
+            </div>
+        </div><!-- .frame2 -->
+    </div><!-- .cont2 -->
     
 </body>
 </html>
