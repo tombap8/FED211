@@ -9,6 +9,7 @@
             /* 그리드뷰 재정의 */
             .grid{
                 width: 1280px;
+                display: none;
             }
 
             /* 초기화 */
@@ -37,10 +38,11 @@
                 right: 0;
                 /* 박스 크기 사방으로 늘리기 - 부모는? body */
                 background: url(./images/kita.png) no-repeat center top;
-                opacity: 0.5;/* 반투명 */
+                opacity: 1;/* 반투명 */
                 z-index: -1;/* 일반요소보다 아래 */
                 /* z-index: 99999999; */
                 /* 필요할때 가장위!!! */
+                display: none;
             }
 
             /* 공통 클래스 */
@@ -51,6 +53,13 @@
                 /* 마영오! */
                 outline: 2px dotted red;
             }
+            /* 파티션박스가 float되어 있으므로 clear:both하기! */
+            .ibx::after{
+                content: '';
+                display: block;/* clear:both는 block이어야 적용됨 */
+                clear: both;/* float해제-자식요소 높이값인식! */
+            }
+
             /* 파티션박스 */
             .pbx{
                 /* 1.옆으로흐르게 */
@@ -64,6 +73,18 @@
 
                 outline: 2px dashed blue;
             }
+            /* IR(배경이미지설명숨기기) 클래스 */
+            .ir{
+                display: block;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+            }
+            /* 숨기기 클래스 */
+            .bld{
+                display: none;
+            }
+
 
             /* 개별 영역 셋팅 */
             /* 1.상단영역 */
@@ -72,7 +93,7 @@
             }
             /* 2.컨텐츠영역1 */
             .cont1{
-                height: 305px;
+                height: 344px;
             }
             /* 3.컨텐츠영역2 */
             .cont2{
@@ -113,13 +134,18 @@
         <!-- 1.상단영역 -->
         <div id="top">
             <header class="ibx top">
-                <div class="pbx col-2"></div>
-                <div class="pbx col-10"></div>
+                <div class="pbx col-2">
+                    <h1>로고</h1>
+                </div>
+                <div class="pbx col-10">
+
+                </div>
             </header>
         </div>
         <!-- 2.컨텐츠영역1 -->
         <div id="cont1">
             <section class="ibx cont1">
+                <h2 class="bld">배너안내</h2>
                 <div class="pbx col-8"></div>
                 <div class="pbx col-4"></div>
             </section>
@@ -127,18 +153,21 @@
         <!-- 3.컨텐츠영역2 -->
         <div id="cont2">
             <section class="ibx cont2">
+                <h2 class="bld">통계공지사항</h2>
                 <div class="pbx col-12"></div>
             </section>
         </div>
         <!-- 4.컨텐츠영역3 -->
         <div id="cont3">
             <section class="ibx cont3">
+                <h2 class="bld">대표서비스</h2>
                 <div class="pbx col-12"></div>
             </section>
         </div>
         <!-- 5.컨텐츠영역4 -->
         <div id="cont4">
             <section class="ibx cont4">
+                <h2>KITA 사업일정</h2>
                 <div class="pbx col-3"></div>
                 <div class="pbx col-3"></div>
                 <div class="pbx col-3"></div>
@@ -151,15 +180,21 @@
         </div>
         <!-- 6.컨텐츠영역5 -->
         <div id="cont5">
-            <section class="ibx cont5"></section>
+            <section class="ibx cont5">
+                <h2>회원/업무지원</h2>
+            </section>
         </div>
         <!-- 7.컨텐츠영역6 -->
         <div id="cont6">
-            <section class="ibx cont6"></section>
+            <section class="ibx cont6">
+                <h2 class="bld">바로가기링크모음</h2>
+            </section>
         </div>
         <!-- 8.하단영역 -->
         <div id="info">
-            <footer class="ibx info"></footer>
+            <footer class="ibx info">
+                <h2 class="bld">회사정보</h2>
+            </footer>
         </div>
 
 
