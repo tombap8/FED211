@@ -22,6 +22,26 @@
                 font-size: 100%;
             }
 
+            body{
+                position: relative;
+                /* 디자인검수용 가상요소의 부모자격 */
+            }
+
+            /* 디자인 검수용 가상요소박스 */
+            body::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                /* 박스 크기 사방으로 늘리기 */
+                background: url(./images/kita.png) no-repeat center top;
+                opacity: 0.5;/* 반투명 */
+                /* display: none; *//* 필요할 때만 보기 */
+                z-index: 99999999;/* 가장위!!! */
+            }
+
             /* 공통 클래스 */
             /* 속박스 */
             .ibx{
