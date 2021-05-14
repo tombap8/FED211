@@ -35,11 +35,11 @@
                 left: 0;
                 bottom: 0;
                 right: 0;
-                /* 박스 크기 사방으로 늘리기 */
+                /* 박스 크기 사방으로 늘리기 - 부모는? body */
                 background: url(./images/kita.png) no-repeat center top;
                 opacity: 0.5;/* 반투명 */
-                /* display: none; *//* 필요할 때만 보기 */
-                z-index: 99999999;/* 가장위!!! */
+                z-index: -1;/* 일반요소보다 아래 */
+                /* z-index: 99999999; *//* 필요할때 가장위!!! */
             }
 
             /* 공통 클래스 */
