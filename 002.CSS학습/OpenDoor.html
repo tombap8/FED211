@@ -37,6 +37,42 @@
             top: 20px;
             width: 150px;
             height: 280px;
+            margin: 0 auto;/* 마영오! */
+            background: url(./images/seashore.jpg) no-repeat center/auto 100%;
+
+            /* 
+                [ 3D 원근설정 ]
+                1. 셋팅위치 : 3D원근설정을 할 대상의 부모박스에 셋팅
+                2. 설정방법:
+                perspective: 수치;
+                - 수치는 px단위로 숫자가 클수록 소실점이 먼것이므로
+                각도가 작아짐(이 거리는 기준점에서 소실점까지의 거리)
+             */
+             perspective: 480px;
+        }
+        /* 문짝 */
+        .door{
+            position: relative;
+            /* 부모자격 */
+            width: 150px;
+            height: 280px;
+            background-color: #C90;
+
+            /* Y축으로 문짝을 회전한다! */
+            transform: rotateY(50deg);
+
+
+        }
+        /* 손잡이 */
+        .handle{
+            position: absolute;
+            top: 150px;
+            right: 10px;
+            /* 부모는? .door */
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;/* 원 */
+            background-color: #00f;
         }
 
     </style>
