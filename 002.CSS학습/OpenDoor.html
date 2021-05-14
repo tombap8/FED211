@@ -49,6 +49,18 @@
                 각도가 작아짐(이 거리는 기준점에서 소실점까지의 거리)
              */
              perspective: 480px;
+             perspective-origin: center;/* 기본값(안써도됨!) */
+            /* 
+                [ 뷰포인트(관찰자위치) 위치변경옵션 ]
+                perspective-origin: 가로 세로;
+                - 가로값: left, center, right (x축변경일 경우)
+                - 세로값: top, center, bottom (y축변경일 경우)
+                - 두 값 중 회전축에 따라 한 값만 쓸 수 있고
+                복합일 경우 2가지 값을 같이 셋팅할 수 있다
+                - % 사용가능(예: 50%는 중앙)
+             */
+
+
         }
         /* 문짝 */
         .door{
@@ -60,9 +72,28 @@
 
             /* Y축으로 문짝을 회전한다! */
             transform: rotateY(50deg);
+            transform-origin: left;
+            /* 
+                회전기준축 변경하기
+                transform-origin: 가로 세로;
+                - 가로값: right, center, left
+                - 세로값: top, center, bottom
+                - 정해지지 않은 값: px, %도 가능함
+             */
 
 
         }
+        /* 문짝열기 키프레임 */
+        @keyframes openDoor {
+            from{
+                transform: rotateY(65deg);
+            }
+            to{
+                transform: rotateY(-65deg);
+            }
+        }/* 키프레임 */
+
+
         /* 손잡이 */
         .handle{
             position: absolute;
