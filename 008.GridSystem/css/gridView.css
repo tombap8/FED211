@@ -19,8 +19,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    z-index: 99999;
-    /* display: none; */
+    z-index: -1;/* 일반요소보다 아래 */
+    /* z-index: 99999; */
+    /* 필요시 맨위로 올리기 */
+    
 }
 
 /* li 12컬럼 설정 */
