@@ -21,13 +21,20 @@
         /* max-width로 잡는 미디어쿼리는 반드시 큰 사이즈에서
         작은 사이즈 순서로 코딩해야 제대로 적용된다! */
 
+        /* 미디어쿼리 1200px이하일때 한줄에 세개씩 오게하기 */
+        @media only screen and (max-width:1200px) {
+            .lee{
+                width: 32.33%;/* 마진뺌 */
+            }
+        }/* 미디어쿼리 1200px이하 */
+
         
         /* 미디어쿼리 1024이하일때 한줄에 두개씩 오게하기 */
         @media only screen and (max-width:1024px) {
             .lee{
                 width: 49%;/* 마진뺌 */
             }
-        }
+        }/* 미디어쿼리 1024px이하 */
 
         /* 미디어쿼리 800px이하일때 한줄에 하나만 오게하기 */
         @media only screen and (max-width:800px) {
