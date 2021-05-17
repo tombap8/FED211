@@ -46,11 +46,25 @@
 }
 /* 상위메뉴(dt) */
 .gnb dt{
+    padding-bottom: 5px;
+    /* 하단공백 */
 }
 .gnb dt a{
     font-size: 15px;
     color: #000;
     font-weight: bold;
+}
+
+/* 하위메뉴(dd) */
+.gnb dd{
+
+}
+.gnb dd a{
+    font-size: 11px;
+    color: #979797;
+    font-weight: bold;
+    letter-spacing: normal;/* 자간설정해제 */
+    line-height: 19px;/* 줄간격 */
 }
 
 /************* 하단영역 ***********/
