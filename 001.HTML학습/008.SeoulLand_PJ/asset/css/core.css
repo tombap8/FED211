@@ -34,11 +34,15 @@
 
 /* IR 클래스 (배경이미지 설명 숨기기) */
 /* IR(Image Replacement) */
-.bld{
+.ir{
     display: block;
     width: 0;
     height: 0;
     overflow: hidden;
+}
+/* 요소 숨기기 클래스 */
+.bld{
+    display: none;
 }
 
 /* float해제 클래스 */

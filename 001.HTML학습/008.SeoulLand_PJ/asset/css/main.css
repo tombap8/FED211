@@ -12,10 +12,18 @@
 
 /* 배너영역 */
 .ban{
+    /* height: 415px; */
+}
+/* 높이값을 파티션박스에 설정! */
+.ban>.pbx{
     height: 415px;
 }
 
 /* 컨텐츠 영역 */
 .cont{
+    /* height: 256px; */
+}
+/* 높이값을 파티션박스에 설정! */
+.cont>.pbx{
     height: 256px;
 }
