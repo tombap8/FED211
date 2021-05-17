@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비율유지박스(Ratio Box)</title>
+    <style>
+        .rbx{
+            width: 50%;/* 가로크기에 대한 상대적인 크기 */
+            /* height: 400px; */
+            /*
+            [1. 비율유지 박스의 원리1 ] 
+            height값을 주지않고 박스의 높이값 만들기 
+            padding-top/padding-bottom으로 높이값을 만들 수 있다
+            이는 기본적으로 박스는 보더와 패딩만큼 그 크기가 커지기
+            때문이다!!!
+            */
+            /* padding-top: 50%; */
+            /* 
+                [2. 비율유지 박스의 원리2 ]
+                padding-top값을 %로주면 가로크기가 변할때
+                패딩도 변한다!
+                이것을 자식요소에게 주고 패딩값을 %로 줄때
+                정확한 계산이 되는 패딩에 의한 높이값이 나온다!
+
+                -> 자식요소를 따로 만들기 번거롭고 관리가 어려우므로
+                가상요소를 이용한다! ::before를 이용!!!
+            */
+
+            background: url(./images/mobum.jpg) no-repeat center/cover;
+            margin: 0 auto;/* 마영오! */
+        }
+
+        /* .rbx가상요소 before로 비율유지 패딩탑주기 */
+        .rbx::before{
+            content: '';
+            display: block;
+            /* width가 auto이므로 부모요소의 가로크기에 의존함 */
+            padding-top: 56.25%;
+            /* 
+                [ 3. 비율유지 박스의 원리3 ]
+                - 자식 블록요소의 패딩탑값을 %로 주면
+                부모요소 가로크기의 몇%의 의미로 셋팅이 된다!
+                즉, 1:1  비율이면 100%이고 
+                    2:1  비율이면 50%이다!
+
+                    계산을 하자면 16:9비율이면
+                    16:9 = 100:x (가로크기를 100%로 봄)
+                    x= 9*100/16 = 56.25%
+            */
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="rbx">
+        
+    </div>
+    
+</body>
+</html>
