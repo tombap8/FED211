@@ -14,6 +14,13 @@
     margin: 0 auto;
     outline: 2px dotted red;
 }
+/* 속박스 가상요소로 파티션박스 float해제하기 */
+.ibx::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
 /* 파티션 박스 클래스 */
 .pbx{
     float: left;/* 옆으로 */
