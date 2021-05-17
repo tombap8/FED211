@@ -30,8 +30,6 @@
 }
 
 
-
-
 /* IR 클래스 (배경이미지 설명 숨기기) */
 /* IR(Image Replacement) */
 .ir{
@@ -50,6 +48,11 @@
     content: '';
     display: block;
     clear: both;
+}
+
+/* 부모자격 클래스 */
+.prt{
+    position: relative;
 }
 
 

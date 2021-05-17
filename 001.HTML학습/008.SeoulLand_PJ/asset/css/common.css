@@ -16,6 +16,18 @@
     margin-left: -4px;
 }
 
+/* GNB 디자인 */
+.gnb{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    /* 부모는? 싸고 있는 .pbx */
+}
+.gnb dl{
+    float: left;
+    font-family: ng;/* 웹폰트:나눔고딕 */
+}
+
 /************* 하단영역 ***********/
 .info{
     height: 130px;
