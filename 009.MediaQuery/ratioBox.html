@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>비율유지박스(Ratio Box)</title>
     <style>
-        .rbx{
-            width: 50%;/* 가로크기에 대한 상대적인 크기 */
+        .rbx {
+            position: relative;
+            /* 비율유지박스 속박스를 위한 부모자격!!! */
+            width: 50%;
+            /* 가로크기에 대한 상대적인 크기 */
             /* height: 400px; */
             /*
             [1. 비율유지 박스의 원리1 ] 
@@ -28,11 +32,12 @@
             */
 
             background: url(./images/mobum.jpg) no-repeat center/cover;
-            margin: 0 auto;/* 마영오! */
+            margin: 0 auto;
+            /* 마영오! */
         }
 
         /* .rbx가상요소 before로 비율유지 패딩탑주기 */
-        .rbx::before{
+        .rbx::before {
             content: '';
             display: block;
             /* width가 auto이므로 부모요소의 가로크기에 의존함 */
@@ -50,14 +55,43 @@
             */
         }
 
+        /* 비율유지박스에 컨텐츠를 넣기 위한 속박스만들기 */
+        .rbxIn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            /* 부모는? .rbx */
+        }
 
+        /* 
+            [ 비율유지박스를 위해 필요한 것들 ]
+            1. 가로크기가 유동적인 높이값 없는 블록박스
+            2. 1번박스의 가상요소 before로 padding-top값 %지정(비율)
+            3. 1번박스의 속박스 앱솔루트 밀착박스 설정(1번박스가 부모)
+
+            [ 비율유지박스를 위한 클래스 ]
+            1. .rbx 비율유지박스 (width %)
+            2. .rbx::before 비율설정 (padding-top %)
+            3. .rbxIn 비율유지속박스 (absolute)
+        */
 
     </style>
 </head>
+
 <body>
     <div class="rbx">
-        
+        <div class="rbxIn">
+            <dl class="cat">
+                <dt>출연진</dt>
+                <dd>이제훈(김도기역)</dd>
+                <dd>이솜(강하나역)</dd>
+                <dd>김의성(장성철역)</dd>
+            </dl>
+        </div>
     </div>
-    
+
 </body>
+
 </html>
