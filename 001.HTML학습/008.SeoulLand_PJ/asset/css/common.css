@@ -67,6 +67,22 @@
     line-height: 19px;/* 줄간격 */
 }
 
+/* 세번째 dl(단체프로그램) 위치 미세조정 */
+.gnb dl:nth-child(3){
+    margin-left: -3px;
+}
+
+/* 마지막 dl(캐릭터 쇼핑몰)의 dt에 가상요소로 아이콘 넣기 */
+.gnb dl:last-child dt::before{
+    content: url(../images/micon.png);
+    margin-right: 1px;
+    vertical-align: -2px;/* 인라인요소 세로정렬 */
+}
+/* 캐릭터 쇼핑몰 글자색 변경 (a요소) */
+.gnb dl:last-child dt a{
+    color: red;
+}
+
 /************* 하단영역 ***********/
 .info{
     height: 130px;
