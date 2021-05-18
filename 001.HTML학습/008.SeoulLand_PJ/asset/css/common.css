@@ -83,6 +83,15 @@
     color: red;
 }
 
+/* dl에 마우스 오버시 dt>a의 글자색 빨간색 변경하기 */
+.gnb dl:hover dt a{
+    color: red;
+}
+/* dl에 마우스 오버시 dt>a의 오른쪽위에 가상요소로 별만들기 */
+.gnb dl:hover dt a::after{
+    content: "＊";
+}
+
 /************* 하단영역 ***********/
 .info{
     height: 130px;
