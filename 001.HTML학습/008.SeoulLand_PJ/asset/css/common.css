@@ -105,6 +105,25 @@
 .gnb dd a:hover{
     color: #818181;
 }
+/* 서브메뉴에 마우스 오버시 빨간공 맨앞에 만들기 */
+.gnb dd a:hover::before{
+    content: '＞';
+    display: block;
+    position: absolute;
+    /* 젠틀앱솔루트! */    
+    margin-top: 6px;
+    margin-left: -20px;
+    /* 위치값 없이 마진으로 위치이동 */
+
+    color: #fff;
+    width: 11px;
+    height: 11px;
+    background-color: red;
+    border-radius: 50%;/* 원 */
+    font: bold 9px/11px arial;
+    text-align: center;
+}
+
 
 
 /************* 하단영역 ***********/
