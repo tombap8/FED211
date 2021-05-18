@@ -99,7 +99,11 @@
 }
 /* 마지막 dl(캐릭터 쇼핑몰)에 마우스 오버시엔 별 안보이기 */
 .gnb dl:last-child:hover dt a::after{
-    content: "";    
+    content: "";
+}
+/* 서브메뉴에 마우스 오버시 글자색 바꾸기 */
+.gnb dd a:hover{
+    color: #818181;
 }
 
 
