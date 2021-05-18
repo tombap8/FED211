@@ -30,12 +30,23 @@
     따라서 left값을 조정하여 마지막 요소가 떨어지지 않게 조정한다*/
 
     
-    /* height: 42px;
+    height: 28px;
+    /* 마우스오버시에 높이값 171px로 변경 */
     overflow: hidden;
-    outline: 2px solid red; */
+    /* 넘치는 자식요소 숨기기 */
+    background-color: #fff;
+    outline: 2px solid red;
 
     letter-spacing: -1px;/* 자간 */
+
+    /* 트랜지션: 속시이지 */
+    transition: height .3s ease-out;
 }
+/* .gnb박스에 마우스 오버시 높이값 변경으로 하위메뉴 보이기 */
+.gnb:hover{
+    height: 176px;
+}
+
 /* 메뉴 개별박스 공통 */
 .gnb dl{
     width: 127px;
@@ -75,8 +86,13 @@
 
 /* 하위메뉴(dd) */
 .gnb dd{
-
+    display: none;/* 처음에 안보임 */
 }
+/* .gnb에 마우스 오버시 보이기 */
+.gnb:hover dd{
+    display: block;
+}
+
 .gnb dd a{
     font-size: 11px;
     color: #979797;
