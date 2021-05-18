@@ -92,11 +92,16 @@
     content: "＊";    
     /* font-size: 18px;
     vertical-align: -2px; */
-    transform: translate(0px, -5px) scale(1.2);
+    transform: translateY(-5px) scale(1.2);
     display: inline-block;
     /* 트랜스폼 적용을 위해 inline-block으로 변경 */
     /* 트랜스폼은 이미지를 제외한 inline요소엔 적용되지 않는다! */
 }
+/* 마지막 dl(캐릭터 쇼핑몰)에 마우스 오버시엔 별 안보이기 */
+.gnb dl:last-child:hover dt a::after{
+    content: "";    
+}
+
 
 /************* 하단영역 ***********/
 .info{
