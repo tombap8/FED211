@@ -89,7 +89,13 @@
 }
 /* dl에 마우스 오버시 dt>a의 오른쪽위에 가상요소로 별만들기 */
 .gnb dl:hover dt a::after{
-    content: "＊";
+    content: "＊";    
+    /* font-size: 18px;
+    vertical-align: -2px; */
+    transform: translate(0px, -5px) scale(1.2);
+    display: inline-block;
+    /* 트랜스폼 적용을 위해 inline-block으로 변경 */
+    /* 트랜스폼은 이미지를 제외한 inline요소엔 적용되지 않는다! */
 }
 
 /************* 하단영역 ***********/
