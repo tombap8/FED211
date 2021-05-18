@@ -29,6 +29,10 @@
     부모요소의 크기보다 커지면 부모요소의 크기가 그 한계크기가 된다!
     따라서 left값을 조정하여 마지막 요소가 떨어지지 않게 조정한다*/
 
+    
+    /* height: 42px;
+    overflow: hidden;
+    outline: 2px solid red; */
 
     letter-spacing: -1px;/* 자간 */
 }
@@ -44,6 +48,20 @@
     /* 왼쪽패딩으로 글자 가로방향 위치조정
     이때 박스가 패딩때문에 커지므로 border-box로 설정하여 크기유지함 */
 }
+
+/* .gnb에 마우스 오버시 dl에 가상요소로 왼쪽 선 만들기 */
+.gnb:hover dl::before{
+    content: '';
+    display: block;
+    position: absolute;
+    /* 젠틀앱솔루트! */
+    margin-top: -2px;
+    margin-left: -16px;
+    width: 1px;
+    height: 171px;
+    background-color: #e8e8e8;
+}
+
 /* 상위메뉴(dt) */
 .gnb dt{
     padding-bottom: 5px;
