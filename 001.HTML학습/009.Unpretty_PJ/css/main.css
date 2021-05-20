@@ -25,8 +25,8 @@ body::before {
     /* body요소에 밀착-부모는 body */
     background: url(../images/Unpretty_over.jpg) no-repeat center top;
     /* background: 색이반고윙/크 */
-    z-index: 1;
-    /* z-index: -1; */
+    z-index: -1;
+    /* z-index: 1; */
     /* 일반요소보다 아래 */
     opacity: 0.7;
 }
@@ -112,4 +112,34 @@ body::before {
     /* 보더,패딩내부포함박스(크기유지) */
 
     /* 배경셋팅 */
+    background-color: #000;
+    background-image: url(../images/tv3_small.png);
+    background-repeat: no-repeat;
+    background-position: center 150px;/* x축으로 밀어서 아랫쪽 숨김 */
+    background-size: 160px;
+}
+/* 뮤지션 공통 */
+.mu{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    /* 보더크기만큼 위치이동: 부모는? .rapper */
+    width: 170px;
+    height: 170px;
+    border: 10px solid #ccc;
+    border-radius: 50%;/* 원 */
+    box-sizing: border-box;
+    /* 보더,패딩내부포함박스(크기유지) */
+
+    /* 배경셋팅 */
+    background-color: #000;
+    background-repeat: no-repeat;
+
+}
+
+/* 1. 애쉬비 */
+.r1 .mu{
+    background-image: url(../images/01ash-b.png);
+    background-size: 200px;
+    background-position: -25px 20px;
 }
