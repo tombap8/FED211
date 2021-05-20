@@ -18,11 +18,22 @@
 
 /* GNB 디자인 */
 .gnb{
-    position: absolute;
+    /* position: absolute; */
+    /* 앱솔루트를 안주면 위치값이 안먹힌다!
+    왜 앱솔루트를 지웠는가? 끝까지 가는 가상요소를 만들기 위해!!! */
+    /* 이때 .gnb박스의 위치이동은 마진으로 한다! */
+    margin-top: 34px;
+    margin-left: 27px;
+    width: 762px;
+    /* 크기는 자동이면 마진이동으로 인해 작아져서 마지막 li가 
+    아래로 떨어지므로 width크기를 설정해 준다! */
+
     top: 44px;
     left: 37px;/* float된 마지막dl요소가 떨어지지않는 위치 */
     /* 부모는? 싸고 있는 .pbx */
     /* 첫번째 대메뉴 글자로 위치를 맞춘다! */
+
+
     
     /* 
     absolute는 자식요소의 크기만큼 자동으로 늘어나지만
@@ -45,6 +56,18 @@
 /* .gnb박스에 마우스 오버시 높이값 변경으로 하위메뉴 보이기 */
 .gnb:hover{
     height: 176px;
+}
+/* .gnb박스에 가상요소로 전체 화면 100%를 차지하는 absolute를 박스를
+만들고 오버시 .gnb박스 같이 내려가도록 설정한다! */
+.gnb::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #f00;
 }
 
 /* 메뉴 개별박스 공통 */
