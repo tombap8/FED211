@@ -25,7 +25,8 @@ body::before {
     /* body요소에 밀착-부모는 body */
     background: url(../images/Unpretty_over.jpg) no-repeat center top;
     /* background: 색이반고윙/크 */
-    z-index: -1;
+    z-index: 1;
+    /* z-index: -1; */
     /* 일반요소보다 아래 */
     opacity: 0.7;
 }
@@ -47,9 +48,35 @@ body::before {
 
 /* 전체부모박스 */
 .wrap{
+    position: relative;
+    /* 부모자격 */
     width: 1000px;
     height: 1000px;
     margin: 0 auto;/* 마영오! - 블록가로중앙 */
     outline: 5px solid lime;
     background: url(../images/bg.jpg) no-repeat;
+}
+
+/* 1.로고그룹 */
+.logo{
+    padding-top: 20px;
+}
+/* 엠넷로고 */
+.logo img:first-child{
+    margin-left: 20px;/* 이미지 왼쪽여백조정 */
+}
+/* 언프로고 */
+.logo img:last-child{
+    float: right;
+    /* 인라인요소 오른쪽 끝으로 가기 */
+    margin-right: 19px;
+}
+
+
+/* 2.전체큰별 */
+#bigstar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 부모는? .wrap */
 }
