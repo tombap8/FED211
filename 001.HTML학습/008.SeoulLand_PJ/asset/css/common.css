@@ -63,11 +63,12 @@
     content: '';
     display: block;
     position: absolute;
-    top: 0;
+    top: 73px;/* 위치조정 */
     left: 0;
     width: 100%;
-    height: 200px;
-    background-color: #f00;
+    height: 155px;/* 크기조정 */
+    background-color: #fff;
+    border-bottom: 3px solid red;/* 하단보더 */
 }
 
 /* 메뉴 개별박스 공통 */
