@@ -34,6 +34,8 @@
                 outline: 2px solid lime;
             }
         .gnb>ul>li{
+            position: relative;
+            /* 세로네비변경4 - .smenu의 부모자격 */
             width: 200px;
             text-align: center;
         }
@@ -60,8 +62,11 @@
 
         /* 서브메뉴 */
         .smenu{
-            /* position: absolute; */
-            /* 세로네비변경3 - 포지션 static으로! */
+            position: absolute;
+            /* 세로네비변경3 - 포지션은 앱솔루트로
+            위치는 싸고 있는 li를 기준으로 옆으로 나오게 */
+            left: 100%;
+            top: 0;
 
 
             /* 젠틀앱솔루트! - 위치값을 안썼을때
