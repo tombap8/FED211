@@ -138,8 +138,13 @@ body::before {
 }
 
 /* 1. 애쉬비 */
+.r1{
+    /* 랩퍼개별위치값 */
+    top: 18px;
+    left: 416px;
+}
 .r1 .mu{
     background-image: url(../images/01ash-b.png);
     background-size: 200px;
-    background-position: -25px 20px;
+    background-position: -31px 15px;
 }
