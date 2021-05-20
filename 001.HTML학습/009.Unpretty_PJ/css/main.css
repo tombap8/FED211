@@ -80,3 +80,12 @@ body::before {
     left: 0;
     /* 부모는? .wrap */
 }
+
+/* 3.메인로고 */
+#mlogo{
+    position: absolute;
+    top: 51%;/* 약간조정 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 앱솔루트 정중앙이동 - 부모는? .wrap */
+}
