@@ -89,3 +89,27 @@ body::before {
     transform: translate(-50%, -50%);
     /* 앱솔루트 정중앙이동 - 부모는? .wrap */
 }
+
+/* 4. 랩퍼컨텐츠박스 */
+.cont{
+    position: absolute;
+    /* 부모자격 */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* 부모박스에 밀착! 부모는? .wrap */
+}
+/* 각 랩퍼박스 공통 */
+.rapper{
+    position: absolute;
+    /* 부모는? .cont */
+    width: 170px;
+    height: 170px;
+    border: 10px solid #ccc;
+    border-radius: 50%;/* 원 */
+    box-sizing: border-box;
+    /* 보더,패딩내부포함박스(크기유지) */
+
+    /* 배경셋팅 */
+}
