@@ -148,3 +148,14 @@ body::before {
     background-size: 200px;
     background-position: -31px 15px;
 }
+/* 2. 엑시 */
+.r2{
+    /* 랩퍼개별위치값 */
+    top: 70px;
+    right: 162px;
+}
+.r2 .mu{
+    background-image: url(../images/01EXY.png);
+    background-size: 200px;
+    background-position: -30px 20px;
+}
