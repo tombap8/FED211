@@ -46,7 +46,7 @@
     overflow: hidden;
     /* 넘치는 자식요소 숨기기 */
     background-color: #fff;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 
     letter-spacing: -1px;/* 자간 */
 
@@ -67,7 +67,13 @@
     left: 0;
     width: 100%;
     height: 0;/* 크기조정 - 마우스 오버시 155px로! */
+
+    /* 배경설정 */
     background-color: #fff;
+    background-image: url(../images/bg_gnb.gif);
+    background-repeat: no-repeat;
+    background-position: 150px 0;
+
     border-bottom: 3px solid red;/* 하단보더 */
 
     /* 트랜지션: 속시이지 -.gnb와 같은 값으로! */
