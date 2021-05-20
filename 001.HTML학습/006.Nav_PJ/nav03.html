@@ -24,12 +24,24 @@
             .gnb{
                 background-color: #3974e5;
             }
+            /* gnb그룹요소 ul */
             .gnb>ul{
                 width: 800px;
                 margin: 0 auto;
                 /* 블록가로중앙정렬 - 마영오! */
                 outline: 2px solid lime;
             }
+            /* ul의 가상요소로 전체배경박스 만들기 */
+            /* clear:both로 after는 사용중이므로 before사용 */
+            .gnb>ul::before{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 200px;
+                background-color: #f00;
+            }
+
+
         .gnb>ul>li{
             width: 200px;
             text-align: center;
