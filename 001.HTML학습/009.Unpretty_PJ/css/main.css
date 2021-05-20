@@ -2,10 +2,54 @@
 /* 언프리티 PJ 메인 CSS - main.css */
 
 /* 공통 */
-html,body{
+html,
+body {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
+    position: relative;
+    /* 부모자격 */
     background-color: #000;
+}
+
+/* 검수용이미지넣기 */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* body요소에 밀착-부모는 body */
+    background: url(../images/Unpretty_over.jpg) no-repeat center top;
+    /* background: 색이반고윙/크 */
+    z-index: -1;
+    /* 일반요소보다 아래 */
+    opacity: 0.7;
+}
+
+/* 공통 CSS */
+
+/* 요소숨김 클래스 */
+.bld {
+    display: none;
+}
+
+/* 배경설명숨기기 클래스 */
+.ir {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* 전체부모박스 */
+.wrap{
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;/* 마영오! - 블록가로중앙 */
+    outline: 5px solid lime;
+    background: url(../images/bg.jpg) no-repeat;
 }
