@@ -106,6 +106,9 @@
 
             overflow: hidden;
             /* 넘치는 자식요소 숨기기 */
+
+            /* 3D 원근애니설정하기 - 자식요소에 적용! */
+            perspective: 480px;
         }
 
         /* 비율유지 가상요소 */
@@ -142,7 +145,32 @@
             top: 65%;
             left: 44.5%;
             width: 4%;
+
+            /* 문짝 Y축회전 - 원근으로 보이려면 
+            부모에게 perspective 를 설정해야함! */
+            transform: rotateY(0deg);
+            transform-origin: right;
+            /* 문짝축 오른쪽변경 */
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: doorAni 4s ease-in-out 4s;
         }
+
+        /* 문열기 키프레임 */
+        @keyframes doorAni {
+            0%{
+                transform: rotateY(0deg);
+            }
+            30%{/* 열고있는 상태 */
+                transform: rotateY(120deg);
+            }
+            70%{/* 열고있는 상태 */
+                transform: rotateY(120deg);
+            }
+            100%{
+                transform: rotateY(0deg);
+            }
+        }/* 키프레임 */
     </style>
 </head>
 
