@@ -77,7 +77,7 @@
             transform: translate(-60%, -50%);
             /* 정중앙이동 */
 
-            width: 70%;
+            width: 70%;/* 유동적인 가로크기!!! */
             max-width: 800px;
             /* 최대가로크기 제한을 주고 70% 가로값 지정 */
 
@@ -86,6 +86,7 @@
             margin: 0 auto;
             /* 마영오 - 블록가로중앙 */
             background: url(./images/house.png) no-repeat;
+            background-size: 100%;/* 가로크기에 맞춤(세로는자동) */
             z-index: 1;
         }
 
@@ -93,7 +94,7 @@
         .rbx::before{
             content: '';
             display: block;
-            padding-top: 50%;
+            padding-top: 55%;
         }
 
         /* 
@@ -114,7 +115,7 @@
     <h1 class="tit">Simpson's Family</h1>
     
     <!-- 전체화면박스 -->
-    <div class="house">
+    <div class="house rbx">
 
     </div>
 
