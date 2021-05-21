@@ -141,51 +141,111 @@
             /* 애니메이션: 이시이지반방마 */
             animation: simpson 7s ease-in-out 6s forwards;
         }
+
         /* 심슨 키프레임 */
         @keyframes simpson {
-            0%{
+            0% {
                 top: 65%;
                 left: 43.7%;
                 width: 5%;
                 transform: rotate(0deg);
                 z-index: 1;
             }
-            5%{
+
+            5% {
                 top: 68%;
                 left: 46.7%;
                 width: 5%;
                 transform: rotate(-5deg);
                 z-index: 1;
             }
-            10%{
+
+            10% {
                 top: 70%;
                 left: 47.7%;
                 width: 5.3%;
                 transform: rotate(5deg);
                 z-index: 1;
             }
-            15%{
+
+            15% {
                 top: 75%;
                 left: 48.7%;
                 width: 5.5%;
                 transform: rotate(-5deg);
                 z-index: 1;
             }
-            20%{
+
+            20% {
                 top: 78%;
                 left: 45.7%;
                 width: 6%;
                 transform: rotate(5deg);
                 z-index: 1;
             }
-            100%{
-                top: 65%;
-                left: 43.7%;
-                width: 5%;
+
+            30% {
+                top: 80%;
+                left: 45.7%;
+                width: 10%;
+                transform: rotate(-5deg);
+                z-index: 1;
+            }
+            40% {
+                top: 73%;
+                left: 45.7%;
+                width: 15%;
+                transform: rotate(5deg);
+                z-index: 1;
+            }
+
+            50% {
+                top: 68%;
+                left: 45.7%;
+                width: 20%;
+                transform: rotate(-5deg);
+                z-index: 1;
+            }
+            60% {
+                top: 50%;
+                left: 40.7%;
+                width: 30%;
+                transform: rotate(5deg);
+                z-index: 1;
+            }
+
+            70% {
+                top: 40%;
+                left: 31.7%;
+                width: 40%;
+                transform: rotate(-5deg);
+                z-index: 1;
+            }
+            80% {
+                top: 40%;
+                left: 31.7%;
+                width: 40%;
+                transform: rotate(5deg);
+                z-index: 1;
+            }
+            90% {
+                top: 30%;
+                left: 31.7%;
+                width: 45%;
+                transform: rotate(-5deg);
+                z-index: 1;
+            }
+
+            100% {
+                top: 30%;
+                left: 31.7%;
+                width: 46%;
                 transform: rotate(0deg);
                 z-index: 1;
             }
-        } /* 키프레임 */
+        }
+
+        /* 키프레임 */
 
         /* 2. 문짝 */
         .door {
@@ -206,19 +266,26 @@
 
         /* 문열기 키프레임 */
         @keyframes doorAni {
-            0%{
+            0% {
                 transform: rotateY(0deg);
             }
-            30%{/* 열고있는 상태 */
+
+            30% {
+                /* 열고있는 상태 */
                 transform: rotateY(120deg);
             }
-            70%{/* 열고있는 상태 */
+
+            70% {
+                /* 열고있는 상태 */
                 transform: rotateY(120deg);
             }
-            100%{
+
+            100% {
                 transform: rotateY(0deg);
             }
-        }/* 키프레임 */
+        }
+
+        /* 키프레임 */
     </style>
 </head>
 
