@@ -32,13 +32,13 @@
             /* 부모? body - 부모박스에 밀착! */
 
             /* 배경이미지 */
-            background: url(./images/oldTVON.png) no-repeat center/cover;
+            background: url(./images/oldTVON.png) no-repeat top/cover;
         }
 
         /* TV 이미지 셋팅 */
         #tv {
             position: absolute;
-            top: 50%;
+            top: 43%;
             left: 50%;
             /* 부모는? body */
             transform: translate(-50%, -50%);
@@ -53,13 +53,13 @@
         /* 타이틀 */
         .tit {
             position: absolute;
-            top: 100px;
+            top: 5vh;
             left: 50%;
             transform: translateX(-50%);
             /* 가로중앙이동 */
             margin: 0;
             padding: 0;
-            font-size: 60px;
+            font-size: 4vmax;
             color: #fff;
             text-shadow: 2px 0 #000, -2px 0 #000,
                 0 2px #000, 0 -2px #000;
@@ -76,7 +76,7 @@
         .house {
             position: absolute;
             /* 부모자격 */
-            top: 50%;
+            top: 43%;
             left: 50%;
             /* 부모는? body */
             transform: translate(-60%, -50%);
@@ -92,7 +92,7 @@
             /* 마영오 - 블록가로중앙 */
             background: url(./images/house.png) no-repeat;
             background-size: 100%;/* 가로크기에 맞춤(세로는자동) */
-            z-index: 1;
+            /* z-index: 1; */
         }
 
         /* 비율유지 가상요소 */
