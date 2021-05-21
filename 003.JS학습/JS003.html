@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,12 @@
         /*///////////////////////////////////////////////
             함수명: jumsu
             기능: 평가점수를 평가결과로 환산하여 출력함
-        *////////////////////////////////////////////////
-        function jumsu(){
+        */ ///////////////////////////////////////////////
+        function jumsu() {
             // 1. 함수호출여부확인!
             console.log("점수환산!");
             // console은 브라우저 F12 콘솔탭에서 확인한다!
-            
+
             // 2. 점수환산하기
             // 기준:
             // 90점이상 - "매우잘함", 80점이상 - "잘함"
@@ -31,32 +32,45 @@
             // 점수변수
             var score = document.getElementById("jumsu").value;
 
+            // 글자색변수
+            var fc;
+
             // 입력값확인
             console.log(score);
 
             // 조건1: 90점이상
-            if(score >= 90){
+            if (score >= 90) {
                 res = "매우잘함";
+                fc = "blue";
             }
             // 조건2: 80점이상
-            else if(score >= 80){
+            else if (score >= 80) {
                 res = "잘함";
+                fc = "green";
             }
             //조건3: 70점이상
-            else if(score >= 70){
+            else if (score >= 70) {
                 res = "보통";
+                fc = "purple";
             }
             //조건4: 60점이상
-            else if(score >= 60){
+            else if (score >= 60) {
                 res = "노력요함";
+                fc = "orange";
             }
             //조건5: 위의 조건에 모두 해당 안될때
-            else{
+            else {
                 res = "재시험";
+                fc = "red";
             }
 
             // 결과값확인
-            console.log(res);
+            console.log("점수:" + res + "/글자색:" + fc);
+
+            // 화면출력
+            // 대상: #jexp
+            document.getElementById("jexp")
+                .innerText = "평가결과는 " + res;
 
 
             /* 
@@ -95,9 +109,9 @@
 
         } ////////// jumsu 함수 /////////////////////////
         ////////////////////////////////////////////////
-
     </script>
 </head>
+
 <body>
     <h1>JS 제어문</h1>
 
@@ -124,6 +138,7 @@
      -->
 
 
-    
+
 </body>
+
 </html>
