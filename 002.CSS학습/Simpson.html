@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>심슨네 가족 애니메이션</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+            /* 부모자격 */
+            overflow: hidden;
+        }
+
+        /* body의 가상요소로 배경 배치하기 */
+        body::after,
+        body::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* 부모? body - 부모박스에 밀착! */
+
+            /* 배경이미지 */
+            background: url(./images/oldTVON.png) no-repeat center/cover;
+        }
+
+        /* body::after 배경셋팅 */
+        body::after {
+            background: url(./images/oldTVnew.png) no-repeat center/1000px;
+        }
+
+
+        /* 타이틀 */
+        .tit {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            /* 가로중앙이동 */
+            margin: 0;
+            padding: 0;
+            font-size: 60px;
+            color: #fff;
+            text-shadow: 2px 0 #000, -2px 0 #000,
+                0 2px #000, 0 -2px #000;
+            /* 글자테두리 */
+            z-index: 1;
+            /* .house보다 위 */
+        }
+
+        /* 전체박스 */
+        .house {
+            position: relative;
+            /* 부모자격 */
+            top: 246px;
+            left: -76px;
+
+            width: 800px;
+            height: 441px;
+            margin: 0 auto;
+            /* 마영오 - 블록가로중앙 */
+            background: url(./images/house.png) no-repeat;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1 class="tit">Simpson's Family</h1>
+    <!-- 전체화면박스 -->
+    <div class="house">
+
+    </div>
+
 </body>
+
 </html>
