@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>심슨네 가족 애니메이션</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
+
         html,
         body {
             margin: 0;
             padding: 0;
-            width: 100vw;/* 뷰포트단위 가로크기 100% */
-            height: 100vh;/* 뷰포트단위 세로크기 100% */
+            width: 100vw;
+            /* 뷰포트단위 가로크기 100% */
+            height: 100vh;
+            /* 뷰포트단위 세로크기 100% */
         }
 
         body {
@@ -53,13 +57,17 @@
         /* 타이틀 */
         .tit {
             position: absolute;
-            top: 5vh;
+            top: 4vh;
             left: 50%;
             transform: translateX(-50%);
             /* 가로중앙이동 */
             margin: 0;
             padding: 0;
+
+            font-family: 'Black And White Picture', sans-serif;
             font-size: 4vmax;
+            font-weight: normal;
+            /* 두께일반 */
             color: #fff;
             text-shadow: 2px 0 #000, -2px 0 #000,
                 0 2px #000, 0 -2px #000;
@@ -82,7 +90,8 @@
             transform: translate(-60%, -50%);
             /* 정중앙이동 */
 
-            width: 70%;/* 유동적인 가로크기!!! */
+            width: 70%;
+            /* 유동적인 가로크기!!! */
             max-width: 800px;
             /* 최대가로크기 제한을 주고 70% 가로값 지정 */
 
@@ -91,12 +100,16 @@
             margin: 0 auto;
             /* 마영오 - 블록가로중앙 */
             background: url(./images/house.png) no-repeat;
-            background-size: 100%;/* 가로크기에 맞춤(세로는자동) */
-            /* z-index: 1; */
+            background-size: 100%;
+            /* 가로크기에 맞춤(세로는자동) */
+            z-index: 1;
+
+            overflow: hidden;
+            /* 넘치는 자식요소 숨기기 */
         }
 
         /* 비율유지 가상요소 */
-        .rbx::before{
+        .rbx::before {
             content: '';
             display: block;
             padding-top: 55%;
@@ -113,15 +126,25 @@
             2. .rbx::before 비율설정 (padding-top %)
             3. .rbxIn 비율유지속박스 (absolute)
         */
+
+
+        /* 1. 심슨 */
+        .simpson {
+            position: absolute;
+            top: 65%;
+            left: 43.7%;
+            width: 5%;
+        }
     </style>
 </head>
 
 <body>
     <h1 class="tit">Simpson's Family</h1>
-    
+
     <!-- 전체화면박스 -->
     <div class="house rbx">
-
+        <!-- 심슨 -->
+        <img src="./images/simpson.png" alt="심슨" class="simpson">
     </div>
 
     <!-- TV이미지 -->
