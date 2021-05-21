@@ -69,8 +69,12 @@
 
             // 화면출력
             // 대상: #jexp
-            document.getElementById("jexp")
-                .innerText = "평가결과는 " + res;
+            var jexp = document.getElementById("jexp");
+                
+            // 글자넣기
+            jexp.innerText = "평가결과는 " + res;
+            // 글자색변경하기
+            jexp.style.color = fc;
 
 
             /* 
