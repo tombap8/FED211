@@ -20,7 +20,6 @@
         }
 
         /* body의 가상요소로 배경 배치하기 */
-        body::after,
         body::before {
             content: '';
             display: block;
@@ -35,9 +34,18 @@
             background: url(./images/oldTVON.png) no-repeat center/cover;
         }
 
-        /* body::after 배경셋팅 */
-        body::after {
-            background: url(./images/oldTVnew.png) no-repeat center/1000px;
+        /* TV 이미지 셋팅 */
+        #tv {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 부모는? body */
+            transform: translate(-50%, -50%);
+            /* 정중앙이동 */
+            width: 90%;
+            max-width: 1000px;
+            /* 가로크기를 부모요소의 90%로 설정했지만
+            max-width:1000px 설정으로 1000px크기를 넘지 못함  */
         }
 
 
@@ -61,26 +69,57 @@
 
         /* 전체박스 */
         .house {
-            position: relative;
+            position: absolute;
             /* 부모자격 */
-            top: 246px;
-            left: -76px;
+            top: 50%;
+            left: 50%;
+            /* 부모는? body */
+            transform: translate(-60%, -50%);
+            /* 정중앙이동 */
 
-            width: 800px;
-            height: 441px;
+            width: 70%;
+            max-width: 800px;
+            /* 최대가로크기 제한을 주고 70% 가로값 지정 */
+
+            /* height: 441px; */
+            /* 비율유지설정 적용을 위해 height값은 지정하지 않는다 */
             margin: 0 auto;
             /* 마영오 - 블록가로중앙 */
             background: url(./images/house.png) no-repeat;
+            z-index: 1;
         }
+
+        /* 비율유지 가상요소 */
+        .rbx::before{
+            content: '';
+            display: block;
+            padding-top: 50%;
+        }
+
+        /* 
+            [ 비율유지박스를 위해 필요한 것들 ]
+            1. 가로크기가 유동적인 높이값 없는 블록박스
+            2. 1번박스의 가상요소 before로 padding-top값 %지정(비율)
+            3. 1번박스의 속박스 앱솔루트 밀착박스 설정(1번박스가 부모)
+
+            [ 비율유지박스를 위한 클래스 ]
+            1. .rbx 비율유지박스 (width %)
+            2. .rbx::before 비율설정 (padding-top %)
+            3. .rbxIn 비율유지속박스 (absolute)
+        */
     </style>
 </head>
 
 <body>
     <h1 class="tit">Simpson's Family</h1>
+    
     <!-- 전체화면박스 -->
     <div class="house">
 
     </div>
+
+    <!-- TV이미지 -->
+    <img src="./images/oldTVnew.png" alt="TV" id="tv">
 
 </body>
 
