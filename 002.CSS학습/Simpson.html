@@ -406,12 +406,25 @@
             width: 26%;
 
             /* 애니메이션: 이시이지반방마 */
-            animation: maggie .6s ease-in-out 14s forwards;
+            animation: maggie .6s ease-in-out 14s forwards,
+                    updown .5s ease-in-out 14.6s infinite alternate;
+
         }
         /* 메기 키프레임 */
         @keyframes maggie {
             to{
                 bottom: -16%;
+            }
+        }/* 키프레임 */
+
+        /* 메기 업다운 키프레임 */
+        @keyframes updown {
+            from{
+                bottom: -16%;
+                /* 등장한 마지막 상태 */
+            }
+            to{
+                bottom: -21%;
             }
         }/* 키프레임 */
 
