@@ -358,6 +358,25 @@
             }
         } /* 키프레임 */
 
+        /* 마지심슨 */
+        .marge{
+            position: absolute;
+            bottom: -45%;
+            right: -24%;
+            width: 50%;
+            transform: rotate(-12deg);
+            transform-origin: bottom;
+            /* 회전축 하단변경 */
+        }
+        /* 마지키프레임 */
+        @keyframes marge {
+            to{
+                right: -24%;
+                transform: rotate(-12deg);
+            }
+            
+        }/* 키프레임 */
+
 
     </style>
 </head>
@@ -381,7 +400,11 @@
             It's Fantastic! <br>
             I LOVE MY FAMILY!!!
         </div>
-    </div>
+
+        <!-- 4.마지 -->
+        <img src="./images/Marge_Simpson.png" alt="마지심슨" class="marge">
+
+    </div><!-- .house -->
 
     <!-- TV이미지 -->
     <img src="./images/oldTVnew.png" alt="TV" id="tv">
