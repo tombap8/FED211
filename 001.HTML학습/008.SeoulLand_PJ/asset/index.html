@@ -25,14 +25,18 @@
 
             // 3. 변경내용: 
             // 대상에 클래스 "on"을 오버시엔 넣고 아웃시엔 뺀다!
-            //if(gubun) tg.classList.add("on");
+
+            if(gubun) tg.classList.add("on");
             // if(gubnu===1) 1값은 true이므로 안써도됨!
             // if문의 실행문이 하나일 경우 중괄호{} 생략가능!
-            //else tg.classList.remove("on");
+
+            else tg.classList.remove("on");
             // else는 if조건이 아닌경우임. 지금은 gubun값이 0인경우
 
-            tg.classList.toggle("on");
-            
+            // if문 없이 클래스"on"이 없으면 넣고 있으면 빼는 
+            // toggle메서드 사용할 수 있음!
+            //tg.classList.toggle("on");
+
             /* 
                 [ JS에서 클래스 넣고 빼기 메서드 ]
                 classList 객체
