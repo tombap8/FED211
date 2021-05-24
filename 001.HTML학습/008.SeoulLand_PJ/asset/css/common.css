@@ -55,7 +55,7 @@
 /* #top하위 GNB배경 박스 */
 .gnbbx{
     position: absolute;
-    top: 73px;/* 위치조정 */
+    top: 87px;/* 위치조정 */
     left: 0;
     width: 100%;
     height: 0;/* 크기조정 - 마우스 오버시 155px로! */
@@ -82,7 +82,7 @@
 /* .gnbbx에 클래스가 on되면 높이값 변경하기 */
 /* JS에서 해당박스에 클래스를 on주도록 한다! */
 .gnbbx.on{
-    height: 155px;
+    height: 141px;
 }
 
 /* 메뉴 개별박스 공통 */
