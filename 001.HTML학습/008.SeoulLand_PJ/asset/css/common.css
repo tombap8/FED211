@@ -64,18 +64,26 @@
     left: 0;
     width: 100%;
     height: 0;/* 크기조정 - 마우스 오버시 155px로! */
+    border-bottom: 3px solid red;/* 하단보더 */
+    
+    /* 트랜지션: 속시이지 -.gnb와 같은 값으로! */
+    transition: height .3s ease-out;
+}
+/* 중앙에 오는 가상요소박스를 .gnbbx에 만들어서 배경을 넣는다! */
+.gnbbx::before{
+    content: '';
+    display: block;/* div박스와 유사 */
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;/* 마영오! */
 
     /* 배경설정 */
     background-color: #fff;
     background-image: url(../images/bg_gnb.gif);
     background-repeat: no-repeat;
-    background-position: 150px 0;
-
-    border-bottom: 3px solid red;/* 하단보더 */
-
-    /* 트랜지션: 속시이지 -.gnb와 같은 값으로! */
-    transition: height .3s ease-out;
+    background-position: -5px 6px;
 }
+
 /* .gnbbx에 클래스가 on되면 높이값 변경하기 */
 /* JS에서 해당박스에 클래스를 on주도록 한다! */
 .gnbbx.on{
