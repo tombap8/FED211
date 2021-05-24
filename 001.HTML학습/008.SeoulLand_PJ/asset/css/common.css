@@ -16,7 +16,7 @@
     margin-left: -4px;
 }
 
-/* GNB 디자인 */
+/* 1. GNB 디자인 */
 .gnb{
     position: absolute;
     width: 762px;
@@ -117,7 +117,7 @@
 
 /* 상위메뉴(dt) */
 .gnb dt{
-    padding-bottom: 5px;
+    padding-bottom: 7px;
     /* 하단공백 */
 }
 .gnb dt a{
@@ -140,7 +140,7 @@
     color: #979797;
     font-weight: bold;
     letter-spacing: normal;/* 자간설정해제 */
-    line-height: 19px;/* 줄간격 */
+    line-height: 20px;/* 줄간격 */
 }
 
 /* 세번째 dl(단체프로그램) 위치 미세조정 */
@@ -198,6 +198,61 @@
     border-radius: 50%;/* 원 */
     font: bold 9px/11px arial;
     text-align: center;
+}
+
+/* 2. 공통 메뉴 디자인 */
+.tmenu{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    /* 부모는? 싸고 있는 .pbx */
+    font-family: ng;
+    font-size: 10px;
+    font-weight: bold;
+    /* outline: 1px solid red; */
+}
+/* 가상요소로 사이점 넣기 */
+/* li+li는 앞에 li가 있는 형제li요소를 선택함
+즉, 첫번째 li는 선택되지 않는다! */
+.tmenu li+li::before{
+    content: '·';
+    font-size: 12px;
+    margin: 0 6px;
+    vertical-align: middle;
+    /* 점의 글자크기가 크기때문에 인라인 세로정렬설정 필요함 */
+}
+
+/* 첫번째 li 글자색 변경하기 */
+.tmenu li:first-child a{
+    color: #f26522;
+}
+
+/* 4번째 li 미세조정 */
+.tmenu li:nth-child(4){
+    transform: translateX(4px);
+}
+
+/* 5번째 li 가상요소 안보이게하기 */
+.tmenu li:last-child::before{
+    opacity: 0;
+    /* 투명하게 안보임 */
+}
+
+/* 언어선택박스 */
+#lang{
+    width: 110px;
+    height: 19px;
+    transform: translate(2px,-4px);
+    /* 트랜스폼으로 다른요소에 영향없이 이동함
+    select박스는 display:inline-block이므로 
+    트랜스폼 적용이 가능함 */
+
+    font-family: arial;
+    font-size: 11px;
+    color: #979797;
+    padding-left: 4px;
+    box-shadow: inset 1px 1px 8px #d1d1d1;
+
 }
 
 
