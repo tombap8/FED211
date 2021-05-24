@@ -362,11 +362,14 @@
         .marge{
             position: absolute;
             bottom: -45%;
-            right: -24%;
+            right: -34%;
             width: 50%;
-            transform: rotate(-12deg);
+            transform: rotate(0deg);
             transform-origin: bottom;
             /* 회전축 하단변경 */
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: marge .6s ease-in-out 13s forwards;
         }
         /* 마지키프레임 */
         @keyframes marge {
@@ -375,6 +378,41 @@
                 transform: rotate(-12deg);
             }
             
+        }/* 키프레임 */
+
+        /* 리사심슨 */
+        .lisa{
+            position: absolute;
+            top: 0;
+            left: -30%;
+            width: 23%;
+            transform: rotate(90deg);
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: lisa .6s ease-in-out 13.6s forwards;
+        }
+        /* 리사 키프레임 */
+        @keyframes lisa {
+            to{
+                left: -5%;
+            }
+        }/* 키프레임 */
+
+        /* 메기심슨 */
+        .maggie{
+            position: absolute;
+            bottom: -64%;
+            left: 12%;
+            width: 26%;
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: maggie .6s ease-in-out 14s forwards;
+        }
+        /* 메기 키프레임 */
+        @keyframes maggie {
+            to{
+                bottom: -16%;
+            }
         }/* 키프레임 */
 
 
@@ -403,6 +441,12 @@
 
         <!-- 4.마지 -->
         <img src="./images/Marge_Simpson.png" alt="마지심슨" class="marge">
+
+        <!-- 5.리사 -->
+        <img src="./images/Lisa_Simpson.png" alt="리사심슨" class="lisa">
+
+        <!-- 6.메기 -->
+        <img src="./images/Maggie_Simpson.png" alt="메기심슨" class="maggie">
 
     </div><!-- .house -->
 
