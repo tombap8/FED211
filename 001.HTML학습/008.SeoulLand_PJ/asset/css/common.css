@@ -18,12 +18,7 @@
 
 /* GNB 디자인 */
 .gnb{
-    /* position: absolute; */
-    /* 앱솔루트를 안주면 위치값이 안먹힌다!
-    왜 앱솔루트를 지웠는가? 끝까지 가는 가상요소를 만들기 위해!!! */
-    /* 이때 .gnb박스의 위치이동은 마진으로 한다! */
-    margin-top: 34px;
-    margin-left: 27px;
+    position: absolute;
     width: 762px;
     /* 크기는 자동이면 마진이동으로 인해 작아져서 마지막 li가 
     아래로 떨어지므로 width크기를 설정해 준다! */

@@ -62,8 +62,8 @@
                     </a>
                 </h1>
             </div>
-            <div class="pbx col-10">
-                <!-- GNB 메뉴 -->
+            <div class="pbx col-10 prt">
+                <!-- 1. GNB 메뉴 -->
                 <nav class="gnb clb" onmouseover="showGNB(1)" onmouseout="showGNB(0)">
                     <!-- 1.계획세우기 -->
                     <dl>
@@ -171,6 +171,33 @@
                         </dt>
                         <dd></dd><!-- dd는 필수 -->
                     </dl>
+                </nav>
+                <!-- 2. 공통메뉴 -->
+                <nav class="tmenu">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">고객의소리함</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li>
+                            <select name="lang" id="lang">
+                                <option value="opt">LANGUAGE</option>
+                                <option value="en">English</option>
+                                <option value="jp">Japanese</option>
+                                <option value="ch">Chinese</option>
+                            </select>
+                            <!-- 
+                                select 요소 : 선택옵션을 제공하는 요소
+                                - option :필수하위요소, 선택메뉴제공
+                                - value 속성 : 선택시 코드설정
+                                (만약 value속성을 사용하지 않을 경우
+                                option요소의 데이터를 읽어감)
+                                - 주로 사용되는 이벤트: change이벤트
+                                : 선택이 변경될 경우 발생하는 이벤트
+
+                             -->
+                        </li>
+                    </ul>
                 </nav>
             </div>
         </header>
