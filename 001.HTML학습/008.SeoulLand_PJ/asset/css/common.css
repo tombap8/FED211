@@ -254,6 +254,11 @@
     box-shadow: inset 1px 1px 8px #d1d1d1;
 
 }
+/* 크롬 브라우저 포커스 아웃라인 없애기 */
+/* :focus 포커스 가상클래스 */
+#lang:focus{
+    outline: none;
+}
 
 
 
