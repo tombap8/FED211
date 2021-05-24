@@ -290,52 +290,73 @@
         /* 말풍선 */
         .words{
             position: absolute;
-            top: 4%;
-            left: 13%;
+            top: 1%;
+            left: 9%;
             /* 부모는? .house */
-            width: 28%;
+            /* width: 30%; */
             /* height: 50%; */
+            /* 크기는 글자크기가 변하므로 자동으로함
+            앱솔루트는 내용만큼 박스가 커짐! */
             white-space: nowrap;
             padding: 4%;
-            border: 10px solid #4E8BF8;
+            border: 1vmin solid #4E8BF8;
             border-radius: 50%;
             background-color: #fff;
             font: 2vmin/4vmin Verdana;
+            /* 
+                글자 크기 vmin단위는 가로/세로중 작은 사이즈를
+                기준한 비율을 셋팅함. 글자크기를 유동적으로
+                브라우저가 변경하지만 최소 9px보다 작아질 수 없다!
+            */
             text-align: center;
+
+            /* 글자나타나기는 투명도(opacity)로 애니메이션한다! */
+            opacity: 0;
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: talk 1s ease-in-out 12s forwards;
+            /* 마지막상태유지 forwards 필요! opacity:1값 유지 */
         }
         /* 가상요소로 말풍선 삼각형 만들기 */
         .words::before{
             content: '';
             position: absolute;
-            bottom: 3%;
-            right: 8%;
+            bottom: 0;
+            right: 0;
             /* 부모는? .words */
-            transform: rotate(-35deg);
+            transform: rotate(-54deg) translate(55%,30%);
             width: 0;
             height: 0;
 
             /* 역삼각형보더 */
-            border-top: 20px solid #4E8BF8;
+            border-top: 4vmin solid #4E8BF8;
             /* border-bottom으로 주면 삼각형임 */
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
+            border-left: 4vmin solid transparent;
+            border-right: 4vmin solid transparent;
         }
         .words::after{
             content: '';
             position: absolute;
-            bottom: 7%;
-            right: 10%;
+            bottom: 0;
+            right: 0;
             /* 부모는? .words */
-            transform: rotate(-35deg);
+            transform: rotate(-54deg) translate(55%,-11%);
             width: 0;
             height: 0;
 
             /* 역삼각형보더 */
-            border-top: 20px solid #fff;
+            border-top: 4vmin solid #fff;
             /* border-bottom으로 주면 삼각형임 */
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
+            border-left: 4vmin solid transparent;
+            border-right: 4vmin solid transparent;
         }
+
+        /* 말풍선 키프레임 */
+        @keyframes talk {
+            to{
+                opacity: 1;
+            }
+        } /* 키프레임 */
 
 
     </style>
