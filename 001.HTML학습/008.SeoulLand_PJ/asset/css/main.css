@@ -61,6 +61,10 @@ body::before {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100%;
+    opacity: 0;/* 모두투명 */
+
+    /* 트랜지션: 속시이지 */
+    transition: opacity .8s ease-in-out;
 }
 /* 각 배너이미지 셋팅 */
 .slide>ul>li:nth-child(1){
@@ -80,6 +84,11 @@ body::before {
 }
 .slide>ul>li:nth-child(6){
     background-image: url(../images/ban05.jpg);
+}
+
+/* 선택슬라이드 클래스 */
+.slide>ul>li.on{
+    opacity: 1;
 }
 
 /* 컨텐츠 영역 */
