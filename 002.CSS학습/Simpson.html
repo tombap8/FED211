@@ -451,12 +451,44 @@
             transform: rotate(180deg);
 
             /* 애니메이션: 이시이지반방마 */
-            animation: bart .8s ease-in-out 17s forwards;
+            animation: bart .8s ease-in-out 17s forwards,
+                        fall .4s ease-in 20s forwards,
+                        stand 1s ease-out 25s forwards;
         }
         /* 바트 키프레임 */
         @keyframes bart {
             to{
                 top: -29%;
+            }
+        }/* 키프레임 */
+
+        /* 바트 추락 키프레임 */
+        @keyframes fall {
+            from{
+                top: -29%;
+                transform: rotate(180deg);
+            }
+            to{
+                top: 106%;
+                transform: rotate(360deg);
+            }
+        }/* 키프레임 */
+
+        /* 바트 일어섬 키프레임 */
+        @keyframes stand {
+            from{
+                top: 106%;
+                right: 9%;
+                transform: rotate(460deg);
+                z-index: 1;
+                width: 36%;
+            }
+            to{
+                top: 56%;
+                right: 9%;
+                transform: rotate(360deg);
+                z-index: 1;
+                width: 36%;
             }
         }/* 키프레임 */
 
