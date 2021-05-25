@@ -36,7 +36,8 @@ body::before {
 
 /* 배너영역 */
 .ban {
-    /* height: 415px; */
+    position: relative;
+    /* 부모자격 */
 }
 
 /* 높이값을 파티션박스에 설정! */
@@ -89,6 +90,34 @@ body::before {
 /* 선택슬라이드 클래스 */
 .slide>ul>li.on{
     opacity: 1;
+    z-index: 1;/* 선택슬라이드가 맨위 */
+}
+
+/* 배너이동버튼 */
+.abtn{
+    position: absolute;
+    top: 50%;
+    /* 부모는? .ban */
+    transform: translateY(-50%);/* 세로중앙이동 */
+    width: 25px;
+    height: 49px;
+    background-repeat: no-repeat;
+    z-index: 1;/* 배너위로! */
+    /* outline: 4px solid lime; */
+}
+/* 왼쪽이동버튼 */
+.lb{
+    left: -30px;
+    background-image: url(../images/btn_shop_bn_left.png);
+}
+/* 오른쪽이동버튼 */
+.rb{
+    right: -30px;
+    background-image: url(../images/btn_shop_bn_right.png);
+}
+/* 이동버튼에 마우스 오버시 배경이미지 위치변경 */
+.abtn:hover{
+    background-position: 0 -49px;
 }
 
 /* 컨텐츠 영역 */

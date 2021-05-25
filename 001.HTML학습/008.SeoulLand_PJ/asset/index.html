@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,21 +13,21 @@
         /*//////////////////////////////////////////
             함수명: showGNB
             기능: .gnbbx에 클래스 on을 넣거나 빼준다
-        *///////////////////////////////////////////
-        function showGNB(gubun){
+        */ //////////////////////////////////////////
+        function showGNB(gubun) {
             // gubun-오버/아웃시 구분값 전달변수(1-오버시/0-아웃시)
             // 1. 함수호출확인
-            console.log("GNB배경보여!"+gubun);
+            console.log("GNB배경보여!" + gubun);
 
             // 2. 변경대상: .gnbbx (GNB배경박스)
             var tg = document
-            .getElementsByClassName("gnbbx").item(0);
+                .getElementsByClassName("gnbbx").item(0);
             // 클래스를 불러올땐 반드시 순번 item(순번)을 써야함!
 
             // 3. 변경내용: 
             // 대상에 클래스 "on"을 오버시엔 넣고 아웃시엔 뺀다!
 
-            if(gubun) tg.classList.add("on");
+            if (gubun) tg.classList.add("on");
             // if(gubnu===1) 1값은 true이므로 안써도됨!
             // if문의 실행문이 하나일 경우 중괄호{} 생략가능!
 
@@ -49,6 +50,7 @@
         //////////////////////////////////////////////
     </script>
 </head>
+
 <body>
     <!-- 1.상단영역(공통모듈) -->
     <div id="top" class="prt">
@@ -218,6 +220,13 @@
             <h2 class="bld">배너영역</h2>
             <div class="pbx col-10"></div>
             <div class="pbx col-2"></div>
+            <!-- 배너이동버튼 -->
+            <a href="#" class="abtn lb">
+                <span class="ir">배너왼쪽이동버튼</span>
+            </a>
+            <a href="#" class="abtn rb">
+                <span class="ir">배너오른쪽이동버튼</span>
+            </a>
         </section>
     </div>
     <!-- 3.컨텐츠영역 -->
@@ -257,6 +266,7 @@
         <li></li>
     </ul>
 
-    
+
 </body>
+
 </html>
