@@ -255,6 +255,12 @@
             // 분류된 메시지 확인
             console.log("메시지: "+msg);
 
+            // 5.화면출력
+            // 대상: #info
+            document.getElementById("info").innerText = msg;
+            // innerText는 텍스트 내용을 넣는 속성
+            // innerHTML은 태그요소가 있을 경우에 사용함!
+
             /* 
                 [ switch case문 ]
                 - 단일 조건을 분류하여 실행문을 만들어 줄때
