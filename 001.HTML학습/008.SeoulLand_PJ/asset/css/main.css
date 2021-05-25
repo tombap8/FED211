@@ -56,6 +56,32 @@ body::before {
     height: 100%;
 }
 
+/* 배너 이미지 li에 셋팅하기 */
+.slide>ul>li{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+/* 각 배너이미지 셋팅 */
+.slide>ul>li:nth-child(1){
+    background-image: url(../images/ban00.jpg);
+}
+.slide>ul>li:nth-child(2){
+    background-image: url(../images/ban01.jpg);
+}
+.slide>ul>li:nth-child(3){
+    background-image: url(../images/ban02.jpg);
+}
+.slide>ul>li:nth-child(4){
+    background-image: url(../images/ban03.jpg);
+}
+.slide>ul>li:nth-child(5){
+    background-image: url(../images/ban04.jpg);
+}
+.slide>ul>li:nth-child(6){
+    background-image: url(../images/ban05.jpg);
+}
+
 /* 컨텐츠 영역 */
 .cont {
     /* height: 256px; */
