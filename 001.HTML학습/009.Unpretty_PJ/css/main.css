@@ -79,16 +79,40 @@ body::before {
     top: 0;
     left: 0;
     /* 부모는? .wrap */
+
+    /* 트랜스폼셋팅 */
+    transform: scale(0) rotateY(720deg);
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: rotScale 3s ease-in-out 1s forwards;
 }
+/* 큰별+랩퍼박스 키프레임 */
+@keyframes rotScale {
+    to{
+        transform: scale(1) rotateY(0deg);
+    }
+} /* 키프레임 */
 
 /* 3.메인로고 */
 #mlogo{
     position: absolute;
     top: 51%;/* 약간조정 */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(180deg);
     /* 앱솔루트 정중앙이동 - 부모는? .wrap */
+    transform-origin: bottom;/* 축변경-하단 */
+    opacity: 0;
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: mlogo 2s ease-in-out 5s forwards;
 }
+/* 메인로고 키프레임 */
+@keyframes mlogo {
+    to{
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 1;
+    }
+}/* 키프레임 */
 
 /* 4. 랩퍼컨텐츠박스 */
 .cont{
@@ -122,6 +146,12 @@ body::before {
 
     /* 트랜지션: 속시이지 */
     transition: all .4s ease-out;
+
+    /* 트랜스폼셋팅 */
+    transform: scale(0) rotateY(720deg);
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: rotScale .8s ease-in-out 4s forwards;
 }
 /* 뮤지션 공통 */
 .mu{
