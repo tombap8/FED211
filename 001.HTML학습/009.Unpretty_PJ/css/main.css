@@ -202,8 +202,8 @@ body::before {
 /* 4. 효린 */
 .r4{
     /* 랩퍼개별위치값 */
-    top: -301px;
-    left: -439px;
+    top: 531px;
+    right: 21px;
 }
 .r4 .mu{
     background-image: url(../images/01hyorin.png);
@@ -212,8 +212,8 @@ body::before {
 }
 /* 개별박스 오버시 위치이동 */
 .r4:hover .mu{
-    top: 0px;
-    left: 0px;
+    top: -301px;
+    left: -439px;
 }
 
 /* 5. 전지윤 */
