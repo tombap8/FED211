@@ -191,6 +191,29 @@ body::before {
     background-size: auto 90%;
 }
 
+/* 가상요소로 글자넣기(공통) */
+.rapper::before{
+    /* content: "애쉬비\a뮤비보기"; */
+    /* \a (역슬래쉬a) 는 줄바꿈표시자 */
+    white-space: pre;
+    /* 위의 줄바꿈 표시자를 작동시키려면 white-space: pre해야함*/
+    
+    display: block;
+    padding-top: 40px;
+    padding-right: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+}
+.rapper:hover::before{
+    opacity: 1;
+    transition: .4s .3s;
+    /* 마우스 오버시에만 트랜지션 설정!(TV가 올라온 후) */
+}
+
+
+
 /* 1. 애쉬비 */
 .r1{
     /* 랩퍼개별위치값 */
@@ -206,21 +229,9 @@ body::before {
     top: 212px;
     left: -46px;
 }
+/* 가상요소로 글자넣기 */
 .r1::before{
     content: "애쉬비\a뮤비보기";
-    white-space: pre;
-    
-    display: block;
-    padding-top: 40px;
-    padding-right: 20px;
-    line-height: 30px;
-    text-align: center;
-    color: #fff;
-    opacity: 0;
-    transition: .4s .3s;
-}
-.r1:hover::before{
-    opacity: 1;
 }
 
 /* 2. 엑시 */
@@ -238,6 +249,10 @@ body::before {
     top: 160px;
     left: -297px;
 }
+/* 가상요소로 글자넣기 */
+.r2::before{
+    content: "엑시\a뮤비보기";
+}
 
 /* 3. 헤이즈 */
 .r3{
@@ -253,6 +268,10 @@ body::before {
 .r3:hover .mu{
     top: -59px;
     left: -438px;
+}
+/* 가상요소로 글자넣기 */
+.r3::before{
+    content: "헤이즈\a뮤비보기";
 }
 
 /* 4. 효린 */
