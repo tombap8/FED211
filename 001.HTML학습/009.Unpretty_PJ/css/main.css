@@ -290,6 +290,10 @@ body::before {
     top: -301px;
     left: -439px;
 }
+/* 가상요소로 글자넣기 */
+.r4::before{
+    content: "효린\a뮤비보기";
+}
 
 /* 5. 전지윤 */
 .r5{
@@ -306,6 +310,10 @@ body::before {
 .r5:hover .mu{
     top: -532px;
     left: -298px;
+}
+/* 가상요소로 글자넣기 */
+.r5::before{
+    content: "전지윤\a뮤비보기";
 }
 
 /* 6. 캐스퍼 */
@@ -324,6 +332,10 @@ body::before {
     top: -579px;
     left: -46px;
 }
+/* 가상요소로 글자넣기 */
+.r6::before{
+    content: "캐스퍼\a뮤비보기";
+}
 
 /* 7. 키디비 */
 .r7{
@@ -340,6 +352,10 @@ body::before {
 .r7:hover .mu{
     top: -532px;
     left: 211px;
+}
+/* 가상요소로 글자넣기 */
+.r7::before{
+    content: "키디비\a뮤비보기";
 }
 
 /* 8. 수아 */
@@ -358,6 +374,10 @@ body::before {
     top: -301px;
     left: 349px;
 }
+/* 가상요소로 글자넣기 */
+.r8::before{
+    content: "수아\a뮤비보기";
+}
 
 /* 9. 트루디 */
 .r9{
@@ -375,8 +395,12 @@ body::before {
     top: -59px;
     left: 349px;
 }
+/* 가상요소로 글자넣기 */
+.r9::before{
+    content: "트루디\a뮤비보기";
+}
 
-/* 10. 트루디 */
+/* 10. 유빈 */
 .r10{
     /* 랩퍼개별위치값 */
     top: 69px;
@@ -391,4 +415,8 @@ body::before {
 .r10:hover .mu{
     top: 161px;
     left: 211px;
+}
+/* 가상요소로 글자넣기 */
+.r10::before{
+    content: "유빈\a뮤비보기";
 }
