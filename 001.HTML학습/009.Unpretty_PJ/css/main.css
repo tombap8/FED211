@@ -161,6 +161,12 @@ body::before {
     background-image: url(../images/01ash-b.png);
     background-position: -31px 15px;
 }
+/* 개별박스 오버시 위치이동 */
+.r1:hover .mu{
+    top: 212px;
+    left: -46px;
+}
+
 /* 2. 엑시 */
 .r2{
     /* 랩퍼개별위치값 */
@@ -170,6 +176,11 @@ body::before {
 .r2 .mu{
     background-image: url(../images/01EXY.png);
     background-position: -30px 20px;
+}
+/* 개별박스 오버시 위치이동 */
+.r2:hover .mu{
+    top: 160px;
+    left: -297px;
 }
 
 /* 3. 헤이즈 */
@@ -182,7 +193,7 @@ body::before {
     background-image: url(../images/01heize.png);
     background-position: -24px -10px;
 }
-/* 헤이즈에 오버시 위치이동 */
+/* 개별박스에 오버시 위치이동 */
 .r3:hover .mu{
     top: -59px;
     left: -438px;
@@ -191,13 +202,18 @@ body::before {
 /* 4. 효린 */
 .r4{
     /* 랩퍼개별위치값 */
-    top: 531px;
-    right: 21px;
+    top: -301px;
+    left: -439px;
 }
 .r4 .mu{
     background-image: url(../images/01hyorin.png);
     background-position: -23px -4px;
     background-size: 222px;
+}
+/* 개별박스 오버시 위치이동 */
+.r4:hover .mu{
+    top: 0px;
+    left: 0px;
 }
 
 /* 5. 전지윤 */
@@ -211,6 +227,11 @@ body::before {
     background-position: -71px -1px;
     background-size: 251px;
 }
+/* 개별박스 오버시 위치이동 */
+.r5:hover .mu{
+    top: -532px;
+    left: -298px;
+}
 
 /* 6. 캐스퍼 */
 .r6{
@@ -222,6 +243,11 @@ body::before {
     background-image: url(../images/01kasper.png);
     background-position: -46px -1px;
     background-size: 251px;
+}
+/* 개별박스 오버시 위치이동 */
+.r6:hover .mu{
+    top: -579px;
+    left: -46px;
 }
 
 /* 7. 키디비 */
@@ -235,6 +261,11 @@ body::before {
     background-position: -29px -1px;
     background-size: 242px;
 }
+/* 개별박스 오버시 위치이동 */
+.r7:hover .mu{
+    top: -532px;
+    left: 211px;
+}
 
 /* 8. 수아 */
 .r8{
@@ -246,6 +277,11 @@ body::before {
     background-image: url(../images/01sua.png);    
     background-position: -37px 6px;
     background-size: 209px;
+}
+/* 개별박스 오버시 위치이동 */
+.r8:hover .mu{
+    top: -301px;
+    left: 349px;
 }
 
 /* 9. 트루디 */
@@ -259,6 +295,11 @@ body::before {
     background-position: -39px -52px;
     background-size: 210px;
 }
+/* 개별박스 오버시 위치이동 */
+.r9:hover .mu{
+    top: -59px;
+    left: 349px;
+}
 
 /* 10. 트루디 */
 .r10{
@@ -270,4 +311,9 @@ body::before {
     background-image: url(../images/01yubin.png);
     background-position: -85px 5px;
     background-size: 279px;
+}
+/* 개별박스 오버시 위치이동 */
+.r10:hover .mu{
+    top: 161px;
+    left: 211px;
 }
