@@ -169,3 +169,27 @@ body::before {
     background-image: url(../images/01heize.png);
     background-position: -24px -10px;
 }
+
+/* 4. 효린 */
+.r4{
+    /* 랩퍼개별위치값 */
+    top: 531px;
+    right: 21px;
+}
+.r4 .mu{
+    background-image: url(../images/01hyorin.png);
+    background-position: -23px -4px;
+    background-size: 222px;
+}
+
+/* 5. 전지윤 */
+.r5{
+    /* 랩퍼개별위치값 */
+    bottom: 68px;
+    right: 162px;
+}
+.r5 .mu{
+    background-image: url(../images/01jenyer.png);
+    background-position: -71px -1px;
+    background-size: 251px;
+}
