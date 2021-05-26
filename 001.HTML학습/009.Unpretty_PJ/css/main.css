@@ -206,6 +206,22 @@ body::before {
     top: 212px;
     left: -46px;
 }
+.r1::before{
+    content: "애쉬비\a뮤비보기";
+    white-space: pre;
+    
+    display: block;
+    padding-top: 40px;
+    padding-right: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: .4s .3s;
+}
+.r1:hover::before{
+    opacity: 1;
+}
 
 /* 2. 엑시 */
 .r2{
