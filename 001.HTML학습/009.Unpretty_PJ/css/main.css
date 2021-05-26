@@ -117,6 +117,11 @@ body::before {
     background-repeat: no-repeat;
     background-position: center 150px;/* x축으로 밀어서 아랫쪽 숨김 */
     background-size: 160px;
+
+    cursor: pointer;/* 손가락모양 */
+
+    /* 트랜지션: 속시이지 */
+    transition: all .4s ease-out;
 }
 /* 뮤지션 공통 */
 .mu{
@@ -139,6 +144,11 @@ body::before {
     /* 트랜지션: 속시이지 */
     transition: all .4s ease-out;
 
+}
+
+/* .rapper박스에 오버시 배경위치변경(공통) */
+.rapper:hover{
+    background-position: center 5px;
 }
 
 /* .rapper박스에 오버시 
