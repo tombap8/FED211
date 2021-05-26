@@ -193,3 +193,15 @@ body::before {
     background-position: -71px -1px;
     background-size: 251px;
 }
+
+/* 6. 캐스퍼 */
+.r6{
+    /* 랩퍼개별위치값 */
+    bottom: 18px;
+    left: 416px;
+}
+.r6 .mu{
+    background-image: url(../images/01kasper.png);
+    background-position: -71px -1px;
+    background-size: 251px;
+}
