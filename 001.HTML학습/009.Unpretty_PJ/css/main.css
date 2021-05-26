@@ -147,8 +147,8 @@ body::before {
     width: 239px;
     height: 520px;
     border-radius: 10px;
-    background-position: center 19px;
-    background-size: 189px;
+    background-position: center 18px;
+    background-size: auto 90%;
 }
 
 /* 1. 애쉬비 */
