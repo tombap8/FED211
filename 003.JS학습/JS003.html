@@ -46,12 +46,12 @@
             ////////////////////////////////////////////////////
 
             /////// 빈값여부 검사 ////////////
-            if(score.trim() == ""){
+            if (score.trim() == "") {
                 // trim()메서드 - 앞뒤공백제거
                 alert("값을 입력해주세요!");
-                jumsu.value = "";//초기화
-                jumsu.focus();//포커스
-                return false;//여기서 돌아가!
+                jumsu.value = ""; //초기화
+                jumsu.focus(); //포커스
+                return false; //여기서 돌아가!
             } ///// if문 ///////////////////
 
 
@@ -65,19 +65,19 @@
             // 결과로 true/false를 리턴
             // 숫자아니면 true가 나옴!
 
-            if(isNaN(score)){ //숫자가 아니면 들어감!
+            if (isNaN(score)) { //숫자가 아니면 들어감!
 
                 // 1. 메시지 출력
                 alert("숫자를 입력해 주세요!");
 
                 // 2. 점수 input요소 값지우기
-                jumsu.value = "";//이퀄 오른쪽값이 할당됨!
+                jumsu.value = ""; //이퀄 오른쪽값이 할당됨!
                 // value는 값을 읽어기도 하고 설정하기도 함
 
                 // 3. 점수 input요소에 포커스넣기(입력대기상태)
                 jumsu.focus();
                 // focus() - 선택요소에 포커스를 주는 JS내장함수
-                
+
                 // 4. 함수 빠져나가기!
                 return false;
                 // return 키워드를 만나는 순간 코드는 함수를 빠져나감
@@ -89,13 +89,13 @@
             /////////// 입력값 검사2 ///////////////////////
             ///////////////////////////////////////////////
             // 입력된 숫자값이 0미만 또는 100초과일때 걸러냄!
-            else if(score < 0 || score > 100){
+            else if (score < 0 || score > 100) {
 
                 // 1. 메시지출력
                 alert("0과 100사이의 범위의 수를 입력하세요!");
 
                 // 2. 점수 input요소 값지우기
-                jumsu.value = "";//이퀄 오른쪽값이 할당됨!
+                jumsu.value = ""; //이퀄 오른쪽값이 할당됨!
                 // value는 값을 읽어기도 하고 설정하기도 함
 
                 // 3. 점수 input요소에 포커스넣기(입력대기상태)
@@ -148,7 +148,7 @@
             // 화면출력
             // 대상: #jexp
             var jexp = document.getElementById("jexp");
-                
+
             // 글자넣기
             jexp.innerText = "평가결과는 " + res;
             // 글자색변경하기
@@ -156,7 +156,7 @@
 
             // 칭찬스티커박스 배경위치값 변경하기
             document.getElementById("jshow")
-            .style.backgroundPosition = bgp;
+                .style.backgroundPosition = bgp;
 
 
             /* 
@@ -209,53 +209,88 @@
         /*//////////////////////////////////////////////
             함수명: local
             기능: 지역명을 입력하면 지역국번을 안내한다
-        *///////////////////////////////////////////////
-        function local(){
+        */ //////////////////////////////////////////////
+        function local() {
             // 1.함수호출여부확인!
             console.log("국번안내서비스!");
 
             // 2.읽어올 대상 : #local의 값(value)
             var local = document.getElementById("local").value;
-            console.log("입력된 지역명 : "+local);
+            console.log("입력된 지역명 : " + local);
 
             // 3.지역명을 switch case문으로 분류하여 메시지 넣기
 
             //메시지 변수
             var msg;
 
-            switch(local){
-                case "서울" : msg = "02"; break;
-                case "경기" : msg = "031"; break;
-                case "인천" : msg = "032"; break;
-                case "부산" : msg = "051"; break;
-                case "대구" : msg = "053"; break;
-                case "광주" : msg = "062"; break;
-                case "전북" : msg = "063"; break;
-                case "전남" : msg = "061"; break;
-                case "경북" : msg = "054"; break;
-                case "경남" : msg = "055"; break;
-                case "세종" : msg = "044"; break;
-                case "울산" : msg = "052"; break;
-                case "대전" : msg = "042"; break;
-                case "강원" : msg = "033"; break;
-                case "충북" : msg = "043"; break;
-                case "충남" : msg = "041"; break;
-                case "제주" : msg = "064"; break;
-                default: msg = "esc";//해당지역이 없는경우
-            }/* switch case문 */
+            switch (local) {
+                case "서울":
+                    msg = "02";
+                    break;
+                case "경기":
+                    msg = "031";
+                    break;
+                case "인천":
+                    msg = "032";
+                    break;
+                case "부산":
+                    msg = "051";
+                    break;
+                case "대구":
+                    msg = "053";
+                    break;
+                case "광주":
+                    msg = "062";
+                    break;
+                case "전북":
+                    msg = "063";
+                    break;
+                case "전남":
+                    msg = "061";
+                    break;
+                case "경북":
+                    msg = "054";
+                    break;
+                case "경남":
+                    msg = "055";
+                    break;
+                case "세종":
+                    msg = "044";
+                    break;
+                case "울산":
+                    msg = "052";
+                    break;
+                case "대전":
+                    msg = "042";
+                    break;
+                case "강원":
+                    msg = "033";
+                    break;
+                case "충북":
+                    msg = "043";
+                    break;
+                case "충남":
+                    msg = "041";
+                    break;
+                case "제주":
+                    msg = "064";
+                    break;
+                default:
+                    msg = "esc"; //해당지역이 없는경우
+            } /* switch case문 */
 
             // 4. 메시지 만들기
             // msg 변수에 최종 출력내용을 다시 담어서 변경함
-            if(msg==="esc"){
+            if (msg === "esc") {
                 msg = "등록되지 않은 지역입니다!";
             } ///// if ///////
-            else{ /// 등록된 지역
-                msg = local + "의 지역번호는 "+ msg + "입니다.";
+            else { /// 등록된 지역
+                msg = local + "의 지역번호는 " + msg + "입니다.";
             } //// else ////////
 
 
             // 분류된 메시지 확인
-            console.log("메시지: "+msg);
+            console.log("메시지: " + msg);
 
             // 5.화면출력
             // 대상: #info
@@ -297,8 +332,8 @@
             기능: 선택박스에서 선택된 구구단을 출력함
             연결이벤트: change
                 - 선택박스(select)가 변경될때 발생하는 이벤트
-        *////////////////////////////////////////////////////
-        function gugu(obj){ 
+        */ ///////////////////////////////////////////////////
+        function gugu(obj) { // obj는 내가 지은 변수명임!
             // obj - select요소 자신을 보낸 this를 받아줌
             // 함수명 뒤의 소괄호()안에 쓴 변수는 외부에서
             // 함수를 호출할때 보낸 값을 담아 함수 내부로
@@ -306,7 +341,7 @@
             // 이것을 파라미터(parameter)변수 또는 전달변수라고 한다!
 
             // 1. 함수호출여부확인
-            console.log("구구단!!!"+obj.value);
+            console.log("구구단!!!" + obj.value);
 
             // 2. 선택값 읽어오기
             var opt = obj.value;
@@ -315,22 +350,45 @@
             // 즉, option요소의 value값을 읽어옴
 
             // 3. 구구단 만들기
-            var res = "<h2>"+opt+"단</h2>";
+            var res = "<h2>" + opt + "단</h2>";
+
+            // for문으로 반복문 만들기
+            /* 
+                [ for문 ]
+                - 어떤 실행문을 순서대로 여러번 반복 실행할 경우
+                사용하는 제어문
+                - 구문구조
+                for(시;한;증){실행코드}
+                - 시 -> 시작값 (변수선언과 함께 숫자를 할당)
+                - 한 -> 한계값 (숫자의 조건문을 사용)
+                - 증 -> 증감 (1씩증가 ++ / 1씩감소 --)
+
+                [ for문의 진행순서 ]
+                1. 먼저 시작값을 변수에 선언 후 할당하여 시작함
+                2. 중앙에 있는 한계값 조건에 맞는지 검사함
+                3. 맞으면(true이면) for문 중괄호{} 안의 코드실행함
+                4. 중괄호{} 안의 코드실행후 세번째 증감으로 올라감
+                    ++ / -- 로 1씩 증감함
+                5. 중앙에 있는 한계값 조건에 맞는지 검사함
+                6. 조건에 맞는 동안 중괄호 안의 코드를 반복실행함
+                7. 중앙의 한계값 조건에 맞지않으면(false이면) for문을 빠져나옴!
+            */
+            for (var i = 1; i <= 9; i++) {
+                res += opt + " × " + i + " ＝ " + (opt * i) + "<br>";
+
+            } //////// for문 /////////////
+            // += 은 기존값에 더하는 대입연산자임!
 
             // 4. 화면출력 : .gugu에 출력함!
             document.getElementsByClassName("gugu").item(0)
-            .innerHTML = res;
+                .innerHTML = res;
 
         } ///////// gugu 함수 ///////////////////////////////
         /////////////////////////////////////////////////////
-
-
-
-
     </script>
     <style>
         /* 칭찬스티커박스 */
-        #jshow{
+        #jshow {
             position: absolute;
             top: -13px;
             left: 108px;
@@ -338,13 +396,15 @@
             height: 322px;
             transform: scale(.3);
             background: url(./images/ifshow.jpg) no-repeat;
-            background-position: 322px 0;/* 처음에 안보임 */
+            background-position: 322px 0;
+            /* 처음에 안보임 */
 
             /* 트랜지션: 속시이지 */
             transition: all .4s ease-out;
         }
+
         /* IR(배경이미지설명박스 숨기기) */
-        #jshow span{
+        #jshow span {
             display: block;
             width: 0;
             height: 0;
@@ -352,7 +412,7 @@
         }
 
         /* 구구단 출력박스 */
-        .gugu{
+        .gugu {
             width: 300px;
             height: 300px;
             overflow-y: scroll;
@@ -360,8 +420,6 @@
             border: 2px dashed blue;
             text-align: center;
         }
-
-
     </style>
 </head>
 
@@ -400,14 +458,14 @@
             (클릭시 해당요소로 포커스이동)
      -->
 
-     <hr>
+    <hr>
 
-     <!-- switch case문 연습 -->
-     <h2>switch case문 연습</h2>
-     <h3 id="info">국번안내</h3>
-     <label for="local">지역명입력:</label>
-     <input type="text" id="local" placeholder="지역명에 '도'를 빼고 쓰세요!" onkeypress="if(event.keyCode===13)local()">
-     <!-- placeholder는 입력양식의 미리보기설명 
+    <!-- switch case문 연습 -->
+    <h2>switch case문 연습</h2>
+    <h3 id="info">국번안내</h3>
+    <label for="local">지역명입력:</label>
+    <input type="text" id="local" placeholder="지역명에 '도'를 빼고 쓰세요!" onkeypress="if(event.keyCode===13)local()">
+    <!-- placeholder는 입력양식의 미리보기설명 
         속성이다(입력시 사라짐) -->
     <button class="sBtn" onclick="local()">국번문의</button>
 
