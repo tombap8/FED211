@@ -205,3 +205,51 @@ body::before {
     background-position: -46px -1px;
     background-size: 251px;
 }
+
+/* 7. 키디비 */
+.r7{
+    /* 랩퍼개별위치값 */
+    bottom: 68px;
+    left: 160px;
+}
+.r7 .mu{
+    background-image: url(../images/01kittib.png);
+    background-position: -29px -1px;
+    background-size: 242px;
+}
+
+/* 8. 수아 */
+.r8{
+    /* 랩퍼개별위치값 */
+    top: 531px;
+    left: 21px;
+}
+.r8 .mu{
+    background-image: url(../images/01sua.png);    
+    background-position: -37px 6px;
+    background-size: 209px;
+}
+
+/* 9. 트루디 */
+.r9{
+    /* 랩퍼개별위치값 */
+    top: 289px;
+    left: 21px;
+}
+.r9 .mu{
+    background-image: url(../images/01truedy.png);
+    background-position: -39px -52px;
+    background-size: 210px;
+}
+
+/* 10. 트루디 */
+.r10{
+    /* 랩퍼개별위치값 */
+    top: 69px;
+    left: 159px;
+}
+.r10 .mu{
+    background-image: url(../images/01yubin.png);
+    background-position: -85px 5px;
+    background-size: 279px;
+}
