@@ -136,6 +136,19 @@ body::before {
     background-repeat: no-repeat;
     background-size: 199px;
 
+    /* 트랜지션: 속시이지 */
+    transition: all .4s ease-out;
+
+}
+
+/* .rapper박스에 오버시 
+하위요소 .mu 디자인변경(공통) */
+.rapper:hover .mu{
+    width: 239px;
+    height: 520px;
+    border-radius: 10px;
+    background-position: center 19px;
+    background-size: 189px;
 }
 
 /* 1. 애쉬비 */
@@ -168,6 +181,11 @@ body::before {
 .r3 .mu{
     background-image: url(../images/01heize.png);
     background-position: -24px -10px;
+}
+/* 헤이즈에 오버시 위치이동 */
+.r3:hover .mu{
+    top: -59px;
+    left: -438px;
 }
 
 /* 4. 효린 */
