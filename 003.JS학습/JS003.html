@@ -298,10 +298,28 @@
             연결이벤트: change
                 - 선택박스(select)가 변경될때 발생하는 이벤트
         *////////////////////////////////////////////////////
-        function gugu(){
+        function gugu(obj){ 
+            // obj - select요소 자신을 보낸 this를 받아줌
+            // 함수명 뒤의 소괄호()안에 쓴 변수는 외부에서
+            // 함수를 호출할때 보낸 값을 담아 함수 내부로
+            // 전달하는 역할을 한다!
+            // 이것을 파라미터(parameter)변수 또는 전달변수라고 한다!
 
             // 1. 함수호출여부확인
-            console.log("구구단!!!");
+            console.log("구구단!!!"+obj.value);
+
+            // 2. 선택값 읽어오기
+            var opt = obj.value;
+            // value는 obj변수로 받은 
+            // select요소의 선택된 값 
+            // 즉, option요소의 value값을 읽어옴
+
+            // 3. 구구단 만들기
+            var res = "<h2>"+opt+"단</h2>";
+
+            // 4. 화면출력 : .gugu에 출력함!
+            document.getElementsByClassName("gugu").item(0)
+            .innerHTML = res;
 
         } ///////// gugu 함수 ///////////////////////////////
         /////////////////////////////////////////////////////
@@ -396,7 +414,8 @@
     <!-- for문 연습 -->
     <h2>for문 연습</h2>
     <h3>구구단 출력하기</h3>
-    <select name="sel" id="sel">
+    <select name="sel" id="sel" onchange="gugu(this)">
+        <!-- gugu(this) : this 키워드는 select요소 자기자신임! -->
         <option value="1">구구단을 선택하세요!</option>
         <option value="2">2단</option>
         <option value="3">3단</option>
