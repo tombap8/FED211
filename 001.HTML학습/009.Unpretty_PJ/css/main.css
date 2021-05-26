@@ -134,6 +134,7 @@ body::before {
     /* 배경셋팅 */
     background-color: #000;
     background-repeat: no-repeat;
+    background-size: 199px;
 
 }
 
@@ -145,7 +146,6 @@ body::before {
 }
 .r1 .mu{
     background-image: url(../images/01ash-b.png);
-    background-size: 200px;
     background-position: -31px 15px;
 }
 /* 2. 엑시 */
@@ -156,6 +156,16 @@ body::before {
 }
 .r2 .mu{
     background-image: url(../images/01EXY.png);
-    background-size: 200px;
     background-position: -30px 20px;
+}
+
+/* 3. 헤이즈 */
+.r3{
+    /* 랩퍼개별위치값 */
+    top: 289px;
+    right: 21px;
+}
+.r3 .mu{
+    background-image: url(../images/01heize.png);
+    background-position: -24px -10px;
 }
