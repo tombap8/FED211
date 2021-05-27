@@ -159,6 +159,13 @@ body::before {
     margin-left: 11px;
 }
 
+/* 2.할인배너박스 */
+.halban{
+    width: 116px;
+    height: 356px;
+    margin: 0 auto;/* 마영오! */
+    outline: 2px dotted blue;
+}
 
 
 
