@@ -199,6 +199,34 @@ body::before {
     border-color: red;
 }
 
+/* 3.이동버튼박스 */
+.halbtn{
+    text-align: center;
+}
+/* 각 이동버튼 박스 */
+.halbtn a{
+    display: inline-block;
+    /* 한줄에 오면서 크기 디자인적용! */
+    width: 21px;
+    height: 11px;
+    vertical-align: 10px;
+    /* 인라인요소간 세로위치정렬 */
+    /* outline: 1px solid red; */
+}
+/* 마우스 오버시 버튼 배경이동하기(공통) */
+.halban a:hover{
+    background-position: 0 -11px;
+}
+
+/* 위로버튼 */
+.upb{
+    background: url(../images/btn_up.png) no-repeat;
+}
+/* 아래로버튼 */
+.dwb{
+    background: url(../images/btn_down.png) no-repeat;
+}
+
 
 
 
