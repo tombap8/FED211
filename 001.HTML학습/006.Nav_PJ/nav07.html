@@ -65,6 +65,31 @@
                 background-image: 
                     linear-gradient(각도, 색1,색2,색3,...);
                 - 각도: 각도수치deg
+
+                2. 원형 그라데이션
+
+                1) 기본형: 중앙중심, 모양은 박스크기에 맞춤
+                background-image: 
+                    radial-gradient(색1,색2,색3,...);
+                - 시작색으로부터 중앙에서 시작됨
+
+                2) 영역 지정형:
+                background-image: 
+                    radial-gradient(색1 몇%,색2 몇%,색3 몇%,...);
+                - 색 뒤에 한칸 띄고 %수치로 영역지정함
+
+                3) 그라데이션 모양을 원형으로 사용할 경우:
+                background-image: 
+                    radial-gradient(circle,색1,색2,색3,...);
+                - circle 키워드를 첫번째에 사용함
+
+                4) 영역옵션 지정형: 중심점 변경
+                background-image: 
+                    radial-gradient(옵션 at 가로위치 세로위치,색1,색2,색3,...);
+                - 옵션4가지 : closest-side / farthest-side
+                            closest-corner / farthest-corner
+                - 가로위치, 세로위치 (중심점) - 단위는 px / %
+
              */
 
         }
