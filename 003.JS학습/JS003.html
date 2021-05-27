@@ -398,7 +398,15 @@
             var opt = obj.value;//선택값읽어오기
 
             // 1. 함수호출확인!
-            console.log("와일이뭐야?"+opt)
+            console.log("와일이뭐야?"+opt);
+
+            // 2. 구구단만들기
+            var res = "<h2>"+opt+"단</h2>";
+
+            // 3. 화면출력하기 : 대상 .gugu 두번째 있는 클래스
+            // item(1)은 0부터 시작하니까 두번째다!
+            document.getElementsByClassName("gugu").item(1)
+            .innerHTML = res;
 
         } ////// gugu2 함수 /////////////////////////////////
         /////////////////////////////////////////////////////
