@@ -31,6 +31,14 @@
             float: left;
             width: 150px;
             height: 40px;
+            box-sizing: border-box;
+            /* 보더,패딩 내부포함(크기유지) */
+        }
+        /* li사이에 구분선 넣기 */
+        /* li+li 는 앞에 li가 있는 형제 li를 선택하므로 
+        첫번째li는 제외된다! */
+        .gnb li+li{
+            border-left: 1px solid #777;
         }
 
         .gnb a {
@@ -56,6 +64,18 @@
             background-image: linear-gradient(to bottom, #6d6d6d, #d6d6d6);
         }
 
+        /* 둥근모서리 설정 첫번째 li의 a */
+        .gnb li:first-child a{
+            border-radius: 5px 0 0 5px;/* 왼위, 왼아래 5px */
+            /* 보더 레디우스 왼쪽위부터 시계방향으로 설정! */
+        }
+
+        /* 둥근모서리 설정 마지막째 li의 a */
+        .gnb li:last-child a{
+            border-radius: 0 5px 5px 0;/* 오른위, 오른아래 5px */
+            /* 보더 레디우스 왼쪽위부터 시계방향으로 설정! */
+        }
+
         /* 메뉴 li에 마우스 오버시 글자색, 배경색, 글자그림자 변경 */
         .gnb li:hover a{
             background-image: linear-gradient(to top, #6d6d6d, #d6d6d6);
@@ -66,6 +86,7 @@
         .tit {
             background-image: linear-gradient(45deg, red, green 30%, yellow 40%, yellow 80%, blue);
             padding: 10px;
+            text-align: center;
         }
 
         /* 원형그라데이션 연습 */
