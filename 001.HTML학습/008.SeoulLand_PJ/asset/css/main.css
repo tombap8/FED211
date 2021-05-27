@@ -202,6 +202,7 @@ body::before {
 /* 3.이동버튼박스 */
 .halbtn{
     text-align: center;
+    padding-left: 1px;
 }
 /* 각 이동버튼 박스 */
 .halbtn a{
@@ -209,7 +210,7 @@ body::before {
     /* 한줄에 오면서 크기 디자인적용! */
     width: 21px;
     height: 11px;
-    vertical-align: 10px;
+    vertical-align: 14px;
     /* 인라인요소간 세로위치정렬 */
     /* outline: 1px solid red; */
 }
