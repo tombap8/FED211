@@ -214,7 +214,7 @@ body::before {
     /* outline: 1px solid red; */
 }
 /* 마우스 오버시 버튼 배경이동하기(공통) */
-.halban a:hover{
+.halbtn a:hover{
     background-position: 0 -11px;
 }
 
