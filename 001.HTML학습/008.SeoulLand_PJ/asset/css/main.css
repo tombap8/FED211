@@ -24,8 +24,8 @@ body::before {
     bottom: 0;
     right: 0;
     /* 부모는? body -> 부모요소에 꽉차는 크기 */
-    /* background: url(../images/SeoulLand_main.jpg) no-repeat center top; */
-    background: url(../images/SeoulLand_main_over.jpg) no-repeat center top;
+    background: url(../images/SeoulLand_main.jpg) no-repeat center top;
+    /* background: url(../images/SeoulLand_main_over.jpg) no-repeat center top; */
     /* 배경이미지는 오버시 이미지도 미리셋팅한다 */
     z-index: -1;
     /* z-index: 9999; */
@@ -42,7 +42,7 @@ body::before {
 
 /* 높이값을 파티션박스에 설정! */
 .ban>.pbx {
-    height: 415px;
+    height: 419px;
 }
 
 /* 배너 슬라이드 */
@@ -129,7 +129,30 @@ body::before {
     z-index: 1;
 }
 
-/* 컨텐츠 영역 */
+/* 사이드 배너 박스 */
+.sideBan{
+    position: relative;
+    z-index: 1;
+    width: 136px;
+    height: 410px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* 1.타이틀 */
+.tit{
+    font-family: ng;
+    color: #222;
+}
+/* 타이틀 뒷글자 */
+.tit b{
+    color: #ff4e00;
+}
+
+
+
+
+
+/*********** 컨텐츠 영역 ***************/
 .cont {
     /* height: 256px; */
 }
