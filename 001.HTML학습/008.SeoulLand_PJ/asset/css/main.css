@@ -172,6 +172,8 @@ body::before {
 
 /* 할인배너 ul */
 .halban ul{
+    position: relative;
+    top: 0;/* 배너이동하기 위한 설정! */
     height: 100%;
     /* .halban의 높이만큼 꽉채움 */
 }
