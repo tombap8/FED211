@@ -163,8 +163,8 @@ body::before {
 .halban{
     width: 116px;
     height: 356px;
-    margin: 0 auto;/* 마영오! */
-    margin-top: 11px;
+    margin-left: 14px;
+    margin-top: 10px;
     overflow: hidden;
     /* 넘치는 배너요소 숨기기 */
     /* outline: 2px dotted blue; */
