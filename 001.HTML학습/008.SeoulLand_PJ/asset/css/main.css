@@ -192,6 +192,10 @@ body::before {
     border: 1px solid #d7d7d7;
     box-sizing: border-box;
 }
+/* 할인배너 첫번째 이미지 보더 빨간색 */
+.halban li:first-child img{
+    border-color: red;
+}
 
 
 
