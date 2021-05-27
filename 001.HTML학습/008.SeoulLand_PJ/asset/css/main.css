@@ -167,6 +167,24 @@ body::before {
     outline: 2px dotted blue;
 }
 
+/* 할인배너 ul */
+.halban ul{
+    height: 100%;
+    /* .halban의 높이만큼 꽉채움 */
+}
+
+/* 할인배너 각 li공통 */
+.halban li{
+    height: 25%;
+    /* ul 크기의 1/4만큼 높이값 설정 */
+    outline: 2px dashed red;
+}
+
+/* 할인배너 이미지 크기맞춤 */
+.halban li img{
+    width: 100%;
+}
+
 
 
 
