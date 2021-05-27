@@ -47,14 +47,45 @@
             /* 예전에 그라데이션은 무조건 이미지로 제작했음
             CSS3버전에서 부터 코딩으로 가능해짐! 
             그라데이션은 배경이미지에 있음!!!*/
-            background-image: linear-gradient(to bottom, red,blue);
+            background-image: linear-gradient(to bottom, #6d6d6d,#d6d6d6);
+            /* 
+                1. 선형그라데이션
 
+                1) 균등분할 그라데이션
+                background-image: 
+                    linear-gradient(방향, 색1,색2,색3,...);
+                - 방향: to top, to bottom, to right, to left
 
+                2) 사용자 지정영역 그라데이션
+                background-image: 
+                    linear-gradient(방향, 색1 몇%,색2 몇%,색3 몇%,...);
+                - 색상 뒤에 한칸 띄어 %수치를 주면 색상영역조정됨
+
+                3) 각도 지정 그라데이션
+                background-image: 
+                    linear-gradient(각도, 색1,색2,색3,...);
+                - 각도: 각도수치deg
+             */
+
+        }
+        .tit{
+            background-image: linear-gradient(45deg, red, green 30%, yellow 40%, yellow 80%, blue);
+            padding: 10px;
+        }
+        /* 원형그라데이션 연습 */
+        .circ{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            vertical-align: -12px;
+            /* 인라인요소간 세로정렬(옆으로 흐르는 방향) */
         }
     </style>
 </head>
 <body>
-    <h1>유형7 : 가로네비 서브없는 디자인형</h1>
+    <h1 class="tit"><span class="circ"></span> 유형7 : 가로네비 서브없는 디자인형</h1>
     <nav class="gnb">
         <ul>
             <li><a href="#">HOME</a></li>
