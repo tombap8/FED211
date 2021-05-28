@@ -104,6 +104,31 @@
             }
         }/* 키프레임 */
 
+        /* 달 */
+        #moon{
+            position: absolute;
+            top: calc(50% - 20px);
+            left: calc(50% - 20px);
+            /* calc(값 - 값) 마이너스기호 앞뒤공백 중요!!! */
+            /* 부모는? #solar */
+            width: 40px;
+            height: 40px;
+            background: url(./images/moon.png) no-repeat 0/100% 100%;
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: moon 6s linear infinite;
+        }
+
+        /* 달회전 키프레임 */
+        @keyframes moon {
+            from{
+                transform: rotate(0deg) translateX(80px) rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg) translateX(80px) rotate(-360deg);
+            }
+        }/* 키프레임 */
+
         /* 목성 */
         #jupiter{
             position: absolute;
