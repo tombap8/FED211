@@ -19,6 +19,14 @@
             overflow: hidden;/* 스크롤바없앰 */
         }
 
+        /* 공통 class */
+        .ir{/* 배경이미지 설명숨기기 */
+            display: block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
         /* 타이틀 */
         .tit{
             margin: 0;
@@ -70,6 +78,41 @@
                 transform: scale(1.5);
             }
         }/* 키프레임 */
+
+        /* 지구 */
+        #earth{
+            position: absolute;
+            top: calc(50% - 40px);
+            left: calc(50% - 40px);
+            /* calc(값 - 값) 마이너스기호 앞뒤공백 중요!!! */
+            /* 부모는? #solar */
+            width: 80px;
+            height: 80px;
+            background: url(./images/earth.png) no-repeat 0/100% 100%;
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: earth 20s linear infinite;
+        }
+
+        /* 지구회전 키프레임 */
+        @keyframes earth {
+            from{
+                transform: rotate(0deg) translateX(-250px);
+            }
+            to{
+                transform: rotate(360deg) translateX(-250px);
+            }
+        }/* 키프레임 */
+
+        /* 
+            [ 원궤도 회전의 원리 ]
+            - 중앙에서 rotate하는 요소에 translate로 위치이동을
+            하면 중앙에서 회전하던 요소가 옆으로 이동하여 중앙중심의
+            원궤도 회전을 하게된다!
+
+         */
+
+
     </style>
 </head>
 <body>
