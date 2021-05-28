@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃 미디어쿼리1</title>
     <style>
-        html,body{
+        html,
+        body {
             margin: 0;
             padding: 0;
         }
+
         /* 공통class */
-        .ibx{/* 속박스 */
+        .ibx {
+            /* 속박스 */
             width: 1200px;
+            max-width: 100%;
+            /* 최대가로크기 100%의 의미는? width크기보다 작아지면
+            최대 100%를 유지하여 가로 스크롤이 안생김!! */
             margin: 0 auto;
             outline: 4px dashed red;
         }
-        .ibx::after{/* float해제 */
+
+        .ibx::after {
+            /* float해제 */
             content: '';
             display: block;
             clear: both;
         }
-        .pbx{/* 파티션박스 */
+
+        .pbx {
+            /* 파티션박스 */
             float: left;
             outline: 3px dotted lime;
         }
@@ -28,53 +39,106 @@
         /* 개별 디자인 */
 
         /* 1. 상단영역 */
-        .top>.pbx{
-            width: 33.33%;/* 3등분 */
+        .top>.pbx {
+            width: 33.33%;
+            /* 3등분 */
             height: 120px;
         }
-        .top1{
+
+        .top1 {
             background: url(./images/jeong1.jpg) no-repeat top/cover;
         }
-        .top2{
+
+        .top2 {
             background: url(./images/jeong2.jpg) no-repeat top/cover;
         }
-        .top3{
+
+        .top3 {
             background: url(./images/jeong3.jpg) no-repeat top/cover;
         }
 
         /* 2. 중앙영역 */
-        .cont>.pbx{
-            width: 25%;/* 4등분 */
+        .cont>.pbx {
+            width: 25%;
+            /* 4등분 */
             height: 300px;
         }
-        .cont1{
+
+        .cont1 {
             background: url(./images/jeong4.jpg) no-repeat top/cover;
         }
-        .cont2{
+
+        .cont2 {
             background: url(./images/jeong5.jpg) no-repeat top/cover;
         }
-        .cont3{
+
+        .cont3 {
             background: url(./images/jeong6.jpg) no-repeat top/cover;
         }
-        .cont4{
+
+        .cont4 {
             background: url(./images/jeong7.jpg) no-repeat top/cover;
         }
 
         /* 3. 하단영역 */
-        .info>.pbx{
-            width: 50%;/* 2등분 */
+        .info>.pbx {
+            width: 50%;
+            /* 2등분 */
             height: 200px;
         }
-        .info1{
+
+        .info1 {
             background: url(./images/jeong8.jpg) no-repeat top/cover;
         }
-        .info2{
+
+        .info2 {
             background: url(./images/jeong9.jpg) no-repeat top/cover;
         }
 
+        /* 크기별 미디어쿼리 */
 
+        /* 1024px 이하 */
+        @media only screen and (max-width:1024px) {
+
+            /* 1. 상단영역 */
+            /* 레이아웃 구성: 2개+1개 */
+            .top>.pbx {
+                /* 전체 */
+                width: 50%;
+                height: 180px;
+            }
+
+            /* 적용우선순위때문에 상위 부모요소부터 선택한다!!! */
+            .top>.top3 {
+                /* 세번째 파티션 */
+                width: 100%;
+                height: 250px;
+            }
+
+            /* 2. 중앙영역 */
+            /* 레이아웃 구성: 3개+1개 */
+            .cont>.pbx {
+                width: 25%;
+                /* 4등분 */
+                height: 300px;
+            }
+
+        }
+
+        /* 1024px 이하 */
+
+        /* 800px 이하 */
+        @media only screen and (max-width:800px) {}
+
+        /* 800px 이하 */
+
+        /* 500px 이하 */
+        @media only screen and (max-width:500px) {}
+
+        /* 500px 이하 */
     </style>
 </head>
+
 <body>
     <!-- 1. 상단영역 -->
     <div>
@@ -100,6 +164,7 @@
             <div class="pbx info2"></div>
         </footer>
     </div>
-    
+
 </body>
+
 </html>
