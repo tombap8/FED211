@@ -107,8 +107,8 @@
         /* 목성 */
         #jupiter{
             position: absolute;
-            top: calc(50% - 40px);
-            left: calc(50% - 40px);
+            top: calc(50% - 75px);
+            left: calc(50% - 75px);
             /* calc(값 - 값) 마이너스기호 앞뒤공백 중요!!! */
             /* 부모는? #solar */
             width: 150px;
@@ -126,6 +126,57 @@
             }
             to{
                 transform: rotate(360deg) translateY(400px) rotate(-360deg);
+            }
+        }/* 키프레임 */
+
+        /* 토성 */
+        #saturn{
+            position: absolute;
+            top: calc(50% - 75px);
+            left: calc(50% - 75px);
+            /* calc(값 - 값) 마이너스기호 앞뒤공백 중요!!! */
+            /* 부모는? #solar */
+            width: 150px;
+            height: 150px;
+            background: url(./images/saturn.png) no-repeat 0/100% 60%;
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: saturn 40s linear infinite;
+        }
+
+        /* 토성회전 키프레임 */
+        @keyframes saturn {
+            from{
+                transform: rotate(0deg) translateY(-450px) rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg) translateY(-450px) rotate(-360deg);
+            }
+        }/* 키프레임 */
+
+        
+        /* 명왕성 */
+        #pluto{
+            position: absolute;
+            top: calc(50% - 25px);
+            left: calc(50% - 25px);
+            /* calc(값 - 값) 마이너스기호 앞뒤공백 중요!!! */
+            /* 부모는? #solar */
+            width: 50px;
+            height: 50px;
+            background: url(./images/pluto.png) no-repeat 0/100% 100%;
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: pluto 40s linear infinite;
+        }
+
+        /* 명왕성회전 키프레임 */
+        @keyframes pluto {
+            from{
+                transform: rotate(0deg) translateX(650px) rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg) translateX(650px) rotate(-360deg);
             }
         }/* 키프레임 */
 
@@ -162,6 +213,14 @@
         <!-- 목성 -->
         <div id="jupiter">
             <span class="ir">목성</span>
+        </div>
+        <!-- 토성 -->
+        <div id="saturn">
+            <span class="ir">토성</span>
+        </div>
+        <!-- 명왕성 -->
+        <div id="pluto">
+            <span class="ir">명왕성</span>
         </div>
 
     </div><!-- #solar -->
