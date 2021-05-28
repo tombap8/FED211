@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,23 @@
         /* 웹폰트 */
         @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@900&display=swap');
 
-        html,body{
+        html,
+        body {
             margin: 0;
             padding: 0;
             width: 100vw;
             height: 100vh;
         }
-        body{
+
+        body {
             background: url(./images/space.jpg) no-repeat center/cover;
-            overflow: hidden;/* 스크롤바없앰 */
+            overflow: hidden;
+            /* 스크롤바없앰 */
         }
 
         /* 공통 class */
-        .ir{/* 배경이미지 설명숨기기 */
+        .ir {
+            /* 배경이미지 설명숨기기 */
             display: block;
             width: 0;
             height: 0;
@@ -28,9 +33,10 @@
         }
 
         /* 타이틀 */
-        .tit{
+        .tit {
             position: relative;
-            z-index: 1;/* 행성들보다 위 */
+            z-index: 1;
+            /* 행성들보다 위 */
 
             margin: 0;
             padding: 0;
@@ -41,15 +47,18 @@
             text-align: center;
             padding-top: 20px;
         }
+
         /* 축소확대 버튼 */
-        .tit2{
+        .tit2 {
             font-size: 20px;
         }
-        .tit2 a{
+
+        .tit2 a {
             text-decoration: none;
             color: #fff;
             margin: 0 20px;
         }
+
         /* 마우스 오버시 또는 class="on"인 경우 */
         .tit2 a:hover,
         .tit2 a.on {
@@ -57,7 +66,7 @@
         }
 
         /* 태양계박스 */
-        #solar{
+        #solar {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -70,37 +79,44 @@
             /* 트랜지션: 속시이지 */
             transition: transform 2s ease-in-out;
         }
+
         /* 태양박스 */
-        #sun{
+        #sun {
             position: absolute;
             top: 0;
             left: 0;
             width: 250px;
             height: 250px;
-            border-radius: 50%;/* 원형 */
-            overflow: hidden;/* 원형바깥쪽 숨기기 */
+            border-radius: 50%;
+            /* 원형 */
+            overflow: hidden;
+            /* 원형바깥쪽 숨기기 */
             box-shadow: 0 0 60px 10px orange;
             /* box-shadow: 
             x축 y축 blur(경계선흐림) spread(그림자크기) 색 */
             /* outline: 3px dotted lime; */
         }
+
         /* 태양이미지 */
-        #sun img{
+        #sun img {
             width: 100%;
             height: 100%;
 
             /* 애니메이션: 이시이지반방마 */
             animation: flame 40s linear infinite alternate;
         }
+
         /* 태양이 이글거리는 키프레임 */
         @keyframes flame {
-            to{
+            to {
                 transform: scale(1.5);
             }
-        }/* 키프레임 */
+        }
+
+        /* 키프레임 */
 
         /* 지구 */
-        #earth{
+        #earth {
             position: absolute;
             top: calc(50% - 40px);
             left: calc(50% - 40px);
@@ -116,16 +132,19 @@
 
         /* 지구회전 키프레임 */
         @keyframes earth {
-            from{
+            from {
                 transform: rotate(0deg) translateX(-250px) rotate(0deg);
             }
-            to{
+
+            to {
                 transform: rotate(360deg) translateX(-250px) rotate(-360deg);
             }
-        }/* 키프레임 */
+        }
+
+        /* 키프레임 */
 
         /* 달 */
-        #moon{
+        #moon {
             position: absolute;
             top: calc(50% - 20px);
             left: calc(50% - 20px);
@@ -141,16 +160,19 @@
 
         /* 달회전 키프레임 */
         @keyframes moon {
-            from{
+            from {
                 transform: rotate(0deg) translateX(80px) rotate(0deg);
             }
-            to{
+
+            to {
                 transform: rotate(360deg) translateX(80px) rotate(-360deg);
             }
-        }/* 키프레임 */
+        }
+
+        /* 키프레임 */
 
         /* 목성 */
-        #jupiter{
+        #jupiter {
             position: absolute;
             top: calc(50% - 75px);
             left: calc(50% - 75px);
@@ -166,16 +188,19 @@
 
         /* 목성회전 키프레임 */
         @keyframes jupiter {
-            from{
+            from {
                 transform: rotate(0deg) translateY(400px) rotate(0deg);
             }
-            to{
+
+            to {
                 transform: rotate(360deg) translateY(400px) rotate(-360deg);
             }
-        }/* 키프레임 */
+        }
+
+        /* 키프레임 */
 
         /* 토성 */
-        #saturn{
+        #saturn {
             position: absolute;
             top: calc(50% - 75px);
             left: calc(50% - 75px);
@@ -191,17 +216,20 @@
 
         /* 토성회전 키프레임 */
         @keyframes saturn {
-            from{
+            from {
                 transform: rotate(0deg) translateY(-450px) rotate(0deg);
             }
-            to{
+
+            to {
                 transform: rotate(360deg) translateY(-450px) rotate(-360deg);
             }
-        }/* 키프레임 */
+        }
 
-        
+        /* 키프레임 */
+
+
         /* 명왕성 */
-        #pluto{
+        #pluto {
             position: absolute;
             top: calc(50% - 25px);
             left: calc(50% - 25px);
@@ -217,13 +245,16 @@
 
         /* 명왕성회전 키프레임 */
         @keyframes pluto {
-            from{
+            from {
                 transform: rotate(0deg) translateX(650px) rotate(0deg);
             }
-            to{
+
+            to {
                 transform: rotate(360deg) translateX(650px) rotate(-360deg);
             }
-        }/* 키프레임 */
+        }
+
+        /* 키프레임 */
 
         /* 
             [ 원궤도 회전의 원리 ]
@@ -237,60 +268,83 @@
             설정하면 정립상 회전이 가능하다!
 
          */
-
-
     </style>
 
     <script>
-
         /*/////////////////////////////////////////////////
             함수명: sView
             기능: Solar System 부모박스의 축소/확대를 
                 transform으로 변경한다
-        *//////////////////////////////////////////////////
-        function sView(val,obj){ 
+        */ /////////////////////////////////////////////////
+        function sView(val, obj) {
             // val - 축소확대값 받는 전달변수
             // obj - 클릭된 a요소 자신을 받는 전달변수
 
             // 1. 함수호출 확인
-            console.log("축소확대!"+val);
+            console.log("축소확대!" + val);
 
             // 2. 변경대상선정: #solar
             var tg = document.getElementById("solar");
 
             // 3. 변경내용 적용하기
-            // 3-1. css 트랜스폼 변경하기: scale()값으로 val변수 셋팅
-            tg.style.transform = 
-            "translate(-50%, -50%) scale("+val+")";
 
-            // a요소 클래스 모두 지우기
-            var link = document.querySelectorAll(".tit2 a");
-            // querySelectorAll은 css선택자로 요소를 가져오는 메서드
-            console.log("a요소개수:"+link.length);
-            // length는 선택요소의 개수를 가져옴
-            for(시;한;증){
+            // 3-1. css 트랜스폼 변경하기: 
+            //      scale()값으로 val변수 셋팅
+            tg.style.transform =
+                "translate(-50%, -50%) scale(" + val + ")";
 
+            // 3-2. a요소 클래스 모두 지우기
+            // haha변수는 a요소를 담는 저장소
+            var haha = // 1.변수에 할당한다
+                document // 2.전체문서를 불러온다
+                .getElementsByClassName("tit2") // 3. 클래스tit2를 불러온다
+                .item(0) // 4.클래스 tit2중 첫번째(0)를 불러온다
+                .getElementsByTagName("a"); // 5. 클래스tit2하위 a요소를 불러온다
+            // 1~5까지 진행하여 a요소들을 컬렉션 집합에 담는다!
+            // 이때 그 컬렉션 집합 주소는 haha변수명이다!!!
+
+            // a요소 개수변수
+            var getsu = haha.length;
+            // length는 다수의 집합의 개수를 구해올때 사용함
+
+            console.log("a요소개수:" + getsu);
+
+            // a의 개수만큼 돌면서 해당순서의 
+            // a요소의 class="on"을 지운다!
+            // haha변수에 담긴 a요소의 순번은 0부터이므로
+            // for문의 시작값은 var i=0 으로 설정한다!
+            // for문의 한계값은 변수i가 
+            //      a의 개수인 getsu변수의 값보다 작을때까지임 i<getsu
+            //      0부터 시작하므로 getsu값은 포함되지 않는다!
+            // for문의 증감은 1씩증가해야 하므로 i++
+            for (var i = 0; i < getsu; i++) {
+                haha.item(i)//a요소 중 해당순번의 a요소
+                // for문을 순서대로 돌면서
+                // haha.item(0)->haha.item(1)
+                // ->haha.item(2)->haha.item(3) 이렇게 선택함!
+                .classList.remove("on");
+                // 클래스 중 "on"이 있으면 지워라!
             } ////// for문 ///////////////////
 
-            // 3-2. 클릭된 a요소로 전달된 obj변수에 클래스"on"넣기
+            // 3-3. 클릭된 a요소로 전달된 obj변수에 클래스"on"넣기
             obj.classList.add("on");
             // classList는 선택요소의 클래스를 변경하는 객체
             // add(클래스명) 메서드는 선택요소에 클래스를 넣는 메서드
 
         } /////////// sView함수 ////////////////////////////
         ////////////////////////////////////////////////////
-
     </script>
 
 </head>
+
 <body>
     <!-- 타이틀 -->
     <h1 class="tit">Solar System</h1>
     <!-- 배율버튼 -->
     <h2 class="tit tit2">
-        <a href="#" onclick="sView(0.3,this)">X 0.3</a> | 
-        <a href="#" onclick="sView(0.5,this)">X 0.5</a> | 
-        <a href="#" class="on" onclick="sView(1,this)">X 1</a> | 
+        <a href="#" onclick="sView(0.3,this)">X 0.3</a> |
+        <a href="#" onclick="sView(0.5,this)">X 0.5</a> |
+        <a href="#" class="on" onclick="sView(1,this)">X 1</a> |
         <a href="#" onclick="sView(1.5,this)">X 1.5</a>
     </h2>
 
@@ -322,6 +376,7 @@
         </div>
 
     </div><!-- #solar -->
-    
+
 </body>
+
 </html>
