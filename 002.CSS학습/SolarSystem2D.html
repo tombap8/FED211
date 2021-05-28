@@ -50,8 +50,9 @@
             color: #fff;
             margin: 0 20px;
         }
-        /* 마우스 오버시 */
-        .tit2 a:hover{
+        /* 마우스 오버시 또는 class="on"인 경우 */
+        .tit2 a:hover,
+        .tit2 a.on {
             color: aqua;
         }
 
@@ -65,6 +66,9 @@
             /* 정중앙이동 */
             width: 250px;
             height: 250px;
+
+            /* 트랜지션: 속시이지 */
+            transition: transform 2s ease-in-out;
         }
         /* 태양박스 */
         #sun{
@@ -236,16 +240,58 @@
 
 
     </style>
+
+    <script>
+
+        /*/////////////////////////////////////////////////
+            함수명: sView
+            기능: Solar System 부모박스의 축소/확대를 
+                transform으로 변경한다
+        *//////////////////////////////////////////////////
+        function sView(val,obj){ 
+            // val - 축소확대값 받는 전달변수
+            // obj - 클릭된 a요소 자신을 받는 전달변수
+
+            // 1. 함수호출 확인
+            console.log("축소확대!"+val);
+
+            // 2. 변경대상선정: #solar
+            var tg = document.getElementById("solar");
+
+            // 3. 변경내용 적용하기
+            // 3-1. css 트랜스폼 변경하기: scale()값으로 val변수 셋팅
+            tg.style.transform = 
+            "translate(-50%, -50%) scale("+val+")";
+
+            // a요소 클래스 모두 지우기
+            var link = document.querySelectorAll(".tit2 a");
+            // querySelectorAll은 css선택자로 요소를 가져오는 메서드
+            console.log("a요소개수:"+link.length);
+            // length는 선택요소의 개수를 가져옴
+            for(시;한;증){
+
+            } ////// for문 ///////////////////
+
+            // 3-2. 클릭된 a요소로 전달된 obj변수에 클래스"on"넣기
+            obj.classList.add("on");
+            // classList는 선택요소의 클래스를 변경하는 객체
+            // add(클래스명) 메서드는 선택요소에 클래스를 넣는 메서드
+
+        } /////////// sView함수 ////////////////////////////
+        ////////////////////////////////////////////////////
+
+    </script>
+
 </head>
 <body>
     <!-- 타이틀 -->
     <h1 class="tit">Solar System</h1>
     <!-- 배율버튼 -->
     <h2 class="tit tit2">
-        <a href="#">X 0.3</a> | 
-        <a href="#">X 0.5</a> | 
-        <a href="#">X 1</a> | 
-        <a href="#">X 1.5</a>
+        <a href="#" onclick="sView(0.3,this)">X 0.3</a> | 
+        <a href="#" onclick="sView(0.5,this)">X 0.5</a> | 
+        <a href="#" class="on" onclick="sView(1,this)">X 1</a> | 
+        <a href="#" onclick="sView(1.5,this)">X 1.5</a>
     </h2>
 
     <!-- 태양계박스 -->
