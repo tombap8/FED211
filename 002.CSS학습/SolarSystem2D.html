@@ -29,6 +29,9 @@
 
         /* 타이틀 */
         .tit{
+            position: relative;
+            z-index: 1;/* 행성들보다 위 */
+
             margin: 0;
             padding: 0;
             /* h1의 기본마진,패딩 없앰 */
@@ -224,6 +227,13 @@
 <body>
     <!-- 타이틀 -->
     <h1 class="tit">Solar System</h1>
+    <!-- 배율버튼 -->
+    <h2 class="tit tit2">
+        <a href="#">X 0.3</a> | 
+        <a href="#">X 0.5</a> | 
+        <a href="#">X 1</a> | 
+        <a href="#">X 1.5</a>
+    </h2>
 
     <!-- 태양계박스 -->
     <div id="solar">
