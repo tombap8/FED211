@@ -104,6 +104,31 @@
             }
         }/* 키프레임 */
 
+        /* 목성 */
+        #jupiter{
+            position: absolute;
+            top: calc(50% - 40px);
+            left: calc(50% - 40px);
+            /* calc(값 - 값) 마이너스기호 앞뒤공백 중요!!! */
+            /* 부모는? #solar */
+            width: 150px;
+            height: 150px;
+            background: url(./images/jupiter.png) no-repeat 0/100% 100%;
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: jupiter 35s linear infinite;
+        }
+
+        /* 목성회전 키프레임 */
+        @keyframes jupiter {
+            from{
+                transform: rotate(0deg) translateY(400px) rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg) translateY(400px) rotate(-360deg);
+            }
+        }/* 키프레임 */
+
         /* 
             [ 원궤도 회전의 원리 ]
             - 중앙에서 rotate하는 요소에 translate로 위치이동을
@@ -133,6 +158,10 @@
         <!-- 지구 -->
         <div id="earth">
             <span class="ir">지구</span>
+        </div>
+        <!-- 목성 -->
+        <div id="jupiter">
+            <span class="ir">목성</span>
         </div>
 
     </div><!-- #solar -->
