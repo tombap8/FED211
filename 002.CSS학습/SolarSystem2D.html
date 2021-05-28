@@ -7,7 +7,7 @@
     <style>
         /* 웹폰트 */
         @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@900&display=swap');
-        
+
         html,body{
             margin: 0;
             padding: 0;
@@ -18,11 +18,31 @@
             background: url(./images/space.jpg) no-repeat center/cover;
             overflow: hidden;/* 스크롤바없앰 */
         }
+
+        /* 타이틀 */
+        .tit{
+            margin: 0;
+            padding: 0;
+            /* h1의 기본마진,패딩 없앰 */
+            font-family: 'Big Shoulders Stencil Text', cursive;
+            color: #fff;
+            font-size: 80px;
+            text-align: center;
+            padding-top: 20px;
+        }
     </style>
 </head>
 <body>
     <!-- 타이틀 -->
     <h1 class="tit">Solar System</h1>
+
+    <!-- 태양계박스 -->
+    <div id="solar">
+        <!-- 태양 -->
+        <div id="sun">
+            <img src="images/sun.png" alt="태양">
+        </div>
+    </div>
     
 </body>
 </html>
