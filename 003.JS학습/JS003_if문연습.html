@@ -41,10 +41,17 @@
             함수명: chgImg
             기능: 버튼 클릭시 이미지 변경하기
         *////////////////////////////////////////
-        function chgImg(){
+        function chgImg(U){
+            // U - 버튼자신을 보낸값을 받는 전달변수
+            // 함수호출시 chgImg(this)의 this는 함수와
+            // 연결된 요소 자신을 말한다!
+
+            // 버튼텍스트 읽어오기
+            var txt = U.innerText;
+            // innerText는 선택요소의 내부 글자데이터를 읽어옴
 
             // 1. 함수호출확인!
-            console.log("함수호출!!!")
+            console.log("함수호출!!!"+txt)
 
         } //////// chgImg함수 ////////////////////
         //////////////////////////////////////////
@@ -61,10 +68,10 @@
 
     <!-- 선택버튼박스 -->
     <div class="btnbx">
-        <button class="btns" onclick="chgImg()">포스터</button>
-        <button class="btns" onclick="chgImg()">장면1</button>
-        <button class="btns" onclick="chgImg()">장면2</button>
-        <button class="btns" onclick="chgImg()">장면3</button>
+        <button class="btns" onclick="chgImg(this)">포스터</button>
+        <button class="btns" onclick="chgImg(this)">장면1</button>
+        <button class="btns" onclick="chgImg(this)">장면2</button>
+        <button class="btns" onclick="chgImg(this)">장면3</button>
     </div>
     
 </body>
