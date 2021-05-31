@@ -257,6 +257,7 @@ body::before {
     margin-top: 6px;
     text-align: center;
     outline: 2px dotted blue;
+    letter-spacing: -1px;/* 자간 */
 }
 /* 날짜 */
 .today{
