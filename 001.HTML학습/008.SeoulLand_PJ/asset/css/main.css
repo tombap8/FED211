@@ -256,8 +256,9 @@ body::before {
     height: 65px;
     margin-top: 6px;
     text-align: center;
-    outline: 2px dotted blue;
+    /* outline: 2px dotted blue; */
     letter-spacing: -1px;/* 자간 */
+    background: url(../images/timebg.png) no-repeat;
 }
 /* 날짜 */
 .today{
@@ -284,4 +285,10 @@ body::before {
     /* 글자들여쓰기를 응용 (블록박스에서 적용) 
     보통은 양수값을 사용하여 들여씀. 반대방향은 음수*/
     display: block;
+}
+
+/* 1-3.가이드버튼박스 */
+.guide{
+    width: 140px;
+    /* ul>li가 옆으로 흐를때 크기확보! */
 }
