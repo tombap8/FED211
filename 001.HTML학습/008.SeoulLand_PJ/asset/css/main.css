@@ -236,11 +236,32 @@ body::before {
 
 
 /*********** 컨텐츠 영역 ***************/
-.cont {
-    /* height: 256px; */
-}
 
 /* 높이값을 파티션박스에 설정! */
 .cont>.pbx {
     height: 256px;
+}
+
+/* 1. 운영시간 */
+/* 1-1.타이틀 */
+.titbx2{
+    margin-top: 6px;
+}
+.titbx2 .tit{
+    vertical-align: -2px;
+    /* 인라인요소간 진행방향 세로정렬 */
+}
+/* 1-2.운영시간박스 */
+.time{
+    height: 65px;
+    margin-top: 6px;
+    text-align: center;
+    outline: 2px dotted blue;
+}
+/* 날짜 */
+.today{
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 1px 0 1px 0;
 }
