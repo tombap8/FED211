@@ -144,8 +144,8 @@ body::before {
 
 /* 1.타이틀 */
 .titbx{/* h2 */
-    padding-top: 4px;
-    padding-left: 13px;
+    /* padding-top: 4px;
+    padding-left: 13px; */
 }
 .tit{
     font-family: ng;
@@ -158,7 +158,9 @@ body::before {
 }
 /* 더보기 버튼 */
 .more{
-    margin-left: 11px;
+    /* margin-left: 11px; */
+    float: right;/* 추가코딩 */
+    /* 인라인요소 오른쪽끝위치 */
 }
 
 /* 2.할인배너박스 */
