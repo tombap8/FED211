@@ -144,7 +144,7 @@ body::before {
 
 /* 1.타이틀 */
 .titbx{/* h2 */
-    margin-top: -6px;
+    margin-top: -4px;
     padding-left: 3px;
 }
 .tit{/* 타이틀 공통 클래스 */
@@ -245,7 +245,7 @@ body::before {
 /* 1. 운영시간 */
 /* 1-1.타이틀 */
 .titbx2{
-    margin-top: 6px;
+    margin-top: 8px;
 }
 .titbx2 .tit{
     vertical-align: -2px;
@@ -264,5 +264,24 @@ body::before {
     color: #fff;
     font-size: 17px;
     font-weight: bold;
-    padding: 1px 0 1px 0;
+    padding: 11px 0 1px 0;
+}
+/* 날짜숫자 */
+.today strong{
+    font-size: 21px;
+    color: #ff0;
+    font-family: arial;
+}
+/* 개장시간 */
+.timesec{
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: arial;
+    
+    /* 글자전체 위치조정 */
+    text-indent: -4px;
+    /* 글자들여쓰기를 응용 (블록박스에서 적용) 
+    보통은 양수값을 사용하여 들여씀. 반대방향은 음수*/
+    display: block;
 }
