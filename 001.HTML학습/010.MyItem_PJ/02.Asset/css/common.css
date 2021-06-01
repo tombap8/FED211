@@ -2,38 +2,121 @@
 /* 마이아이템 공통모듈 CSS - common.css */
 
 /* 사이트 전체설정 */
-body{
+body {
     background-image: url(../images/bg.png);
-    font-family: ng,"맑은 고딕",Verdana;
-    font-size: 15px;/* 기본글자크기는 16px */
-    letter-spacing: -1px;/* 글자간격(기본값은 0) */
+    font-family: ng, "맑은 고딕", Verdana;
+    font-size: 15px;
+    /* 기본글자크기는 16px */
+    letter-spacing: -1px;
+    /* 글자간격(기본값은 0) */
     /* 글자셋팅은 하위자손요소로 상속됨! */
 }
 
 /* 임시아웃라인표시 */
-body *{
+body>*>* {
     outline: 2px dashed blue;
 }
 
 /* 전체 부모박스 */
-.wrap{
+.wrap {
     background-color: #fff;
     box-shadow: 0 0 10px #000;
 }
+
 /* 1.상단영역 */
-#top{
+#top {
     height: 130px;
 }
 
+/* 1-2.GNB메뉴 */
+.gnb {
+    background-image: linear-gradient(to bottom, #cecece 0%, #bababa 20%,#8a8a8a 80%, #5c5c5c 100%);
+}
+
+.gnb>ul {
+    width: 600px;
+    margin: 0 auto;
+    /* 블록가로중앙정렬 - 마영오! */
+    outline: 2px solid lime;
+}
+
+.gnb>ul>li {
+    width: 150px;
+    text-align: center;
+}
+
+/* a요소 - 글자색, 밑줄처리 */
+/* 유의사항: li와 a요소 사이의 띄어쓰기는
+아래의 모든 자손 a를 선택한 것임! */
+.gnb>ul>li a {
+    display: block;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    text-decoration: none;
+
+    /* 글자설정 */
+    /* 글자체는 기본 나눔고딕(body에서) */
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px;
+
+    /* 트랜지션: 속시이지 */
+    transition: all .4s;
+}
+
+/* 마우스오버시 글자색, 배경색변경 */
+.gnb>ul>li:hover>a {
+    color: #777;
+    text-shadow: 0 1px 0 #fff;
+    /* 배경 그라데이션 */
+    background-image: linear-gradient(to top, #cecece 0%, #bababa 20%,#8a8a8a 80%, #5c5c5c 100%);
+}
+
+/* 서브메뉴 */
+.smenu {
+    position: absolute;
+    /* 젠틀앱솔루트! - 위치값을 안썼을때
+스테틱한 a요소를 존중하여 아래쪽에
+나오며 li박스를 존중하여 그 안에 위치함 */
+    width: 150px;
+    background-color: #cecece;
+    text-shadow: 1px 1px 0 #777;/* 추가 */
+
+    /* 왼쪽 아래, 오른쪽아래 둥근모서리적용 */
+    border-radius: 0 0 4px 4px;
+    /* 왼쪽위부터 시계방향! */
+
+    /* 서브메뉴를 숨기기위해 높이값0, 
+넘치는 자식요소 숨기기 */
+    height: 0;
+    overflow: hidden;
+
+    /* 트랜지션: 속시이지 */
+    transition: height .4s ease-out;
+}
+
+/* 서브메뉴에 마우스 오버시 글자색, 배경색변경 */
+.smenu li:hover a {
+    color: #777;
+    background-color: #bababa;
+    text-shadow: 0 1px 0 #fff;/* 추가 */
+}
+
+/* 상위메뉴 li에 오버시 서브메뉴 높이값 변경 */
+.gnb>ul>li:hover .smenu {
+    height: 120px;
+}
+
+
+
 /* 2.컨텐츠영역 */
-#cont{
+#cont {
     min-height: 500px;
     /* 최소높이 500px을 유지하다가 내용이 많이지면 자동으로 늘어남 */
 }
 
 /* 3.하단영역 */
-#info{
+#info {
     height: 90px;
 }
-
-
