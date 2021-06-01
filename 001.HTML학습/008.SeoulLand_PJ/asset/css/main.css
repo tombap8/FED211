@@ -320,3 +320,12 @@ body::before {
     height: 100%;
     border: none;
 }
+
+/* 3. 뉴스와 공지 */
+/* 3-1.타이틀 */
+/* 타이틀 글자 변경 클래스 */
+.tf1{
+    font-family: Verdana;
+    text-indent: -1px;
+    display: inline-block;/* 들여쓰기 적용위해 */
+}
