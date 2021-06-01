@@ -335,18 +335,27 @@ body::before {
     font-size: 12px;
     line-height: 19px;
     padding: 8px 0;/* 위아래 패딩 */
-    white-space: nowrap;/* 줄바꿈방지 */
     outline: 2px dashed red;
 }
 
 .news li{
+    /* [말줄임 셋팅에 필요한 4가지] */
     width: 100%;
-    /* li의 크기를 ul크기에 맞춘다! */
+    /* 1.박스크기 한정 (li의 크기를 ul크기에 맞춘다!) */
+    white-space: nowrap;
+    /* 2.줄바꿈방지 */
     overflow: hidden;
-    /* 넘치는 글자를 숨긴다! */
+    /* 3.넘치는 글자를 숨긴다! */
+    text-overflow: ellipsis;
+    /* 4.말줄임표시 (ellipsis 입술에 손가락대고...) */
+    /* 말줄임표시는 글자체에 따라 다르다! */
 }
 /* 가상요소로 아이콘넣기 */
 .news li::before{
     content: url(../images/ico_news.png);
     vertical-align: -2px;/* 인라인요소간 세로정렬 */
+}
+/* 3-3. 바로가기링크 */
+.links{
+    margin-top: 11px;
 }
