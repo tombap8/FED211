@@ -18,15 +18,22 @@ body *{
 /* 전체 부모박스 */
 .wrap{
     background-color: #fff;
-    box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 10px #000;
 }
-
+/* 1.상단영역 */
 #top{
     height: 130px;
 }
+
+/* 2.컨텐츠영역 */
 #cont{
-    height: 400px;
+    min-height: 500px;
+    /* 최소높이 500px을 유지하다가 내용이 많이지면 자동으로 늘어남 */
 }
+
+/* 3.하단영역 */
 #info{
-    height: 100px;
+    height: 90px;
 }
+
+
