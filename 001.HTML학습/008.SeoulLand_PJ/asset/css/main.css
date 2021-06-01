@@ -294,6 +294,22 @@ body::before {
 }
 
 /* 2-1.타이틀 */
+/* 하단 구분선 공통 클래스 */
+.line{
+    position: relative;
+    /* 부모자격 */
+}
+/* 가상요소로 구분선 만들기 */
+.line::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 28px;
+    width: 100%;
+    height: 1px;
+    background-color: #777;
+}
+
 /* 2-2.유튜브박스*/
 .ubx{
     margin-top: 19px;
