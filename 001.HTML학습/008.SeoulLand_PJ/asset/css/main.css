@@ -329,3 +329,24 @@ body::before {
     text-indent: -1px;
     display: inline-block;/* 들여쓰기 적용위해 */
 }
+/* 3-2.뉴스박스 */
+.news{
+    margin-top: 10px;/* 박스위쪽밀기 */
+    font-size: 12px;
+    line-height: 19px;
+    padding: 8px 0;/* 위아래 패딩 */
+    white-space: nowrap;/* 줄바꿈방지 */
+    outline: 2px dashed red;
+}
+
+.news li{
+    width: 100%;
+    /* li의 크기를 ul크기에 맞춘다! */
+    overflow: hidden;
+    /* 넘치는 글자를 숨긴다! */
+}
+/* 가상요소로 아이콘넣기 */
+.news li::before{
+    content: url(../images/ico_news.png);
+    vertical-align: -2px;/* 인라인요소간 세로정렬 */
+}
