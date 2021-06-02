@@ -395,6 +395,15 @@ body::before {
     font-size: 11px;
     text-align: center;
     line-height: 30px;
+    background-color: #f0f0f0;
+}
+/* 선택메뉴 클래스 on 셋팅! */
+.tabTit li.on{
+    border-bottom: none;
+}
+.tabTit li.on a{
+    color: #3345a9;
+    background-color: #fff;
 }
 
 
