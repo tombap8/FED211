@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>웹디기능사 유형6</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body * {
+            outline: 2px dashed blue;
+        }
+
+        /* 공통class */
+        .ibx {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pbx {
+            float: left;
+            height: 100%;
+        }
+
+        /* 영역별 설정 */
+        /* A */
+        #top {
+            background-color: rgb(175, 206, 255);
+        }
+
+        .top {
+            height: 100px;
+        }
+
+        .top1 {
+            width: 200px;
+        }
+
+        .top2 {
+            width: 1000px;
+        }
+
+        /* B */
+        .ban {
+            height: 300px;
+        }
+
+        /* C */
+        .cont {
+            height: 200px;
+        }
+
+        .cont>.pbx {
+            width: 400px;
+        }
+
+        /* D */
+        #info {
+            background-color: rgb(255, 220, 255);
+        }
+
+        .info {
+            height: 100px;
+        }
+
+        .info1 {
+            width: 1000px;
+        }
+
+        .info2 {
+            width: 200px;
+        }
+
+        /* 내부 가로박스 */
+        .info2>.pbxIn {
+            height: 50px;
+            outline: 2px dotted green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- A -->
+    <div id="top">
+        <div class="ibx top">
+            <div class="pbx top1"></div>
+            <div class="pbx top2"></div>
+        </div>
+    </div>
+
+    <!-- B -->
+    <div class="ibx ban">
+
+    </div>
+
+    <!-- C -->
+    <div class="ibx cont">
+        <div class="pbx cont1"></div>
+        <div class="pbx cont2"></div>
+        <div class="pbx cont3"></div>
+    </div>
+
+    <!-- D -->
+    <div id="info">
+        <div class="ibx info">
+            <div class="pbx info1"></div>
+            <div class="pbx info2">
+                <div class="pbxIn"></div>
+                <div class="pbxIn"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
