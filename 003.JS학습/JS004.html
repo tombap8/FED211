@@ -249,7 +249,24 @@
                 com:"매니지먼트 숲",
                 work:"도깨비,부산행",
                 msg:function(txt){ // txt는 전달변수
+                    // 1. 메시지 띄우기
                     alert("팬레터: "+txt);
+                    // 2. 공유이미지 배경넣기
+                    txt5.style.background = 
+                    "url(./images/gu.png) repeat-x top/auto 100%";
+                    // 3. 글자색 변경하기
+                    txt5.style.color = "#fff";
+                    // 4. 글자테두리
+                    txt5.style.textShadow = 
+                    "2px 0 #000,-2px 0 #000,0 2px #000,0 -2px #000";
+                    // 5. 높이값 변경
+                    txt5.style.height = "100px";
+                    // 6. 트랜지션
+                    txt5.style.transition = "2s ease-in-out .5s";
+                    // 7. 줄간격
+                    txt5.style.lineHeight = "30px";
+                    // 8. 상단패딩
+                    txt5.style.paddingTop = "100px";
                 } ///// msg 메서드 ////
             }; ////////// GU 객체 //////////
 
@@ -281,7 +298,8 @@
 
             // 공유박스 클릭시 GU객체의 메서드 호출하기!
             txt5.onclick = function(){
-                GU.msg("공유오빠, 서복에서도 멋쪘어요! 차기작도 기대해요! 화이팅!!!");
+                GU.msg("\n공유오빠, 서복에서도 멋쪘어요! \n차기작도 기대해요! 화이팅!!!");
+                // alert창은 html태그를 사용할 수 없고 줄바꿈은 \n 줄바꿈표시문자를 사용한다!
             }; ///// click이벤트 함수 ///////////////
 
 
