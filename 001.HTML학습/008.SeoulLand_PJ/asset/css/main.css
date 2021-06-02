@@ -335,7 +335,7 @@ body::before {
     font-size: 12px;
     line-height: 19px;
     padding: 8px 0;/* 위아래 패딩 */
-    outline: 2px dashed red;
+    /* outline: 2px dashed red; */
 }
 
 .news li{
