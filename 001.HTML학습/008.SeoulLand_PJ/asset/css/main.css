@@ -413,3 +413,30 @@ body::before {
     height: 166px;
     /* outline: 1px dotted purple; */
 }
+/* li공통 */
+.tabCont li{
+    width: 100%;
+    height: 100%;
+    display: none;/* 모두 안보이게함! */
+}
+/* 클래스 on인 것만 보이게 */
+.tabCont li.on{
+    display: block;
+}
+
+/* 페이스북 */
+.tabCont li:nth-child(1){
+    background-color: rgb(255, 187, 187);
+}
+/* 블로그 */
+.tabCont li:nth-child(2){
+    background-color: rgb(187, 205, 255);
+}
+/* 트위터 */
+.tabCont li:nth-child(3){
+    background-color: rgb(252, 253, 168);
+}
+/* 인스타그램 */
+.tabCont li:nth-child(4){
+    background-color: rgb(172, 252, 172);
+}
