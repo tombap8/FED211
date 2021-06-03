@@ -279,3 +279,24 @@ body{
 .info>.info2{/* 하단 두번째줄 */
     height: 94px;
 }
+
+/* 하단컨텐츠 셋팅 */
+/* 4-1. 하단링크리스트 */
+.link{
+    font: bold 10px/17px ng;
+}
+.link li+li::before{
+    content: "·";/* (ㄱ한자)특수문자 */
+    font-size: 22px;
+    vertical-align: -4px;
+    margin-left: 10px;
+    margin-right: 5px;
+    color: #888;
+}
+.link a{
+    color: #888;
+}
+/* 강조색 */
+.link a.em{
+    color: #222;
+}
