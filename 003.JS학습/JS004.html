@@ -328,6 +328,7 @@
                     document.body.innerHTML += 
                     '<div id="mv">' + 
                     '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/tfmRVC_GADw?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' + 
+                    '<span class="cbtn">×</span>' + 
                     '</div>';
 
                     // 삽입된 동영상 박스 CSS설정하기!
@@ -338,6 +339,31 @@
                     mv.style.transform = "translate(-50%,-50%)";
                     mv.style.width = "700px";
                     mv.style.height = "450px";
+
+                    // 닫기버튼 셋팅
+                    var cbtn = document
+                    .getElementsByClassName("cbtn")[0];
+                    // 클래스요소를 선택할때 순번선택필수!
+                    // (컬렉션순번 첫번째0)
+                    cbtn.style.position = "absolute";
+                    cbtn.style.top = "0";
+                    cbtn.style.right = "-70px";
+                    cbtn.style.width = "50px";
+                    cbtn.style.height = "50px";
+                    cbtn.style.background = "blue";
+                    cbtn.style.textAlign = "center";
+                    cbtn.style.fontSize = "40px";
+                    cbtn.style.fontWeight = "bold";
+                    cbtn.style.color = "white";
+                    cbtn.style.borderRadius = "50%";
+                    cbtn.style.cursor = "pointer";
+                    cbtn.style.lineHeight = "40px";
+
+                    // 닫기버튼 클릭시 리로드!
+                    cbtn.onclick = function(){
+                        window.location.reload();
+                        // 페이지 새로고침!
+                    }; ////// click이벤트 함수 /////
 
 
 
