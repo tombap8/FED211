@@ -18,6 +18,8 @@
             font-size: 24px;
         }
     </style>
+    <!-- 오브젝트설정 JS외부파일 불러오기 -->
+    <script src="JS004_object.js"></script>
     <script>
         // JS는 코드를 만나는 순간 바로 실행한다!
         // html요소를 선택한 경우 아직 코드를 읽지 않았기때문에
@@ -374,8 +376,8 @@
 
 
             // 화면출력
-            // 대상: #txt6
-            var txt6 = document.getElementById("txt6");
+            // 대상: #txt6 -> 함수바깥에 선언하여 전역변수화!
+            txt6 = document.getElementById("txt6");
             txt6.style.lineHeight = "34px"; //줄간격조정
 
             txt6.innerHTML =
@@ -413,7 +415,7 @@
         */
 
         // 지역변수를 전역변수화 한다!
-        var MV_PSH;
+        var MV_PSH, txt6;
 
 
 
@@ -433,6 +435,22 @@
             "\n영화명: "+MV_PSH.title);
 
             // 2. 적용된 영화변수 변경하기
+            // - 기존 할당된 변수의 객체를 다른 객체로 변경하기!
+            switch(gubun){
+                case "서진초이스": MV_PSH = MY_SJ; break;
+                case "지선초이스": MV_PSH = MV_KJS; break;
+                case "주열초이스": MV_PSH = MV_LJY; break;
+                case "련정초이스": MV_PSH = MV_CRJ; break;
+                case "용성초이스": MV_PSH = MV_LYS; break;
+            } //// switch case문 //////////
+
+            // 3. 영화내용 출력 변경하기
+            txt6.innerHTML =
+                "▣영화명: " + MV_PSH.title +
+                " ▣감독: " + MV_PSH.director +
+                " ▣배우: " + MV_PSH.actors +
+                "<br>▣장르: " + MV_PSH.genre +
+                " ▣등급: " + MV_PSH.ratings;
             
 
         } ////////// chgMV 함수 //////////////////
