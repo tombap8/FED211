@@ -142,10 +142,10 @@
 
                 show += arr3[i];
 
-                if(i===7) break;
+                if (i === 7) break;
                 // 7일때 아래 코드를 실행안하고 빠져나감!
                 // break 키워드는 만나는 순간 제어문을 나감!
-                
+
                 show += "★";
             } /////// for문 ////////////////////
 
@@ -184,18 +184,18 @@
             */
 
             var SHK = new Object({
-                "너의 이름은?":"김수현",
-                "생일":"1988년 2월 16일",
-                "키":"180cm",
-                "몸무게":"65kg",
-                "성별":"남자",
-                "비밀번호":7777,
-                "팬레터": function(){
+                "너의 이름은?": "김수현",
+                "생일": "1988년 2월 16일",
+                "키": "180cm",
+                "몸무게": "65kg",
+                "성별": "남자",
+                "비밀번호": 7777,
+                "팬레터": function () {
                     // 1. 메시지띄우기
                     alert("오빠, 지금뭐해?");
                     // 2. 배경이미지 출력박스에 넣기
                     txt4.style.background =
-                    "url(./images/shk.jpg) repeat-x top/auto 100%";
+                        "url(./images/shk.jpg) repeat-x top/auto 100%";
                     // 3. 글자색 흰색
                     txt4.style.color = "#00f";
                     // 4. 글자그림자
@@ -208,23 +208,23 @@
                     txt4.innerHTML = "김수현 최고 멋쟁이! 승승장구! 화이팅!";
                 } /// 팬레터 메서드 ///
 
-            });///// SHK객체 ////////
+            }); ///// SHK객체 ////////
 
             // 객체출력하기
             // 대상: #txt4
             var txt4 = document.getElementById("txt4");
 
             txt4.innerHTML =
-            "당신이 좋아하는 남자배우는? " + SHK["너의 이름은?"];
+                "당신이 좋아하는 남자배우는? " + SHK["너의 이름은?"];
 
             txt4.innerHTML +=
-            " / 몸무게를 아세요? " + SHK["몸무게"];
+                " / 몸무게를 아세요? " + SHK["몸무게"];
 
             // 객체에 셋팅된 함수(메서드) 호출하기!
-            txt4.onclick = function(){
+            txt4.onclick = function () {
                 SHK["팬레터"]();
                 // 함수호출시 반드시 소괄호필수!!!
-            };////// click이벤트함수 /////
+            }; ////// click이벤트함수 /////
             // 이벤트속성에 이름없는 함수를 할당하면
             // 해당이벤트 발생시 함수내부의 코드가 실행된다!!!
 
@@ -243,22 +243,22 @@
             // 호출방법: 객체명.속성명
 
             var GU = {
-                name:"공유",
-                tall:"184cm",
-                weight:"74kg",
-                com:"매니지먼트 숲",
-                work:"도깨비,부산행",
-                msg:function(txt){ // txt는 전달변수
+                name: "공유",
+                tall: "184cm",
+                weight: "74kg",
+                com: "매니지먼트 숲",
+                work: "도깨비,부산행",
+                msg: function (txt) { // txt는 전달변수
                     // 1. 메시지 띄우기
-                    alert("팬레터: "+txt);
+                    alert("팬레터: " + txt);
                     // 2. 공유이미지 배경넣기
-                    txt5.style.background = 
-                    "url(./images/gu.png) repeat-x top/auto 100%";
+                    txt5.style.background =
+                        "url(./images/gu.png) repeat-x top/auto 100%";
                     // 3. 글자색 변경하기
                     txt5.style.color = "#fff";
                     // 4. 글자테두리
-                    txt5.style.textShadow = 
-                    "2px 0 #000,-2px 0 #000,0 2px #000,0 -2px #000";
+                    txt5.style.textShadow =
+                        "2px 0 #000,-2px 0 #000,0 2px #000,0 -2px #000";
                     // 5. 높이값 변경
                     txt5.style.height = "100px";
                     // 6. 트랜지션
@@ -278,26 +278,26 @@
             txt5.style.lineHeight = "24px";
 
             // 내용 출력 /////
-            txt5.innerHTML = 
-            "저는 " + GU.name + "입니다.";
+            txt5.innerHTML =
+                "저는 " + GU.name + "입니다.";
 
-            txt5.innerHTML += 
-            "몸무게는 비밀인데요 그래도 말씀드리자면 " + 
-            GU.weight + "입니다. ㅎㅎㅎ <br>";
+            txt5.innerHTML +=
+                "몸무게는 비밀인데요 그래도 말씀드리자면 " +
+                GU.weight + "입니다. ㅎㅎㅎ <br>";
 
-            txt5.innerHTML += 
-            "제 대표작은 " + GU.work + "입니다.<br>";
+            txt5.innerHTML +=
+                "제 대표작은 " + GU.work + "입니다.<br>";
 
-            txt5.innerHTML += 
-            "제 소속사는 잘 모르시는 분들이 많은데 " + 
-            GU.com + "입니다. 빠이빠이~!";
+            txt5.innerHTML +=
+                "제 소속사는 잘 모르시는 분들이 많은데 " +
+                GU.com + "입니다. 빠이빠이~!";
 
             // 공유박스 마우스 올라가면 툴팁보이기!
             txt5.title = "공유의 펜레터를 확인하세요! 바로클릭!";
-            txt5.style.cursor = "pointer";//손가락모양
+            txt5.style.cursor = "pointer"; //손가락모양
 
             // 공유박스 클릭시 GU객체의 메서드 호출하기!
-            txt5.onclick = function(){
+            txt5.onclick = function () {
                 GU.msg("\n공유오빠, 서복에서도 멋쪘어요! \n차기작도 기대해요! 화이팅!!!");
                 // alert창은 html태그를 사용할 수 없고 줄바꿈은 \n 줄바꿈표시문자를 사용한다!
             }; ///// click이벤트 함수 ///////////////
@@ -322,14 +322,14 @@
                 // 5. 관람가
                 ratings: "12세관람가",
                 // 6. 예고편
-                trailer: function(){
+                trailer: function () {
                     // 영화박스에 iframe넣기
                     // body끝에 div넣기!
-                    document.body.innerHTML += 
-                    '<div id="mv">' + 
-                    '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/tfmRVC_GADw?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' + 
-                    '<span class="cbtn">×</span>' + 
-                    '</div>';
+                    document.body.innerHTML +=
+                        '<div id="mv">' +
+                        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/tfmRVC_GADw?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
+                        '<span class="cbtn">×</span>' +
+                        '</div>';
 
                     // 삽입된 동영상 박스 CSS설정하기!
                     var mv = document.getElementById("mv");
@@ -342,7 +342,7 @@
 
                     // 닫기버튼 셋팅
                     var cbtn = document
-                    .getElementsByClassName("cbtn")[0];
+                        .getElementsByClassName("cbtn")[0];
                     // 클래스요소를 선택할때 순번선택필수!
                     // (컬렉션순번 첫번째0)
                     cbtn.style.position = "absolute";
@@ -360,7 +360,7 @@
                     cbtn.style.lineHeight = "40px";
 
                     // 닫기버튼 클릭시 리로드!
-                    cbtn.onclick = function(){
+                    cbtn.onclick = function () {
                         window.location.reload();
                         // 페이지 새로고침!
                     }; ////// click이벤트 함수 /////
@@ -371,36 +371,49 @@
 
             }; ///// MV_PSH객체 /////////////
 
+
             // 화면출력
             // 대상: #txt6
             var txt6 = document.getElementById("txt6");
-            txt6.style.lineHeight = "34px";//줄간격조정
+            txt6.style.lineHeight = "34px"; //줄간격조정
 
-            txt6.innerHTML = 
-            "▣영화명: " + MV_PSH.title +
-            " ▣감독: " + MV_PSH.director +
-            " ▣배우: " + MV_PSH.actors +
-            "<br>▣장르: " + MV_PSH.genre +
-            " ▣등급: " + MV_PSH.ratings;
+            txt6.innerHTML =
+                "▣영화명: " + MV_PSH.title +
+                " ▣감독: " + MV_PSH.director +
+                " ▣배우: " + MV_PSH.actors +
+                "<br>▣장르: " + MV_PSH.genre +
+                " ▣등급: " + MV_PSH.ratings;
 
             // 마우스 오버시 툴팁과 손가락모양 셋팅
-            txt6.title = "클릭하시면 "+ MV_PSH.title + 
-            "예고편을 보실 수 있습니다!";
-            txt6.style.cursor = "pointer";/* 손가락모양 */
-            
+            txt6.title = "클릭하시면 " + MV_PSH.title +
+                "예고편을 보실 수 있습니다!";
+            txt6.style.cursor = "pointer"; /* 손가락모양 */
+
             // 트레일러 함수 호출하기
             // #txt6를 클릭시
-            txt6.onclick = function(){
+            txt6.onclick = function () {
                 MV_PSH.trailer();
             }; ////// click이벤트 함수 /////////
 
-
-
-
-
-
         }); ////////// 로딩구역 ///////////////////////////////
         //////////////////////////////////////////////////////
+
+        /*/////////////////////////////////////////////
+            함수명: chgMV
+            기능: 영화를 변경한다
+            -> 선언적함수(이름있는함수)는 로딩구역
+               바깥에 만들어 줘야만 외부호출시 인식된다!
+        */ ////////////////////////////////////////////
+        function chgMV(gubun) { // gubun-전달변수
+            // gubun에 버튼자신이 전달되므로 
+            // 내부 텍스트를 읽어서사용
+            gubun = gubun.innerText;
+
+            // 1. 함수호출여부확인
+            console.log("영화바꿔!"+gubun);
+
+        } ////////// chgMV 함수 //////////////////
+        //////////////////////////////////////////
     </script>
 </head>
 
@@ -411,6 +424,15 @@
     <div id="txt4"></div>
     <div id="txt5"></div>
     <div id="txt6"></div>
+
+    <!-- 영화변경버튼박스 -->
+    <div>
+        <button onclick="chgMV(this)">서진초이스</button>
+        <button onclick="chgMV(this)">지선초이스</button>
+        <button onclick="chgMV(this)">주열초이스</button>
+        <button onclick="chgMV(this)">련정초이스</button>
+        <button onclick="chgMV(this)">용성초이스</button>
+    </div>
 
 </body>
 
