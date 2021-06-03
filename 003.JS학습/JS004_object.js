@@ -133,7 +133,7 @@ var MV_LJY = {
         // body끝에 div넣기!
         document.body.innerHTML +=
             '<div id="mv">' +
-            '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ESPFTY8Y-xM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ESPFTY8Y-xM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'+
             '<span class="cbtn">×</span>' + '</div>';
 
             // 삽입된 동영상 박스 CSS설정하기!
@@ -232,28 +232,27 @@ var MV_CRJ = {
     } /// trailer 메서드함수 ///
 }; ////// MV_CRJ객체 ////
 
-var MV_LYS = {
-    // 1. 영화제목
-    title: "노매드랜드",
-    // 2. 감독
-    director: "클로이 자오",
-    // 3. 배우
-    actors: "프란시스 맥도맨드",
-    // 4. 장르
-    genre: "드라마",
-    // 5. 관람가
-    ratings: "12세관람가",
-    // 6. 예고편
-    trailer: function(){
-        // 영화박스에 iframe넣기
-        // body끝에 div넣기!
-        document.body.innerHTML += 
-        '<div id="mv">' +
-        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/tfmRVC_GADw?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
-        '<span class="cbtn">×</span>' +
-        '</div>';
+var MV_ASH = {
+    // 1.영화제목
+    title: "컨저링 3: 악마가 시켰다",
+    // 2.감독
+    director: "마이클 차베즈",
+    // 3.배우
+    actors: "베라 파미가, 패트릭 윌슨",
+    // 4.장르
+    genre: "공포, 미스터리, 스릴러",
+    // 5.관람가
+    ratings: "15세 관람가",
+    // 6.예고편
+    trailer: function () {
+        // 영화박스에 iframe 넣기
+        // body 끝에 div 넣기
+        document.body.innerHTML += '<div id = "mv">' +
+            '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/MRY26k7sUkY?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
+            '<span class="cbtn">×</span>' +
+            '</div>';
 
-        // 삽입된 동영상 박스 CSS설정하기!
+        // 삽입된 동영상 박스 CSS설정하기
         var mv = document.getElementById("mv");
         mv.style.position = "fixed";
         mv.style.top = "50%";
@@ -264,8 +263,7 @@ var MV_LYS = {
 
         // 닫기버튼 셋팅
         var cbtn = document.getElementsByClassName("cbtn")[0];
-        // 클래스요소를 선택할때 순번선택필수!
-        // (컬렉션순번 첫번째0)
+        // 클래스요소를 선택할 때 순번선택필수! (컬렉션 순번 첫번째 0)
         cbtn.style.position = "absolute";
         cbtn.style.top = "0";
         cbtn.style.right = "-70px";
@@ -280,12 +278,10 @@ var MV_LYS = {
         cbtn.style.cursor = "pointer";
         cbtn.style.lineHeight = "40px";
 
-        // 닫기버튼 클릭시 리로드!
-        cbtn.onclick = function(){
+        // 닫기버튼 클릭시 리로드
+        cbtn.onclick = function () {
             window.location.reload();
-            // 페이지 새로고침!
-        }; /////// click이벤트 함수 //////
-
-    } //// trailer 함수 ///////
-
+            // 페이지 새로고침
+        };
+    }
 }; ///// MV_PSH객체 ///////
