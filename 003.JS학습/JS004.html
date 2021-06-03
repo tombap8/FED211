@@ -330,6 +330,15 @@
                     '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/tfmRVC_GADw?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' + 
                     '</div>';
 
+                    // 삽입된 동영상 박스 CSS설정하기!
+                    var mv = document.getElementById("mv");
+                    mv.style.position = "fixed";
+                    mv.style.top = "50%";
+                    mv.style.left = "50%";
+                    mv.style.transform = "translate(-50%,-50%)";
+                    mv.style.width = "700px";
+                    mv.style.height = "450px";
+
 
 
                 } //// trailer 함수 ///////
