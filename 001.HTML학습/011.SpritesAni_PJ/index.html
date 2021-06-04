@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,18 @@
             font-family: 'Gloria Hallelujah', cursive;
             font-family: 'ZCOOL KuaiLe', cursive;
         */
-        html,body{
+        html,
+        body {
             margin: 0;
             padding: 0;
         }
-        body{
+
+        body {
             background-color: #8cc63e;
         }
 
         /* 1. 타이틀 */
-        .mtit{
+        .mtit {
             position: absolute;
             top: 35px;
             left: 50%;
@@ -29,22 +32,25 @@
             font-family: 'Gloria Hallelujah', cursive;
             font-size: 52px;
             color: #fff;
+            z-index: 1;
         }
 
         /* 2.메뉴 */
-        .gnb{
+        .gnb {
             position: absolute;
             top: 10%;
             left: 50px;
+            z-index: 1;
         }
-        .gnb ul{
+
+        .gnb ul {
             margin: 0;
             padding: 0;
             list-style: none;
         }
 
         /* a 요소 디자인 */
-        .gnb a{
+        .gnb a {
             color: #fff;
             text-decoration: none;
             font-family: 'ZCOOL KuaiLe', cursive;
@@ -52,14 +58,57 @@
             line-height: 3;
             /* 단위없는 숫자는 글자크기의 배수임 */
         }
+
         /* 마우스 오버시 */
-        .gnb a:hover{
+        .gnb a:hover {
             color: #f00;
-            text-decoration: line-through;/* 중간줄 */
+            text-decoration: line-through;
+            /* 중간줄 */
         }
+
+        /* 3. TV셋 */
+        .tvset {
+            position: relative;
+            /* 부모자격 - .screen */
+            width: 1280px;
+            height: 720px;
+            background: url(./images/tvset.png) no-repeat;
+            margin: 0 auto;
+            /* 블록중앙정렬 */
+        }
+
+        /* 스크린 */
+        .screen {
+            position: absolute;
+            /* 나의부모? .tvset */
+            top: 213px;
+            left: 450px;
+            width: 454px;
+            height: 227px;
+
+            background-image: url(./images/street.jpg);
+            background-repeat: repeat-x;/* x축반복 */
+            background-size: auto 100%;/* 높이값에 맞춤 */
+            /* outline: 2px dashed red; */
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: street 4s linear infinite;
+
+        }
+        /* 스크린배경이동 키프레임 */
+        @keyframes street {
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -387px 0;
+                /* x축이동수치는 처음 시작이미지 위치와 같은 위치값 */
+            }
+        }/* 키프레임 */
 
     </style>
 </head>
+
 <body>
     <!-- 1.제목 -->
     <h1 class="mtit">John's Television</h1>
@@ -85,6 +134,7 @@
     <section class="tvset">
         <div class="screen"></div>
     </section>
-    
+
 </body>
+
 </html>
