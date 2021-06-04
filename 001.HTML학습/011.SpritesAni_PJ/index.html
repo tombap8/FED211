@@ -22,6 +22,14 @@
             background-color: #8cc63e;
         }
 
+        /* 공통class */
+        .ir{/* IR(배경설명숨기기) */
+            display: block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
         /* 1. 타이틀 */
         .mtit {
             position: absolute;
@@ -106,6 +114,30 @@
             }
         }/* 키프레임 */
 
+        /* 3-1.걷는존 */
+        .spani1{
+            width: 100px;
+            /* 줄어든 이미지 가로크기(797px) 8등분 크기 */
+            height: 176px;
+            margin: 0 auto;/* 가로중앙 */
+            margin-top: 23px;
+            outline: 2px dotted blue;
+            background-image: url(./images/spAni03.png);
+            background-size: auto 176px;
+            
+            /* 애니메이션: 이시이지반방마 */
+            animation: spani1 3s linear infinite;
+        }
+        /* 걷는존 키프레임 */
+        @keyframes spani1 {
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -797px 0;
+            }
+        }/* 키프레임 */
+
     </style>
 </head>
 
@@ -132,9 +164,15 @@
 
     <!-- 3. TV박스 -->
     <section class="tvset">
-        <div class="screen"></div>
+        <!-- 스크린 -->
+        <div class="screen">
+            <!-- 3-1.걷는존 -->
+            <div class="spani1">
+                <span class="ir">걷는존</span>
+            </div>
+        </div>
     </section>
-
+    <img src="./images/spAni03.png" style="height: 176px;" alt="">
 </body>
 
 </html>
