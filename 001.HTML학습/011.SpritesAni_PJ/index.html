@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>샐(장면넘기기)애니메이션</title>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <style>
+        /*
+            웹폰트체
+            font-family: 'Gloria Hallelujah', cursive;
+            font-family: 'ZCOOL KuaiLe', cursive;
+        */
         html,body{
             margin: 0;
             padding: 0;
@@ -12,6 +18,38 @@
         body{
             background-color: #8cc63e;
         }
+
+        /* 1. 타이틀 */
+        .mtit{
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            /* 가로방향 중앙이동 */
+            font-family: 'Gloria Hallelujah', cursive;
+            font-size: 52px;
+            color: #fff;
+        }
+
+        /* 2.메뉴 */
+        .gnb{
+            position: absolute;
+            top: 10%;
+            left: 50px;
+        }
+        .gnb ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* a 요소 디자인 */
+        .gnb a{
+            color: #fff;
+            text-decoration: none;
+            font-family: 'ZCOOL KuaiLe', cursive;
+        }
+
     </style>
 </head>
 <body>
@@ -34,6 +72,11 @@
             </li>
         </ul>
     </nav>
+
+    <!-- 3. TV박스 -->
+    <section class="tvset">
+        <div class="screen"></div>
+    </section>
     
 </body>
 </html>
