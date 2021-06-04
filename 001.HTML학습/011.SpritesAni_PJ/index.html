@@ -311,6 +311,15 @@
         .big2:hover{
             transform: scale(.7);
         }
+
+        /* 
+            [ z-index 사용의 일반용법 ]
+            1. z-index는 static이 아닌 포지션에 적용된다!
+            2. z-index는 부모요소에 설정되지 않은 경우
+                자식요소급에 설정된 요소와 비교한다!
+            3. z-index는 부모요소에 설정된 경우 자식요소의
+                z-index를 높여도 부모급요소보다 올라갈 수 없다!
+         */
     </style>
 </head>
 
