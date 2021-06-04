@@ -145,7 +145,7 @@
 
             (비율이 유지되는 이미지이므로 가로/세로중 한쪽값을 변경하면
             다른쪽값은 자동으로 변경된다!)
-            
+
             참고) 비례식사용
                 가로 : 세로 = 1472px : 325px = x : 176px
                 x = 1472*176/325 = 797.14
@@ -157,6 +157,21 @@
 
                 -> 장면찍는 steps를 사용할때는 이징(가속도)불필요!
          */
+
+         /* 3-2.꼬마 */
+         .spani2{
+             position: absolute;
+             bottom: 0;
+             left: 0;
+             width: 50px;
+             /* 전체가로크기 500px의 한장면크기(1/10장면) */
+             height: 72px;
+
+             background-image: url(./images/spAni01.png);
+             background-repeat: no-repeat;
+
+             outline: 2px dotted yellow;
+         }
 
     </style>
 </head>
@@ -190,9 +205,12 @@
             <div class="spani1">
                 <span class="ir">걷는존</span>
             </div>
+            <!-- 3-2.꼬마 -->
+            <div class="spani2">
+                <span class="ir">손흔드는 꼬마</span>
+            </div>
         </div>
     </section>
-    <img src="./images/spAni03.png" style="height: 176px;" alt="">
 </body>
 
 </html>
