@@ -322,6 +322,40 @@
 
             -> 테스트는 h1.mtit 요소와 .spani1요소를 비교해보라!
          */
+
+        /* 3-4. 흐르는 자막 */
+        .fcap{
+            position: absolute;
+            /* 부모? .screen */
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            outline: 2px dashed red;
+        }
+        /* 움직일박스 */
+        .fcap ol{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 200%;
+            /* 옆에서 글자가 나와야 하므로 2배수로 함 */
+            height: 100%;
+        }
+        .fcap li{
+            float: left;
+            width: 12.5%;/* 8등분크기 */
+            height: 100%;
+
+            text-align: center;
+            font: bold 14px/20px Verdana;
+            color: #fff;
+            text-shadow: 1px 1px 1px #000;
+
+            outline: 2px dotted blue;
+        }
+
+
     </style>
 </head>
 
