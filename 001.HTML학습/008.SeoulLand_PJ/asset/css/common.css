@@ -365,3 +365,55 @@ body{
 .snsico li:last-child a{
     border-right: 1px solid #c8c8c8;
 }
+
+/* 하단로고 */
+.blogo{
+    vertical-align: top;
+    margin-top: 12px;
+}
+
+/* 회사주소 */
+.addr{
+    display: inline-block;
+    width: 640px;
+    margin-left: 34px;
+    margin-top: 8px;
+    font: normal bold 10px/14px ng;
+    /* 스타일 두께 크기/줄간격 글자체 (스두크/줄체) */
+    color: #808080;
+}
+/* 바기준 간격주기 */
+.addr span{
+    margin: 0 -2px;
+}
+/* 카피라이트 */
+.copy{
+    display: block;
+    margin-left: 3px;
+    margin-top: 4px;
+    font-family: arial;
+}
+
+/* 패밀리사이트 선택박스 */
+#fslink{
+    width: 162px;
+    height: 19px;
+    transform: translate(2px,-4px);
+    /* 트랜스폼으로 다른요소에 영향없이 이동함
+    select박스는 display:inline-block이므로 
+    트랜스폼 적용이 가능함 */
+
+    font-family: arial;
+    font-size: 11px;
+    color: #979797;
+    padding-left: 4px;
+    box-shadow: inset 1px 1px 8px #d1d1d1;
+    margin-top: 14px;
+    margin-left: -23px;
+
+}
+/* 크롬 브라우저 포커스 아웃라인 없애기 */
+/* :focus 포커스 가상클래스 */
+#fslink:focus{
+    outline: none;
+}
