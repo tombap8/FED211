@@ -269,6 +269,27 @@ body{
 
 
 /************* 하단영역 ***********/
+#info{/* 겉박스 */
+    position: relative;
+    /* 부모자격 - 배경바 가상요소 */
+}
+/* 배경바 가상요소 */
+#info::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1px;/* 조정 */
+    left: 0;
+    width: 100%;
+    height: 36px;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #e2e2e2;
+    z-index: -1;
+    /* z-index 값이 마이너스이면 
+    포지션이 없는 0층의 요소보다 아래로 내려간다! */
+}
 .info{
     height: 130px;
 }
@@ -312,7 +333,7 @@ body{
     width: 39px;
     height: 34px;
     background: url(../images/ico_sns.png) no-repeat;
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
 }
 /* 개별위치설정(Sprites) */
 .snsico li:nth-child(2){/* 카스 */
@@ -326,4 +347,21 @@ body{
 }
 .snsico li:nth-child(5){/* 유튜브 */
     background-position: -156px 0;
+}
+
+/* sns a요소 */
+.snsico a{
+    display: block;
+    /* 디자인적용위해 */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    /* 보더,패딩포함(크기유지) */
+}
+/* 사이구분선 */
+.snsico li a{
+    border-left: 1px solid #c8c8c8;
+}
+.snsico li:last-child a{
+    border-right: 1px solid #c8c8c8;
 }
