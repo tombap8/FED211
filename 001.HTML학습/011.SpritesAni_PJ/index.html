@@ -251,6 +251,64 @@
                 (방향은 마이너스) */
             }
         }/* 키프레임 */
+
+
+        /* 웃는여자 */
+        .spani4{
+            position: absolute;
+            top: 7%;
+            right: 10%;
+            width: 256px;
+            /* 전체가로크기 1280px 중 한장면크기(1/5장면) */
+            height: 407px;
+            /* 전체세로크기 1222px 중 한줄크기(1/3줄) */
+
+            transform: scale(.5);/* 크기를 스케일로 줄임 */
+
+            background-image: url(images/girl_frames.png);
+            background-repeat: no-repeat;
+
+            border: 20px ridge brown;
+
+            /* 애니메이션: 이름 시간 steps(n) infinite */
+            animation: spani4X 1s steps(5) infinite,
+                        spani4Y 3s steps(3) infinite;
+
+        }
+        /* 웃는여자 키프레임 X축 */
+        @keyframes spani4X {
+            from{
+                background-position-x: 0;
+            }
+            to{
+                background-position-x: -1280px;
+            }
+        } /* 키프레임 */
+
+        /* 웃는여자 키프레임 Y축 */
+        @keyframes spani4Y {
+            from{
+                background-position-y: 0;
+            }
+            to{
+                background-position-y: -1222px;
+            }
+        } /* 키프레임 */
+
+
+        /* 확대애니메이션 class */
+        .big{
+            transition: .8s;
+        }
+        .big:hover{
+            transform: scale(3);
+            animation-play-state: paused;
+            /* 애니메이션 멈추기(paused) / 애니메이션 지속(running) */
+        }
+        /* 웃는여자용 */
+        .big2:hover{
+            transform: scale(.7);
+        }
     </style>
 </head>
 
@@ -280,19 +338,25 @@
         <!-- 스크린 -->
         <div class="screen">
             <!-- 3-1.걷는존 -->
-            <div class="spani1">
+            <div class="spani1 big">
                 <span class="ir">걷는존</span>
             </div>
             <!-- 3-2.꼬마 -->
-            <div class="spani2">
+            <div class="spani2 big">
                 <span class="ir">손흔드는 꼬마</span>
             </div>
             <!-- 3-3.몬스터 -->
-            <div class="spani3">
+            <div class="spani3 big">
                 <span class="ir">머리흔드는 몬스터</span>
             </div>
         </div>
     </section>
+
+    <!-- 추가애니 -->
+    <div class="spani4 big big2">
+        <span class="ir">웃는여자</span>
+    </div>
+
 </body>
 
 </html>
