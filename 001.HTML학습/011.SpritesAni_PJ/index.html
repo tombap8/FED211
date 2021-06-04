@@ -23,7 +23,8 @@
         }
 
         /* 공통class */
-        .ir{/* IR(배경설명숨기기) */
+        .ir {
+            /* IR(배경설명숨기기) */
             display: block;
             width: 0;
             height: 0;
@@ -95,48 +96,59 @@
             height: 227px;
 
             background-image: url(./images/street.jpg);
-            background-repeat: repeat-x;/* x축반복 */
-            background-size: auto 100%;/* 높이값에 맞춤 */
+            background-repeat: repeat-x;
+            /* x축반복 */
+            background-size: auto 100%;
+            /* 높이값에 맞춤 */
             /* outline: 2px dashed red; */
 
             /* 애니메이션: 이시이지반방마 */
             animation: street 4s linear infinite;
 
         }
+
         /* 스크린배경이동 키프레임 */
         @keyframes street {
-            from{
+            from {
                 background-position: 0 0;
             }
-            to{
+
+            to {
                 background-position: -387px 0;
                 /* x축이동수치는 처음 시작이미지 위치와 같은 위치값 */
             }
-        }/* 키프레임 */
+        }
+
+        /* 키프레임 */
 
         /* 3-1.걷는존 */
-        .spani1{
+        .spani1 {
             width: 100px;
             /* 줄어든 이미지 가로크기(797px) 8등분 크기 */
             height: 176px;
-            margin: 0 auto;/* 가로중앙 */
+            margin: 0 auto;
+            /* 가로중앙 */
             margin-top: 23px;
             outline: 2px dotted blue;
             background-image: url(./images/spAni03.png);
             background-size: auto 176px;
-            
+
             /* 애니메이션: 이시이지반방마 */
             animation: spani1 1s steps(8) infinite;
         }
+
         /* 걷는존 키프레임 */
         @keyframes spani1 {
-            from{
+            from {
                 background-position: 0 0;
             }
-            to{
+
+            to {
                 background-position: -797px 0;
             }
-        }/* 키프레임 */
+        }
+
+        /* 키프레임 */
 
         /* 
             [ 스프라이츠를 이용한 장면 넘기기 애니를 하려면? ]
@@ -156,23 +168,79 @@
                 animation: 이름 시간 steps(장면개수) infinite;
 
                 -> 장면찍는 steps를 사용할때는 이징(가속도)불필요!
+
+                [ 여러줄 애니메이션 처리법 ]
+                배경이미지 이동을 x,y축으로 분리하여 셋팅함
+
+                1. x축이동 : steps(장면수)
+                    background-position-x : 값;
+
+                2. y축이동 : steps(줄수)
+                    background-position-y : 값;
          */
 
-         /* 3-2.꼬마 */
-         .spani2{
-             position: absolute;
-             bottom: 0;
-             left: 0;
-             width: 50px;
-             /* 전체가로크기 500px의 한장면크기(1/10장면) */
-             height: 72px;
+        /* 3-2.꼬마 */
+        .spani2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            /* 전체가로크기 500px의 한장면크기(1/10장면) */
+            height: 72px;
 
-             background-image: url(./images/spAni01.png);
-             background-repeat: no-repeat;
+            background-image: url(./images/spAni01.png);
+            background-repeat: no-repeat;
 
-             outline: 2px dotted yellow;
-         }
+            outline: 2px dotted yellow;
 
+            /* 애니메이션: 이름 시간 steps(n) infinite */
+            animation: spani2 1s steps(10) infinite;
+        }
+
+        /* 꼬마 키프레임 */
+        @keyframes spani2 {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: -500px 0;
+            }
+        } /* 키프레임 */
+
+        /* 3-3.몬스터 */
+        .spani3{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 118px;
+            /* 가로크기 710px의 한장면크기(1/6장면) */
+            height: 118px;
+
+            background-image: url(./images/spAni02.png);
+            background-repeat: no-repeat;
+
+
+            outline: 2px dotted red;
+        }
+        /* 몬스터 키프레임 X축 */
+        @keyframes spani3X {
+            from{
+                background-position-x: 0;
+            }
+            to{
+                background-position-x: 0;
+            }
+        }/* 키프레임 */
+        /* 몬스터 키프레임 Y축 */
+        @keyframes spani3Y {
+            from{
+                background-position-y: 0;
+            }
+            to{
+                background-position-y: 0;
+            }
+        }/* 키프레임 */
     </style>
 </head>
 
@@ -208,6 +276,10 @@
             <!-- 3-2.꼬마 -->
             <div class="spani2">
                 <span class="ir">손흔드는 꼬마</span>
+            </div>
+            <!-- 3-3.몬스터 -->
+            <div class="spani3">
+                <span class="ir">머리흔드는 몬스터</span>
             </div>
         </div>
     </section>
