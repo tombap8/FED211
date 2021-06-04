@@ -216,6 +216,7 @@
             width: 118px;
             /* 가로크기 710px의 한장면크기(1/6장면) */
             height: 118px;
+            /* 세로크기 355px의 한줄크기(1/3줄) */
 
             background-image: url(./images/spAni02.png);
             background-repeat: no-repeat;
@@ -229,7 +230,9 @@
                 background-position-x: 0;
             }
             to{
-                background-position-x: 0;
+                background-position-x: -710px;
+                /* 배경이미지의 width크기를 써준다!
+                (방향은 마이너스) */
             }
         }/* 키프레임 */
         /* 몬스터 키프레임 Y축 */
@@ -238,7 +241,9 @@
                 background-position-y: 0;
             }
             to{
-                background-position-y: 0;
+                background-position-y: -355px;
+                /* 배경이미지의 height크기를 써준다!
+                (방향은 마이너스) */
             }
         }/* 키프레임 */
     </style>
