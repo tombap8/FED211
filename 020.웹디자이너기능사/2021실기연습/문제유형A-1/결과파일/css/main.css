@@ -8,3 +8,32 @@ body *{
     outline: 2px dashed blue;
     /* background-color: red; 연결확인 */
 }
+/* 공통 CSS */
+
+/* 중앙정렬박스 */
+.ibx{
+    width: 1200px;
+    margin: 0 auto;/* 마영오 */
+}
+/* 파티션박스 */
+.pbx{
+    float: left;
+    height: 100%;/* 부모높이채움! */
+}
+
+/* A */
+.top{
+    height: 100px;
+}
+/* B */
+.ban{
+    height: 300px;
+}
+/* C */
+.cont{
+    height: 200px;
+}
+/* D */
+.info{
+    height: 100px;
+}
