@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* 메인 CSS - main.css */
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body *{
+    outline: 2px dashed blue;
+    /* background-color: red; 연결확인 */
+}
