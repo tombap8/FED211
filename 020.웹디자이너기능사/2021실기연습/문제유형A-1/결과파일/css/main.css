@@ -25,6 +25,14 @@ body *{
 .top{
     height: 100px;
 }
+/* 파티션가로값 */
+.top1{
+    width: 200px;
+}
+.top2{
+    width: 1000px;
+}
+
 /* B */
 .ban{
     height: 300px;
@@ -33,7 +41,24 @@ body *{
 .cont{
     height: 200px;
 }
+/* 파티션가로값 (한꺼번에 등분할!) */
+.cont>.pbx{
+    width: 400px;
+}
+
+
 /* D */
 .info{
     height: 100px;
 }
+/* 파티션가로값 */
+.info1{
+    width: 200px;
+}
+.info2{
+    width: 800px;
+}
+.info3{
+    width: 200px;
+}
+
