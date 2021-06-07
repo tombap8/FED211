@@ -19,6 +19,9 @@ body *{
 .pbx{
     float: left;
     height: 100%;/* 부모높이채움! */
+    padding: 10px;
+    box-sizing: border-box;
+    /* 박스가 패딩때문에 커지는 것을 방지! */
 }
 
 /* A */
