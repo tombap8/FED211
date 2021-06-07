@@ -14,6 +14,19 @@
         body{
             background: url(./images/space.jpg) no-repeat center/auto 200%;
         }
+        /* 공통 */
+        a{
+            text-decoration: none;
+            /* 밑줄없앰 */
+        }
+        img{
+            border: none;
+            /* 이미지링크시 보더없앰 */
+            vertical-align: middle;
+            /* 인라인요소가 오른쪽요소의 세로정렬
+            (middle은 세로중앙) */
+        }
+
         /* 갤러리부모박스 */
         #wrap{
             width: 520px;
@@ -21,6 +34,12 @@
             text-align: center;
             padding-top: 20px;
             outline: 2px dotted red;
+        }
+        /* 메인 이미지 박스 */
+        #mbox{
+            display: inline-block;
+            /* block처럼 디자인적용되며
+            inline처럼 한줄에 온다! */
         }
     </style>
 </head>
