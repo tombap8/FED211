@@ -65,7 +65,7 @@ window.addEventListener("load",function(){
 
     };/////// click이벤트 함수 ///////////////
 
-    // 5. 슬라이드 왼쪽 이동버튼 셋업
+    // 5. 슬라이드 왼쪽 이동버튼 셋업 ////////
     document.querySelector(".ab1").onclick = 
     function(){
         // 1. 호출확인
@@ -73,17 +73,31 @@ window.addEventListener("load",function(){
         
         // 2. 변경대상 : #slide -> 바깥에 변수 slide
 
-        // 3. 슬라이드 번호 감소하기!
-        snum--;//1씩감소
-        // 한계값설정(첫번호보다 작아지면 끝으로 가기 또는 고정!)
-        //if(snum === -1) snum = 0; // 첫번호 고정!
-        if(snum === -1) snum = 4; // 끝으로 가기!
+        // 3.먼저 맨 뒤의 li를 맨 앞으로이동한다!
+        // 마지막 li
+        var last = slide.querySelectorAll("li")[4];
+        // 첫번째 li
+        var first = slide.querySelectorAll("li")[0];
+        // [insertBefore 메서드] - 특정요소 앞에 넣기(이동하기)
+        // insertBefore(넣을놈,넣을놈전놈) 넣을놈에 이동대상
+        // 넣을놈전놈에 넣을 대상뒤에 올 요소를 써준다!
+        slide.insertBefore(last,first);
 
-        console.log("슬번:"+snum);
+        // 4. 이때 left값을 -100%로 만든다!
+        slide.style.left = "-100%";
+        // 5. 이때 트랜지션을 없앤다!
+        slide.style.transition = "none";
 
-        // 4. 변경내용 : 슬라이드 left값 왼쪽이동으로 변경
-        slide.style.left = (snum*-100) + "%";
+        // 6. 변경내용 : 슬라이드 left값 왼쪽이동으로 변경
+        slide.style.left = "0%";
         slide.style.transition = "left .8s ease-in-out";
+
+        // [ 오른쪽으로 이동하는 무한이동 슬라이드의 원리 ]
+        // 1.먼저 마지막 슬라이드를 맨 앞으로 보낸다!
+        // 2. 1번을 실행시 동시에 left값을 -100%로 만들어준다
+        // 이때 주의 사항은 left의 트랜지션을 없애야함!
+        // 3.오른쪽으로 슬라이드를  이동한다! - left:0 
+        // 슬라이드 이동시 트랜지션을 줄것!
 
 
     };/////// click이벤트 함수 ///////////////
