@@ -84,12 +84,28 @@ li{
 }
 /* 서브메뉴 */
 .gnb ol{
-    height: 200px;
+    height: 0;/* 200px; */
     background-color: rgba(218, 238, 255, 0.74);
+    overflow: hidden;/* 숨기기 */
+    transition: height .4s;
+}
+/* .gnb에 마우스 오버시 서브메뉴 모두 나타나기 */
+.gnb:hover ol{
+    height: 200px;
 }
 /* 서브메뉴 a */
 .gnb ol a{
     font-size: 16px;
+}
+
+/* 하이라이트 설정 */
+/* 상위,하위메뉴 */
+.gnb li:hover>a{
+    color: #fff;
+}
+/* 하위메뉴 */
+.gnb ol li:hover a{
+    background-color: rgb(0, 54, 233);
 }
 
 
