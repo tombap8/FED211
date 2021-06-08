@@ -1,4 +1,5 @@
-// 쇼핑몰 PJ 메인 JS - main.js
+//// 쇼핑몰 PJ 2 메인 JS - main.js//////
+/////// 무한이동 슬라이드 버전 /////////
 
 /////////// html로드구역 /////////////////////
 // load 이벤트 / DOMContentLoaded 이벤트
@@ -17,7 +18,7 @@ window.addEventListener("load",function(){
     // 3. 변경대상: #slide
     var slide = document.querySelector("#slide");
 
-    // 4. 슬라이드 오른쪽 이동버튼 셋업
+    // 4. 슬라이드 오른쪽 이동버튼 셋업 ///////
     document.querySelector(".ab2").onclick = 
     function(){
         // 1. 호출확인
@@ -25,16 +26,8 @@ window.addEventListener("load",function(){
         
         // 2. 변경대상 : #slide -> 바깥에 변수 slide
 
-        // 3. 슬라이드 번호 증가하기!
-        snum++;//1씩증가
-        // 한계값설정(끝번호보다 커지면 처음으로 가기 또는 고정!)
-        //if(snum === 5) snum = 4; // 끝번호 고정!
-        if(snum === 5) snum = 0; // 처음으로 가기!
-
-        console.log("슬번:"+snum);
-
-        // 4. 변경내용 : 슬라이드 left값 왼쪽이동으로 변경
-        slide.style.left = (snum*-100) + "%";
+        // 3. 변경내용 : 슬라이드 left값 왼쪽이동으로 변경
+        slide.style.left = "-100%";
         slide.style.transition = "left .8s ease-in-out";
 
 
