@@ -4,6 +4,15 @@ html,body{
     margin: 0;
     padding: 0;
 }
+body{
+    color: #333;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+
 body *{
     outline: 2px dashed blue;
     /* background-color: red; 연결확인 */
@@ -52,9 +61,11 @@ li{
 .gnb{
     position: absolute;
     top: 25px;
-    left: 100px;
+    right: 50px;
+    /* 부모는? 싸고있는 .pbx.prt */
     width: 800px;
     height: 50px;
+    background-color: rgb(117, 188, 255);
 }
 .gnb li{
     width: 200px;
@@ -70,6 +81,15 @@ li{
     font-weight: bold;
     line-height: 50px;
     text-align: center;
+}
+/* 서브메뉴 */
+.gnb ol{
+    height: 200px;
+    background-color: rgba(218, 238, 255, 0.74);
+}
+/* 서브메뉴 a */
+.gnb ol a{
+    font-size: 16px;
 }
 
 
