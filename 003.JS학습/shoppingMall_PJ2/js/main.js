@@ -88,9 +88,14 @@ window.addEventListener("load",function(){
         // 5. 이때 트랜지션을 없앤다!
         slide.style.transition = "none";
 
+
         // 6. 변경내용 : 슬라이드 left값 왼쪽이동으로 변경
-        slide.style.left = "0%";
-        slide.style.transition = "left .8s ease-in-out";
+        // 주의사항!!! 변경내용을 잘 반영하려면 위의 설정과
+        // 아래 변경내용의 실행시간에 차이가 있어야함!!!
+        setTimeout(function(){
+            slide.style.left = "0%";
+            slide.style.transition = "left .8s ease-in-out";
+        },10);//// 타임아웃함수(0.01초 시차를 줌) /////
 
         // [ 오른쪽으로 이동하는 무한이동 슬라이드의 원리 ]
         // 1.먼저 마지막 슬라이드를 맨 앞으로 보낸다!
