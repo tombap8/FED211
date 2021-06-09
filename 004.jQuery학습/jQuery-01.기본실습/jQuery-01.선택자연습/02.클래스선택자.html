@@ -10,6 +10,16 @@
 			// 클릭할 경우 배경색을 lime
 			// 글자크기는 52px로 변경하시오.
 			// 단, transition 을 "all .6s"로 설정하여 애니메이션 되게 하시오.
+			$(".group").click(function(){
+
+				// this 키워드는 .group자신!
+				$(this).css({
+					background:"lime",
+					fontSize:"52px",
+					transition:".6s"
+				});/////// css ///////
+
+			});////////// click ///////////
 			
 			
 			
