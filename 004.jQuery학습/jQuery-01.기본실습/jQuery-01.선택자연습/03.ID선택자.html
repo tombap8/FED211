@@ -22,11 +22,31 @@ $(document).ready(function(e) {
         transition:".8s"
       });////// css /////////////
 
+      // 2. 아이디가 main인 요소의 글자를 "공유"라고 쓰고 배경색은 파란색, 글자색은 흰색, 테두리는 3px 노란색, 글자크기는 52px로 변경하시오.
+      $("#main")
+      .text("공유")
+      .css({
+        background:"blue",
+        color: "#fff",
+        border:"3px solid yellow",
+        fontSize:"52px",
+        transition:".8s 1s"
+      });//////// css /////
+
+      // 3. 아이디가 total인 요소의 글자를 "싸랑해요~!"라고 쓰고 배경색은 검은색, 글자색은 빨간색, 테두리는 2px 보라색, 글자크기는 152px로 변경하시오.
+      $("#total")
+      .text("싸랑해요~!")
+      .css({
+        background:"black",
+        color:"red",
+        border:"2px solid purple",
+        fontSize:"152px",
+        transition:".8s 2s"
+      });/////// css ///////
+
 
     });///////// click /////////////////
 
-	// 2. 아이디가 main인 요소의 글자를 "공유"라고 쓰고 배경색은 파란색, 글자색은 흰색, 테두리는 3px 노란색, 글자크기는 52px로 변경하시오.
-	// 3. 아이디가 total인 요소의 글자를 "싸랑해요~!"라고 쓰고 배경색은 검은색, 글자색은 빨간색, 테두리는 2px 보라색, 글자크기는 152px로 변경하시오.
 	// 위의 세가지 아이디를 1초간격으로 애니메이션 설정하시오(transition) - 기본은 "all .8s 지연시간"
 	
 	// 텍스트 변경하는 jQuery 메서드
