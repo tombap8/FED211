@@ -14,24 +14,21 @@ var snum = 0;
 
 setInterval(function(){
 
-    // 0. 슬라이드 순번 증가하기!
-    snum++;
-    if(snum===3) snum=0;
-    //한계수에서 처음으로!
-
     // 1. 호출여부확인
-    console.log("인터발!!!"+snum);
+    console.log("인터발!!!");
 
     // 2. 대상선정: .slide li
     var tg = document.querySelectorAll(".slide li");
 
-    // 3. 대상모두 class="on" 제거하기
-    // for(시;한;증){}
-    for(var i=0; i<3; i++){
-        tg[i].classList.remove("on");
-    } //////// for //////////////////
+    // 3. 이전순번 슬라이드 class="on" 제거하기
+    tg[snum].classList.remove("on");
 
-    // 4. 해당순번만 class="on" 주기!
+    // 4. 슬라이드 순번 증가하기!
+    snum++;
+    if(snum===3) snum=0;
+    //한계수에서 처음으로!
+
+    // 5. 해당순번만 class="on" 주기!
     tg[snum].classList.add("on");
 
 },3000);// 인터발함수 //////////////
