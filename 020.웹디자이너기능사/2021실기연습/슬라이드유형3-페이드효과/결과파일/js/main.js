@@ -22,6 +22,11 @@ setInterval(function(){
 
     // 3. 이전순번 슬라이드 class="on" 제거하기
     tg[snum].classList.remove("on");
+    // tg변수는 요소 li들을 담고 있는 컬렉션이다
+    // 이들 중 특정 순번의 li를 접근할 경우
+    // 변수[순번] 또는 변수.item(순번)
+    // 위의 경우 순번은 변수 snum에 할당되어 있으므로
+    // tg[snum] 또는 tg.item(snum) 으로 표현할 수 있다
 
     // 4. 슬라이드 순번 증가하기!
     snum++;
