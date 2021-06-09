@@ -57,6 +57,11 @@ li{
 .top2{
     width: 1000px;
 }
+/* 로고 */
+.logo{
+    margin-left: -10px;
+}
+
 /* 메뉴 */
 .gnb{
     position: absolute;
@@ -118,7 +123,14 @@ li{
 /******************* B *******************/
 .ban{
     height: 300px;
+    overflow: hidden;/* 넘치는 슬라이드 숨기기 */
 }
+/* 슬라이드 */
+.slide{
+    position: relative;
+    top: 0;
+}
+
 /********************** C **********************/
 .cont{
     height: 200px;
