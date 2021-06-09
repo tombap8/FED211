@@ -128,7 +128,21 @@ li{
 /* 슬라이드 */
 .slide{
     position: relative;
-    top: 0;
+    /* 부모자격 */
+}
+/* 슬라이드 리스트 공통 */
+.slide li{
+    position: absolute;
+    /* 서로겹침! */
+    opacity: 0;
+    /* 모두 투명하게! */
+    transition: .6s;
+    /* 트랜지션 */
+}
+/* 슬라이드 중 현재 슬라이드 클래스 */
+.slide li.on{
+    opacity: 1;/* 보이게 */
+    z-index: 1;/* 맨위에 */
 }
 
 /********************** C **********************/
