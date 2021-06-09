@@ -69,7 +69,8 @@ li{
 }
 .gnb li{
     width: 200px;
-    height: 50px;
+    /* height: 50px; */
+    /* li의 높이값을 안주면 a에 설정된 줄간격이 높이값이됨! */
 }
 .gnb a{
     display: block;
@@ -91,11 +92,13 @@ li{
 }
 /* .gnb에 마우스 오버시 서브메뉴 모두 나타나기 */
 .gnb:hover ol{
-    height: 200px;
+    height: 160px;
+    /* 줄간격 40px * 4 = 160px */
 }
 /* 서브메뉴 a */
 .gnb ol a{
     font-size: 16px;
+    line-height: 40px;
 }
 
 /* 하이라이트 설정 */
