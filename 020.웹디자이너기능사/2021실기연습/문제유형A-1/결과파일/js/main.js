@@ -20,18 +20,27 @@ setInterval(function(){
     tg.style.transition = ".6s";
 
     // 4. 이동후 작업! /////////////////////
+    // 위의 이동설정과 약간의 시차가 필요함!
+    // 왜? top값, transition값이 변경되므로!
 
-    // 4-1. 첫번째 li를 잘라서 맨뒤로 이동함!
-    // 첫번째 li 선택
-    var first = tg.querySelectorAll("li")[0];
-    // 맨뒤로 이동 메서드 -> appendChild(요소)
-    tg.appendChild(first);
+    // 일정시간 후 한번 함수실행!
+    setTimeout(function(){
+        
+        // 4-1. 첫번째 li를 잘라서 맨뒤로 이동함!
+        // 첫번째 li 선택
+        var first = tg.querySelectorAll("li")[0];
+        // 맨뒤로 이동 메서드 -> appendChild(요소)
+        tg.appendChild(first);
+    
+        // 4-2. top값이 -100%이므로 0으로 변경!
+        tg.style.top = "0";
+    
+        // 4-3. 이때 트랜지션 없애기!
+        tg.style.transition = "none";
 
-    // 4-2. top값이 -100%이므로 0으로 변경!
-    tg.style.top = "0";
+    },10);/////// 타임아웃함수 ////////////////
+    //////////////////////////////////////////
 
-    // 4-3. 이때 트랜지션 없애기!
-    tg.style.transition = "none";
 
 },3000);// 인터발함수 //////////////
 ///////////////////////////////////
