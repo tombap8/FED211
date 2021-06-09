@@ -20,12 +20,12 @@ setInterval(function(){
     tg.style.transition = ".6s";
 
     // 4. 이동후 작업! /////////////////////
-    
+
     // 4-1. 첫번째 li를 잘라서 맨뒤로 이동함!
     // 첫번째 li 선택
-    var first = slide.querySelectorAll("li")[0];
+    var first = tg.querySelectorAll("li")[0];
     // 맨뒤로 이동 메서드 -> appendChild(요소)
-    slide.appendChild(first);
+    tg.appendChild(first);
 
 },3000);// 인터발함수 //////////////
 ///////////////////////////////////
