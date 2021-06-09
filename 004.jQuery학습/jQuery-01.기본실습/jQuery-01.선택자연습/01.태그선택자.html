@@ -83,6 +83,8 @@
           빼고 대문자로 시작함
           예) font-size -> fontSize    
 
+          주의사항) css메서드 하나만 사용하는 경우 변수형사용불가!
+
         3. click 메서드
 
         - 형식: $(선택자).click(함수)
@@ -95,15 +97,30 @@
         // 제이쿼리 코드 블록은 html태그가 모두
         // 로딩된 후 실행됨! (DOMContentLoaded이벤트)
 
+        // 미션: header태그를 클릭하면 큰제목 배경색을 노란색으로 변경하시오.
+        $("header").click(function(){
+            console.log("헤더클릭!");
 
+            $("h2").css("background-color","yellow");
 
+            // $("h2").css({
+            //   backgroundColor:"yellow"
+            // });
+            
+            // 추가미션: 동시에 nav태그의 배경색은 녹색, 테두리는 2px 빨간색선, 글자크기는 40px, 글자색은 파란색으로 변경하시오.
+            $("nav").css({
+              background:"green",
+              border:"2px solid red",
+              fontSize:"40px",
+              color:"blue"
+            });///// css /////
+            
+          });//////// click ////////////
 
       });/////////// jQB ///////////////////
 
 
 	
-		// 미션: header태그를 클릭하면 큰제목 배경색을 노란색으로 변경하시오.
-		// 추가미션: 동시에 nav태그의 배경색은 녹색, 테두리는 2px 빨간색선, 글자크기는 40px, 글자색은 파란색으로 변경하시오.
 		
 	
 	
