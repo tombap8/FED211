@@ -26,6 +26,7 @@ setInterval(function(){
     var tg = document.querySelectorAll(".slide li");
 
     // 3. 대상모두 class="on" 제거하기
+    // for(시;한;증){}
     for(var i=0; i<3; i++){
         tg[i].classList.remove("on");
     } //////// for //////////////////
@@ -35,3 +36,9 @@ setInterval(function(){
 
 },3000);// 인터발함수 //////////////
 ///////////////////////////////////
+
+// classList 객체
+// - 요소에 클래스를 넣고 빼는 기능을 가진 객체
+// 1) add(클래스명) - 클래스 넣기
+// 2) remove(클래스명) - 클래스 지우기
+// 1) toggle(클래스명) - 클래스 없으면 넣고 있으면 지우기
