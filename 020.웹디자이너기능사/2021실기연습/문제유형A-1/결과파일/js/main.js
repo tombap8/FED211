@@ -27,5 +27,11 @@ setInterval(function(){
     // 맨뒤로 이동 메서드 -> appendChild(요소)
     tg.appendChild(first);
 
+    // 4-2. top값이 -100%이므로 0으로 변경!
+    tg.style.top = "0";
+
+    // 4-3. 이때 트랜지션 없애기!
+    tg.style.transition = "none";
+
 },3000);// 인터발함수 //////////////
 ///////////////////////////////////
