@@ -214,6 +214,19 @@ li{
     border: 1px solid #777;
 }
 
+/* 팝업창 */
+.pop{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    padding: 10px;
+    z-index: 999;
+    background-color: #fff;
+    border: 2px solid #777;
+}
+
 
 /******************** D ********************/
 .info{
