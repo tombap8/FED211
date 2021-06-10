@@ -48,7 +48,9 @@ li{
 
 /****************** A ******************/
 .top{
+    position: relative;/* z-index때문에 줌 */
     height: 100px;
+    z-index: 999;/* 가장위 */
 }
 /* 파티션가로값 */
 .top1{
@@ -91,7 +93,7 @@ li{
 /* 서브메뉴 */
 .gnb ol{
     height: 0;/* 200px; */
-    background-color: rgba(218, 238, 255, 0.74);
+    background-color: rgba(218, 238, 255, 0.9);
     overflow: hidden;/* 숨기기 */
     transition: height .4s;
 }
@@ -138,6 +140,18 @@ li{
 /* 파티션가로값 (한꺼번에 등분할!) */
 .cont>.pbx{
     width: 400px;
+}
+
+/* 탭메뉴 */
+.tm{
+    width: 200px;
+    height: 40px;
+}
+.tm li a{
+    display: block;
+    width: 100px;
+    text-align: center;
+    line-height: 40px;
 }
 
 
