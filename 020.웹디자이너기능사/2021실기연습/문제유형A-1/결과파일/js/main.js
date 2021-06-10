@@ -65,13 +65,13 @@ function chgTab(i1,i2){
 
     // 3. 클래스 on 빼기, on 넣기
 
-    // 3-1. 클래스 빼기
+    // 3-1. 클래스 빼기 : classList.remove(클래스명)
     tm[i1].classList.remove("on");
     tc[i1].classList.remove("on");
 
-    // 3-2. 클래스 넣기
-    tm[i2].classList.remove("on");
-    tc[i2].classList.remove("on");
+    // 3-2. 클래스 넣기 : classList.add(클래스명)
+    tm[i2].classList.add("on");
+    tc[i2].classList.add("on");
 
 
 } //////// chgTab함수 ////////////////////
