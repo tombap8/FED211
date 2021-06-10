@@ -44,3 +44,35 @@ setInterval(function(){
 
 },3000);// 인터발함수 //////////////
 ///////////////////////////////////
+
+
+/*////////////////////////////////////////
+    함수명 : chgTab
+    기능: 탭메뉴 변경하기
+*/////////////////////////////////////////
+function chgTab(i1,i2){
+    // i1 - 클래스를 뺄 li순번
+    // i2 - 클래스를 넣을 li순번
+    
+    // 1. 함수호출확인
+    console.log("탭변경!"+i1+"/"+i2);
+
+    // 2. 대상선정: .tm>li 탭메뉴li, .tc>li 탭내용li
+    // 2-1. 탭메뉴li
+    var tm = document.querySelectorAll(".tm>li");
+    // 2-2. 탭내용li
+    var tc = document.querySelectorAll(".tc>li");
+
+    // 3. 클래스 on 빼기, on 넣기
+
+    // 3-1. 클래스 빼기
+    tm[i1].classList.remove("on");
+    tc[i1].classList.remove("on");
+
+    // 3-2. 클래스 넣기
+    tm[i2].classList.remove("on");
+    tc[i2].classList.remove("on");
+
+
+} //////// chgTab함수 ////////////////////
+//////////////////////////////////////////

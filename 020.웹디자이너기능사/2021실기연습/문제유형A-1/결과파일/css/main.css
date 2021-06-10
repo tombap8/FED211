@@ -225,6 +225,7 @@ li{
     z-index: 999;
     background-color: #fff;
     border: 3px solid #888;
+    display: none;/* 처음에 안보임! */
 }
 .pop h1{/* 팝업제목 */
     font-size: 24px;
