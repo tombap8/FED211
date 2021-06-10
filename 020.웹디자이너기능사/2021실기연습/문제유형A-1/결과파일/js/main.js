@@ -80,16 +80,16 @@ function chgTab(i1,i2){
     함수명: popup
     기능: 팝업 열기/닫기
 */////////////////////////////////////////
-function popup(){
+function popup(sts){ // sts 팝업상태 전달값(block/none)
 
     // 1. 함수호출여부
-    console.log("팝업!!!");
+    console.log("팝업!!!" + sts);
 
     // 2. 변경대상 : .pop
     var pop = document.querySelector(".pop");
 
-    // 3. 변경내용 : 팝업창 보이기
-    pop.style.display = "block";
+    // 3. 변경내용 : 팝업창 보이기/숨기기
+    pop.style.display = sts;
 
 } /////// popup함수 //////////////////////
 //////////////////////////////////////////
