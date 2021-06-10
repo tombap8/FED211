@@ -160,6 +160,23 @@ li{
     background-color: #fff;
 }
 
+/* 탭내용박스 */
+.tc{
+    height: 138px;
+    background-color: #fff;
+}
+
+/* 공지사항 리스트박스 */
+.gong li{
+    float: none;
+}
+.gong a{
+    display: inline-block;
+    width: 70%;
+    white-space: nowrap;
+    /* 줄바꿈방지 */
+}
+
 
 /******************** D ********************/
 .info{
