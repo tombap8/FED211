@@ -14,7 +14,7 @@ a{
 
 
 body *{
-    outline: 2px dashed blue;
+    /* outline: 2px dashed blue; */
     /* background-color: red; 연결확인 */
 }
 ul,ol{
@@ -251,15 +251,27 @@ li{
 /******************** D ********************/
 .info{
     height: 100px;
+    background-color: #ccc;
 }
 /* 파티션가로값 */
 .info1{
     width: 200px;
 }
-.info2{
+.info2{/* 카피라잇 */
     width: 800px;
+    text-align: center;
+    line-height: 80px;
+    /* 위아래 패딩값 20px제외 */
+    font-weight: bold;
 }
 .info3{
     width: 200px;
+    text-align: center;
+    line-height: 107px;
+}
+/* sns 이미지 */
+.info3 img{
+    width: 40px;
+    margin: 0 5px;
 }
 
