@@ -136,6 +136,7 @@ li{
 /********************** C **********************/
 .cont{
     height: 200px;
+    background-color: rgb(179, 218, 255);
 }
 /* 파티션가로값 (한꺼번에 등분할!) */
 .cont>.pbx{
@@ -152,6 +153,11 @@ li{
     width: 100px;
     text-align: center;
     line-height: 40px;
+    background-color: rgb(94, 169, 255);
+}
+/* 선택된 탭class */
+.tm li.on a{
+    background-color: #fff;
 }
 
 
