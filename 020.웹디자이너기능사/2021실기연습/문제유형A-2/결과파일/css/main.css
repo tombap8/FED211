@@ -89,8 +89,9 @@ li{
     left: 0;
     /* 나의부모는? .gnb가 부모여선 안됨! */
     width: 100%;
-    height: 170px;
+    height: 0;/* 170px - .gnb에 마우스 오버시 크기 */
     background-color: rgba(218, 238, 255, 0.9);
+    transition: height .4s;/* 서브메뉴 ol과 동일한 트랜지션 */
 }
 
 
@@ -122,10 +123,12 @@ li{
     overflow: hidden;/* 숨기기 */
     transition: height .4s;
 }
-/* .gnb에 마우스 오버시 서브메뉴 모두 나타나기 */
-.gnb:hover ol{
-    height: 160px;
-    /* 줄간격 40px * 4 = 160px */
+/* .gnb에 마우스 오버시 서브메뉴 모두 나타나기
++ 동시에 .gnb::before가상요소 높이값도 변경하기! */
+.gnb:hover ol,
+.gnb:hover::before{
+    height: 170px;
+    /* 줄간격 40px * 4 = 160px + 여유공간 */
 }
 /* 서브메뉴 a */
 .gnb ol a{
