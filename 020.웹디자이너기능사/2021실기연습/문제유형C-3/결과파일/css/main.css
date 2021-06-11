@@ -1,9 +1,13 @@
 @charset "utf-8";
 /* 메인 CSS - main.css */
-html,body{
+
+html,body,h1,h2{
     margin: 0;
     padding: 0;
 }
+/* body *{
+    outline: 2px dashed blue;
+} */
 body{
     color: #333;
 }
@@ -11,11 +15,6 @@ a{
     color: #333;
     text-decoration: none;
 }
-
-
-/* body *{
-    outline: 2px dashed blue;
-} */
 ul,ol{
     padding: 0;
     margin: 0;
@@ -25,63 +24,55 @@ li{
     float: left;
 }
 
-/* 공통 CSS */
 
-/* 중앙정렬박스 */
-.ibx{
-    width: 1200px;
-    margin: 0 auto;/* 마영오 */
-}
-/* 파티션박스 */
+/* 공통 class */
 .pbx{
     float: left;
-    height: 100%;/* 부모높이채움! */
+    height: 100%;
     padding: 10px;
     box-sizing: border-box;
-    /* 박스가 패딩때문에 커지는 것을 방지! */
-}
-/* 부모자격 */
-.prt{
-    position: relative;
 }
 
-/****************** A ******************/
-.top{
-    position: relative;/* z-index때문에 줌 */
-    height: 100px;
-    z-index: 999;/* 가장위 */
-}
-/* 파티션가로값 */
-.top1{
-    width: 200px;
-}
-.top2{
+/* 전체박스 */
+.wrap{
     width: 1000px;
+    height: 650px;/* 꼭줘라! */
+}
+/* 왼쪽박스 */
+/* A */
+.lbox{
+    width: 200px;
+    padding: 0;
+    background-color: #d6ecff;
 }
 /* 로고 */
 .logo{
-    margin-left: -10px;
+    height: 100px;
+}
+.logo img{
+    margin-top: 30px;
 }
 
+/* GNB메뉴박스 */
+#gnb{
+    height: 530px;
+    padding-top: 20px;
+}
 /* 메뉴 */
 .gnb{
-    position: absolute;
-    top: 25px;
-    right: 50px;
-    /* 부모는? 싸고있는 .pbx.prt */
-    width: 800px;
-    height: 50px;
+    width: 180px;
+    margin-left: 10px;
     background-color: rgb(117, 188, 255);
 }
 .gnb li{
-    width: 200px;
+    float: none;/* float해제 */
+    width: 180px;
     /* height: 50px; */
     /* li의 높이값을 안주면 a에 설정된 줄간격이 높이값이됨! */
 }
 .gnb a{
     display: block;
     width: 100%;
-    height: 100%;
 
     /* 글자설정 */
     font-size: 20px;
@@ -89,10 +80,20 @@ li{
     line-height: 50px;
     text-align: center;
 }
+.gnb>li{
+    position: relative;
+    /* 서브메뉴 ol의 부모자격 */
+    z-index: 999;
+}
 /* 서브메뉴 */
 .gnb ol{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /* 앱솔루트로 옆으로 빠져나와보임! */
+    /* 부모는? 싸고 있는 li */
     height: 0;/* 200px; */
-    background-color: rgba(218, 238, 255, 0.9);
+    background-color: rgb(159 196 251 / 90%);
     overflow: hidden;/* 숨기기 */
     transition: height .4s;
 }
@@ -119,28 +120,55 @@ li{
 
 
 
-
-
-/******************* B *******************/
-.ban{
-    height: 300px;
-    overflow: hidden;/* 넘치는 슬라이드 숨기기 */
+/* 오른쪽박스 */
+.rbox{
+    width: 800px;
+    padding: 0;
+    background-color: #fff;
 }
 /* 슬라이드 */
-.slide{
-    position: relative;
-    top: 0;
+.ban{
+    height: 350px;
 }
 
-/********************** C **********************/
+.slide{
+    position: relative;
+    height: 350px;
+}
+.slide li{
+    position: absolute;/* 겹쳐지게 */
+    opacity: 0;
+    transition: .6s;
+}
+/* 선택 슬라이드 클래스 */
+ .slide li.on{
+    opacity: 1;/* 보이게 */
+    z-index: 1;/* 맨위로 */
+ }
+.slide li img{
+    width: 800px;
+    height: 350px;
+    /* 이미지를 크기에 맞춰 제작시엔 
+    크기설정이 필요없다! */
+}
+
+
+
+/* 컨텐츠 */
 .cont{
     height: 200px;
     background-color: rgb(179, 218, 255);
 }
-/* 파티션가로값 (한꺼번에 등분할!) */
-.cont>.pbx{
-    width: 400px;
+.cont1{
+    width: 300px;
 }
+.cont2{
+    width: 225px;
+}
+.cont3{
+    width: 275px;
+}
+
 
 /* 탭메뉴 */
 .tm{
@@ -161,7 +189,7 @@ li{
 
 /* 탭내용박스 */
 .tc{
-    height: 138px;
+    height: 146px;
     background-color: #fff;
 }
 /* 탭내용박스 li - 2개 */
@@ -177,8 +205,8 @@ li{
 
 /* 공지사항 리스트박스 */
 .gong{    
-    padding-top: 9px;
-    padding-left: 7px;
+    width: 100%;
+    padding-top: 12px;
 }
 .gong li{
     float: none;
@@ -187,7 +215,8 @@ li{
 .gong a{
     display: inline-block;
     /* 줄안바뀌면서 width디자인 적용위해 */
-    width: 270px;
+    width: 179px;
+    padding-left: 5px;
 
     /* 아래 3가지로 한줄짜리 말줄임표시하기 */
     white-space: nowrap;
@@ -206,10 +235,10 @@ li{
 
 /* 갤러리 리스트박스 */
 .gal li{
-    margin: 18px 12px;
+    margin: 37px 12px;
 }
 .gal img{
-    width: 100px;
+    width: 67px;
     border: 1px solid #777;
 }
 
@@ -247,30 +276,41 @@ li{
 }
 
 
-/******************** D ********************/
+
+/* 하단영역 */
 .info{
     height: 100px;
     background-color: #ccc;
 }
-/* 파티션가로값 */
 .info1{
     width: 200px;
 }
-.info2{/* 카피라잇 */
-    width: 800px;
+.info2{/* 하단메뉴 */
+    width: 600px;
     text-align: center;
-    line-height: 80px;
-    /* 위아래 패딩값 20px제외 */
+    line-height: 50px;
+    padding: 0;
+}
+
+.info2>.pbxIn{
+    height: 50px;
+}
+
+/* 하단로고 */
+.logoi{
+    margin-left: -10px;
+}
+.logoi img{
+    margin-top: 20px;
+}
+
+/* 하단메뉴 */
+.bmenu img{
+    width: 35px;
+    margin-top: 7px;
+}
+/* 카피라잇 */
+.copy{
     font-weight: bold;
-}
-.info3{
-    width: 200px;
-    text-align: center;
-    line-height: 107px;
-}
-/* sns 이미지 */
-.info3 img{
-    width: 40px;
-    margin: 0 5px;
 }
 
