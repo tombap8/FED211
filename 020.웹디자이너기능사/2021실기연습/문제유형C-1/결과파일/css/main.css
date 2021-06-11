@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* 메인 CSS - main.css */
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body *{
+    outline: 2px dashed blue;
+}
+/* 공통 class */
+.pbx{
+    float: left;
+    height: 100%;
+}
+
+/* 전체박스 */
+.wrap{
+    width: 1000px;
+    height: 650px;/* 꼭줘라! */
+}
+/* 왼쪽박스 */
+.lbox{
+    width: 200px;
+}
+/* 로고 */
+.logo{
+    height: 100px;
+}
+/* GNB메뉴박스 */
+.gnb{
+    height: 550px;
+}
+
+
+/* 오른쪽박스 */
+.rbox{
+    width: 800px;
+}
+/* 배너 */
+.ban{
+    height: 350px;
+}
+/* 컨텐츠 */
+.cont{
+    height: 200px;
+}
+.cont1{
+    width: 300px;
+}
+.cont2{
+    width: 225px;
+}
+.cont3{
+    width: 275px;
+}
+
+
+/* 하단영역 */
+.info{
+    height: 100px;
+}
+.info1{
+    width: 200px;
+}
+.info2{
+    width: 600px;
+}
+.info2>.pbxIn{
+    height: 50px;
+}
+
