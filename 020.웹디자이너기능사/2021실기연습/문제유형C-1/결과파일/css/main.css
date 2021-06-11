@@ -8,6 +8,23 @@ html,body{
 body *{
     outline: 2px dashed blue;
 }
+body{
+    color: #333;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+ul,ol{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+li{
+    float: left;
+}
+
+
 /* 공통 class */
 .pbx{
     float: left;
@@ -20,6 +37,7 @@ body *{
     height: 650px;/* 꼭줘라! */
 }
 /* 왼쪽박스 */
+/* A */
 .lbox{
     width: 200px;
 }
@@ -27,10 +45,65 @@ body *{
 .logo{
     height: 100px;
 }
-/* GNB메뉴박스 */
-.gnb{
-    height: 550px;
+.logo img{
+    margin-top: 30px;
 }
+
+/* GNB메뉴박스 */
+#gnb{
+    height: 530px;
+    padding-top: 20px;
+}
+/* 메뉴 */
+.gnb{
+    width: 180px;
+    margin-left: 10px;
+    background-color: rgb(117, 188, 255);
+}
+.gnb li{
+    float: none;/* float해제 */
+    width: 180px;
+    /* height: 50px; */
+    /* li의 높이값을 안주면 a에 설정된 줄간격이 높이값이됨! */
+}
+.gnb a{
+    display: block;
+    width: 100%;
+
+    /* 글자설정 */
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+}
+/* 서브메뉴 */
+.gnb ol{
+    height: 0;/* 200px; */
+    background-color: rgba(218, 238, 255, 0.9);
+    overflow: hidden;/* 숨기기 */
+    transition: height .4s;
+}
+/* .gnb의 상위메뉴 li에 마우스 오버시 서브메뉴 각각 나타나기 */
+.gnb>li:hover ol{
+    height: 170px;
+    /* 줄간격 40px * 4 = 160px + 여유공간*/
+}
+/* 서브메뉴 a */
+.gnb ol a{
+    font-size: 16px;
+    line-height: 40px;
+}
+
+/* 하이라이트 설정 */
+/* 상위,하위메뉴 */
+.gnb li:hover>a{
+    color: #fff;
+}
+/* 하위메뉴 */
+.gnb ol li:hover a{
+    background-color: rgb(0, 54, 233);
+}
+
 
 
 /* 오른쪽박스 */
