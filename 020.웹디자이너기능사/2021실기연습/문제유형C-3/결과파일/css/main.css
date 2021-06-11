@@ -88,7 +88,7 @@ li{
 /* 서브메뉴 */
 .gnb ol{
     position: absolute;
-    top: 0;
+    top: -40px;
     left: 100%;
     /* 앱솔루트로 옆으로 빠져나와보임! */
     /* 부모는? 싸고 있는 li */
@@ -112,6 +112,10 @@ li{
 /* 상위,하위메뉴 */
 .gnb li:hover>a{
     color: #fff;
+}
+/* 상위메뉴 배경색 */
+.gnb>li:hover>a{    
+    background-color: rgb(159 196 251 / 90%);
 }
 /* 하위메뉴 */
 .gnb ol li:hover a{
