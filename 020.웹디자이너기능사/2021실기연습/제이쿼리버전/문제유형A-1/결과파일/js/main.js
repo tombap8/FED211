@@ -61,6 +61,35 @@ $(function(){
 
     });//////// click ////////////////
 
+    ///// 팝업창 띄우기 /////////
+    // 대상: .gong li:first-child
+    $(".gong li").first()
+    .click(function(){
+        // 호출확인
+        console.log("팝업띄워!");
+
+        // 팝업 띄우기
+        // 대상: .pop
+        $(".pop").show();
+        // show()는 display를 보이게하는 메서드
+
+    });//////// click ///////////////
+
+    /// 팝업 닫기버튼 클릭시 /////
+    // 대상: .bbx button
+    $(".bbx button").click(function(){
+        // 호출확인
+        console.log("팝업닫어!");
+
+        // 팝업 닫기
+        // 대상: .pop
+        $(".pop").hide();
+        // hide()는 display:none으로 만들어주는 메서드
+
+    });//////// click //////////////////
+
+
+
 
 
 
