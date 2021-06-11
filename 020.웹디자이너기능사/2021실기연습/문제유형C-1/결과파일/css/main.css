@@ -1,13 +1,13 @@
 @charset "utf-8";
 /* 메인 CSS - main.css */
 
-html,body{
+html,body,h1,h2{
     margin: 0;
     padding: 0;
 }
-body *{
+/* body *{
     outline: 2px dashed blue;
-}
+} */
 body{
     color: #333;
 }
@@ -43,6 +43,7 @@ li{
 .lbox{
     width: 200px;
     padding: 0;
+    background-color: #d6ecff;
 }
 /* 로고 */
 .logo{
@@ -82,7 +83,7 @@ li{
 /* 서브메뉴 */
 .gnb ol{
     height: 0;/* 200px; */
-    background-color: rgba(218, 238, 255, 0.9);
+    background-color: rgb(159 196 251 / 90%);
     overflow: hidden;/* 숨기기 */
     transition: height .4s;
 }
@@ -113,6 +114,7 @@ li{
 .rbox{
     width: 800px;
     padding: 0;
+    background-color: #fff;
 }
 /* 슬라이드 */
 .ban{
@@ -264,18 +266,40 @@ li{
 
 
 
-
 /* 하단영역 */
 .info{
     height: 100px;
+    background-color: #ccc;
 }
 .info1{
     width: 200px;
 }
-.info2{
+.info2{/* 하단메뉴 */
     width: 600px;
+    text-align: center;
+    line-height: 50px;
+    padding: 0;
 }
+
 .info2>.pbxIn{
     height: 50px;
+}
+
+/* 하단로고 */
+.logoi{
+    margin-left: -10px;
+}
+.logoi img{
+    margin-top: 20px;
+}
+
+/* 하단메뉴 */
+.bmenu img{
+    width: 35px;
+    margin-top: 7px;
+}
+/* 카피라잇 */
+.copy{
+    font-weight: bold;
 }
 
