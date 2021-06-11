@@ -110,10 +110,34 @@ li{
 .rbox{
     width: 800px;
 }
-/* 배너 */
+/* 슬라이드 */
 .ban{
     height: 350px;
 }
+
+.slide{
+    position: relative;
+    height: 350px;
+}
+.slide li{
+    position: absolute;/* 겹쳐지게 */
+    opacity: 0;
+    transition: .6s;
+}
+/* 선택 슬라이드 클래스 */
+ .slide li.on{
+    opacity: 1;/* 보이게 */
+    z-index: 1;/* 맨위로 */
+ }
+.slide li img{
+    width: 800px;
+    height: 350px;
+    /* 이미지를 크기에 맞춰 제작시엔 
+    크기설정이 필요없다! */
+}
+
+
+
 /* 컨텐츠 */
 .cont{
     height: 200px;
