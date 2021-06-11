@@ -48,6 +48,13 @@ $(function(){
         // removeClass(클래스명) - 선택요소에 클래스제거하기
         // siblings() - 선택요소 이외의 형제요소들 선택하기
 
+        // 클릭된 li와 같은 순번의 탭내용li에 
+        // 클래스 on넣기 + 다른 li는 클래스 on빼기
+        // 대상: .tc li
+        $(".tc li").eq($(this).index())
+        .addClass("on")
+        .siblings().removeClass("on");
+
     });//////// click ////////////////
 
 
