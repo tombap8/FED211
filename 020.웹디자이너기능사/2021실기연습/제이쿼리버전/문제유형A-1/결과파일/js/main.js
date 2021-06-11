@@ -50,10 +50,14 @@ $(function(){
 
         // 클릭된 li와 같은 순번의 탭내용li에 
         // 클래스 on넣기 + 다른 li는 클래스 on빼기
-        // 대상: .tc li
-        $(".tc li").eq($(this).index())
+        // 대상: .tc>li (바로 하위 li만 선택!!!)
+        $(".tc>li").eq($(this).index())
         .addClass("on")
         .siblings().removeClass("on");
+        // eq(순번) 해당순번의 요소를 선택 (순번은 0부터)
+        // $(this).index() 클릭된 li요소의 순번을 리턴함(0부터셈)
+        // index() 순서를 알아내는 메서드
+        console.log("클릭된li순번:"+$(this).index());
 
     });//////// click ////////////////
 
