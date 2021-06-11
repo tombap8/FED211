@@ -65,15 +65,40 @@ li{
 
 /* 메뉴 */
 .gnb{
-    position: absolute;
+    /* .gnb는 포지션이 없어야함! 
+    왜? 가상요소 배경의 부모가 되면 안되므로! 
+    그럼 위치이동은? 마진으로 한다!*/
+
+    margin-top: 40px;
+    margin-left: 166px;
+
+    /* position: absolute;
     top: 25px;
-    right: 50px;
+    right: 50px; */
     /* 부모는? 싸고있는 .pbx.prt */
     width: 800px;
     height: 50px;
     background-color: rgb(117, 188, 255);
 }
+/* .gnb가상요소로 메뉴 100%(1200px)배경 만들기 */
+.gnb::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    /* 나의부모는? .gnb가 부모여선 안됨! */
+    width: 100%;
+    height: 170px;
+    background-color: rgba(218, 238, 255, 0.9);
+}
+
+
 .gnb li{
+    position: relative;
+    /* .gnb 가상요소 before가 absolute 이므로
+    li메뉴가 아랫쪽에 깔리므로 포지션을 줘서 위로 오게함!
+    (나중에 온게 위에 온다!) */
     width: 200px;
     /* height: 50px; */
     /* li의 높이값을 안주면 a에 설정된 줄간격이 높이값이됨! */
@@ -92,14 +117,15 @@ li{
 /* 서브메뉴 */
 .gnb ol{
     height: 0;/* 200px; */
-    background-color: rgba(218, 238, 255, 0.9);
+    /* background-color: rgba(218, 238, 255, 0.9); */
+    /* 가상요소 배경에 배경색이 있으므로 여기서는 뺌! */
     overflow: hidden;/* 숨기기 */
     transition: height .4s;
 }
 /* .gnb에 마우스 오버시 서브메뉴 모두 나타나기 */
 .gnb:hover ol{
-    height: 170px;
-    /* 줄간격 40px * 4 = 160px + 여유공간*/
+    height: 160px;
+    /* 줄간격 40px * 4 = 160px */
 }
 /* 서브메뉴 a */
 .gnb ol a{
