@@ -69,6 +69,41 @@
             // 컴퓨터 시스템 날짜기준 년도가 1900년이라서 그렇다고함!
             // 현재 전체년도 표시는 getFullYear()를 사용한다!
 
+            // (5) 시,분,초
+            // getHours(), getMinutes(), getSeconds()
+            var H = today.getHours();
+            var M = today.getMinutes();
+            var S = today.getSeconds();
+            console.log("현재시간-"+H+":"+M+":"+S);
+
+            // (6) 화면출력
+            // 년도
+            document.querySelector(".year").innerText = nowYear;
+            // 월
+            document.querySelector(".month").innerText = nowMonth;
+            // 일
+            document.querySelector(".date").innerText = nowDate;
+            // 요일
+            document.querySelector(".day").innerText = week[nowDay];
+            
+            // 오전/오후
+            // 기준이 12시임, 나온 시간이 24시간제로 표시 되므로
+            // 12보다 크면 오후임
+            var noon="오전";
+            if(H>=12) noon = "오후";//12이상이면 "오후"로 덮어씀
+            document.querySelector(".noon").innerText = noon;
+
+            // 시간넣기
+            //H = 18;//시간조작
+            // 12보다크면 12를 빼준다!
+            if(H>12) H = H-12;
+            // 10보다 작으면 앞에 0을 더해준다!(문자로!)
+            if(H<10) H = "0"+H;
+            document.querySelector(".hour").innerText = H;
+
+
+
+
 
 
         } /////// showTime함수 /////////////////////
@@ -79,9 +114,9 @@
     <!-- 시간표시박스 -->
     <div class="time">
         <!-- 년도 -->
-        <span class="year"></span>
+        <span class="year"></span>.
         <!-- 월 -->
-        <span class="month"></span>
+        <span class="month"></span>.
         <!-- 일 -->
         <span class="date"></span>
         <!-- 요일 -->
