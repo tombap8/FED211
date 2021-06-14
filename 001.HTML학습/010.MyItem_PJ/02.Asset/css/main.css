@@ -48,9 +48,13 @@
 .thumbs img{
     height: 100px;
     /* width는 자동(비율유지) */
+    margin: 0 10px;
     transition: all .4s;
 }
 /* 이미지에 마우스 오버시 크기변경하기 */
 .thumbs img:hover{
-    height: 150px;/* 기존높이보다 50px증가 */
+    height: 150px;
+    /* 기존높이보다 50px증가 */
+    margin-top: -50px;
+    /* 늘어난 높이만큼 박스에서 위로 올라옴! */
 }
