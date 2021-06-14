@@ -35,7 +35,7 @@
     /* left값의 부모 #cont */
     width: 200%;
     height: 100px;
-    outline: 3px dashed red;
+    /* outline: 3px dashed red; */
 }
 /* 중앙이동박스 ol */
 .thumbs ol{
