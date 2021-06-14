@@ -6,3 +6,51 @@
 @import url(core.css);
 @import url(common.css);
 
+/* 메인페이지 셋팅 */
+
+/* 메인박스 */
+#cont{
+    position: relative;
+    /* 부모자격 */
+    min-height: 570px;
+}
+
+/* 2-1. 큰 메인이미지 박스 */
+.mibx{
+    width: 340px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+.mibx img{
+    width: 100%;
+    /* 박스크기에 가로만 맞춤 */
+}
+
+/* 2-2.썸네일 이미지박스 */
+.thumbs{/* 중앙정렬 스테이지 박스 */
+    position: absolute;
+    left: -50%;
+    /* top방향은 젠틀앱솔루트! 따라서 위의 .mibx아래에 위치함! */
+    /* left값의 부모 #cont */
+    width: 200%;
+    height: 100px;
+    outline: 3px dashed red;
+}
+/* 중앙이동박스 ol */
+.thumbs ol{
+    position: absolute;
+    left: 50%;
+    /* 부모는? .thumbs */
+    transform: translateX(-50%);
+    /* 가로중앙이동 */
+}
+.thumbs img{
+    height: 100px;
+    /* width는 자동(비율유지) */
+    transition: all .4s;
+}
+/* 이미지에 마우스 오버시 크기변경하기 */
+.thumbs img:hover{
+    height: 150px;/* 기존높이보다 50px증가 */
+}
