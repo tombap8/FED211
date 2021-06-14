@@ -13,14 +13,14 @@ body {
 }
 
 /* 임시아웃라인표시 */
-body>*>* {
+/* body>*>* {
     outline: 2px dashed blue;
-}
+} */
 
 /* 전체 부모박스 */
 .wrap {
     background-color: #fff;
-    box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 5px #777;
 }
 
 /* 1.상단영역 */
@@ -66,7 +66,7 @@ body::before{
     width: 600px;
     margin: 0 auto;
     /* 블록가로중앙정렬 - 마영오! */
-    outline: 2px solid lime;
+    /* outline: 2px solid lime; */
 }
 
 .gnb>ul>li {
@@ -168,7 +168,7 @@ body::before{
     width: 30px;
     height: 30px;
     background: url(../images/icons.png) no-repeat;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 }
 
 /* 마우스 오버시 배경이미지위치 변경하기(공통) */
@@ -200,4 +200,21 @@ body::before{
 /* 3.하단영역 */
 #info {
     height: 90px;
+    border-top: 1px solid #ccc;
+}
+/* 3-1.하단로고 */
+#info img{
+    vertical-align: top;
+}
+/* 3-2.회사주소 */
+#info address{
+    display: inline-block;
+    width: 822px;
+    height: 100%;
+    color: #555;
+    text-align: center;
+    line-height: 100px;
+    font-style: normal;
+    text-indent: -168px;/* 들여쓰기로 위치이동 */
+    /* outline: 2px solid red; */
 }
