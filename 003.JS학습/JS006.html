@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>Date객체와 Math객체</title>
     <style>
-        .time{
+        .time {
             width: 500px;
             padding: 10px;
             text-align: center;
@@ -13,8 +14,9 @@
             background-color: #000;
             margin: 0 auto;
         }
+
         /* 이미지박스 */
-        .ibox{
+        .ibox {
             padding: 50px;
             text-align: center;
         }
@@ -23,8 +25,8 @@
         /*/////////////////////////////////////////
             함수명: showTime
             기능: 오늘날짜 찍기
-        *//////////////////////////////////////////
-        function showTime(){
+        */ /////////////////////////////////////////
+        function showTime() {
 
             // 1. 함수호출확인
             console.log("시간찍어~!!!");
@@ -36,35 +38,36 @@
             var today = new Date();
 
             // (1) 현재월 가져오기: getMonth()
-            var nowMonth = today.getMonth()+1;
+            var nowMonth = today.getMonth() + 1;
             // 월은 0부터 시작한 달의 순번임
             // 월을 부르는 이름은 언어마다 모두 다름
             // 이것을 배열에 담아 쓸 수 있게 순번으로 리턴함
             // 만약 숫자로 월을 찍고 싶으면 1을 더함
-            console.log("현재월:"+nowMonth);
+            console.log("현재월:" + nowMonth);
 
             // 영어월 표시로 변경해 보기
             // 배열에 순서대로 영어 월표시를 담는다!
-            var EM = ["Jan.","Feb.","Mar.","Apr.","May","Jun.",
-                    "Jul.","Aug","Sep.","Oct.","Nov.","Dec."];
-            console.log("영어식 현재월:"+EM[today.getMonth()]);
-            
+            var EM = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.",
+                "Jul.", "Aug", "Sep.", "Oct.", "Nov.", "Dec."
+            ];
+            console.log("영어식 현재월:" + EM[today.getMonth()]);
+
             // (2) 현재일 가져오기: getDate()
             var nowDate = today.getDate();
             // 현재일은 날짜숫자를 그대로 리턴함
-            console.log("현재일:"+nowDate);
+            console.log("현재일:" + nowDate);
 
             // (3) 현재요일 가져오기: getDay()
             var nowDay = today.getDay();
             // 월과 마찬가지로 요일의 순번을 리턴함
             // 요일의 순번은 0부터이며 일요일이 첫날이다!
             // 요일표시를 배열에 담고 변환한다!
-            var week = ["일","월","화","수","목","금","토"];
-            console.log("현재요일:"+week[nowDay]);
+            var week = ["일", "월", "화", "수", "목", "금", "토"];
+            console.log("현재요일:" + week[nowDay]);
 
             // (4) 현재년도: getFullYear()
             var nowYear = today.getFullYear();
-            console.log("현재년도:"+nowYear);
+            console.log("현재년도:" + nowYear);
             // getYear() 는 1900년을 기점으로 해를 셈
             // 컴퓨터 시스템 날짜기준 년도가 1900년이라서 그렇다고함!
             // 현재 전체년도 표시는 getFullYear()를 사용한다!
@@ -74,7 +77,7 @@
             var H = today.getHours();
             var M = today.getMinutes();
             var S = today.getSeconds();
-            console.log("현재시간-"+H+":"+M+":"+S);
+            console.log("현재시간-" + H + ":" + M + ":" + S);
 
             // (6) 화면출력
             // 년도
@@ -85,31 +88,42 @@
             document.querySelector(".date").innerText = nowDate;
             // 요일
             document.querySelector(".day").innerText = week[nowDay];
-            
+
             // 오전/오후
             // 기준이 12시임, 나온 시간이 24시간제로 표시 되므로
             // 12보다 크면 오후임
-            var noon="오전";
-            if(H>=12) noon = "오후";//12이상이면 "오후"로 덮어씀
+            var noon = "오전";
+            if (H >= 12) noon = "오후"; //12이상이면 "오후"로 덮어씀
             document.querySelector(".noon").innerText = noon;
 
-            // 시간넣기
+            // 시간넣기 ///////////////////////////////
             //H = 18;//시간조작
             // 12보다크면 12를 빼준다!
-            if(H>12) H = H-12;
+            if (H > 12) H = H - 12;
             // 10보다 작으면 앞에 0을 더해준다!(문자로!)
-            if(H<10) H = "0"+H;
+            if (H < 10) H = "0" + H;
             document.querySelector(".hour").innerText = H;
 
+            // 분넣기 /////////////////////////////////
+            M = 4; //분조작
+            if (M < 10) M = "0" + M; //한자리일때 자릿수표시
+            document.querySelector(".minute").innerText = M;
+
+            // 초넣기 ///////////////////////////////////
+            document.querySelector(".second").innerText = S;
 
 
 
+
+            //재귀호출(함수자신을 다시 호출함!)
+            setTimeout(showTime, 1000);
 
 
         } /////// showTime함수 /////////////////////
         ////////////////////////////////////////////
     </script>
 </head>
+
 <body onload="showTime()">
     <!-- 시간표시박스 -->
     <div class="time">
@@ -124,9 +138,9 @@
         <!-- 오전/오후 -->
         <span class="noon"></span>
         <!-- 시간 -->
-        <span class="hour"></span> : 
+        <span class="hour"></span> :
         <!-- 분 -->
-        <span class="minute"></span> : 
+        <span class="minute"></span> :
         <!-- 초 -->
         <span class="second"></span>
     </div>
@@ -135,6 +149,7 @@
     <div class="ibox">
         <img src="./images/img1.jpg" alt="이미지">
     </div>
-    
+
 </body>
+
 </html>
