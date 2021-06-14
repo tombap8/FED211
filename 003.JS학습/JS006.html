@@ -101,18 +101,20 @@
             // 12보다크면 12를 빼준다!
             if (H > 12) H = H - 12;
             // 10보다 작으면 앞에 0을 더해준다!(문자로!)
-            if (H < 10) H = "0" + H;
-            document.querySelector(".hour").innerText = H;
+            //if (H < 10) H = "0" + H;//-> addZero()
+            // addZero함수에 가서 10미만이면 앞에 0을 붙이고 돌아옴
+            document.querySelector(".hour").innerText = addZero(H);
 
             // 분넣기 /////////////////////////////////
-            M = 4; //분조작
-            if (M < 10) M = "0" + M; //한자리일때 자릿수표시
-            document.querySelector(".minute").innerText = M;
+            //M = 4; //분조작
+            //if (M < 10) M = "0" + M; //한자리일때 자릿수표시-> addZero()
+            // addZero함수에 가서 10미만이면 앞에 0을 붙이고 돌아옴
+            document.querySelector(".minute").innerText = addZero(M);
 
             // 초넣기 ///////////////////////////////////
-            document.querySelector(".second").innerText = S;
-
-
+            //if(S<10) S = "0" + S; //한자리일때 자릿수표시-> addZero()
+            // addZero함수에 가서 10미만이면 앞에 0을 붙이고 돌아옴
+            document.querySelector(".second").innerText = addZero(S);
 
 
             //재귀호출(함수자신을 다시 호출함!)
@@ -121,6 +123,18 @@
 
         } /////// showTime함수 /////////////////////
         ////////////////////////////////////////////
+
+        /*//////////////////////////////////////////////////
+            함수명: addZero
+            기능: 전달된 숫자가 0보다 작으면 앞에 0넣고 리턴함
+        *///////////////////////////////////////////////////
+        function addZero(num){ // num 숫자 전달변수
+            // 1. 전달된 숫자가 0미만이면 앞에 0붙이기
+            if(num<10) num = "0"+num;
+            // 2. 결과값 리턴(함수를 호출한 곳으로 돌아감!)
+            return num;
+        } ////////// addZero함수 //////////////////////////
+        ///////////////////////////////////////////////////
     </script>
 </head>
 
