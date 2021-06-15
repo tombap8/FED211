@@ -1,2 +1,61 @@
 @charset "utf-8";
 /* 큐브트립 메인 CSS - main.css */
+
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css?family=Black+And+White+Picture|East+Sea+Dokdo|Jua&display=swap');
+/*
+    font-family: 'Black And White Picture', sans-serif;
+    font-family: 'East Sea Dokdo', cursive;
+    font-family: 'Jua', sans-serif;
+*/
+
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;/* 보이는화면기준 */
+}
+body{
+    overflow: hidden;/* 넘치는자식숨기기 */
+    background-image: 
+    linear-gradient(to bottom,#777 30%,#ccc 70%);
+}
+
+/* 1.전체제목 */
+.tit{
+    text-align: center;
+    font-family: 'Black And White Picture', sans-serif;
+    color: #fff;
+    font-size: 60px;
+    font-weight: normal;
+    background: 
+    url(../images/citybg.png) no-repeat center/auto 100%;
+    padding-top: 50px;
+}
+
+/* 2.메뉴박스 */
+.city{
+    position: fixed;/* 화면기준 */
+    top: 50px;
+    right: 50px;
+}
+.city ul{
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.city li{
+    height: 100px;
+    background-image: 
+    linear-gradient(to right, transparent, blue);
+    /* transparent는 투명설정시 설정값 */
+}
+.city a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font: bold 52px/100px 'East Sea Dokdo', cursive;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
