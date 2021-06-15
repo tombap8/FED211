@@ -102,8 +102,8 @@ body{
 /* 큐브 */
 .cube{
     position: absolute;
-    top: calc(50% - 150px);
-    left: calc(50% - 150px);
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
     /* calc(%수치 - 특정px)
     CSS의 고유계산함수임(주의:빼기기호 앞뒤공백필수!) */
     width: 400px;
@@ -215,4 +215,26 @@ body{
     line-height: 100px;
     text-align: center;
     font-size: 50px;
+}
+/* 도시설명 */
+.ctxt p{
+    height: calc(100% - 100px);
+    /* 타이틀h2의 높이값을 뺀 나머지 높이 */
+
+    margin: 0;
+    padding: 10px;
+    /* 가로크기를 지정하지 않고 
+    패딩주면 내부에 생김 
+    주의: width:100%를 주는 것도 
+    구체적인 크기를 준것과 같다! 패딩크기만큼 늘어남!
+    블록박스에서 width는 지정하지 않는 것은
+    width:auto라는 상태와 같다!*/
+
+    font-size: 16px;
+    line-height: 28px;
+    background-color: rgba(0,0,0,.2);
+    box-sizing: border-box;
+    /* 패딩값이 가로방향은 자동이지만 
+    세로방향은 밀려서 커지므로
+    크기유지 설정을 한다! */
 }
