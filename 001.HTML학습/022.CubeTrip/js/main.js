@@ -42,7 +42,7 @@ $(function () { // jQB //////////////////////////////////
         $(".cube").css({
             transform: setval,
             transition: "1.5s ease-in-out"
-        });
+        }); /////////// css /////////////////
 
 
 
