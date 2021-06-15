@@ -6,6 +6,27 @@ $(function(){ // jQB //////////////////////////////////
     // 로딩확인
     console.log("로딩완료");
 
+    // 메뉴 클릭시
+    // 대상: .city a
+    $(".city a").click(function(){
+
+        // 1. a요소의 글자 읽어오기
+        //  (this는 클릭된 a자신!)
+        var txt = $(this).text();
+        console.log("메뉴:"+txt);
+
+        // 2. 회전값 적용하기
+        if(txt==="뉴욕"){
+            $(".cube").css({
+                transform:"rotateX(90deg) rotateY(0deg)",
+                transition: "1.5s ease-in-out"
+            });
+        }
+        
+
+
+
+    }); /////// click ////////////////////
 
 
 });////////////// jQB /////////////////////////////////
