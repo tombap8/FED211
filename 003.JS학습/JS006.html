@@ -198,11 +198,26 @@
        rdm = Math.ceil(rdm*7);
        //console.log("1~7사이난수:"+rdm);
 
+        // 이전랜덤수변수
+        var temp = 0;//처음에 랜덤수에 없는번호씀
+
        // 1~7사이의 난수를 활용하여 이미지를 랜덤하게 넣어준다!
        setInterval(function(){
            // 랜덤수 발생하기
             var newrdm = Math.ceil(Math.random()*7);
             console.log("이미지랜덤수:"+newrdm);
+
+            // 이전 랜덤수를 체크하여 같은 랜덤수일 경우
+            // 다시 랜덤수를 만들어서 처리하기!
+            // while문의 조건이 맞으면 계속 반복실행함!
+            while(newrdm===temp){
+                // 다시 랜덤수 만들기!!!
+                newrdm = Math.ceil(Math.random()*7);
+                console.log("새로랜덤:"+newrdm);
+            } ///////// while문 //////////////////////
+
+            // newrdm이 확정되었으므로 이전랜덤수에 저장한다!
+            temp = newrdm;
 
             // 이미지 변경하기
             document.querySelector(".ibox>img")
