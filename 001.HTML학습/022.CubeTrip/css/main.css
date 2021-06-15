@@ -59,3 +59,28 @@ body{
     text-decoration: none;
     text-align: center;
 }
+/* 마우스 오버시 */
+.city li:nth-child(1):hover{    
+    background-image: 
+    linear-gradient(to right, transparent, red);
+}
+.city li:nth-child(2):hover{    
+    background-image: 
+    linear-gradient(to right, transparent, orange);
+}
+.city li:nth-child(3):hover{    
+    background-image: 
+    linear-gradient(to right, transparent, yellow);
+}
+.city li:nth-child(4):hover{    
+    background-image: 
+    linear-gradient(to right, transparent, orangered);
+}
+.city li:nth-child(5):hover{    
+    background-image: 
+    linear-gradient(to right, transparent, cyan);
+}
+.city li:nth-child(6):hover{    
+    background-image: 
+    linear-gradient(to right, transparent, coral);
+}
