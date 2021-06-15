@@ -126,7 +126,7 @@ body{
         - preserve-3d 는 3D 전환설정!
     */
     transform-style: preserve-3d;
-    transform: rotateX(90deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
     /* 입체를 잘보기위해 x축,y축으로 약간회전해 놓는다 */
 
 }
@@ -198,6 +198,7 @@ body{
     font-family: 'Jua', sans-serif;
     color: #fff;
     text-shadow: 0 0 1px #000;
+    opacity: 0;/* 처음에 투명함 */
 
 }
 /* 개별도시박스 */
