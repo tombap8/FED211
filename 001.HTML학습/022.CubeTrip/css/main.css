@@ -43,12 +43,19 @@ body{
     margin: 0;
     padding: 0;
     list-style: none;
+
+    /* 자식요소인 li에 원근설정을 여기에 준다! */
+    perspective: 480px;
 }
 .city li{
     height: 100px;
     background-image: 
     linear-gradient(to right, transparent, blue);
     /* transparent는 투명설정시 설정값 */
+    transform-origin: right;/* 트랜스폼 축변경 */
+
+    /* 트랜지션: 속시이지 */
+    transition: transform .4s ease-out;
 }
 .city a{
     display: block;
@@ -63,24 +70,30 @@ body{
 .city li:nth-child(1):hover{    
     background-image: 
     linear-gradient(to right, transparent, red);
+    transform: rotateY(15deg);
 }
 .city li:nth-child(2):hover{    
     background-image: 
     linear-gradient(to right, transparent, orange);
+    transform: rotateY(30deg);
 }
 .city li:nth-child(3):hover{    
     background-image: 
     linear-gradient(to right, transparent, yellow);
+    transform: rotateY(-25deg);
 }
 .city li:nth-child(4):hover{    
     background-image: 
     linear-gradient(to right, transparent, orangered);
+    transform: rotateY(45deg);
 }
 .city li:nth-child(5):hover{    
     background-image: 
     linear-gradient(to right, transparent, cyan);
+    transform: rotateY(-55deg);
 }
-.city li:nth-child(6):hover{    
+.city li:nth-child(6):hover{ 
     background-image: 
     linear-gradient(to right, transparent, coral);
+    transform: rotateY(20deg);
 }
