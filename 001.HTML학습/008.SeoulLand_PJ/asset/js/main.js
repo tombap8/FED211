@@ -78,6 +78,12 @@ $(function(){ // jQB /////////////////////
     }); /////////// click ///////////////////////
 
     // 1-3. 블릿 li클릭시 해당순번의 슬라이드변경 및 블릿변경하기
+    // 대상: .indic li -> 변수 indic에 할당!
+    indic.click(function(){
+        // 클릭된 li순번 확인
+        var idx = $(this).index();
+        console.log("블릿li순번:"+idx);
+    }); /////////// click ///////////////
 
 
 
