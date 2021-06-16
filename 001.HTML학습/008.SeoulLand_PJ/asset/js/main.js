@@ -12,18 +12,14 @@ $(function(){ // jQB /////////////////////
     // 슬라이드 순번변수 (슬라이드순번===블릿순번)
     var snum = 0;
 
-    // 1-1. 오른쪽 버튼 클릭시 다음배너 나오기
-    // 대상: .rb
-    $(".rb").click(function(){
-        // 확인
-        console.log("오른쪽이동!");
-
-        // 1. 슬라이드 순번증가 //////////////////////////
-        snum++;
-        if(snum === sld.length) snum = 0;
-        // 한계수체크: 슬라이드 개수와 같아지면 처음으로!
-        console.log("슬라이드개수:"+sld.length);
-        console.log("슬라이드번호:"+snum);
+    /*/////////////////////////////////////////
+        함수명: goSlide
+        기능: 슬라이드 이동 및 블릿변경
+    *//////////////////////////////////////////
+    // 할당형 익명함수!
+    var goSlide = function(){
+        // 1.확인
+        console.log("슬라이드함수");
 
         // 2. 해당순번 li 슬라이드에 클래스 "on"넣기(나머지는 빼기)
         sld.eq(snum).addClass("on").siblings().removeClass("on");
@@ -42,9 +38,28 @@ $(function(){ // jQB /////////////////////
         // parents(특정요소) 조상들 중 특정요소로 이동
         .find("img").attr("src","images/ico_pm_55_off.png");
 
+    }; ///////////// goSlide함수 ///////////////
+    ////////////////////////////////////////////
+
+    // 1-1. 오른쪽 버튼 클릭시 다음배너 나오기 /////////
+    // 대상: .rb
+    $(".rb").click(function(){
+        // 확인
+        console.log("오른쪽이동!");
+
+        // 1. 슬라이드 순번증가 //////////////////////////
+        snum++;
+        if(snum === sld.length) snum = 0;
+        // 한계수체크: 슬라이드 개수와 같아지면 처음으로!
+        console.log("슬라이드개수:"+sld.length);
+        console.log("슬라이드번호:"+snum);
+
+        // 2. 슬라이드 이동함수 호출!
+        goSlide();
+        
     }); /////////// click /////////////////
 
-    // 1-2. 왼쪽 버튼 클릭시 이전배너 나오기
+    // 1-2. 왼쪽 버튼 클릭시 이전배너 나오기 /////////////
     // 대상: .lb
     $(".lb").click(function(){
         // 확인
@@ -57,16 +72,12 @@ $(function(){ // jQB /////////////////////
         console.log("슬라이드개수:"+sld.length);
         console.log("슬라이드번호:"+snum);
 
-        // 2. 해당순번 li 슬라이드에 클래스 "on"넣기(나머지는 빼기)
-        sld.eq(snum).addClass("on").siblings().removeClass("on");
+        // 2. 슬라이드 이동함수 호출!
+        goSlide();
 
-        // 3. 블릿 순번 이미지 변경하기
-        indic.eq(snum) // 해당순번 블릿 li
-        .find("img").attr("src","images/ico_pm_55_on.png")
-        .parents("li").siblings() 
-        .find("img").attr("src","images/ico_pm_55_off.png");
+    }); /////////// click ///////////////////////
 
-    }); /////////// click /////////////////
+    // 1-3. 블릿 li클릭시 해당순번의 슬라이드변경 및 블릿변경하기
 
 
 
