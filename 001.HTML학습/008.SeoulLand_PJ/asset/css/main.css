@@ -16,23 +16,23 @@ body {
 }
 
 /* 디자인 검수용 이미지넣기 */
-body::before {
+/* body::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    /* 부모는? body -> 부모요소에 꽉차는 크기 */
+    부모는? body -> 부모요소에 꽉차는 크기
     background: url(../images/SeoulLand_main.jpg) no-repeat center top;
-    /* background: url(../images/SeoulLand_main_over.jpg) no-repeat center top; */
-    /* 배경이미지는 오버시 이미지도 미리셋팅한다 */
+    background: url(../images/SeoulLand_main_over.jpg) no-repeat center top;
+    배경이미지는 오버시 이미지도 미리셋팅한다
     z-index: -1;
-    /* z-index: 9999; */
-    /* 디자인 검수를 위해 z-index를 위로 올릴 수 있게 셋팅한다 */
+    z-index: 9999;
+    디자인 검수를 위해 z-index를 위로 올릴 수 있게 셋팅한다
     opacity: 0.5;
-    /* 디자인 검수시 겹쳐질때 이미지 반투명으로 위치값 확인 */
-}
+    디자인 검수시 겹쳐질때 이미지 반투명으로 위치값 확인
+} */
 
 /* 배너영역 */
 .ban {
