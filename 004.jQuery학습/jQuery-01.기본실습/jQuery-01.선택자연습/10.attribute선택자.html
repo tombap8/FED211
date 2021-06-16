@@ -60,6 +60,11 @@ $(document).ready(function(e) {
 
 	
 		// 7. 모든 태그 중에서 src속성과 alt속성을 동시에 가지고 있는것을 선택하여 border값을 10px ridge purple 로 설정하시오.
+		// 힌트: 동시에 속성을 여러개 가진것 선택시 대괄호 여러개 사용하여 속성을 나열함 -> [src][class]
+		// 모든 태그중에서.... 라는 말은 속성선택자만 쓴다는 의미
+		$("[src][alt]").css({
+			border:"10px ridge purple"
+		});//////// css //////////////
 		
 		
 		
