@@ -33,6 +33,7 @@
             2. let 전역변수를 지역에서 같은이름의 let변수로 선언할 수 있다
                 -> 따로 관리되어 별개의 변수다!
             3. let 전역변수는 지역에서 같은이름의 var변수로 선언할 수 없다!
+            4. let 변수는 반드시 선언 후 할당해야함!(순서철저!)
             
         
         */
@@ -62,11 +63,11 @@
             console.log("sport:" + sport);
 
             /////////// 지역변수 /////////////
-            var seoul = "강동구"; 
+            var seoul = "강동구";
             //전역변수 var를 다시 var 선언할당함!
-            let jeju = "마라도"; 
+            let jeju = "마라도";
             //전역변수 var를 다시 let 선언할당함!
-            let toktok = "라인"; 
+            let toktok = "라인";
             //전역변수 let를 다시 let 선언할당함!
 
             //var sport = "배구";//에러남!
@@ -77,38 +78,71 @@
             /// 지역변수 지역에서 찍어보기 ///
             console.log("지역변수 지역에서 찍어보기");
             console.log("seoul:" + seoul);
-            console.log("jeju:"+jeju);
-            console.log("toktok:"+toktok);
+            console.log("jeju:" + jeju);
+            console.log("toktok:" + toktok);
             // console.log("sport:"+sport);
-            console.log("human:"+human);
+            console.log("human:" + human);
 
         }
         //####################################################
 
         /// 전역변수 전역에서 찍어보기 ///
         console.log("전역변수 전역에서 찍어보기");
-        console.log("seoul:" + seoul);//지역에서 덮어쓰기됨!
-        console.log("jeju:"+jeju);
-        console.log("toktok:"+toktok);//전역변수가 살아있음!!!
-        console.log("human:"+human);
+        console.log("seoul:" + seoul); //지역에서 덮어쓰기됨!
+        console.log("jeju:" + jeju);
+        console.log("toktok:" + toktok); //전역변수가 살아있음!!!
+        console.log("human:" + human);
 
 
         cat = "고양이";
-        console.log("cat:"+cat);
-        var cat;// 변수의 선언을 아래에서 하는것이 가능한가? OK
+        console.log("cat:" + cat);
+        var cat; // 변수의 선언을 아래에서 하는것이 가능한가? OK
         // 이와 같이 선언이 아래 있는 것을 끌어당겨서 처리한다고 해서
         // 이런것을 호이스팅(hoisting)이라고 함!
 
-        dog = "강아지";
-        console.log("dog:"+dog);
-        let dog; // let으로 변수선언을 아래쪽에서 가능한가?
+        // dog = "강아지";
+        // console.log("dog:"+dog);
+        // let dog; // let으로 변수선언을 아래쪽에서 가능한가? X
+        // -> let선언전에 변수를 할당할 수 없다!
 
+
+        ////// 로드구역 /////////////////////////////
+        window.addEventListener("load",function(){
+
+            // var 테스트
+            var vartest = document.querySelectorAll(".vartest");
+            // 버튼개수만큼 링크걸기
+            for(var i=0;i<vartest.length;i++){
+
+                vartest[i].onclick = function(){
+                    console.log("전달숫자:"+i);
+                };//////// click함수 ////////////
+
+            } ////// for문 /////////////////////
+
+            // let 테스트
+            var lettest = document.querySelectorAll(".lettest");
+
+
+        });//////////// 로드구역 /////////////////////
+        /////////////////////////////////////////////
 
 
     </script>
 </head>
 
 <body>
+    <button class="vartest">var 테스트1</button>
+    <button class="vartest">var 테스트2</button>
+    <button class="vartest">var 테스트3</button>
+    <button class="vartest">var 테스트4</button> <br>
+
+    <button class="lettest">let 테스트1</button>
+    <button class="lettest">let 테스트2</button>
+    <button class="lettest">let 테스트3</button>
+    <button class="lettest">let 테스트4</button>
+
+
 
 </body>
 
