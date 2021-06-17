@@ -134,10 +134,20 @@ window.addEventListener("load", function () {
     }; ////////// goSlide함수 /////////////////////////
     //////////////////////////////////////////////////
 
+    /// 광클금지변수 ///
+    let prot=0;//0-허용,1-불허용
+
 
     // 4. 슬라이드 오른쪽 이동버튼 셋업 ///////
     document.querySelector(".ab2").onclick =
         function () {
+
+            ////////// 광클금지 ////////////
+            if(prot) return;//돌아가!
+            prot=1;//불허용!
+            setTimeout(()=>{prot=0;},800);
+            ///// 0.8초후 허용! ////////////
+
             // 1. 호출확인
             console.log("나,오른쪽!");
 
@@ -149,6 +159,13 @@ window.addEventListener("load", function () {
     // 5. 슬라이드 왼쪽 이동버튼 셋업 ////////
     document.querySelector(".ab1").onclick =
         function () {
+            
+             ////////// 광클금지 ////////////
+             if(prot) return;//돌아가!
+             prot=1;//불허용!
+             setTimeout(()=>{prot=0;},800);
+             ///// 0.8초후 허용! ////////////
+
             // 1. 호출확인
             console.log("나,왼쪽!");
 
