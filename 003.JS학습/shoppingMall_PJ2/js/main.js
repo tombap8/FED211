@@ -14,8 +14,14 @@ window.addEventListener("load", function () {
     // 변경하는데 활용한다!)
     var snum = 0;
 
-    // 3. 변경대상: #slide
+    // 3. 변경대상: 
+    // 3-1. 슬라이드 : #slide
     var slide = document.querySelector("#slide");
+    // 3-2. 슬라이드 개수
+    let cnt = slide.querySelectorAll("li").length;
+    //console.log("슬개수:"+cnt);
+    // 3-3. 블릿대상 : .indic li
+    let indic = document.querySelectorAll(".indic li");
 
 
     /*///////////////////////////////////////////////
@@ -31,7 +37,7 @@ window.addEventListener("load", function () {
 
             // 1. 오른쪽방향 슬라이드번호 증가
             snum++;
-            if (snum === slide.length) snum = 0;
+            if (snum === cnt) snum = 0;
             // 한계수: 슬라이드개수가 되면 처음으로
 
             // 2. 변경대상 : #slide -> 바깥에 변수 slide
@@ -78,7 +84,7 @@ window.addEventListener("load", function () {
             
             // 1. 왼쪽방향 슬라이드번호 감소
             snum--;
-            if (snum === -1) snum = slide.length-1;
+            if (snum === -1) snum = cnt-1;
             // 한계수: 슬라이드개수-1 (마지막번호)
 
             // 2. 변경대상 : #slide -> 바깥에 변수 slide
@@ -118,6 +124,12 @@ window.addEventListener("load", function () {
         // 3. 블릿변경하기
         // 3-1. snum 확인
         console.log("snum:"+snum);
+        // 3-2. 블릿초기화
+        for(let x of indic){
+            x.classList.remove("on");
+        } ///////// for of 문 ////////
+        // 3-3. 해당순번 블릿변경 ////
+        indic[snum].classList.add("on");
 
     }; ////////// goSlide함수 /////////////////////////
     //////////////////////////////////////////////////
