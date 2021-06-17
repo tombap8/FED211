@@ -14,10 +14,33 @@
 
             // 버튼요소(컬렉션)
             let btn = document.querySelectorAll(".btngo");
+            // 내용박스요소(컬렉션)
+            let minfo = document.querySelectorAll(".minfo");
 
             // 버튼요소의 개수만큼 클릭 셋팅하기!
             for(let x of btn){
-                console.log("돌아!");
+                x.onclick = function(){
+                    //console.log(this.innerText);
+
+                    // 1.버튼텍스트 읽어오기
+                    let txt = this.innerText;
+                    let tg;//대상선정
+
+                    // 2.분기해서 해당배열 매칭하기
+                    if(txt === "원더 우먼 1984") tg = mv2;
+                    else if(txt === "조제") tg = mv1;
+                    else if(txt === "도굴") tg = mv3;
+
+                    // 3. 해당요소에 배열값 넣기 ///
+                    // for of문사용!
+                    let num=0;//영화정보박스순서
+                    for(let x of tg){
+                        minfo[num].innerHTML = x;
+                        num++;//순서증가
+                    } /////// for of문 ///////////
+
+
+                };////// 클릭함수 /////
             } ///// for of문 /////////////
 
             /* 
