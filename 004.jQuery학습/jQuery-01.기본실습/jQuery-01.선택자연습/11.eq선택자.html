@@ -60,25 +60,44 @@
 
 			// 이벤트대상: #selnum
 			$("#selnum")
-			.css({
-				fontSize:"42px",
-				height:"60px"
-			})
-			/// 이어서코딩
-			.change(function(){
-				// 선택된 option요소의 value값 읽어오기!
-				let optval = $(this).val();
-				// this키워드로 val() 메서드 사용하여 값을 읽어옴!
-				console.log("바뀌나?"+optval);
+				.css({
+					fontSize: "42px",
+					height: "60px"
+				})
+				/// 이어서코딩
+				.change(function () {
+					// 선택된 option요소의 value값 읽어오기!
+					let optval = $(this).val();
+					// this키워드로 val() 메서드 사용하여 값을 읽어옴!
+					console.log("바뀌나?" + optval);
 
-				// 배경넣기
-				$("body").css({
-					background:"url(img/"+optval+
-					".jpg) no-repeat top/cover"
-				});//////////// css ////////////////////
+					// 배경색 초기화 (for문없이 모두 초기화함!) ///
+					$(".nav1 li").css({
+						background: "transparent"
+					}); //////// css ///////////
+
+					// 선택된 순번(optval)의 li배경색을
+					// 무지개색으로 넣기
+					// 변경대상: .nav1 li
+					// [ eq선택자 ] -> 제이쿼리 전용 선택자
+					// -> :eq(순번) - 순번은 0부터
+					// eq는 seqence에서 나온말!
+					$(".nav1 li:eq(" + optval + ")").css({
+						background: fcolor[fnum]
+					}); /////// css //////////
+
+					// 무지개색 순번 증가
+					fnum++;
+					if (fnum === 7) fnum = 0; //한계수
+
+					// 배경넣기
+					$("body").css({
+						background: "url(img/" + optval +
+							".jpg) no-repeat top/cover"
+					}); //////////// css ////////////////////
 
 
-			});////// change ///////////////
+				}); ////// change ///////////////
 
 
 
