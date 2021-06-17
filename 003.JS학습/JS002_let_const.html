@@ -107,27 +107,32 @@
 
 
         ////// 로드구역 /////////////////////////////
-        window.addEventListener("load",function(){
+        window.addEventListener("load", function () {
 
             // var 테스트
             var vartest = document.querySelectorAll(".vartest");
-            // 버튼개수만큼 링크걸기
-            for(var i=0;i<vartest.length;i++){
+            // 버튼개수만큼 링크걸기(for문의 지역변수를 var선언!!!)
+            for (var i = 0; i < vartest.length; i++) {
 
-                vartest[i].onclick = function(){
-                    console.log("전달숫자:"+i);
-                };//////// click함수 ////////////
+                vartest[i].onclick = function () {
+                    console.log("전달숫자:" + i);
+                }; //////// click함수 ////////////
 
             } ////// for문 /////////////////////
 
             // let 테스트
             var lettest = document.querySelectorAll(".lettest");
+            // 버튼개수만큼 링크걸기(for문의 지역변수를 let선언!!!)
+            for (let i = 0; i < lettest.length; i++) {
 
+                lettest[i].onclick = function () {
+                    console.log("전달숫자:" + i);
+                }; //////// click함수 ////////////
 
-        });//////////// 로드구역 /////////////////////
+            } ////// for문 /////////////////////
+
+        }); //////////// 로드구역 /////////////////////
         /////////////////////////////////////////////
-
-
     </script>
 </head>
 
