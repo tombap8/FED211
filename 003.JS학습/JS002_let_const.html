@@ -124,7 +124,7 @@
             var lettest = document.querySelectorAll(".lettest");
             // 버튼개수만큼 링크걸기(for문의 지역변수를 let선언!!!)
             for (let i = 0; i < lettest.length; i++) {
-
+                // let사용한 i는 클릭함수 내부로 전달된다!
                 lettest[i].onclick = function () {
                     console.log("전달숫자:" + i);
                 }; //////// click함수 ////////////
@@ -133,6 +133,8 @@
 
         }); //////////// 로드구역 /////////////////////
         /////////////////////////////////////////////
+
+
     </script>
 </head>
 
