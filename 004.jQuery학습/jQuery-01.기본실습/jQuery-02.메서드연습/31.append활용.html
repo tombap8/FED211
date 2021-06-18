@@ -53,7 +53,8 @@
 		// 멈춤버튼 : #stop
 		$("#stop").click(function(){
 			clearInterval(autoI);
-			autoI = undefined;//변수초기화!
+			autoI = false;//변수초기화!
+			console.log(typeof(autoI));
 			// 조건문에서 false가 나는 3가지값은?
 			// 1.undefined 할당안된(값이없는) 변수의 값
 			// 2.null 빈값
