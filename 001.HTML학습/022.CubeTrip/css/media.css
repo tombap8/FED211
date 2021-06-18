@@ -6,6 +6,13 @@
 /* 모바일 미디어쿼리 */
 @media only screen and (max-width:950px) {
 
+    /* html,body */
+    html,
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
     /* 1.메뉴박스 
     - 가로로 흐르게 상단에 위치 크기변경*/
     .city {
@@ -73,6 +80,14 @@
     /* 6. 아랫면:뉴욕 */
     .cube>li:nth-child(6) {
         transform: rotateX(-90deg) translateZ(100px);
+    }
+
+
+    /* 4.도시설명박스 */
+    .cbx {
+        top: 70vh;
+        transform: translateX(-50%);
+        width: 90%;
     }
 
 
