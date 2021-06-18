@@ -77,6 +77,18 @@
         // "도깨비, 공유씨!" 도깨비부터 마지막까지 잘라오기!
         console.log(sub1.substr(10));
         console.log(sub1.substring(10));
+
+        /* 
+            3. 문자 자르기 함수 : split(자를기준문자열)
+            -> 문자열을 기준문자로 split하여 자르면 배열이 된다!
+        */
+        var sp1 = "나는,월요일,화요일,수요일,목요일,금요일,까지,학원,에서,공부,한다";
+        console.log(sp1);
+
+        // 콤마(,)로 잘라서 변수에 할당
+        var arr = sp1.split(",");
+        console.log(arr);
+
     </script>
 </head>
 
