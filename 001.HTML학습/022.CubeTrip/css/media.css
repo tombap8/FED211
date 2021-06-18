@@ -12,6 +12,10 @@
         width: 100vw;
         height: 100vh;
     }
+    body{
+        overflow-y: scroll;/* 세로스크롤바 */
+        background-attachment: fixed;
+    }
 
     /* 1.메뉴박스 
     - 가로로 흐르게 상단에 위치 크기변경*/
@@ -88,6 +92,17 @@
         top: 70vh;
         transform: translateX(-50%);
         width: 90%;
+        height: auto;
+    }
+
+    /* 개별도시박스 */
+    .ctxt {
+        height: auto;
+    }
+
+    /* 도시설명 */
+    .ctxt p {
+        height: auto;
     }
 
 
