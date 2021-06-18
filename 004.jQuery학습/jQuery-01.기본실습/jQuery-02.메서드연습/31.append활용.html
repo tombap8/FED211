@@ -8,7 +8,30 @@
 	<script>
 	$(function(){// jQB //////////////////////////
 		// 미션: 추가버튼을 클릭하면 이미지가 랜덤하게 #container에 추가되게하시오.
-	
+		
+		// 이전랜덤수 변수
+		let temp = 0;//1~5사이의 수가 아닌수 처음에 담아준다!
+
+		// 추가버튼: #append
+		$("#append").click(function(){
+
+			// 랜덤수 만들기
+			// Math.ceil(Math.random()*원하는최대수)
+			let rdm = Math.ceil(Math.random()*5);
+			console.log("랜덤수:"+rdm);
+
+			// 같은수가 연속되지 않게 while문으로 중복방지하기!
+			while(rdm === temp){ // 이전랜덤수와 같으면 다시 생성
+				rdm = Math.ceil(Math.random()*5);
+				console.log("다시랜덤수:"+rdm);
+			} /////////// while문 ////////////////////
+
+			// 통과후 이전랜덤수 변수에 저장!
+			temp = rdm;
+
+			$("#container")
+			.append('<img src="th_pic'+rdm+'.jpg" alt="이미지">');
+		});//////// click //////////////
 	
 		
 		
@@ -27,6 +50,7 @@
 </head>
  
 <body>
+	
 
 <button id ="append"  title="append">추가</button>
 <button id="auto">자동</button>
