@@ -19,14 +19,62 @@
     }
 
     .city li {
-        height: 50px;
+        height: 8vmax;
         width: 16.66%;
         float: left;
     }
 
     .city a {
-        font: bold 32px/50px 'East Sea Dokdo', cursive;
+        font: bold 5vw/8vmax 'East Sea Dokdo', cursive;
     }
+
+    /* 마우스 오버시 설정 없애기 */
+    .city li:hover {
+        background-image:
+            linear-gradient(to right, transparent, blue) !important;
+        transform: none !important;
+    }
+
+    /* 3.큐브박스 */
+    /* 큐브 */
+    .cube {
+        top: calc(50% - 100px);
+        left: calc(50% - 100px);
+        width: 200px;
+        height: 200px;
+    }
+
+    /* 큐브 각면 셋팅 */
+    /* 1. 앞면 */
+    .cube>li:nth-child(1) {
+        transform: translateZ(100px);
+    }
+
+    /* 2. 오른쪽면:런던 */
+    .cube>li:nth-child(2) {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+
+    /* 3. 뒷면:파리 */
+    .cube>li:nth-child(3) {
+        transform: rotateY(180deg) translateZ(100px);
+    }
+
+    /* 4. 왼쪽면:베를린 */
+    .cube>li:nth-child(4) {
+        transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    /* 5. 윗면:서울 */
+    .cube>li:nth-child(5) {
+        transform: rotateX(90deg) translateZ(100px);
+    }
+
+    /* 6. 아랫면:뉴욕 */
+    .cube>li:nth-child(6) {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+
 
 }
 
