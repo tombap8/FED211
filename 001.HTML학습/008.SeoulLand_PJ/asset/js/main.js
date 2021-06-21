@@ -229,10 +229,10 @@ $(function(){
 
         // 마지막 li 선택
         let last = sld.children("li:last");
-        // 마지막 li 맨앞으로 이동(prepend) + top값 -25%
-        sld.prepend(last).css({top:"-25%"});
-        // top값 0으로 애니메이션하기
-        sld.animate({top:"0"},400);
+        // 마지막 li 맨앞으로 이동(prepend) 
+        // + top값 -25%
+        // + top값 0으로 애니메이션하기
+        sld.prepend(last).css({top:"-25%"}).animate({top:"0"},400);
 
     });//////////// click ///////////////
 
