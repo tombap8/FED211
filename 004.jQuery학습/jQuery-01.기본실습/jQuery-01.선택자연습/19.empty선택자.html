@@ -6,13 +6,25 @@
 <!-- jQuery library -->
 <script src="jquery-1.7.2.min.js"></script>
 <script src="jquery-ui-1.8.23.custom.min.js"></script>
+<!-- 컬러애니메이션에 제이쿼리UI 필수! -->
 <script>
 $(document).ready(function(e) {
+  /* 
+    :empty 선택자는 내용이 빈 요소를 선택함
+
+  */
 	
 	// 미션: 공포특집....... #container를 클릭하면
-	//   body가 10초간 서서히 검은색이 되고....
-	// 10초 후 5초간 빈요소에 글자가 8px빨간색으로 무섭지? 라는 글자로 서서히 24px까지 커지다가
-	// 0.5초간 72px로 갑자기 커진다!
+  $("#container").click(function(){
+    //   body가 10초간 서서히 검은색이 되고....
+    $("body").animate({
+      backgroundColor:"#000"
+    },10000);///// animate /////////
+    // 10초 후 5초간 빈요소에 글자가 8px빨간색으로 
+    // 무섭지? 라는 글자로 서서히 24px까지 커지다가
+    // 0.5초간 72px로 갑자기 커진다!
+
+  });/////// click //////////////////////
 		
 	
 	
