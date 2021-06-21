@@ -28,13 +28,16 @@
               fontSize: "9px",
               color: "red",
               fontFamily: "궁서체"
-            })
+            }) //////// css ///////////
             .animate({
               fontSize: "24px"
-            }, 5000)
+            }, 5000) //// animate ///////
+            // 0.5초간 72px로 갑자기 커진다!
+            .animate({
+              fontSize: "72px"
+            }, 500); /////// animate //////
 
         }); ///// animate /////////
-        // 0.5초간 72px로 갑자기 커진다!
 
       }); /////// click //////////////////////
 
