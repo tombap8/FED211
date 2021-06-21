@@ -214,6 +214,7 @@ body {
     /* 한줄에 오면서 크기 디자인적용! */
     width: 21px;
     height: 11px;
+    margin-top: 5px;
     vertical-align: 14px;
     /* 인라인요소간 세로위치정렬 */
     /* outline: 1px solid red; */
