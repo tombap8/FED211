@@ -202,9 +202,17 @@ $(function(){
         // 이동원리: 
         // (1)대상의 top값을 1/4크기인 -25%를 
         //      설정하여 애니메이션 이동한다.
+        // (2)이동후 슬라이드 첫번째 li를 맨뒤로 이동한다.(append)
+        // (3) 맨뒤 이동시 top값을 다시 0으로 변경함!
         sld.animate({
             top:"-25%"
-        },400);
+        },400,function(){//애니후
+            // 첫번째 li선택
+            let first = sld.children("li:first");
+            // 첫번째 li 맨뒤로 이동 + top값 0
+            sld.append(first).css({top:"0"});
+
+        }); ////// animate ////////////
 
 
     });/////////// click ////////////////
