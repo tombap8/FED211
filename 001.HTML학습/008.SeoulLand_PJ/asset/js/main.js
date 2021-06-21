@@ -226,7 +226,13 @@ $(function(){
         // (1) 맨뒤 li요소를 맨앞으로 이동
         // (2) 동시에 top값 -25%로 설정
         // (3) top값을 0으로 애니메이션하기
-        
+
+        // 마지막 li 선택
+        let last = sld.children("li:last");
+        // 마지막 li 맨앞으로 이동(prepend) + top값 -25%
+        sld.prepend(last).css({top:"-25%"});
+        // top값 0으로 애니메이션하기
+        sld.animate({top:"0"},400);
 
     });//////////// click ///////////////
 
