@@ -8,9 +8,28 @@
 <script src="jquery-ui-1.8.23.custom.min.js"></script>
 <script>
 $(document).ready(function(e) {
+  /* 
+    prev() - 선택요소의 이전형제요소를 선택함!
+  */
 	
-	// 미션: 마지막 p태그를 클릭하면 0.5초 간격으로 이전 형제요소의 배경색을 차례로 넣으시오.
-	// animate() 사용.
+	// 미션: 마지막 p태그를 클릭하면 0.5초 간격으로 
+  //      이전 형제요소의 배경색을 차례로 넣으시오.
+  $("#container")
+  .children("p").last()
+  .click(function(){
+    // 확인
+    console.log("마지막p");
+
+    $(this) // 클릭된 마지막 p태그
+    .animate({
+      backgroundColor:"red"
+    },500)
+
+  }); //////// click /////////////
+
+
+
+	// animate({CSS설정},시간,이징,함수) 사용.
 	// first(), last() 사용
 	
 	
