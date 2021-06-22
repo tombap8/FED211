@@ -10,6 +10,7 @@
 $(document).ready(function(e) {
   /* 
     prev() - 선택요소의 이전형제요소를 선택함!
+    prevAll() - 이전형제요소 전부를 선택함!
   */
 	
 	// 미션: 마지막 p태그를 클릭하면 0.5초 간격으로 
@@ -43,6 +44,13 @@ $(document).ready(function(e) {
 
   }); //////// click /////////////
 
+  // 추가미션:
+  // .sub 아래 마지막 p태그를 클릭하면
+  // 이전 p태그 모두를 배경색 yellow, 가로,세로 크기 100px로
+  // 애니메이션 하시오!
+  // prevAll() 사용!
+  
+
 
 
 	// animate({CSS설정},시간,이징,함수) 사용.
@@ -69,6 +77,19 @@ $(document).ready(function(e) {
     <p>p:나를클릭해!</p>
 
 </div>
+
+
+<div class="sub">
+  <p>p</p>
+  <p>p</p>
+  <p>p</p>
+  <p>p</p>
+  <p>p:나도클릭!</p>
+</div>
+
+
+
+
 <!---------- jQuery code Start ---------->
 <script>
 
