@@ -434,7 +434,8 @@ body {
     background-color: rgb(187, 205, 255);
 }
 /* 트위터 */
-.tabCont li:nth-child(3){
+.tabCont li:nth-child(3){    
+    overflow-y: scroll;
     background-color: rgb(252, 253, 168);
 }
 /* 인스타그램 */
