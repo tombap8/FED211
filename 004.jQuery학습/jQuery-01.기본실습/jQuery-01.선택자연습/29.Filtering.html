@@ -21,7 +21,7 @@ $(document).ready(function(e) {
 
 		// 2. p태그를 찾아 그 중 마지막 요소의 배경색을 yellow
 		$("p").last().css({background:"yellow"});	
-			
+
 		// 3. p태그 중 2번째 요소를 선택하여 margin-top값을 
 		//		100px로 transition 0.4초로 설정하시오.
 		$("p").eq(1).css({
@@ -32,10 +32,19 @@ $(document).ready(function(e) {
 		// 4. div 중 클래스가 middle인 요소를 찾아 
 		//		margin-top값을 200px, height값을 200px,
 		// 		배경색을 lime 색으로 transition 주시오.
-				
+		$("div").filter(".middle")
+		.css({
+			marginTop:"200px",
+			height:"200px",
+			background:"lime",
+			transition:".8s"
+		});/////// css ////////////
+
 		// 5. div 중에서 p태그를 포함하는 요소를 선택하여 
 		// 		border를 10px ridge blue로 설정하시오.
-		
+		$("div").has("p").css({
+			border:"10px ridge blue"
+		});////////// css ///////////
 		
 		
 	});//////// click /////////////////
