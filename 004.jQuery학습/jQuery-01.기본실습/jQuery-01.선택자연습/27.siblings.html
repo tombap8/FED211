@@ -45,8 +45,8 @@
       tg.find("img").click(function(){
 
         // this는 클릭된 img
-        $(this).animate({width:"200px"},400)
-        .siblings().animate({width:"50px"},400);
+        $(this).animate({width:"200px"},800)
+        .siblings().animate({width:"50px"},800);
 
         // siblings(필터) 를 활용한 테두리주기!
         // class가 "my"인 클릭된 요소 이외의 형제요소를 선택하여
@@ -84,6 +84,14 @@
       width: 50px;
       height: 50px;
       border: #000 thin solid;
+    }
+
+    .my{
+      border-radius: 50%;
+      animation: rot 2s linear infinite;
+    }
+    @keyframes rot {
+      to{transform: rotate(360deg);}
     }
   </style>
 </head>
