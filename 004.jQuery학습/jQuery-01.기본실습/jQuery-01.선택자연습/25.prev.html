@@ -24,6 +24,16 @@ $(document).ready(function(e) {
     .animate({
       backgroundColor:"red"
     },500)
+    .prev() //이전 p태그
+    .delay(500) // 0.5초지연
+    .animate({
+      backgroundColor:"green"
+    },500)
+    .prev() //이전 p태그
+    .delay(1000) //1초지연
+    .animate({
+      backgroundColor:"yellow"
+    },500)
 
   }); //////// click /////////////
 
