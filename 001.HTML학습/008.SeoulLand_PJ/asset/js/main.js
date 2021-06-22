@@ -375,6 +375,18 @@ $(function(){ /// jQB3 ////////////////////////
         // 확인
         console.log("탭이양!");
 
+        // 1. 탭메뉴 변경하기
+        $(this).addClass("on")
+        .siblings().removeClass("on");
+
+        // 현재 클릭된 li탭 순번
+        let idx = $(this).index();
+        console.log("li탭순번:"+idx);
+
+        // 2. 탭내용 변경하기
+        $(".tabCont li").eq(idx).addClass("on")
+        .siblings().removeClass("on");
+
     });//////////// click ////////////////////////
 
 
