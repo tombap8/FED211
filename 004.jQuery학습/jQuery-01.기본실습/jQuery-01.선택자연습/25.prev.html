@@ -13,7 +13,7 @@ $(document).ready(function(e) {
   */
 	
 	// 미션: 마지막 p태그를 클릭하면 0.5초 간격으로 
-  //      이전 형제요소의 배경색을 차례로 넣으시오.
+  //      이전 형제요소의 배경색을 차례로 넣으시오.(p태그만!)
   $("#container")
   .children("p").last()
   .click(function(){
@@ -25,15 +25,21 @@ $(document).ready(function(e) {
       backgroundColor:"red"
     },500)
     .prev() //이전 p태그
-    .delay(500) // 0.5초지연
+    .delay(500) // 0.5초 지연
     .animate({
       backgroundColor:"green"
     },500)
     .prev() //이전 p태그
-    .delay(1000) //1초지연
+    .delay(1000) //1초 지연
     .animate({
       backgroundColor:"yellow"
     },500)
+    .prev() //이전 형제요소-> div
+    .find("p") //div의 자손 p태그
+    .delay(1500) //1.5초 지연
+    .animate({
+      backgroundColor:"lime"
+    },500);///// animate ///////
 
   }); //////// click /////////////
 
