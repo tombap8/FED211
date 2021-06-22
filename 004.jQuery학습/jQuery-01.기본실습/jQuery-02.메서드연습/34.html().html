@@ -67,6 +67,13 @@
 			.parent().find("img:even") // 짝수(0부터)
 			.delay(2000) // 위의 총액션 시간 + 2초 기다림
 			.animate({top:"200px"},500) // 위로이동 액션!
+			// 홀수번째 선택
+			.parent().find("img:odd").first() // 홀수번째 중 첫번째
+			.delay(2000) // 2초 기다림
+			.animate({top:"-50px"},500) // 액션!
+			.parent().find("img:odd").last() // 홀수번째 중 마지막째
+			.delay(2000) // 2초 기다림
+			.animate({top:"50px"},500) // 액션!
 
 
 
