@@ -83,6 +83,58 @@
         right: 20px;
     }
 
+    /* 10. 컨텐츠 한줄에 한칸씩 레이아웃 변경하기  */
+    /* 공통 파티션 클래스 변경하기! */
+    .pbx {
+        float: none;
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* 11. 컨텐츠 타이틀+more버튼 변경하기 */
+    .tit {
+        font-size: 20px;
+    }
+
+    .more img {
+        width: 50px;
+    }
+
+    /* 12. 운영시간 변경 */
+    .time {
+        height: 92px;
+        background-repeat: repeat;
+    }
+
+    .today,
+    .today strong,
+    .timesec {
+        font-size: 30px;
+    }
+
+    .guide,
+    .guide img {
+        width: 100%;
+    }
+
+    .guide li {
+        width: 25%;
+        /* 4등분 */
+    }
+
+    /* 13.뉴스박스 */
+    .news {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    /* 14.바로가기 링크 */
+    .links, .links img{
+        width: 100%;
+    }
+    .links li{
+        width: 50%;
+    }
 
 
 }
