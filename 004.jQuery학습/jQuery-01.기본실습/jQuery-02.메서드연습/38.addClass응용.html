@@ -48,6 +48,22 @@
 
         /* .ham에 class="on"을 주면 span막대 변경하기 */
 
+        /* 1번막대 : 중앙이동+시계방향45도회전 */
+        .ham.on span:nth-child(1){
+            top: 15px;
+            transform: rotate(45deg);
+        }
+        /* 2번막대 : left위치 중앙이동+width는0 */
+        .ham.on span:nth-child(2){
+            width: 0;
+            left: 50%;
+        }
+        /* 3번막대 : 중앙이동+반시계방향45도회전 */
+        .ham.on span:nth-child(3){
+            top: 15px;
+            transform: rotate(-45deg);
+        }
+
     </style>
 </head>
 <body>
