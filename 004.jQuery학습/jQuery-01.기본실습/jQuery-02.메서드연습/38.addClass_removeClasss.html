@@ -41,20 +41,22 @@
 
         // 랜덤수 만들기(1~5)
         // Math.ceil(Math.random()*원하는범위최대수)
-        let rdm = Math.ceil(Math.random()*5);
-        console.log("랜덤수:"+rdm);
+        let rdm = Math.ceil(Math.random() * 5);
+        console.log("랜덤수:" + rdm);
 
         // 바로이전 랜덤수 중복피하기 /////////
-        while(rdm === temp){
-          rdm = Math.ceil(Math.random()*5);
-          console.log("다시랜덤수:"+rdm);
+        while (rdm === temp) {
+          rdm = Math.ceil(Math.random() * 5);
+          console.log("다시랜덤수:" + rdm);
         } //////// while문 ///////////////////
 
         // 이전 랜덤수 할당하기
         temp = rdm;
 
         // 클래스 넣기(this는 클릭된 img)
-        $(this).addClass("type"+rdm);
+        $(this)
+          .removeClass() // 모든 class지우기!
+          .addClass("type" + rdm); // 랜덤 class넣기!
 
       }); /////////// click //////////////
 
