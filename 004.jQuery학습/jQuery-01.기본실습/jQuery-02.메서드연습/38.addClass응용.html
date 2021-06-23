@@ -40,6 +40,8 @@
         /* 2번막대 */
         .ham span:nth-child(2){
             top: 15px;
+            left: 0;
+            /* 트랜지션 때문에 초기값필요!(기본값이 auto라서!) */
         }
         /* 3번막대 */
         .ham span:nth-child(3){
@@ -65,6 +67,18 @@
         }
 
     </style>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script>
+        $(function(){//// jQB ///////////////////
+
+            // 햄버거버튼 클릭시 class = "on" 토글
+            $(".ham").click(function(){
+                $(this).toggleClass("on");
+            });//////////// click ////////////
+
+
+        });////////////// jQB //////////////////
+    </script>
 </head>
 <body>
     <!-- 상단영역 -->
