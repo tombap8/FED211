@@ -303,6 +303,7 @@ body{
     height: 100vh;
     background-color: rgba(0,0,0,.7);
     z-index: 99999;
+    display: none;/* 햄버거버튼 클릭전엔 안보임 */
 }
 
 .mgnb ul{
