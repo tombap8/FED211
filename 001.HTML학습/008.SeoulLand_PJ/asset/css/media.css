@@ -28,6 +28,12 @@
         display: block;
     }
 
+    /* 5. 배너 속박스 두번째 파티션 박스(사이드배너포함) 없애기 */
+    /* .ban하위 자식으로 h2,div 가 섞여 있어서 last-of-type사용! */
+    .ban>div:last-of-type{
+        display: none;
+    }
+
 
 
 }
