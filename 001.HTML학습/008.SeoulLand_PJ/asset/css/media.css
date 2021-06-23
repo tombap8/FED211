@@ -41,9 +41,46 @@
 
     /* 7. 배너 블릿박스 가로 중앙이동하기 */
     .indic {
-        right: auto;/* 해제 */
+        right: auto;
+        /* 해제 */
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    /* 8. 배너 슬라이드 배경이미지 모바일용으로 변경하기 */
+    .slide>ul>li:nth-child(1) {
+        background-image: url(../images/mob/ban01.jpg);
+    }
+
+    .slide>ul>li:nth-child(2) {
+        background-image: url(../images/mob/ban02.jpg);
+    }
+
+    .slide>ul>li:nth-child(3) {
+        background-image: url(../images/mob/ban03.jpg);
+    }
+
+    .slide>ul>li:nth-child(4) {
+        background-image: url(../images/mob/ban04.jpg);
+    }
+
+    .slide>ul>li:nth-child(5) {
+        background-image: url(../images/mob/ban05.png);
+    }
+
+    .slide>ul>li:nth-child(6) {
+        background-image: url(../images/mob/ban06.jpg);
+    }
+
+    /* 9. 배너 양쪽이동버튼 위치변경하기 */
+    /* 왼쪽이동버튼 */
+    .lb {
+        left: 20px;
+    }
+
+    /* 오른쪽이동버튼 */
+    .rb {
+        right: 20px;
     }
 
 
