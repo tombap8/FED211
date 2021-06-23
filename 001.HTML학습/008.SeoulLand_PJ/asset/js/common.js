@@ -39,22 +39,39 @@ function showGNB(gubun) {
 } //////////// showGNB 함수 //////////////////
 //////////////////////////////////////////////
 
-$(function(){ ////// jQB //////////////////////
+$(function () { ////// jQB //////////////////////
 
     ///// 패밀리사이트 연결하기 ///////
     // 대상: #fslink
     // 이벤트: change
     //       -> select박스의 선택 option이 변경될때
     // 제이쿼리 change 이벤트 메서드 -> change()
-    $("#fslink").change(function(){
-        // 변경 선택된 option value값 읽기
+    $("#fslink").change(function () {
+
+        // 1.변경 선택된 option value값 읽기
         let optval = $(this).val();
         // val() 메서드 : 선택 옵션의 value값 읽어옴!
-        console.log("선택값:"+optval);
+        console.log("선택값:" + optval);
 
-    });/////////// change함수 ///////////////////
+        // 2. 옵션값이 "fs"이면 돌아가기!
+        if(optval==="fs") return;
+
+        // 3.옵션값에 따라 이동할 url변수에 할당하기
+        let url;
+        switch (optval) {
+            case "cal":
+                url = "http://www.icpk.co.kr/";
+                break;
+            case "rose":
+                url = "http://www.irosehill.co.kr/";
+                break;
+        } //////// switch case문 /////////
+
+        console.log("URL값:"+url);
+
+    }); /////////// change함수 ///////////////////
 
 
 
 
-});/////////// jQB ///////////////////////////
+}); /////////// jQB ///////////////////////////
