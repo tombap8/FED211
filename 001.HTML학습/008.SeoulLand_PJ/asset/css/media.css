@@ -3,14 +3,28 @@
 
 /* 모바일 미디어쿼리 */
 @media only screen and (max-width:500px) {
-    
-    /* 속박스 크기를 화면에 맞추기! */
-    .ibx{
+
+    /* 1. 속박스 크기를 화면에 맞추기! (기존크기 960px) */
+    .ibx {
         width: 100vw;
         overflow-x: hidden;
         /* 가로스크롤 숨기기! */
     }
 
+    /* 2. 상단영역 두번째 파티션박스 없애기 */
+    .top>div:last-child {
+        display: none;
+    }
+
+    /* 3. 상단영역 첫번재 파티션(로고포함) 변경하기 */
+    .top>div:first-child {
+        width: auto;
+        float: none;
+        text-align: center;
+    }
 
 
-} /* 미디어쿼리 */
+
+}
+
+/* 미디어쿼리 */

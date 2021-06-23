@@ -266,6 +266,19 @@ body{
     outline: none;
 }
 
+/* 모바일용 햄버거 버튼 */
+#ham{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scaleX(1.4);
+    right: 5%;
+    background-color: transparent;
+    border: none;
+    font-size: 14vw;
+    color: red;
+    display: none;/* DT에서 안보임 */
+}
+
 
 
 /************* 하단영역 ***********/
