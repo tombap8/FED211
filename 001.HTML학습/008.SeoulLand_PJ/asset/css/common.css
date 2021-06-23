@@ -278,6 +278,49 @@ body{
     color: red;
     display: none;/* DT에서 안보임 */
 }
+/* 가상요소로 햄버거모양 글자넣기
+(왜?가상요소야? css에서 x버튼으로 변경하려고!) */
+#ham::before{
+    content: '≡';
+}
+/* .on먹은 햄버거버튼 */
+#ham.on{
+    color: #fff;
+    z-index: 999999;
+}
+#ham.on::before{
+    content: '×';
+}
+
+/* 모바일용 GNB메뉴 */
+.mgnb{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.7);
+    z-index: 99999;
+}
+
+.mgnb ul{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.mgnb li{
+    width: 100%;
+    text-align: center;
+}
+
+.mgnb a{
+    color: #fff;
+    font-family: ng;
+    font-size: 5vh;
+    line-height: 2;
+}
 
 
 
