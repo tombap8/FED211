@@ -288,6 +288,7 @@ body{
     color: #fff;
     z-index: 999999;
 }
+/* 닫기버튼 모양글자로 변경 */
 #ham.on::before{
     content: '×';
 }
