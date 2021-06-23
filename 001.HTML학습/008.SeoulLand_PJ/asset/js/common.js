@@ -69,6 +69,12 @@ $(function () { ////// jQB //////////////////////
 
         console.log("URL값:"+url);
 
+        // 4. 페이지 새창으로 열기
+        window.open().location.href = url;
+        // window.open() 새창열기
+        // location.href = 페이지주소 -> 페이지이동
+
+
     }); /////////// change함수 ///////////////////
 
 
