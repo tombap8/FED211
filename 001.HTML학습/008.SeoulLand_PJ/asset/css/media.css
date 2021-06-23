@@ -23,6 +23,11 @@
         text-align: center;
     }
 
+    /* 4. 햄버거 버튼 보이기 */
+    #ham{
+        display: block;
+    }
+
 
 
 }
