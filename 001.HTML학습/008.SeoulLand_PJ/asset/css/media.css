@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* 서울랜드 메인 미디어쿼리 - media.css */
+
+/* 모바일 미디어쿼리 */
+@media only screen and (max-width:500px) {
+    
+    /* 속박스 크기를 화면에 맞추기! */
+    .ibx{
+        width: 100vw;
+        overflow-x: hidden;
+        /* 가로스크롤 숨기기! */
+    }
+
+
+
+} /* 미디어쿼리 */
