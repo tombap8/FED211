@@ -60,6 +60,13 @@
 
       }); /////////// click //////////////
 
+      /// 추가미션: .my 박스를 클릭하면 .pos를 넣기/빼기
+      // .pos가 없으면 넣고 있으면 뺀다! -> toggleClass()를 사용!
+      $(".my").click(function () {
+        // class 토글기능
+        $(this).toggleClass("pos");
+      }); //////// click //////////
+
 
 
     }); /////// jQB ////////////////////////////
@@ -99,17 +106,17 @@
     }
 
     /* 토글적용박스 */
-    .my{
-       position: absolute;
-       top: 30%;
-       left: 0;
-       transition: left 2s ease-in-out;
-    }
-    /* 위치이동 클래스 */
-    .pos{
-      left: 70%;
+    .my {
+      position: absolute;
+      top: 30%;
+      left: 0;
+      transition: left 2s ease-in-out;
     }
 
+    /* 위치이동 클래스 */
+    .pos {
+      left: 70%;
+    }
   </style>
 </head>
 
