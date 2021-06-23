@@ -20,7 +20,7 @@
         3. toggleClass(클래스명)
         - 선택요소에 특정 class가 있으면 넣고 없으면 지움
 
-        
+
         ※ 비교하기!!!
         [ JS에서 클래스 넣고 빼기 메서드 ]
         classList 객체
@@ -33,6 +33,30 @@
 
       // 미션: img태그를 클릭하면 img의 class를 
       //      랜덤으로 변경하시오.(type1~type5 의 class중 하나)
+
+      // 이전랜덤수 변수
+      let temp = 0; //초기값은 범위밖의 수
+
+      $("img").click(function () {
+
+        // 랜덤수 만들기(1~5)
+        // Math.ceil(Math.random()*원하는범위최대수)
+        let rdm = Math.ceil(Math.random()*5);
+        console.log("랜덤수:"+rdm);
+
+        // 바로이전 랜덤수 중복피하기 /////////
+        while(rdm === temp){
+          rdm = Math.ceil(Math.random()*5);
+          console.log("다시랜덤수:"+rdm);
+        } //////// while문 ///////////////////
+
+        // 이전 랜덤수 할당하기
+        temp = rdm;
+
+        // 클래스 넣기(this는 클릭된 img)
+        $(this).addClass("type"+rdm);
+
+      }); /////////// click //////////////
 
 
 
