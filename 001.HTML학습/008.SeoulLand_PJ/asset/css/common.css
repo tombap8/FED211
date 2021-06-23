@@ -286,6 +286,7 @@ body{
 /* .on먹은 햄버거버튼 */
 #ham.on{
     color: #fff;
+    transform: translateY(-50%) scaleX(1);
     z-index: 999999;
 }
 /* 닫기버튼 모양글자로 변경 */
