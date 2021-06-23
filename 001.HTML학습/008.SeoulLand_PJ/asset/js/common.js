@@ -38,3 +38,23 @@ function showGNB(gubun) {
 
 } //////////// showGNB 함수 //////////////////
 //////////////////////////////////////////////
+
+$(function(){ ////// jQB //////////////////////
+
+    ///// 패밀리사이트 연결하기 ///////
+    // 대상: #fslink
+    // 이벤트: change
+    //       -> select박스의 선택 option이 변경될때
+    // 제이쿼리 change 이벤트 메서드 -> change()
+    $("#fslink").change(function(){
+        // 변경 선택된 option value값 읽기
+        let optval = $(this).val();
+        // val() 메서드 : 선택 옵션의 value값 읽어옴!
+        console.log("선택값:"+optval);
+
+    });/////////// change함수 ///////////////////
+
+
+
+
+});/////////// jQB ///////////////////////////
