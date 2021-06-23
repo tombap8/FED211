@@ -30,8 +30,18 @@
 		}) ///// css //////
 		.click(function(){
 			
-			// 1. 터지는 이미지로 변경하기 : this키워드-클릭된img
-			$(this).attr("src","balloon-burst.jpg");
+			// 1. 터지는 이미지로 변경하기
+			$(this) //this 키워드 - 클릭된 img
+			.attr("src","balloon-burst.jpg")
+			// 2. 변경된 이미지가 커지는 애니
+			.animate({
+				width:"300px",
+				height:"360px"
+			},100,function(){ // 콜백함수
+				// 3. 풍선이 사라짐
+				$(this).remove();
+			});////// animate ////////
+
 
 		});//////////// click ////////////////
 		
