@@ -62,6 +62,7 @@
 				$("img").toggle(1000,
 					function () { // 콜백함수
 						// display:none일때만 이미지변경하기
+						// css(속성명) 은 속성값을 읽어옴!
 						if ($(this).css("display") === "none") {
 
 							inum++; // 이미지 번호 1씩증가
