@@ -202,25 +202,34 @@
     }
 
     /* 25. 하단 배경바 */
-    #info::before{
+    #info::before {
         height: 90px;
     }
 
     /* 26. 하단 속박스영역 높이값 없앰 */
-    .info{
+    .info {
         height: auto;
     }
 
     /* 27. 하단박스 마지막 div 파티션
     (패밀리사이트링크) 없애기 */
-    .info>div:last-of-type{
+    .info>div:last-of-type {
         display: none;
     }
 
     /* 28. 하단박스 둘째줄 높이값 없애기 */
-    .info > .info2 {
+    .info>.info2 {
         height: auto;
-        text-align: center;/* 이미지중앙 */
+        text-align: center;
+        /* 이미지중앙 */
+    }
+
+    /* 29. 회사주소 */
+    .addr {
+        width: 100%;
+        margin: 14px 0 10px;
+        font-size: 12px;
+        line-height: 20px;
     }
 
 
