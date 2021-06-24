@@ -113,11 +113,16 @@
 			// 변경 대상: .smenu
 			$(".gnb>ul>li").hover(
 				function(){ // over
-					$(".smenu").slideDown(400);
+					$(".smenu",this).slideDown(400);
 				},
 				function(){ // out
-					$(".smenu").slideUp(400);
+					$(".smenu",this).stop().slideUp(400);
 				}); ////// hover ///////
+
+				/// stop() 메서드
+				// 애니메이션이 큐에 등록되어 실행되는데 
+				// 이것을 지워주는 기능을함
+				// 여기서는 마우스 아웃시에만 지워줌!
 
 			// hover() 메서드 ////////////////////////
 			// 형식: $(선택자).hover(함수1,함수2)
