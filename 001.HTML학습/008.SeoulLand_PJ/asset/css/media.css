@@ -88,7 +88,6 @@
     .pbx {
         float: none;
         width: 100%;
-        height: auto;
         padding: 15px;
     }
 
@@ -130,11 +129,43 @@
     }
 
     /* 14.바로가기 링크 */
-    .links, .links img{
+    .links,
+    .links img {
         width: 100%;
     }
-    .links li{
+
+    .links li {
         width: 50%;
+    }
+
+    /* 15. 컨텐츠영역 파티션박스 높이값 변경 */
+    .cont>.pbx {
+        height: auto;
+    }
+
+    /* 16.SNS 박스 */
+    .sns {
+        width: 100%;
+        height: 230px;
+    }
+
+    /* 17.sns 탭메뉴 */
+    .tabTit {
+        height: 40px;
+    }
+
+    /* 18.탭메뉴 a링크 */
+    .tabTit a {
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    /* 19. 모바일용 아이프레임 보이기 */
+    .ifr2{
+        display: block;
+    }
+    .ifr1{/* DT용 숨기기 */
+        display: none;
     }
 
 

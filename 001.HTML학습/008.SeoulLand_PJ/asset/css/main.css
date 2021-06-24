@@ -429,6 +429,11 @@ body {
 /* .tabCont li:nth-child(1){
     background-color: rgb(255, 187, 187);
 } */
+
+/* 모바일용 숨기기 */
+.ifr2{
+    display: none;
+}
 /* 블로그 */
 /* .tabCont li:nth-child(2){
     background-color: rgb(187, 205, 255);
