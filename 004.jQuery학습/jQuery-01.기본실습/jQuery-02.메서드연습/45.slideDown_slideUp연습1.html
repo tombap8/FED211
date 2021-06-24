@@ -109,6 +109,15 @@
 			$(".smenu").hide();//display:none
 
 			// 2. slide설정
+			// 이벤트 대상: .gnb>ul>li
+			// 변경 대상: .smenu
+			$(".gnb>ul>li").hover(
+				function(){ // over
+					$(".smenu").slideDown(400);
+				},
+				function(){ // out
+					$(".smenu").slideUp(400);
+				}); ////// hover ///////
 
 			// hover() 메서드 ////////////////////////
 			// 형식: $(선택자).hover(함수1,함수2)
