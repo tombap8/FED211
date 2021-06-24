@@ -10,11 +10,12 @@
     html,
     body {
         width: 100vw;
-        height: 100vh;
+        height: auto;/* 높이값 자동! */
     }
     body{
         overflow-y: scroll;/* 세로스크롤바 */
         background-attachment: fixed;/* 배경고정 */
+        padding-bottom: 50px;/* 하단공간 */
     }
 
     /* 1.메뉴박스 
@@ -23,6 +24,7 @@
         top: 0;
         right: auto;
         width: 100%;
+        z-index: 9999;/* 메뉴맨위 */
     }
 
     .city ul {
@@ -49,6 +51,8 @@
     /* 3.큐브박스 */
     /* 큐브 */
     .cube {
+        position: relative;
+        /* 자리차지하는 포지션 변경! */
         top: calc(50% - 100px);
         left: calc(50% - 100px);
         width: 200px;
@@ -89,14 +93,21 @@
 
     /* 4.도시설명박스 */
     .cbx {
-        top: 70vh;
-        transform: translateX(-50%);
+        position: relative;
+        /* 자리차지하는 포지션 */
+        top: auto;
+        left: auto;
+        transform: none;
         width: 90%;
         height: auto;
+        margin: 0 auto;/* 가로중앙 */
+        margin-top: 50px;/* 상단여백 */
     }
 
     /* 개별도시박스 */
     .ctxt {
+        position: static;
+        /* 자리차지 포지션 */
         height: auto;
     }
 
