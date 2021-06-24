@@ -190,7 +190,7 @@
     /* 23. 하단링크 글자크기 등 변경 */
     .link {
         font-size: 14px;
-        width: 287px;
+        width: 310px;
         margin: 0 auto;
     }
 
@@ -200,6 +200,7 @@
         width: 195px;
         margin: 10px auto;
     }
+
 
     /* 25. 하단 배경바 */
     #info::before {
