@@ -191,6 +191,7 @@
     .link {
         font-size: 14px;
         width: 310px;
+        /* 가상요소 점때문에 조금크게하기 */
         margin: 0 auto;
     }
 
