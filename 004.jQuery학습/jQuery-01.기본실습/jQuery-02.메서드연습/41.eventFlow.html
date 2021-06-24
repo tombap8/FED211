@@ -17,16 +17,19 @@
 		
 		//친척네집
 		$("div").click(function(e){
+			e.stopPropagation();//버블링차단!
 			$(this).css({backgroundColor:"green"});
 		});///// click ////////////
 		
 		//엄마집
 		$("p").click(function(e){
 			$(this).css({backgroundColor:"yellow"});
+			return false;//버블링차단!(JS기법-최하단)
 		});///// click ////////////
 		
 		//아들방
 		$("a").click(function(e){
+			e.stopPropagation();//버블링차단!(jQuery기법)
 			$(this).css({backgroundColor:"red"});
 		});///// click ////////////
 		
@@ -48,6 +51,8 @@
 				- 주의: 익명함수의 파라미터 전달변수 e를 반드시 사용해야
 				본 메서드가 작동한다!
 
+				(2) JS 기법:
+				- return false 를 코드 최하단에 사용함!
 
 		
 		*/
