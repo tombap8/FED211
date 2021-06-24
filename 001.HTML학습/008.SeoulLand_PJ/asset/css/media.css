@@ -168,6 +168,17 @@
         display: none;
     }
 
+    /* 20.탭내용 박스 */
+    .tabCont{
+        height: 187px;
+    }
+
+    /* 21. 블로그 이미지 크기변경 */
+    .tabCont li:nth-child(2) img{
+        width: 100%;
+        height: 100%;
+    }
+
 
 }
 
