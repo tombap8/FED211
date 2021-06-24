@@ -161,23 +161,68 @@
     }
 
     /* 19. 모바일용 아이프레임 보이기 */
-    .ifr2{
+    .ifr2 {
         display: block;
     }
-    .ifr1{/* DT용 숨기기 */
+
+    .ifr1 {
+        /* DT용 숨기기 */
         display: none;
     }
 
     /* 20.탭내용 박스 */
-    .tabCont{
+    .tabCont {
         height: 187px;
     }
 
     /* 21. 블로그 이미지 크기변경 */
-    .tabCont li:nth-child(2) img{
+    .tabCont li:nth-child(2) img {
         width: 100%;
         height: 100%;
     }
+
+    /* 22. 하단링크 일부 없애기 */
+    .link li:nth-child(5),
+    .link li:nth-child(6) {
+        display: none;
+    }
+
+    /* 23. 하단링크 글자크기 등 변경 */
+    .link {
+        font-size: 14px;
+        width: 287px;
+        margin: 0 auto;
+    }
+
+    /* 24. sns 아이콘 박스 */
+    .snsico {
+        padding: 0;
+        width: 195px;
+        margin: 10px auto;
+    }
+
+    /* 25. 하단 배경바 */
+    #info::before{
+        height: 90px;
+    }
+
+    /* 26. 하단 속박스영역 높이값 없앰 */
+    .info{
+        height: auto;
+    }
+
+    /* 27. 하단박스 마지막 div 파티션
+    (패밀리사이트링크) 없애기 */
+    .info>div:last-of-type{
+        display: none;
+    }
+
+    /* 28. 하단박스 둘째줄 높이값 없애기 */
+    .info > .info2 {
+        height: auto;
+        text-align: center;/* 이미지중앙 */
+    }
+
 
 
 }
