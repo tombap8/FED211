@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JS - DOM(Document Object Model)</title>
+    <script>
+        //////////// 로드구역 ///////////////////////////
+        window.addEventListener("DOMContentLoaded", function() {
+
+            // 로드구역 확인
+            console.log("로딩완료!");
+
+            //// #div01의 각 메뉴에 마우스 오버시 하위메뉴 보이기 ////
+            // 이벤트: mouseover / mouseout
+            // 이벤트 대상: .smenu
+            var menu = document.querySelectorAll('.smenu');
+            //console.log("메뉴개수:" + menu.length);
+
+            // 변경 대상: .smenu ol
+            // 변경 내용: 마우스 오버시 높이값이 생기고 아웃시엔 높이값 0            
+            /////////////////////////////////////////////////
+            // 메뉴 개수만큼 for문을 돌려서 모두 셋팅한다! ////////
+            // for문의 대상은 li.smenu 즉, 컬랙션에 담긴 요소임!//
+            // for of문을 사용해 보자!//////////////////////////
+            /////////////////////////////////////////////////
+            for (var x of menu) { //x는 해당순번의 .smenu요소
+
+                //console.log("돌아!");
+                // 마우스 오버시 ///////////////////////////
+                x.onmouseover = function() {
+
+                    // 선택된 li의 서브메뉴박스 div를 선택한다!
+                    var tg = this.querySelector("div");
+                    // 서브메뉴 박스의 ol의 높이값을 측정한다
+                    var hv = tg.querySelector("ol").offsetHeight;
+                    // offsetHeight는 현재 선택요소의 높이값을 알아옴
+                    // 리턴결과는 단위없는 px숫자값이 나옴!
+                    //console.log("ol높이값:" + hv);
+
+                    tg.style.height = hv + "px";
+                    tg.style.transition = "height .4s";
+
+                }; ///// mosueover 함수 /////////////////
+
+                // 마우스 아웃시 ///////////////////////////////
+                x.onmouseout = function() {
+
+                    var tg = this.querySelector("div");
+                    tg.style.height = "0";
+
+                }; ////// mouseout 함수 ///////////////
+
+
+
+            } //// for of 문 ////////////////////////////////
+            /////////////////////////////////////////////////
+
+
+
+            /*for(시;한;증){}
+            for(var i=0;i<menu.length;i++){}*/
+
+
+
+            /*
+            [ 선택요소의 현재 크기,위치값 알아오는 JS속성 ]
+                1. 선택요소.offsetWidth : 가로값
+                2. 선택요소.offsetHeight : 세로값
+                3. 선택요소.offsetTop : top위치값
+                4. 선택요소.offsetLeft : left위치값
+            */
+
+
+            ///// #div01의 서브메뉴 a요소를 클릭하면 해당 주소로 새창열기
+            // 이벤트 종류: click 
+            // 이벤트 대상: .smenu ol a
+            var link = document.querySelectorAll(".smenu ol a");
+            console.log("서브메뉴개수:" + link.length);
+
+            ////////////////////////////////////////////////////
+            /// for of문으로 컬랙션의 개수만큼 반복해서 click셋팅하기!
+            for (var x of link) { // x는 각 a요소
+
+                //console.log("서브메뉴:" + x.innerText);
+
+                // 해당요소를 클릭하면 ////
+                x.onclick = function() {
+
+                    // 링크텍스트
+                    var txt = this.innerText;
+                    // this는 링크걸린 a요소 자신!
+                    //alert(txt);
+
+                    // 이동url
+                    var url;
+
+                    switch (txt) {
+                        case "Google":
+                            url = "http://www.google.com";
+                            break;
+                        case "Naver":
+                            url = "http://www.naver.com";
+                            break;
+                        case "Daum":
+                            url = "http://www.daum.net";
+                            break;
+                        case "Nate":
+                            url = "http://www.nate.com";
+                            break;
+                        case "SK":
+                            url = "http://www.sktelecom.com";
+                            break;
+                        case "KT":
+                            url = "http://www.kt.com";
+                            break;
+                        case "Uplus":
+                            url = "http://www.uplus.co.kr";
+                            break;
+                        case "CGV":
+                            url = "http://www.cgv.co.kr";
+                            break;
+                        case "MEGABOX":
+                            url = "http://www.megabox.co.kr";
+                            break;
+                        case "LOTTE CINEMA":
+                            url = "https://www.lottecinema.co.kr/NLCHS";
+                            break;
+                        case "GMARKET":
+                            url = "http://www.gmarket.co.kr";
+                            break;
+                        case "11번가":
+                            url = "http://www.11st.co.kr";
+                            break;
+                        case "Auction":
+                            url = "http://www.auction.co.kr";
+                            break;
+                        case "스토어팜":
+                            url = "https://shopping.naver.com/";
+                            break;
+                        case "인터파크":
+                            url = "http://www.interpark.co.kr";
+                            break;
+                        case "쿠팡":
+                            url = "http://www.coopang.co.kr";
+                            break;
+                        case "Apple":
+                            url = "http://www.apple.com";
+                            break;
+                        case "Samsung":
+                            url = "http://www.samsung.com";
+                            break;
+                        case "넷마블":
+                            url = "http://www.netmarble.net";
+                            break;
+                        case "넥슨":
+                            url = "https://www.nexon.com";
+                            break;
+                        case "IMC":
+                            url = "http://www.imc.co.kr";
+                            break;
+                    } ///// switch case문 /////
+
+                    // 페이지 이동하기(새창)
+                    window.open().location.href = url;
+                    // window.open() 새창열기
+                    // location.href 페이지이동
+
+                    return false;
+                    // a요소 이동속성 없애기!
+
+                }; ////// click 함수 ////////////
+
+
+            } /////// for of문 //////////////////////////////////
+            ////////////////////////////////////////////////////
+
+
+
+
+
+        }); ///////// 로드구역 //////////////////////////////////////
+        //////////////////////////////////////////////////////////
+    </script>
+    <style>
+        body>div {
+            outline: 1px solid red;
+            width: 200px;
+            display: inline-block;
+            vertical-align: top;
+            /*인라인블록은 인라인성격이 있어서 기본 옆으로 세로정렬은
+            baseline이므로 아래쪽선을 기준한다. 이것을 위줄 기준변경함*/
+        }
+
+        div img {
+            width: 50px;
+        }
+
+        /*서브메뉴 숨기기*/
+        .smenu>div {
+            height: 0;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="div01">
+        마우스오버시 <br>
+        1. 서브메뉴 보이기 <br>
+        2. 링크이동하기
+
+        <!--ul>li.smenu*6>a+ol>li*6>a-->
+        <ul>
+            <li class="smenu">
+                <a href="">검색포털사이트</a>
+                <div>
+                    <ol>
+                        <li><a href="">Google</a></li>
+                        <li><a href="">Naver</a></li>
+                        <li><a href="">Daum</a></li>
+                        <li><a href="">Nate</a></li>
+                    </ol>
+                </div>
+
+            </li>
+            <li class="smenu">
+                <a href="">통신사사이트</a>
+                <div>
+                    <ol>
+                        <li><a href="">SK</a></li>
+                        <li><a href="">KT</a></li>
+                        <li><a href="">Uplus</a></li>
+                    </ol>
+                </div>
+
+            </li>
+            <li class="smenu">
+                <a href="">영화관사이트</a>
+                <div>
+                    <ol>
+                        <li><a href="">CGV</a></li>
+                        <li><a href="">MEGABOX</a></li>
+                        <li><a href="">LOTTE CINEMA</a></li>
+                    </ol>
+                </div>
+
+            </li>
+            <li class="smenu">
+                <a href="">쇼핑몰사이트</a>
+                <div>
+                    <ol>
+                        <li><a href="">GMARKET</a></li>
+                        <li><a href="">11번가</a></li>
+                        <li><a href="">Auction</a></li>
+                        <li><a href="">스토어팜</a></li>
+                        <li><a href="">인터파크</a></li>
+                        <li><a href="">쿠팡</a></li>
+                    </ol>
+                </div>
+
+            </li>
+            <li class="smenu">
+                <a href="">스마트폰사이트</a>
+                <div>
+                    <ol>
+                        <li><a href="">Apple</a></li>
+                        <li><a href="">Samsung</a></li>
+                    </ol>
+                </div>
+
+            </li>
+            <li class="smenu">
+                <a href="">게임사이트</a>
+                <div>
+                    <ol>
+                        <li><a href="">넷마블</a></li>
+                        <li><a href="">넥슨</a></li>
+                        <li><a href="">IMC</a></li>
+                    </ol>
+                </div>
+
+            </li>
+        </ul>
+
+    </div>
+
+    <div id="div02">
+        <h2>요소의 생성,삭제,이동하기</h2>
+        <button class="nbt">새리스트생성</button>
+        <button class="rbt">랜덤생성</button> <br><br>
+        <button class="mvl">맨뒤이동</button>
+        <button class="mvf">맨앞이동</button>
+        <ul>
+            <li><img src="images/img1.jpg" alt="이미지"></li>
+            <li><img src="images/img2.jpg" alt="이미지"></li>
+            <li><img src="images/img3.jpg" alt="이미지"></li>
+            <li><img src="images/img4.jpg" alt="이미지"></li>
+            <li><img src="images/img5.jpg" alt="이미지"></li>
+            <li><img src="images/img6.jpg" alt="이미지"></li>
+            <li><img src="images/img7.jpg" alt="이미지"></li>
+        </ul>
+    </div>
+
+
+
+
+
+</body></html>
