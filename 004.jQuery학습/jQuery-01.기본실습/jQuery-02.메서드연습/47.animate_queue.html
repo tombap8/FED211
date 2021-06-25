@@ -46,15 +46,16 @@
 					height:"200px",
 					backgroundColor:"lime"
 				},2000,function(){//콜백함수
+					// 5. 배경이미지를 박스에 넣고
 					$(this).css({
 						background:"url(https://img.hankyung.com/photo/202002/BA.21654221.1-1200x.jpg) no-repeat top/cover"
 					});//// css //////
 				}) //// animate ///////
+				// 6. 2초후에 0.5초간 slideUp하여 사라짐.
+				.delay(2000).slideUp(500);
 
 
 			});/////////// click ///////////////////////
-			// 5. 배경이미지를 박스에 넣고
-			// 6. 2초후에 0.5초간 slideUp하여 사라짐.
 
 			// 이벤트(click) 대상선정 : .run
 
