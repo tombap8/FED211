@@ -45,7 +45,7 @@
 					console.log("배경색:" + bgc);
 
 					// 변경 애니메이션 ///////
-					$(this).animate({
+					$(this).stop().animate({
 						color: "#fff",
 						backgroundColor: bgc
 					}, 300); //// animate /////
@@ -62,6 +62,9 @@
 
 				// 애니메이션이 큐(Queue)에 쌓이므로 
 				// stop() 으로 지운다!
+				// animate() 앞에서 지운다
+				// over시 out시 양쪽 중 하나 혹은 양쪽다
+				// stop()을 줘야할지는 그때 넣어보고 판단한다!
 
 
 		}); ////// jQB ////////////////////////////////////
