@@ -206,12 +206,36 @@
             // 변경 대상: #div01 ul
             let d2 = document.querySelector("#div02 ul");
 
+            let inum = 1; //이미지번호
             /// 새리스트생성 버튼 클릭시 ////////
             document.querySelector(".nbt").onclick =
             function(){
 
                 // 호출확인
                 console.log("새리스트생성");
+
+                // 1. 새로운 li를 생성하여 변수에 할당한다!
+                let nn = document.createElement("li");
+
+                // 2. 새로 생성된 li에 img태그 넣기
+                nn.innerHTML = 
+                '<img src="images/img'+inum+'.jpg" alt="이미지">';
+
+                // 3. 이미지번호 증가(다음에 클릭할때 적용됨)
+                inum++;//1씩증가
+                if(inum===8) inum=1;//한계수
+
+                // 4. 새로운 li에 툴팁넣기
+                nn.title = "클릭하면 삭제됩니다!";
+
+                // 5. 새로운 li에 이벤트 셋팅하기
+                nn.onclick = function(){
+                    this.remove();
+                }; //////// click함수 ///////
+
+                // 6. 변경대상(ul)에 새로운 li태그 넣기
+                d2.appendChild(nn);
+
 
             }; ///////// 새리스트생성 버튼 클릭함수 //////////
 
