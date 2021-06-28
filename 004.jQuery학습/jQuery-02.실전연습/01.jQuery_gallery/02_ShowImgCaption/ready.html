@@ -27,11 +27,16 @@
 				// attr(속성명) -> 속성값 읽어오기
 
 				// 호출확인
-				console.log("썸네일!" + isrc);
+				// console.log("썸네일!" + isrc);
 
 				// 3. 변경대상인 큰 이미지 src를 href값으로 변경하기
 				$("#largeImg img").attr("src", isrc);
 				// attr(속성명,속성값) -> 속성값 변경하기
+
+				// 4. 캡션글 읽어오기
+				// 클릭된 a요소의 다음요소인 em요소의 text임!
+				let txt = $(this).next().text();
+				console.log("캡션글:"+txt);
 
 			}); ///////// click /////////////
 
@@ -62,6 +67,7 @@
 			border-color: #EF4018;
 		}
 
+		/* 큰 이미지 박스 */
 		#largeImg {
 			border: solid 1px #ccc;
 			width: 500px;
@@ -69,14 +75,15 @@
 			padding: 5px;
 			margin-left: 110px;
 			overflow: hidden;
-
 		}
 
+		/* 이미지 설명박스 */
 		#caption {
-			background: url(captionBg.png) repeat-y;
-			border: #CCC 1px thin;
-			padding: 10px;
 			position: relative;
+			/* top값을 쓰기위한 포지션 */
+			background: url(captionBg.png) repeat-y;
+			border: 1px solid #ccc;
+			padding: 10px;
 			color: #FFFFFF;
 		}
 	</style>
@@ -100,7 +107,9 @@
 
 	</div>
 
-	<div id="largeImg"><img src="images/pic1.jpg" alt="image1" /></div>
+	<div id="largeImg">
+		<img src="images/pic1.jpg" alt="image1">
+	</div>
 
 
 	<!---------- jQuery code Start ---------->
