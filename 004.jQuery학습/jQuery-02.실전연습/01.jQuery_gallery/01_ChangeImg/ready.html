@@ -4,6 +4,34 @@
 <meta charset="utf-8">
 <title> 썸네일 포토 갤러리 </title>
 <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script>
+	$(function(){ //// jQB //////////////////////
+
+		// 썸네일 a요소 클릭시 큰 이미지 변경하기 ///
+		// 이벤트 대상: .thumbs a
+		// 변경 대상: #largeImg img
+		$(".thumbs a").click(function(e){ // e-이벤트전달변수
+
+			// 1. a요소 기본 이동기능 막기!
+			e.preventDefault();
+			// preventDefault() 메서드 : 기본기능막기
+			// -> JS로는 코드 최하단에 return false 를 써도됨!
+
+			// 2. 큰 이미지 변경을 위해 a요소의 href의 값을 읽어옴
+			let isrc = $(this).attr("href");
+			// attr(속성명) -> 속성값 읽어오기
+
+			// 호출확인
+			console.log("썸네일!"+isrc);
+
+			// 3. 변경대상인 큰 이미지 src를 href값으로 변경하기
+			$("#largeImg img").attr("src",isrc);
+			// attr(속성명,속성값) -> 속성값 변경하기
+
+		}); ///////// click /////////////
+
+	}); ///////////// jQB ///////////////////////
+</script>
 <style type="text/css">
 
 
