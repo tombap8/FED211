@@ -54,6 +54,17 @@
 				let bxh = $("#caption").height();
 				console.log("박스높이:"+bxh);
 
+				/* 
+					[ 제이쿼리에서 박스의 높이값 구하기 ]
+					1. height() : 순수한 높이값(패딩,보더제외높이)
+					2. innerHeight() : 패딩을 포함한 내부높이값
+					3. outerHeight() : 보더(마진)포함 총 높이값
+						유의) outerHeight(true) -> 마진까지포함
+
+					[ width도 동일함! ]
+					-> width(), innerWidth(), outerWidth()
+				*/
+
 			}); ///////// click /////////////
 
 
