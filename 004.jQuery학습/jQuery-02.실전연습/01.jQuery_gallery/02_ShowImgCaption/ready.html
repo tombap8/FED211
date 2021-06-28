@@ -52,7 +52,14 @@
 				// 7. 박스 높이를 구한다
 				// 박스 높이만큼 top값으로 캡션등장 애니메이션구현
 				let bxh = $("#caption").height();
-				console.log("박스높이:"+bxh);
+
+				// 메서드별 높이값 확인
+				console.log("박스높이height():"+
+				$("#caption").height());
+				console.log("박스높이innerHeight():"+
+				$("#caption").innerHeight());
+				console.log("박스높이outerHeight():"+
+				$("#caption").outerHeight());
 
 				/* 
 					[ 제이쿼리에서 박스의 높이값 구하기 ]
