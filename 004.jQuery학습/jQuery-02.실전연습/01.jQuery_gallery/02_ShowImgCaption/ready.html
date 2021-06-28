@@ -36,10 +36,12 @@
 				// 4. 캡션글 읽어오기
 				// 클릭된 a요소의 다음요소인 em요소의 text임!
 				let txt = $(this).next().text();
-				console.log("캡션글:"+txt);
+				// console.log("캡션글:"+txt);
 
 				// 5. 캡션박스 만들어 넣기
-				// #caption인 div박스를 #largeImg에 추가해서 넣는다
+				// 5-1. 기존에 만들어졌을 수 있는 #caption지우기!
+				$("#caption").remove();
+				// 5-2. #caption인 div박스를 #largeImg에 추가해서 넣는다
 				$("#largeImg")
 				.append('<div id="caption"></div>');
 
