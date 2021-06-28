@@ -43,7 +43,7 @@
 				$("#caption").remove();
 				// 5-2. #caption인 div박스를 #largeImg에 추가해서 넣는다
 				$("#largeImg")
-				.append('<div id="caption"></div>');
+					.append('<div id="caption"></div>');
 
 				// 6. 캡션박스에 텍스트 넣기
 				// #caption박스에 txt 변수값 넣기
@@ -51,17 +51,24 @@
 
 				// 7. 박스 높이를 구한다
 				// 박스 높이만큼 top값으로 캡션등장 애니메이션구현
-				let bxh = $("#caption").height();
+				let bxh = $("#caption").outerHeight(true);
 
-				// 메서드별 높이값 확인
-				console.log("박스높이height():"+
-				$("#caption").height());
-				console.log("박스높이innerHeight():"+
-				$("#caption").innerHeight());
-				console.log("박스높이outerHeight():"+
-				$("#caption").outerHeight());
-				console.log("박스높이outerHeight(true):"+
-				$("#caption").outerHeight(true));
+				// 8. 박스 높이값 만큼 top값 이동 애니메이션하기
+				// 윗방향 이므로 top값은 마이너스임!
+				// 변수에 마이너스를 붙이면 변수값의 반대부호가 됨
+				$("#caption").animate({
+					top: -bxh + "px"
+				},300); ///// animate ////
+
+				// 메서드별 높이값 확인 ////////////////
+				console.log("박스높이height():" +
+					$("#caption").height());
+				console.log("박스높이innerHeight():" +
+					$("#caption").innerHeight());
+				console.log("박스높이outerHeight():" +
+					$("#caption").outerHeight());
+				console.log("박스높이outerHeight(true):" +
+					$("#caption").outerHeight(true));
 
 				/* 
 					[ 제이쿼리에서 박스의 높이값 구하기 ]
@@ -71,7 +78,8 @@
 						유의) outerHeight(true) -> 마진까지포함
 
 					[ width도 동일함! ]
-					-> width(), innerWidth(), outerWidth()
+					-> width(), innerWidth(), 
+					   outerWidth(), outerWidth(true)
 				*/
 
 			}); ///////// click /////////////
