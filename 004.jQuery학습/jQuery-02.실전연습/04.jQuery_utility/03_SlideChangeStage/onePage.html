@@ -149,6 +149,27 @@
         }
 
     </style>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function(){ /// jQB ////////////////////////
+
+            //// GNB메뉴 클릭시 해당 페이지 위치로 이동 애니메이션
+            // 이벤트 대상: .gnb a
+            // 변경 대상: html,body
+            $(".gnb a").click(function(e){
+                
+                // 1. a 기본이동막기
+                e.preventDefault();
+
+                // 2. a요소의 href값 읽어오기
+                let idnm = $(this).attr("href");
+                console.log("href값:"+idnm);
+
+            }); ///////////// click ///////////////
+
+        }); ///////////// jQB ////////////////////////
+    </script>
 </head>
 <body>
     <!-- 1. 상단영역 -->
