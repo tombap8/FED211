@@ -38,6 +38,11 @@
 				let txt = $(this).next().text();
 				console.log("캡션글:"+txt);
 
+				// 5. 캡션박스 만들어 넣기
+				// #caption인 div박스를 #largeImg에 추가해서 넣는다
+				$("#largeImg")
+				.append('<div id="caption"></div>');
+
 			}); ///////// click /////////////
 
 
