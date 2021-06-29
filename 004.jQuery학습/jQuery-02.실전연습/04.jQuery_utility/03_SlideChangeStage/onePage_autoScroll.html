@@ -117,8 +117,9 @@
         .gnb li{
             margin: 0 7px;
         }
-        /* 메뉴에 마우스 오버시 */
-        .gnb a:hover{
+        /* 메뉴에 마우스 오버시 + li에 on클래스 있는 경우 */
+        .gnb a:hover,
+        .gnb li.on a {
             display: inline-block;/* 트랜스폼적용위해 */
             color: lime;
             text-decoration: overline;/* 윗줄 */
