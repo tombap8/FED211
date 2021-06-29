@@ -69,9 +69,11 @@
 			$(".fadeShow").hover(
 				function(){ // over
 					clearInterval(autoI);
+					console.log("멈춤!");
 				},
 				function(){ // out
 					autoI = setInterval(fadeShow,3000);
+					console.log("다시해!")
 				});/////// hover /////////
 
 		}); //////////////// jQB /////////////////////////
