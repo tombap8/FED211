@@ -101,9 +101,10 @@ $(function () { /// jQB ////////////////////////
             // "Firefox"라는 정보가 있으면 test() 에서 true리턴함
             // 그래서 if문 안으로 들어가서 처리함(반대부호처리!)
 
-            console.log("브라우저정보:"+navigator.userAgent);
-            console.log("정보여부:"+
-            (/Firefox/i.test(navigator.userAgent)));
+            // console.log("브라우저정보:"+navigator.userAgent);
+            // console.log("정보여부:"+
+            // (/Firefox/i.test(navigator.userAgent)));
+
             /* 
                 [ test() 정규식 메서드 ]
                 정규식.test(값) -> 값에 정규식 문자가 있으면 true
@@ -117,6 +118,11 @@ $(function () { /// jQB ////////////////////////
                     /firefox/i 
                     -> 대소문자 관계없이 "firefox"문자를 찾아라!
             */
+
+            //// 파이어폭스 브라이우저 이면 델타값 부호를 반대로 한다!!!
+            if(/Firefox/i.test(navigator.userAgent)){
+                delta = -delta; // 변수앞에 마이너스는 부호반대!
+            } ///////// 파이어폭스여부 if문 /////////////
 
 
             //////////////////////////////////////////////
