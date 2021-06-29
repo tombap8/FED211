@@ -185,6 +185,11 @@
                     scrollTop: pos + "px"
                 }, 1200,"easeOutQuint");//// animate /////
 
+                // 5. 클릭된 a요소의 부모 li에 class="on" 넣기
+                $(this).parent().addClass("on")
+                .siblings().removeClass("on");
+                //다른 형제 li들 class="on" 지움
+
             }); ///////////// click ///////////////
 
         }); ///////////// jQB ////////////////////////
@@ -203,7 +208,7 @@
             <!-- 1-2.GNB메뉴 -->
             <nav class="gnb">
                 <ul>
-                    <li>
+                    <li class="on">
                         <a href="#pg1">아수라</a>
                     </li>
                     <li>
