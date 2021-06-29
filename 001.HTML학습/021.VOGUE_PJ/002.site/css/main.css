@@ -1,2 +1,61 @@
 @charset "utf-8";
 /* 보그코리아 메인 CSS - main.css */
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+/* 공통 class */
+
+/* 중앙속박스 */
+.ibx{
+    width: 1300px;
+    max-width: 100%;
+    /* 1300px보다 작아지면 100%적용 */
+    margin: 0 auto;/* 블록가로중앙 - 마영오! */
+    outline: 3px dashed blue;
+}
+
+/* 비율유지박스 */
+.rbx{
+    position: relative;
+    /* 부모자격(.rbxIn) */
+}
+/* 가상요소 패딩비율밀기 */
+.rbx::before{
+    content: '';
+    display: block;
+}
+/* 스타일별 비율셋팅 */
+.r1.rbx::before{
+    padding-top: 55.7%;
+}
+.r3.rbx::before{
+    padding-top: 50%;
+}
+/* 가상요소속박스 */
+.rbxIn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* 파티션 박스 */
+.pbx{
+    height: 100%;
+    outline: 2px dotted red;
+}
+
+/* 파티션 박스 스타일1 */
+.st1 .pbx{
+    width: 100%;
+}
+/* 파티션 박스 스타일2 */
+.st3 .pbx{
+    width: 33.333%;
+    float: left;
+}
+
