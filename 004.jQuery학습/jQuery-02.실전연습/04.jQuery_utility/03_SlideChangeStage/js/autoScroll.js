@@ -163,8 +163,10 @@ $(function () { /// jQB ////////////////////////
             ///////////////////////////////////////////////
             // 5. 페이지번호(pno)에 맞는 GNB 메뉴 변경하기 //
             ///////////////////////////////////////////////
-            // 변경대상: .gnb li
+            // 변경대상: .gnb li, .indic li
             $(".gnb li").eq(pno).addClass("on")
+            .siblings().removeClass("on");
+            $(".indic li").eq(pno).addClass("on")
             .siblings().removeClass("on");
             // 선택된 li 이외의 li형제들 class="on"제거하기
 
