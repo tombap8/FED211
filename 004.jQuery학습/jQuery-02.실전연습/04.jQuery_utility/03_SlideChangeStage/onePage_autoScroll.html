@@ -226,9 +226,9 @@
         $(function () { /// jQB ////////////////////////
 
             //// GNB메뉴 클릭시 해당 페이지 위치로 이동 애니메이션
-            // 이벤트 대상: .gnb a
+            // 이벤트 대상: .gnb a + .indic a
             // 변경 대상: html,body
-            $(".gnb a").click(function (e) {
+            $(".gnb a,.indic a").click(function (e) {
 
                 // 1. a 기본이동막기
                 e.preventDefault();
