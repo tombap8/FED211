@@ -45,8 +45,27 @@ html,body{
 
 /* 파티션 박스 */
 .pbx{
+    position: relative;
     height: 100%;
-    outline: 2px dotted red;
+    
+    /* outline: 2px dotted red; */
+}
+.pbx::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    /* 보더때문에 커지지 않도록 크기유지! */
+    transition: all .4s;
+}
+
+/* .pbx에 마우스 오버시 보더 생기기 */
+.pbx:hover::after{
+    border: 20px solid #f00;
 }
 
 /* 파티션 박스 스타일1 */
@@ -73,6 +92,7 @@ html,body{
     background-position: center;
     background-size: cover;
 }
+/* 개별 배경이미지 class */
 .bgi1{
     background-image: url(../images/cont1a.jpg);
 }
@@ -80,7 +100,7 @@ html,body{
     background-image: url(../images/cont2-1.jpg);
 }
 .bgi2-2{
-    background-image: url(../images/cont2-2.jpg);
+    background-image: url(../images/cont2-2.jpeg);
 }
 .bgi2-3{
     background-image: url(../images/cont2-3.jpg);
@@ -104,7 +124,7 @@ html,body{
     background-image: url(../images/cont6-1.png);
 }
 .bgi6-2{
-    background-image: url(../images/cont6-2.png);
+    background-image: url(../images/cont6-2.jpg);
 }
 .bgi6-3{
     background-image: url(../images/cont6-3.png);
