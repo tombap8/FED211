@@ -28,10 +28,10 @@ html,body{
     display: block;
 }
 /* 스타일별 비율셋팅 */
-.r1.rbx::before{
+.st1.rbx::before{/* 1파티션 */
     padding-top: 55.7%;
 }
-.r3.rbx::before{
+.st3.rbx::before{/* 3파티션 */
     padding-top: 50%;
 }
 /* 가상요소속박스 */
@@ -57,5 +57,17 @@ html,body{
 .st3 .pbx{
     width: 33.333%;
     float: left;
+}
+
+/*********** 파트별 개별 디자인 ***********/
+
+/* 1. 상단영역 */
+.top.ibx{
+    height: 206px;
+}
+
+/* 3. 하단영역 */
+.info.ibx{
+    height: 285px;
 }
 
