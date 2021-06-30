@@ -9,6 +9,13 @@ html,body,ol,ul,h1,h2,h3,h4,p{
 ol,ul{
     list-style: none;
 }
+a{
+    color: #000;
+    text-decoration: none;
+}
+img{
+    border: none;
+}
 
 /* 공통 class */
 
