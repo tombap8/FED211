@@ -76,9 +76,11 @@ html,body{
     width: 100%;
 }
 /* 파티션 박스 스타일2 */
+.fbx{/* 플랙스박스 */
+    display: flex;
+}
 .st3 .pbx{
-    width: 33.333%;
-    float: left;
+    flex: 1;
 }
 
 /*********** 파트별 개별 디자인 ***********/
