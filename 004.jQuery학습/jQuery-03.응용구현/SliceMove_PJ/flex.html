@@ -174,9 +174,9 @@
             display: flex;
             align-items: center;
         }
-        /* 마지막 li를 오른쪽 끝으로 보내기! 
+        /* 3번째 li를 오른쪽 끝으로 보내기! 
         -> 왼쪽마진값을 auto로 설정!!! */
-        .t3>li:last-child{
+        .t3>li:nth-child(3){
             margin-left: auto;
         }
 
@@ -196,9 +196,9 @@
             /* align-items는 진행방향에 따라 
             가로/세로 정렬방향이 달라진다 */
         }
-        /* 마지막 li를 아래쪽 끝으로 보내기! 
+        /* 4번째 li를 아래쪽 끝으로 보내기! 
         -> 윗쪽마진값을 auto로 설정!!! */
-        .t4>li:last-child{
+        .t4>li:nth-child(4){
             margin-top: auto;
         }
 
@@ -239,12 +239,18 @@
         <!-- 타이틀박스3 -->
         <ol class="tit t3">
             <li>W</li>
+            <li>O</li>
+            <li>R</li>
+            <li>L</li>
             <li>D</li>
         </ol>
 
         <!-- 타이틀박스4 -->
         <ol class="tit t4">
             <li>W</li>
+            <li>O</li>
+            <li>R</li>
+            <li>L</li>
             <li>D</li>
         </ol>
 
