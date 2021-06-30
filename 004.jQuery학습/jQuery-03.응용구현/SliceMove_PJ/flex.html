@@ -59,6 +59,13 @@
         /* 파티션 li공통 */
         #wrap>ul>li {
             flex: 1;
+            /* 
+                flex 속성을 하나만 쓰면 3가지가 모두 셋팅된다!
+                flex: flex-grow flex-shrink flex-basis;
+                flex: 1 숫자하나만 쓰면
+                flex: 1 1 0 으로 설정한 것과 같다!
+                -> 가로로 등분할 되는 이유다!
+             */
         }
 
         /* 각 파티션 li */
@@ -213,7 +220,7 @@
             display: flex;
 
             /* flex 옵션 - 랩핑!!! */
-            /* flex-wrap: wrap; */
+            flex-wrap: wrap;
             /* 
                 flex-wrap 속성
                 - 박스 가로크기 보다 아이템요소가 많을 경우
@@ -238,7 +245,29 @@
                 flex-shrink : 1 -> 부모박스 크기가 작아지면 같이 작아짐
              */
 
+             /* 수평간격일정하게 */
+             justify-content: space-around;
+             /* 여러줄일때 수직간격은? -> align-content로! */
+             align-content: space-evenly;
+             /* 
+                align-content 속성
+                - 수직정렬속성(여러줄일때!!!)
+                1) flex-start : 맨위(기본값-normal)
+                2) flex-end : 맨아래
+                3) center : 세로방향중앙
+                4) space-around : 아이템 요소 상하에 같은 간격
+                                    (마진과 유사함)
+                5) space-between : 아이템 요소의 상하간격 일정
+                                    (처음과 끝이 구석에 붙어나옴)
+                6) space-evenly : 아이템 요소의 상하와 사이간격 일정
+                                    (ie미지원 - 엣지최신버전 지원)
+              */
 
+        }
+        /* li의 양쪽 마진으로 한줄에 오는 개수를 
+        인위적으로 조정할 수 있다! */
+        .t5 li{
+            margin: 0 3%;
         }
 
 
