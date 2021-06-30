@@ -50,6 +50,7 @@ html,body{
     
     /* outline: 2px dotted red; */
 }
+/* 파티션박스 가상요소로 보더애니구현 */
 .pbx::after{
     content: '';
     display: block;
@@ -61,8 +62,8 @@ html,body{
     box-sizing: border-box;
     /* 보더때문에 커지지 않도록 크기유지! */
     
-    border: 0px solid #f00;/* 이거추가!!! */
-    transition: all .4s;
+    border: 0px solid transparent;/* 이거추가!!! */
+    transition: all .2s ease-in;
 }
 
 /* .pbx에 마우스 오버시 보더 생기기 */
