@@ -60,9 +60,13 @@
 
         /* 페이지 공통 class */
         .page {
-            /* 한페이지 보이는 화면 채우기 */
+            position: relative;
+            /* 부모자격(.minfo) */
             width: 100%;
             height: 100%;
+            /* 한페이지 보이는 화면 채우기 */
+            overflow: hidden;
+            /* 넘치는 자식요소 숨기기 */
             /* 
                 width: 100vw;
                 height: 100vh;
