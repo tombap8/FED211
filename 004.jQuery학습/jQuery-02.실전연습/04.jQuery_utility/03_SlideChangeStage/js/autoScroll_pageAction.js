@@ -45,6 +45,12 @@ $(function () { /// jQB ////////////////////////
         // 유의사항: 이미 transform을 translate(-50%,-50%)로
         //          설정하였으므로 scale설정시 둘다 써줘야한다!
 
+        // 5. 비밀은 없다 : 투명상태로 Y축 180도회전
+        $("#pg5 .minfo").css({
+            transform: "translate(-50%,-50%) rotateY(180deg)",
+            opacity: 0
+        }); ///////// css ///////////
+
 
     };///////////// init함수 ///////////////////
     ////////////////////////////////////////////
@@ -94,6 +100,17 @@ $(function () { /// jQB ////////////////////////
             $("#pg4 .minfo").css({
                 transform: "translate(-50%,-50%) scale(1)",
                 transition: "all 2s ease-out"
+            }); ///////// css ///////////
+
+        } ////// else if ///////////////
+
+        // 5. 비밀은 없다
+        else if(pno === 4){
+            // 투명도가 원상복귀되면서 Y축 회전
+            $("#pg5 .minfo").css({
+                transform: "translate(-50%,-50%) rotateY(0deg)",
+                opacity: 1,
+                transition: "all 1s ease-out"
             }); ///////// css ///////////
 
         } ////// else if ///////////////
