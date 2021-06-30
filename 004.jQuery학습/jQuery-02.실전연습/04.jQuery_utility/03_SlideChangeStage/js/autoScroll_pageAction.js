@@ -29,7 +29,22 @@ $(function () { /// jQB ////////////////////////
         }); ///////// css ///////////
 
         // 2. 고산자 : 처음에 안보임!(fadeIn사용예정!)
-        $();
+        $("#pg2 .minfo").hide();// display:none
+
+        // 3. 인천상륙작전 : 위로 올라가 있음
+        $("#pg3 .minfo").css({
+            top: "-50%"
+        }); ///////// css ///////////
+
+        // 4. 봉이 김선달 : 스케일이 0으로 안보임
+        $("#pg4 .minfo").css({
+            transform: "translate(-50%,-50%) scale(0)"
+        }); ///////// css ///////////
+        // 주의사항: transform은 animate에 사용할 수 없다!
+        // 이 경우에는 css로 transition을 사용하여 애니메이션함
+        // 유의사항: 이미 transform을 translate(-50%,-50%)로
+        //          설정하였으므로 scale설정시 둘다 써줘야한다!
+
 
     };///////////// init함수 ///////////////////
     ////////////////////////////////////////////
@@ -44,7 +59,7 @@ $(function () { /// jQB ////////////////////////
     pageAction = function(){
 
         // 호출확인
-        // console.log("액션!");
+        console.log("액션!");
 
         // 각 페이지 번호에 맞게 액션을 수행한다!
 
@@ -61,7 +76,26 @@ $(function () { /// jQB ////////////////////////
         // 2. 고산자
         else if(pno === 1){
             // fadeIn으로 나타나기
-            
+            $("#pg2 .minfo").fadeIn(1000);
+        } ////// else if ///////////////
+
+        // 3. 인천상륙작전
+        else if(pno === 2){
+            // 위에서 아래로 내려오기
+            $("#pg3 .minfo")
+            .animate({
+                top: "50%"
+            },1000,"easeOutBounce");//// animate ///
+        } ////// else if ///////////////
+
+        // 4. 봉이 김선달
+        else if(pno === 3){
+            // 가운데서 스케일이 커짐(원래상태로!)
+            $("#pg4 .minfo").css({
+                transform: "translate(-50%,-50%) scale(1)",
+                transition: "all 2s ease-out"
+            }); ///////// css ///////////
+
         } ////// else if ///////////////
 
     }; ////////// pageAction함수 ///////////////////
@@ -217,7 +251,8 @@ $(function () { /// jQB ////////////////////////
 
             $("html,body").stop().animate({
                 scrollTop: pos + "px"
-            }, 1200, "easeOutQuint");
+            }, 1200, "easeOutQuint", pageAction);
+            // 애니메이션 이동후 pageAction함수 호출하기!!!
 
             ///////////////////////////////////////////////
             // 5. 페이지번호(pno)에 맞는 GNB 메뉴 변경하기 //
