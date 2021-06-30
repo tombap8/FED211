@@ -141,7 +141,7 @@ $(function () { /// jQB ////////////////////////
             $("#pg7 .minfo").css({
                 transform: "translate(-50%,-50%) scaleX(1)",
                 opacity: 1,
-                transition: "all 1s cubic-bezier(0.11, 0.88, 0.52, 0.99)"
+                transition: "all 2s cubic-bezier(0.66, 0.13, 0.14, 1.04)"
             }); ///////// css ///////////
         } ////// else if ///////////////
 
