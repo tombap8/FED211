@@ -165,6 +165,20 @@
         .t2 li:nth-child(4){
             line-height: 30px;
         }
+
+        /* 타이틀박스3 */
+        .t3{
+            top: 35%;
+
+            /* flex box 설정 */
+            display: flex;
+            align-items: center;
+        }
+        /* 마지막 li를 오른쪽 끝으로 보내기! */
+        .t3>li:last-child{
+            margin-left: auto;
+        }
+
     </style>
 </head>
 
@@ -197,6 +211,13 @@
             <li>L</li>
             <li>D</li>
         </ol>
+
+        <!-- 타이틀박스3 -->
+        <ol class="tit t3">
+            <li>W</li>
+            <li>D</li>
+        </ol>
+
     </div>
 
 </body>
