@@ -56,6 +56,12 @@ $(function () { /// jQB ////////////////////////
             transform: "translate(-50%,-50%) scale(0) rotate(1000deg)"
         }); ///////// css ///////////
 
+        // 7. 탐정홍길동 : 중앙에서 X축 스케일 10배, 투명도 0
+        $("#pg7 .minfo").css({
+            transform: "translate(-50%,-50%) scaleX(10)",
+            opacity: 0
+        }); ///////// css ///////////
+
 
     }; ///////////// init함수 ///////////////////
     ////////////////////////////////////////////
@@ -124,9 +130,18 @@ $(function () { /// jQB ////////////////////////
         else if (pno === 5) {
             // 중앙에서 스케일 1, 평면회전 원상복귀
             $("#pg6 .minfo").css({
-                transform: 
-                "translate(-50%,-50%) scale(1) rotate(0deg)",
-                transition: "all 1s ease-out"
+                transform: "translate(-50%,-50%) scale(1) rotate(0deg)",
+                transition: "all 1s cubic-bezier(0.11, 0.88, 0.52, 0.99)"
+            }); ///////// css ///////////
+        } ////// else if ///////////////
+
+        // 7. 탐정홍길동
+        else if (pno === 6) {
+            // 중앙에서 X축 스케일 원상복귀, 투명도 1
+            $("#pg7 .minfo").css({
+                transform: "translate(-50%,-50%) scaleX(1)",
+                opacity: 1,
+                transition: "all 1s cubic-bezier(0.11, 0.88, 0.52, 0.99)"
             }); ///////// css ///////////
         } ////// else if ///////////////
 
