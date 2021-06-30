@@ -60,6 +60,8 @@ html,body{
     right: 0;
     box-sizing: border-box;
     /* 보더때문에 커지지 않도록 크기유지! */
+    
+    border: 0px solid #f00;/* 이거추가!!! */
     transition: all .4s;
 }
 
