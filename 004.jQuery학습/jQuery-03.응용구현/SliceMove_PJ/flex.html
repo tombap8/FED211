@@ -202,6 +202,45 @@
             margin-top: auto;
         }
 
+        /* 타이틀박스5 */
+        /* flex 여러줄 설정하기 */
+        .t5{
+            /* 일반설정변경 */
+            top: 50%;
+            height: 300px;
+
+            /* flex box 설정 */
+            display: flex;
+
+            /* flex 옵션 - 랩핑!!! */
+            /* flex-wrap: wrap; */
+            /* 
+                flex-wrap 속성
+                - 박스 가로크기 보다 아이템요소가 많을 경우
+                아랫줄로 줄바꿈하려면 wrap으로 설정한다!
+                기본값은 nowrap임
+
+                -> 이설정을 하지 않으면
+                자동적으로 가로크기를 줄여서 한줄에 오게한다!!!
+
+                그 이유는???
+                자식요소의 flex속성값으로 아래 3가지가 설정된다
+
+                1) flex-grow : 부모박스가 커질때 옵션(기본값0)
+                2) flex-shrink : 부모박스가 작아질때 옵션(기본값1)
+                3) flex-basis : 자체크기(기본값auto) -> width설정과 같음
+
+                -> 기본값 설정 중 flex-shrink가 1이기 때문에
+                0은 크기유지, 1은 크기자동변경
+                flex-grow : 0 -> 크기유지
+                flex-grow : 1 -> 부모박스 크기가 커지면 같이 커짐
+                flex-shrink : 0 -> 크기유지
+                flex-shrink : 1 -> 부모박스 크기가 작아지면 같이 작아짐
+             */
+
+
+        }
+
 
     </style>
 </head>
@@ -256,6 +295,16 @@
 
         <!-- 타이틀박스5 -->
         <ol class="tit t5">
+            <li>L</li>
+            <li>O</li>
+            <li>T</li>
+            <li>T</li>
+            <li>E</li>
+            <li>W</li>
+            <li>O</li>
+            <li>R</li>
+            <li>L</li>
+            <li>D</li>
             <li>L</li>
             <li>O</li>
             <li>T</li>
