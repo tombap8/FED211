@@ -18,8 +18,8 @@ $(function () { /// jQB ////////////////////////
     /*//////////////////////////////////////////
         함수명: init(전역변수구역에 선언!)
         기능: 각 페이지액션 대상 요소 초기화
-    *///////////////////////////////////////////
-    init = function(){
+    */ //////////////////////////////////////////
+    init = function () {
         // 호출확인
         // console.log("초기화!");
 
@@ -29,7 +29,7 @@ $(function () { /// jQB ////////////////////////
         }); ///////// css ///////////
 
         // 2. 고산자 : 처음에 안보임!(fadeIn사용예정!)
-        $("#pg2 .minfo").hide();// display:none
+        $("#pg2 .minfo").hide(); // display:none
 
         // 3. 인천상륙작전 : 위로 올라가 있음
         $("#pg3 .minfo").css({
@@ -53,12 +53,11 @@ $(function () { /// jQB ////////////////////////
 
         // 6. 아가씨 : 중앙에서 스케일 0, 평면회전
         $("#pg6 .minfo").css({
-            transform: 
-            "translate(-50%,-50%) scale(0) rotate(1000deg)"
+            transform: "translate(-50%,-50%) scale(0) rotate(1000deg)"
         }); ///////// css ///////////
 
 
-    };///////////// init함수 ///////////////////
+    }; ///////////// init함수 ///////////////////
     ////////////////////////////////////////////
 
     // init함수 최초호출!(함수아래서호출)
@@ -67,8 +66,8 @@ $(function () { /// jQB ////////////////////////
     /*/////////////////////////////////////////////
         함수명: pageAction(전역변수구역에 선언)
         기능: 각 페이지 도착시 요소 등장액션 실행
-    *//////////////////////////////////////////////
-    pageAction = function(){
+    */ /////////////////////////////////////////////
+    pageAction = function () {
 
         // 호출확인
         console.log("액션!");
@@ -76,32 +75,32 @@ $(function () { /// jQB ////////////////////////
         // 각 페이지 번호에 맞게 액션을 수행한다!
 
         // 1. 아수라
-        if(pno === 0){
+        if (pno === 0) {
             // 오른쪽에서 중앙으로 날아오기(거미출에 걸리는 효과)
             $("#pg1 .minfo").delay(1000)
-            .animate({
-                left: "50%"
-            },1000,"easeOutElastic");//// animate ///
+                .animate({
+                    left: "50%"
+                }, 1000, "easeOutElastic"); //// animate ///
 
         } /////// if ////////////
 
         // 2. 고산자
-        else if(pno === 1){
+        else if (pno === 1) {
             // fadeIn으로 나타나기
             $("#pg2 .minfo").fadeIn(1000);
         } ////// else if ///////////////
 
         // 3. 인천상륙작전
-        else if(pno === 2){
+        else if (pno === 2) {
             // 위에서 아래로 내려오기
             $("#pg3 .minfo")
-            .animate({
-                top: "50%"
-            },1000,"easeOutBounce");//// animate ///
+                .animate({
+                    top: "50%"
+                }, 1000, "easeOutBounce"); //// animate ///
         } ////// else if ///////////////
 
         // 4. 봉이 김선달
-        else if(pno === 3){
+        else if (pno === 3) {
             // 가운데서 스케일이 커짐(원래상태로!)
             $("#pg4 .minfo").css({
                 transform: "translate(-50%,-50%) scale(1)",
@@ -111,7 +110,7 @@ $(function () { /// jQB ////////////////////////
         } ////// else if ///////////////
 
         // 5. 비밀은 없다
-        else if(pno === 4){
+        else if (pno === 4) {
             // 투명도가 원상복귀되면서 Y축 회전
             $("#pg5 .minfo").css({
                 transform: "translate(-50%,-50%) rotateY(0deg)",
@@ -119,6 +118,16 @@ $(function () { /// jQB ////////////////////////
                 transition: "all 1s ease-out"
             }); ///////// css ///////////
 
+        } ////// else if ///////////////
+
+        // 6. 아가씨
+        else if (pno === 5) {
+            // 중앙에서 스케일 1, 평면회전 원상복귀
+            $("#pg6 .minfo").css({
+                transform: 
+                "translate(-50%,-50%) scale(1) rotate(0deg)",
+                transition: "all 1s ease-out"
+            }); ///////// css ///////////
         } ////// else if ///////////////
 
     }; ////////// pageAction함수 ///////////////////
@@ -164,9 +173,11 @@ $(function () { /// jQB ////////////////////////
         function (e) { //e-이벤트 전달변수
 
             ////// 광스크롤막기 /////////////
-            if(psts) return;//돌아가!
-            psts = 1;//불허용상태변경!
-            setTimeout(()=>{psts=0;},1200);
+            if (psts) return; //돌아가!
+            psts = 1; //불허용상태변경!
+            setTimeout(() => {
+                psts = 0;
+            }, 1200);
             // 1.2초애니시간후 허용상태변경 //
 
 
@@ -236,7 +247,7 @@ $(function () { /// jQB ////////////////////////
             */
 
             //// 파이어폭스 브라이우저 이면 델타값 부호를 반대로 한다!!!
-            if(/Firefox/i.test(navigator.userAgent)){
+            if (/Firefox/i.test(navigator.userAgent)) {
                 delta = -delta; // 변수앞에 마이너스는 부호반대!
             } ///////// 파이어폭스여부 if문 /////////////
 
@@ -282,9 +293,9 @@ $(function () { /// jQB ////////////////////////
             ///////////////////////////////////////////////
             // 변경대상: .gnb li, .indic li
             $(".gnb li").eq(pno).addClass("on")
-            .siblings().removeClass("on");
+                .siblings().removeClass("on");
             $(".indic li").eq(pno).addClass("on")
-            .siblings().removeClass("on");
+                .siblings().removeClass("on");
             // 선택된 li 이외의 li형제들 class="on"제거하기
 
 
