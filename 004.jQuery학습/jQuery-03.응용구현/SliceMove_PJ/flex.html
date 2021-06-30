@@ -113,15 +113,49 @@
 
             /* flex box 설정 */
             display: flex;
-                        
+
+            /* flex 옵션 */
+            justify-content: space-evenly;
+            /* 
+                justify-content 속성
+                - 수평정렬속성 (justify 양쪽정렬의 뜻)
+                1) flex-start : 왼쪽끝(기본값-normal)
+                2) flex-end : 오른쪽 끝
+                3) center : 중앙
+                4) space-around : 아이템 요소 양쪽에 같은 간격
+                                    (마진과 유사함)
+                5) space-between : 아이템 요소의 사이간격 일정
+                                    (처음과 끝이 구석에 붙어나옴)
+                6) space-evenly : 아이템 요소의 양쪽과 사이간격 일정
+                                    (ie미지원 - 엣지최신버전 지원)
+
+             */
+
+             align-items: center;
+             /* 
+                align-items 속성
+                - 수직정렬 속성(한줄로 셋팅된 경우!)
+                1) flex-start : 맨위(기본값-normal)
+                2) flex-end : 맨아래
+                3) center : 세로중앙
+                4) stretch : 세로방향 꽉채워서 늘림
+                            (단, height 크기가 auto여야함!!!)
+                5) baseline : 각 요소의 내부에 글자가 있다면
+                            글자 아래쪽 기준선으로 정렬됨
+                            (글자의 line-height를 변경해 보면됨)
+              */
+            
         }
 
         /* 타이틀2 */
         .t2{
             top: 20%;
-            
+
             /* flex box 설정 */
             display: flex;
+
+            justify-content: space-evenly;
+            align-items: center;
         }
     </style>
 </head>
