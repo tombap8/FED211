@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Page Scroll - Auto Scroll</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
     <style>
         html,
         body {
@@ -218,11 +219,42 @@
             background-color: #fff;
         }
 
-
         /* 설명글자숨기기 */
         .indic span {
             display: none;
         }
+
+        /* 영화소개 박스 */
+        .minfo{
+            position: absolute;
+            /* 부모? .page */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 정중앙이동 */
+            width: 380px;
+            color: #fff;
+            padding: 15px;
+            white-space: nowrap;/* 줄바꿈방지 */
+            background-color: rgba(0,0,0,.7);
+            font-family: 'Cute Font';/* 웹폰트 */
+        }
+        /* 영화제목 */
+        .minfo>h1{
+            font-size: 44px;
+            padding: 5px;
+            text-align: center;
+        }
+        /* 아수라 한자처리 */
+        .minfo>h1>span{
+            font-size: 28px;
+        }
+        /* 영화정보 */
+        .minfo>h3{
+            font-size: 28px;
+            padding: 3px;
+        }
+
     </style>
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
