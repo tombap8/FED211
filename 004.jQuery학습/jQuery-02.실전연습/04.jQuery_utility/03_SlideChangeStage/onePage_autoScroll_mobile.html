@@ -207,12 +207,14 @@
             transition: width .4s;
         }
 
-        /* 마우스 오버시 + 클래스 "on" */
+        /* 마우스 오버시 */
         .indic li:hover a {
             width: 150%;
             background-color: #fff;
         }
         
+        /* 클래스 "on" */
+        /* 모바일에서 hover시 해제한 설정보다 우선순위 높임! */
         .indic li.on a {
             width: 150% !important;
             background-color: #fff !important;
@@ -263,6 +265,11 @@
             .indic li:hover a {
                 width: 100%;
                 background-color: #ccc;
+            }
+
+            /* 두번째 페이지 배경위치조정 */
+            #pg2{
+                background-position-x: right;
             }
 
 
