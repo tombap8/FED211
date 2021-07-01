@@ -192,7 +192,8 @@
             width: 100%;
             height: 10px;
             margin: 3px 0;
-            cursor: pointer;/* 손가락모양 */
+            cursor: pointer;
+            /* 손가락모양 */
         }
 
         /* a요소 */
@@ -218,6 +219,39 @@
         .indic span {
             display: none;
         }
+
+        /* 모바일 미디어쿼리 */
+        @media only screen and (max-width:500px) {
+
+            /* 상단영역 속박스 */
+            .top {
+                height: 120px;
+            }
+
+            /* 1-1.로고 */
+            #logo {
+                margin: 0 auto;
+            }
+
+            /* 1-2. GNB 메뉴 */
+            .gnb {
+                top: 68px;
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 330px;
+            }
+
+            /* gnb메뉴 4번째 li 왼쪽마진밀기 */
+            .gnb li:nth-child(4){
+                margin-left: 45px;
+            }
+
+
+
+        }
+
+        /* 모바일 미디어쿼리 */
     </style>
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -226,7 +260,7 @@
         $(function () { /// jQB ////////////////////////
 
             // 메뉴 a요소 기본이동 막기!
-            $(".gnb a,.indic a").click(function(e){
+            $(".gnb a,.indic a").click(function (e) {
                 e.preventDefault();
             }); ///////////// click ////////////////
 
@@ -237,10 +271,10 @@
 
                 // 0. 클릭된 li순번 구해오기
                 let idx = $(this).index();
-                console.log("순번:"+idx);
+                console.log("순번:" + idx);
 
                 // 1. 하위a요소의 href값 읽어오기
-                let idnm = $("a",this).attr("href");
+                let idnm = $("a", this).attr("href");
                 console.log("href값:" + idnm);
 
                 // 2. 아이디값에 해당하위 top값 위치구하기
