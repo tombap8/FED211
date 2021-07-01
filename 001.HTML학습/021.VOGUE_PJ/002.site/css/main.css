@@ -126,6 +126,17 @@ body *{
 .tmenu>div{
     flex: 1;/* 등분할 */
 }
+/* sns박스 a */
+.sns a{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-top: 0;
+    margin-right: 0;
+}
+.sns a::before{
+    background-size: 100%;
+}
 
 /* 1-2.로고박스 */
 .logo{
