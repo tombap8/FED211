@@ -208,10 +208,14 @@
         }
 
         /* 마우스 오버시 + 클래스 "on" */
-        .indic li:hover a,
-        .indic li.on a {
+        .indic li:hover a {
             width: 150%;
             background-color: #fff;
+        }
+        
+        .indic li.on a {
+            width: 150% !important;
+            background-color: #fff !important;
         }
 
 
@@ -242,9 +246,23 @@
                 width: 330px;
             }
 
-            /* gnb메뉴 4번째 li 왼쪽마진밀기 */
-            .gnb li:nth-child(4){
+            /* gnb메뉴 5번째 li 왼쪽마진밀기 */
+            .gnb li:nth-child(5) {
                 margin-left: 45px;
+            }
+
+            /* 메뉴에 마우스 오버시 해제하기 
+            -> 모바일에서는 오버가 없으므로 오버시 셋팅을
+            오버이전 상태로 다시 셋팅한다!*/
+            .gnb a:hover {
+                color: #fff;
+                text-decoration: none;
+                transform: none;
+            }
+            /* 인디케이터 마우스 오버시 해제하기 */
+            .indic li:hover a {
+                width: 100%;
+                background-color: #ccc;
             }
 
 
