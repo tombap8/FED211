@@ -1,4 +1,4 @@
-// 자동 스크롤 기능 - autoScroll_pageAction.js
+// 자동 스크롤 기능 - autoScroll_mobile.js
 
 ///// 전역변수구역 ///////////////////
 // 현재 페이지 번호
@@ -7,155 +7,9 @@ let pno = 0;
 const totnum = 7;
 // 광스크롤막기(0-허용,1-불허용)
 let psts = 0;
-
-////////////////////////////////////
-// 초기화함수
-let init;
-// 페이지액션함수
-let pageAction;
 /////////////////////////////////////
 
 $(function () { /// jQB ////////////////////////
-
-    /*//////////////////////////////////////////
-        함수명: init(전역변수구역에 선언!)
-        기능: 각 페이지액션 대상 요소 초기화
-    */ //////////////////////////////////////////
-    init = function () {
-        // 호출확인
-        // console.log("초기화!");
-
-        // 1. 아수라 : 오른쪽 바깥으로 나가있음!
-        $("#pg1 .minfo").css({
-            left: "150%"
-        }); ///////// css ///////////
-
-        // 2. 고산자 : 처음에 안보임!(fadeIn사용예정!)
-        $("#pg2 .minfo").hide(); // display:none
-
-        // 3. 인천상륙작전 : 위로 올라가 있음
-        $("#pg3 .minfo").css({
-            top: "-50%"
-        }); ///////// css ///////////
-
-        // 4. 봉이 김선달 : 스케일이 0으로 안보임
-        $("#pg4 .minfo").css({
-            transform: "translate(-50%,-50%) scale(0)"
-        }); ///////// css ///////////
-        // 주의사항: transform은 animate에 사용할 수 없다!
-        // 이 경우에는 css로 transition을 사용하여 애니메이션함
-        // 유의사항: 이미 transform을 translate(-50%,-50%)로
-        //          설정하였으므로 scale설정시 둘다 써줘야한다!
-
-        // 5. 비밀은 없다 : 투명상태로 Y축 180도회전
-        $("#pg5 .minfo").css({
-            transform: "translate(-50%,-50%) rotateY(180deg)",
-            opacity: 0
-        }); ///////// css ///////////
-
-        // 6. 아가씨 : 중앙에서 스케일 0, 평면회전
-        $("#pg6 .minfo").css({
-            transform: "translate(-50%,-50%) scale(0) rotate(1000deg)"
-        }); ///////// css ///////////
-
-        // 7. 탐정홍길동 : 중앙에서 X축 스케일 10배, 투명도 0
-        $("#pg7 .minfo").css({
-            transform: "translate(-50%,-50%) scaleX(10)",
-            opacity: 0
-        }); ///////// css ///////////
-
-
-    }; ///////////// init함수 ///////////////////
-    ////////////////////////////////////////////
-
-    // init함수 최초호출!(함수아래서호출)
-    init();
-
-    /*/////////////////////////////////////////////
-        함수명: pageAction(전역변수구역에 선언)
-        기능: 각 페이지 도착시 요소 등장액션 실행
-    */ /////////////////////////////////////////////
-    pageAction = function () {
-
-        // 호출확인
-        console.log("액션!");
-
-        // 만약 매번 페이지마다 액션을 다시 작동시키려면
-        // 초기화함수를 처음에 호출해 준다!
-        init();// 초기화호출!
-
-        // 각 페이지 번호에 맞게 액션을 수행한다!
-
-        // 1. 아수라
-        if (pno === 0) {
-            // 오른쪽에서 중앙으로 날아오기(거미출에 걸리는 효과)
-            $("#pg1 .minfo").delay(1000)
-                .animate({
-                    left: "50%"
-                }, 1000, "easeOutElastic"); //// animate ///
-
-        } /////// if ////////////
-
-        // 2. 고산자
-        else if (pno === 1) {
-            // fadeIn으로 나타나기
-            $("#pg2 .minfo").fadeIn(1000);
-        } ////// else if ///////////////
-
-        // 3. 인천상륙작전
-        else if (pno === 2) {
-            // 위에서 아래로 내려오기
-            $("#pg3 .minfo")
-                .animate({
-                    top: "50%"
-                }, 1000, "easeOutBounce"); //// animate ///
-        } ////// else if ///////////////
-
-        // 4. 봉이 김선달
-        else if (pno === 3) {
-            // 가운데서 스케일이 커짐(원래상태로!)
-            $("#pg4 .minfo").css({
-                transform: "translate(-50%,-50%) scale(1)",
-                transition: "all 2s ease-out"
-            }); ///////// css ///////////
-
-        } ////// else if ///////////////
-
-        // 5. 비밀은 없다
-        else if (pno === 4) {
-            // 투명도가 원상복귀되면서 Y축 회전
-            $("#pg5 .minfo").css({
-                transform: "translate(-50%,-50%) rotateY(0deg)",
-                opacity: 1,
-                transition: "all 1s ease-out"
-            }); ///////// css ///////////
-
-        } ////// else if ///////////////
-
-        // 6. 아가씨
-        else if (pno === 5) {
-            // 중앙에서 스케일 1, 평면회전 원상복귀
-            $("#pg6 .minfo").css({
-                transform: "translate(-50%,-50%) scale(1) rotate(0deg)",
-                transition: "all 1s cubic-bezier(0.11, 0.88, 0.52, 0.99)"
-            }); ///////// css ///////////
-        } ////// else if ///////////////
-
-        // 7. 탐정홍길동
-        else if (pno === 6) {
-            // 중앙에서 X축 스케일 원상복귀, 투명도 1
-            $("#pg7 .minfo").css({
-                transform: "translate(-50%,-50%) scaleX(1)",
-                opacity: 1,
-                transition: "all 2s cubic-bezier(0.66, 0.13, 0.14, 1.04)"
-            }); ///////// css ///////////
-        } ////// else if ///////////////
-
-    }; ////////// pageAction함수 ///////////////////
-    ////////////////////////////////////////////////
-
-    // pageAction함수 최초호출!
-    pageAction();
 
     /* 
         [ 자동스크롤 구현! ]
@@ -194,11 +48,9 @@ $(function () { /// jQB ////////////////////////
         function (e) { //e-이벤트 전달변수
 
             ////// 광스크롤막기 /////////////
-            if (psts) return; //돌아가!
-            psts = 1; //불허용상태변경!
-            setTimeout(() => {
-                psts = 0;
-            }, 1200);
+            if(psts) return;//돌아가!
+            psts = 1;//불허용상태변경!
+            setTimeout(()=>{psts=0;},1200);
             // 1.2초애니시간후 허용상태변경 //
 
 
@@ -208,7 +60,7 @@ $(function () { /// jQB ////////////////////////
             // 기본 스크롤이 안되도록 코딩하여 대체한다!
 
             // 마우스휠 이벤트 함수호출확인!
-            // // console.log("마우스휠~~~~!");
+            // console.log("마우스휠~~~~!");
 
             // 마우스 휠의 방향에 따라 페이지번호를 증가/감소
             // 할 것이므로 마우스 휠의 방향을 알아내야한다!!!
@@ -235,7 +87,7 @@ $(function () { /// jQB ////////////////////////
             // delta변수에 유효한 설정이 적용되어 할당된다!
             // 조건연산자(삼항연산자) -> 비?집:놀이동산;
 
-            // console.log("휠델타정보:"+delta);
+            console.log("휠델타정보:"+delta);
             // 방향 테스트 결과: 
             // 마이너스 -> 아랫쪽스크롤
             // 플러스 -> 윗쪽스크롤
@@ -249,8 +101,8 @@ $(function () { /// jQB ////////////////////////
             // "Firefox"라는 정보가 있으면 test() 에서 true리턴함
             // 그래서 if문 안으로 들어가서 처리함(반대부호처리!)
 
-            // // console.log("브라우저정보:"+navigator.userAgent);
-            // // console.log("정보여부:"+
+            // console.log("브라우저정보:"+navigator.userAgent);
+            // console.log("정보여부:"+
             // (/Firefox/i.test(navigator.userAgent)));
 
             /* 
@@ -268,7 +120,7 @@ $(function () { /// jQB ////////////////////////
             */
 
             //// 파이어폭스 브라이우저 이면 델타값 부호를 반대로 한다!!!
-            if (/Firefox/i.test(navigator.userAgent)) {
+            if(/Firefox/i.test(navigator.userAgent)){
                 delta = -delta; // 변수앞에 마이너스는 부호반대!
             } ///////// 파이어폭스여부 if문 /////////////
 
@@ -288,7 +140,7 @@ $(function () { /// jQB ////////////////////////
                 // 첫페이지에 고정하기!
             } /////// else ////////
 
-            // console.log("페이지번호:" + pno);
+            console.log("페이지번호:" + pno);
 
             //////////////////////////////////////////////
             // 3. 이동할 페이지(.page)의 위치값 알아내기 ///
@@ -298,7 +150,7 @@ $(function () { /// jQB ////////////////////////
             let pos = $(".page").eq(pno).offset().top;
             // offset().top 은 현재 선택요소의 top위치값
 
-            // console.log("이동위치:" + pos);
+            console.log("이동위치:" + pos);
 
             //////////////////////////////////////////////
             // 4. 실제 이동위치로 스크롤 애니메이션 하기 ////
@@ -306,17 +158,16 @@ $(function () { /// jQB ////////////////////////
 
             $("html,body").stop().animate({
                 scrollTop: pos + "px"
-            }, 1200, "easeOutQuint", pageAction);
-            // 애니메이션 이동후 pageAction함수 호출하기!!!
+            }, 1200, "easeOutQuint");
 
             ///////////////////////////////////////////////
             // 5. 페이지번호(pno)에 맞는 GNB 메뉴 변경하기 //
             ///////////////////////////////////////////////
             // 변경대상: .gnb li, .indic li
             $(".gnb li").eq(pno).addClass("on")
-                .siblings().removeClass("on");
+            .siblings().removeClass("on");
             $(".indic li").eq(pno).addClass("on")
-                .siblings().removeClass("on");
+            .siblings().removeClass("on");
             // 선택된 li 이외의 li형제들 class="on"제거하기
 
 
