@@ -11,6 +11,11 @@ let psts = 0;
 
 $(function () { /// jQB ////////////////////////
 
+    /// 모바일일때 body에 스크롤바 생성하기 ///
+    if($(window).width() <= 500){
+        $("body").css({overflowY:"scroll"});
+    } ///////////// if /////////////////////
+
     /* 이벤트 중복발생 막기! */
     // 대상: #top, .indic
     // 막을 이벤트: touchstart, touchend
@@ -69,12 +74,6 @@ $(function () { /// jQB ////////////////////////
         // 대상: document
         // 사용위치속성: screenY (페이지 이동이 Y축 이므로!)
         $(document).on("touchend",function(e){ // e-이벤트전달변수
-
-            ////// 광스크롤막기 /////////////
-            if(psts) return;//돌아가!
-            psts = 1;//불허용상태변경!
-            setTimeout(()=>{psts=0;},1200);
-            // 1.2초애니시간후 허용상태변경 //
 
             // 1. 모바일 터치 위치값 변수에 할당하기
             tcd2 = e.originalEvent.changedTouches[0].screenY;
