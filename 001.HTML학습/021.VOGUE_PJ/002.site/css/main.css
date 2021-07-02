@@ -131,8 +131,8 @@ body *{
     display: inline-block;
     width: 16px;
     height: 16px;
-    margin-top: 0;
-    margin-right: 0;
+    margin-top: 15px;
+    margin-right: 16px;
     font-size: 16px;
     /* 안줘도 html에서 상속된 
     글자 기본크기가 16px임 */
