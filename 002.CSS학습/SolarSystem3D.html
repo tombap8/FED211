@@ -311,6 +311,9 @@
                 shdowAni 40s linear infinite;
         }
 
+        /* 토성 그림자 애니를 위한 박스 */
+
+
 
 
 
@@ -480,6 +483,10 @@
             width: 5%;
             z-index: -1;
             /* 태양뒤로! */
+            opacity: 0;/* 처음에 안보임 */
+
+            /* 애니메이션 */
+            animation: capma 20s ease-out 5s infinite;
         }
 
         /* 캡틴마블 키프레임 */
@@ -639,6 +646,8 @@
                 <div class="pos">
                     <!-- 토성이미지박스 -->
                     <div class="planet">
+                        <!-- 토성그림자처리를 위한 div박스 -->
+                        <div></div>
                         <span class="ir">토성</span>
                     </div>
                 </div>
