@@ -133,15 +133,17 @@
             left: 50%;
             transform: translate(-50%, -50%);
             /* 정중앙이동 */
-            border: 5px solid lime;/* rgba(255,255,255,.3); */
-            border-radius: 50%;/* 원 */
+            border: 5px solid lime;
+            /* rgba(255,255,255,.3); */
+            border-radius: 50%;
+            /* 원 */
 
             width: 600px;
             height: 600px;
         }
 
         /* 지구행성 포지션 - 중앙중심회전 */
-        #earth .pos{
+        #earth .pos {
             position: absolute;
             top: calc(50% - 40px);
             left: calc(50% - 40px);
@@ -154,6 +156,18 @@
             animation: earth 10s linear infinite;
         }
 
+        /* 태양중심 지구회전애니 */
+        @keyframes earth {
+            from {
+                transform:
+                    rotate(0deg) translateX(-300px) rotate(0deg);
+            }
+            to {
+                transform:
+                    rotate(360deg) translateX(-300px) rotate(-360deg);
+            }
+        } /* 키프레임 */
+
         /* 지구행성 셋팅 */
         #earth .planet {
             position: absolute;
@@ -163,23 +177,19 @@
             width: 100%;
             height: 100%;
             /* 행성크기에 맞춤! */
-            border-radius: 50%;/* 원 */
+            border-radius: 50%;
+            /* 원 */
             background-repeat: no-repeat;
             background-size: 100% 100%;
 
+            /*  행성의 부모가 기울었으므로 반대로 세워줌 */
+            transform: rotateY(-75deg);
+            /* 이미 행성이 회전하고 있는데 2가지 회전으로
+            축반전(x,y축이 바뀐효과)이 생겨서 x축이 아니라
+            y축을 세워야함! */
+
             background-image: url(images/earth.png);
         }
-
-        /* 태양중심 지구회전애니 */
-        @keyframes earth {
-            from {
-                transform: rotate(0deg) translateX(-300px) rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg) translateX(-300px) rotate(-360deg);
-            }
-        } /* 키프레임 */
-
     </style>
 
     <script>
@@ -230,11 +240,11 @@
             //      0부터 시작하므로 getsu값은 포함되지 않는다!
             // for문의 증감은 1씩증가해야 하므로 i++
             for (var i = 0; i < getsu; i++) {
-                haha.item(i)//a요소 중 해당순번의 a요소
-                // for문을 순서대로 돌면서
-                // haha.item(0)->haha.item(1)
-                // ->haha.item(2)->haha.item(3) 이렇게 선택함!
-                .classList.remove("on");
+                haha.item(i) //a요소 중 해당순번의 a요소
+                    // for문을 순서대로 돌면서
+                    // haha.item(0)->haha.item(1)
+                    // ->haha.item(2)->haha.item(3) 이렇게 선택함!
+                    .classList.remove("on");
                 // 클래스 중 "on"이 있으면 지워라!
             } ////// for문 ///////////////////
 
@@ -274,7 +284,7 @@
                 <div class="planet">
                     <span class="ir">지구</span>
                 </div>
-            </div>            
+            </div>
         </div>
         <!-- 목성 -->
         <!-- <div id="jupiter">
