@@ -153,6 +153,10 @@ body *{
     font-size: 11px;
     /* 가로크기가 16px에 맞게 글자크기조정 */
 }
+/* sns 마지막 a요소에 카스아이콘 넣기 */
+.sns a:last-child{
+    background: url(../images/sns_kakao.png) no-repeat center/auto 100%;
+}
 
 /* 1-2.로고박스 */
 .logo{
@@ -176,7 +180,7 @@ body *{
     display: flex;
 }
 .gnb>ul>li{
-    margin: 0 25px;
+    margin: 0 23px;
 }
 /* 마지막 검색li의 a요소 */
 .gnb li:last-child a{
