@@ -433,11 +433,15 @@
             top: 40%;
             left: -50%;/* 왼쪽에 나가있음! */
             width: 50%;
+
+            /* 애니메이션 */
+            animation: superman 10s linear 5s infinite;
         }
 
         /* 슈퍼맨 키프레임 */
         @keyframes superman {
             0%{
+                /* 왼쪽바깥출발! */
                 left: -50%;
                 width: 50%;
             }
@@ -466,6 +470,11 @@
             }
         } /* 키프레임 */
 
+        audio{
+            position: absolute;
+            top: 0;
+            z-index: 9999;/* 맨위 */
+        }
 
     </style>
 
@@ -602,6 +611,8 @@
     <!-- 슈퍼맨 -->
     <img src="./images/superman.png" alt="superman" id="superman">
     
+    <!-- 오디오넣기 -->
+    <audio src="./images/Williams_Superman_Theme.mp3" controls></audio>
 
 </body>
 
