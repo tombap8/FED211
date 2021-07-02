@@ -133,9 +133,25 @@ body *{
     height: 16px;
     margin-top: 0;
     margin-right: 0;
+    font-size: 16px;
+    /* 안줘도 html에서 상속된 
+    글자 기본크기가 16px임 */
+    text-align: center;
+    /* 박스내의 인라인요소 가로중앙정렬 */
+    vertical-align: top;
+    /* 인라인 요소간 세로정렬(top-윗줄맞춤) */
+    line-height: 16px;
+    /* 글자가 박스 세로 중앙에 오도록 설정 */
 }
-.sns a::before{
-    background-size: 100%;
+/* 트위터 아이콘 박스 */
+.sns a.fi-twitter{
+    font-size: 13px;
+    /* 가로크기가 16px에 맞게 글자크기조정 */
+}
+/* 유튜브 아이콘 박스 */
+.sns a.fi-youtube-play{
+    font-size: 11px;
+    /* 가로크기가 16px에 맞게 글자크기조정 */
 }
 
 /* 1-2.로고박스 */
@@ -167,6 +183,7 @@ body *{
     display: inline-block;
     width: 16px;
     height: 16px;
+    font-weight: bold;
 }
 /* 링크 트랜지션 */
 .gnb a{
