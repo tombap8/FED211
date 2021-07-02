@@ -125,7 +125,8 @@
 
         /* 키프레임 */
 
-        /* 행성궤도 공통 class */
+        /********** 행성 공통 class ************/
+        /* 궤도 class */
         .orbit {
             position: absolute;
             /* 부모는 #solar */
@@ -138,6 +139,32 @@
             border-radius: 50%;
             /* 원 */
 
+        }
+        /* 행성 class */
+        .planet {
+            position: absolute;
+            /* 부모는? .pos */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* 행성크기에 맞춤! */
+            border-radius: 50%;
+            /* 원 */
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+            /*  행성의 부모가 기울었으므로 반대로 세워줌 */
+            transform: rotateY(-75deg);
+            /* 이미 행성이 회전하고 있는데 2가지 회전으로
+            축반전(x,y축이 바뀐효과)이 생겨서 x축이 아니라
+            y축을 세워야함! */
+        }
+
+
+        /*********** 지구행성 셋팅 ***************/
+        
+        #earth .orbit {
             width: 600px;
             height: 600px;
         }
@@ -170,30 +197,15 @@
 
         /* 지구행성 셋팅 */
         #earth .planet {
-            position: absolute;
-            /* 부모는? .pos */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* 행성크기에 맞춤! */
-            border-radius: 50%;
-            /* 원 */
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-
-            /*  행성의 부모가 기울었으므로 반대로 세워줌 */
-            transform: rotateY(-75deg);
-            /* 이미 행성이 회전하고 있는데 2가지 회전으로
-            축반전(x,y축이 바뀐효과)이 생겨서 x축이 아니라
-            y축을 세워야함! */
-
             background-image: url(images/earth.png);
 
             /* 스케일 애니메이션 + 그림자 애니메이션 */
             animation: pScale 10s linear infinite,
                        shdowAni 10s linear infinite;
         }
+
+
+        /******** 행성 공통 키프레임 : 그림자 + 스케일 ********/
 
         /* 크기변경 애니 키프레임 */
         @keyframes pScale {
@@ -323,6 +335,7 @@
         <div id="sun">
             <img src="images/sun.png" alt="태양">
         </div>
+
         <!-- 지구 -->
         <div id="earth" class="orbit">
             <!-- .pos 행성의 위치이동박스 -->
@@ -334,9 +347,15 @@
             </div>
         </div>
         <!-- 목성 -->
-        <!-- <div id="jupiter">
-            <span class="ir">목성</span>
-        </div> -->
+        <div id="jupiter" class="orbit">
+            <!-- .pos 행성의 위치이동박스 -->
+            <div class="pos">
+                <!-- 목성이미지박스 -->
+                <div class="planet">
+                    <span class="ir">목성</span>
+                </div>
+            </div>
+        </div>
         <!-- 토성 -->
         <!-- <div id="saturn">
             <span class="ir">토성</span>
