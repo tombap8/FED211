@@ -163,7 +163,7 @@
 
 
         /*********** 지구행성 셋팅 ***************/
-        
+
         #earth .orbit {
             width: 600px;
             height: 600px;
@@ -203,6 +203,53 @@
             animation: pScale 10s linear infinite,
                        shdowAni 10s linear infinite;
         }
+
+
+        /*********** 목성행성 셋팅 ***************/
+
+        #jupiter .orbit {
+            width: 1000px;
+            height: 1000px;
+        }
+
+        /* 목성행성 포지션 - 중앙중심회전 */
+        #jupiter .pos {
+            position: absolute;
+            top: calc(50% - 70px);
+            left: calc(50% - 70px);
+            /* 정중앙 위치 calc(%수치 - px수치) 셋팅! */
+
+            width: 140px;
+            height: 140px;
+
+            /* 회전애니메이션 */
+            animation: jupiter 30s linear infinite;
+        }
+
+        /* 태양중심 목성회전애니 */
+        @keyframes jupiter {
+            from {
+                transform:
+                    rotate(0deg) translateX(-500px) rotate(0deg);
+            }
+            to {
+                transform:
+                    rotate(360deg) translateX(-500px) rotate(-360deg);
+            }
+        } /* 키프레임 */
+
+        /* 목성행성 셋팅 */
+        #jupiter .planet {
+            background-image: url(images/jupiter.png);
+
+            /* 스케일 애니메이션 + 그림자 애니메이션 */
+            animation: pScale 30s linear infinite,
+                       shdowAni 30s linear infinite;
+        }
+
+
+
+
 
 
         /******** 행성 공통 키프레임 : 그림자 + 스케일 ********/
