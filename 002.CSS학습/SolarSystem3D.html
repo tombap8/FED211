@@ -190,6 +190,30 @@
 
             background-image: url(images/earth.png);
         }
+
+        /* 크기변경 애니 키프레임 */
+        @keyframes pScale {
+            0% {
+                /* 왼쪽 */
+                transform: scale(3) rotateY(-75deg);
+            }
+            25% {
+                /* 뒷쪽(가장작음) */
+                transform: scale(1) rotateY(-75deg);
+            }
+            50% {
+                /* 오른쪽 */
+                transform: scale(3) rotateY(-75deg);
+            }
+            75% {
+                /* 앞쪽(가장큼) */
+                transform: scale(5) rotateY(-75deg);
+            }
+            100% {
+                /* 왼쪽 */
+                transform: scale(3) rotateY(-75deg);
+            }
+        }
     </style>
 
     <script>
