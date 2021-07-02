@@ -256,12 +256,44 @@
         /* 목성행성 셋팅 */
         #jupiter .planet {
             background-image: url(images/jupiter.png);
+            background-size: 155px 158px;
+            background-position: -10px -10px;
+            /* border: 4px solid red; */
 
             /* 스케일 애니메이션 + 그림자 애니메이션 */
             animation: pScale 30s linear infinite,
-                shdowAni 30s linear infinite;
+                       shadowAni2 30s linear infinite;
         }
 
+         /*그림자 키프레임 - 목성용*/
+         @keyframes shadowAni2 {
+            0% {
+                /* 왼쪽 */
+                box-shadow: inset 39px 0px 22px rgba(0, 0, 0, 0.7);
+            }
+
+            25% {
+                /* 뒷쪽 */
+                box-shadow: inset 0px -5px 22px rgba(0, 0, 0, 0.7);
+            }
+
+            50% {
+                /* 오른쪽 */
+                box-shadow: inset -72px 0px 22px rgba(0, 0, 0, 0.7);
+            }
+
+            75% {
+                /* 앞쪽 */
+                box-shadow: inset -8px -150px 22px rgba(0, 0, 0, 0.7);
+            }
+
+            100% {
+                /* 왼쪽 */
+                box-shadow: inset 39px 0px 22px rgba(0, 0, 0, 0.7);
+            }
+        }
+
+        /*키프레임*/
 
 
         /*********** 토성행성 셋팅 ***************/
@@ -306,13 +338,22 @@
             background-size: 100% 60%;
             background-position: center;
 
-            /* 스케일 애니메이션 + 그림자 애니메이션 */
-            animation: pScale 40s linear infinite,
-                shdowAni 40s linear infinite;
+            /* 스케일 애니메이션 */
+            animation: pScale 40s linear infinite;
         }
 
         /* 토성 그림자 애니를 위한 박스 */
-
+        #saturn .planet div {
+            width: 43%;
+            height: 43%;
+            border-radius: 50%;
+            margin-top: 28%;
+            margin-left: 28%;
+            /* border: 3px solid red; */
+            
+            /* 그림자 애니메이션 */
+            animation: shdowAni 40s linear infinite;
+        }
 
 
 
