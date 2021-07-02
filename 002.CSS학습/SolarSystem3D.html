@@ -15,12 +15,12 @@
             padding: 0;
             width: 100vw;
             height: 100vh;
+            overflow: hidden;
+            /* 스크롤바없앰 */
         }
 
         body {
             background: url(./images/space.jpg) no-repeat center/cover;
-            overflow: hidden;
-            /* 스크롤바없앰 */
         }
 
         /* 공통 class */
@@ -571,6 +571,16 @@
             right: 0;
             z-index: 9999;/* 맨위 */
         }
+
+        /* 태블릿+모바일 미디어쿼리 */
+        @media only screen and (max-width:1024px) {
+            .tit{
+                font-size: 8vw;
+            }
+            .tit2{
+                font-size: 3vw;
+            }
+        }/* 미디어쿼리 */
 
     </style>
 
