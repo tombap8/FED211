@@ -65,26 +65,36 @@
             color: aqua;
         }
 
-        /* 태양계박스 */
+        /* 태양계박스(전체부모) */
+        /* 태양계 전체박스를 3D변형으로 기울임! */
         #solar {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            /* 부모는? 보이는화면! */
-            transform: translate(-50%, -50%);
-            /* 정중앙이동 */
-            width: 250px;
-            height: 250px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            /* 화면채움 */
 
-            /* 트랜지션: 속시이지 */
-            transition: transform 2s ease-in-out;
+            /* 3D 변형을 위한 셋팅은 부모박스에서 설정한다! */
+            transform-style: preserve-3d;
+            /* 기본값은 flat(2D) */
+
+            /* x축 기준으로 기울임 */
+            transform: rotateX(75deg);
+            /* 전체가 화면 뒤쪽으로 기울어짐
+            중앙선 기준으로 상단은 화면뒤, 하단은 화면앞으로 나옴! */
         }
 
         /* 태양박스 */
         #sun {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
+
+            /* 태양이 태양계박스(#solar)와 함께 75도 누워있으므로
+            x축으로 75도 반대방향으로 세워줘야 태양이 똑바로 보임! */
+            transform: translate(-50%, -50%) rotateX(-75deg);
+            /* 정중앙이동 */
             width: 250px;
             height: 250px;
             border-radius: 50%;
@@ -114,6 +124,21 @@
         }
 
         /* 키프레임 */
+
+        /* 행성궤도 공통 class */
+        .orbit {
+            position: absolute;
+            /* 부모는 #solar */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 정중앙이동 */
+            border: 5px solid lime;/*  rgba(255,255,255,.3); */
+            border-radius: 50%;/* 원 */
+
+            width: 600px;
+            height: 600px;
+        }
 
     </style>
 
