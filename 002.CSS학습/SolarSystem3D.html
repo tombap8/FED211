@@ -190,8 +190,9 @@
 
             background-image: url(images/earth.png);
 
-            /* 스케일 애니메이션 */
-            animation: pScale 10s linear infinite;
+            /* 스케일 애니메이션 + 그림자 애니메이션 */
+            animation: pScale 10s linear infinite,
+                       shdowAni 10s linear infinite;
         }
 
         /* 크기변경 애니 키프레임 */
@@ -216,7 +217,26 @@
                 /* 왼쪽 */
                 transform: scale(3) rotateY(-75deg);
             }
-        }
+        } /* 키프레임 */
+
+        /* 그림자 키프레임 */
+        @keyframes shdowAni {
+            0%{/* 왼쪽 */
+                box-shadow: inset 20px 0px 6px rgba(0,0,0,.7);
+            }
+            25%{/* 뒷쪽 */
+                box-shadow: inset 0px 0px 6px rgba(0,0,0,.7);
+            }
+            50%{/* 오른쪽 */
+                box-shadow: inset -24px 0px 6px rgba(0,0,0,.7);
+            }
+            75%{/* 앞쪽 */
+                box-shadow: inset 4px -62px 19px rgba(0,0,0,.7);
+            }
+            100%{/* 왼쪽 */
+                box-shadow: inset 20px 0px 6px rgba(0,0,0,.7);
+            }
+        } /* 키프레임 */
     </style>
 
     <script>
