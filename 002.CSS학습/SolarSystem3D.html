@@ -68,7 +68,7 @@
         /* 태양계박스 축소확대용 부모박스 */
         .ssbx{
             position: relative;
-            top: 40%;
+            top: 34%;
             /* 트랜지션: 속시이지 */
             transition: transform 2s ease-in-out;
         
@@ -470,9 +470,32 @@
             }
         } /* 키프레임 */
 
+        /* 캡틴마블 */
+        #capma {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            /* 정중앙이동 */
+            width: 5%;
+            z-index: -1;
+            /* 태양뒤로! */
+        }
+
+        /* 캡틴마블 키프레임 */
+        @keyframes capma {
+            0%{
+                top: 50%;
+                width: 5%;
+                z-index: -1;
+            }
+        }/* 키프레임 */
+
+        /* 오디오 */
         audio{
             position: absolute;
-            top: 0;
+            bottom: 0;
+            right: 0;
             z-index: 9999;/* 맨위 */
         }
 
@@ -611,6 +634,10 @@
     <!-- 슈퍼맨 -->
     <img src="./images/superman.png" alt="superman" id="superman">
     
+    <!-- 캡틴마블 -->
+    <img src="./images/capma.png" alt="captin marvel" id="capma">
+
+
     <!-- 오디오넣기 -->
     <audio src="./images/Williams_Superman_Theme.mp3" controls></audio>
 
