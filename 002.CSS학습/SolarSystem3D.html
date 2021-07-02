@@ -134,8 +134,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             /* 정중앙이동 */
-            border: 5px solid lime;
-            /* rgba(255,255,255,.3); */
+            border: 5px solid rgba(255,255,255,.5);
             border-radius: 50%;
             /* 원 */
 
@@ -245,6 +244,98 @@
             /* 스케일 애니메이션 + 그림자 애니메이션 */
             animation: pScale 30s linear infinite,
                        shdowAni 30s linear infinite;
+        }
+
+
+
+        /*********** 토성행성 셋팅 ***************/
+
+        #saturn.orbit {
+            width: 1400px;
+            height: 1400px;
+        }
+
+        /* 토성행성 포지션 - 중앙중심회전 */
+        #saturn .pos {
+            position: absolute;
+            top: calc(50% - 75px);
+            left: calc(50% - 75px);
+            /* 정중앙 위치 calc(%수치 - px수치) 셋팅! */
+
+            width: 150px;
+            height: 150px;
+
+            /* 회전애니메이션 */
+            animation: saturn 40s linear infinite;
+        }
+
+        /* 태양중심 토성회전애니 */
+        @keyframes saturn {
+            from {
+                transform:
+                    rotate(0deg) translateX(-700px) rotate(0deg);
+            }
+            to {
+                transform:
+                    rotate(360deg) translateX(-700px) rotate(-360deg);
+            }
+        } /* 키프레임 */
+
+        /* 토성행성 셋팅 */
+        #saturn .planet {
+            background-image: url(images/saturn.png);
+            background-size: 100% 60%;
+            background-position: center;
+
+            /* 스케일 애니메이션 + 그림자 애니메이션 */
+            animation: pScale 40s linear infinite,
+                       shdowAni 40s linear infinite;
+        }
+
+
+
+
+
+        /*********** 명왕성행성 셋팅 ***************/
+
+        #pluto.orbit {
+            width: 1600px;
+            height: 1600px;
+        }
+
+        /* 명왕성행성 포지션 - 중앙중심회전 */
+        #pluto .pos {
+            position: absolute;
+            top: calc(50% - 30px);
+            left: calc(50% - 30px);
+            /* 정중앙 위치 calc(%수치 - px수치) 셋팅! */
+
+            width: 60px;
+            height: 60px;
+
+            /* 회전애니메이션 */
+            animation: pluto 50s linear infinite;
+        }
+
+        /* 태양중심 명왕성회전애니 */
+        @keyframes pluto {
+            from {
+                transform:
+                    rotate(0deg) translateX(-800px) rotate(0deg);
+            }
+            to {
+                transform:
+                    rotate(360deg) translateX(-800px) rotate(-360deg);
+            }
+        } /* 키프레임 */
+
+        /* 명왕성행성 셋팅 */
+        #pluto .planet {
+            background-image: url(images/pluto.png);
+
+            /* 스케일 애니메이션 + 그림자 애니메이션 */
+            animation: pScale 50s linear infinite,
+                       shdowAni 50s linear infinite;
         }
 
 
@@ -393,6 +484,7 @@
                 </div>
             </div>
         </div>
+
         <!-- 목성 -->
         <div id="jupiter" class="orbit">
             <!-- .pos 행성의 위치이동박스 -->
@@ -403,14 +495,28 @@
                 </div>
             </div>
         </div>
+
         <!-- 토성 -->
-        <!-- <div id="saturn">
-            <span class="ir">토성</span>
-        </div> -->
+        <div id="saturn" class="orbit">
+            <!-- .pos 행성의 위치이동박스 -->
+            <div class="pos">
+                <!-- 토성이미지박스 -->
+                <div class="planet">
+                    <span class="ir">토성</span>
+                </div>
+            </div>
+        </div>
+
         <!-- 명왕성 -->
-        <!-- <div id="pluto">
-            <span class="ir">명왕성</span>
-        </div> -->
+        <div id="pluto" class="orbit">
+            <!-- .pos 행성의 위치이동박스 -->
+            <div class="pos">
+                <!-- 명왕성이미지박스 -->
+                <div class="planet">
+                    <span class="ir">명왕성</span>
+                </div>
+            </div>
+        </div>
 
     </div><!-- #solar -->
 
