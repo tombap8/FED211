@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>객체를 위한 for문</title>
+    <style>
+        .minfo{
+            display: flex;
+            /* 자식요소 박스 옆으로 흐르게! */
+        }
+        .photo img{
+            height: 200px;
+            margin-right: 20px;
+        }
+    </style>
     <!-- 제이쿼리 라이브러리 CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -31,6 +41,16 @@
             "출연": "이제훈, 조우진, 신혜선, 임원희",
             "문구": "도굴은 범죄예요"
         };
+
+
+        /////////////// 로드구역 ///////////////////////
+        $(function(){ //// jQB ////////////////////////
+            
+            console.log("로딩완료!");
+            
+        }); ////////////// jQB ////////////////////////
+        ///////////////////////////////////////////////
+
     </script>
 </head>
 <body>
