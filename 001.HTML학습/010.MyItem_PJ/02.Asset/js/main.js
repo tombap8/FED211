@@ -21,7 +21,7 @@ $(function(){ /// jQB ////////////////////
         let isrc = $(this).attr("src");
         // 이미지 경로중 "/small" 없애기 : replace(바꿀값,바뀔값)
         isrc = isrc.replace("/small","");
-        console.log("경로:"+isrc);
+        // console.log("경로:"+isrc);
 
         // 2. 변경된 썸네일 이미지 경로를 메인이미지에 적용!
         // 변경 대상: .mibx img
