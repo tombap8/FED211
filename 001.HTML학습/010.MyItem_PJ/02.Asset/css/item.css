@@ -6,3 +6,23 @@
 @import url(core.css);
 @import url(common.css);
 
+#cont{
+    overflow: hidden;
+    /* 첫번째 자식요소 마진탑포함! */
+}
+
+/* 2-1. 아이템 타이틀 */
+.stit{
+    width: 700px;
+    height: 45px;
+    margin: 0 auto;/* 마영오! */
+    margin-top: 80px;
+    /* 첫번째 자식요소의 마진탑은
+    부모요소에 포함되지 않으므로
+    부모에게 overflow:hidden을 주어
+    이를 포함한다! */
+
+    font-size: 17px;
+    line-height: 45px;
+    outline: 1px solid red;
+}
