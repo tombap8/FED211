@@ -17,7 +17,7 @@ $(function () { //////// jQB /////////////////
 
         // 1. a요소의 텍스트 읽어오기
         let txt = $(this).text();
-        console.log("메뉴명: " + txt);
+        // console.log("메뉴명: " + txt);
 
         // 2. 링크분기하기
 
@@ -33,11 +33,19 @@ $(function () { //////// jQB /////////////////
                 break;
                 // "Home"과 "프로필" 외에는 모두 아이템 페이지임!
             default:
-                url = "item.html?itm=" + txt;
+                url = "item.html?itm=" + escape(txt);
+                // 2type한글문자 안깨지도록 escape처리!
         } ////////// switch case문 //////////////
 
         // 분기 셋팅된 url확인!
-        console.log("url : " + url);
+        // console.log("url : " + url);
+
+        // 3. url 이동하기
+        location.href = url;
+        // window.location.href = 이동할주소
+        // - window객체는 보통 생략
+        // - 같은 창에서 페이지 이동함
+        // 참고) 새창열기는 window.open().location.href 임
 
     }); /////////// click //////////////////
 
