@@ -23,6 +23,10 @@ $(function(){ /// jQB ////////////////////
         isrc = isrc.replace("/small","");
         console.log("경로:"+isrc);
 
+        // 2. 변경된 썸네일 이미지 경로를 메인이미지에 적용!
+        // 변경 대상: .mibx img
+        $(".mibx img").attr("src",isrc);
+
     });////////// mouseover //////////////////
 
 }); ///////////// jQB ////////////////////
