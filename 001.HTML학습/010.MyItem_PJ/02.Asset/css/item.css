@@ -51,3 +51,34 @@
 .ico6::before{
     content: url(../images/myitems_icon_06.png);
 }
+
+/* 2-2.아이템 컨텐츠 박스 */
+.itbx{
+    position: relative;
+    /* 부모자격 */
+    width: 700px;
+    height: 300px;
+    margin: 0 auto;/* 마영오! */
+    outline: 4px dashed blue;
+}
+
+/* 2-2-1.이미지박스 */
+.imbx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+
+    outline: 3px dotted red;
+}
+/* 2-2-2.설명박스 */
+.dcbx{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+
+    outline: 3px dotted red;
+}
