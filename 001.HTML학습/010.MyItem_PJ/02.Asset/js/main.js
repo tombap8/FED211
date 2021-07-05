@@ -13,5 +13,16 @@ $(function(){ /// jQB ////////////////////
     // 변경 원리 : 마우스 오버된 썸네일 이미지 경로를 읽어와서
     //            큰 이미지에 small 이라는 폴더 경로만 지우고
     //            새로운 경로를 만들어서 큰 이미지 src를 변경
+    $(".thumbs img").mouseover(function(){
+
+        // console.log("오버~!");
+
+        // 1. 썸네일 이미지 경로 알아내기
+        let isrc = $(this).attr("src");
+        // 이미지 경로중 "/small" 없애기 : replace(바꿀값,바뀔값)
+        isrc = isrc.replace("/small","");
+        console.log("경로:"+isrc);
+
+    });////////// mouseover //////////////////
 
 }); ///////////// jQB ////////////////////
