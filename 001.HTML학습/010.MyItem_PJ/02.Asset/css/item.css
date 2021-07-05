@@ -24,5 +24,30 @@
 
     font-size: 17px;
     line-height: 45px;
+    color: #777;
     outline: 1px solid red;
+}
+/* 가상요소로 아이콘 넣기 */
+.stit::before{
+    vertical-align: -17px;
+    margin-right: 10px;
+}
+/* 아이템에 따라 가상요소 이미지 아이콘이 달라짐 class셋팅 */
+.ico1::before{
+    content: url(../images/myitems_icon_01.png);
+}
+.ico2::before{
+    content: url(../images/myitems_icon_02.png);
+}
+.ico3::before{
+    content: url(../images/myitems_icon_03.png);
+}
+.ico4::before{
+    content: url(../images/myitems_icon_04.png);
+}
+.ico5::before{
+    content: url(../images/myitems_icon_05.png);
+}
+.ico6::before{
+    content: url(../images/myitems_icon_06.png);
 }
