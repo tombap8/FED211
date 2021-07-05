@@ -72,6 +72,12 @@
 
     outline: 3px dotted red;
 }
+/* 아이템 이미지 */
+.imbx img{
+    width: 90%;
+    margin: 18px 0 0 5px;
+}
+
 /* 2-2-2.설명박스 */
 .dcbx{
     position: absolute;
@@ -79,6 +85,15 @@
     left: 50%;
     width: 50%;
     height: 100%;
+
+    padding: 20px;
+    box-sizing: border-box;
+    /* 패딩으로 커지지 않게 크기유지! */
+
+    font-size: 13px;
+    line-height: 30px;
+    color: #777;
+
 
     outline: 3px dotted red;
 }
