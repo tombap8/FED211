@@ -25,7 +25,7 @@
     font-size: 17px;
     line-height: 45px;
     color: #777;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 /* 가상요소로 아이콘 넣기 */
 .stit::before{
@@ -59,7 +59,7 @@
     width: 700px;
     height: 300px;
     margin: 0 auto;/* 마영오! */
-    outline: 4px dashed blue;
+    /* outline: 4px dashed blue; */
 }
 
 /* 2-2-1.이미지박스 */
@@ -70,7 +70,7 @@
     width: 50%;
     height: 100%;
 
-    outline: 3px dotted red;
+    /* outline: 3px dotted red; */
 }
 /* 아이템 이미지 */
 .imbx img{
@@ -94,6 +94,17 @@
     line-height: 30px;
     color: #777;
 
+    /* outline: 3px dotted red; */
+}
 
-    outline: 3px dotted red;
+/* 아이템 컨텐츠 박스의 중앙분리선 가상요소로 넣기 */
+.itbx::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 1px;
+    height: 80%;
+    background-color: #ccc;
 }
