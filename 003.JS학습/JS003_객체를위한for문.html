@@ -19,7 +19,7 @@
     <!-- 제이쿼리 라이브러리 CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        /// 영화정보 객체
+        /// 영화정보 객체 ////
         let mvi = {
             "조제": {
                 "포스터": "https://movie-phinf.pstatic.net/20201116_276/1605491658399poUOC_JPEG/movie_image.jpg?type=m99_141_2",
@@ -60,6 +60,7 @@
             $("button").click(function () {
 
                 // 1. 클릭된 버튼의 텍스트 읽기
+                // -> 왜 읽어오지? 이것은 영화정보객체의 속성명!
                 let txt = $(this).text();
                 console.log(txt);
 
