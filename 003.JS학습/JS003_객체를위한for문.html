@@ -71,9 +71,27 @@
                 // 객체를 위한 for문 -> for in 문
                 // 구문: for(변수 in 객체){구현코드}
                 // -> 객체 개수만큼 순서대로 속성명과 속성값을 가져옴
-                for(let x in mi){
-                    console.log("x는 속성명: "+x);
-                    console.log("속성값:"+mi[x]);
+                for (let x in mi) {
+                    console.log("x는 속성명: " + x);
+                    console.log("속성값:" + mi[x]);
+
+                    // 각 속성명에 해당하는 작업분기하기 //
+                    switch (x) {
+                        case "포스터":
+                            // 1. 포스터 넣기
+                            $(".photo").html('<img src="' +
+                                mi[x] + '" alt="">');
+                            break;
+                        case "제목":
+                            // 2. 타이틀 넣기
+                            $(".tit").text("제목: "+mi[x]);
+                            break;
+                        case "개요":
+                            // 2. 개요 넣기
+                            $(".sum").text("장르: "+mi[x]);
+                            break;
+                    } //////// sitch case문 //////////
+
                 } ////////// for in문 /////////
 
             }); //////////// click /////////////////
