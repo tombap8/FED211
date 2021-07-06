@@ -89,6 +89,15 @@ $(function () { //// jQB ///////////////////
     // 아이템 정보를 변수에 할당!
     let ifo = itfo[pm];
 
+    // 제목요소
+    let stit = $(".stit");
+
+    // 이미지박스요소
+    let imbx = $(".imbx");
+
+    // 설명박스요소
+    let dcbx = $(".dcbx");
+
     // 아이템 정보는 객체이므로 for in문을 사용함!
     for (let x in ifo) {
 
@@ -98,24 +107,23 @@ $(function () { //// jQB ///////////////////
         // 속성명에 해당하는 작업을 분기함!
         switch (x) {
             case "아이템명":
-                $(".stit").text(ifo[x]);
+                stit.text(ifo[x]);
                 break;
             case "아이콘":
-                $(".stit").addClass(ifo[x]);
+                stit.addClass(ifo[x]);
                 break;
             case "이미지":
-                $(".imbx")
-                    .html('<img src="' + ifo[x] + '" alt="아이템이미지">');
+                imbx.html('<img src="' + ifo[x] + '" alt="아이템이미지">');
                 break;
             case "설명":
-                $(".dcbx").text(ifo[x]);
+                dcbx.text(ifo[x]);
                 break;
 
         } ////////// switch case문 ////////////
 
         // "태블릿PC" 일때 이미지 가로크기 조정!
         if (pm === "태블릿PC") {
-            $(".imbx img").css({
+            imbx.find("img").css({
                 width: "70%"
             });
         } ///////// if ///////////////////////
@@ -141,13 +149,13 @@ $(function () { //// jQB ///////////////////
         } ///////////////// if //////////////
 
         // 이미지박스 등장 //
-        $(".imbx").animate({
+        imbx.animate({
             left: ileft,
             opacity: 1
         }, 1000, "easeInOutQuint");
 
         // 설명박스 등장 ///
-        $(".dcbx").animate({
+        dcbx.animate({
             left: dleft,
             opacity: 1
         }, 1000, "easeInOutQuint");
