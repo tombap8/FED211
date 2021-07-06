@@ -83,8 +83,8 @@ $(function () { //// jQB ///////////////////
 
     // "디바이스"는 "스마트폰"으로
     // "패션"은 "가방"으로 매칭한다!
-    if(pm === "디바이스") pm = "스마트폰";
-    else if(pm === "패션") pm = "가방";
+    if (pm === "디바이스") pm = "스마트폰";
+    else if (pm === "패션") pm = "가방";
 
     // 아이템 정보를 변수에 할당!
     let ifo = itfo[pm];
@@ -105,29 +105,52 @@ $(function () { //// jQB ///////////////////
                 break;
             case "이미지":
                 $(".imbx")
-                .html('<img src="'+ifo[x]+'" alt="아이템이미지">');
+                    .html('<img src="' + ifo[x] + '" alt="아이템이미지">');
                 break;
             case "설명":
                 $(".dcbx").text(ifo[x]);
                 break;
-            
+
         } ////////// switch case문 ////////////
 
         // "태블릿PC" 일때 이미지 가로크기 조정!
-        if(pm === "태블릿PC"){
-            $(".imbx img").css({width:"70%"});
+        if (pm === "태블릿PC") {
+            $(".imbx img").css({
+                width: "70%"
+            });
         } ///////// if ///////////////////////
 
-        // 등장액션
-        $(".imbx").animate({
-            left:"0",
-            opacity: 1
-        },800,"easeOutQuint");
+        ///////// 등장액션 //////////
+        // 메뉴 순서상 홀수는 이미지 왼쪽, 설명 오른쪽
+        // 짝수는 이미지 오른쪽, 설명 왼쪽
 
-        $(".dcbx").animate({
-            left:"50%",
+        // 이미지 left값
+        let ileft = "0";
+
+        // 설명 left값
+        let dleft = "50%";
+
+        // 위의 기본 left값을 반대로 보낸것만 if문으로 정의!
+        if (pm === "태블릿PC" ||
+            pm === "가방" ||
+            pm === "구두") {
+                // 이미지 left값
+                ileft = "50%";
+                // 설명 left값
+                dleft = "0";
+        } ///////////////// if //////////////
+
+        // 이미지박스 등장 //
+        $(".imbx").animate({
+            left: ileft,
             opacity: 1
-        },800,"easeOutQuint");
+        }, 1000, "easeInOutQuint");
+
+        // 설명박스 등장 ///
+        $(".dcbx").animate({
+            left: dleft,
+            opacity: 1
+        }, 1000, "easeInOutQuint");
 
 
 
