@@ -99,7 +99,8 @@ $(function () { //// jQB ///////////////////
                 $(".stit").addClass(ifo[x]);
                 break;
             case "이미지":
-                $(".imbx img").attr("src",ifo[x]);
+                $(".imbx")
+                .html('<img src="'+ifo[x]+'" alt="아이템이미지">');
                 break;
             
         } ////////// switch case문 ////////////
