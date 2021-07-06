@@ -32,7 +32,27 @@
     position: absolute;
     width: 200px;
     height: 400px;
-    background-color: #fff;
+    /* background-color: #fff; */
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+/* 앞면 */
+.iphone li:nth-child(1) {
+    background-image: url(../images/ip01.png);
+    transform: translateZ(10px);
+    display: none;
+}
+/* 뒷면 */
+.iphone li:nth-child(2) {
+    background-image: url(../images/ip02.png);
+    transform: translateZ(-10px) rotateY(180deg);
+    /* 뒷면 이미지 반대로 돌러서 뒷면에서 볼때 바로보이게함! */
+}
+/* 왼쪽면(음량스위치) */
+.iphone li:nth-child(3) {
+    background-image: url(../images/ip04.png);
+    width: 20px;
+    left: 0;
+    transform: rotateY(0deg);
 }
