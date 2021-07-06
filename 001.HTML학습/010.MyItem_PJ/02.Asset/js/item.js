@@ -118,6 +118,18 @@ $(function () { //// jQB ///////////////////
             $(".imbx img").css({width:"70%"});
         } ///////// if ///////////////////////
 
+        // 등장액션
+        $(".imbx").animate({
+            left:"0",
+            opacity: 1
+        },800,"easeOutQuint");
+
+        $(".dcbx").animate({
+            left:"50%",
+            opacity: 1
+        },800,"easeOutQuint");
+
+
 
     } ///////// for in문 ////////////////
 
