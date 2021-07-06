@@ -95,6 +95,13 @@ $(function () { //// jQB ///////////////////
             case "아이템명":
                 $(".stit").text(ifo[x]);
                 break;
+            case "아이콘":
+                $(".stit").addClass(ifo[x]);
+                break;
+            case "이미지":
+                $(".imbx img").attr("src",ifo[x]);
+                break;
+            
         } ////////// switch case문 ////////////
 
 
