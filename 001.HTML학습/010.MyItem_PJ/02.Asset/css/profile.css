@@ -32,7 +32,7 @@
     position: absolute;
     width: 200px;
     height: 400px;
-    /* background-color: #fff; */
+    background-color: #fff;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -41,7 +41,6 @@
 .iphone li:nth-child(1) {
     background-image: url(../images/ip01.png);
     transform: translateZ(10px);
-    display: none;
 }
 /* 뒷면 */
 .iphone li:nth-child(2) {
@@ -60,13 +59,20 @@
 .iphone li:nth-child(4) {
     background-image: url(../images/ip03.png);
     width: 20px;
-    right: 0;
-    transform: rotateY(0deg);
+    right: -10px;
+    transform: rotateY(90deg);
 }
 /* 윗쪽면 */
 .iphone li:nth-child(5) {
     background-image: url(../images/ip06.png);
     height: 20px;
-    top: 0;
-    transform: rotateX(0deg);
+    top: -10px;
+    transform: rotateX(90deg);
+}
+/* 아랫쪽면 */
+.iphone li:nth-child(6) {
+    background-image: url(../images/ip05.png);
+    height: 20px;
+    bottom: -10px;
+    transform: rotateX(90deg);
 }
