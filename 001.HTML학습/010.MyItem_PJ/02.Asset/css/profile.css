@@ -24,8 +24,18 @@
     transform-style: preserve-3d;
     transform: rotateY(30deg) rotateX(10deg);
 
-    outline: 2px solid red;
+    /* 애니메이션 */
+    animation: rotAni 1.5s ease-in-out 1s 2 alternate;
+    /* 횟수를 2번, 대체경로 설정시 반대방향으로 다시 돌아와서 끝남! */
 }
+
+/* 아이폰 회전 애니메이션 키프레임 */
+@keyframes rotAni {
+    to{
+        transform: rotateY(-330deg) rotateX(10deg);
+    }
+    
+}/* 키프레임 */
 
 /* 공통 li각면 */
 .iphone li{
