@@ -50,7 +50,7 @@ let pm = location.href;
 /// url가공전에 물음표가 있는지 확인하여 없으면 돌려보낸다!
 // indexOf(문자열) -> 찾는 문자열의 순번을 리턴함!
 // 만약 찾는 문자열이 없으면 -1을 리턴함!!!
-// console.log("문자열찾기:"+pm.indexOf("?"));
+// // console.log("문자열찾기:"+pm.indexOf("?"));
 if (pm.indexOf("?") === -1) {
     // alert("비정상적인 접근입니다!");
     location.href = "index.html"; //첫페이지로 돌아가!
@@ -69,12 +69,12 @@ pm = pm.split("=")[1];
 
 // 3. escape변환문자 복원하기(unescape)
 pm = unescape(pm);
-console.log(pm);
+// console.log(pm);
 
 ///////////// 로드구역 //////////////////
 $(function () { //// jQB ///////////////////
 
-    console.log("아이템JS로드!");
+    // console.log("아이템JS로드!");
 
     // Get 방식으로 받은 pm변수의 값은 
     // 아이템 객체변수 itfo의 속성명과 같다!!!
@@ -101,8 +101,8 @@ $(function () { //// jQB ///////////////////
     // 아이템 정보는 객체이므로 for in문을 사용함!
     for (let x in ifo) {
 
-        console.log("속성명:" + x);
-        console.log("속성값:" + ifo[x]);
+        // console.log("속성명:" + x);
+        // console.log("속성값:" + ifo[x]);
 
         // 속성명에 해당하는 작업을 분기함!
         switch (x) {
