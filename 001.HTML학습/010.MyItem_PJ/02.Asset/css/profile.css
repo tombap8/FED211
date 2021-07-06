@@ -99,4 +99,28 @@
     height: 250px;
     /* span이 앱솔루트이므로 block! */
     background: url(../images/prof01.png) no-repeat center/100%;
+
+    /* 애니메이션 */
+    animation: newFace 1.2s linear 4s forwards;
+    /* 한번만 변경되고 마지막상태(이미지변경) 유지해야함! */
 }
+
+/* 얼굴바꾸기 키프레임 */
+@keyframes newFace {
+    0%{
+        height: 250px;
+        background-image: url(../images/prof01.png);
+    }
+    40%{
+        height: 0px;
+        background-image: url(../images/prof01.png);
+    }
+    60%{/* 이미지변경!!! */
+        height: 0px;
+        background-image: url(../images/prof02.png);
+    }
+    100%{
+        height: 250px;
+        background-image: url(../images/prof02.png);
+    }
+}/* 키프레임 */
