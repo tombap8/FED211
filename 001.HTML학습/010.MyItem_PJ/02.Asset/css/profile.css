@@ -53,6 +53,13 @@
 .iphone li:nth-child(3) {
     background-image: url(../images/ip04.png);
     width: 20px;
-    left: 0;
+    left: -10px;
+    transform: rotateY(-90deg);
+}
+/* 오른쪽면(전원스위치) */
+.iphone li:nth-child(4) {
+    background-image: url(../images/ip03.png);
+    width: 20px;
+    right: 0;
     transform: rotateY(0deg);
 }
