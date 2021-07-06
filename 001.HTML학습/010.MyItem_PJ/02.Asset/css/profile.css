@@ -63,3 +63,10 @@
     right: 0;
     transform: rotateY(0deg);
 }
+/* 윗쪽면 */
+.iphone li:nth-child(5) {
+    background-image: url(../images/ip06.png);
+    height: 20px;
+    top: 0;
+    transform: rotateX(0deg);
+}
