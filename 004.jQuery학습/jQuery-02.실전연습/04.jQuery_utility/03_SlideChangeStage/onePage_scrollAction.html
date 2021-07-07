@@ -199,6 +199,10 @@
             // 스크롤탑값 변수
             let scTop;
 
+            // 첫번째 등장액션 대상요소의 top위치
+            let firstAct = $("#pg1 .scAct").offset().top;
+            console.log("첫번째위치:"+firstAct);
+
             $(window).scroll(function(){
 
                 // 1. 전체 window의 스크롤 위치값 알아내기
