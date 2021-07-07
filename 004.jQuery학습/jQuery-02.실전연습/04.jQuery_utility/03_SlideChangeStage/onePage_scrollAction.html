@@ -212,6 +212,13 @@
                 scTop = $(this).scrollTop();
                 console.log("스위:"+scTop);
 
+                if(scTop > firstAct-300){
+                    $("#pg1 .scAct").css({
+                        opacity: 1,
+                        transform: "translate(-50%,-50%)"
+                    });
+                }
+
 
             }); ////////////// scroll ///////////////////
             /////////////////////////////////////////////
