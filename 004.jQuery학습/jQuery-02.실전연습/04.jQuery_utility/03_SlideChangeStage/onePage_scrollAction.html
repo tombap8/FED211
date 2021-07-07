@@ -193,13 +193,6 @@
             border-radius: 10px;
         }
 
-        /* 스크롤 등장액션 요소 클래스 */
-        .scAct {
-            opacity: 0;
-            transform: translate(-50%, -30%);
-            /* 트랜스폼의 Y축 위치이동만 변경함!(아래쪽으로 이동) */
-            transition: all 1s ease-out;
-        }
 
         /* 페이지 타이틀 */
         .ptit {
@@ -225,6 +218,17 @@
             z-index: 1;
         }
 
+        /* 스크롤액션 CSS셋팅시 주의사항! */
+        /* 스크롤 등장액션 요소 클래스를 반드시 일반설정 아래쪽에
+        코딩해야 덮어쓰기가 된다!(마지막에 코딩된 것이 덮어쓰기함!) */
+
+        /* 스크롤 등장액션 요소 클래스 */
+        .scAct {
+            opacity: 0;
+            transform: translate(-50%, -30%);
+            /* 트랜스폼의 Y축 위치이동만 변경함!(아래쪽으로 이동) */
+            transition: all 1s ease-out;
+        }
     </style>
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -334,8 +338,8 @@
 
                     // 2. 해당순번의 액션요소 CSS변경하기!
                     scAct.eq(seq).css({
-                        opacity: 1,//보이게함
-                        transform: "translate(-50%,-50%)"//원위치
+                        opacity: 1, //보이게함
+                        transform: "translate(-50%,-50%)" //원위치
                     }); ///////////////// css //////////////////
 
 
