@@ -22,6 +22,9 @@
           - 플러그인 호출함수: lightBox() 메서드
           - 사용할 썸네일에 a요소로 기본 셋팅이 필요함(하단에 기술함)
         */
+       // 라잇박스 플러그인 호출하기!
+       // 대상: .view
+       $(".view").lightBox();
 
 
       }); /////////// jQB ///////////////////////
@@ -59,8 +62,9 @@
             - 썸네일 이미지를 a태그로 감싼다
             - href 속성값에 큰 이미지 경로를 써준다
             - title 속성값에 이미지 설명을 써준다
+            - a태그에 적당한 클래스를 주고 이것으로 플러그인 적용함
            -->
-          <p> <a href=""><img src="images/img1.jpg" width="110" height="74" border="0" alt="" class="pic_right" /></a> "Lorem ipsum
+          <p> <a href="images/robot.jpg" title="멋진 로봇이야~!!!" class="view"><img src="images/img1.jpg" width="110" height="74" border="0" alt="" class="pic_right" /></a> "Lorem ipsum
             dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
