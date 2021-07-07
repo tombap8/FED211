@@ -231,7 +231,7 @@
             transition: all 1s ease-out;
         }
 
-        
+
         /* 인디케이터 */
         .indic {
             position: fixed;
@@ -247,7 +247,8 @@
             width: 100%;
             height: 10px;
             margin: 3px 0;
-            cursor: pointer;/* 손가락모양 */
+            cursor: pointer;
+            /* 손가락모양 */
         }
 
         /* a요소 */
@@ -428,8 +429,8 @@
             }); ////////////// scroll ///////////////////
             /////////////////////////////////////////////
 
-// 메뉴 a요소 기본이동 막기!
-$(".gnb a,.indic a").click(function(e){
+            // 메뉴 a요소 기본이동 막기!
+            $(".gnb a,.indic a").click(function (e) {
                 e.preventDefault();
             }); ///////////// click ////////////////
 
@@ -440,10 +441,10 @@ $(".gnb a,.indic a").click(function(e){
 
                 // 0. 클릭된 li순번 구해오기
                 let idx = $(this).index();
-                console.log("순번:"+idx);
+                console.log("순번:" + idx);
 
                 // 1. 하위a요소의 href값 읽어오기
-                let idnm = $("a",this).attr("href");
+                let idnm = $("a", this).attr("href");
                 console.log("href값:" + idnm);
 
                 // 2. 아이디값에 해당하위 top값 위치구하기
@@ -544,7 +545,7 @@ $(".gnb a,.indic a").click(function(e){
         <img src="images/m7.jpg" alt="장면" class="pic scAct">
     </section>
 
-    
+
     <!-- 3. 인디케이터(위치표시자) -->
     <nav class="indic">
         <ul>
