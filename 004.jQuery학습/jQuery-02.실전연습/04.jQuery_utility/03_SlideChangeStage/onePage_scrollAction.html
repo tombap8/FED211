@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Page Scroll Action</title>
     <style>
+        /* 웹폰트 : Do Hyeon체 */
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+        /* font-family: 'Do Hyeon', sans-serif; */
+
         html,
         body {
             margin: 0;
@@ -196,6 +200,26 @@
             /* 트랜스폼의 Y축 위치이동만 변경함!(아래쪽으로 이동) */
             transition: all 1s ease-out;
         }
+
+        /* 페이지 타이틀 */
+        .ptit {
+            position: absolute;
+            /* 부모는? .page */
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 정중앙이동 */
+
+            /* 글자설정 */
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 10vw;
+            white-space: nowrap;
+            color: #fff;
+            text-shadow: 3px 3px 3px #000;
+
+            z-index: 1;
+        }
+
     </style>
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -426,6 +450,7 @@
         <img src="images/m2.jpg" alt="장면" class="pic scAct">
     </section>
     <section id="pg3" class="page">
+        <h2 class="ptit">인천상륙작전</h2>
         <img src="images/m3.jpg" alt="장면" class="pic scAct">
     </section>
     <section id="pg4" class="page">
