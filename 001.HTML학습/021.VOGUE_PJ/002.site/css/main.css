@@ -186,7 +186,7 @@ body *{
     width: 88px;
     height: 44px;
 }
-/* 구분선 */
+/* 사이구분선 */
 .smbx>li:first-child{
     border-right: 1px solid #e5e5e5;
 }
@@ -211,9 +211,21 @@ body *{
     position: absolute;
     /* 부모는? .smbx */
     width: 120px;
-    height: 89px;
+    height: 0;
     box-sizing: border-box;
     border: 1px solid #e5e5e5;
+
+    overflow: hidden;
+    /* height:0 으로 자식요소 숨기기 */
+    opacity: 0;
+
+}
+/* 상위메뉴 오버시 서브메뉴 보이기 */
+.smbx>li:hover .smsub{
+    height: 89px;
+    opacity: 1;
+    /* 트랜지션 */
+    transition: opacity .2s ease-in-out;
 }
 .smsub li{
     width: 100%;
