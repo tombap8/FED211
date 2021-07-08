@@ -142,7 +142,15 @@ body *{
     /* 인라인 요소간 세로정렬(top-윗줄맞춤) */
     line-height: 16px;
     /* 글자가 박스 세로 중앙에 오도록 설정 */
+
+    /* 트랜지션 */
+    transition: all .2s;
 }
+/* 마우스 오버시 변경 */
+.sns a:hover {
+    opacity: 0.8;
+}
+
 /* 트위터 아이콘 박스 */
 .sns a.fi-twitter{
     font-size: 13px;
@@ -157,6 +165,7 @@ body *{
 .sns a:last-child{
     background: url(../images/sns_kakao.png) no-repeat center/auto 100%;
 }
+
 
 /* 1-2.로고박스 */
 .logo{
