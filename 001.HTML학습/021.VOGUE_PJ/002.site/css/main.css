@@ -359,6 +359,22 @@ body *{
     background-image: url(../images/cont7-3.jpg);
 }
 
+/* 컨텐츠 타이틀 박스 */
+.pbx h2{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 22px;
+    font-weight: normal;/* 두꺼운체 해제 */
+    color: #fff;
+    text-align: center;
+    
+    box-sizing: border-box;
+    padding: 30px 50px;
+}
+
 /* 3. 하단영역 */
 .info.ibx{
     height: 285px;
