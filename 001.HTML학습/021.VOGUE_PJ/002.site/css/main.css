@@ -278,10 +278,13 @@ body *{
     display: flex;
     flex-wrap: wrap;
     /* 플렉스 자식요소가 부모박스크기 보다 
-    많아서 크기가 넘치면 아래로 떨어짐 설정 */
+    많아서 크기가 넘치면 아래로 떨어짐 설정 */    
+    justify-content: center;
+    /* 줄바꿈하여 내려가면 여러줄된 내용이 가로중앙정렬함! */
     width: 758px;
     max-width: 100%;
     /* width보다 화면이 작아지면 100%적용 */
+    margin: 0 auto;/* 가로중앙정렬 */
 }
 .gnb>ul>li{
     margin: 0 23px;
