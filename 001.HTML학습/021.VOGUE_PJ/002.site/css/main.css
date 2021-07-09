@@ -76,6 +76,7 @@ img{
 .pbx{
     position: relative;
     height: 100%;
+    overflow: hidden;
     
     /* outline: 2px dotted red; */
 }
