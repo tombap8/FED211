@@ -14,9 +14,28 @@
 /* 모바일 미디어쿼리 : 500px이하 */
 @media only screen and (max-width:500px) {
 
+    body{
+        padding-top: 63px;
+        /* 상단영역고정시 첫번째 컨텐츠가 가려지므로
+        그만큼의 공간을 아래로 밀어준다! */
+        background-color: #000;
+        /* 혹시 보일 수 있는 배경을 검정색 처리 */
+    }
+
+    /* 상단영역 고정 */
+    #top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 999;
+    }
+
     /* 상단영역 - 최소높이 없앰 */
     .top.ibx {
         min-height: auto;
+        height: 55px;
     }
     /* 상단메뉴, GNB메뉴 없애기 */
     .tmenu, .gnb{
@@ -70,6 +89,17 @@
     }
     .st3 .pbx:hover::after {/* 두개짜리 */
         border: 10px solid #f00;
+    }
+
+    /* 하단박스 */
+    .info.ibx{
+        padding: 40px;
+        min-height: auto;
+    }
+
+    /* 하단 로고 이미지 */
+    .blogo img{
+        width: 200px;
     }
 
 } /* 미디어쿼리 500px이하 */

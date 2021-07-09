@@ -43,7 +43,7 @@ img{
     max-width: 100%;
     /* 1300px보다 작아지면 100%적용 */
     margin: 0 auto;/* 블록가로중앙 - 마영오! */
-    outline: 3px dashed blue;
+    /* outline: 3px dashed blue; */
 }
 
 /* 비율유지박스 */
@@ -77,7 +77,7 @@ img{
     position: relative;
     height: 100%;
     overflow: hidden;
-    
+
     /* outline: 2px dotted red; */
 }
 /* 파티션박스 가상요소로 보더애니구현 */
@@ -122,9 +122,9 @@ img{
 }
 
 /* 임시 아웃라인 */
-body *{
+/* body *{
     outline: 1px dashed #ccc;
-}
+} */
 
 /*********** 파트별 개별 디자인 ***********/
 
@@ -425,6 +425,7 @@ body *{
 /* 3-3.하단링크 */
 .blink{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     /* 한줄 컨텐트 가로중앙위치 */
 }
