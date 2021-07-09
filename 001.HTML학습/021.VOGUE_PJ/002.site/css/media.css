@@ -1,3 +1,12 @@
 @charset "utf-8";
 /* 보그 메인 미디어쿼리 - media.css */
 
+/* 800px이하 */
+@media only screen and (max-width:800px) {
+
+    /* 컨텐츠 박스 타이틀 h2요소 */
+    .pbx h2{
+        font-size: 24px;
+    }
+    
+} /* 미디어쿼리 800px이하 */
