@@ -250,7 +250,7 @@ body *{
     width: 100%;
     height: 100%;
 
-    font-family: 'NanumBarunGothic', sans-serif;
+    font-family: 'Pistilli','NanumBarunGothic', sans-serif;
     font-weight: 200;
     font-size: 12px;
     color: #747474;
@@ -376,7 +376,7 @@ body *{
     bottom: 0;
     width: 100%;
 
-    font-family: 'NanumBarunGothic', sans-serif;
+    font-family: 'Pistilli','NanumBarunGothic', sans-serif;
     font-size: 33px;
     font-weight: 200;/* 두꺼운체 해제 */
     color: #fff;
@@ -428,7 +428,7 @@ body *{
     /* 한줄 컨텐트 가로중앙위치 */
 }
 .blink a{
-    font-family: 'NanumBarunGothic', sans-serif;
+    font-family: 'Pistilli','NanumBarunGothic', sans-serif;
     font-weight: 200;
     color: #747474;
     font-size: 13px;
