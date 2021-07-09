@@ -89,6 +89,11 @@
             width: 100%;
             transition: width .1s linear;
         }
+        /* 나갈때 : 4번째 나감(0.3초 기다림) */
+        .bt1::before{
+            transition: width .1s linear .3s;
+        }
+
         /* 2.오른쪽 : 0.1초 기다림! */
         .bt1:hover::after{
             height: 100%;
