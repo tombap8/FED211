@@ -66,8 +66,20 @@
             */
             stroke-dasharray: 400%;
             /* 50%를 값으로 주고 몇조각? 8조각남!
-            50% * 8 = 400%  */
+            50% * 8 = 400% -> 결과적으로 선만 보임!
+            공백이 숨어있음 -> 시작위치를 밀어서 공백부터 보이게함
+            -> stroke-dashoffset으로 밀어준다! 
+            -> stroke-dasharray값과 같은 값을 주면 공백부터시작!*/
+            stroke-dashoffset: 400%;
 
+            /* 트랜지션: 속시이지 */
+            transition: all .4s ease-in-out;
+        }
+
+        /* 버튼에 마우스 오버시 */
+        .ib1:hover rect{
+            stroke-dashoffset: 0;
+            /* 선이 다시나옴!!! */
         }
     </style>
 </head>
