@@ -317,6 +317,30 @@ img{
     color: #f00;
 }
 
+/* 1.5. 모바일 전체메뉴박스 */
+#mobx{
+    position: fixed;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #fff;
+    z-index: 99999;/* 가장위! */
+}
+/* 모바일 GNb */
+.mognb{
+    padding-left: 15px;
+}
+.mognb a{
+    font-family: "Roboto";
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 2;
+    color: #333;
+}
+
+
 /* 2. 메인영역 */
 /* 배경이미지 공통 */
 .bgi{
