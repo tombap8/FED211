@@ -335,6 +335,8 @@ img{
 /* 모바일용 검색버튼 */
 .sbtn{
     right: 10px;
+    font-size: 21px;
+    font-weight: bold;
 }
 
 /* 1.5. 모바일 전체메뉴박스 */
