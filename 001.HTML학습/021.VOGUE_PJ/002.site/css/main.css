@@ -317,6 +317,13 @@ img{
     color: #f00;
 }
 
+/* 모바일 전용버튼 */
+.mobtn{/* 공통 */
+    position: absolute;
+    /* 부모는?  */
+}
+/* 모바일용 햄버거 버튼 */
+
 /* 1.5. 모바일 전체메뉴박스 */
 #mobx{
     position: fixed;
