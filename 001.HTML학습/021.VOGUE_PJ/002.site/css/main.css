@@ -130,6 +130,8 @@ img{
 
 /* 1. 상단영역 */
 .top.ibx{
+    position: relative;
+    /* 부모자격 - .hbtn, .sbtn (모바일용버튼 2개) */
     min-height: 206px;
     /* 최소높이 206px, 만약 내용이 많아지면 늘어남! */
 }
@@ -339,17 +341,11 @@ img{
     font-weight: bold;
 }
 
-/* 1.5. 모바일 전체메뉴박스 */
+/* 1.5. 모바일 전체메뉴박스 (#top의 하위자식으로 편성) */
 #mobx{
-    position: fixed;
-    top: 55px;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
     padding-left: 15px;
     padding-top: 6px;
     background-color: #fff;
-    z-index: 99999;/* 가장위! */
 }
 /* 1.5-1.모바일 GNb */
 .mognb{
@@ -400,6 +396,14 @@ img{
 /* mosns 마지막 a요소에 카스아이콘 넣기 */
 .mosns a:last-child{
     background: url(../images/sns_kakao.png) no-repeat center/auto 50%;
+}
+
+/* 1.5-3.잡지표지 */
+.mcover{
+    display: block;
+}
+.mcover img{
+    width: 100%;
 }
 
 
