@@ -401,6 +401,7 @@ img{
 /* 1.5-3.잡지표지 */
 .mcover{
     display: block;
+    margin: 10px 30px 0 15px;
 }
 .mcover img{
     width: 100%;
