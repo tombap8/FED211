@@ -134,6 +134,7 @@ img{
     /* 부모자격 - .hbtn, .sbtn (모바일용버튼 2개) */
     min-height: 206px;
     /* 최소높이 206px, 만약 내용이 많아지면 늘어남! */
+    background-color: #fff;
 }
 /* 1-1.상단메뉴 */
 .tmenu{
@@ -347,6 +348,7 @@ img{
     padding-top: 6px;
     padding-bottom: 30px;
     background-color: #fff;
+    display: none;/* 처음에 안보임 */
 }
 /* 1.5-1.모바일 GNb */
 .mognb{
