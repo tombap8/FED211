@@ -346,6 +346,7 @@ img{
 .mos{
     padding: 15px 30px;
     background-color: #fff;
+    display: none;/* 처음에 숨기기 */
 }
 /* 검색속박스 */
 .mwrap{
