@@ -342,6 +342,51 @@ img{
     font-weight: bold;
 }
 
+/* 1.4. 모바일 검색박스 */
+.mos{
+    padding: 15px 30px;
+    background-color: #fff;
+}
+/* 검색속박스 */
+.mwrap{
+    position: relative;
+    /* 부모자격 */
+    width: 100%;
+    height: 35px;
+    background-color: #000;
+}
+/* 검색입력창 - 부모박스의 크기에 따라 유동적인 박스 */
+#search{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 50px;
+    bottom: 9px;
+}
+/* 입력양식 */
+#search input{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+/* input박스는 일반 div박스와 다르기때문에 겉박스를 만들고
+채우기 형식으로 디자인함! */
+
+/* 검색버튼 */
+.scbtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+}
+
 /* 1.5. 모바일 전체메뉴박스 (#top의 하위자식으로 편성) */
 #mobx{
     padding-left: 15px;
