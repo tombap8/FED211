@@ -398,13 +398,20 @@ img{
     background: url(../images/sns_kakao.png) no-repeat center/auto 50%;
 }
 
-/* 1.5-3.잡지표지 */
-.mcover{
-    display: block;
-    margin: 10px 30px 0 15px;
+/* 1.5-3.매거진박스 */
+.magbox{    
+    margin: 0;
+    padding: 10px 30px 0 15px;
+    font-family: 'NanumBarunGothic', sans-serif;
 }
+/* 잡지커버이미지 */
 .mcover img{
     width: 100%;
+}
+/* 잡지설명 */
+.magbox figcaption{
+    font-size: 13px;
+    line-height: 2;
 }
 
 
