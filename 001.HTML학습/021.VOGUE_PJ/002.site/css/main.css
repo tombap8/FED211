@@ -412,6 +412,31 @@ img{
 .magbox figcaption{
     font-size: 13px;
     line-height: 2;
+    color: #222;
+}
+/* 정기구독버튼 */
+.magbtn{
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    padding: 5px 0;
+}
+/* 모바일 하단링크 */
+.moblink{
+    display: flex;
+    margin-left: 15px;
+    line-height: 3.5;
+    font-size: 15px;
+    letter-spacing: -1px;
+}
+.moblink li+li{/* 2번째 li부터 */
+    padding-left: 7px;
+}
+.moblink a{
+    color: #222;
 }
 
 
