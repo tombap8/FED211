@@ -77,7 +77,7 @@ $(function () { //////// jQB //////////////////
         if(scTop > 300 && tsts === 0){ // 기준값 아래일때
 
             tsts = 1;//상태값 변경(한번만 실행!)
-            console.log("나야나!");
+            // console.log("나야나!");
 
             // 탑버튼 보이기
             tbtn.fadeIn(300);
@@ -86,7 +86,7 @@ $(function () { //////// jQB //////////////////
         else if(scTop <= 300 && tsts === 1){ // 기준값 위일때
 
             tsts = 0;//상태값 변경(한번만 실행!)
-            console.log("너야너!");
+            // console.log("너야너!");
 
             // 탑버튼 숨기기
             tbtn.fadeOut(300);
@@ -97,12 +97,22 @@ $(function () { //////// jQB //////////////////
         // 방법: .gnb메뉴 top위치값을 기준하여 
         // #top에 .on을 줘서 미리셋팅된 디자인을 적용한다!!!
         if(scTop >= gnbpos && gnbsts === 0){
+
             gnbsts = 1;//한번만실행!
-            console.log("바꿔!");
+            // console.log("바꿔!");
+
+            // 상단영역에 class넣기
+            tbx.addClass("on");
+
         } /////// if /////////////////////
         else if(scTop < gnbpos && gnbsts === 1){
+
             gnbsts = 0;//한번만실행!
-            console.log("복귀!");
+            // console.log("복귀!");
+
+            // 상단영역에 class제거
+            tbx.removeClass("on");
+
         } /////// if /////////////////////
 
 
