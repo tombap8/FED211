@@ -329,6 +329,7 @@ img{
     top: 50%;
     transform: translateY(-50%);
     /* 세로중앙이동 */
+    display: none;/* 처음에 안보임 */
 }
 /* 모바일용 햄버거 버튼 */
 .hbtn{
@@ -610,4 +611,19 @@ img{
     margin: 0 5px;
 }
 
-
+/* 위로가기 버튼 */
+.tbtn{
+    position: fixed;
+    bottom: 0;
+    right: 75px;
+    width: 48px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 4px 4px 0 0;
+    /* 둥근모서리 : 왼위 오른위 오른아래 왼아래(시계방향) */
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    z-index: 999;
+}
