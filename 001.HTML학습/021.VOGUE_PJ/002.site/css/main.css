@@ -625,5 +625,7 @@ img{
     background-color: #333;
     color: #fff;
     font-size: 12px;
+    opacity: 0.9;
     z-index: 999;
+    display: none;/* 처음에 안보임 */
 }
