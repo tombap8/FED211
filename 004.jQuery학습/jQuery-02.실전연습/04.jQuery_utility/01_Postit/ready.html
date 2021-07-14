@@ -29,7 +29,18 @@
 			// -> on(이벤트명,함수)
 			// 대상: .draggable
 			$(".draggable").on("dragstart",function(){
-				console.log("드래그시작!");
+				// console.log("드래그시작!");
+				$(this).addClass("invert");
+			});////////////// dragstart함수 ////////////
+
+			/// 2. 드래그가 끝날때 배경이미지 class로 변경하기
+			// 이벤트 종류: dragstop (드래그끝날때 발생하는 이벤트)
+			// 이벤트와 함수를 묶어주는 메서드를 사용함!
+			// -> on(이벤트명,함수)
+			// 대상: .draggable
+			$(".draggable").on("dragstop",function(){
+				// console.log("드래그끝!");
+				$(this).removeClass("invert");
 			});////////////// dragstart함수 ////////////
 
 
