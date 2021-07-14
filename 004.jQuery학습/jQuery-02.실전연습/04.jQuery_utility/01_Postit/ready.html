@@ -12,7 +12,7 @@
 		아래에 제이쿼리UI를 불러와서 아래쪽에서 호출코딩을 해야한다!
 	-->
 	<script>
-		$(function(){ /// jQB ////////////////////////////////
+		$(function () { /// jQB ////////////////////////////////
 
 			// [ 드래그 기능 적용하기 ]
 			// 제이쿼리 UI의 draggable() 메서드를 호출함
@@ -28,36 +28,42 @@
 			// 이벤트와 함수를 묶어주는 메서드를 사용함!
 			// -> on(이벤트명,함수)
 			// 대상: .draggable
-			$(".draggable").on("dragstart",function(){
+			$(".draggable").on("dragstart", function () {
 				// console.log("드래그시작!");
 				$(this).addClass("invert");
-			});////////////// dragstart 함수 ////////////
+			}); ////////////// dragstart 함수 ////////////
 
 			/// 2. 드래그가 끝날때 배경이미지 class로 변경하기
 			// 이벤트 종류: dragstop (드래그끝날때 발생하는 이벤트)
 			// 이벤트와 함수를 묶어주는 메서드를 사용함!
 			// -> on(이벤트명,함수)
 			// 대상: .draggable
-			$(".draggable").on("dragstop",function(){
+			$(".draggable").on("dragstop", function () {
 				// console.log("드래그끝!");
 				$(this).removeClass("invert");
-			});////////////// dragstop 함수 ////////////
+			}); ////////////// dragstop 함수 ////////////
 
 			//// 드롭할때 발생하는 이벤트 처리하기 ///////
 			/// droppable() 메서드 : 드롭되는 요소처리 ///
 			/// 이벤트 대상: .dropshow
 			$(".dropshow").droppable({
 				// 드롭처리 속성 -> drop : 함수
-				drop: function(evt,ui){
+				drop: function (evt, ui) {
 					// evt - 이벤트 전달변수, ui-드롭관련객체
 					// console.log("나, 빠졌다~!");
 
 					// 1. 드롭된 요소의 이미지의 src를 읽어옴
 					// 드롭된 요소 -> ui.draggable
-					let isrc = 
-					ui.draggable.find("img").attr("src");
-					console.log("이미지경로:"+isrc);
-					
+					let isrc =
+						ui.draggable.find("img").attr("src");
+					// console.log("이미지경로:"+isrc);
+
+					// 2. 드롭영역의 배경이미지 변경하기
+					// $(this) === $(".dropshow")
+					$(this).css({
+						backgroundImage: "url(" + isrc + ")"
+					}); /////////////// css /////////////////
+
 				} //// drop속성 ////////
 
 			}); ///////// droppable //////////////////////
@@ -65,7 +71,7 @@
 
 
 
-		});///////////// jQB /////////////////////////////////
+		}); ///////////// jQB /////////////////////////////////
 	</script>
 
 	<style>
