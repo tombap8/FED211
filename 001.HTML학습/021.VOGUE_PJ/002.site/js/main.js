@@ -93,7 +93,7 @@ $(function () { //////// jQB //////////////////
         // 스크롤 애니메이션 //
         $("html,body").animate({
             scrollTop: "0"
-        },600,"easeOutCubic");
+        },1000,"easeOutCubic");
 
     }); ////////// click /////////////
 
