@@ -31,7 +31,7 @@
 			$(".draggable").on("dragstart",function(){
 				// console.log("드래그시작!");
 				$(this).addClass("invert");
-			});////////////// dragstart함수 ////////////
+			});////////////// dragstart 함수 ////////////
 
 			/// 2. 드래그가 끝날때 배경이미지 class로 변경하기
 			// 이벤트 종류: dragstop (드래그끝날때 발생하는 이벤트)
@@ -41,7 +41,28 @@
 			$(".draggable").on("dragstop",function(){
 				// console.log("드래그끝!");
 				$(this).removeClass("invert");
-			});////////////// dragstart함수 ////////////
+			});////////////// dragstop 함수 ////////////
+
+			//// 드롭할때 발생하는 이벤트 처리하기 ///////
+			/// droppable() 메서드 : 드롭되는 요소처리 ///
+			/// 이벤트 대상: .dropshow
+			$(".dropshow").droppable({
+				// 드롭처리 속성 -> drop : 함수
+				drop: function(evt,ui){
+					// evt - 이벤트 전달변수, ui-드롭관련객체
+					// console.log("나, 빠졌다~!");
+
+					// 1. 드롭된 요소의 이미지의 src를 읽어옴
+					// 드롭된 요소 -> ui.draggable
+					let isrc = 
+					ui.draggable.find("img").attr("src");
+					console.log("이미지경로:"+isrc);
+					
+				} //// drop속성 ////////
+
+			}); ///////// droppable //////////////////////
+			//////////////////////////////////////////////
+
 
 
 		});///////////// jQB /////////////////////////////////
