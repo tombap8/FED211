@@ -490,6 +490,35 @@ img{
     color: #222;
 }
 
+/* ********* 1. 상단영역 콤팩트 디자인(스크롤내려갈때) ********* */
+#top.on .top.ibx{
+    min-height: auto;
+    z-index: 9;
+}
+#top.on .logo{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+#top.on .logo img{
+    width: 100px;
+}
+#top.on .gnb{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    padding-left: 100px;
+    box-sizing: border-box;
+}
+#top.on .gnb li{
+    margin: 0 18px;
+}
+#top.on .gnb a{
+    font-size: 14px;
+    color: #333;
+}
+
 
 /* 2. 메인영역 */
 /* 배경이미지 공통 */

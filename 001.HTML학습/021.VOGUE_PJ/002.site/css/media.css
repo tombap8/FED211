@@ -124,7 +124,10 @@
     /* 위로가기 버튼 */
     .tbtn{
         right: 15px;
-        bottom: 200px;
+        bottom: 100px;
+        border-radius: 4px;
+        height: 40px;
+        line-height: 40px;
     }
 
 }
