@@ -87,8 +87,14 @@ $(function () { //////// jQB //////////////////
 
     //// 탑버튼 클릭시 페이지 상단 이동 애니메이션 하기 ///
     tbtn.click(function(e){
+
         e.preventDefault();// 기본이동막기
-        
+
+        // 스크롤 애니메이션 //
+        $("html,body").animate({
+            scrollTop: "0"
+        },600,"easeOutCubic");
+
     }); ////////// click /////////////
 
 
