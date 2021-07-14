@@ -153,9 +153,9 @@ $(function () { //////// jQB //////////////////
 
     //// 모바일일때 화면전환(가로/세로)시 
     //// 상단영역 #top에 .on 빼기
-    $(window).resize(function(){
-        tbx.removeClass("on");
-    });//////////// resize ///////////
+    // $(window).resize(function(){
+    //     tbx.removeClass("on");
+    // });//////////// resize ///////////
 
 
 
