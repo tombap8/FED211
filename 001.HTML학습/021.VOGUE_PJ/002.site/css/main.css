@@ -498,6 +498,7 @@ img{
 #top.on .logo{
     position: fixed;
     top: 0;
+    padding-left: 10px;
     z-index: 1;
 }
 #top.on .logo img{
