@@ -231,14 +231,42 @@
                 transform: none;
                 border: none;
                 background: #fff;
-                height: auto;
+                height: 26px;
                 padding: 10px 0;
+                /* 총높이 46px */
             }
             .t2{
                 left: 50%;
             }
-        }
 
+            .tit>li{
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+            }
+
+            /* 파티션 방향변경 */
+            #wrap>ul{
+                flex-direction: column;
+            }
+
+            /* 각 파티션 타이틀 이미지 */
+            #wrap>ul>li>img:first-child{
+                width: auto;
+                height: 70%;
+            }
+
+            /* 각 파티션 로고 이미지 */
+            #wrap>ul>li>img:last-child{
+                width: auto;
+                height: 50%;
+                top: 50%;
+                left: 80%;
+            }
+
+
+
+        }
         /* 모바일 미디어쿼리 */
     </style>
 </head>
