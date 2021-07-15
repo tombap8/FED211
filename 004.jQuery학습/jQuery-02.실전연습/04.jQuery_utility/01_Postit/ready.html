@@ -119,9 +119,14 @@
 						// 1. #mbox 닫기
 						mbox.slideUp(1000,
 						function(){ // 애니후 실행
-							
+
 							// 2.자기자신 없애기(this===mbox)
 							$(this).remove();
+
+							// 3.드롭된 요소 다시 보이기
+							// 동시에 자기 위치로 돌아가기
+							// 드롭된요소-> ui.draggable
+							ui.draggable.show()
 
 						}) /////// slideUp //////////
 
