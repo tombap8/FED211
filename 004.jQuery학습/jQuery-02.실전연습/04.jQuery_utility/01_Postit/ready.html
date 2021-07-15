@@ -127,6 +127,10 @@
 							// 동시에 자기 위치로 돌아가기
 							// 드롭된요소-> ui.draggable
 							ui.draggable.show()
+							.css({//relative이므로! 원위치!
+								top: "0",
+								left: "0"
+							}); ////// css ///////
 
 						}) /////// slideUp //////////
 
