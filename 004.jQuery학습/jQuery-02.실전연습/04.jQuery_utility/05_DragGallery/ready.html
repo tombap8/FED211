@@ -65,18 +65,36 @@
             let fpt = $(window).width()/3;
             console.log("첫번째한계값:"+fpt);
 
+            // 마지막 한계값
+            // -> 움직일 박스 전체가로크기 - 화면의 2/3크기
+            
+
             //// 화면한계시 위치고정 코드 /////
             // on(이벤트명, 함수) -> 제이쿼리 이벤트메서드
             // 이벤트가 여러개이면 띄어쓰기로 써준다!
+            // 원래는 모바일 이벤트인 touchstart touchend touchmove
+            // 를 써줘야 하지만 터치펀치가 마우스 이벤트를
+            // 터치이벤트로 변환해 주므로 여기서 쓰면
+            // 중복 이벤트 간섭에러가 발생한다! 따라서 써주지 않는다!
             $("html,body")
-            .on("mousedown mouseup mousemove touchstart touchend touchmove",
+            .on("mousedown mouseup mousemove",
             function(){
 
                 // console.log("마우스냐 터치냐");
 
                 // 1. 움직이는 박스의 left위치값
                 let mpos = move.offset().left;
-                console.log("현재left:"+mpos);
+                // console.log("현재left:"+mpos);
+
+                // 2. 처음한계값 체크 후 위치 고정하기
+                if(mpos > fpt) {
+
+                    // 첫번째 한계값에 고정함!
+                    move.css({
+                        left: fpt + "px"
+                    });/////// css ////////
+
+                } ///////// if ////////////////
 
             }); ///////// 마우스 + 터치 이벤트 함수 //////////////
             ////////////////////////////////////////////////////
