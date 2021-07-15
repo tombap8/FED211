@@ -95,6 +95,9 @@
 
 					// 8. 동영상 박스에 유튜브 iframe 넣기
 					// a요소 닫기버튼이 있으므로 append로 추가!
+					// 동영상 정보는 드롭된요소의 data-mv속성에 있음!
+					let mv = ui.draggable.attr("data-mv");
+					console.log("동영상코드:"+mv);
 					mbox.append(
 						'<iframe width="100%" height="100%" src="https://www.youtube.com/embed/67O-LdK3kFA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 					)
