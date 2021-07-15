@@ -8,16 +8,26 @@
     <title>drag and drop 응용</title>
     <script src="jquery-1.7.2.min.js"></script>
     <script src="jquery-ui.min.js"></script>
+    <script src="jquery-touch-punch.min.js"></script>
+    <!-- 터치펀치로 모바일에서도 작동! -->
 
     <script>
-        $(function(){ // jQB ////////////////////////////
+        /// 모바일 코드 만들기 ///
+        let mob = 0;
+        if ($(window).width() <= 500) mob = 1;
+        // 로딩시 화면사이즈를 체크하여 500px이하이면
+        // 모바일코드를 1로 변경함!
+        console.log("모바일여부:" + mob);
+
+
+        $(function () { // jQB ////////////////////////////
 
             // 드래그 대상: #move
             let move = $("#move");
 
             // 드래그 설정하기(제이쿼리UI의 기능!)
             move.draggable({
-                axis: "x" 
+                axis: "x"
                 // 드래그 x축고정("y"라고 쓰면 y축고정)
             }); ////// draggable /////////
 
@@ -25,13 +35,16 @@
             // 약간 더 가는 효과를 애니메이션으로 준다!
             // 드래그 시작시엔 빠르게 움직이고 마지막에 천천히
             // -> ease-out
+
+            let dur = .8;
+            if (mob) dur = .4; // 모바일이면 0.4
+
             move.css({
-                transition: "all .8s ease-out"
-            }); ////////// css ////////////////
+                transition: "all " + dur + "s ease-out"
+            }); ///////////////// css //////////////////
 
 
-        });/////////// jQB //////////////////////////////
-
+        }); /////////// jQB //////////////////////////////
     </script>
     <style>
         html,
@@ -66,7 +79,7 @@
         /*갤러리 내용만큼 가로로큰 내부박스-움직일박스*/
         #move {
             position: absolute;
-/*            width: 7200px;*/
+            /*            width: 7200px;*/
             height: 100%;
         }
 
@@ -77,10 +90,10 @@
         }
 
         /*플렉스박스!*/
-        #move>ul{
+        #move>ul {
             display: flex;
         }
-        
+
         #move>ul li {
             position: relative;
             width: 300px;
@@ -127,4 +140,6 @@
         </div>
     </div>
 
-</body></html>
+</body>
+
+</html>
