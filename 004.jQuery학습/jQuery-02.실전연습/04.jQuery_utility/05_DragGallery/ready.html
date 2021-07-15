@@ -72,7 +72,11 @@
             .on("mousedown mouseup mousemove touchstart touchend touchmove",
             function(){
 
-                console.log("마우스냐 터치냐");
+                // console.log("마우스냐 터치냐");
+
+                // 1. 움직이는 박스의 left위치값
+                let mpos = move.offset().left;
+                console.log("현재left:"+mpos);
 
             }); ///////// 마우스 + 터치 이벤트 함수 //////////////
             ////////////////////////////////////////////////////
