@@ -123,7 +123,8 @@
             transform: translate(-50%, -50%);
             /* 정중앙이동 */
             width: 70%;
-
+            max-width: 250px;
+            /* 최대크기지정 */
         }
 
         /* 박스별 로고 이미지 공통 */
@@ -221,6 +222,24 @@
             box-sizing: border-box;
             padding-top: 10px;
         }
+
+        @media only screen and (max-width:500px) {
+            .t1, .t2 {
+                top: 0;
+                width: 50%;
+                left: 0;
+                transform: none;
+                border: none;
+                background: #fff;
+                height: auto;
+                padding: 10px 0;
+            }
+            .t2{
+                left: 50%;
+            }
+        }
+
+        /* 모바일 미디어쿼리 */
     </style>
 </head>
 
