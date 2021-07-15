@@ -75,7 +75,9 @@
 					ui.draggable.hide();
 
 					// 6. 유튜브 동영상 박스 넣기
-					$("body").append('<div id="mbox"></div>');
+					$("body").append(
+						'<div id="mbox"><a href="#">×</a></div>'
+					);
 
 					// 7. 동영상박스 CSS셋팅하기
 					$("#mbox").css({
