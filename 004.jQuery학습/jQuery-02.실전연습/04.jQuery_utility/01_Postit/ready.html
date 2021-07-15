@@ -115,8 +115,15 @@
 						textShadow: "0 0 5px #777"
 					}) //////////// css ////////////
 					.click(function(){ // 닫기버튼 클릭시
+						
 						// 1. #mbox 닫기
-						mbox.slideUp(1000)
+						mbox.slideUp(1000,
+						function(){ // 애니후 실행
+							
+							// 2.자기자신 없애기(this===mbox)
+							$(this).remove();
+
+						}) /////// slideUp //////////
 
 					}); /////////// click /////////////
 
