@@ -144,7 +144,7 @@
             /* 가로중앙이동 */
             width: 500px;
             height: 100px;
-            border: 5px double #fff;
+            /* border: 5px double #fff; */
         }
 
         /* 타이틀 하위 li */
@@ -224,7 +224,18 @@
         }
 
         @media only screen and (max-width:500px) {
+
+            /* 전체 랩박스 */
+            #wrap{
+                position: fixed;
+                top: 46px;
+                bottom: 47px;
+                height: auto;
+            }
+
+            /* 타이틀박스 */
             .t1, .t2 {
+                position: fixed;
                 top: 0;
                 width: 50%;
                 left: 0;
@@ -250,10 +261,15 @@
                 flex-direction: column;
             }
 
+            /* 첫번째 파티션 배경위치 */
+            #wrap>ul>li:nth-child(1){
+                background-position-y: 22%;
+            }
+
             /* 각 파티션 타이틀 이미지 */
             #wrap>ul>li>img:first-child{
                 width: auto;
-                height: 70%;
+                height: 90%;
             }
 
             /* 각 파티션 로고 이미지 */
