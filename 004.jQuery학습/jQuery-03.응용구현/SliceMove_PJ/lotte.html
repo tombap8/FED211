@@ -58,6 +58,8 @@
 
         /* 파티션 li공통 */
         #wrap>ul>li {
+            position: relative;
+            /* 부모자격 */
             flex: 1;
         }
 
@@ -82,6 +84,24 @@
             background: 
             url(./images/Lotte/m05_bg.jpg) no-repeat center/cover;
         }
+
+        /* 파트별 타이틀+로고 이미지 공통 */
+        #wrap>ul>li>img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 부모는? 싸고있는 li */
+            transform: translate(-50%, -50%);
+            /* 정중앙이동 */
+            width: 70%;
+
+        }
+        /* 박스별 로고 이미지 공통 */
+        #wrap>ul>li>img:last-child{
+            top: 80%;
+            width: auto;/* 원래자기 크기로 나옴! */
+        }
+
 
         /* 중앙타이틀 공통 */
         .tit{
