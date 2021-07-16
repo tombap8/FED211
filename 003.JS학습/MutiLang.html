@@ -146,40 +146,44 @@
             // 2. 선택박스의 언어코드를 읽어야함!
             // 선택박스 변경 이벤트는? change
             // 이벤트 대상: .sel 
-            $(".sel").change(function(){
+            $(".sel").change(function () {
 
                 // 1. 변경된 option값 읽어오기
                 let opt = $(this).val();
-                console.log("선택코드:"+opt);
+                console.log("선택코드:" + opt);
 
                 // 2. 선택된 코드로 객체값 읽어오기
                 let code = lang[opt];
                 // 객체를 위한 for문을 사용! -> for in문
-                for(let x in code){
+                for (let x in code) {
                     // console.log("속성명:"+x);
                     // console.log("값:"+code[x]);
 
                     // 3. GNB 메뉴 텍스트 바꾸기
-                    if(x === "메뉴"){// GNB메뉴 셋팅
+                    if (x === "메뉴") { // GNB메뉴 셋팅
                         // GNB메뉴 대상: 하위 a요소
                         let gnb = $("#gnb a");
                         // GNB순번
                         let i = 0;
 
                         // 배열을 위한 for문 사용 -> for of문
-                        for(let y of code[x]){
+                        for (let y of code[x]) {
                             // console.log("값:"+y);
                             gnb.eq(i).text(y);
-                            i++;//순번증가
+                            i++; //순번증가
                         } //////// for of문 /////////
 
                     } /////// if ///////////////////
                     // 4. 주소값 셋팅하기 
-                    else if(x === "주소"){
+                    else if (x === "주소") {
                         $("#info address").text(code[x]);
                     } ///////// else if //////////////
 
                 } ////////////// for in문 ///////////////
+
+                // 5. 메인 이미지 변경하기 (코드로된 이미지명)
+                $("#cont img")
+                    .attr("src", "images/" + opt + ".jpg");
 
             }); /////////// change //////////////////////
             /////////////////////////////////////////////
