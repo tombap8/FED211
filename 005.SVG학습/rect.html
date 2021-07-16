@@ -132,6 +132,28 @@
         .psvg:hover polygon{
             stroke-dashoffset: 0;
         }
+
+
+        /* 크기가 유동적인 비율유지 박스 */
+        .pbx2{
+            position: relative;
+            /* 부모자격! */
+            width: 40%;
+            height: auto;
+            background-image: url(images/sun.png);
+        }
+        /* 가상요소로 비율만들기 */
+        .pbx2::before{
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+        .pbx2 .psvg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 부모는? .pbx2 */
+        }
     </style>
 </head>
 
@@ -152,6 +174,13 @@
     <h1>다각형 SVG</h1>
     
     <div class="pbx">
+        <svg class="psvg" viewBox="-20 0 340 300">
+            <polygon points="0,300 150,0 300,300"></polygon>
+        </svg>
+    </div>
+
+    <!-- 크기가 변경되는 비율유지박스 -->
+    <div class="pbx pbx2">
         <svg class="psvg" viewBox="-20 0 340 300">
             <polygon points="0,300 150,0 300,300"></polygon>
         </svg>
