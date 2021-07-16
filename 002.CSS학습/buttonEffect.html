@@ -205,6 +205,30 @@
             color: #fff;
         }
 
+        /* 펼쳐지는 배경효과 애니메이션2 */
+        .bt5 {
+            border-radius: 25px;
+            overflow: hidden;
+        }
+        .bt5 span{
+            background-color: darkviolet;
+            width: 0;
+            transition: .5s;
+        }
+        /* 마우스 오버시 펼쳐짐 */
+        .bt5:hover span{
+            width: 100%;
+        }
+        /* 글자가 위로 오도록 포지션주기 */
+        .bt5 b{
+            position: relative;
+            transition: .5s;
+        }
+        /* 마우스 오버시 글자색 */
+        .bt5:hover b{
+            color: #fff;
+        }
+
 
     </style>
 </head>
