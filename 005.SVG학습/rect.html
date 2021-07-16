@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>사각형 SVG</title>
+    <title>사각형 + 다각형 SVG</title>
     <style>
         html,
         body {
@@ -111,6 +111,14 @@
             <rect width="390" height="290" x="5" y="5"></rect>
         </svg>
     </div>
+    
+    <h1>다각형 SVG</h1>
+    
+    <div class="pbx">
+        <svg class="psvg">
+            <polygon points="0,300 150,0 300,300"></polygon>
+        </svg>
+    </div>
 
     <!-- 
         [ SVG 란? ]
@@ -166,6 +174,14 @@
             (3) y축위치 - y
         2. 표현법:
           - svg 요소 하위에 rect 요소를 코딩한다
+
+        [ polygon 요소 - 다각형을 그리는 svg ]
+        1. 구성속성:
+            - points : 다각형의 점들의 좌표값을 셋팅함
+        2. 좌표값 표현
+            - points의 값으로 아래와 같이 표기함
+            points="x1,y1 x2,y2 x3,y3 ..."
+            - x,y좌표를 콤마로 구분하고 다른좌표는 띄어쓰기로 구분함
      -->
 
 </body>
