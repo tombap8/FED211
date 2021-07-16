@@ -101,7 +101,8 @@
             width: 300px;
             height: 300px;
             margin: 20px auto;
-            outline: 5px solid lime;
+            background: url(images/earth.png) no-repeat center 83%/50%;
+            /* outline: 5px solid lime; */
         }
         /* 다각형 svg요소 */
         .psvg{
@@ -114,6 +115,22 @@
             stroke: hotpink;/* 선색 */
             stroke-width: 15;/* 선두께 */
 
+            stroke-linecap: round;
+            /* 선끝처리 둥글게 */
+            stroke-linejoin: round;
+            /* 선꺾이는 부분처리 둥글게 */
+            
+            /* 애니메이션을 위한 셋팅 */
+            stroke-dasharray: 310%;
+            /* 50% * 6조각 = 300%+알파 */
+            stroke-dashoffset: 310%;
+            /* 데쉬어레이 값과 같으면 공백부터시작! */
+
+            transition: all 1s;
+        }
+        /* 마우스 오버시 */
+        .psvg:hover polygon{
+            stroke-dashoffset: 0;
         }
     </style>
 </head>
@@ -135,7 +152,7 @@
     <h1>다각형 SVG</h1>
     
     <div class="pbx">
-        <svg class="psvg" viewBox="0 0 300 300">
+        <svg class="psvg" viewBox="-20 0 340 300">
             <polygon points="0,300 150,0 300,300"></polygon>
         </svg>
     </div>
