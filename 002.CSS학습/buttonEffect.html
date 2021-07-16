@@ -184,6 +184,28 @@
             opacity: .9;
             transform: scale(1.1);
         }
+
+        /* 펼쳐지는 배경효과 애니메이션 */
+        .bt4 span{
+            background-color: darkviolet;
+            transform: scaleX(0);
+            transition: .5s;
+        }
+        /* 마우스 오버시 펼쳐짐 */
+        .bt4:hover span{
+            transform: scaleX(1);
+        }
+        /* 글자가 위로 오도록 포지션주기 */
+        .bt4 b{
+            position: relative;
+            transition: .5s;
+        }
+        /* 마우스 오버시 글자색 */
+        .bt4:hover b{
+            color: #fff;
+        }
+
+
     </style>
 </head>
 
@@ -209,7 +231,20 @@
         <span>떠오릅니다!</span>
     </div>
 
+    <br><br>
 
+    <h2>BG Transition</h2>
+
+    <div class="btn bt4">
+        <span></span>
+        <b>날개폅니다!</b>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
     <br>
 
 </body>
