@@ -30,5 +30,12 @@ jQuery.fn.myAction = function(color,ml,tm){
     // 전달변수: color-배경색, ml-왼쪽마진, tm-시간
     console.log("전달값:"+color+"/"+ml+"/"+tm);
 
+    // 기능구현하기 ///////////////
+    $(this).animate({
+        backgroundColor:color,
+        marginLeft: ml+"px"
+    },tm); /////// animate ///////
+
+
 }; ///////////////// myAction 함수 /////////////////////////
 ///////////////////////////////////////////////////////////
