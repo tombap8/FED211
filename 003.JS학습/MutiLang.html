@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>다국어 메뉴(객체의 활용)</title>
@@ -104,9 +105,44 @@
             /*주소요소 기본 이탤릭 해제*/
         }
     </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 
     <script>
-        
+        ///// 전역변수 구역 ///////
+        // 언어별 메뉴 글자 셋팅하기 ///
+        var lang = {
+            //한국어
+            "ko": {
+                "메뉴": ["홈", "남성용", "여성용", "게시판"],
+                "주소": "서울시 강남구 청담동 34-22 JJ빌딩 94호, 대표: 제임스 홍"
+            },
+            //영어
+            "en": {
+                "메뉴": ["Home", "Men", "Women", "Board"],
+                "주소": "94, JJ Building, 34-22, Cheongdam-dong, Gangnam-gu, Seoul, Representative: James Hong"
+            },
+            //일본어
+            "ja": {
+                "메뉴": ["ホーム", "男性用", "女性", "掲示板"],
+                "주소": "ソウル市江南区清潭洞34-22 JJビル94号、代表：ジェームズホン"
+            },
+            //중국어
+            "ch": {
+                "메뉴": ["家", "对于男人", "女用", "公告栏"],
+                "주소": "首尔特别市江南区清潭洞34-22 JJ大厦94"
+            },
+            //스페인어
+            "es": {
+                "메뉴": ["Casa", "Hombres", "Mujeres", "Anuncios"],
+                "주소": "94, JJ Building, 34-22, Cheongdam-dong, Gangnam-gu, Seúl, Representante: James Hong"
+            }
+        }; ///////// lang 객체 ///////
+
+        $(function () { //////// jQB ////////////////////////
+
+
+        }); ////////////////// jQB ////////////////////////
     </script>
 
 
@@ -120,7 +156,7 @@
             <img src="images/logoM.png" alt="로고">
         </h1>
         <!--다국어선택옵션박스-->
-        <select class="sel" onchange="chgLang(this)">
+        <select class="sel">
             <option value="ko">Korea</option>
             <option value="en">English</option>
             <option value="ja">Japanese</option>
@@ -159,4 +195,6 @@
 
 
 
-</body></html>
+</body>
+
+</html>
