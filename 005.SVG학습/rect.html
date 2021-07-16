@@ -6,33 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사각형 SVG</title>
     <style>
-        html,body{
+        html,
+        body {
             margin: 0;
             padding: 0;
         }
-        body{
+
+        body {
             color: #fff;
             background-color: #000;
             text-align: center;
         }
+
         /* 이미지박스 */
-        .ibox{
+        .ibox {
             width: 400px;
             height: 300px;
             margin: 0 auto;
-            background: 
-            url(./images/img1.jpg) no-repeat center/cover;
+            background:
+                url(./images/img1.jpg) no-repeat center/cover;
         }
+
         /* 사각형 svg */
-        .rsvg{
+        .rsvg {
             width: 100%;
             height: 100%;
             /* svg는 보통 가로,세로 크기를 주는 것부터 시작!
             svg 가 백터 그래픽의 스테이지다! */
         }
+
         /* rect요소 */
-        .rsvg rect{
-            fill: none;/* 투명 */
+        .rsvg rect {
+            fill: none;
+            /* 투명 */
             /* 채우기속성(기본색은 검정) 
             transparent - 투명, none - 없음*/
             stroke: lime;
@@ -77,19 +83,18 @@
         }
 
         /* 버튼에 마우스 오버시 */
-        .ib1:hover rect{
+        .ib1:hover rect {
             stroke-dashoffset: 0;
             /* 선이 다시나옴!!! */
         }
 
         /* 두번째 rect박스 */
-        .ib2{
+        .ib2 {
             width: 200px;
             height: 150px;
             /* 가로,세로 비율을 4:3으로! */
             margin-top: 50px;
         }
-
     </style>
 </head>
 
