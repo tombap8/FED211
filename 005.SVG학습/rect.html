@@ -95,6 +95,26 @@
             /* 가로,세로 비율을 4:3으로! */
             margin-top: 50px;
         }
+
+        /* 다각형 부모박스 */
+        .pbx{
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            outline: 5px solid lime;
+        }
+        /* 다각형 svg요소 */
+        .psvg{
+            width: 100%;
+            height: 100%;
+        }
+        /* polygon요소 */
+        .psvg polygon{
+            fill: none;/* 채우기없앰 */
+            stroke: hotpink;/* 선색 */
+            stroke-width: 15;/* 선두께 */
+
+        }
     </style>
 </head>
 
@@ -115,7 +135,7 @@
     <h1>다각형 SVG</h1>
     
     <div class="pbx">
-        <svg class="psvg">
+        <svg class="psvg" viewBox="0 0 300 300">
             <polygon points="0,300 150,0 300,300"></polygon>
         </svg>
     </div>
@@ -146,7 +166,7 @@
         3. 선색 : stroke
 
         [ svg  축소확대용 속성 ]
-        viewBox 속성:
+        viewBox 속성: (주의! 속성명 B대문자 필수! 대소문자구분!)
         - 형식 : viewBox="x축위치 y축위치 width크기 height크기"
         - 위의 형식의 값은 4가지이고 각 값은 띄어쓰기로 구분한다!
         - 각 속성값의 특성
