@@ -91,14 +91,14 @@
     transform: translateY(-50%);
     /* 세로중앙이동 */
     left: 5%;
-    width: 20px;
+    width: 30px;
     /* outline: 3px dotted blue; */
 }
 
 .indic li {
     width: 100%;
     height: 10px;
-    margin: 3px 0;
+    margin: 10px 0;
     cursor: pointer;
     /* 손가락모양 */
 }
@@ -107,24 +107,24 @@
 .indic a {
     display: block;
     width: 100%;
-    height: 2px;
+    height: 1px;
     margin-top: 4px;
-    background-color: #ccc;
-    box-shadow: 1px 1px 1px #777;
+    background-color: #777;
+    box-shadow: 1px 1px 1px #fff;
     transition: width .4s;
 }
 
 /* 마우스 오버시 */
 .indic li:hover a {
     width: 150%;
-    background-color: #fff;
+    background-color: #000;
 }
 
 /* 클래스 "on" */
 /* 모바일에서 hover시 해제한 설정보다 우선순위 높임! */
 .indic li.on a {
     width: 150% !important;
-    background-color: #fff !important;
+    background-color: #000 !important;
 }
 
 
