@@ -145,7 +145,7 @@ $(function () { /// jQB ////////////////////////
 
             $(this).animate({
                 left: -winW + "px"
-            }, 2000, "easeOutCirc");
+            }, 800, "easeOutCirc");
 
         } ///////////// else ////////////////
 
