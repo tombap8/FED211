@@ -138,18 +138,60 @@
 
 /* 2. 페이지영역 */
 /* 개별 페이지 셋팅 */
+
+/********** 2-1.배너영역 ************/
 #ban {
-    /* background-color: aquamarine; */
+    position: relative;
+    /* 부모자격 - .slide */
 }
+/* 슬라이드 박스 */
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 부모는? #ban */
+    display: flex;
+    /* 플랙스 박스 */
+    width: 600%;
+    height: 100%;
+}
+.slide li{
+    flex: 1;
+    /* 부모 flex박스 영역을 등분할 함!(height도 자동으로 100%) */
+}
+/* 각 슬라이드 셋팅 */
+.slide li.ban1{
+    background: url(../images/ban01New.jpg) no-repeat center/cover;
+}
+.slide li.ban2{
+    background: url(../images/ban02New.jpg) no-repeat center/cover;
+}
+.slide li.ban3{
+    background: url(../images/ban03New.jpg) no-repeat center/cover;
+}
+.slide li.ban4{
+    background: url(../images/ban04New.jpg) no-repeat center/cover;
+}
+.slide li.ban5{
+    background: url(../images/ban05New.jpg) no-repeat center/cover;
+}
+.slide li.ban6{
+    background: url(../images/ban06New.jpg) no-repeat center/cover;
+}
+
+/********** 2-2.남성의류영역 ***********/
 #men {
     background-color: darkorange;
 }
+/********** 2-3.여성의류영역 ***********/
 #women {
     background-color: hotpink;
 }
+/********** 2-4.스타일영역 ***********/
 #style {
     background-color: khaki;
 }
+/********** 3.하단영역 ***********/
 #info {
     height: 50%;/* 회사정보 박스만 높이값 절반! */
     background-color: cornflowerblue;
