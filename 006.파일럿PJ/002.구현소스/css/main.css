@@ -12,7 +12,8 @@
     width: 100%;
     z-index: 9999;
     /* 맨위! */
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .1);
+    font-family: UB;/* Ubuntu체 */
 }
 
 /* 상단영역 속박스 */
@@ -51,22 +52,22 @@
 .gnb li {
     margin: 0 7px;
 }
+.gnb a{
+    color: #fff;
+    font-size: 2rem;/* html글자크기 * 2 */
+    text-shadow: 0 0 4px #777;
+}
 
 /* 메뉴에 마우스 오버시 + li에 on클래스 있는 경우 */
 .gnb a:hover,
 .gnb li.on a {
-    display: inline-block;
-    /* 트랜스폼적용위해 */
-    color: lime;
-    text-decoration: overline;
-    /* 윗줄 */
-    transform: scale(1.1);
+    color: aqua;
 }
 
 /* 2. 페이지영역 */
 /* 개별 페이지 셋팅 */
 #ban {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 #men {
     background-color: darkorange;

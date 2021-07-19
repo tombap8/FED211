@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* 파일럿 PJ 리셋 CSS - reset.css */
 
+/* html (ROOT) 의 글자크기설정(rem,em,% 상대단위의 기준) */
+html{
+    font-size: 10px;
+}
+
 html,
 body {
     margin: 0;
@@ -16,8 +21,7 @@ body {
 /* 공통셋팅 */
 a {
     text-decoration: none;
-    color: #fff;
-    text-shadow: 0 0 2px #777;
+    color: #222;
 }
 
 ul {
