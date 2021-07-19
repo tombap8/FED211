@@ -110,9 +110,21 @@ $(function () { /// jQB ////////////////////////
     // 이벤트 종류: dragstop
     // 사용 메서드: on(이벤트명,함수)
 
-    // 화면의 width크기
-    let winW = $(window).width();
-    console.log("윈도우width:"+winW);
+    $(".slide").on("dragstop",function(){
+
+        // 화면의 width크기
+        let winW = $(window).width();
+        console.log("윈도우width:"+winW);
+
+        // 알아야할 값! -> 슬라이드의 left값!
+        let sLeft = $(this).offset().left;
+        // offset().left 는 현재 선택요소의 left값 구하기
+        console.log("현재left:"+sLeft);
+
+
+    }); //////////// dragstop 함수 ////////////////////
+    ///////////////////////////////////////////////////
+
 
 
 
