@@ -148,7 +148,7 @@
 .slide{
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;/* 왼쪽에 마지막 슬라이드가 나가있음! */
     /* 부모는? #ban */
     display: flex;
     /* 플랙스 박스 */
