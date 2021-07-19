@@ -43,6 +43,11 @@
     right: 2%;
 }
 
+.gnb ul{
+    display: flex;
+    /* 플랙스 디스플레이! */
+}
+
 .gnb li {
     margin: 0 7px;
 }
@@ -73,6 +78,7 @@
     background-color: khaki;
 }
 #info {
+    height: 50%;/* 회사정보 박스만 높이값 절반! */
     background-color: cornflowerblue;
 }
 

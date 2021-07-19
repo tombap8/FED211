@@ -29,6 +29,11 @@
     overflow: hidden;
 }
 
+/* 숨기기 class */
+.bld{
+    display: none;
+}
+
 /* 중앙 속박스 */
 .ibx {
     width: 1920px;
