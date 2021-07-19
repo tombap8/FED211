@@ -1,6 +1,18 @@
 @charset "utf-8";
 /* 파일럿 PJ 코아 CSS - core.css */
 
+/******** 웹폰트 **********/
+/* 나눔고딕체 */
+@font-face {
+    font-family: NG;
+    src: url(../fonts/NanumGothic.woff) format("woff");
+}
+/* Ubuntu체 */
+@font-face {
+    font-family: UB;
+    src: url(../fonts/UbuntuCondensed-Regular.woff) format("woff");
+}
+
 /* 공통 class */
 
 /* 페이지 공통 class */
