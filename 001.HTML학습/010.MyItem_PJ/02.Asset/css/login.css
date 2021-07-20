@@ -18,12 +18,12 @@
     font-size: 20px;
     line-height: 45px;
     color: #777;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 /* 가상요소로 타이틀 아이콘 넣기 */
 .stit::before{
     content: url(../images/login_icon.png);
-    vertical-align: 0;
+    vertical-align: -13px;
     margin-left: 5px;
     margin-right: 13px;
 }
@@ -41,8 +41,36 @@
     box-sizing: border-box;/* 크기유지 */
     padding-top: 60px;
     padding-left: 15px;
-
 }
+/* 입력창 라벨 공통 */
+.minput label{
+    display: inline-block;
+    /* 디자인적용과 한줄에 오게함! */
+    width: 150px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #737373;
+    text-align: center;
+    line-height: 36px;
+    outline: 2px solid red;
+}
+/* 입력양식 공통 */
+.minput input{
+    width: 320px;
+    height: 36px;
+    border: 1px solid #737373;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding-left: 5px;
+    color: #666;
+}
+
+/* 비밀번호박스 */
+.mi2{
+    margin-top: 20px;
+}
+
 
 
 
