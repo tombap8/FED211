@@ -73,12 +73,18 @@
 			$("#menu li").hover(
 				function () { /// over
 					$(this).stop().fadeTo(200, 1);
-					$("span",this).delay(100).fadeIn(200);
+					$("span",this).stop().delay(100).fadeIn(200);
 				},
 				function () { /// out
 					$(this).stop().fadeTo(200, .7);
-					$("span",this).fadeOut(200);
-				}); /////// hover ////////////
+					$("span",this).stop().fadeOut(200);
+				}) /////// hover ////////////
+				/// li를 클릭하면 각 주소로 새창열기 ///
+				.click(function(){
+					// 클릭된 li요소의 span글자 읽어오기
+					let txt = $("span",this).text();
+					console.log("글자:"+txt);
+				}); //////////// click //////////////////
 
 
 
