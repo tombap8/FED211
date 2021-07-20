@@ -143,7 +143,16 @@ $(function () { /// jQB ////////////////////////
 
             $(this).animate({
                 left: "0px"
-            }, 2000, "easeOutCirc");
+            }, 2000, "easeOutCirc",
+            function(){ // 이동 후 실행
+                // 맨뒤 슬라이드 맨앞으로 이동
+                $(this).prepend($("li",this).last())
+                // css left값은 원래값인 -100% 즉, -winW로 복귀!
+                .css({
+                    left: -winW + "px"
+                }); ///////// css ////////
+            }); //////////// animate ///////
+
 
         } /////////// else if //////////////////
 
