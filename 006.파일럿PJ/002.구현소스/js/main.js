@@ -124,7 +124,7 @@ $(function () { /// jQB ////////////////////////
         // 1. -110% 보다 작으면 슬라이드를 왼쪽으로 애니메이션 이동한다.
         if(sLeft < -winW * 1.1){
 
-            $(this).animate({
+            $(this).stop().animate({
                 left: -winW * 2 + "px"
             }, 2000, "easeOutCirc",
             function(){ // 이동 후 실행
@@ -141,7 +141,7 @@ $(function () { /// jQB ////////////////////////
         // 2.-90% 보다 크면 슬라이드를 오른쪽으로 애니메이션 이동한다.
         else if(sLeft > -winW * 0.9){
 
-            $(this).animate({
+            $(this).stop().animate({
                 left: "0px"
             }, 2000, "easeOutCirc",
             function(){ // 이동 후 실행
@@ -160,7 +160,7 @@ $(function () { /// jQB ////////////////////////
         //      복귀 애니메이션 이동한다.
         else {
 
-            $(this).animate({
+            $(this).stop().animate({
                 left: -winW + "px"
             }, 800, "easeOutCirc");
 
