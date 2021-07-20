@@ -131,7 +131,7 @@ $(function () { /// jQB ////////////////////////
 
             $(this).stop().animate({
                 left: -winW * 2 + "px"
-            }, 2000, "easeOutCirc",
+            }, 600, "easeOutQuint",
             function(){ // 이동 후 실행
                 // 맨앞 슬라이드 맨뒤로 이동!
                 $(this).append($(this).find("li").first())
@@ -152,7 +152,7 @@ $(function () { /// jQB ////////////////////////
 
             $(this).stop().animate({
                 left: "0px"
-            }, 2000, "easeOutCirc",
+            }, 600, "easeOutQuint",
             function(){ // 이동 후 실행
                 // 맨뒤 슬라이드 맨앞으로 이동
                 $(this).prepend($("li",this).last())
@@ -175,12 +175,12 @@ $(function () { /// jQB ////////////////////////
 
             $(this).stop().animate({
                 left: -winW + "px"
-            }, 800, "easeOutCirc",
+            }, 300, "easeOutQuint",
             function(){ /// 애니 후 실행
 
                 //커버숨기기
                 cover.hide();
-                
+
             }); //////// animate ///////
 
         } ///////////// else ////////////////
