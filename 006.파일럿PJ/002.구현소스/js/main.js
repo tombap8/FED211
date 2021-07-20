@@ -126,7 +126,15 @@ $(function () { /// jQB ////////////////////////
 
             $(this).animate({
                 left: -winW * 2 + "px"
-            }, 2000, "easeOutCirc");
+            }, 2000, "easeOutCirc",
+            function(){ // 이동 후 실행
+                // 맨앞 슬라이드 맨뒤로 이동!
+                $(this).append($(this).find("li").first())
+                // css left값을 -100%값 즉 -winW로 복귀!
+                .css({
+                    left: -winW + "px"
+                }); //////// css ///////
+            }); //////// animate //////////
 
         } /////////// if //////////////////
 
