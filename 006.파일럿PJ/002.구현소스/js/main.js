@@ -109,8 +109,13 @@ $(function () { /// jQB ////////////////////////
     // 이벤트 대상: .slide
     // 이벤트 종류: dragstop
     // 사용 메서드: on(이벤트명,함수)
+    // 광드래그 막기: .cover요소를 보였다가 이동 애니후 숨기기
+    let cover = $(".cover");
 
     $(".slide").on("dragstop",function(){
+
+        // 광드래그 막기 커버보이기
+        cover.show();
 
         // 화면의 width크기
         let winW = $(window).width();
