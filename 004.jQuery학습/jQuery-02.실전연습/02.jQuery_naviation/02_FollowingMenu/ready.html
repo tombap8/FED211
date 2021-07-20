@@ -23,6 +23,10 @@
 
 				// 만약 메뉴를 열었다면 못들어오게함!
 				if(mw===0) return;// 돌아가~!
+				// mw의 초기값은 660 즉, 메뉴 열기전상태임
+				// mw가 0이되면 메뉴가 열린상태이므로 이때
+				// 아래 코드를 실행못하게 하면 움직이지 않는다!
+
 
 				// 마우스 포인터 위치값 정보알아내기!!!
 				// #mbx박스의 중앙에 오도록 위치값 보정(크기절반뺌)
@@ -31,7 +35,7 @@
 				// pageX는 현재 마우스 포인터의 x좌표값
 				// pageY는 현재 마우스 포인터의 y좌표값
 				// -> 좌표값은 항상 단위없는 px값
-				console.log("x:" + posx + "\ny:" + posy);
+				// console.log("x:" + posx + "\ny:" + posy);
 				// 역슬래쉬n -> 줄바꿈
 
 				// 변경대상이 마우스 포인터 위치로 가도록함!
@@ -58,8 +62,21 @@
 				mw === 660 ? mw = 0 : mw = 660;
 				// 비?집:놀이동산;(조건연산자)
 
+				// console.log("mw값:"+mw)
+
 			}); ////////// click //////////////
 
+			// 메뉴 li에 마우스 오버시 opacity 1로 만들기
+			// hover() 메서드 사용
+			// 이벤트 대상: #menu li
+			// 사용 메서드: fadeTo(시간,오파,이징,함수)
+			$("#menu li").hover(
+				function(){ /// over
+					$(this).fadeTo(200,1);
+				},
+				function(){ /// out
+					$(this).fadeTo(200,.7);
+				}); /////// hover ////////////
 
 
 
@@ -120,6 +137,7 @@
 			/* 플랙스박스 */
 			width: 0;
 			height: 220px;
+			padding-left: 120px;
 			list-style: none;
 			z-index: 1;
 			overflow: hidden;
@@ -130,6 +148,8 @@
 			width: 220px;
 			height: 220px;
 			opacity: 0.7;
+			border-radius: 50%;
+			overflow: hidden;
 		}
 
 		#menu img {
