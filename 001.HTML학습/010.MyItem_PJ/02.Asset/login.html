@@ -8,6 +8,7 @@
     <script src="js/jquery-3.5.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/linksys.js"></script>
+    <script src="js/login.js"></script>
 </head>
 <body>
     <!-- 전체박스 -->
@@ -97,7 +98,33 @@
         </header>
         <!-- 2.컨텐츠영역 -->
         <main id="cont">
+            <!-- 2-1.로그인타이틀 -->
+            <h2 class="tit">로그인</h2>
+            <!-- 2-2.로그인박스 -->
+            <div id="login">
+                <form action="process.php" method="POST" class="logF">
+                    <!-- 아이디박스 -->
+                    <div class="minput">
+                        <label for="mid">아이디</label>
+                        <input type="text" name="mid" id="mid">
+                    </div>
+                    <!-- 비밀번호박스 -->
+                    <div class="minput">
+                        <label for="mpw">비밀번호</label>
+                        <input type="password" name="mpw" id="mpw">
+                    </div>
+                </form>
+            </div>
+            <!-- 
+                [ form 요소 ]
+                - 입력된 데이터를 묶어서 서버로 전송하는 역할
+                - action 속성 : 서버전송 페이지 주소
+                - method 속성 : 전송방식 선택(get/post)
+                -> get방식은 url로 데이터를 전달하는 방식
+                -> post방식은 페이지로 숨겨서 데이터를 전달하는 방식
+                (보안성은 post방식이 좋다!)
 
+             -->
         </main>
         <!-- 3.하단영역 -->
         <footer id="info">
