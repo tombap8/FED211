@@ -80,7 +80,12 @@
 						$("span", this).stop().fadeOut(200);
 					}) /////// hover ////////////
 				/// li를 클릭하면 각 주소로 새창열기 ///
-				.click(function () {
+				.click(function (e) {// e-이벤트전달변수
+
+					// 자식요소의 클릭이벤트가 부모요소로
+					// 전달되는 이벤트 버블링 막기!
+					e.stopPropagation();
+
 					// 클릭된 li요소의 span글자 읽어오기
 					let txt = $("span", this).text();
 					console.log("글자:" + txt);
