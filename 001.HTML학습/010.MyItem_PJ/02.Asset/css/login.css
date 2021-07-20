@@ -39,8 +39,7 @@
     border-radius: 10px;
 
     box-sizing: border-box;/* 크기유지 */
-    padding-top: 60px;
-    padding-left: 15px;
+    padding: 60px 15px;
 }
 /* 입력창 라벨 공통 */
 .minput label{
@@ -94,6 +93,26 @@ input:focus{
     color: #fff;
     text-shadow: 1px 1px 0 #666;
 }
+
+/* 기타체크링크 박스 */
+.addbx{
+    margin-top: 50px;
+    text-align: center;
+}
+/* 체크박스영역 */
+.addbx span{
+    margin: 0 15px;
+    color: #666;
+}
+/* 체크박스 라벨과 세로정렬 */
+.addbx input{
+    vertical-align: -2px;
+}
+/* 기타링크 */
+.addbx a{
+    margin: 0 15px;
+}
+
 
 
 
