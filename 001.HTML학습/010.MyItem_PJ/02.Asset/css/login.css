@@ -27,6 +27,22 @@
     margin-left: 5px;
     margin-right: 13px;
 }
+/* 로그인 박스 */
+#login{
+    position: relative;
+    /* 부모자격 */
+    width: 700px;
+    height: 275px;
+    margin: 0 auto;/* 마영오 */
+    margin-top: 20px;
+    border: 2px solid #737373;
+    border-radius: 10px;
+
+    box-sizing: border-box;/* 크기유지 */
+    padding-top: 60px;
+    padding-left: 15px;
+
+}
 
 
 
