@@ -73,9 +73,11 @@
 			$("#menu li").hover(
 				function () { /// over
 					$(this).stop().fadeTo(200, 1);
+					$("span",this).delay(100).fadeIn(200);
 				},
 				function () { /// out
 					$(this).stop().fadeTo(200, .7);
+					$("span",this).fadeOut(200);
 				}); /////// hover ////////////
 
 
@@ -145,6 +147,8 @@
 		}
 
 		#menu li {
+			position: relative;
+			/* 부모자격 */
 			width: 220px;
 			height: 220px;
 			opacity: 0.7;
@@ -161,6 +165,7 @@
 		#menu li span {
 			position: absolute;
 			top: 0;
+			left: 0;
 			width: 100%;
 			height: 100%;
 
@@ -168,6 +173,7 @@
 			color: #fff;
 			text-align: center;
 			line-height: 220px;
+			display: none;
 		}
 	</style>
 
