@@ -1,109 +1,126 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title> 슬라이딩 내비게이션(바네이 메뉴) </title>
-<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<meta charset="utf-8">
+	<title> 슬라이딩 내비게이션(바네이 메뉴) </title>
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
 
-<style>
+	<style>
+		html,body{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		body {
+			background-color: #05184D;
+		}
 
+		/* 공통class */
+		.bld{/* 숨김클래스 */
+			display: none;
+		}
+		.ir{/* IR클래스 */
+			display: block;
+			width: 0;
+			height: 0;
+			overflow: hidden;
+		}
 
-body {
-	margin: 20px auto;
-	padding: 0;	
-	width: 600px;
-	font-size:13px;
-	font-family:Arial, Helvetica, sans-serif;
-	background:#05184D;
-}
+		#slider {
+			position: relative;
+			width: 600px;
+			max-width: 100%;
+			margin: 0 auto;
+			background-color: #FFF;
+			border: 2px solid #FDF6DD ;
+			/* overflow: hidden; */
+		}
+		/* 가상요소로 비율밀기! */
+		#slider::before{
+			content: '';
+			display: block;
+			margin-top: 60%;
+		}
 
-div#slider {
-	margin:0 auto; 
-	background:#FFF; 
-	width:600px; 
-	border:#FDF6DD 2px solid;
-	margin-top:100px;
-	overflow:hidden;
-	position:relative; 
-}
-
-div#viewer { 
-	height:350px;
-	position:relative; 
-}
-
-img{
-	
-	position:absolute;
-}
-
-img#image1{	left:0px;	top:0px;	}
-img#image2{	left:600px;	top:0px;	}
-img#image3{	left:1200px;	top:0px;	}
-img#image4{	left:1800px;	top:0px;	}
+		/* 슬라이드 이동박스 */
+		#viewer {
+			position: absolute;
+			display: flex;/* 플랙스박스 */
+			width: 400%;/* 사진4장 */
+			height: 100%;
+		}
+		#viewer li{
+			flex: 1;
+		}
 		
-		
-/*--------   ul li CSS ------------ */		
-#btnGroup {
-	position:absolute;
-	bottom:2%;
-	right:0;
-	margin:0;
-	padding:0;
-}
-		   
-#btnGroup li {
-	float:left;
-	width:16px; 
-	height:16px;			
-	list-style:none;
-	margin-right:6px;	
-	background-color:#60F;
-	cursor:pointer;
-}
-				
-ul#btnGroup li a{
-	text-decoration:none;
-	text-align:center;
-	background:#FDF6DD;
-	display:block;
-	width:100%;
-	hiehgt:100%;
-	color:#000;
-}
-
-ul#btnGroup li a:hover{	background:#CCFF00;	}
 
 
-</style>
+		/*--------   ul li CSS ------------ */
+		#indic {
+			position: absolute;
+			bottom: 2%;
+			right: 0;
+			margin: 0;
+			padding: 0;
+		}
+
+		#indic li {
+			width: 16px;
+			height: 16px;
+			list-style: none;
+			margin-right: 6px;
+			background-color: #60F;
+			cursor: pointer;
+		}
+
+		ul#indic li a {
+			text-decoration: none;
+			text-align: center;
+			background: #FDF6DD;
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: #000;
+		}
+
+		ul#indic li a:hover {
+			background: #CCFF00;
+		}
+	</style>
 
 </head>
-    
-    
+
+
 <body>
 
-<div id="slider">
+	<div id="slider">
 
-    <div id="viewer">
-        <img id="image1" src="image/slide1.jpg" alt="">
-        <img id="image2" src="image/slide2.jpg" alt="">
-        <img id="image3" src="image/slide3.jpg" alt="">
-        <img id="image4" src="image/slide4.jpg" alt="">
-    </div> 
-    
-  <ul id="btnGroup">
-        <li id="btn0"><a href="image/slide1.jpg">1</a></li>
-        <li id="btn1"><a href="image/slide2.jpg">2</a></li>
-        <li id="btn2"><a href="image/slide3.jpg">3</a></li>
-        <li id="btn3"><a href="image/slide4.jpg">4</a></li>        
-   </ul>
-    
-</div>
+		<div id="viewer">
+			<ul>
+				<li class="sld1"><span class="ir">슬라이드1</span></li>
+				<li class="sld2"><span class="ir">슬라이드2</span></li>
+				<li class="sld3"><span class="ir">슬라이드3</span></li>
+				<li class="sld4"><span class="ir">슬라이드4</span></li>
+			</ul>
+		</div>
 
-<!---------- jQuery code Start ---------->        
-<script>
-	 
-			 
-</script>
+		<ul id="indic">
+			<li><a href="#"><span class="bld">블릿</span></a></li>
+			<li><a href="#"><span class="bld">블릿</span></a></li>
+			<li><a href="#"><span class="bld">블릿</span></a></li>
+			<li><a href="#"><span class="bld">블릿</span></a></li>
+		</ul>
+
+	</div>
+
+	<!---------- jQuery code Start ---------->
+	<script>
+
+
+	</script>
 </body>
+
 </html>
