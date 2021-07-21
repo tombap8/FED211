@@ -141,11 +141,24 @@
 							left: (av * -100) + "%"
 						}, 600, "easeOutQuint",
 						function () { // 애니 후 실행
-							// $(this) // 이동슬라이드
-							// 	.append($("li", this).first()) // 맨뒤로이동
-							// 	.css({
-							// 		left: "0"
-							// 	}); // left값 초기화!
+
+							// 차이수 만큼 for문으로 반복! /////
+							// 임시변수(left값 변경을 위해)
+							let temp = av;
+
+							for(let i=0; i<av;i++){
+
+								// 임시변수1씩감소!
+								temp--;
+
+								$(this) // 이동슬라이드
+									.append($("li", this).first()) // 맨뒤로이동
+									.css({
+										left: (temp*-100) + "%"
+									}); // left값 순서대로 변경!
+
+							} //////// for문 /////////
+
 						}); ////// animate ///////
 
 				} ///////////// if /////////////
