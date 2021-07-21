@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> 슬라이딩 내비게이션(무한이동) </title>
 	<script src="jquery-1.7.2.min.js"></script>
 	<script src="jquery-ui.min.js"></script>
@@ -208,6 +209,16 @@
 			}); ///////////// click //////////////////////////
 
 
+			////////////////////////////////////////
+			////////// 드래그 기능 추가하기 //////////
+			////////////////////////////////////////
+			// 대상: #view ul -> sbx변수!
+			// 드래그 설정하기 - 제이쿼리UI를 추가!
+			sbx.draggable({
+				axis: "x" //x축고정
+			}); //// draggable ////////
+
+
 
 
 		}); //////////// jQB //////////////////////////////
@@ -248,7 +259,7 @@
 			transform: translateY(-50%);
 			/* 세로중앙이동 */
 			width: 600px;
-			max-width: 100%;
+			max-width: 90%;/* 양쪽에 여백있게 */
 			margin: 0 auto;
 			/* 가로중앙 마영오! */
 			background-color: #FFF;
