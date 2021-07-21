@@ -115,7 +115,7 @@
 			// 이벤트 종류: click 
 			/////////////////////////////////////////////////
 			indic.click(function () {
-				
+
 				///// 광클금지 //////
 				if (sprot) return;
 				sprot = 1; //잠금
@@ -376,6 +376,20 @@
 			right: -50px;
 			background: url(image/btn_shop_bn_right.png) no-repeat;
 		}
+
+		/* 미디어쿼리 */
+		@media only screen and (max-width:800px) {
+			
+			/* 이동버튼 위치변경하기 */
+			.lb{
+				left: 20px;
+			}
+			.rb{
+				right: 20px;
+			}
+			
+		} /* 미디어쿼리 800px 이하 */
+
 	</style>
 
 </head>
