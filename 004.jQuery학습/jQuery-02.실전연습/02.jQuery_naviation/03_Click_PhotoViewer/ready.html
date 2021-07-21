@@ -29,11 +29,14 @@
 			overflow: hidden;
 		}
 
+		/* 슬라이드 전체박스 */
 		#slider {
 			position: relative;
+			top: 50%;
+			transform: translateY(-50%);/* 세로중앙이동 */
 			width: 600px;
 			max-width: 100%;
-			margin: 0 auto;
+			margin: 0 auto;/* 가로중앙 마영오! */
 			background-color: #FFF;
 			border: 2px solid #FDF6DD ;
 			/* overflow: hidden; */
@@ -54,6 +57,20 @@
 		}
 		#viewer li{
 			flex: 1;
+		}
+
+		/* 각 슬라이드 이미지 셋팅 */
+		#viewer li.sld1{
+			background: url(image/slide1.jpg) no-repeat center/cover;
+		}
+		#viewer li.sld2{
+			background: url(image/slide2.jpg) no-repeat center/cover;
+		}
+		#viewer li.sld3{
+			background: url(image/slide3.jpg) no-repeat center/cover;
+		}
+		#viewer li.sld4{
+			background: url(image/slide4.jpg) no-repeat center/cover;
 		}
 		
 
