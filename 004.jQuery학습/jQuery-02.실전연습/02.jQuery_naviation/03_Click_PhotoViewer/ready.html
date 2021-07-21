@@ -45,13 +45,13 @@
 				/////////////////////
 
 				sbx.animate({
-						left: "-200%"
+						left: "-100%"
 					}, 600, "easeOutQuint",
 					function () { // 애니 후 실행
 						$(this) // 이동슬라이드
 							.append($("li", this).first()) // 맨뒤로이동
 							.css({
-								left: "-100%"
+								left: "0"
 							}); // left값 초기화!
 					}); ////// animate ///////
 
@@ -86,11 +86,11 @@
 				sbx // 슬라이드박스
 					.prepend(sbx.find("li").last()) // 맨앞이동
 					.css({
-						left: "-200%"
+						left: "-100%"
 					}) // left값 -100%변경
 					/// 애니메이션 들어오기 
 					.animate({
-						left: "-100%"
+						left: "0"
 					}, 600, "easeOutQuint");
 
 				// 슬라이드 순번 감소
@@ -145,15 +145,9 @@
 				// 3-1. 슬라이드 왼쪽이동(오른쪽버튼방향)
 				if (diff > 0) {
 
-					// 차이가 3일 경우 맨앞 요소 맨뒤로 이동해야함!
-					if(av===3){
-						sbx.append(sbx.find("li").first())
-						.css({left:"0"});
-					} //////////// if //////////////
-
 					// 기본모델 -> 오른쪽버튼구현
 					sbx.animate({
-							left: (av * -100)  + "%"
+							left: (av * -100) + "%"
 						}, 600, "easeOutQuint",
 						function () { // 애니 후 실행
 
@@ -161,7 +155,7 @@
 							// 임시변수(left값 변경을 위해)
 							let temp = av;
 
-							for (let i = 0; i < av-1; i++) {
+							for (let i = 0; i < av; i++) {
 
 								// 임시변수1씩감소!
 								temp--;
@@ -293,7 +287,7 @@
 		#viewer ul {
 			position: relative;
 			/* 위치이동포지션 */
-			left: -100%;/* 왼쪽에 하나 나가있음! */
+			left: 0;
 			/* 기준위치값 */
 			display: flex;
 			/* 플랙스박스 */
