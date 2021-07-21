@@ -39,7 +39,6 @@
 			margin: 0 auto;/* 가로중앙 마영오! */
 			background-color: #FFF;
 			border: 2px solid #FDF6DD ;
-			/* overflow: hidden; */
 		}
 		/* 가상요소로 비율밀기! */
 		#slider::before{
@@ -48,15 +47,19 @@
 			margin-top: 60%;
 		}
 
-		/* 슬라이드 이동박스 */
-		#viewer {/* 비율유지속박스 */
+		/* 비율유지속박스 */
+		#viewer {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+			overflow: hidden;
 		}
+		/* 슬라이드 이동박스 */
 		#viewer ul{
+			position: relative;/* 위치이동포지션 */
+			left: 0;/* 기준위치값 */
 			display: flex;/* 플랙스박스 */
 			width: 400%;/* 사진4장 */
 			height: 100%;
