@@ -21,11 +21,27 @@
 
 			// 해당순번의 a요소의 배경이미지 넣기!
 			// 전달변수 ele는 this키워드와 같다!
-			// $(ele).find("a").css({
-			// 	background: "url()"
-			// });///////// css //////////
+			$(ele).find("a").css({
+				background: "url("+isrc+") no-repeat"
+			});///////// css //////////
 
 		}); /////////// each ///////////////////////
+
+		//// 마우스 오버시 메뉴 마진,높이 애니메이션하기 ///
+		$("#navigation li a").hover(
+			function(){ // over
+				$(this).stop().animate({
+					marginLeft: "15px",
+					height: "120px"
+				},200);
+			},
+			function(){ // out
+				$(this).stop().animate({
+					marginLeft: "0px",
+					height: "30px"
+				},200);
+
+			}); //////// hover ///////////
 
 
 
