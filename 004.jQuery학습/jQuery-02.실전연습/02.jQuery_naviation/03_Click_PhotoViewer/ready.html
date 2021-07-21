@@ -3,8 +3,31 @@
 
 <head>
 	<meta charset="utf-8">
-	<title> 슬라이딩 내비게이션(바네이 메뉴) </title>
-	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<title> 슬라이딩 내비게이션(무한이동) </title>
+	<script src="jquery-1.7.2.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script>
+		$(function(){ ///// jQB ///////////////////////////
+
+			//////////////////////[    1    ]///////////////////
+			// 오른쪽 이동버튼 클릭시 슬라이드박스 왼쪽으로 이동
+			// 이벤트 대상: .rb
+			// 이벤트: click
+			// 변경 대상: #viewer ul
+			let sbx = $("#viewer ul");
+			// 변경 내용: 슬라이드 박스의 left값을 -100%로 이동 후
+			//			첫번째 슬라이드를 맨끝으로 이동 + left:0
+			///////////////////////////////////////////////////
+			$(".rb").click(function(){
+				sbx.animate({
+					left: "-100%"
+				},400,"easeOutQuint");
+			}); ////////////////// click //////////////////////
+
+
+
+		}); //////////// jQB //////////////////////////////
+	</script>
 
 	<style>
 		html,body{
