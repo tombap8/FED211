@@ -45,13 +45,13 @@
 				/////////////////////
 
 				sbx.animate({
-						left: "-100%"
+						left: "-200%"
 					}, 600, "easeOutQuint",
 					function () { // 애니 후 실행
 						$(this) // 이동슬라이드
 							.append($("li", this).first()) // 맨뒤로이동
 							.css({
-								left: "0"
+								left: "-100%"
 							}); // left값 초기화!
 					}); ////// animate ///////
 
@@ -287,7 +287,7 @@
 		#viewer ul {
 			position: relative;
 			/* 위치이동포지션 */
-			left: 0;
+			left: -100%;/* 왼쪽에 하나 나가있음! */
 			/* 기준위치값 */
 			display: flex;
 			/* 플랙스박스 */
@@ -414,10 +414,10 @@
 		<div id="viewer">
 			<!-- 슬라이드 이동박스 -->
 			<ul>
+				<li class="sld4"><span class="ir">슬라이드4</span></li>
 				<li class="sld1"><span class="ir">슬라이드1</span></li>
 				<li class="sld2"><span class="ir">슬라이드2</span></li>
 				<li class="sld3"><span class="ir">슬라이드3</span></li>
-				<li class="sld4"><span class="ir">슬라이드4</span></li>
 			</ul>
 		</div>
 
