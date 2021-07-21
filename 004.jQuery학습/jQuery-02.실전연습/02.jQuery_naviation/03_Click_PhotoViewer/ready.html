@@ -89,37 +89,64 @@
 		
 
 
-		/*--------   ul li CSS ------------ */
+		/* 블릿표시자 */
 		#indic {
 			position: absolute;
-			bottom: 2%;
-			right: 0;
+			bottom: 5px;
+			right: 5px;
+
+			display: flex;/* 플랙스박스 */
+
 			margin: 0;
 			padding: 0;
+			list-style: none;
 		}
 
 		#indic li {
 			width: 16px;
 			height: 16px;
-			list-style: none;
 			margin-right: 6px;
-			background-color: #60F;
-			cursor: pointer;
+			background-color: #fff;
+			border-radius: 50%;
+			box-shadow: 0 0 5px #000;
+			box-sizing: border-box;/* 크기유지 */
+		}
+		/* 마우스 오버시 + 선택메뉴 class="on" */
+		#indic li:hover,
+		#indic li.on {
+			background-color: #222;
+			border: 2px solid lightgoldenrodyellow;
 		}
 
-		ul#indic li a {
-			text-decoration: none;
-			text-align: center;
-			background: #FDF6DD;
+		#indic li a {
 			display: block;
 			width: 100%;
 			height: 100%;
-			color: #000;
 		}
 
-		ul#indic li a:hover {
-			background: #CCFF00;
+		/* 양쪽이동버튼 */
+		.abtn {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 25px;
+			height: 49px;
 		}
+		/* 마우스 오버시 배경이미지 위치변경 */
+		.abtn:hover{
+			background-position-y: -49px;
+		}
+		/* 왼쪽버튼 */
+		.lb{
+			left: -50px;
+			background: url(image/btn_shop_bn_left.png) no-repeat;
+		}
+		/* 오른쪽버튼 */
+		.rb{
+			right: -50px;
+			background: url(image/btn_shop_bn_right.png) no-repeat;
+		}
+
 	</style>
 
 </head>
@@ -129,7 +156,9 @@
 
 	<div id="slider">
 
+		<!-- 슬라이드 속박스 -->
 		<div id="viewer">
+			<!-- 슬라이드 이동박스 -->
 			<ul>
 				<li class="sld1"><span class="ir">슬라이드1</span></li>
 				<li class="sld2"><span class="ir">슬라이드2</span></li>
@@ -138,12 +167,23 @@
 			</ul>
 		</div>
 
+		<!-- 블릿표시자 -->
 		<ul id="indic">
-			<li><a href="#"><span class="bld">블릿</span></a></li>
+			<li class="on"><a href="#"><span class="bld">블릿</span></a></li>
 			<li><a href="#"><span class="bld">블릿</span></a></li>
 			<li><a href="#"><span class="bld">블릿</span></a></li>
 			<li><a href="#"><span class="bld">블릿</span></a></li>
 		</ul>
+
+		<!-- 양쪽이동버튼 -->
+		<a href="#" class="abtn lb">
+			<span class="ir">왼쪽이동버튼</span>
+		</a>
+		<a href="#" class="abtn rb">
+			<span class="ir">오른쪽이동버튼</span>
+		</a>
+
+
 
 	</div>
 
