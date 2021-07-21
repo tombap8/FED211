@@ -7,7 +7,7 @@
 	<script src="jquery-1.7.2.min.js"></script>
 	<script src="jquery-ui.min.js"></script>
 	<script>
-		$(function(){ ///// jQB ///////////////////////////
+		$(function () { ///// jQB ///////////////////////////
 
 			//////////////////////[    1    ]///////////////////
 			// 오른쪽 이동버튼 클릭시 슬라이드박스 왼쪽으로 이동
@@ -18,18 +18,43 @@
 			// 변경 내용: 슬라이드 박스의 left값을 -100%로 이동 후
 			//			첫번째 슬라이드를 맨끝으로 이동 + left:0
 			///////////////////////////////////////////////////
-			$(".rb").click(function(){
+			$(".rb").click(function () {
 
 				sbx.animate({
-					left: "-100%"
-				},600,"easeOutQuint",
-				function(){ // 애니 후 실행
-					$(this) // 이동슬라이드
-					.append($("li",this).first()) // 맨뒤로이동
-					.css({left:"0"}); // left값 초기화!
-				}); ////// animate ///////
+						left: "-100%"
+					}, 600, "easeOutQuint",
+					function () { // 애니 후 실행
+						$(this) // 이동슬라이드
+							.append($("li", this).first()) // 맨뒤로이동
+							.css({
+								left: "0"
+							}); // left값 초기화!
+					}); ////// animate ///////
 
 			}); ////////////////// click //////////////////////
+
+			//////////////////////[    2    ]///////////////////
+			// 왼쪽 이동버튼 클릭시 슬라이드박스 오른쪽으로 이동
+			// 이벤트 대상: .lb
+			// 이벤트: click
+			// 변경 대상: #viewer ul
+			// 변경 내용: 마지막 슬라이드를 맨앞으로 이동 + left:-100%
+			//			슬라이드 박스 left:0으로 애니메이션!
+			///////////////////////////////////////////////////
+			$(".lb").click(function () {
+
+				sbx // 슬라이드박스
+					.prepend(sbx.find("li").last()) // 맨앞이동
+					.css({
+						left: "-100%"
+					}) // left값 -100%변경
+					/// 애니메이션 들어오기 
+					.animate({
+						left: "0"
+					}, 600, "easeOutQuint");
+
+
+			}); /////////// click /////////////////////
 
 
 
@@ -37,22 +62,27 @@
 	</script>
 
 	<style>
-		html,body{
+		html,
+		body {
 			margin: 0;
 			padding: 0;
 			width: 100%;
 			height: 100%;
 			overflow: hidden;
 		}
+
 		body {
 			background-color: #05184D;
 		}
 
 		/* 공통class */
-		.bld{/* 숨김클래스 */
+		.bld {
+			/* 숨김클래스 */
 			display: none;
 		}
-		.ir{/* IR클래스 */
+
+		.ir {
+			/* IR클래스 */
 			display: block;
 			width: 0;
 			height: 0;
@@ -63,15 +93,18 @@
 		#slider {
 			position: relative;
 			top: 50%;
-			transform: translateY(-50%);/* 세로중앙이동 */
+			transform: translateY(-50%);
+			/* 세로중앙이동 */
 			width: 600px;
 			max-width: 100%;
-			margin: 0 auto;/* 가로중앙 마영오! */
+			margin: 0 auto;
+			/* 가로중앙 마영오! */
 			background-color: #FFF;
-			border: 2px solid #FDF6DD ;
+			border: 2px solid #FDF6DD;
 		}
+
 		/* 가상요소로 비율밀기! */
-		#slider::before{
+		#slider::before {
 			content: '';
 			display: block;
 			margin-top: 60%;
@@ -86,12 +119,17 @@
 			height: 100%;
 			overflow: hidden;
 		}
+
 		/* 슬라이드 이동박스 */
-		#viewer ul{
-			position: relative;/* 위치이동포지션 */
-			left: 0;/* 기준위치값 */
-			display: flex;/* 플랙스박스 */
-			width: 400%;/* 사진4장 */
+		#viewer ul {
+			position: relative;
+			/* 위치이동포지션 */
+			left: 0;
+			/* 기준위치값 */
+			display: flex;
+			/* 플랙스박스 */
+			width: 400%;
+			/* 사진4장 */
 			height: 100%;
 
 			/* 3無 */
@@ -99,24 +137,28 @@
 			padding: 0;
 			list-style: none;
 		}
-		#viewer li{
+
+		#viewer li {
 			flex: 1;
 		}
 
 		/* 각 슬라이드 이미지 셋팅 */
-		#viewer li.sld1{
+		#viewer li.sld1 {
 			background: url(image/slide1.jpg) no-repeat center/cover;
 		}
-		#viewer li.sld2{
+
+		#viewer li.sld2 {
 			background: url(image/slide2.jpg) no-repeat center/cover;
 		}
-		#viewer li.sld3{
+
+		#viewer li.sld3 {
 			background: url(image/slide3.jpg) no-repeat center/cover;
 		}
-		#viewer li.sld4{
+
+		#viewer li.sld4 {
 			background: url(image/slide4.jpg) no-repeat center/cover;
 		}
-		
+
 
 
 		/* 블릿표시자 */
@@ -125,7 +167,8 @@
 			bottom: 5px;
 			right: 5px;
 
-			display: flex;/* 플랙스박스 */
+			display: flex;
+			/* 플랙스박스 */
 
 			margin: 0;
 			padding: 0;
@@ -139,8 +182,10 @@
 			background-color: #fff;
 			border-radius: 50%;
 			box-shadow: 0 0 5px #000;
-			box-sizing: border-box;/* 크기유지 */
+			box-sizing: border-box;
+			/* 크기유지 */
 		}
+
 		/* 마우스 오버시 + 선택메뉴 class="on" */
 		#indic li:hover,
 		#indic li.on {
@@ -162,21 +207,23 @@
 			width: 25px;
 			height: 49px;
 		}
+
 		/* 마우스 오버시 배경이미지 위치변경 */
-		.abtn:hover{
+		.abtn:hover {
 			background-position-y: -49px;
 		}
+
 		/* 왼쪽버튼 */
-		.lb{
+		.lb {
 			left: -50px;
 			background: url(image/btn_shop_bn_left.png) no-repeat;
 		}
+
 		/* 오른쪽버튼 */
-		.rb{
+		.rb {
 			right: -50px;
 			background: url(image/btn_shop_bn_right.png) no-repeat;
 		}
-
 	</style>
 
 </head>
