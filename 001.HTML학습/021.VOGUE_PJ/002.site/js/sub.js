@@ -72,7 +72,12 @@ let sinfo = {
         "메뉴": "없음",
         "경로": "runway",
         "타이틀": [
-            "", "", "", "", "", ""
+            "<small>Ready To Wear 2021 F/W</small><br>Rick Owens", 
+            "<small>Ready To Wear 2021 F/W</small><br>We11done", 
+            "<small>Ready To Wear 2021 F/W</small><br>Comme des Garçons", 
+            "<small>Ready To Wear 2021 F/W</small><br>Chloé", 
+            "<small>Ready To Wear 2021 F/W</small><br>Balmain", 
+            "<small>Ready To Wear 2021 F/W</small><br>Loewe"
         ]
     },
     "shopping": {
@@ -80,7 +85,12 @@ let sinfo = {
         "메뉴": ["전체", "패션", "뷰티", "리빙"],
         "경로": "shopping",
         "타이틀": [
-            "", "", "", "", "", ""
+            "여름과 찰떡궁합! 세라믹 바구니", 
+            "사용할수록 매력적인 테크 제품", 
+            "취향 있는 플랜터", 
+            "감사의 마음을 담은, 부모님을 위한 선물", 
+            "성년을 위한 선물", 
+            "작고 소중한 아이들을 위한 선물"
         ]
     }
 }; ////////// sinfo ////////////////

@@ -77,3 +77,8 @@
 .bgi2-3{
     background-image: url(../images/fashion/cont2-3a.jpg);
 } */
+
+/* 컨텐츠 타이틀 작은글씨 */
+.pbx h2 small{
+    font-size: 14px;
+}

@@ -13,8 +13,8 @@ $(function(){ //////// jQB ///////////////////////
     });////////// click /////////////
 
     // GNB 메뉴 링크 연결하기 //
-    // 대상: .gnb a
-    $(".gnb a").click(function(e){
+    // 대상: .gnb a + .mognb a -> 모바일까지 한꺼번에!
+    $(".gnb a,.mognb a").click(function(e){
 
         // 기본이동막기
         e.preventDefault();
