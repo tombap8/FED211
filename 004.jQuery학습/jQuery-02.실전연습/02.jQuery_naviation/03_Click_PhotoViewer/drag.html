@@ -7,6 +7,8 @@
 	<title> 슬라이딩 내비게이션(무한이동) - 드래그기능 </title>
 	<script src="jquery-1.7.2.min.js"></script>
 	<script src="jquery-ui.min.js"></script>
+	<script src="jquery-touch-punch.min.js"></script>
+	<!-- 터치펀치는 모바일이벤트 변환용 -->
 	<script>
 		/// 슬라이드 순번 ///
 		let snum = 0;
@@ -89,7 +91,7 @@
 						left: "-100%"
 					}) // left값 -100%변경
 					/// 애니메이션 들어오기 
-					.animate({
+					sbx.animate({
 						left: "0"
 					}, 600, "easeOutQuint");
 
