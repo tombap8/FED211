@@ -114,15 +114,28 @@ $(function () { // jQB ///////////////////////////////
     // 3. 컨텐츠 박스 배경이미지 넣기
     // 대상: .pbx
     // 사용메서드: each() 
-    $(".pbx").each(function(idx,ele){
+    $(".pbx").each(function (idx, ele) {
         // console.log(idx);
+
+        // 이미지이름의 번호만들기 변수
+        let n1 = 1;//앞순서 3개는 1
+        if (idx >= 3) n1 = 2;//뒷순서 3개는 2로 변경!
+        let n2 = idx + 1; //앞순서 3개는 순서대로 1,2,3
+        if (idx >= 3) n2 = idx - 2; //뒷순서도 1,2,3 만들기!
+
+        console.log("cont"+n1+"-"+n2+"a.jpg");
 
         ////////// 각 박스요소에 배경넣기 /////////
         // ele변수는 this 키워드와 같음!
         $(ele).css({
-            backgroundImage: 
-            "url(images/fashion/cont1-1a.jpg)"
+            backgroundImage: "url(images/" +
+                sinfo[pm]["경로"] +
+                "/cont" + n1 + "-" + n2 + "a.jpg)"
         }); /////////////// css ///////////////
+
+        /// 4. 컨텐츠박스에 타이틀 넣기
+        $(ele).find("h2")
+        .html(sinfo[pm]["타이틀"][idx]);
 
     }); //////////////// each //////////////////
 
