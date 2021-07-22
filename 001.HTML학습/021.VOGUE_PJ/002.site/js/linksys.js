@@ -18,8 +18,16 @@ $(function(){ //////// jQB ///////////////////////
 
         // 기본이동막기
         e.preventDefault();
+        
+        // 클릭한 a요소의 텍스트 읽어오기
+        let mtxt = $(this).text().toLowerCase();
+        // toLowerCase() -> 소문자로 모두 변환!
+        // 비교) toUpperCase() -> 대문자변환
+        
+        console.log(mtxt);
 
-        console.log("이동!");
+        // 페이지 이동하기 ///
+        location.href = "sub.html?cat="+mtxt;
 
     }); ///////// click //////////////
 
