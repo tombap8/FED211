@@ -218,10 +218,20 @@
 				axis: "x" //x축고정
 			}); //// draggable ////////
 
+			// 슬라이드 커버
+			let cover = $(".cover");
+
 			///////// 드래그가 끝났을때 방향판단하여 ///////
 			///////// 슬라이드 이동하기 ///////////////////
 			// 이벤트: dragstop
 			sbx.on("dragstop",function(){
+
+				// 커버보이기
+				cover.show();
+				// 커버숨기기
+				setTimeout(() => {
+					cover.hide();
+				}, 600);
 
 				// console.log("드래그끝!");
 
@@ -232,8 +242,16 @@
 				console.log("슬위:"+spos);
 
 				// 2. 위치값에 따라 슬라이드 이동하기
-				if(spos < 50) $(".rb").trigger("click");
+				// 기준: 0을 중심으로 50px과 -50px값을 기준함
+				if(spos < -50) $(".rb").trigger("click");
 				else if(spos > 50) $(".lb").trigger("click");
+				else { // 제자리 돌아가기
+					sbx.animate({
+						left: "0"
+					}, 300, "easeOutQuint");
+				} ////// else //////////////
+				// trigger(이벤트명) 메서드
+				// -> 선택요소에 특정이벤트를 강제로 발생시키는 메서드
 
 			});/////////// dragstop //////////////////////
 
@@ -416,6 +434,17 @@
 			background: url(image/btn_shop_bn_right.png) no-repeat;
 		}
 
+		/* 슬라이드커버 */
+		.cover{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: none;
+			/* background-color: #f00; */
+		}
+
 		/* 미디어쿼리 */
 		@media only screen and (max-width:800px) {
 			
@@ -449,8 +478,10 @@
 					<li class="sld2"><span class="ir">슬라이드2</span></li>
 					<li class="sld3"><span class="ir">슬라이드3</span></li>
 				</ul>
-			</div>
-		</div>
+			</div><!-- #viewer -->
+			<!-- 커버 -->
+			<div class="cover"></div>
+		</div><!-- .vbx -->
 
 		<!-- 블릿표시자 -->
 		<ul id="indic">
