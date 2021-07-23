@@ -83,6 +83,18 @@
             stroke-dashoffset: 0;
         }
 
+        /* 두번째 원 */
+        .btns2{
+            background-image: url(images/black.jpg);
+        }
+        .btns2 .c1{
+            stroke: black;
+            stroke-dasharray: 20;
+        }
+        .btns2:hover .c1{
+            stroke: red;
+        }
+
     </style>
 </head>
 <body>
@@ -95,7 +107,13 @@
                 </svg>
             </div>
         </li>
-        <li></li>
+        <li>
+            <div class="btns btns2">
+                <svg viewBox="0 0 200 200">
+                    <circle class="c1" cx="100" cy="100" r="95" transform="rotate(-90,100,100)"></circle>
+                </svg>
+            </div>
+        </li>
         <li></li>
         <li></li>
     </ul>
@@ -105,7 +123,11 @@
         - cx : 중심원 x좌표 (center x) 단위없는 숫자는 px
         - cy : 중심원 y좌표 (center y) 단위없는 숫자는 px
         - r : 반지름(radius)
-
+        - transform : svg 요소를 변형하기 위한 속성
+            rotate(각도,x위치,y위치)
+            -> 회전속성 각도를 단위없이 사용하며 마이너스는 반시계방향
+            (이런속성을 쓰는 이유는 css의 transform속성이 안먹힌다)
+            -> css transform속성은 svg요소에 적용해야 적용된다!
 
 
 
