@@ -38,14 +38,24 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
+            width: 40%;
             background: url(images/man.jpg) no-repeat top/cover;
             border-radius: 50%;
         }
-
-        /* svg는 viewBox 속성 셋팅을 했으므로 
-        부모박스 크기를 따라 비율유지함(별도의 css셋팅 불필요) */
+        /* 비율밀기 */
+        .btns::before{
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+        /* svg셋팅 */
+        .btns svg{
+            position: absolute;
+            top: 0;
+            /* 부모박스가 패딩탑으로 비율밀기하므로
+            앱솔로 부모박스 맨위로 위치고정! 
+            svg 자체는 viewBox설정 때문에 채우기 비율유지함!*/
+        }
 
         /* circle 설정 */
         .c1{
@@ -60,9 +70,16 @@
             /* 데쉬어레이를 50%로 놓고 선,공백이 몇조각나는지 본다!
             50% * 6조각 = 300% 즉, 선으로만 채우는 크기임! */
 
-            
+            stroke-dashoffset: 300%;
+            /* 데쉬어레이와 같은 크기를 데쉬옵셋에 주면 시작점이
+            밀려서 공백부터 시작함-> 선이 숨겨지는 효과가 생김! */
 
-        
+            /* 오버시 애니효과 위해 트랜지션주기 */
+            transition: .7s ease-in-out;
+        }
+        /* svg 에 마우스 오버시 옵셋값 0으로! */
+        .c1:hover{
+            stroke-dashoffset: 0;
         }
 
     </style>
