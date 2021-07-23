@@ -52,6 +52,16 @@
             clip-path: url(#myClip);
         }
 
+        /* 
+            [ CSS Masking ] 
+            - 이미지의 일부를 자연스럽게 감추는 기법
+            - 검정색부분은 보이는 영역, 투명색은 숨기는 영역
+        */
+        .masking1{
+            -webkit-mask-image: 
+            linear-gradient(to right,black 30%, transparent 70%);
+        }
+
 
     </style>
 </head>
@@ -69,5 +79,8 @@
             </clippath>
         </defs>
     </svg>
+
+    <!-- 마스킹효과주기 -->
+    <img src="images/img4.jpg" alt="image" class="masking1">
 </body>
 </html>
