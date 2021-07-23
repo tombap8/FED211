@@ -95,6 +95,20 @@
             stroke: red;
         }
 
+        /* 세번째 원 */
+        .btns3{
+            background-image: url(images/doc.jpg);
+        }
+
+        /* 네번째 원 */
+        .btns4{
+            width: 20%;
+            background-image: url(images/wan.jpg);
+        }
+        .btns4::before{
+            padding-top: 200%;
+        }
+
     </style>
 </head>
 <body>
@@ -119,7 +133,7 @@
                 <svg viewBox="0 0 200 200">
                     <!-- 
                         [defs요소] : 요소에 효과를 정의함
-                        
+
                         [linearGradient요소] : 선형그라데이션
                         - id속성 : 적용할 요소에 이 id명을 연결함
                             예) stroke:url(#아이디명)
@@ -142,7 +156,20 @@
                 </svg>
             </div>
         </li>
-        <li></li>
+        <li>
+            <div class="btns btns4">
+                <svg viewBox="0 0 100 200">
+                    <defs>
+                        <linearGradient id="grad2" x1="100%" y1="0%" x2="0%" y2="0%">
+                          <stop offset="0%" stop-color="red" />
+                          <stop offset="50%" stop-color="green" />
+                          <stop offset="100%" stop-color="hotpink" />
+                        </linearGradient>
+                      </defs>
+                    <ellipse class="c1" cx="50" cy="100" rx="95" ry="45" style="stroke:url(#grad2)" transform="rotate(-90,50,100)"></ellipse>
+                </svg>
+            </div>
+        </li>
     </ul>
     
     <!-- 
@@ -157,6 +184,11 @@
             -> css transform속성은 svg요소에 적용해야 적용된다!
 
 
+        [ ellipse 요소 : 타원 ]
+        - cx : 중심원 x좌표 (center x) 단위없는 숫자는 px
+        - cy : 중심원 y좌표 (center y) 단위없는 숫자는 px
+        - rx : x축 반지름(radius)
+        - ry : y축 반지름(radius)
 
      -->
 
