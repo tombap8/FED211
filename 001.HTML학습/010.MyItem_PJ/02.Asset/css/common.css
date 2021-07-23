@@ -57,6 +57,7 @@ body {
     top: 32px;
     left: 59px;
 
+    /* 애니메이션 */
     animation: rballAni .5s ease-in-out 2 alternate;
 }
 /* 빨간공 키프레임 */
@@ -72,6 +73,11 @@ body {
     top: 21px;
     left: 82px;
 }
+/* 카멜레온 박스 키프레임 */
+@keyframes cambxAni {
+    
+}/* 키프레임 */
+
 /* 카멜레온 혀 */
 #tung{
     position: absolute;
@@ -82,7 +88,31 @@ body {
     height: 8px;
     background: url(../images/mlogo_01.png) no-repeat;
     /* outline: 1px solid red; */
+
+    /* 애니메이션 */
+    animation: tungAni .3s linear 1s 2 alternate;
+
 }
+/* 혀 애니 키프레임 */
+@keyframes tungAni {
+    0%{
+        left: -21px;
+        background-image: url(../images/mlogo_01.png);
+    }
+    35%{
+        left: -26px;
+        background-image: url(../images/mlogo_02.png);
+    }
+    65%{
+        left: -30px;
+        background-image: url(../images/mlogo_03.png);
+    }
+    100%{
+        left: -50px;
+        background-image: url(../images/mlogo_04.png);
+    }
+}/* 키프레임 */
+
 /* 카멜레온 이미지 */
 #cam{
     position: relative;
