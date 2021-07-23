@@ -56,6 +56,37 @@ body {
     position: absolute;
     top: 32px;
     left: 59px;
+
+    animation: rballAni .5s ease-in-out 2 alternate;
+}
+/* 빨간공 키프레임 */
+@keyframes rballAni {
+    to{        
+        top: 7px;
+    }
+}/* 키프레임 */
+
+/* 카멜레온 박스 */
+#cambx{
+    position: absolute;
+    top: 21px;
+    left: 82px;
+}
+/* 카멜레온 혀 */
+#tung{
+    position: absolute;
+    /* 부모는? #cambx */
+    top: 6px;
+    left: -21px;
+    width: 48px;
+    height: 8px;
+    background: url(../images/mlogo_01.png) no-repeat;
+    /* outline: 1px solid red; */
+}
+/* 카멜레온 이미지 */
+#cam{
+    position: relative;
+    /* 혀보다 위에옴! 나중에 그려서 위치관계성립-포지션이 있어야함! */
 }
 
 
