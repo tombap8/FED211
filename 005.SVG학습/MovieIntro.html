@@ -145,6 +145,62 @@
             }
         } /* 키프레임 */
 
+        /* 삼각형과 이미지박스 */
+        #mtit{
+            position: absolute;
+            width: 60%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0);
+            /* 애니메이션으로 배경색 투명도를 변경함 */
+
+            /* 애니메이션 */
+            animation: logobg 2s ease-out 22s forwards;
+        }
+        /* 로고배경 키프레임 */
+        @keyframes logobg {
+            to{
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        } /* 키프레임 */
+
+
+        /* 로고이미지 */
+        #mtit img{
+            position: absolute;
+            left: -6px;
+            width: 100%;
+            opacity: 0;
+            
+            /* 애니메이션 */
+            animation: showlogo 2s ease-out 22s forwards;
+        }
+        /* 로고이미지 키프레임 */
+        @keyframes showlogo {
+            to{
+                opacity: 1;
+            }
+        }/* 키프레임 */
+
+        /* 삼각형 */
+        .tribox{
+            position: relative;
+            display: block;/* 박스중앙 먹히게 */
+            margin: 0 auto;
+            width: 25%;
+        }
+        .tribox polygon{
+            fill:none;
+            stroke: #fff;
+            stroke-width: 5;
+            stroke-dasharray: 330%;
+            stroke-dashoffset: 330%;
+            
+            /* 애니메이션 */
+            animation: lineAni 5s ease-out 17s forwards;
+        }
+
 
 
     </style>
@@ -164,11 +220,14 @@
         <line class="line1" x1="0%" y1="0%" x2="100%" y2="100%"></line>
         <line class="line1" x1="100%" y1="0%" x2="0%" y2="100%"></line>
     </svg>
-    <!-- 
-        [ svg line 요소 ]
-        - 직선을 그어주는 벡터요소
-        - 직선이란 두 점을 잊는 최단거리
-        - x1,y1 속성이 점하나, x2,y2속성이 점하나
-     -->
+
+    <!-- 삼각형과 이미지박스 -->
+    <div id="mtit">
+        <img src="images/GoastInTheShell_logo.png" alt="logo">
+        <svg class="tribox" viewBox="0 0 300 300">
+            <polygon points="0,300 300,300 150,0"></polygon>
+        </svg>
+    </div>
+
 </body>
 </html>
