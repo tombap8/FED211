@@ -43,9 +43,83 @@
             }
         }/* 키프레임 */
 
+        /* 공통 CLASS */
+        .ir{/* IR */
+            display: block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
+        /* 스틸컷 박스 */
+        #stc{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        /* 스틸컷 개별박스 공통 */
+        #stc>div{
+            position: absolute;
+            /* 부모는? #stc */
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+        }
+        /* 윗박스 */
+        #stc>div:first-child{
+            top: -15%;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-image: url(images/sc1.jpg);
+            /* 삼각형 클리핑 */
+            clip-path: polygon(0% 0%,100% 0%,50% 100%);
+        }
+        /* 오른쪽박스 */
+        #stc>div:nth-child(2){
+            top: 0;
+            right: -15%;
+            width: 50%;
+            height: 100%;
+            background-image: url(images/sc4.jpg);
+            /* 삼각형 클리핑 */
+            clip-path: polygon(100% 0%,0% 50%,100% 100%);
+        }
+        /* 아랫박스 */
+        #stc>div:nth-child(3){
+            bottom: -15%;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-image: url(images/sc3.jpg);
+            /* 삼각형 클리핑 */
+            clip-path: polygon(0% 100%,50% 0%,100% 100%);
+        }
+        /* 왼쪽박스 */
+        #stc>div:nth-child(4){
+            top: 0;
+            left: -15%;
+            width: 50%;
+            height: 100%;
+            background-image: url(images/sc2.jpg);
+            /* 삼각형 클리핑 */
+            clip-path: polygon(0% 0%,100% 50%,0% 100%);
+        }
+
+
     </style>
 </head>
 <body>
+
+    <!-- 공각기동대 스틸컷 박스 -->
+    <div id="stc">
+        <div><span class="ir">공각스틸컷</span></div>
+        <div><span class="ir">공각스틸컷</span></div>
+        <div><span class="ir">공각스틸컷</span></div>
+        <div><span class="ir">공각스틸컷</span></div>
+    </div>
+
+
     <svg class="stg">
         <line class="line1" x1="0%" y1="0%" x2="100%" y2="100%"></line>
         <line class="line1" x1="100%" y1="0%" x2="0%" y2="100%"></line>
