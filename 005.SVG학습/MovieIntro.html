@@ -64,6 +64,7 @@
             background-repeat: no-repeat;
             background-position: top;
             background-size: cover;
+            opacity: 0;/* 모두투명! */
         }
         /* 윗박스 */
         #stc>div:first-child{
@@ -105,6 +106,33 @@
             /* 삼각형 클리핑 */
             clip-path: polygon(0% 0%,100% 50%,0% 100%);
         }
+
+        /* 스틸컷 등장애니 키프레임 */
+        @keyframes sc1 {/* 윗박스 */
+            to{
+                top: 0;
+                opacity: 1;
+            }
+        } /* 키프레임 */
+        @keyframes sc2 {/* 오른쪽박스 */
+            to{
+                right: 0;
+                opacity: 1;
+            }
+        } /* 키프레임 */
+        @keyframes sc3 {/* 아랫박스 */
+            to{
+                bottom: 0;
+                opacity: 1;
+            }
+        } /* 키프레임 */
+        @keyframes sc4 {/* 왼쪽박스 */
+            to{
+                left: 0;
+                opacity: 1;
+            }
+        } /* 키프레임 */
+
 
 
     </style>
