@@ -18,14 +18,20 @@
             background-image: linear-gradient(to bottom, rgb(223, 219, 255), rgb(255, 204, 247), skyblue);
         }
 
+        /* 파티션 박스 */
+        .pbx{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            padding-top: 20vh;
+        }
+
         /* 원을 담는 박스 */
         .btns {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 20%;
-            min-width: 150px;
+            position: relative;
+            width: 20vw;
             background: url(images/pang.jpg) no-repeat top/cover;
             border-radius: 50%;
         }
@@ -71,7 +77,7 @@
 
 
         /* 퍼센트 글자박스 */
-        .txt{            
+        .txt {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -82,14 +88,15 @@
         }
 
         /* 액션버튼박스 */
-        .act{
+        .act {
             position: absolute;
             bottom: 0;
             width: 100%;
             padding: 50px 0;
             text-align: center;
         }
-        .act button{
+
+        .act button {
             font-size: 50px;
         }
 
@@ -97,7 +104,7 @@
     </style>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
-        $(function(){ //////// jQB ///////////////////
+        $(function () { //////// jQB ///////////////////
 
             // 퍼센트숫자 박스
             let ptxt = $(".ptxt");
@@ -108,7 +115,7 @@
 
             /////////////////////////////////////
             // 퍼센트 증가 함수 //////////////////
-            let prog = function(num){//num-퍼센트값
+            let prog = function (num) { //num-퍼센트값
 
                 // 퍼센트값 증가
                 let pers = ptxt.text();
@@ -123,7 +130,7 @@
                 // 300*0.4=120%
 
                 // 계산하기
-                let calc = 300 * (100-pers)/100;
+                let calc = 300 * (100 - pers) / 100;
                 // 계산법 : 전체옵셋값 X (100%-현재%)/100
 
                 c1.css({
@@ -132,11 +139,11 @@
 
                 // 재귀호출(자기자신을 다시 호출!)
                 // 자기자신을 호출하는 조건(퍼센트한계)
-                if(pers < num){
+                if (pers < num) {
 
                     setTimeout(() => {
                         prog(num);
-                    }, 50);/// 타임아웃 //
+                    }, 50); /// 타임아웃 //
 
                 } //////// if /////////////
 
@@ -144,13 +151,13 @@
             /////////////////////////////////////
 
             // 버튼 클릭시
-            $(".act button").click(function(){
+            $(".act button").click(function () {
 
                 // 버튼 글자읽기
                 let btxt = $(this).text();
                 console.log(btxt);
 
-                if(btxt==="팽수1") prog(77);
+                if (btxt === "팽수1") prog(77);
 
             }); //////////// click ///////////////
 
@@ -160,15 +167,50 @@
 
 <body>
 
+    <ul class="pbx">
+        <li>
+            <div class="btns">
+                <!-- 숫자퍼센트박스 -->
+                <span class="txt"><b class="ptxt">0</b>%</span>
+                <!-- svg박스 -->
+                <svg viewBox="0 0 200 200">
+                    <circle class="c1" cx="100" cy="100" r="95" transform="rotate(-90,100,100)"></circle>
+                </svg>
+            </div>
+        </li>
+        <li>
+            <div class="btns">
+                <!-- 숫자퍼센트박스 -->
+                <span class="txt"><b class="ptxt">0</b>%</span>
+                <!-- svg박스 -->
+                <svg viewBox="0 0 200 200">
+                    <circle class="c1" cx="100" cy="100" r="95" transform="rotate(-90,100,100)"></circle>
+                </svg>
+            </div>
+        </li>
+        <li>
+            <div class="btns">
+                <!-- 숫자퍼센트박스 -->
+                <span class="txt"><b class="ptxt">0</b>%</span>
+                <!-- svg박스 -->
+                <svg viewBox="0 0 200 200">
+                    <circle class="c1" cx="100" cy="100" r="95" transform="rotate(-90,100,100)"></circle>
+                </svg>
+            </div>
+        </li>
+        <li>
+            <div class="btns">
+                <!-- 숫자퍼센트박스 -->
+                <span class="txt"><b class="ptxt">0</b>%</span>
+                <!-- svg박스 -->
+                <svg viewBox="0 0 200 200">
+                    <circle class="c1" cx="100" cy="100" r="95" transform="rotate(-90,100,100)"></circle>
+                </svg>
+            </div>
+        </li>
+    </ul>
 
-    <div class="btns">
-        <!-- 숫자퍼센트박스 -->
-        <span class="txt"><b class="ptxt">0</b>%</span>
-        <!-- svg박스 -->
-        <svg viewBox="0 0 200 200">
-            <circle class="c1" cx="100" cy="100" r="95" transform="rotate(-90,100,100)"></circle>
-        </svg>
-    </div>
+
 
     <div class="act">
         <button>팽수1</button>
