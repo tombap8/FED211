@@ -106,7 +106,24 @@ select:focus {
 #seleml {
     width: 146px;
     height: 40px;
-    border: 1px solid #555;
+    border: 1px solid #737373;
     border-radius: 5px;
     font-size: 1.125rem;
+}
+
+/* 이메일 직접입력창 */
+#meminfo #email2 {
+    width: 139px;
+    margin-left: 201px;
+    display: none;/* 처음에 안보임 */
+}
+
+/* 가입하기 버튼 */
+#btnj {
+    width: 113px;
+    height: 40px;
+    border: 1px solid #737373;
+    border-radius: 5px;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #ddd, #555);
 }
