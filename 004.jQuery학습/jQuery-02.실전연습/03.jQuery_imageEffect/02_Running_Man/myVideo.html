@@ -40,7 +40,7 @@
             transform: translateY(-50%);
             font-family: 'Lobster', cursive;
             font-size: 10vw;
-            color: #fff;
+            color: red;
             text-align: center;
             text-shadow: 3px 3px 3px #000;
             z-index: 1;
@@ -80,8 +80,11 @@
         let fc = ["red","orange","yellow","white","blue","green"];
         // 글자색순번
         let fcseq = 0;
-
+        
         $(function () { /// jQB /////////////////////////////
+            
+            // 글자박스
+            let mtit = $(".mtit");
 
             // 애니메이션박스
             let ani = $("#myvideo");
@@ -125,6 +128,11 @@
             // 장면넘기기 인터발호출!
             setInterval(nextFrm, 40);
             // 전달값이 없는 함수는 이름만바로 써도됨!
+
+            // 3초 간격으로 글자체, 글자색 변경하기
+            setInterval(() => {
+                
+            }, 3000);
 
 
 
