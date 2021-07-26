@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼센트 애니메이션</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom, rgb(223, 219, 255), rgb(255, 204, 247), skyblue);
+        }
+
+        /* 원을 담는 박스 */
+        .btns {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20%;
+            min-width: 150px;
+            background: url(images/pang.jpg) no-repeat top/cover;
+            border-radius: 50%;
+        }
+
+        /* 비율밀기 */
+        .btns::before {
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+
+        /* svg셋팅 */
+        .btns svg {
+            position: absolute;
+            top: 0;
+            /* 부모박스가 패딩탑으로 비율밀기하므로
+            앱솔로 부모박스 맨위로 위치고정! 
+            svg 자체는 viewBox설정 때문에 채우기 비율유지함!*/
+        }
+
+        /* circle 설정 */
+        .c1 {
+            fill: none;
+            /* 채우기-기본색은 검정색(transparent-투명,none-없음) */
+            stroke: rgb(255, 0, 242);
+            /* 선색(안쓰면 안나옴) */
+            stroke-width: 10;
+            /* 선두께는 안쓰면 1px, 단위없으면 px */
+            stroke-linecap: round;
+            /* 선끝둥글게 */
+
+            stroke-dasharray: 300%;
+            /* 데쉬어레이를 50%로 놓고 선,공백이 몇조각나는지 본다!
+            50% * 6조각 = 300% 즉, 선으로만 채우는 크기임! */
+
+            stroke-dashoffset: 300%;
+            /* 데쉬어레이와 같은 크기를 데쉬옵셋에 주면 시작점이
+            밀려서 공백부터 시작함-> 선이 숨겨지는 효과가 생김! */
+
+            /* 오버시 애니효과 위해 트랜지션주기 */
+            transition: .7s ease-in-out;
+        }
+
+        /* .btns 에 마우스 오버시 circle 옵셋값 0으로! */
+        .btns:hover .c1 {
+            stroke-dashoffset: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="btns">
+        <!-- 숫자퍼센트박스 -->
+        <span class="txt"><b>0</b>%</span>
+        <!-- svg박스 -->
+        <svg viewBox="0 0 200 200">
+            <circle class="c1" cx="100" cy="100" r="95" transform="rotate(-90,100,100)"></circle>
+        </svg>
+    </div>
+
+</body>
+
+</html>
