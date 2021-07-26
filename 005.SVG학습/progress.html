@@ -104,12 +104,38 @@
     <script>
         $(function(){ //////// jQB ///////////////////
 
+            // 퍼센트숫자 박스
+            let ptxt = $(".ptxt");
+
+
+            /////////////////////////////////////
+            // 퍼센트 증가 함수 //////////////////
+            let prog = function(){
+
+                // 퍼센트값 증가
+                let pers = ptxt.text();
+                pers++;
+                ptxt.text(pers);
+
+                // 재귀호출(자기자신을 다시 호출!)
+                // 자기자신을 호출하는 조건(퍼센트한계)
+                if(pers < 79){
+                    setTimeout(() => {
+                        prog()
+                    }, 200);
+                } //////// if /////////////
+
+            }; //////// prog함수 ////////////////
+            /////////////////////////////////////
+
             // 버튼 클릭시
             $(".act button").click(function(){
 
                 // 버튼 글자읽기
                 let btxt = $(this).text();
                 console.log(btxt);
+
+                if(btxt==="팽수1") prog();
 
             }); //////////// click ///////////////
 
@@ -122,7 +148,7 @@
 
     <div class="btns">
         <!-- 숫자퍼센트박스 -->
-        <span class="txt"><b>0</b>%</span>
+        <span class="txt"><b class="ptxt">0</b>%</span>
         <!-- svg박스 -->
         <svg viewBox="0 0 200 200">
             <circle class="c1" cx="100" cy="100" r="95" transform="rotate(-90,100,100)"></circle>
