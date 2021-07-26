@@ -19,7 +19,7 @@
         }
 
         /* 파티션 박스 */
-        .pbx{
+        .pbx {
             display: flex;
             justify-content: space-evenly;
             margin: 0;
@@ -101,7 +101,7 @@
         }
 
         /* 선형 퍼센트바 */
-        .lineper{
+        .lineper {
             position: relative;
             width: 60%;
             height: 100px;
@@ -110,29 +110,31 @@
             border: 5px solid blue;
             background-color: #ccc;
         }
+
         /* 선형 퍼센트 숫자박스 */
-        .ltxt{
+        .ltxt {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             font-size: 5vw;
             color: #fff;
             text-shadow: 3px 3px 3px #000;
             z-index: 1;
         }
+
         /* 선형 퍼센트바 */
-        .lbar{
+        .lbar {
             position: absolute;
             top: 0;
             left: 0;
             width: 0;
             height: 100%;
             background: url(images/pang.jpg) repeat-x 0/auto 100%;
+
+            /* 트랜지션: 퍼센트 증가에 따른 애니메이션 */
+            transition: .2s linear;
         }
-
-
-
     </style>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
@@ -140,76 +142,111 @@
 
             ///////////////////////////////////////
             // 여러개의 퍼센트박스를 처리할 함수 ////
-            let pFn = function(ele,pct){//ele-대상요소, pct-퍼센트
-                
+            let pFn = function (ele, pct) { //ele-대상요소, pct-퍼센트
+
                 // 퍼센트숫자 박스
                 let ptxt = $(".btns").eq(ele).find(".ptxt");
-                
+
                 // svg circle요소
                 let c1 = $(".btns").eq(ele).find(".c1");
-                
-                
+
+
                 /////////////////////////////////////
                 // 퍼센트 증가 함수 //////////////////
                 let prog = function (num) { //num-퍼센트값
-                    
+
                     // 퍼센트값 증가
                     let pers = ptxt.text();
                     pers++;
                     ptxt.text(pers);
-                    
+
                     // svg circle 변경
                     // 분할 된 값을 계산함!
                     // 전체는 300%의 60%라면
                     // 실제는 나머지 퍼센트를 밀어야 하므로
                     // 60%는 100%-60%=40% 이다!
                     // 300*0.4=120%
-                    
+
                     // 계산하기
                     let calc = 300 * (100 - pers) / 100;
                     // 계산법 : 전체옵셋값 X (100%-현재%)/100
-                    
+
                     c1.css({
                         strokeDashoffset: calc + "%"
                     }); ////// css //////////
-                    
+
                     // 재귀호출(자기자신을 다시 호출!)
                     // 자기자신을 호출하는 조건(퍼센트한계)
                     if (pers < num) {
-                        
+
                         setTimeout(() => {
                             prog(num);
                         }, 30); /// 타임아웃 //
-                        
+
                     } //////// if /////////////
-                    
+
                 }; //////// prog함수 ////////////////
                 /////////////////////////////////////
 
                 // 함수를 최초호출함!
-                prog(pct);//퍼센트를 전달함!
-                
+                prog(pct); //퍼센트를 전달함!
+
             } ///////////// pFn 함수 ////////////////
+            /////////////////////////////////////////
+
+            // 선형 퍼센트 숫자박스
+            let ltxt = $(".ltxt b");
+            // 선형 퍼센트 바
+            let lbar = $(".lbar");
+
+            ///////////////////////////////////////
+            ////////// 선형 퍼센트 바 함수 //////////
+            ////////////////////////////////////////
+            let lineFn = function (num) { // num-퍼센트수치
+                // 퍼센트값 증가
+                let pers = ltxt.text();
+                pers++;
+                ltxt.text(pers);
+
+                // 선형바 width값 증가
+                lbar.css({
+                    width: pers + "%"
+                }); ///////// css ////////
+
+                // 재귀호출(자기자신을 다시 호출!)
+                // 자기자신을 호출하는 조건(퍼센트한계)
+                if (pers < num) {
+
+                    setTimeout(() => {
+                        lineFn(num);
+                    }, 50); /// 타임아웃 //
+
+                } //////// if /////////////
+
+            }; //////// lineFn 함수 /////////////////
             /////////////////////////////////////////
 
 
 
-                // 버튼 클릭시
-                $(".act button").click(function () {
-                    
-                    // 버튼 글자읽기
-                    let btxt = $(this).text();
-                    console.log(btxt);
-                    
-                    if (btxt === "팽수1"){ 
-                        pFn(0,77);
-                        pFn(1,63);
-                        pFn(2,88);
-                        pFn(3,95);
-                    } ///////// if문 /////////
-                    
-                }); //////////// click ///////////////
-                
+            // 버튼 클릭시
+            $(".act button").click(function () {
+
+                // 버튼 글자읽기
+                let btxt = $(this).text();
+                console.log(btxt);
+
+                if (btxt === "팽수1") {
+                    pFn(0, 77);
+                    pFn(1, 63);
+                    pFn(2, 88);
+                    pFn(3, 95);
+                } ///////// if문 /////////
+                else if (btxt === "팽수2") {
+                    lineFn(80);
+                } //////// else if문 //////
+
+            }); //////////// click ///////////////
+
         }); ////////////////// jQB ///////////////////
     </script>
 </head>
