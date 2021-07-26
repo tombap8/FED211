@@ -62,7 +62,7 @@
     /* 한줄에 하나씩 */
     height: 50px;
     line-height: 50px;
-    outline: 2px dotted red;
+    /* outline: 2px dotted red; */
 }
 
 /* 라벨공통 */
@@ -126,4 +126,7 @@ select:focus {
     border-radius: 5px;
     color: #fff;
     background-image: linear-gradient(to bottom, #ddd, #555);
+    float: right;/* 오른쪽 위치! */    
+    margin-right: 40px;
+    margin-top: 6px;
 }
