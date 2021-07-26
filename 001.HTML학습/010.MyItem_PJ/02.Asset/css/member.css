@@ -7,14 +7,14 @@
 @import url(common.css);
 
 /* 컨텐츠 박스 높이 변경하기 */
-#cont{
+#cont {
     height: 800px;
     overflow: hidden;
     /* 자식요소의 마진포함 */
 }
 
 /* 서브 타이틀 */
-.stit{
+.stit {
     width: 700px;
     height: 45px;
     margin: 0 auto;
@@ -24,8 +24,9 @@
     color: #777;
     text-shadow: 1px 1px 1px #999;
 }
+
 /* 가상요소로 아이콘 넣기 */
-.stit::before{
+.stit::before {
     content: url(../images/mem_icon.png);
     vertical-align: -10px;
     margin-left: 5px;
@@ -33,7 +34,7 @@
 }
 
 /* 회원가입박스 */
-#meminfo{
+#meminfo {
     width: 700px;
     height: 464px;
     margin: 0 auto;
@@ -41,32 +42,39 @@
     border: 2px solid #737373;
     border-radius: 10px;
     padding: 30px 51px;
-    box-sizing: border-box;/* 보더,패딩포함 */
+    box-sizing: border-box;
+    /* 보더,패딩포함 */
 }
+
 /* 리스트 ul */
-#meminfo ul{
+#meminfo ul {
     width: 100%;
     height: 100%;
-    font-size: 1.25rem;/* 20px */
+    font-size: 1.25rem;
+    /* 20px */
     font-weight: bold;
     color: #373737;
 }
+
 /* 리스트 li */
-#meminfo li{
-    width: 100%;/* 한줄에 하나씩 */
+#meminfo li {
+    width: 100%;
+    /* 한줄에 하나씩 */
     height: 50px;
     line-height: 50px;
     outline: 2px dotted red;
 }
+
 /* 라벨공통 */
-#meminfo label{
+#meminfo label {
     display: inline-block;
     /* 가로크기 디자인적용위해 */
     width: 200px;
 }
 
 /* 크롬브라우저 포커스 아웃라인 없애기 */
-input:focus {
+input:focus,
+select:focus {
     outline: none;
 }
 
@@ -75,14 +83,30 @@ input:focus {
 #meminfo input[type=password] {
     width: 340px;
     height: 36px;
-    font-size: 1.125rem;/* 18px */
+    font-size: 1.125rem;
+    /* 18px */
     border: 1px solid #737373;
     border-radius: 5px;
     padding-left: 5px;
 }
+
 /* 라디오버튼 */
-#meminfo input[type=radio]{
+#meminfo input[type=radio] {
     width: 20px;
     height: 20px;
     vertical-align: -4px;
+}
+
+/* 이메일 입력창 */
+#meminfo #email1 {
+    width: 170px;
+}
+
+/* 이메일 선택박스 */
+#seleml {
+    width: 146px;
+    height: 40px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1.125rem;
 }
