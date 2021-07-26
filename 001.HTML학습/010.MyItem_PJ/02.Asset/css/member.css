@@ -6,3 +6,28 @@
 @import url(core.css);
 @import url(common.css);
 
+/* 컨텐츠 박스 높이 변경하기 */
+#cont{
+    height: 800px;
+    overflow: hidden;
+    /* 자식요소의 마진포함 */
+}
+
+/* 서브 타이틀 */
+.stit{
+    width: 700px;
+    height: 45px;
+    margin: 0 auto;
+    margin-top: 80px;
+    font-size: 20px;
+    line-height: 45px;
+    color: #777;
+    text-shadow: 1px 1px 1px #999;
+}
+/* 가상요소로 아이콘 넣기 */
+.stit::before{
+    content: url(../images/mem_icon.png);
+    vertical-align: 0px;
+    margin-left: 0;
+    margin-right: 0;
+}
