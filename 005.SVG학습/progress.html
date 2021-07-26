@@ -65,13 +65,8 @@
             /* 데쉬어레이와 같은 크기를 데쉬옵셋에 주면 시작점이
             밀려서 공백부터 시작함-> 선이 숨겨지는 효과가 생김! */
 
-            /* 오버시 애니효과 위해 트랜지션주기 */
-            transition: .7s ease-in-out;
-        }
-
-        /* .btns 에 마우스 오버시 circle 옵셋값 0으로! */
-        .btns:hover .c1 {
-            stroke-dashoffset: 0;
+            /* 트랜지션: 퍼센트 증가에 따른 애니메이션 */
+            transition: .1s linear;
         }
 
 
@@ -107,22 +102,42 @@
             // 퍼센트숫자 박스
             let ptxt = $(".ptxt");
 
+            // svg circle요소
+            let c1 = $(".c1");
+
 
             /////////////////////////////////////
             // 퍼센트 증가 함수 //////////////////
-            let prog = function(){
+            let prog = function(num){//num-퍼센트값
 
                 // 퍼센트값 증가
                 let pers = ptxt.text();
                 pers++;
                 ptxt.text(pers);
 
+                // svg circle 변경
+                // 분할 된 값을 계산함!
+                // 전체는 300%의 60%라면
+                // 실제는 나머지 퍼센트를 밀어야 하므로
+                // 60%는 100%-60%=40% 이다!
+                // 300*0.4=120%
+
+                // 계산하기
+                let calc = 300 * (100-pers)/100;
+                // 계산법 : 전체옵셋값 X (100%-현재%)/100
+
+                c1.css({
+                    strokeDashoffset: calc + "%"
+                }); ////// css //////////
+
                 // 재귀호출(자기자신을 다시 호출!)
                 // 자기자신을 호출하는 조건(퍼센트한계)
-                if(pers < 79){
+                if(pers < num){
+
                     setTimeout(() => {
-                        prog()
-                    }, 200);
+                        prog(num);
+                    }, 50);/// 타임아웃 //
+
                 } //////// if /////////////
 
             }; //////// prog함수 ////////////////
@@ -135,7 +150,7 @@
                 let btxt = $(this).text();
                 console.log(btxt);
 
-                if(btxt==="팽수1") prog();
+                if(btxt==="팽수1") prog(77);
 
             }); //////////// click ///////////////
 
