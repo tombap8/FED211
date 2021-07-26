@@ -131,8 +131,20 @@
 
             // 3초 간격으로 글자체, 글자색 변경하기
             setInterval(() => {
-                
-            }, 3000);
+
+                // 글자체순번증가
+                ffseq++;
+                if(ffseq===ff.length) ffseq=0;
+                // 글자색순번증가
+                fcseq++;
+                if(fcseq===fc.length) fcseq=0;
+
+                // 글자박스 CSS변경하기: 글자체+글자색
+                mtit.css({
+                    fontFamily: ff[ffseq],
+                    color:fc[fcseq]
+                }); /////// css //////////
+            }, 3000); ///// 인터발함수 ///////
 
 
 
