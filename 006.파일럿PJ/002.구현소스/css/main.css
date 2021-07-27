@@ -201,7 +201,6 @@
     display: flex;/* 플렉스박스 */
     justify-content: space-between;
     width: 200px;
-    opacity: 0.7;
     /* outline: 1px solid blue;   */
 }
 .bindic li{
@@ -209,6 +208,7 @@
     height: 15px;
     background-color: #fff;
     border-radius: 50%;
+    opacity: 0.4;
     box-shadow: 0 0 2px #777;
 }
 .bindic a{/* 링크영역확장 */
@@ -218,7 +218,7 @@
 }
 /* 선택블릿 */
 .bindic li.on{
-    background-color: #777;
+    opacity: 1;
 }
 
 
