@@ -219,6 +219,7 @@
 /* 선택블릿 */
 .bindic li.on{
     opacity: 1;
+    box-shadow: 0 0 5px #000;
 }
 
 

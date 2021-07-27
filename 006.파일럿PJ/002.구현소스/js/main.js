@@ -81,13 +81,13 @@ $(function () { /// jQB ////////////////////////
 
     }); //////////// click ////////////
 
-    // 배너블릿
+    // 배너블릿 //////////////////
     let bindic = $(".bindic li");
 
     ///// 배너순번 블릿 변경함수 /////
     let chgIndic = function(){
         bindic.eq(bseq).addClass("on")
-        siblings().removeClass("on");
+        .siblings().removeClass("on");
     }; /////////// chgIndic ///////////////
 
 
@@ -157,6 +157,11 @@ $(function () { /// jQB ////////////////////////
 
             }); //////// animate //////////
 
+            // 배너블릿변경하기 //
+            bseq++;
+            if(bseq===6)bseq=0;
+            chgIndic();
+
         } /////////// if //////////////////
 
         // 2.-90% 보다 크면 슬라이드를 오른쪽으로 애니메이션 이동한다.
@@ -178,6 +183,10 @@ $(function () { /// jQB ////////////////////////
 
             }); //////////// animate ///////
 
+            // 배너블릿변경하기 //
+            bseq--;
+            if(bseq===-1)bseq=5;
+            chgIndic();
 
         } /////////// else if //////////////////
 
