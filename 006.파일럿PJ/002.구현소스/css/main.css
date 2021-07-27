@@ -194,8 +194,8 @@
 /* 배너블릿박스 */
 .bindic{
     position: absolute;
-    bottom: 4%;
-    left: 4%;
+    bottom: 5%;
+    left: 5%;
     /* 부모는? #ban */  
 
     display: flex;/* 플렉스박스 */
