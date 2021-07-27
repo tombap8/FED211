@@ -24,6 +24,10 @@
     color: #f00;
     white-space: nowrap;
 }
+/* 메시지 글자색변경 */
+.msg.on{
+    color: green;
+}
 
 /* 서브 타이틀 */
 .stit {
