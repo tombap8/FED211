@@ -122,14 +122,29 @@ $(function () { /// jQB ////////////////////////
         let tit = bantxt[cls]
         // console.log("배너타이틀:"+tit);
 
+        // 배너에 h2요소 넣기전 지우기
+        $(".btit").remove();
+
         // 3. h2태그를 배너li에 삽입한다!
         sld.eq(1).append('<h2 class="btit"></h2>');
+
+        // 화면구성상 왼쪽과 오른쪽으로 글자가 위치해야함
+        // ban2, ban3은 오른쪽위치임
+        let lval = "20%";
+        if(cls === "ban2" || cls === "ban3") lval = "70%";
 
         // 4. h2태그에 배너 타이틀을 html로 넣는다!
         $(".btit").html(tit)
         // 5. 배너 타이틀 박스를 디자인한다!
         .css({
-            font: "bold 5vw Verdana"
+            position: "absolute",
+            top: "50%",
+            left: lval, // 배너에 따라 다른 값
+            transform: "translate(-50%,-50%)",
+            font: "bold 8vmin Verdana",
+            color: "#fff",
+            textShadow: "1px 1px 3px #777",
+            whiteSpace: "nowrap"
         }); //////// css //////////
         
 
