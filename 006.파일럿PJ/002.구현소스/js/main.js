@@ -90,6 +90,21 @@ $(function () { /// jQB ////////////////////////
         .siblings().removeClass("on");
     }; /////////// chgIndic ///////////////
 
+    /* ///////////////////////////////////////////////////////
+        함수명: banTit
+        기능: 각 배너 슬라이드에 도착 후 글자 등장 애니메이션하기
+    *////////////////////////////////////////////////////////
+
+    // 각 배너 등장 타이틀 셋팅 //
+    let bantxt = {
+        "ban1":"Men's Season<br>Collection",
+        "ban2":"2021 Special<br>Collection",
+        "ban3":"GongYoo<br>Collection",
+        "ban4":"T-Shirt<br>Collection",
+        "ban5":"Shoes<br>Collection",
+        "ban6":"Wind Jacket<br>Collection",
+    }; ///// bantxt객체 /////////
+
 
     //////////////////////////////////////
     /// 배너 드래그 이동하기 ///////////////
