@@ -138,15 +138,20 @@ $(function () { /// jQB ////////////////////////
         // 5. 배너 타이틀 박스를 디자인한다!
         .css({
             position: "absolute",
-            top: "50%",
+            top: "55%", // 처음에 약간 아래쪽 위치
             left: lval, // 배너에 따라 다른 값
             transform: "translate(-50%,-50%)",
             font: "bold 8vmin Verdana",
             color: "#fff",
             textShadow: "1px 1px 3px #777",
-            whiteSpace: "nowrap"
-        }); //////// css //////////
-        
+            whiteSpace: "nowrap",
+            opacity: 0 // 처음에 투명
+        }) //////// css //////////
+        // 6. 아래서 위로 올라오며 투명도 복원애니
+        .animate({
+            top: "50%",
+            opacity: 1
+        }, 1000, "easeInOutQuart");
 
 
 
