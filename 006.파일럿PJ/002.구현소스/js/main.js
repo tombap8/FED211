@@ -26,12 +26,12 @@ $(function () { /// jQB ////////////////////////
 
         // 0. 클릭된 li순번 구해오기
         let idx = $(this).index();
-        console.log("순번:" + idx);
+        //console.log("순번:" + idx);
         
 
         // 1. 하위a요소의 href값 읽어오기
         // let idnm = $("a", this).attr("href");
-        // console.log("href값:" + idnm);
+        // //console.log("href값:" + idnm);
 
         // 2. 아이디값에 해당하위 top값 위치구하기
         // top값을 구해서 스크롤 애니메이션 이동에 사용함!
@@ -46,7 +46,7 @@ $(function () { /// jQB ////////////////////////
         ////////////////////////////////////////////////////
         // 새로운 페이지 위치값 : 윈도우 높이값 * 페이지순번 //
         let pos = $(window).height() * idx;
-        console.log("위치값:" + pos);
+        //console.log("위치값:" + pos);
         ///////////////////////////////////////////////////
 
         // 3. 스크롤 애니메이션으로 페이지 이동하기
@@ -67,7 +67,7 @@ $(function () { /// jQB ////////////////////////
 
         // 6. li순번과 pno와 일치하기! /////////////////////
         pno = idx;
-        console.log("페이지번호:" + pno);
+        //console.log("페이지번호:" + pno);
 
     }); ///////////// click ///////////////
 
@@ -102,21 +102,25 @@ $(function () { /// jQB ////////////////////////
         "ban6":"Wind Jacket<br>Collection"
     }; ///////////// bantxt객체 //////////////
 
-    /// 슬라이드 li요소
-    let sld = $(".slide li");
     
     /* ///////////////////////////////////////////////////////
-        함수명: banTit
-        기능: 각 배너 슬라이드에 도착 후 글자 등장 애니메이션하기
-        호출: 배너이동후 콜백함수로 호출함
+    함수명: banTit
+    기능: 각 배너 슬라이드에 도착 후 글자 등장 애니메이션하기
+    호출: 배너이동후 콜백함수로 호출함
     *////////////////////////////////////////////////////////
     let banTit = function(){
+
+        /// 슬라이드 li요소 -> 매번 li의 순서가 바뀜(새로읽어야함!)
+        let sld = $(".slide li");
 
         // 화면에 보이는 배너는 항상 도착후엔 두번째 슬라이드임!
         // 그래서 두번째 슬라이드의 class명을 읽어온다!
         // 왜냐하면 배너의 class명으로 객체에 배너타이틀을 셋팅함!
         let cls = sld.eq(1).attr("class");
-        console.log("배너클래스명:"+cls);
+
+        // 클래스명으로 배너타이틀 객체값 읽어오기
+        let tit = bantxt[cls]
+        console.log("배너타이틀:"+tit);
 
 
     };////////// banTit 함수 /////////////////////////////////
@@ -162,12 +166,12 @@ $(function () { /// jQB ////////////////////////
 
         // 화면의 width크기
         let winW = $(window).width();
-        console.log("윈도우width:"+winW);
+        //console.log("윈도우width:"+winW);
 
         // 알아야할 값! -> 슬라이드의 left값!
         let sLeft = $(this).offset().left;
         // offset().left 는 현재 선택요소의 left값 구하기
-        console.log("현재left:"+sLeft);
+        //console.log("현재left:"+sLeft);
 
         // 1. -110% 보다 작으면 슬라이드를 왼쪽으로 애니메이션 이동한다.
         if(sLeft < -winW * 1.1){
