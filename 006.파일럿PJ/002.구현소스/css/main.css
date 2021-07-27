@@ -234,12 +234,12 @@
 /* 왼쪽영역 */
 .ar1 {
     left: 0;
-    background-color: #ffafaf;
+    /* background-color: #ffafaf; */
 }
 /* 오른쪽영역 */
 .ar2 {
     right: 0;
-    background-color: #769bff;
+    /* background-color: #769bff; */
 }
 
 /*팔로워*/
@@ -259,8 +259,8 @@
     transform: scale(0);
     border-radius: 50%;
     background-color: #fff;
+    opacity: 0.7;
     transition: all .1s;
-    cursor: pointer;
 }
 
 /*버튼글자박스*/
@@ -271,11 +271,12 @@
     top: 0;
     left: 0;
     transform: translate(-50%, -50%) scale(0);
-/*            outline: 1px solid red;*/
+    /*            outline: 1px solid red;*/
     font: 22px/80px Verdana;
     color: #555;
     text-align: center;
     transition: all .1s;
+    cursor: pointer;/* 손가락모양 */
 }
 
 
