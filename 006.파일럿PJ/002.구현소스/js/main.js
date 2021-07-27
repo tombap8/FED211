@@ -141,7 +141,7 @@ $(function () { /// jQB ////////////////////////
             top: "55%", // 처음에 약간 아래쪽 위치
             left: lval, // 배너에 따라 다른 값
             transform: "translate(-50%,-50%)",
-            font: "bold 5vmax Verdana",
+            font: "bold 4.5vmax Verdana",
             color: "#fff",
             textShadow: "1px 1px 3px #777",
             whiteSpace: "nowrap",
