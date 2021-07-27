@@ -13,6 +13,18 @@
     /* 자식요소의 마진포함 */
 }
 
+/* 메시지박스 */
+.msg {
+    display: block;
+    width: 100px;
+    height: 15px;
+    line-height: 12px;
+    margin-top: -12px;
+    font-size: 9px;
+    color: #f00;
+    white-space: nowrap;
+}
+
 /* 서브 타이틀 */
 .stit {
     width: 700px;
