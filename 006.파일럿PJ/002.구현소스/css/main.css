@@ -191,6 +191,21 @@
     display: none;
 }
 
+/* 배너블릿박스 */
+.bindic{
+    position: absolute;
+    bottom: 4%;
+    left: 1.5%;
+    /* 부모는? #ban */    
+
+}
+.bindic li{
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+}
+
+
 /********** 2-2.남성의류영역 ***********/
 #men {
     background-color: darkorange;
