@@ -81,6 +81,15 @@ $(function () { /// jQB ////////////////////////
 
     }); //////////// click ////////////
 
+    // 배너블릿
+    let bindic = $(".bindic li");
+
+    ///// 배너순번 블릿 변경함수 /////
+    let chgIndic = function(){
+        bindic.eq(bseq).addClass("on")
+        siblings().removeClass("on");
+    }; /////////// chgIndic ///////////////
+
 
     //////////////////////////////////////
     /// 배너 드래그 이동하기 ///////////////
