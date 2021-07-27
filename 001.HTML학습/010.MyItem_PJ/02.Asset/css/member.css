@@ -129,4 +129,6 @@ select:focus {
     float: right;/* 오른쪽 위치! */    
     margin-right: 40px;
     margin-top: 6px;
+    font: bold 16px 'ng';
+    cursor: pointer;
 }
