@@ -23,12 +23,12 @@ $(function () { //// jQB ///////////////////////////////////
             let cid = $(this).attr("id");
 
             // 2. 입력된 값 알아오기 : val() 메서드
-            // 이름만 앞뒤공백만제거 -> trim() -> 내장함수
-            // 나머지는 모든공백제거 -> groSpace() -> 구현함수
             let cv;
-            if (cid === "mnm") cv = $(this).val().trim();
-            else cv = groSpace($(this).val());
             // trim() 메서드 : 앞뒤공백제거+공백만 있어도 제거
+            if (cid === "mnm") cv = $(this).val().trim();
+            // 이름만 앞뒤공백만제거 -> trim() -> 내장함수
+            else cv = groSpace($(this).val());
+            // 나머지는 모든공백제거 -> groSpace() -> 구현함수
 
             // 공백 제거된 값을 다시 입력항목에 넣기!-> 서비스!
             $(this).val(cv);
