@@ -142,7 +142,19 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 99999;
+    z-index: 9999;
+}
+/* 가상요소로 반투명배경 */
+.mbox::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
 }
 
 /* 메뉴중앙박스 */
@@ -154,6 +166,7 @@
 
     display: flex;/* 플렉스박스 */
     font-family: UB;
+    z-index: 1;/* 반투명배경보다 위 */
 }
 /* 메뉴별박스 */
 .mlist dl{
@@ -163,7 +176,7 @@
 .mlist dt{
     font-size: 2.8rem;
     margin-bottom: 20px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
     padding-bottom: 10px;
 }
 /* 하위메뉴 */
@@ -175,6 +188,10 @@
 /* 링크공통 */
 .mlist a{
     color: #fff;
+}
+/* 오버시 글자색 */
+.mlist a:hover{
+    color: aqua;
 }
 
 /* 동영상 박스 */
