@@ -110,9 +110,17 @@ $(function () { //// jQB ///////////////////////////////////
         // 2. keyup : 키가 눌렸다가 올라올때
         // 3. keydown : 키가 눌려져 내려갈때
         // 과연 글자가 입력되는 순간은 어떤 키보드 이벤트를 써야할까?
+        // -> 현재 입력된 문자를 바로 반영하려면 "keyup" 이벤트사용!
 
-        // 이벤트 대상: #email1, #email2
-        $("#email1, #email2").on("keypress",function(){
+        // 이메일 앞주소
+        let eml1 = $("#email1");
+        // 이메일 뒷주소
+        let eml2 = $("#email2");
+        // 이메일 선택박스
+        let seleml = $("#seleml");
+
+        // 이벤트 대상: #email1, #email2 ////////////
+        $("#email1, #email2").on("keyup",function(){
 
             // 1. 현재 이벤트 대상 아이디 읽어오기
             let cid = $(this).attr("id");
