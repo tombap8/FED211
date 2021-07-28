@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mask Effect</title>
     <style>
-        html,body{
+        html,
+        body {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
         }
+
         /* 전체부모박스 */
-        .wrap{
+        .wrap {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -21,8 +24,48 @@
             height: 455px;
             outline: 1px solid red;
         }
+
+        /* 1. 배경고정이미지박스 */
+        #bg {
+            position: absolute;
+            width: 1007px;
+            height: 455px;
+            background: url(./images/main2.jpg) no-repeat fixed;
+        }
     </style>
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.min.js"></script>
+    <script>
+        $(function () { ////// jQB /////////////////////
+
+            // 전체박스
+            let wrap = $(".wrap");
+
+            // 고정된 배경이미지 위치보정함수
+            let fixedPos = () => {
+                // 배경이미지를 고정할 경우 보이는 화면에
+                // 위치가 고정되므로 유동적인 박스위치에 배경
+                // 이미지 위치를 재설정해야함!
+
+                // 배경이미지 top위치값 보정
+                // 박스 top위치값 +  박스높이값의 절반
+                // transform으로 자기크기의 절반을 이동했으므로
+                // 박스 높이값으리 절반을 더해야한다!!!
+                let bgtop =
+                    wrap.offset().top +
+                    wrap.height() / 2;
+                    console.log("보정top:"+bgtop);
+
+
+            }; /////////// fixedPos 함수 //////////
+
+            // 위치 보정함수 호출!!!
+            fixedPos();
+
+        }); /////////////// jQB //////////////////////
+    </script>
 </head>
+
 <body>
     <!-- 마스크 효과박스 -->
     <div class="wrap">
@@ -33,6 +76,7 @@
         <!-- 3. 이벤트대상박스 -->
         <div id="cover"></div>
     </div>
-    
+
 </body>
+
 </html>
