@@ -32,6 +32,13 @@
             height: 455px;
             background: url(./images/main2.jpg) no-repeat fixed;
         }
+        /* 2. 마스크효과이동박스 */
+        #mask {
+            position: absolute;
+            width: 1007px;
+            height: 455px;
+            background: url(./images/main1.jpg) no-repeat fixed;
+        }
     </style>
     <script src="js/jquery-1.8.1.min.js"></script>
     <script src="js/jquery-ui-1.10.4.min.js"></script>
@@ -54,7 +61,7 @@
                 let bgtop =
                     wrap.offset().top +
                     wrap.height() / 2;
-                console.log("보정top:" + bgtop);
+                // console.log("보정top:" + bgtop);
 
                 // 2. 배경이미지 left위치값 보정
                 // 박스 left위치값 +  박스width값의 절반
@@ -63,10 +70,10 @@
                 let bgleft =
                     wrap.offset().left +
                     wrap.width() / 2;
-                console.log("보정left:" + bgleft);
+                // console.log("보정left:" + bgleft);
 
                 // 3. 배경 fixed이미지 위치값 보정 적용하기
-                $("#bg").css({
+                $("#bg, #mask").css({
                     backgroundPositionX: bgleft + "px",
                     backgroundPositionY: bgtop + "px"
                 }); ///////////// css /////////////
