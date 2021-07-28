@@ -47,20 +47,37 @@
                 // 위치가 고정되므로 유동적인 박스위치에 배경
                 // 이미지 위치를 재설정해야함!
 
-                // 배경이미지 top위치값 보정
-                // 박스 top위치값 +  박스높이값의 절반
+                // 1. 배경이미지 top위치값 보정
+                // 박스 top위치값 +  박스height값의 절반
                 // transform으로 자기크기의 절반을 이동했으므로
-                // 박스 높이값으리 절반을 더해야한다!!!
+                // 박스의 height값의 절반을 더해야한다!!!
                 let bgtop =
                     wrap.offset().top +
                     wrap.height() / 2;
-                    console.log("보정top:"+bgtop);
+                console.log("보정top:" + bgtop);
+
+                // 2. 배경이미지 left위치값 보정
+                // 박스 left위치값 +  박스width값의 절반
+                // transform으로 자기크기의 절반을 이동했으므로
+                // 박스의 width값의 절반을 더해야한다!!!
+                let bgleft =
+                    wrap.offset().left +
+                    wrap.width() / 2;
+                console.log("보정left:" + bgleft);
+
+                // 3. 배경 fixed이미지 위치값 보정 적용하기
+                $("#bg").css({
+                    backgroundPositionX: bgleft + "px",
+                    backgroundPositionY: bgtop + "px"
+                }); ///////////// css /////////////
 
 
             }; /////////// fixedPos 함수 //////////
 
-            // 위치 보정함수 호출!!!
+            // 위치 보정함수 최초호출!!!
             fixedPos();
+            // 윈도우 크기 변경시 위치보정함수 호출!!!
+            $(window).resize(fixedPos);
 
         }); /////////////// jQB //////////////////////
     </script>
