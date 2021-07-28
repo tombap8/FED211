@@ -134,16 +134,20 @@ $(function () { //// jQB ///////////////////////////////////
         let backeml =
             cid === "email1" ?
             seleml.val() : eml2.val();
-            // 조건연산자로 선택박스값 또는 직접입력값을 할당한다!
-            // 비?집:놀이동산;
-        
+        // 조건연산자로 선택박스값 또는 직접입력값을 할당한다!
+        // 비?집:놀이동산;
+
         // 4. 선택박스의 값이 "free"(직접입력)이면 이메일 뒷주소변경
-        if(seleml.val() === "free") backeml = eml2.val();
+        if (seleml.val() === "free") backeml = eml2.val();
 
         // 5. 이메일 전체주소 조합하기!
         let comp = eml1.val() + "@" + backeml;
-        console.log("이멜주소:"+comp);
-        
+        console.log("이멜주소:" + comp);
+
+        // 6. 이메일 정규식 검사하기!
+        let res = vReg(comp, "eml");
+        console.log("이멜검사결과:" + res);
+
 
     }); ////////////// 키보드 이벤트 함수 ///////////////////
     ////////////////////////////////////////////////////////
