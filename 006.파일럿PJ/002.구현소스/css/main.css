@@ -144,6 +144,39 @@
     height: 100%;
     z-index: 99999;
 }
+
+/* 메뉴중앙박스 */
+.mlist{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;/* 플렉스박스 */
+    font-family: UB;
+}
+/* 메뉴별박스 */
+.mlist dl{
+    width: 300px;
+}
+/* 상위메뉴 */
+.mlist dt{
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+/* 하위메뉴 */
+.mlist dd{
+    font-size: 2.1rem;
+    padding-bottom: 5px;
+}
+
+/* 링크공통 */
+.mlist a{
+    color: #fff;
+}
+
 /* 동영상 박스 */
 .bgm{
     position: absolute;
