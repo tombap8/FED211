@@ -37,13 +37,28 @@ $(function () { //// jQB ///////////////////////////////////
 
             // 3. 빈값일 경우 "필수입력" 메시지 띄우기!!!
             if (cv === "") {
-                $(this).siblings(".msg").text("필수입력!");
+                $(this).siblings(".msg")
+                .text("필수입력!")
+                .removeClass("on");// 글자색 변경 제거
             } //////////// if문 : 빈값일때 ///////////////
 
             // 4. 아이디일때 검사하기 /////////////////////
             else if(cid === "mid") {
+                // 유효성 검사결과
                 let res = vReg(cv,cid);
                 console.log("검사결과:"+res);
+                
+                // 결과가 false일 경우 메시지 띄우기
+                if(!res){ // !(NOT연산자)로 결과 반대
+                    $(this).siblings(".msg")
+                    .text("영문자로 시작하는 6~20글자 영문자/숫자")
+                    .removeClass("on");//글자색 변경 제거
+                } /////////// if문 : 결과 false ////////
+                else{
+                    $(this).siblings(".msg")
+                    .text("훌륭한 아이디네요~!")
+                    .addClass("on");//글자색 변경 클래스
+                } ////////// else문 : 결과 true ////////
 
             } /////////// else if문 : 아이디일때 //////////
 
