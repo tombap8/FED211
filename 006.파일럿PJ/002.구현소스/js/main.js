@@ -89,7 +89,7 @@ $(function () { /// jQB ////////////////////////
         // play() 메서드 : 동영상재생기능
         // pause() 메서드 : 동영상멈춤기능
         // 동영상 재생은 햄버거 버튼에 클래스 on있을때함!
-        if($(this).is("on")) $(".bgm").get(0).play();
+        if($(this).is(".on")) $(".bgm").get(0).play();
         else $(".bgm").get(0).pause();
 
     }); //////////// click ////////////
