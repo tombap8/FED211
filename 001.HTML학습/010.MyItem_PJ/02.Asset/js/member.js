@@ -68,6 +68,15 @@ $(function () { //// jQB ///////////////////////////////////
                 let res = vReg(cv,cid);
                 console.log("검사결과:"+res);
 
+                // 결과가 false일 경우 메시지 띄우기
+                if(!res){ // !(NOT연산자)로 결과 반대
+                    $(this).siblings(".msg")
+                    .text("특수문자,문자,숫자포함 형태의 5~15자리");
+                } /////////// if문 : 결과 false ////////
+                else{ // 통과시 내용비우기 - empty()
+                    $(this).siblings(".msg").empty();
+                } ////////// else문 : 결과 true ////////
+
             } //////////// else if문 : 비밀번호일때 /////////
 
 
