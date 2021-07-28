@@ -259,6 +259,9 @@ $(function () { /// jQB ////////////////////////
 
     slide.on("dragstop", function () {
 
+        // 자동넘김 지우기함수 호출!
+        clearAuto();
+
         // 광드래그 막기 커버보이기
         cover.show();
 
@@ -378,6 +381,9 @@ $(function () { /// jQB ////////////////////////
     ///////////////////////////////////////////
     // 대상: .btntit
     $(".btntit").click(function () {
+
+        // 자동넘김 지우기함수 호출!
+        clearAuto();
 
         // 1. 어느쪽버튼인지 구분하기
         let btn = $(this).parent().is(".ar1");
