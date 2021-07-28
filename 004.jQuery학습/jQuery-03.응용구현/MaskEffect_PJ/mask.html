@@ -32,14 +32,20 @@
             height: 455px;
             background: url(./images/main2.jpg) no-repeat fixed;
         }
+
         /* 2. 마스크효과이동박스 */
         #mask {
             position: absolute;
-            left: -546px;/* 얼굴중앙위치조정 */
+            left: -546px;
+            /* 얼굴중앙위치조정 */
             width: 1007px;
             height: 455px;
             background: url(./images/main1.jpg) no-repeat fixed;
+
+            /* 트랜지션 */
+            transition: left .4s ease-out;
         }
+
         /* 3. 이벤트대상박스 */
         #cover {
             position: absolute;
@@ -99,13 +105,28 @@
             //////////////////////////////////////////////////////
             // 이벤트 대상: #cover
             // 이벤트 종류: mousemove
-            $("#cover").mousemove(function(e){
+            $("#cover").mousemove(function (e) {
 
                 // 1. 마우스 커서 이동시 x축값 구하기
                 let posx = e.offsetX;
-                console.log("x위치:"+posx);
+                // e.pageX 는 화면왼쪽끝에서 부터의 위치
+                // e.offsetX 는 선택요소 내부에서의 위치
+                // Y축도 동일함!
+                // console.log("x위치:" + posx);
 
-            });/////////// mousemove 함수 ////////
+                // 2. 마스크 left위치값 변경하기!
+                // 주의사항: left가 마우스와 반대방향이므로 -부호!
+                // 마우스 포인터가 코있는 곳이 중앙되게 수치보정함!
+                $("#mask").css({
+                    left: -posx*1.2 + "px"
+                }); ///////////// css ////////////
+
+            }) /////////// mousemove 함수 ////////
+            .mouseout(function(){ // 나가면 원위치!
+                $("#mask").css({
+                    left: "-546px"
+                }); ///////////// css ////////////
+            }); /////////// mouseout 함수 //////////
 
         }); /////////////// jQB //////////////////////
     </script>
