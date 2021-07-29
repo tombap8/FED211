@@ -33,7 +33,7 @@ $(function () { //// jQB ///////////////////////////////////
             // 공백 제거된 값을 다시 입력항목에 넣기!-> 서비스!
             $(this).val(cv);
 
-            // console.log("블러!" + cid + ":" + cv);
+            // //console.log("블러!" + cid + ":" + cv);
 
             // 3. 빈값일 경우 "필수입력" 메시지 띄우기!!!
             if (cv === "") {
@@ -50,7 +50,7 @@ $(function () { //// jQB ///////////////////////////////////
             else if (cid === "mid") {
                 // 유효성 검사결과
                 let res = vReg(cv, cid);
-                console.log("검사결과:" + res);
+                //console.log("검사결과:" + res);
 
                 // 결과가 false일 경우 메시지 띄우기
                 if (!res) { // !(NOT연산자)로 결과 반대
@@ -75,7 +75,7 @@ $(function () { //// jQB ///////////////////////////////////
             else if (cid === "mpw") {
                 // 유효성 검사결과
                 let res = vReg(cv, cid);
-                console.log("검사결과:" + res);
+                //console.log("검사결과:" + res);
 
                 // 결과가 false일 경우 메시지 띄우기
                 if (!res) { // !(NOT연산자)로 결과 반대
@@ -124,7 +124,7 @@ $(function () { //// jQB ///////////////////////////////////
                     eml1.val() + "@" +
                     (seleml.val() === "free" ? eml2.val() : seleml.val());
                 // 비?집:놀이동산; -> 직접입력이면 eml2값으로 검사
-                // console.log("결과:"+comp);
+                // //console.log("결과:"+comp);
 
                 // 이메일 검사처리함수 호출!
                 resEml(comp);
@@ -147,7 +147,7 @@ $(function () { //// jQB ///////////////////////////////////
 
         // 1. 이메일 정규식 검사하기!
         let res = vReg(comp, "eml");
-        // console.log("이멜검사결과:" + res);
+        // //console.log("이멜검사결과:" + res);
 
         // 2. 이메일 검사결과 메시지 출력하기
         if (res) { // 통과시 /////////////////////////
@@ -198,7 +198,7 @@ $(function () { //// jQB ///////////////////////////////////
         // 2. 현재 입력된 값 읽어오기
         let cv = $(this).val();
 
-        // console.log(cid + ":" + cv);
+        // //console.log(cid + ":" + cv);
 
         // 3. 이메일 뒷주소 셋팅하기
         let backeml =
@@ -212,7 +212,7 @@ $(function () { //// jQB ///////////////////////////////////
 
         // 5. 이메일 전체주소 조합하기!
         let comp = eml1.val() + "@" + backeml;
-        // console.log("이멜주소:" + comp);
+        // //console.log("이멜주소:" + comp);
 
         // 6. 이메일 검사 결과처리함수 호출!
         resEml(comp);
@@ -230,7 +230,7 @@ $(function () { //// jQB ///////////////////////////////////
 
         // 1. 선택박스의 변경된 값 읽어오기
         let cv = $(this).val();
-        console.log("선택값:" + cv);
+        //console.log("선택값:" + cv);
 
         // 2. 선택옵션별 분기문
         if (cv === "init") { //"선택해주세요" 선택시
@@ -262,7 +262,7 @@ $(function () { //// jQB ///////////////////////////////////
 
             // 2. 이메일 전체주소 조합하기!
             let comp = eml1.val() + "@" + cv;
-            // console.log("이멜주소:" + cv);
+            // //console.log("이멜주소:" + cv);
 
             // 3. 이메일 검사 결과처리함수 호출!
             resEml(comp);
@@ -325,7 +325,7 @@ function groSpace(val) { // val - 전달변수(처리할값)
 */ ////////////////////////////////////////////////////////
 function vReg(val, cid) {
     // val - 검사할값, cid - 처리구분아이디
-    // console.log("검사:"+val+"/"+cid);
+    // //console.log("검사:"+val+"/"+cid);
 
     // 정규식 변수
     let reg;
@@ -354,7 +354,7 @@ function vReg(val, cid) {
             break;
     } //////////// switch case문 //////////////////
 
-    // console.log("정규식:"+reg);
+    // //console.log("정규식:"+reg);
 
     // 정규식 검사를 위한 JS메서드 
     // -> 정규식.test(검사할값) : 결과 true/false
