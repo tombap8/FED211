@@ -309,7 +309,8 @@ $(function () { /// jQB ////////////////////////
 
             $("html,body").stop().animate({
                 scrollTop: pos + "px"
-            }, 1200, "easeOutQuint");
+            }, 1200, "easeOutQuint",showEle);
+            // 페이지 이동 후 showEle함수를 호출! 등장액션!
 
             ///////////////////////////////////////////////
             // 5. 페이지번호(pno)에 맞는 GNB 메뉴 변경하기 //
