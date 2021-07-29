@@ -97,7 +97,12 @@ $(function () { //// jQB ///////////////////////////////////
             else if (cid === "email1") {
 
                 // 이메일 주소 만들기
-                let comp = eml1.val() + "@" + seleml.val();
+                let comp = 
+                eml1.val() + "@" + 
+                (seleml.val() === "free" ? eml2.val() : seleml.val());
+                // 비?집:놀이동산; -> 직접입력이면 eml2값으로 검사
+                console.log("결과:"+comp);
+
                 // 이메일 검사처리함수 호출!
                 resEml(comp);
 
@@ -215,7 +220,7 @@ $(function () { //// jQB ///////////////////////////////////
 
             // 이메일 주소 만들기
             let comp = eml1.val() + "@" + eml2.val();
-            
+
             // 이메일 검사처리함수 호출
             resEml(comp);
 
