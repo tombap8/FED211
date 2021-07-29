@@ -1,0 +1,458 @@
+@charset "utf-8";
+/* 탐앤탐스 메인 미디어쿼리 - media.css */
+
+@media only screen and (max-width:1600px) {
+    .mrb {
+        right: 2%;
+    }
+
+    .mlb {
+        left: 2%;
+    }
+
+    .txt {
+        font-size: 19px;
+    }
+
+    .mtitbx {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .mtit {
+        font-size: 22px;
+    }
+
+    .tomsv {
+        max-width: 1000px;
+    }
+
+    .vid-tit {
+        font-size: 32px;
+    }
+
+    .vid-bx {
+        width: 100%;
+    }
+
+    .vid-img li {
+        width: 80px;
+        height: 80px;
+    }
+
+    .fcap li {
+        font: bold 6vw/14vw"Montserrat";
+    }
+
+}/* 미디어쿼리 */
+
+
+@media only screen and (max-width:1024px) {
+
+    body {
+        padding-top: 60px;
+    }
+
+    #top {
+        height: 60px;
+
+    }
+
+    .top>.pbx {
+        width: 100%;
+        float: none;
+        padding: 5px;
+    }
+
+    .tmenu,
+    .gnb {
+        display: none;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+
+    .logo img {
+        width: 47px;
+    }
+
+    .hamb {
+        display: block;
+    }
+
+
+    .store {
+        display: block;
+    }
+
+    .tit span {
+        font-size: 40px;
+    }
+
+
+
+    .notic {
+        height: 600%;
+    }
+
+    .notic li {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+
+    .notic .inner {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 42px 0 0;
+    }
+
+    .notic a {
+        font-size: 14px;
+    }
+
+    .mtab li {
+        font-size: 10px;
+    }
+
+    .txt {
+        font-size: 17px;
+    }
+
+    .mtitbx {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .mtit {
+        font-size: 16px;
+    }
+
+    .pick:hover .mtitbx {
+        bottom: 20%;
+    }
+
+    .mbtn {
+        font-size: 25px;
+    }
+
+    .top>.col-11 {
+        display: none;
+    }
+
+
+
+    .foot_wr {
+        padding: 0 0 21px;
+    }
+
+    .foot_wr>div {
+        width: 100%;
+    }
+
+    .mnb {
+        display: block;
+    }
+
+    .addbx ul {
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .addbx li {
+        position: relative;
+        margin-right: 0;
+    }
+
+    .addbx li+li::Before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 10px;
+        width: 1px;
+        margin-top: -5px;
+        background: #776463;
+    }
+
+    .addbx a {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 20px 9px;
+    }
+
+    
+    .add  {
+        text-align: center;
+        padding: 25px;
+        margin-top: 0;
+        border-top: 1px solid #776463;
+        font-size: 14px;
+        font-weight: 200;
+        color: #fff;
+    }
+
+    .snsbx span {
+        display: none;
+    }
+
+
+    .snsbx {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .sns-list li {
+        margin: 7px;
+    }
+
+    .sns-list img {
+        width: 40px;
+    }
+
+}/* 미디어쿼리 */
+
+
+/* 모바일 미디어쿼리 */
+@media only screen and (max-width:700px) {
+
+    .ibx {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .slide::before {
+        padding-top: 152%;
+    }
+
+    /* 배너 슬라이드 배경이미지 모바일용으로 변경하기 */
+    .slide>ul>li:nth-child(1) {
+        background-image: url(../images/1/mo-slide1.jpg);
+    }
+
+    .slide>ul>li:nth-child(2) {
+        background-image: url(../images/1/mo-slide2.jpg);
+    }
+
+    .slide>ul>li:nth-child(3) {
+        background-image: url(../images/1/mo-slide3.jpg);
+    }
+
+    .slide>ul>li:nth-child(4) {
+        background-image: url(../images/1/mo-slide4.jpg);
+    }
+
+    .slide>ul>li:nth-child(5) {
+        background-image: url(../images/1/mo-slide5.jpg);
+    }
+
+    .slide>ul>li:nth-child(6) {
+        background-image: url(../images/1/mo-slide6.jpg);
+    }
+
+    .slide>ul>li:nth-child(7) {
+        background-image: url(../images/1/mo-slide7.jpg);
+    }
+
+    .slide>ul>li:nth-child(8) {
+        background-image: url(../images/1/mo-slide8.jpg);
+    }
+
+    .slide>ul>li:nth-child(9) {
+        background-image: url(../images/1/mo-slide9.jpg);
+    }
+
+    .slide>ul>li:nth-child(10) {
+        background-image: url(../images/1/mo-slide10.png);
+    }
+
+    .notice::before {
+        width: 32px;
+        left: 10px;
+    }
+
+    .tit span {
+        font-size: 30px;
+    }
+
+
+    .mtab li {
+        margin: 0 16px;
+    }
+
+    .mtab a {
+        font-size: 2vw;
+    }
+
+    .menu {
+        width: 500%;
+    }
+
+    .item {
+        width: 720px;
+        margin: 10px 52px;
+    }
+
+
+    .md {
+        width: 350%;
+        height: 569px;
+    }
+
+    .tomsmp .mbtn {
+        display: none;
+    }
+
+    .pick {
+        width: 17.6%;
+    }
+
+    .pick img {
+        margin-top: 20px;
+    }
+
+    .pick:hover {
+        transform: none;
+    }
+
+    .pick:hover img {
+        transform: none;
+    }
+
+    .mtitbx {
+        height: 120px;
+        opacity: 1;
+        bottom: 26%;
+    }
+
+    .mtit {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    .mtitbx img {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    .pick:hover .mtitbx {
+        bottom: 26%;
+    }
+
+    .tomsv>.pbx:nth-child(2) {
+        width: 100%;
+    }
+
+    .tomsv>.pbx:nth-child(3) {
+        width: 100%;
+    }
+
+    .vid-bx {
+        height: 420px;
+        margin-top: 5px;
+    }
+
+    .vid-cont {
+        margin: 0;
+        height: auto;
+    }
+
+    .vid-tit {
+        font-size: 3vw;
+        padding: 20px 0 10px;
+    }
+
+    .vid-stit {
+        font-size: 2.5vw;
+    }
+
+    .vid-img {
+        top: 48%;
+        right: 3%;
+        transform: translateY(-50%);
+    }
+
+    .vid-img li {
+        float: none;
+        margin-bottom: 5px;
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .snsbx {
+        margin-top: 60px;
+    }
+
+    .sns li {
+        width: 31.33%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
+
+    .sns li:last-child {
+        display: none;
+    }
+
+
+
+    .ban>.pbx {
+        height: auto;
+    }
+
+    .tomsmenu>.pbx {
+        height: auto;
+    }
+
+    .tomsmp>.pbx {
+        height: auto;
+    }
+
+    .tomsv>.pbx {
+        height: auto;
+    }
+
+    .tomsSns>.pbx {
+        height: auto;
+    }
+
+    .addbx a {
+        font-size: 13px;
+    }
+
+    .add {
+
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: left;
+        font-size: 12px;
+    }
+
+
+    .snsbx {
+        margin-top: 23px;
+    }
+
+    .ilogo {
+        line-height: 70px;
+    }
+
+    .ilogo img {
+        width: 56px;
+    }
+
+    .copy {
+        font-size: 12px;
+        letter-spacing: -1px;
+    }
+
+}
+
+/* 미디어쿼리 */
