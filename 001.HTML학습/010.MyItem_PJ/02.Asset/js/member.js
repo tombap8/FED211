@@ -40,6 +40,10 @@ $(function () { //// jQB ///////////////////////////////////
                 $(this).siblings(".msg")
                     .text("필수입력!")
                     .removeClass("on"); // 글자색 변경 제거
+
+                // 통과여부 false
+                pass = false;
+
             } //////////// if문 : 빈값일때 ///////////////
 
             // 4. 아이디일때 검사하기 /////////////////////
@@ -50,9 +54,14 @@ $(function () { //// jQB ///////////////////////////////////
 
                 // 결과가 false일 경우 메시지 띄우기
                 if (!res) { // !(NOT연산자)로 결과 반대
+
                     $(this).siblings(".msg")
                         .text("영문자로 시작하는 6~20글자 영문자/숫자")
                         .removeClass("on"); //글자색 변경 제거
+
+                    // 통과여부 false
+                    pass = false;
+
                 } /////////// if문 : 결과 false ////////
                 else {
                     $(this).siblings(".msg")
@@ -70,11 +79,18 @@ $(function () { //// jQB ///////////////////////////////////
 
                 // 결과가 false일 경우 메시지 띄우기
                 if (!res) { // !(NOT연산자)로 결과 반대
+
                     $(this).siblings(".msg")
                         .text("특수문자,문자,숫자포함 형태의 5~15자리");
+
+                    // 통과여부 false
+                    pass = false;
+
                 } /////////// if문 : 결과 false ////////
                 else { // 통과시 내용비우기 - empty()
+
                     $(this).siblings(".msg").empty();
+
                 } ////////// else문 : 결과 true ////////
 
             } //////////// else if문 : 비밀번호일때 /////////
@@ -84,11 +100,18 @@ $(function () { //// jQB ///////////////////////////////////
 
                 // 비밀번호입력값과 불일치하면 메시지 출력
                 if (cv !== $("#mpw").val()) {
+
                     $(this).siblings(".msg")
                         .text("비밀번호가 일치하지 않습니다!");
+
+                    // 통과여부 false
+                    pass = false;
+
                 } /////////// if문 : 결과 false ////////
                 else { // 통과시 내용비우기 - empty()
+
                     $(this).siblings(".msg").empty();
+
                 } ////////// else문 : 결과 true ////////
 
             } //////////// else if문 : 비밀번호확인일때 /////////
@@ -97,9 +120,9 @@ $(function () { //// jQB ///////////////////////////////////
             else if (cid === "email1") {
 
                 // 이메일 주소 만들기
-                let comp = 
-                eml1.val() + "@" + 
-                (seleml.val() === "free" ? eml2.val() : seleml.val());
+                let comp =
+                    eml1.val() + "@" +
+                    (seleml.val() === "free" ? eml2.val() : seleml.val());
                 // 비?집:놀이동산; -> 직접입력이면 eml2값으로 검사
                 // console.log("결과:"+comp);
 
@@ -128,14 +151,21 @@ $(function () { //// jQB ///////////////////////////////////
 
         // 2. 이메일 검사결과 메시지 출력하기
         if (res) { // 통과시 /////////////////////////
+
             eml1.siblings(".msg")
                 .text("적합한 이메일 형식입니다!")
                 .addClass("on"); //글자색 변경
+
         } ///////// if문 : 결과가 true일때 //////////
         else { // 불통과시 /////////////////////////
+
             eml1.siblings(".msg")
                 .text("맞지않는 이메일 형식입니다")
                 .removeClass("on"); //글자색 복원
+
+            // 통과여부 false
+            pass = false;
+
         } ///////// else문 : 결과가 false일때 ////////
 
     }; ///////////////// resEml 함수 ////////////////////////
@@ -252,7 +282,7 @@ $(function () { //// jQB ///////////////////////////////////
     // 유효성검사 통과여부를 판단한다!
     //////////////////////////////////////////////////////////
     let pass; // 검사용변수
-    $("#btnj").click(function(e){
+    $("#btnj").click(function (e) {
 
         // 1. 서브밋 기능막기
         e.preventDefault();
@@ -264,7 +294,9 @@ $(function () { //// jQB ///////////////////////////////////
         // 대상: input[type=text][id!=email2],input[type=password]
         // 이벤트발생 메서드: trigger(이벤트명)
         $("input[type=text][id!=email2],input[type=password]")
-        .trigger("blur");
+            .trigger("blur");
+
+        console.log("통과여부:" + pass);
 
     }); ///////////////// 서브밋버튼 함수 /////////////////////
     //////////////////////////////////////////////////////////
