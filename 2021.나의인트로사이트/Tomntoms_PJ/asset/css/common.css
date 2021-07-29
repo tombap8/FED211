@@ -428,10 +428,10 @@ body *{
 .add span{
     /* margin-top: 30px; */
     display: inline-block;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     font-family: "NotoSansKR";
     font-style: normal;
-    /* letter-spacing: -.5px; */
+    letter-spacing: -.5px;
     font-size: 15px;
     color: rgba(236, 236, 236, 0.7);
     /* text-rendering:optimizeSpeed; */
