@@ -425,8 +425,8 @@ $(function () { /// jQB ////////////////////////
     // 변경내용: transform: rotate(45deg) + opacity: 0
     $(".txtc h2, .imgc").css({
         transform: "rotate(45deg)",
-        transformOrigin: "left top" //축변경
-
+        transformOrigin: "left top", //축변경
+        opacity: 0
     }); /////////// css ///////////
     
     
@@ -441,7 +441,14 @@ function showEle(){
     // 현재 페이지번호에 맞는 액션구현!
     // pno = 1,2,3만 액션이 있음
     if(pno > 0 && pno < 4){
-        console.log("액숀!"+pno);
+        // console.log("액숀!"+pno);
+        $(".page").eq(pno)
+        .find(".txtc h2, .imgc").css({
+            transform: "rotate(0deg)",
+            opacity: 1,
+            transition: "1s ease-out"
+        }); /////////// css ///////////
+
     } /////////// if문 ////////////////
 
 } ////////////// showEle 함수 ///////////////
