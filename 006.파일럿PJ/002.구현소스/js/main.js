@@ -424,7 +424,7 @@ $(function () { /// jQB ////////////////////////
     // 대상: .txtc h2 + .imgc
     // 변경내용: transform: rotate(45deg) + opacity: 0
     $(".txtc h2, .imgc").css({
-        transform: "rotate(45deg) translateY(100px)",
+        transform: "rotate(15deg) translateY(100px)",
         transformOrigin: "left top", //축변경
         opacity: 0
     }); /////////// css ///////////
@@ -452,7 +452,7 @@ function showEle(){
         // 글자만 트랜지션 지연시간주기
         $(".page").eq(pno)
         .find(".txtc h2").css({
-            transitionDelay: ".5s"
+            transitionDelay: ".6s"
         }); /////////// css ///////////
 
     } /////////// if문 ////////////////
