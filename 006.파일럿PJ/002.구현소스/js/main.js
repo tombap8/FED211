@@ -424,7 +424,7 @@ $(function () { /// jQB ////////////////////////
     // 대상: .txtc h2 + .imgc
     // 변경내용: transform: rotate(45deg) + opacity: 0
     $(".txtc h2, .imgc").css({
-        transform: "rotate(45deg)",
+        transform: "rotate(45deg) translateY(100px)",
         transformOrigin: "left top", //축변경
         opacity: 0
     }); /////////// css ///////////
@@ -444,9 +444,15 @@ function showEle(){
         // console.log("액숀!"+pno);
         $(".page").eq(pno)
         .find(".txtc h2, .imgc").css({
-            transform: "rotate(0deg)",
+            transform: "rotate(0deg) translateY(0px)",
             opacity: 1,
             transition: "1s ease-out"
+        }); /////////// css ///////////
+
+        // 글자만 트랜지션 지연시간주기
+        $(".page").eq(pno)
+        .find(".txtc h2").css({
+            transitionDelay: ".5s"
         }); /////////// css ///////////
 
     } /////////// if문 ////////////////
