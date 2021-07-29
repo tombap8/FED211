@@ -446,13 +446,19 @@ function showEle(){
         .find(".txtc h2, .imgc").css({
             transform: "rotate(0deg) translateY(0px)",
             opacity: 1,
-            transition: "1s ease-out"
+            transition: "1s ease-out .3s"
         }); /////////// css ///////////
 
         // 글자만 트랜지션 지연시간주기
         $(".page").eq(pno)
         .find(".txtc h2").css({
-            transitionDelay: ".6s"
+            transitionDelay: ".9s"
+        }); /////////// css ///////////
+
+        // 글자만 트랜지션 지연시간주기
+        $(".page").eq(pno)
+        .find(".txtc h2.tw").css({
+            transitionDelay: "1.2s"
         }); /////////// css ///////////
 
     } /////////// if문 ////////////////
