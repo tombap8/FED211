@@ -6,13 +6,13 @@
 @import url(core.css);
 @import url(common.css);
 
-#cont{
+#cont {
     overflow: hidden;
     /* 자식요소의 마진포함 */
 }
 
 /* 게시판 타이틀 */
-.stit{
+.stit {
     width: 200px;
     height: 60px;
     box-sizing: border-box;
@@ -24,12 +24,12 @@
     box-shadow: 1px 1px 1px #999;
     color: #222;
     background:
-    url(../images/myitems_icon_01.png) no-repeat left center,
-    url(../images/myitems_icon_03.png) no-repeat right center;
+        url(../images/myitems_icon_01.png) no-repeat left center,
+        url(../images/myitems_icon_03.png) no-repeat right center;
 }
 
 /* 게시판박스 */
-.bbox{
+.bbox {
     width: 700px;
     min-height: 300px;
     /* 아이프레임이 늘어나면 늘어나도록 최소높이값 설정 */
@@ -37,4 +37,10 @@
     outline: 1px solid red;
 }
 
-
+/* 게시판 아이프레임 */
+.bbox iframe {
+    width: 100%;
+    /* 높이값은 자동으로 줌(안주면된다!) */
+    border: none;
+    /* 아이프레임 기본보더 없앰! */
+}
