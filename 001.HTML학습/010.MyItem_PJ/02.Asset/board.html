@@ -12,7 +12,7 @@
         /// 아이프레임 리사이즈 함수 //
         function autoResize(ifr){ // ifr - 아이프레임자신
 
-            // 컨텐츠가 모두 로딩된 아이프레임의 높이값
+            // 1. 컨텐츠가 모두 로딩된 아이프레임의 높이값 구하기
             let newH = 
             ifr.contentWindow.document.body.scrollHeight;
             // ifr - 전달된 아이프레임
@@ -21,6 +21,9 @@
             // body - 불러온 페이지의 body객체
             // scrollHeight - 페이지의 스크롤되는 전체높이
             console.log("새로운높이:" + newH);
+
+            // 2. 구한 높이값을 아이프레임의 높이값으로 반영하기
+            ifr.height = newH + 20;
 
         } /////// autoResize 함수 /////////
     </script>

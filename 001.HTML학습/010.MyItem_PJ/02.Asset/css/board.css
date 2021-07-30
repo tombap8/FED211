@@ -34,7 +34,8 @@
     min-height: 300px;
     /* 아이프레임이 늘어나면 늘어나도록 최소높이값 설정 */
     margin: 0 auto;
-    outline: 1px solid red;
+    padding-bottom: 100px;/* 하단여유공간! */
+    /* outline: 1px solid red; */
 }
 
 /* 게시판 아이프레임 */
