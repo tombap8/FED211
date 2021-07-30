@@ -69,7 +69,9 @@
             /* 시작점밀어서 공백부터나옴 */
 
             /* 애니메이션 */
-            animation: carAni 10s linear forwards;
+            animation: 
+            carAni 10s linear forwards,
+            hideLine 2s ease-in-out 10s forwards;
         }
 
         /* 자동차선 애니 키프레임 */
@@ -78,6 +80,12 @@
                 stroke-dashoffset: 0;
             }
         } /* 키프레임 */
+        /* 자동차선 사라지기 */
+        @keyframes hideLine {
+            to{
+                opacity: 0;
+            }
+        }/* 키프레임 */
     </style>
 </head>
 
