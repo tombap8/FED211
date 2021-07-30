@@ -28,10 +28,12 @@
 
             width: 1359px;
             height: 791px;
-            outline: 2px dashed blue;
+            /* outline: 2px dashed blue; */
 
             /* 애니메이션 */
-            /* animation: goCar 4s ease-in-out 17s forwards; */
+            animation:
+            brrCar .03s linear 14s infinite alternate,
+            goCar 4s ease-in-out 17s forwards;
         }
 
         /* 자동차전체 박스 왼쪽 이동 키프레임 */
@@ -39,9 +41,14 @@
             to {
                 left: -50%;
             }
-        }
+        }/* 키프레임 */
 
-        /* 키프레임 */
+        /* 자동차 시동떨기 키프레임 */
+        @keyframes brrCar {
+            to {
+                top: 49.5%;
+            }
+        }/* 키프레임 */
 
         /* 자동차 밑그림 이미지 */
         #car {
@@ -52,7 +59,6 @@
             /* 애니메이션 */
             animation:
                 showCar 2s ease-in-out 10s forwards;
-            /* brrCar .03s linear 14s infinite alternate; */
         }
 
         /* 밑그림 이미지 나타나기 키프레임 */
@@ -63,14 +69,7 @@
         }
 
         /* 키프레임 */
-        /* 자동차 시동떨기 키프레임 */
-        @keyframes brrCar {
-            to {
-                top: -0.5%;
-            }
-        }
-
-        /* 키프레임 */
+        
 
 
         /* svg path 설정 */
@@ -126,6 +125,12 @@
             background: url(./images/car.jpg) no-repeat;
             background-position: -249px -424px;
             /* border: 2px solid red; */
+            opacity: 0;
+
+            /* 밑그림 자동차이미지와 동시에 나타남! */
+            animation:
+                showCar 2s ease-in-out 10s forwards,
+                rotBa 1s linear 17s infinite;
         }
 
         /* 앞바퀴 */
@@ -139,6 +144,34 @@
             bottom: 240px;
             right: 273px;
         }
+
+        /* 바퀴회전 키프레임 */
+        @keyframes rotBa {
+            to{
+                transform: rotate(-360deg);
+                /* 반시계방향으로 회전 */
+            }
+        }/* 키프레임 */
+
+
+        /* 로고 */
+        #logo{
+            position: absolute;
+            top: 50%;
+            left: 150%;/* 오른쪽에 나가있음! */
+            transform: translate(-50%, -50%);
+            width: 25%;
+
+            /* 애니메이션 */
+            animation: comeLogo 4s ease-in-out 17s forwards;
+        }
+        /* 로고등장 키프레임 */
+        @keyframes comeLogo {
+            to{
+                left: 50%;
+            }
+        }/* 키프레임 */
+
     </style>
 </head>
 
@@ -158,6 +191,12 @@
         <!-- 뒷바퀴 -->
         <div class="ba bw"></div>
     </div>
+
+    <!-- 로고이미지 -->
+    <img src="images/volkswagen.jpg" alt="logo" id="logo">
+
+    <!-- 오디오넣기 -->
+    <audio src="images/carsound.mp3" autoplay controls></audio>
 
     <!-- 
     [ SVG : path ]
