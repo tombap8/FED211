@@ -166,8 +166,8 @@
         body.on #myCar {
             /* 애니메이션 */
             animation:
-                brrCar .03s linear 14s infinite alternate,
-                goCar 4s ease-in-out 17s forwards;
+                brrCar .03s linear 12s infinite alternate,
+                goCar 4s ease-in-out 15s forwards;
         }
 
         /* 자동차 밑그림 이미지 */
@@ -189,13 +189,13 @@
             /* 밑그림 자동차이미지와 동시에 나타남! */
             animation:
                 showCar 2s ease-in-out 10s forwards,
-                rotBa 1s linear 17s infinite;
+                rotBa 1s linear 15s infinite;
         }
 
         /* 로고 */
         body.on #logo {
             /* 애니메이션 */
-            animation: comeLogo 4s ease-in-out 17s forwards;
+            animation: comeLogo 4s ease-in-out 15s forwards;
         }
 
 
@@ -224,6 +224,25 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
         $(function(){ /////// jQB ///////////////////
+            
+            // 시작버튼 클릭시 자동차애니 시작하기!
+            // 대상: .sbtn
+            $(".sbtn").click(function(){
+
+                // 1. 클릭된 버튼 자신은 사라진다!
+                $(this).fadeOut(300);
+
+                // 2. body에 class="on"넣기
+                setTimeout(() => {
+                    $("body").addClass("on");                    
+                }, 1000);
+
+                // 3. 오디오 play하기
+                // 선택된 오디오요소는 get(0) 메서드에서 선택함
+                $("#myaud").get(0).play();
+
+            }); ////////// click /////////
+
 
 
         }); ///////////////// jQB ///////////////////
