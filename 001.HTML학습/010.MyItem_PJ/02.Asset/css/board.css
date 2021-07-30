@@ -6,5 +6,35 @@
 @import url(core.css);
 @import url(common.css);
 
+#cont{
+    overflow: hidden;
+    /* 자식요소의 마진포함 */
+}
+
+/* 게시판 타이틀 */
+.stit{
+    width: 200px;
+    height: 60px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin: 20px auto;
+    font: bold 20px/60px ng;
+    text-align: center;
+    box-shadow: 1px 1px 1px #999;
+    color: #222;
+    background:
+    url(../images/myitems_icon_01.png) no-repeat left center,
+    url(../images/myitems_icon_03.png) no-repeat right center;
+}
+
+/* 게시판박스 */
+.bbox{
+    width: 700px;
+    min-height: 300px;
+    /* 아이프레임이 늘어나면 늘어나도록 최소높이값 설정 */
+    margin: 0 auto;
+    outline: 1px solid red;
+}
 
 
