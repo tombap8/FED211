@@ -89,7 +89,7 @@
         }
 
         /* IR 클래스 */
-        .ir{
+        .ir {
             display: block;
             width: 0;
             height: 0;
@@ -97,17 +97,19 @@
         }
 
         /* 큰 이미지 배경박스 */
-        #bgbx{
+        #bgbx {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
             background-color: rgba(255, 255, 255, 0.9);
+            display: none;
+            /* 처음에 안보임 */
         }
 
         /* 이동버튼 공통 */
-        .abtn{
+        .abtn {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -116,25 +118,29 @@
             height: 111px;
             background: url(images/mv_btns.png) no-repeat;
         }
+
         /* 오른쪽버튼 */
-        .rb{
+        .rb {
             right: 5%;
             background-position: 0 -100px;
         }
-        .rb:hover{
+
+        .rb:hover {
             background-position: -167px 0;
         }
+
         /* 왼쪽버튼 */
-        .lb{
+        .lb {
             left: 5%;
             background-position: -232px 0;
         }
-        .lb:hover{
+
+        .lb:hover {
             background-position: 0 -221px;
         }
 
         /* 닫기버튼 */
-        .cbtn{
+        .cbtn {
             position: absolute;
             top: 5%;
             right: 5%;
@@ -146,13 +152,30 @@
             /* 트랜지션 */
             transition: transform .3s;
         }
+
         /* 닫기버튼 오버시 */
         .cbtn:hover {
             transform: rotate(-90deg);
         }
 
+        /* 큰 이미지박스 */
+        #imbx {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 정중앙이동 */
 
+            height: 60vmin;
+            /* vmin은 보이는 화면에서 가로/세로중 작은쪽기준! */
+            display: none;
+            /* 처음에 안보임 */
+        }
 
+        /* 큰 이미지 */
+        #imbx img {
+            height: 100%;
+        }
     </style>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -245,7 +268,9 @@
     </div>
 
     <!-- 큰이미지 박스 -->
-    <div id="imbx"></div>
+    <div id="imbx">
+        <img src="images/1.jpg" alt="큰 이미지">
+    </div>
 
 </body>
 
