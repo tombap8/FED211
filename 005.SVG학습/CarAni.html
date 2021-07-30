@@ -29,11 +29,6 @@
             width: 1359px;
             height: 791px;
             /* outline: 2px dashed blue; */
-
-            /* 애니메이션 */
-            animation:
-            brrCar .03s linear 14s infinite alternate,
-            goCar 4s ease-in-out 17s forwards;
         }
 
         /* 자동차전체 박스 왼쪽 이동 키프레임 */
@@ -41,24 +36,24 @@
             to {
                 left: -50%;
             }
-        }/* 키프레임 */
+        }
+
+        /* 키프레임 */
 
         /* 자동차 시동떨기 키프레임 */
         @keyframes brrCar {
             to {
                 top: 49.5%;
             }
-        }/* 키프레임 */
+        }
+
+        /* 키프레임 */
 
         /* 자동차 밑그림 이미지 */
         #car {
             position: absolute;
             top: 0;
             opacity: 0;
-
-            /* 애니메이션 */
-            animation:
-                showCar 2s ease-in-out 10s forwards;
         }
 
         /* 밑그림 이미지 나타나기 키프레임 */
@@ -69,7 +64,7 @@
         }
 
         /* 키프레임 */
-        
+
 
 
         /* svg path 설정 */
@@ -92,11 +87,6 @@
             /* 50%*4조각=200%+보정 -> 선,공백 중 선으로 채움*/
             stroke-dashoffset: 240%;
             /* 시작점밀어서 공백부터나옴 */
-
-            /* 애니메이션 */
-            animation:
-                carAni 10s linear forwards,
-                hideLine 2s ease-in-out 10s forwards;
         }
 
         /* 자동차선 애니 키프레임 */
@@ -126,11 +116,6 @@
             background-position: -249px -424px;
             /* border: 2px solid red; */
             opacity: 0;
-
-            /* 밑그림 자동차이미지와 동시에 나타남! */
-            animation:
-                showCar 2s ease-in-out 10s forwards,
-                rotBa 1s linear 17s infinite;
         }
 
         /* 앞바퀴 */
@@ -147,32 +132,102 @@
 
         /* 바퀴회전 키프레임 */
         @keyframes rotBa {
-            to{
+            to {
                 transform: rotate(-360deg);
                 /* 반시계방향으로 회전 */
             }
-        }/* 키프레임 */
+        }
+
+        /* 키프레임 */
 
 
         /* 로고 */
-        #logo{
+        #logo {
             position: absolute;
             top: 50%;
-            left: 150%;/* 오른쪽에 나가있음! */
+            left: 150%;
+            /* 오른쪽에 나가있음! */
             transform: translate(-50%, -50%);
             width: 25%;
+        }
 
+        /* 로고등장 키프레임 */
+        @keyframes comeLogo {
+            to {
+                left: 50%;
+            }
+        }
+
+        /* 키프레임 */
+
+        /*********** 애니메이션 실행 셋팅 ***************/
+        /* body.on 상태이면 애니메이션 적용실행! */
+        /* 자동차박스 */
+        body.on #myCar {
+            /* 애니메이션 */
+            animation:
+                brrCar .03s linear 14s infinite alternate,
+                goCar 4s ease-in-out 17s forwards;
+        }
+
+        /* 자동차 밑그림 이미지 */
+        body.on #car {
+            /* 애니메이션 */
+            animation:
+                showCar 2s ease-in-out 10s forwards;
+        }
+
+        body.on .spath path {
+            /* 애니메이션 */
+            animation:
+                carAni 10s linear forwards,
+                hideLine 2s ease-in-out 10s forwards;
+        }
+
+        /* 바퀴공통 */
+        body.on .ba {
+            /* 밑그림 자동차이미지와 동시에 나타남! */
+            animation:
+                showCar 2s ease-in-out 10s forwards,
+                rotBa 1s linear 17s infinite;
+        }
+
+        /* 로고 */
+        body.on #logo {
             /* 애니메이션 */
             animation: comeLogo 4s ease-in-out 17s forwards;
         }
-        /* 로고등장 키프레임 */
-        @keyframes comeLogo {
-            to{
-                left: 50%;
-            }
-        }/* 키프레임 */
 
+
+        /* 시작버튼 */
+        .sbtn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 오른쪽에 나가있음! */
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 200px;
+            border-radius: 20px;
+
+            font-size: 50px;
+            font-weight: bold;
+            font-family: Verdana;
+            color: blue;
+            cursor: pointer;
+        }
+        .sbtn:hover{
+            color: lime;
+            background-color: #000;
+        }
     </style>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){ /////// jQB ///////////////////
+
+
+        }); ///////////////// jQB ///////////////////
+    </script>
 </head>
 
 <body>
@@ -196,7 +251,12 @@
     <img src="images/volkswagen.jpg" alt="logo" id="logo">
 
     <!-- 오디오넣기 -->
-    <audio src="images/carsound.mp3" autoplay controls></audio>
+    <audio src="images/carsound.mp3" id="myaud"></audio>
+
+    <!-- 시작버튼 -->
+    <button class="sbtn">
+        AD<br>START!
+    </button>
 
     <!-- 
     [ SVG : path ]
@@ -232,8 +292,6 @@
     6. 복사한 값을 내가 사용하려는 svg에 넣고 모든 코드를 한줄로 붙여쓴다.
     -->
 
-
-    -->
 
 </body>
 
