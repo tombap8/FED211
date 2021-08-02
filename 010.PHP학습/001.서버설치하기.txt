@@ -24,6 +24,37 @@
 
 10. 드림위버로 새사이트 만들기를 하고 이름은 적당히 주고 경로를 "C:\xampp\htdocs\dashboard" 까지 들어가서 새폴더 만들기로 "mysite"를 만들고 이것으로 설정함.
 
+[ 웹서버 루트잡기 ]
+
+XAMPP 로 아파치서버를 설치후 실행.
+브라우저 창에 localhost 라고 치면
+Root 디렉토리(최상위폴더) : htdocs
+그 아래있는 index.php 파일에서
+위치 이동을 시키고 있다.
+
+htdocs 아래에 mysite라는 폴더를 만들고
+이쪽으로 포워딩 설정을 변경한다.
+
+실제파일 변경부분
+-> <?php ?> 이렇게 표시되부분이 PHP코드영역이다.
+________________________________________________
+<?php
+	if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER['HTTPS'])) {
+		$uri = 'https://';
+	} else {
+		$uri = 'http://';
+	}
+	$uri .= $_SERVER['HTTP_HOST'];
+	header('Location: '.$uri.'/dashboard/');<<<- 이 부분변경!
+	exit;
+?>
+______________________________________________
+
+변경후)
+header('Location: '.$uri.'/mysite/');
+
+-> 물론 mysite라는 폴더를 루트에 만들고 그 아래 index파일이 있어야함!
+
 
 
 
