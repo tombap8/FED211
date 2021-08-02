@@ -261,7 +261,13 @@
                 // 사용메서드: attr(속성명,속성값)
                 imbx.find("img").attr("src", isrc);
 
-                // 4. 큰 이미지박스, 큰 이미지배경 보이기
+                // 4. 이미지 설명 넣기
+                // 대상: 큰 이미지박스
+                // -> 해당설명글은 배열변수에 이미셋팅됨!
+                // -> 포토박스의 순번은? $(this).index()
+                imbx.append('<h4>' + itxt[$(this).index()] + '</h4>');
+
+                // 5. 큰 이미지박스, 큰 이미지배경 보이기
                 imbx.fadeIn(300);
                 bgbx.fadeIn(300);
 
@@ -276,13 +282,13 @@
                     function () { // over
                         $(this).animate({
                             rotate: "90deg"
-                        },100); ///// animate /////////
+                        }, 100); ///// animate /////////
                         // rotate속성은 회전기능
                     },
                     function () { // out
                         $(this).animate({
                             rotate: "0deg"
-                        },100); ///// animate /////////
+                        }, 100); ///// animate /////////
                     }) ////// hover //////
                 .click(function () {
                     // 큰 이미지박스, 큰 이미지 배경 숨기기
@@ -323,7 +329,10 @@
 
     <!-- 큰이미지 박스 -->
     <div id="imbx">
+        <!-- 큰 이미지 -->
         <img src="images/1.jpg" alt="큰 이미지">
+        <!-- 이미지 설명 -->
+        <h4></h4>
     </div>
 
 </body>
