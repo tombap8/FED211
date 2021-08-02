@@ -265,7 +265,7 @@
                 // 대상: 큰 이미지박스
                 // -> 해당설명글은 배열변수에 이미셋팅됨!
                 // -> 포토박스의 순번은? $(this).index()
-                imbx.append('<h4>' + itxt[$(this).index()] + '</h4>');
+                imbx.find("h4").text(itxt[$(this).index()]);
 
                 // 5. 큰 이미지박스, 큰 이미지배경 보이기
                 imbx.fadeIn(300);
