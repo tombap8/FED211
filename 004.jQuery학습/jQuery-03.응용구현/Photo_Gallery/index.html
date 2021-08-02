@@ -179,10 +179,6 @@
     </style>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.rotate.js"></script>
-    <!-- 로테이트 플러그인 
-        -> transform:rotate() 를 animate()에서 
-        사용할 수 있게하는 플러그인! -->
     <script>
         $(function () { ///////// jQB ////////////////////
 
@@ -278,21 +274,19 @@
             $(".cbtn")
                 .hover(
                     function () { // over
-                        // 로테이트 플러그인에 의한 코딩!
                         $(this).animate({
                             rotate: "90deg"
                         },100); ///// animate /////////
-                        // rotate속성은 플러그인때문에 사용가능!
+                        // rotate속성은 회전기능
                     },
                     function () { // out
-                        // 로테이트 플러그인에 의한 코딩!
                         $(this).animate({
                             rotate: "0deg"
                         },100); ///// animate /////////
                     }) ////// hover //////
                 .click(function () {
 
-                }); ///////// click ///////
+                }); ///////////// click /////////////
 
 
 
