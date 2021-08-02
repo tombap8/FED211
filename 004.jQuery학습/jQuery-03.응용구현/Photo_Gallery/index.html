@@ -179,6 +179,10 @@
     </style>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.rotate.js"></script>
+    <!-- 로테이트 플러그인 
+        -> transform:rotate() 를 animate()에서 
+        사용할 수 있게하는 플러그인! -->
     <script>
         $(function () { ///////// jQB ////////////////////
 
@@ -244,22 +248,22 @@
             ////////////////////////////////////////////
             // 3. 갤러리 박스 클릭시 큰 이미지 보이기 /////
             ////////////////////////////////////////////
-            ptbx.click(function(){
+            ptbx.click(function () {
 
                 // 1. 클릭된 박스의 하위 img 요소의 src 읽어오기
                 // 속성읽기: attr(속성명)
-                let isrc = $("img",this).attr("src");
-                console.log("이미지경로:"+isrc);
+                let isrc = $("img", this).attr("src");
+                console.log("이미지경로:" + isrc);
 
                 // 2. 이미지경로 변경하기
                 // -> 큰 이미지경로는 mob폴더경로만 없으면됨!
-                isrc = isrc.replace("/mob","");
-                console.log("변경경로:"+isrc);
+                isrc = isrc.replace("/mob", "");
+                console.log("변경경로:" + isrc);
 
                 // 3. 이미지경로 적용하기
                 // 대상: 큰 이미지 -> #imbx img
                 // 사용메서드: attr(속성명,속성값)
-                imbx.find("img").attr("src",isrc);
+                imbx.find("img").attr("src", isrc);
 
                 // 4. 큰 이미지박스, 큰 이미지배경 보이기
                 imbx.fadeIn(300);
@@ -267,6 +271,28 @@
 
             }); ///////////// click ////////////////////
             ////////////////////////////////////////////
+
+            /////////////////////////////////////////////
+            //////////// 4. 닫기버튼구현 /////////////////
+            /////////////////////////////////////////////
+            $(".cbtn")
+                .hover(
+                    function () { // over
+                        // 로테이트 플러그인에 의한 코딩!
+                        $(this).animate({
+                            rotate: "90deg"
+                        },100); ///// animate /////////
+                        // rotate속성은 플러그인때문에 사용가능!
+                    },
+                    function () { // out
+                        // 로테이트 플러그인에 의한 코딩!
+                        $(this).animate({
+                            rotate: "0deg"
+                        },100); ///// animate /////////
+                    }) ////// hover //////
+                .click(function () {
+
+                }); ///////// click ///////
 
 
 
