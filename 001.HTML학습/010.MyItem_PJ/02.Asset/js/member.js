@@ -7,7 +7,11 @@ $(function () { //// jQB ///////////////////////////////////
     ///////////////////////////////////////////////////////
     // 체크박스 체크시 발생하는 이벤트는? change
     // 대상: 모두 동의 체크박스 -> #chk_all
-    $("#chk_all").change(function(){
+    let chkall = $("#chk_all");
+    // 개별체크박스
+    let chkeach = $(".chk");
+
+    chkall.change(function(){
 
         // 1. 체크박스 체크여부 확인하기
         let chk = $(this).prop("checked");
@@ -18,7 +22,7 @@ $(function () { //// jQB ///////////////////////////////////
         // 2. 전체체크박스가 체크상태(true)이면 개별체크도 모두 true
         //      미체크상태(false)이면 개별체크도 모두 false!
         // -> 개별체크박스는 모두 .chk 이므로 한번에 체크가능!
-        $(".chk").prop("checked",chk);
+        chkeach.prop("checked",chk);
         // prop(속성명,속성값)
         // prop("checked", true/false) -> 체크를 하거나 안함!
         // attr(속성명,속성값) 을 사용해도됨! (값설정은 됨)
@@ -30,19 +34,15 @@ $(function () { //// jQB ///////////////////////////////////
     //// 개별 체크박스 체크 변경시 전체 체크박스 변경하기 /////
     /// 원리: 개별체크박스가 모두 체크되면 전체체크에 체크하기!
     // 대상: .chk
-    $(".chk").change(function(){
+    chkeach.change(function(){
 
-        // 체크개수
-        let num = 0;
-        $(".chk").each(function(idx,ele){
-            // 1. 순서대로 개별체크박스 체크여부 검사하기
-            let csts = $(ele).prop("checked");
-            // 2. 개별체크박스가 체크된 경우 숫자 1씩증가하기
-            if(csts) num++;
-        }); /////////// each문 ////////////
+        // 1. 체크개수 알아오기
+        let num = $(".chk:checked").length;
+        // console.log("몇개체크?"+num);
 
-        // 체크결과
-        console.log("몇개체크?"+num);
+        // 2. 체크개수가 3일때만 전체체크박스 체크하기
+        if(num===3) chkall.prop("checked",true);
+        else chkall.prop("checked",false);
 
     }); ///////////// change 함수 ///////////////////
     /////////////////////////////////////////////////
