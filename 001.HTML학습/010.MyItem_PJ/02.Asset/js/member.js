@@ -11,18 +11,18 @@ $(function () { //// jQB ///////////////////////////////////
     // 개별체크박스
     let chkeach = $(".chk");
 
-    chkall.change(function(){
+    chkall.change(function () {
 
         // 1. 체크박스 체크여부 확인하기
         let chk = $(this).prop("checked");
         // prop(속성명) -> attr(속성명)과 유사함(단, 리턴값이 다름!)
         // prop(속성명) 메서드는 제대로된 return값 true/false를 가져옴
-        console.log("전체동의상태:"+chk);
+        console.log("전체동의상태:" + chk);
 
         // 2. 전체체크박스가 체크상태(true)이면 개별체크도 모두 true
         //      미체크상태(false)이면 개별체크도 모두 false!
         // -> 개별체크박스는 모두 .chk 이므로 한번에 체크가능!
-        chkeach.prop("checked",chk);
+        chkeach.prop("checked", chk);
         // prop(속성명,속성값)
         // prop("checked", true/false) -> 체크를 하거나 안함!
         // attr(속성명,속성값) 을 사용해도됨! (값설정은 됨)
@@ -34,15 +34,15 @@ $(function () { //// jQB ///////////////////////////////////
     //// 개별 체크박스 체크 변경시 전체 체크박스 변경하기 /////
     /// 원리: 개별체크박스가 모두 체크되면 전체체크에 체크하기!
     // 대상: .chk
-    chkeach.change(function(){
+    chkeach.change(function () {
 
         // 1. 체크개수 알아오기
         let num = $(".chk:checked").length;
         // console.log("몇개체크?"+num);
 
         // 2. 체크개수가 3일때만 전체체크박스 체크하기
-        if(num===3) chkall.prop("checked",true);
-        else chkall.prop("checked",false);
+        if (num === 3) chkall.prop("checked", true);
+        else chkall.prop("checked", false);
 
     }); ///////////// change 함수 ///////////////////
     /////////////////////////////////////////////////
@@ -51,11 +51,41 @@ $(function () { //// jQB ///////////////////////////////////
     /////// 동의/비동의 버튼 클릭시 처리하기 //////////
     ////////////////////////////////////////////////
     // 대상: .YNbox button
-    $(".YNbox button").click(function(){
+    $(".YNbox button").click(function () {
 
         // 1. 버튼종류 구분하기 : is("#btnY") 동의버튼이냐?
         let wbtn = $(this).is("#btnY");
-        console.log("동의버튼?"+wbtn);
+        // console.log("동의버튼?"+wbtn);
+
+        // 2. 동의버튼일 경우 : 처음 2가지 체크박스 모두체크확인
+        if (wbtn) {
+
+            /// 필수항목에 모두 체크된 경우 /////////////////
+            if ($("#termsService").prop("checked") &&
+                $("#termsPrivacy").prop("checked")) {
+
+                // 동의/비동의 박스 숨기기
+                $("#conf").fadeOut(300);
+
+            } ////////// if문 /////////////////////////////
+            else { // 필수체크가 안된경우 //////////////////
+
+                alert("모든 필수항목에 체크하여야 합니다!");
+
+            } //////// else문 //////////////////////////////
+
+        } ///////////// if문 ///////////////
+
+        //// 3. 비동의 버튼일 경우 ///////////////////////////////
+        else {
+            
+            // 메시지
+            alert("비동의 하였으므로 메인 페이지로 이동합니다!");
+
+            // 페이지이동
+            location.href = "index.html";
+
+        } //////////// else문 //////////////////////////////////
 
     }); ////////////// click ////////////////////////
     /////////////////////////////////////////////////
@@ -359,7 +389,7 @@ $(function () { //// jQB ///////////////////////////////////
         // console.log("통과여부:" + pass);
 
         // 4. 검사 결과에 따라 메시지 보이기 및 처리 ////
-        if(pass){ // 통과시 
+        if (pass) { // 통과시 
 
             // 메시지 띄우기
             alert("회원가입을 축하드립니다~! 짝짝짝!");
@@ -374,7 +404,7 @@ $(function () { //// jQB ///////////////////////////////////
             // 이전 페이지로 갈 수 없다!(회원가입 페이지를 볼 수 없음)
 
         } /////////// if 문 //////////////////
-        else{ // 불통과시
+        else { // 불통과시
 
             alert("입력을 수정하세요!");
 
