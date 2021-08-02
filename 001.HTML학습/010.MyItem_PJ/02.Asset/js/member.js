@@ -10,8 +10,18 @@ $(function () { //// jQB ///////////////////////////////////
     $("#chk_all").change(function(){
 
         // 1. 체크박스 체크여부 확인하기
-        let chk = $(this).attr("checked");
+        let chk = $(this).prop("checked");
+        // prop(속성명) -> attr(속성명)과 유사함(단, 리턴값이 다름!)
+        // prop(속성명) 메서드는 제대로된 return값 true/false를 가져옴
         console.log("전체동의상태:"+chk);
+
+        // 2. 전체체크박스가 체크상태(true)이면 개별체크도 모두 true
+        //      미체크상태(false)이면 개별체크도 모두 false!
+        // -> 개별체크박스는 모두 .chk 이므로 한번에 체크가능!
+        $(".chk").prop("checked",chk);
+        // prop(속성명,속성값)
+        // prop("checked", true/false) -> 체크를 하거나 안함!
+        // attr(속성명,속성값) 을 사용해도됨! (값설정은 됨)
 
 
     }); ///////// change 함수 //////////////////
