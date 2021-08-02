@@ -148,3 +148,17 @@ select:focus {
     font: bold 16px 'ng';
     cursor: pointer;
 }
+
+/* 약관동의박스 */
+#conf {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 600px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
