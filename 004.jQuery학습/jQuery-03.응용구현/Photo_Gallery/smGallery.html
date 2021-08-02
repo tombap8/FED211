@@ -198,10 +198,10 @@
             // 대상: #gallery
             let gallery = $("#gallery");
 
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 50; i++) {
                 gallery.append(
                     '<div class="photobox">' +
-                    '    <img src="images/mob/' + (i + 1) + '.jpg" alt="fashion">' +
+                    '    <img src="images/dress/' + (i + 1) + '.jpg" alt="fashion">' +
                     '    <span class="cover"></span>' +
                     '    <span class="txt">' + itxt[i] + '</span>' +
                     '</div>'
@@ -261,9 +261,9 @@
                 let isrc = $("img", this).attr("src");
                 // console.log("이미지경로:" + isrc);
 
-                // 2. 이미지경로 변경하기
+                // 2. 이미지경로 변경하기 -> smGallery는 불필요!
                 // -> 큰 이미지경로는 mob폴더경로만 없으면됨!
-                isrc = isrc.replace("/mob", "");
+                // isrc = isrc.replace("/mob", "");
                 // console.log("변경경로:" + isrc);
 
                 // 3. 이미지경로 적용하기
@@ -337,7 +337,7 @@
                 // 3. 변경된 순번에 맞는 큰 이미지와 설명넣기
                 // 3-1. 큰 이미지 변경 : 이미지이름은 순번보다 1큼
                 imbx.find("img")
-                    .attr("src", "images/" + (pseq + 1) + ".jpg");
+                    .attr("src", "images/dress/" + (pseq + 1) + ".jpg");
                 // 3-2. 이미지 설명 변경 : 순번에 맞는 설명배열값 넣기
                 imbx.find("h4").text(itxt[pseq]);
 
@@ -355,7 +355,7 @@
 
 <body>
     <!-- 갤러리 타이틀 -->
-    <h1 class="mtit">Fashion Gallery</h1>
+    <h1 class="mtit">Shopping Mall Gallery</h1>
 
     <!-- 갤러리 박스 -->
     <div id="gallery"></div>
