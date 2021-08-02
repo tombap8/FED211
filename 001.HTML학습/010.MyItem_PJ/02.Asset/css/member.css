@@ -10,7 +10,7 @@
 #cont {
     position: relative;
     /* 부모자격! */
-    height: 800px;
+    height: 700px;
     overflow: hidden;
     /* 자식요소의 마진포함 */
 }
