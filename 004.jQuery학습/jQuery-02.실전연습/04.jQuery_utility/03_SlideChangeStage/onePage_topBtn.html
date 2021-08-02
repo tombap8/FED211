@@ -187,6 +187,11 @@
             cursor: pointer;
             font: bold 20px Verdana;
             color: #f00;
+
+            /* 트랜지션 */
+            transition: top .3s ease-out;
+
+            display: none;/* 처음에 안보임 */
         }
     </style>
     <script src="js/jquery-1.7.2.min.js"></script>
@@ -232,6 +237,47 @@
                 sc_pos = pos;
                 
             }); ///////////// click ///////////////
+
+
+            ///////////////////////////////////////
+            ////// 스크롤에 따른 탑이동버튼 ////////
+            //////////////////////////////////////
+
+            // 스크롤 위치값
+            let scTop;
+            // 탑이동버튼
+            let tbtn = $("#tbtn");
+            // 탑이동버튼 top값 - 보이는 화면높이의 80%값
+            let tbTop = $(window).height() * 0.8;
+            console.log("top값:"+tbTop);
+
+            $(window).scroll(function(){
+
+                // 1. 스크롤 위치값 읽어오기
+                scTop = $(this).scrollTop();
+                console.log("스위:"+scTop);
+
+                // 2. 스크롤바의 위치만큼 
+                //    탑이동버튼의 top값 변경하기
+                if(scTop > 300){
+                    tbtn.fadeIn(300) // 보여라!
+                    .css({
+                        top: (tbTop + scTop) + "px"
+                    });
+                } ///// if문 ///////////////////
+                else {
+                    tbtn.fadeOut(300) // 숨겨라!
+                    .css({
+                        top: tbTop + "px"
+                    });
+                } ///// else문 /////////////////
+
+
+
+            });////////// scroll /////////////////
+            //////////////////////////////////////
+
+
 
         }); ///////////// jQB ////////////////////////
     </script>
