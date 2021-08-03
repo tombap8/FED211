@@ -113,7 +113,7 @@ $(function () { //// jQB ///////////////////
                 stit.addClass(ifo[x]);
                 break;
             case "이미지":
-                imbx.php('<img src="' + ifo[x] + '" alt="아이템이미지">');
+                imbx.html('<img src="' + ifo[x] + '" alt="아이템이미지">');
                 break;
             case "설명":
                 dcbx.text(ifo[x]);
