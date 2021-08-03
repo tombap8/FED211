@@ -8,6 +8,15 @@ $(function(){ /// jQB /////////////////////
         // 기본이동막기
         e.preventDefault();
 
+        // 1. 클릭된 a요소 순번 알아오기
+        // 알아오는 이유: 지도 .maps의 순번과 같음
+        let idx = $(this).index();
+        console.log("순번:"+idx);
+
+        // 2. 클릭된 a요소에만 클래스 on넣기
+        $(this).addClass("on")
+        .siblings().removeClass("on");
+
     }); ///////////// click ////////////////
 
 }); ///////////// jQB /////////////////////
