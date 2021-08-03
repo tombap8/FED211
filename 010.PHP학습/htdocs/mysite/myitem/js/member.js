@@ -410,23 +410,41 @@ $(function () { //// jQB ///////////////////////////////////
                 // 2.전송할 데이터
                 {
                     // 1.아이디
-                    "mid":$("#mid").val(),
+                    "mid": $("#mid").val(),
                     // 2.비번
-                    "mpw":$("#mpw").val(),
+                    "mpw": $("#mpw").val(),
                     // 3.이름
-                    "mnm":$("#mnm").val(),
+                    "mnm": $("#mnm").val(),
                     // 4.성별
-                    "gen":$(":radio[name=gen]:checked").val(),
+                    "gen": $(":radio[name=gen]:checked").val(),
                     // 5-1.이메일 앞주소
-                    "email1":$("#email1").val(),
+                    "email1": $("#email1").val(),
                     // 5-2.이메일 뒷주소
-                    "seleml":$("#seleml").val(),
+                    "seleml": $("#seleml").val(),
                     // 5-3.직접입력 이메일 뒷주소
-                    "email2":$("#email2").val()
+                    "email2": $("#email2").val()
                 },
                 // 3. 전송후 실행함수
-                function(res){// res는 결과값
-                    alert(res);
+                function (res) { // res는 결과값
+                    if (res === "ok") {
+                        // 메시지 띄우기
+                        alert("회원가입을 축하드립니다~! 짝짝짝!");
+
+                        // 로그인 페이지로 이동
+                        location.replace("login.php");
+                        // location.href 뒤로가기 시 history가 살아있어서 보안상
+                        // 문제가 될 수 있다!!!
+                        // 따라서 현재페이지를 덮어쓰는 이동방법을 써야한다!
+                        // -> location.replace(url주소)
+                        // : 이 메서드는 페이지 캐싱을 지우고 이동하기 때문에
+                        // 이전 페이지로 갈 수 없다!(회원가입 페이지를 볼 수 없음)
+
+                    } /////// 성공시 if문 ///////
+                    else {
+                        // 메시지 띄우기
+                        alert(res);
+                        //alert("입력시 에러가 발생하였습니다!\n관리자에게 문의해주세요!");
+                    } ///// 실패시 else문 ///////
 
                 } /////////// 전송후 실행함수 //////
 
@@ -435,17 +453,6 @@ $(function () { //// jQB ///////////////////////////////////
 
 
 
-            // 메시지 띄우기
-            //alert("회원가입을 축하드립니다~! 짝짝짝!");
-
-            // 로그인 페이지로 이동
-            //location.replace("login.php");
-            // location.href 뒤로가기 시 history가 살아있어서 보안상
-            // 문제가 될 수 있다!!!
-            // 따라서 현재페이지를 덮어쓰는 이동방법을 써야한다!
-            // -> location.replace(url주소)
-            // : 이 메서드는 페이지 캐싱을 지우고 이동하기 때문에
-            // 이전 페이지로 갈 수 없다!(회원가입 페이지를 볼 수 없음)
 
         } /////////// if 문 //////////////////
         else { // 불통과시

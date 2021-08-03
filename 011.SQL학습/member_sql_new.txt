@@ -7,6 +7,6 @@ CREATE TABLE `member`(
 `gen` char(1) not null,
 `email1` varchar(20) not null,
 `email2` varchar(20) not null,
-`regdate` timestamp not null,
+`regdate` DATETIME DEFAULT CURRENT_TIMESTAMP not null,
 `auth` char(1) default "M"
 );
