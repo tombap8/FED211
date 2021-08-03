@@ -20,6 +20,15 @@
     line-height: 45px;
     color: #777;
     text-shadow: 1px 1px 1px #999;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
+/* 가상요소아이콘넣기 */
+.stit::before{
+    content: url(../images/loca_icon.png);
+    vertical-align: -12px;
+    margin-right: 13px;
+    margin-left: 5px;
+}
+
+/* 지도메뉴 */
 
