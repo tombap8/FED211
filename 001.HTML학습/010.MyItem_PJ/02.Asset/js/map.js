@@ -17,6 +17,10 @@ $(function(){ /// jQB /////////////////////
         $(this).addClass("on")
         .siblings().removeClass("on");
 
+        // 3. 해당순번과 동일한 지도보이기
+        $(".maps").eq(idx).show()
+        .siblings(".maps").hide();
+
     }); ///////////// click ////////////////
 
 }); ///////////// jQB /////////////////////
