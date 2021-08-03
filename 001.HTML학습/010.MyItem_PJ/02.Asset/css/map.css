@@ -31,4 +31,18 @@
 }
 
 /* 지도메뉴 */
-
+.menu {
+    width: 700px;
+    margin: 5px auto;
+}
+.menu a{
+    display: inline-block;
+    /* transform 적용위해 */
+    margin: 0 9px;
+}
+/* 오버시+.on */
+.menu a:hover,
+.menu a.on{
+    color: green;
+    transform: scale(1.1);
+}
