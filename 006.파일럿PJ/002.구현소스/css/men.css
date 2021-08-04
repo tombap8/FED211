@@ -15,6 +15,32 @@ html,body{
 #ban{
     background-color: lightblue;
 }
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+
 /* 2. 남자컨텐츠1 */
 #cont1{
     background-color: lightsalmon;
