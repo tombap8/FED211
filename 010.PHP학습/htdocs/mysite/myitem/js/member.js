@@ -17,7 +17,7 @@ $(function () { //// jQB ///////////////////////////////////
         let chk = $(this).prop("checked");
         // prop(속성명) -> attr(속성명)과 유사함(단, 리턴값이 다름!)
         // prop(속성명) 메서드는 제대로된 return값 true/false를 가져옴
-        console.log("전체동의상태:" + chk);
+        // console.log("전체동의상태:" + chk);
 
         // 2. 전체체크박스가 체크상태(true)이면 개별체크도 모두 true
         //      미체크상태(false)이면 개별체크도 모두 false!
@@ -203,7 +203,7 @@ $(function () { //// jQB ///////////////////////////////////
                             if (res === "ok") { // DB에 없는 ID
 
                                 // 성공메시지
-                                $(this).siblings(".msg")
+                                $("#mid").siblings(".msg")
                                     .text("훌륭한 아이디네요~!")
                                     .addClass("on"); //글자색 변경
 
@@ -211,7 +211,7 @@ $(function () { //// jQB ///////////////////////////////////
                             else { // DB에 이미 같은 ID있음
 
                                 // 아이디중복 메시지
-                                $(this).siblings(".msg")
+                                $("#mid").siblings(".msg")
                                     .text("사용중인 ID입니다!")
                                     .removeClass("on"); //글자색 변경
 
@@ -221,7 +221,7 @@ $(function () { //// jQB ///////////////////////////////////
                             } /////// no이면 //////////////
 
                         }, ////// success함수 //////////
-                        
+
                         // 7.에러처리함수
                         // error:function(xhr,status,error){}
                         // error:function(XMLHttpRequest,실패상태,에러결과값){}
