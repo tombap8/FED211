@@ -179,41 +179,61 @@ $(function () { //// jQB ///////////////////////////////////
                         })
                     */
 
-                        $.ajax({
-                            // 1.전송할 페이지
-                            url:"process/chkID.php",
-                            // 2.전송방식(GET/POST)
-                            type:"post",
-                            // 3.보낼데이터
-                            data: {
-                                "mid": $("#mid").val()
-                            },
-                            // 4.전송할 데이터 타입
-                            dataType:"html",
-                            // 5.ASYNC옵션(보통은 false)
-                            // -> false로 해야 전역변수사용가능
-                            async:false,
-                            // 6.결과값 리턴함수
-                            // success(result,status,xhr)
-                            // success(결과값,성공상태값,XMLHttpRequest)
-                            // 보통 하나만 쓰면 결과값을 리턴 받는다!
-                            success:function(res){// res는 결과값
-                                alert(res);
-                            },
-                            // 7.에러처리함수
-                            // error:function(xhr,status,error){}
-                            // error:function(XMLHttpRequest,실패상태,에러결과값){}
-                            error:function(xhr,status,error){
-                                alert("연결실행실패:"+error);
-                            } ///////// error ///////////
-                        }); ////////// ajax 메서드 ////////////////////
-                        ///////////////////////////////////////////////
+                    $.ajax({
+                        // 1.전송할 페이지
+                        url: "process/chkID.php",
+                        // 2.전송방식(GET/POST)
+                        type: "post",
+                        // 3.보낼데이터
+                        data: {
+                            "mid": $("#mid").val()
+                        },
+                        // 4.전송할 데이터 타입
+                        dataType: "html",
+                        // 5.ASYNC옵션(보통은 false)
+                        // -> false로 해야 전역변수사용가능
+                        // 여기서는 pass변수를 사용하기 위함!
+                        async: false,
+                        // 6.결과값 리턴함수
+                        // success(result,status,xhr)
+                        // success(결과값,성공상태값,XMLHttpRequest)
+                        // 보통 하나만 쓰면 결과값을 리턴 받는다!
+                        success: function (res) { // res는 결과값
+                            // alert(res);
+                            if (res === "ok") { // DB에 없는 ID
+
+                                // 성공메시지
+                                $(this).siblings(".msg")
+                                    .text("훌륭한 아이디네요~!")
+                                    .addClass("on"); //글자색 변경
+
+                            } /////// ok이면 /////////////
+                            else { // DB에 이미 같은 ID있음
+
+                                // 아이디중복 메시지
+                                $(this).siblings(".msg")
+                                    .text("사용중인 ID입니다!")
+                                    .removeClass("on"); //글자색 변경
+
+                                // 통과여부 false
+                                pass = false;
+
+                            } /////// no이면 //////////////
+
+                        }, ////// success함수 //////////
+                        
+                        // 7.에러처리함수
+                        // error:function(xhr,status,error){}
+                        // error:function(XMLHttpRequest,실패상태,에러결과값){}
+                        error: function (xhr, status, error) {
+                            alert("연결실행실패:" + error);
+                        } ///////// error ///////////
+                    }); ////////// ajax 메서드 ////////////////////
+                    ///////////////////////////////////////////////
 
 
 
-                    $(this).siblings(".msg")
-                        .text("훌륭한 아이디네요~!")
-                        .addClass("on"); //글자색 변경 클래스
+
                 } ////////// else문 : 결과 true ////////
 
             } /////////// else if문 : 아이디일때 //////////
