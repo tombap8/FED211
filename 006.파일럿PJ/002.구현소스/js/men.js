@@ -13,6 +13,13 @@ $(function () { /// jQB ////////////////////////////
         slidesPerView: 1,
         spaceBetween: 0,
         loop: true,
+        speed: 500,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+          // disableOnInteraction 
+          // - 건드린 후 멈춤 true / 다시 작동은 false
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
