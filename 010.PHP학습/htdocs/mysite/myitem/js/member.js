@@ -168,7 +168,7 @@ $(function () { //// jQB ///////////////////////////////////
                         - $.ajax(URL,TYPE,DATA,DATA TYPE,ASYNC옵션,SUCCESS,ERROR)
 
                         - 상세 파라미터값:
-                        $.ajax(
+                        $.ajax({
                             전송할 페이지,
                             전송방식(GET/POST),
                             보낼데이터,
@@ -176,9 +176,38 @@ $(function () { //// jQB ///////////////////////////////////
                             ASYNC옵션(보통은 false),
                             결과값 리턴함수,
                             에러처리함수
-                        )
+                        })
                     */
 
+                        $.ajax({
+                            // 1.전송할 페이지
+                            url:"process/chkID.php",
+                            // 2.전송방식(GET/POST)
+                            type:"post",
+                            // 3.보낼데이터
+                            data: {
+                                "mid": $("#mid").val()
+                            },
+                            // 4.전송할 데이터 타입
+                            dataType:"html",
+                            // 5.ASYNC옵션(보통은 false)
+                            // -> false로 해야 전역변수사용가능
+                            async:false,
+                            // 6.결과값 리턴함수
+                            // success(result,status,xhr)
+                            // success(결과값,성공상태값,XMLHttpRequest)
+                            // 보통 하나만 쓰면 결과값을 리턴 받는다!
+                            success:function(res){// res는 결과값
+                                alert(res);
+                            },
+                            // 7.에러처리함수
+                            // error:function(xhr,status,error){}
+                            // error:function(XMLHttpRequest,실패상태,에러결과값){}
+                            error:function(xhr,status,error){
+                                alert("연결실행실패:"+error);
+                            } ///////// error ///////////
+                        }); ////////// ajax 메서드 ////////////////////
+                        ///////////////////////////////////////////////
 
 
 
