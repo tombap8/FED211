@@ -11,6 +11,17 @@ html,body{
     overflow: visible;
 }
 
+/* 스크롤 등장 클래스 */
+.js-reveal {
+  opacity: 1;
+  transition: opacity 1.5s ease-in, margin-top 1.5s ease-out;
+}
+
+.js-reveal--hidden {
+  opacity: 0;
+  margin-top: 200px;
+}
+
 /* 1. 배너영역 */
 #ban{
     background-color: lightblue;
