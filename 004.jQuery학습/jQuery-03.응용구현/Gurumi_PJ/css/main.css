@@ -24,7 +24,7 @@ body{
     max-width: 300px;
     /* 최대크기지정 */
     margin: 0 auto; 
-    margin-top: 50px;   
+    margin-top: 2%;   
     box-shadow: -15px 0 30px #000 inset;
     border-radius: 50%;
     background: url(../images/img-pd.jpg) no-repeat center/cover;
@@ -41,7 +41,7 @@ body{
 #gbx{
     position: relative;
     /* 부모자격: 버튼의 부모 */
-    padding: 70px 0;
+    padding: 2% 0;
 }
 .gbx{
     position: relative;
@@ -135,3 +135,18 @@ body{
     left: 10%;
 }
 
+/* 3. 하단부분 */
+#info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.2);
+}
+#info address{
+    margin: 0;
+    padding: 10px;
+    font: 12px/20px "맑은 고딕";
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}
