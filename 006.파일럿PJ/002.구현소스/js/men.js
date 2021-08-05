@@ -115,7 +115,9 @@ $(function () { /// jQB ////////////////////////////
       function(){ // over
         // 1. 클래스 명 알아내기
         let cls = $(this).attr("class");
-        console.log(cls);
+        // 2. 클래스명에 의한 신상정보 가져오기
+        let ginfo = sinsang[cls];
+        console.log(ginfo);
       },
       function(){ // out
 
