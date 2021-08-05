@@ -72,6 +72,11 @@ html,body{
   left: 0;/* 움직일 기준값 */
   display: flex;/* 플렉스박스 */
 }
+.flist li {
+  position: relative;
+  /* 부모자격 */
+}
+
 .flist li img{
   width: 300px;
 }
@@ -79,6 +84,7 @@ html,body{
 /* 신상정보박스 */
 .ibox {
   position: absolute;
+  /* 부모는? 싸고있는 li */
   top: 60%;
   width: 100%;
   text-align: center;

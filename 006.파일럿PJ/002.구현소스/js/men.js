@@ -112,14 +112,19 @@ $(function () { /// jQB ////////////////////////////
     //            정보를 가져와서 html을 만들어서 보이게한다!
     ////////////////////////////////////////////////////////
     $(".flist li").hover(
-      function(){ // over
+      function(){ // over ////////////////////
+
         // 1. 클래스 명 알아내기
         let cls = $(this).attr("class");
+
         // 2. 클래스명에 의한 신상정보 가져오기
         let ginfo = sinsang[cls];
-        console.log(ginfo);
-      },
-      function(){ // out
+        // console.log(ginfo);
+
+        // 3. 
+
+      }, /////////// over //////////////////
+      function(){ // out ///////////////////
 
       }); /////////// hover ///////////////////////////
 
