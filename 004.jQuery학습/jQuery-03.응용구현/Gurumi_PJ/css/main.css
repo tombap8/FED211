@@ -10,6 +10,14 @@ body{
     background: url(../images/bg-main.jpg) no-repeat top/cover;
 }
 
+ /* IR 클래스 */
+.ir{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
 /* 메인타이틀 */
 .mtit{
     width: 20%;
@@ -17,11 +25,12 @@ body{
     margin-top: 50px;   
     box-shadow: -15px 0 30px #000 inset;
     border-radius: 50%;
-    overflow: hidden;
+    background: url(../images/img-pd.jpg) no-repeat center/cover;
 }
-.mtit img{
-    width: 100%;
-    position: relative;
-    z-index: -1;
-
+/* 비율유지박스 */
+.mtit::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+    /* 정사각형 1:1비율 */
 }
