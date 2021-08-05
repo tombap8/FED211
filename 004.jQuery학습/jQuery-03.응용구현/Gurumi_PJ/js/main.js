@@ -43,6 +43,17 @@ $(function () { //////////// jQB //////////////////////////
         gbx.prepend(gbx.find("img").last());
     }); ///////////// click ////////////////
 
+    // 인터발용변수
+    let autoI;
+
+    //// 자동 인터발호출 함수 //////////
+    let autoSlide = () => {
+        autoI = setInterval(goSlide, 3000);
+    }; ////////////// autoSlide함수 /////////
+
+    // 자동 인터발함수 최초호출!
+    autoSlide();
+
 
 
 
