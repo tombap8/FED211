@@ -55,11 +55,24 @@ html,body{
 /* 2. 남자컨텐츠1 */
 #cont1{
     background-color: #fff;
+    height: auto;
 }
 /* 신상품 타이틀 */
 .c1tit{
-  padding: 80px 200px;
+  padding: 6% 15%;
   font-size: 4rem;
+}
+/* 신상품 박스 */
+.flowbx{
+  margin-bottom: 300px;
+}
+.flist{
+  position: relative;
+  left: 0;/* 움직일 기준값 */
+  display: flex;/* 플렉스박스 */
+}
+.flist li img{
+  width: 250px;
 }
 
 /******** 남자패션 공통 class *********/
@@ -117,12 +130,6 @@ html,body{
 #cont3 .imgc{
   flex-basis: 15%;
   /* 등분할 영역까지가 0%이고 양수는 영역침범 */
-}
-/* 스타일패션 이미지 */
-#cont3 img{
-  object-fit: fill;
-  width: auto;
-  right: -26%;
 }
 /* 스타일 패션 글자 */
 .txtc .tm{/* 오른쪽스타일글자 */
