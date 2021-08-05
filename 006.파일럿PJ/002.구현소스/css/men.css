@@ -86,6 +86,7 @@ html,body{
   position: absolute;
   /* 부모는? 싸고있는 li */
   top: 60%;
+  /* 105%로 내려올 것임 */
   width: 100%;
   text-align: center;
   font: 14px/24px UB;
@@ -93,6 +94,7 @@ html,body{
   color: #fff;
   padding: 20px 0;
   opacity: 0;
+  /* 1로 투명도 변경될 것임 */
   /* 처음에 투명 */
 }
 

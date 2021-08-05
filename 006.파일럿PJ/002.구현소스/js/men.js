@@ -121,11 +121,20 @@ $(function () { /// jQB ////////////////////////////
         let ginfo = sinsang[cls];
         // console.log(ginfo);
 
-        // 3. 
+        // 3. 상품정보박스 만들고 나타나기
+        $(this).append('<div class="ibox"></div>');
+        // 상품정보넣기
+        $(".ibox").html(ginfo.replace(/\^/g, "<br>"))
+        // replace로 기존 특수기호^를 br태그로 모두변경함(정규식)
+        .animate({
+          top: "105%",
+          opacity: 1
+        }, 300, "easeOutCirc");
 
       }, /////////// over //////////////////
       function(){ // out ///////////////////
-
+          // .ibox지우기
+          $(".ibox").remove();
       }); /////////// hover ///////////////////////////
 
 
