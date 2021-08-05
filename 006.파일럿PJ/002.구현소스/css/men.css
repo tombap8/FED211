@@ -73,7 +73,7 @@ html,body{
   display: flex;/* 플렉스박스 */
 }
 .flist li img{
-  width: 250px;
+  width: 300px;
 }
 
 /******** 남자패션 공통 class *********/
