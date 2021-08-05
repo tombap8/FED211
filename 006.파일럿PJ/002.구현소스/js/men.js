@@ -157,7 +157,7 @@ $(function () { /// jQB ////////////////////////////
     // 2. 스크롤 액션
     // 2-1. 첫페이지 윈도우 높이값의 2/3지점 통과시
     // -> 신상품 리스트 이동함수 최초호출하기!(한번만호출)
-    if (scTop > winH * 2 && scTop < winH * 6 && nacall) {
+    if (scTop > winH * 2 && scTop < winH * 4 && nacall) {
       console.log("신상호출처음!");
       //한번만호출 상태변경
       nacall = 0; 
@@ -168,7 +168,8 @@ $(function () { /// jQB ////////////////////////////
       moveList();
 
     } ////////// if문 신상이동호출 ///////
-    else if(scTop > winH * 6 && !nacall){
+    else if((scTop < winH * 2 || scTop > winH * 4) && !nacall){
+
       console.log("신상호출멈춤처음!");
       //한번만호출 상태변경
       nacall = 1; 
