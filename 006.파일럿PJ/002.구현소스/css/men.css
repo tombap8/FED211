@@ -66,6 +66,7 @@ html,body{
 .flowbx{
   margin-bottom: 300px;
 }
+/* 움직일 리스트박스 */
 .flist{
   position: relative;
   left: 0;/* 움직일 기준값 */
