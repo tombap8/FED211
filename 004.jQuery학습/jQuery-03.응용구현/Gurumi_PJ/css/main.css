@@ -8,7 +8,6 @@ html,body,h1{
 body{
     overflow: hidden;
     background: url(../images/bg-main.jpg) no-repeat fixed top/cover;
-
 }
 
  /* IR 클래스 */
