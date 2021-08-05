@@ -21,6 +21,8 @@ body{
 /* 1.메인타이틀 */
 .mtit{
     width: 20%;
+    max-width: 300px;
+    /* 최대크기지정 */
     margin: 0 auto; 
     margin-top: 50px;   
     box-shadow: -15px 0 30px #000 inset;
@@ -45,6 +47,8 @@ body{
     position: relative;
     /* 부모자격 */
     width: 20%;
+    max-width: 300px;
+    /* 최대크기지정 */
     margin: 0 auto;
     /* outline: 4px dashed blue; */
 }
@@ -115,6 +119,8 @@ body{
     top: 50%;
     transform: translateY(-50%);
     width: 4%;
+    max-width: 55px;
+    /* 최대크기지정 */
 }
 .abtn img{
     width: 100%;
