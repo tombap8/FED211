@@ -7,7 +7,8 @@ html,body,h1{
 
 body{
     overflow: hidden;
-    background: url(../images/bg-main.jpg) no-repeat top/cover;
+    background: url(../images/bg-main.jpg) no-repeat fixed top/cover;
+
 }
 
  /* IR 클래스 */
@@ -36,12 +37,17 @@ body{
 }
 
 /* 2. 갤러리박스 */
+#gbx{
+    position: relative;
+    /* 부모자격: 버튼의 부모 */
+    padding: 70px 0;
+}
 .gbx{
     position: relative;
     /* 부모자격 */
     width: 20%;
     margin: 0 auto;
-    outline: 4px dashed blue;
+    /* outline: 4px dashed blue; */
 }
 .gbx::before{
     content: '';
@@ -68,13 +74,21 @@ body{
     top: -40%;
     left: -210%;
     transform: scale(.7);
+    opacity: 0;/* 안보임 */
 }
 /* 왼쪽 바로옆 */
 .gbx img:nth-child(2){
     top: -20%;
     left: -110%;
     transform: scale(.9);
+    filter: grayscale(50%) blur(1px);
 }
+/* 
+    css 필터 속성: 이미지에 변형효과를 준다
+    filter: 여러가지 필터(그레이스케일, 블러, 세피아, 콘트라스트 등)
+    참조) https://www.w3schools.com/cssref/playit.asp?filename=playcss_filter&preval=none
+
+*/
 /* 중앙이미지 */
 .gbx img:nth-child(3) {
     top: 0;
@@ -86,11 +100,33 @@ body{
     top: -20%;
     left: 110%;
     transform: scale(.9);
+    filter: grayscale(50%) blur(1px);
 }
 /* 오른쪽 끝 */
 .gbx img:nth-child(5){
     top: -40%;
     left: 210%;
     transform: scale(.7);
+    opacity: 0;/* 안보임 */
+}
+
+/* 이동버튼 공통 */
+.abtn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4%;
+}
+.abtn img{
+    width: 100%;
+    /* 높이값은 자동조절 */
+}
+/* 오른쪽버튼 */
+.rb{
+    right: 10%;
+}
+/* 왼쪽버튼 */
+.lb{
+    left: 10%;
 }
 
