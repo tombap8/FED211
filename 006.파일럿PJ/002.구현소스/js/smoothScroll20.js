@@ -8,7 +8,7 @@ function startSS() {
 }
 
 // 전역변수 스크롤 위치값
-let pos;
+let sc_pos;
 // 다른 코딩으로 스크롤 이동시 이 변수에 일치필요!!!
 
 function SmoothScroll(target, speed, smooth) {
@@ -19,7 +19,7 @@ function SmoothScroll(target, speed, smooth) {
             document.body) // cross browser support for document scrolling
 
     var moving = false
-    pos = target.scrollTop
+    sc_pos = target.scrollTop
     var frame = target === document.body &&
         document.documentElement ?
         document.documentElement :
@@ -37,8 +37,8 @@ function SmoothScroll(target, speed, smooth) {
 
         var delta = normalizeWheelDelta(e)
 
-        pos += -delta * speed
-        pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
+        sc_pos += -delta * speed
+        sc_pos = Math.max(0, Math.min(sc_pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
 
         if (!moving) update()
     }
@@ -56,7 +56,7 @@ function SmoothScroll(target, speed, smooth) {
     function update() {
         moving = true
 
-        var delta = (pos - target.scrollTop) / smooth
+        var delta = (sc_pos - target.scrollTop) / smooth
 
         target.scrollTop += delta
 

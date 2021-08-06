@@ -65,6 +65,11 @@ $(".gnb li,.indic li").click(function (e) {
     // 6. li순번과 pno와 일치하기! /////////////////////
     pno = idx;
     //console.log("페이지번호:" + pno);
+
+    // 7. 이동위치값을 부드러운 스크롤위치값과 일치하기!
+    sc_pos = pos;
+
+    // console.log("부스:"+sc_pos);
     
 
 }); ///////////// click ///////////////
