@@ -40,8 +40,9 @@
             padding-bottom: 0;
             outline: 1px solid lime;
         }
+
         /* 갤러리 트랙 */
-        .track{
+        .track {
             flex: 1;
         }
 
@@ -184,8 +185,8 @@
 
             // 이미지 설명글 ////////////////////////
             let itxt = [];
-            for (let i = 0; i < 50; i++) {
-                itxt[i] = "WD21-AUG" + (i + 1);
+            for (let i = 0; i < 52; i++) {
+                itxt[i] = "스타화보2021-0" + (i + 1);
             } ///////// for문 : 이미지설명 배열 //////
 
             ////////////////////////////////
@@ -196,14 +197,26 @@
             // 대상: #gallery
             let gallery = $("#gallery");
 
-            for (let i = 0; i < 50; i++) {
-                gallery.append(
-                    '<div class="photobox">' +
-                    '    <img src="images/dress/' + (i + 1) + '.jpg" alt="fashion">' +
-                    '    <span class="cover"></span>' +
-                    '    <span class="txt">' + itxt[i] + '</span>' +
-                    '</div>'
-                );
+            // 각 3개의 트랙을 순서대로 돌면서 이미지를 넣어준다!
+
+            // 트랙구분 변수
+            let tnum = 1; // 트랙구분 class번호
+
+            for (let i = 0; i < 52; i++) {
+                
+                gallery.find(".t" + tnum)
+                    .append(
+                        '<div class="photobox">' +
+                        '    <img src="images/flexImg/' + (i + 1) + '.jpg" alt="fashion">' +
+                        '    <span class="txt">' + itxt[i] + '</span>' +
+                        '</div>'
+                    );
+
+                // 트랙번호 증가하기
+                tnum++;
+                if (tnum === 4) tnum = 1;
+                // 1~3까지만 반복!!!
+
             } ///////// for문 //////////////
 
             ////////////////////////////////////////////
@@ -314,7 +327,7 @@
 
                     // 3. body 스크롤막기 해제하기
                     $("body").css({
-                        overflow:"visible"
+                        overflow: "visible"
                     }); //////// css /////////
 
                 }); ///////////// click /////////////
