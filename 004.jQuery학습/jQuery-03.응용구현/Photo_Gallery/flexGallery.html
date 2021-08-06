@@ -203,11 +203,11 @@
             let tnum = 1; // 트랙구분 class번호
 
             for (let i = 0; i < 52; i++) {
-                
+
                 gallery.find(".t" + tnum)
                     .append(
-                        '<div class="photobox">' +
-                        '    <img src="images/flexImg/' + (i + 1) + '.jpg" alt="fashion">' +
+                        '<div class="photobox" data-seq="' + i + '">' +
+                        '    <img src="flexImg/' + (i + 1) + '.jpg" alt="fashion">' +
                         '    <span class="txt">' + itxt[i] + '</span>' +
                         '</div>'
                     );
@@ -219,33 +219,9 @@
 
             } ///////// for문 //////////////
 
-            ////////////////////////////////////////////
-            // 2. 갤러리 박스에 마우스 오버시 처리하기 ////
-            ////////////////////////////////////////////
 
             // 대상: .photobox
             let ptbx = $(".photobox");
-            // 변경내용:
-            // 오버시 - 커버 서서히 사라짐 + 설명글 올라옴
-            // 아웃시 - 커버 서서히 나타남 + 설명글 내려감
-            // 사용 메서드: hover()
-            ptbx.hover(
-                function () { // over
-                    // 커버사라짐
-                    $(".cover", this).stop().fadeOut(300);
-                    // 설명글 올라옴
-                    $(".txt", this).stop().animate({
-                        top: "70%"
-                    }, 300); ///// animate ///
-                },
-                function () { // out
-                    // 커버나타남
-                    $(".cover", this).stop().fadeIn(300);
-                    // 설명글 내려감
-                    $(".txt", this).stop().animate({
-                        top: "100%"
-                    }, 300); ///// animate ///
-                }); /////// hover //////////////
 
             // 포토박스 공통 대상
             let imbx = $("#imbx");
@@ -264,6 +240,7 @@
             ptbx.click(function () {
 
                 // 0. 포토박스 순번 변수에 할당!
+                // 트랙이 생겼으므로 이미 할당된 순번을 읽어온다!
                 pseq = $(this).index();
                 // console.log("포토박스순번:"+pseq)
 
@@ -293,9 +270,9 @@
                 bgbx.fadeIn(300);
 
                 // 6. 큰 이미지보기시 body의 스크롤막기
-                $("body").css({
-                    overflow: "hidden"
-                }); ////// css ////////
+                // $("body").css({
+                //     overflow: "hidden"
+                // }); ////// css ////////
 
             }); ///////////// click ////////////////////
             ////////////////////////////////////////////
@@ -326,9 +303,9 @@
                     bgbx.fadeOut(300);
 
                     // 3. body 스크롤막기 해제하기
-                    $("body").css({
-                        overflow: "visible"
-                    }); //////// css /////////
+                    // $("body").css({
+                    //     overflow: "visible"
+                    // }); //////// css /////////
 
                 }); ///////////// click /////////////
             /////////////////////////////////////////////
@@ -366,16 +343,12 @@
                 // 3. 변경된 순번에 맞는 큰 이미지와 설명넣기
                 // 3-1. 큰 이미지 변경 : 이미지이름은 순번보다 1큼
                 imbx.find("img")
-                    .attr("src", "images/dress/" + (pseq + 1) + ".jpg");
+                    .attr("src", "flexImg/" + (pseq + 1) + ".jpg");
                 // 3-2. 이미지 설명 변경 : 순번에 맞는 설명배열값 넣기
                 imbx.find("h4").text(itxt[pseq]);
 
             }); ////////////// click /////////////////////
             //////////////////////////////////////////////
-
-
-
-
 
 
         }); /////////////////// jQB ////////////////////
