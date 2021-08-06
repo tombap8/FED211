@@ -16,30 +16,64 @@
         }
 
         /* 갤러리 상단박스 */
-        .top{
+        .top {
             position: relative;
-            width: 950px;
+            width: 980px;
             max-width: 100%;
             height: 14vh;
             margin: 0 auto;
-
+            border-bottom: 2px solid #222;
         }
+
         /* 갤러리 타이틀 */
         .mtit {
+            position: relative;
+            /* 부모자격 */
+            height: 100%;
             margin: 0;
             padding: 0;
             text-align: center;
-            font: 2.8rem/14vh "맑은 고딕";
+            font: 2.8rem/12vh "맑은 고딕";
         }
-        .link{
+
+        /* 포토정보박스 */
+        .pinfo {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            line-height: 1rem;
+        }
+
+        .pinfo i {
+            font-style: normal;
+            color: red;
+        }
+
+        .link {
             position: absolute;
             top: 0;
             height: 100%;
-            color: #222;
-            text-decoration: none;
             font: 1.2rem/14vh "맑은 고딕";
         }
-        .rps{
+
+        .link a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        /* 이동꺽쇠 */
+        .link a span {
+            font-size: 2.3rem;
+            transform: scaleX(.5) translateY(3px);
+            display: inline-block;
+        }
+
+        .rps {
             right: 0;
         }
 
@@ -47,12 +81,10 @@
         #gallery {
             display: flex;
             /* 플렉스박스 */
-            width: 950px;
+            width: 1000px;
+            max-width: 100%;
             margin: 0 auto;
             margin-bottom: 150px;
-            padding: 10px;
-            padding-bottom: 0;
-            outline: 1px solid lime;
         }
 
         /* 갤러리 트랙 */
@@ -191,6 +223,17 @@
         #imbx img {
             height: 100%;
         }
+
+/* 미디어쿼리 */
+@media only screen and (max-width:800px) {
+    .top{
+        height: 20vh;
+    }
+    .link{
+        line-height: 22vh;
+    }
+}/* 미디어쿼리 */
+
     </style>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
