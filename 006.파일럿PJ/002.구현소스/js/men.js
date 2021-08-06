@@ -21,16 +21,16 @@ $(function () { /// jQB ////////////////////////////
   // 메뉴 a요소 기본이동 막기!
   $(".gnb a,.indic a").click(function (e) {
     e.preventDefault();
-}); ///////////// click ////////////////
+  }); ///////////// click ////////////////
 
-//// GNB메뉴 클릭시 해당 페이지 위치로 이동 애니메이션
-// 이벤트 대상: .gnb li + .indic li
-// 변경 대상: html,body
-$(".gnb li,.indic li").click(function (e) {
+  //// GNB메뉴 클릭시 해당 페이지 위치로 이동 애니메이션
+  // 이벤트 대상: .gnb li + .indic li
+  // 변경 대상: html,body
+  $(".gnb li,.indic li").click(function (e) {
 
-   // 0. 클릭된 li순번 구해오기
-   let idx = $(this).index();
-   //console.log("순번:" + idx);
+    // 0. 클릭된 li순번 구해오기
+    let idx = $(this).index();
+    //console.log("순번:" + idx);
 
     // 1. 하위a요소의 href값 읽어오기
     let idnm = $("a", this).attr("href");
@@ -51,17 +51,17 @@ $(".gnb li,.indic li").click(function (e) {
     // 스크롤 이동대상: html,body
     // -> 범용브라우저에서 사용하는 스크롤대상
     $("html,body").animate({
-        scrollTop: pos + "px"
+      scrollTop: pos + "px"
     }, 1200, "easeOutQuint"); //// animate /////
 
-    
+
     // 4. 클릭된 li요소에 class="on" 넣기
     $(".gnb li").eq(idx).addClass("on")
-    .siblings().removeClass("on");
+      .siblings().removeClass("on");
     $(".indic li").eq(idx).addClass("on")
-    .siblings().removeClass("on");
+      .siblings().removeClass("on");
     //다른 형제 li들 class="on" 지움
-    
+
     // 6. li순번과 pno와 일치하기! /////////////////////
     pno = idx;
     //console.log("페이지번호:" + pno);
@@ -70,9 +70,9 @@ $(".gnb li,.indic li").click(function (e) {
     sc_pos = pos;
 
     // console.log("부스:"+sc_pos);
-    
 
-}); ///////////// click ///////////////
+
+  }); ///////////// click ///////////////
 
 
 
@@ -205,10 +205,68 @@ $(".gnb li,.indic li").click(function (e) {
   let winH = $(window).height() / 3;
   console.log("윈도우높이:" + winH);
 
+
   ////////////////////////////////////////////////
   /////// 윈도우 스크롤시 위치값에 따른 액션주기 ////
-  // 스크롤위치변수
+  ////////////////////////////////////////////////
+
+  // 1. 스크롤위치변수
   let scTop;
+  // 2. 페이지 위치변수 /////////////////////////
+  let pgPos = []; // 배열변수
+  // 3. 페이지 대상 ////////////////////////////
+  let pgBox = $(".page");
+  // 4. 메뉴변경상태값 //////////////////////////
+  let mchg = 0; // 변경허용 0, 변경금지 1
+  //////////////////////////////////////////////
+
+  /////////////////////////////////////////////
+  //////////// 페이지 위치값 셋팅하기 ///////////
+  /////////////////////////////////////////////
+  for (let i = 0; i < pgBox.length; i++) {
+    pgPos[i] = pgBox.eq(i).offset().top;
+    // console.log("페이지위치값:"+pgPos[i]);
+  } ///////////// for문 ///////////////////////
+  /////////////////////////////////////////////
+
+  //////////////////////////////////////////////
+  /////////// 스크롤액션 위치값 보정 /////////////
+  //////////////////////////////////////////////
+  // 스크롤위치로 등장액션을 할 경우 등장요소가
+  // 화면 상단을 통과할때 발생하게 된다
+  // 우리가 원하는 것은 화면 중간쯤에서 등장하는 것!
+  // 윈도우화면 높이값의 절반 정도의 값을 위치값에서
+  // 뺀 것을 시작범위로 설정하기 위해 이를 구하여
+  // 변수에 할당한다!!!
+  let gap = $(window).height() / 2 + 100;
+  // 마지막 액션요소 위치로 인해 약간의 보정이 필요
+  console.log("윈도우높이값의 절반: " + gap);
+  //////////////////////////////////////////////
+
+  ///////////////////////////////////////////////
+  ///////// 페이지 영역별 메뉴변경 함수 ///////////
+  ///////////////////////////////////////////////
+  let chgMenu = function (seq) { // seq - 순번전달
+
+    //////////// 메뉴 클릭시 막기 ////////////
+    if (mchg) return; // mchg===1 일때 돌아가!
+    /////////////////////////////////////////
+
+    if (scTop > pgPos[seq] - gap && // 시작위치
+      scTop < pgPos[seq] + gap // 끝위치
+    ) {
+      // 해당순번 메뉴에 class="on" 넣기/나머진 빼기
+      $(".gnb li").eq(seq).addClass("on")
+        .siblings().removeClass("on");
+      $(".indic li").eq(seq).addClass("on")
+        .siblings().removeClass("on");
+
+    } /////////////////// if ///////////////////////
+
+  }; ////////////////// chgMenu 함수 /////////////////
+  ////////////////////////////////////////////////////
+
+
   ////////////////////////////////////////////////
   $(window).scroll(function () {
     // 1. 스크롤 위치값
@@ -221,7 +279,7 @@ $(".gnb li,.indic li").click(function (e) {
     if (scTop > winH * 2 && scTop < winH * 4 && nacall) {
       console.log("신상호출처음!");
       //한번만호출 상태변경
-      nacall = 0; 
+      nacall = 0;
 
       // 콜백상태 가능상태로 변경
       cbsts = 1;
@@ -229,17 +287,22 @@ $(".gnb li,.indic li").click(function (e) {
       moveList();
 
     } ////////// if문 신상이동호출 ///////
-    else if((scTop < winH * 2 || scTop > winH * 4) && !nacall){
+    else if ((scTop < winH * 2 || scTop > winH * 4) && !nacall) {
 
       console.log("신상호출멈춤처음!");
       //한번만호출 상태변경
-      nacall = 1; 
+      nacall = 1;
 
       // 콜백상태값 변경하여 멈추기!
       cbsts = 0; // 콜백상태값 0
 
 
     } /////////// else if문 신상이동 멈춤 /////
+
+    // 3. 페이지 해당 메뉴 변경함수 호출하기!
+    for (let i = 0; i < pgBox.length; i++) {
+      chgMenu(i); //순번전달 함수호출!
+    } ///////////// for문 ///////////////////
 
   }); /////////////// scroll /////////////////////
   ////////////////////////////////////////////////
