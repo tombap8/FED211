@@ -28,6 +28,10 @@ $(function () { /// jQB ////////////////////////////
   // 변경 대상: html,body
   $(".gnb li,.indic li").click(function (e) {
 
+    // 클릭시 스크롤 메뉴변경 안되게끔 상태값 변경
+    mchg = 1; // 변경금지 상태!!!
+    //->스크롤이동 애니후 해제!(mchg=0)
+
     // 0. 클릭된 li순번 구해오기
     let idx = $(this).index();
     //console.log("순번:" + idx);
@@ -52,7 +56,9 @@ $(function () { /// jQB ////////////////////////////
     // -> 범용브라우저에서 사용하는 스크롤대상
     $("html,body").animate({
       scrollTop: pos + "px"
-    }, 1200, "easeOutQuint"); //// animate /////
+    }, 1200, "easeOutQuint", () => { // 애니후
+      mchg = 0; //스크롤메뉴변경 허용!
+    }); //// animate /////
 
 
     // 4. 클릭된 li요소에 class="on" 넣기
