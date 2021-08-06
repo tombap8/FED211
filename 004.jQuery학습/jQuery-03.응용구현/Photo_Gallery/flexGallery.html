@@ -241,7 +241,8 @@
 
                 // 0. 포토박스 순번 변수에 할당!
                 // 트랙이 생겼으므로 이미 할당된 순번을 읽어온다!
-                pseq = $(this).index();
+                // for문으로 생성시 data-seq에 순번이 있음!
+                pseq = $(this).attr("data-seq");
                 // console.log("포토박스순번:"+pseq)
 
                 // 1. 클릭된 박스의 하위 img 요소의 src 읽어오기
