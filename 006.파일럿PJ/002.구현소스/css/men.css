@@ -231,3 +231,24 @@ body {
   left: 5%;
   transform: none;
 }
+
+/* 위로이동버튼 */
+#tbtn{
+  position: absolute;
+  top: 70%;
+  right: 100px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,.5);
+  /* 흰색반투명배경 */
+  cursor: pointer;
+  font: bold 20px Verdana;
+  color: #f00;
+
+  /* 트랜지션 */
+  transition: top .3s ease-out;
+
+  display: none;/* 처음에 안보임 */
+}
