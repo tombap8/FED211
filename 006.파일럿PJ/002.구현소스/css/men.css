@@ -146,8 +146,9 @@ body {
   background: url(../images/gong.jpg) no-repeat fixed center top/cover;
   text-align: center;
 }
-#scec h2{
-  font: bold 4.6rem/50vh UB;
+#spec h2{
+  font: bold 5rem/50vh UB;
+  letter-spacing: 5px;
   color: #fff;
   text-shadow: 3px 3px 3px #000;
 }
