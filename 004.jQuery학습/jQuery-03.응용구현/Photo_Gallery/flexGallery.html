@@ -16,7 +16,7 @@
         }
 
         body {
-            background-color: #000;
+            /* background-color: #000; */
             /* overflow: hidden; */
         }
 
@@ -33,10 +33,6 @@
         #gallery {
             display: flex;
             /* 플렉스박스 */
-            flex-wrap: wrap;
-            /* 플렉스 줄바꿈 */
-            justify-content: space-between;
-            /* 가로배열 컨텐츠 사이간격일정(양쪽끝에 위치) */
             width: 950px;
             margin: 0 auto;
             margin-bottom: 150px;
@@ -44,25 +40,25 @@
             padding-bottom: 0;
             outline: 1px solid lime;
         }
+        /* 갤러리 트랙 */
+        .track{
+            flex: 1;
+        }
 
         /* 각 갤러리박스 공통 */
         .photobox {
             position: relative;
             /* 부모자격 */
-            width: 180px;
-            height: 250px;
+            width: 94%;
             cursor: pointer;
-            /* margin: 5px; */
+            margin: 3%;
             overflow: hidden;
             /* 자식요소숨김 */
-            margin-bottom: 10px;
         }
 
         .photobox img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* 이미지 비율유지 채우기 */
+            /* height설정없이 자동으로! */
         }
 
         /* 커버 */
@@ -79,11 +75,10 @@
         /* 이미지설명박스 */
         .txt {
             position: absolute;
-            top: 100%;
-            /* 글자박스 하단바깥에 나감! */
+            bottom: 0;
             left: 0;
             width: 100%;
-            height: 30%;
+            height: 80px;
             color: #fff;
             font: 0.68rem/4.68rem sans-serif;
             /* 0.68rem=11px, 4.68rem=75px */
@@ -379,7 +374,11 @@
     <h1 class="mtit">Shopping Mall Gallery</h1>
 
     <!-- 갤러리 박스 -->
-    <div id="gallery"></div>
+    <div id="gallery">
+        <div class="track t1"></div>
+        <div class="track t2"></div>
+        <div class="track t3"></div>
+    </div>
 
     <!-- 큰이미지 배경박스 -->
     <div id="bgbx">
