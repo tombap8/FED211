@@ -140,6 +140,18 @@ body {
 
 }
 
+/************** 남자 스페션 영역 *****************/
+#spec{
+  height: 50vh;
+  background: url(../images/gong.jpg) no-repeat fixed center top/cover;
+  text-align: center;
+}
+#scec h2{
+  font: bold 4.6rem/50vh UB;
+  color: #fff;
+  text-shadow: 3px 3px 3px #000;
+}
+
 /******** 남자패션 공통 class *********/
 .pgc {
   position: relative;
