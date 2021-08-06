@@ -15,13 +15,32 @@
             /* html,body의 높이값 auto로! */
         }
 
+        /* 갤러리 상단박스 */
+        .top{
+            position: relative;
+            width: 950px;
+            max-width: 100%;
+            height: 14vh;
+            margin: 0 auto;
+
+        }
         /* 갤러리 타이틀 */
         .mtit {
             margin: 0;
-            padding: 100px 0;
+            padding: 0;
             text-align: center;
-            color: #fff;
-            font: bold 3.2rem arial;
+            font: 2.8rem/14vh "맑은 고딕";
+        }
+        .link{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            color: #222;
+            text-decoration: none;
+            font: 1.2rem/14vh "맑은 고딕";
+        }
+        .rps{
+            right: 0;
         }
 
         /* 갤러리박스 */
@@ -354,10 +373,20 @@
 <body>
     <!-- 갤러리 타이틀 -->
     <header class="top">
-        <h1 class="mtit">화보 속 스타</h1>
-        <a href="#" class="link rps">방송 현장포토 ＞</a>
-        <a href="#" class="link lps">＜ 영화계 현장포토</a>
-        <span class="pinfo"><i>17,232</i> PHOTOS</span>
+        <h1 class="mtit">
+            화보 속 스타
+            <span class="pinfo"><i>17,232</i> PHOTOS</span>
+        </h1>
+        <div class="link rps">
+            <a href="#">
+                방송 현장포토 <span>＞</span>
+            </a>
+        </div>
+        <div class="link lps">
+            <a href="#">
+                <span>＜</span> 영화계 현장포토
+            </a>
+        </div>
     </header>
 
     <!-- 갤러리 박스 -->
