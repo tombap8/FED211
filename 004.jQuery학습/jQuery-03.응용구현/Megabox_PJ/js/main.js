@@ -167,18 +167,18 @@ $(function(){ //// jQB2 //////////////////////////
         // 2. 영화포스터 이동버튼 축소하단 이동 애니메이션
         $(".abtn").css({
             top: "80%",
-            transform:"translateY(-50%) scale(.4)",
             minWidth: "50px",
             transition: "all .6s ease-in-out"
         }); ////////////// css //////////////
 
-
         // 3. 이동버튼 위치 세부조정
         $(".lb").css({
-            left: "20%"
+            left: "30%",
+            transform: "translate(-100px,-50%) scale(.4)"
         }); ///// css //////
         $(".rb").css({
-            right: "20%"
+            left: "70%",
+            transform: "translate(100px,-50%) scale(.4)"
         }); ///// css //////
 
     }); //////////////// click /////////////////////////

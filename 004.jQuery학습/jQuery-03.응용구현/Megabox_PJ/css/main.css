@@ -306,7 +306,7 @@ h3 {
 .abtn{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%,-50%);
     width: 4%;
     max-width: 55px;
     /* 최대크기지정 */
@@ -317,7 +317,7 @@ h3 {
 }
 /* 오른쪽버튼 */
 .rb{
-    right: 10%;
+    left: 90%;
 }
 /* 왼쪽버튼 */
 .lb{
