@@ -291,11 +291,15 @@ $(function () { //// jQB2 //////////////////////////
             if(!paused_sts){
                 // 비디오 멈추기는 pause() 메서드!
                 mv.get(0).pause();
+                // 멈춤상태이면 진한재생버튼으로 변경!
+                $(this).attr("src","images/vbt2-1.png");
 
             } /////////// if문 /////////////////
             else{
                 // 비디오 재생은 play() 메서드!
                 mv.get(0).play();
+                // 재생상태이면 진한멈춤버튼으로 변경!
+                $(this).attr("src","images/vbt1-1.png");
 
             } ////////// else문 ////////////////
 
