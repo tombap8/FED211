@@ -268,7 +268,7 @@ h3 {
     width: 100%;
     box-shadow: 6px 6px 5px #333;
     border-radius: 15px;
-    cursor: pointer;
+    cursor: pointer;/* 손가락모양 */
 
     /* 트랜지션 */
     transition: all .4s ease-in-out;
@@ -282,6 +282,7 @@ h3 {
     left: -210%;
     transform: scale(.7);
     opacity: 0;/* 안보임 */
+    cursor: default;
 }
 /* 왼쪽 바로옆 */
 .gbx img:nth-child(2){
@@ -307,6 +308,7 @@ h3 {
     left: 210%;
     transform: scale(.7);
     opacity: 0;/* 안보임 */
+    cursor: default;
 }
 
 /* 이동버튼 공통 */

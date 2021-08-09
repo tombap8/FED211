@@ -105,11 +105,11 @@ $(function () { //// jQB2 //////////////////////////
         }, 400);
 
         // 자동호출 지우기
-        if(autoOK) clearAuto();
+        if (autoOK) clearAuto();
 
         // 이동함수 호출
         goSlide();
-        
+
         // console.log("지우기호출여부:"+autoOK);
 
     }); ///////////// click /////////////
@@ -125,12 +125,12 @@ $(function () { //// jQB2 //////////////////////////
         }, 400);
 
         // 자동호출 지우기
-        if(autoOK) clearAuto();
+        if (autoOK) clearAuto();
 
         // 마지막 요소를 잘라서 맨앞으로 보냄
         gbx.prepend(gbx.find("img").last());
 
-        
+
         // console.log("지우기호출여부:"+autoOK);
 
     }); ///////////// click ////////////////
@@ -168,6 +168,25 @@ $(function () { //// jQB2 //////////////////////////
     // 대상: .gbx img
     $(".gbx img").click(function () {
 
+        // 0. 이미지 포스터 순번
+        let idx = $(this).index();
+        console.log("포순:" + idx);
+
+        // 0.1. 보이지 않는 0번째,4번째 포스터는 실행안되게!
+        if (idx === 0 || idx === 4) return; // 돌아가!
+
+        // 포스터 순번 1,2,3만 아래로 내려감!
+
+        // 0.2. 위치를 중앙에 오게 하기 위해 ////////
+
+        // 순번이 1일 경우 왼쪽버튼 클릭 트리거!
+        if(idx===1) $(".lb").trigger("click");
+
+        // 순번이 3일 경우 오른쪽버튼 클릭 트리거!
+        else if(idx===3) $(".rb").trigger("click");
+        // 트리거 메서드: 선택자.trigger(이벤트명)
+
+
         // 1. 영화포스터 네비 작아지게 하단 이동 애니메이션
         $("#gbx").css({
             width: "40%",
@@ -189,7 +208,7 @@ $(function () { //// jQB2 //////////////////////////
         // 포스터 이미지에 셋팅된 동영상 정보를 읽어와서 src에 넣는다
         // data-mv 속성명에 동영상 파일명이 셋팅됨
         let mvsrc = "mv/" + $(this).attr("data-mv");
-        mv.attr("src",mvsrc);
+        mv.attr("src", mvsrc);
 
         // 3-2. 동영상 나타나기
         $("#screen").fadeIn(300);
