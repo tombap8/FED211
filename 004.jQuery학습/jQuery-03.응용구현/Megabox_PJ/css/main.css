@@ -236,16 +236,23 @@ h3 {
 }
 
 /* 2-1-2.예고편 선택박스 */
-.gbx{
+/* 포스터 전체박스 */
+#gbx {    
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 90%;
+    /* outline: 4px dashed blue; */
+}
+/* 포스터박스 */
+.gbx{
+    position: relative;
+    /* 부모자격 */
     width: 20%;
     /* max-width: 300px; */
     /* 최대크기지정 */
     margin: 0 auto;
-    /* outline: 4px dashed blue; */
 }
 .gbx::before{
     content: '';
