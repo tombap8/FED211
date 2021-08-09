@@ -168,8 +168,18 @@ $(function(){ //// jQB2 //////////////////////////
         $(".abtn").css({
             top: "80%",
             transform:"translateY(-50%) scale(.4)",
+            minWidth: "50px",
             transition: "all .6s ease-in-out"
         }); ////////////// css //////////////
+
+
+        // 3. 이동버튼 위치 세부조정
+        $(".lb").css({
+            left: "20%"
+        }); ///// css //////
+        $(".rb").css({
+            right: "20%"
+        }); ///// css //////
 
     }); //////////////// click /////////////////////////
 
