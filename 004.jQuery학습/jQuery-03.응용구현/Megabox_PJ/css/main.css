@@ -332,3 +332,18 @@ h3 {
 .lb{
     left: 10%;
 }
+
+/* 동영상 제어버튼 */
+
+/* 재생/멈춤버튼 */
+.btnpp{
+    position: absolute;
+    /* 부모는? #screen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+}
+.btnpp img{
+    width: 100%;
+}
