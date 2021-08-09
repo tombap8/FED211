@@ -357,3 +357,14 @@ h3 {
 .btnpp img{
     width: 100%;
 }
+
+/* 소리표시버튼 */
+.btnsnd{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 5%;
+}
+.btnsnd img{
+    width: 100%;
+}
