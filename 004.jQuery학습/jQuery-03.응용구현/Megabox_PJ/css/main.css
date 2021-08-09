@@ -217,6 +217,7 @@ h3 {
     transform: translate(-50%, -50%);
     width: 32.3%;
     /* outline: 2px dashed lime; */
+    display: none;/* 처음에 안보임! */
 }
 /* 스크린비율 가상요소 */
 #screen::before{
@@ -260,6 +261,8 @@ h3 {
     width: 100%;
     box-shadow: 6px 6px 5px #333;
     border-radius: 15px;
+    cursor: pointer;
+
     /* 트랜지션 */
     transition: all .4s ease-in-out;
 }
