@@ -110,13 +110,8 @@ $(function () { //// jQB2 //////////////////////////
         // 이동함수 호출
         goSlide();
 
-        if(!autoOK){ 
-            let center = 
-            "mv/" + gbx.find("img").eq(2).attr("data-mv");
-            console.log(center);
-            mv.attr("src",center);
-            mv.get(0).play();
-        } ////////////// if //////////////////
+        // 하단일 경우 이동버튼시 동영상 재생!
+        if(!autoOK) mvPlay();
 
         console.log("지우기호출여부:"+autoOK);
 
@@ -142,18 +137,26 @@ $(function () { //// jQB2 //////////////////////////
         // 즉, autoOK===0 일경우 이미 포스터 이동후 이므로
         // 순번상 0,1,2,3,4 -> 이 중에 2번이 중앙임
         // 중앙에 있는 포스터의 동영상으로 play함!
-        if(!autoOK){ 
-            let center = 
-            "mv/" + gbx.find("img").eq(2).attr("data-mv");
-            console.log(center);
-            mv.attr("src",center);
-            mv.get(0).play();
-        } ////////////// if //////////////////
+        if(!autoOK) mvPlay();
 
 
         console.log("지우기호출여부:"+autoOK);
 
     }); ///////////// click ////////////////
+
+    //// 이동버튼 클릭시 (하단일경우) 동영상 재생하기 ////
+    let mvPlay = () => {
+        // 1. 가운데 오는 동영상 정보읽기
+        let center = 
+        "mv/" + gbx.find("img").eq(2).attr("data-mv");
+        // console.log(center);
+        // 2. 동영상 src 변경하기
+        mv.attr("src",center);
+        // 3. 동영상 재생하기
+        mv.get(0).play();
+    }; ////////////// mvPlay 함수 /////////////////////
+
+
 
     // 인터발용변수
     let autoI;
