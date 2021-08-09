@@ -237,7 +237,7 @@ h3 {
 /* 2-1-2.예고편 선택박스 */
 .gbx{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 20%;
