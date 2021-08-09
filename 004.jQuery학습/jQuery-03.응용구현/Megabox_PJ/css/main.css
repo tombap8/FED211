@@ -335,6 +335,16 @@ h3 {
 
 /* 동영상 제어버튼 */
 
+/* 공통 */
+.ctrls{
+    opacity: 0;
+    transition: opacity .3s;
+}
+/* 스크린 오버시 컨트롤 보이기 */
+#screen:hover .ctrls{
+    opacity: 1;
+}
+
 /* 재생/멈춤버튼 */
 .btnpp{
     position: absolute;
