@@ -311,15 +311,21 @@ $(function () { //// jQB2 //////////////////////////
     // 원리: 소리가 나는지 안나는지 상태에 따라 반대로 설정함
     // 핵심: 소리가 안나는지 상태를 알 수 있음!
     $(".btnsnd img").click(function(){
-        // 현재 소리가 안나는지 상태 알아오기
+
+        // 1. 현재 소리가 안나는지 상태 알아오기
         // 동영상 소리 안남여부 속성 -> muted
         // muted는 상태값을 읽어오기 / 상태설정하기 모두 됨!
         let sound = mv.get(0).muted;
         console.log("소리안나냐?"+sound);
 
-        // 만약 소리가 안나면 나게/ 나면 안나게하기
+        // 2. 만약 소리가 안나면 나게/ 나면 안나게하기
         mv.get(0).muted = !sound;
         // !sound -> true/false인 sound값을 반대로 넣음
+
+        // 3. 아이콘을 현재 소리 상태로 넣기
+        // sound가 true이면 반대로 했으므로 소리남 아이콘!
+        if(sound) $(this).attr("src","./images/speaker_blue.png");
+        else $(this).attr("src","./images/speaker-mute_blue.png");
 
     }); //////////// click //////////////////////////
     /////////////////////////////////////////////////
