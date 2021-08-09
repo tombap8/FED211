@@ -157,7 +157,19 @@ $(function(){ //// jQB2 //////////////////////////
     $(".gbx img").click(function(){
 
         // 1. 영화포스터 네비 작아지게 하단 이동 애니메이션
-        
+        $(".gbx").css({
+            top: "80%",
+            transform:"translate(-50%, -50%) scale(.4)",
+            minWidth:"300px",//최소크기유지
+            transition: "all .6s ease-in-out"
+        }); ////////////// css //////////////
+
+        // 2. 영화포스터 이동버튼 축소하단 이동 애니메이션
+        $(".abtn").css({
+            top: "80%",
+            transform:"translateY(-50%) scale(.4)",
+            transition: "all .6s ease-in-out"
+        }); ////////////// css //////////////
 
     }); //////////////// click /////////////////////////
 
