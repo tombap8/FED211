@@ -218,6 +218,15 @@ h3 {
     width: 32.3%;
     /* outline: 2px dashed lime; */
     display: none;/* 처음에 안보임! */
+    
+    /*트랜지션:속시이지*/
+    transition: all 1s ease-in-out;
+}
+
+/*스크린 확대 class*/
+#screen.on{
+    width: 70%;
+    z-index: 1;
 }
 /* 스크린비율 가상요소 */
 #screen::before{
