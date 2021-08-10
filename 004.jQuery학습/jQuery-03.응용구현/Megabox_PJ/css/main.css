@@ -432,8 +432,8 @@ h3 {
 /*볼륨버튼*/
 .volume{
     position: absolute;
-    bottom: 17px;
-    left: 25px;
+    bottom: 11%;
+    left: 8%;
     width: 60px;
     height: 1px;
     background-color: #fff;
@@ -453,8 +453,8 @@ h3 {
 /*축소/확대버튼*/
 .expand{
     position: absolute;
-    bottom: 10px;
-    left: 5px;
+    bottom: 7%;
+    left: 3%;
     font: 16px Verdana;
     color: #CCC;
     text-shadow: 0 0 2px #777;
