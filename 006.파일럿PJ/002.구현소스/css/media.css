@@ -23,15 +23,22 @@
         /* 각 페이지 .pgc의 부모자격 */
         height: auto;
     }
+    /* 가상요소 비율밀기 */
     .page::before{
         content: '';
         display: block;
-        padding-top: 60%;
+        padding-top: 80%;
+    }
+    /* 스타일페이지 비율만 다르게 2배로! */
+    #style.page::before{
+        padding-top: 160%;
     }
     
     /* 4. 각 페이지 .pgc를 앱솔루트로 비율유지부모 박스에 맞춤!*/
     .pgc {
         position: absolute;
+        top: 0;
+        height: 100%;
     }
 
     /* 5. 내부 구성요소를 서로 겹치고 부모를 꽉채우게함 */
@@ -52,7 +59,23 @@
     /* 7. 이미지 조정 공통 */
     .pgc img {
         height: auto;
-        object-fit: none;
+        object-fit: fill;
+    }
+
+    /* 8. 스타일 영역 2배수 조정하기 */
+    #style .pgc>li {
+        height: 50%;
+    }
+    /* 여자 스타일 이미지박스만 50%아래로 이동 */
+    #style .pgc>li:first-child {
+        top: 50%;
+    }
+
+    /* 9. 여자패션 페이지 이미지박스 변경 */
+    #women .pgc img {
+        height: 100%;
+        width: auto;
+        right: -30%;
     }
 
     
