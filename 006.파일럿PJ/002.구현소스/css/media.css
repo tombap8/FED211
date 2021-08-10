@@ -11,6 +11,18 @@
         /* rem단위 글자는 html의 글자크기로 계산됨! */
     }
 
+    /* 1.5. 상단부분 */
+    #top{
+        background-color: rgba(0,0,0,.5);
+    }
+    #logo{
+        width: 45%;
+    }
+    .gnb{
+        display: none;
+    }
+
+
     /* 2. 배너 양쪽 따라다니는 버튼없애기 */
     .btna{
         display: none;
