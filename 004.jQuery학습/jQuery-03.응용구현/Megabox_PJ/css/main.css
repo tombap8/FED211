@@ -401,5 +401,11 @@ h3 {
     height: 16px;
     border-radius: 50%;
     background-color: #f00;
-    
+    transform: scale(0);
+    /* 크기를 안보이게 스케일 0으로 */
+    transition: transform .2s;
+}
+/* .pBar에 마우스 오버시 진행바 꼭지를 원래 크기로 scale복원하기 */
+.pBar:hover .tBar::after{
+    transform: scale(1);
 }
