@@ -378,7 +378,15 @@ h3 {
     height: 6px;
     background-color: rgba(255,255,255,.5);
     cursor: pointer;
+    transform: scaleY(.5);
+    /* 스케일을 Y축으로 반으로 줄임 */
+    transition: transform .2s;
 }
+/* .pBar에 마우스 오버시 Y축 크기 복원하기 */
+.pBar:hover {
+    transform: scaleY(1);
+}
+
 /* 시간 진행바 */
 .tBar{
     position: absolute;
