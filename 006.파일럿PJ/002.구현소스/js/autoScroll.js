@@ -1,5 +1,10 @@
 // 자동 스크롤 기능 - autoScroll_mobile.js
 
+/// 모바일 여부 코드 //
+let mob = 0;//0-모바일 아님, 1-모바일
+if($(window).width() < 800) mob = 1;
+console.log("모바일여부:"+mob);
+
 ///// 전역변수구역 ///////////////////
 // 현재 페이지 번호
 let pno = 0;
@@ -190,6 +195,9 @@ $(function () { /// jQB ////////////////////////
     // -> 이벤트를 띄어쓰기로 여러개 쓰면 여러이벤트가 적용됨!
     $(document).on("mousewheel DOMMouseScroll",
         function (e) { //e-이벤트 전달변수
+
+            // 모바일일때 기능막기
+            if(mob) return;
 
             ////// 광스크롤막기 /////////////
             if (psts) return; //돌아가!

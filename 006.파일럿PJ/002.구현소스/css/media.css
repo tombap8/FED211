@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* 파일럿 PJ 메인 페이지 미디어쿼리 - media.css */
+
+@media only screen and (max-width:800px) {
+
+    /* 1. 스크롤 생김 */
+    html,body{
+        height: auto;
+        overflow: visible;
+    }
+
+    /* 2. 배너 양쪽 따라다니는 버튼없애기 */
+    .btna{
+        display: none;
+    }
+
+    /* 3. page의 높이값을 없앰! */
+    .page {
+        height: auto;
+    }
+
+
+
+    
+} /* 미디어쿼리 800px이하  */
