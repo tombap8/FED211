@@ -399,7 +399,7 @@ $(function () { //// jQB2 //////////////////////////
             // 1. 넘겨준 x좌표를 백분율(%)로 변환!(타임바변경위해)
             // 백분율 = x좌표 / .pBar 의 가로 width값 * 100
             let percent  = x / pbar.width() * 100;
-            console.log("이동위치%:"+percent);
+            // console.log("이동위치%:"+percent);
 
             // 2. 타임바 변경하기
             $(".tBar").css({
@@ -436,6 +436,21 @@ $(function () { //// jQB2 //////////////////////////
              // e.offsetX - 현재 클릭된 마우스 포인터 x좌표값!
 
         }); ///////////// mousedown 함수 /////////////////////
+
+        /////// 마우스가 .pBar 위에서 마우스 다운상태로 움직일때 ////
+        pbar.mousemove(function(e){
+
+            // 마우스 다운상태 일때만 드래그 함수를 호출!
+            // 즉, tDrag가 true일때만 호출!
+            if(tDrag) updateBar(e.offsetX);
+
+        }); ////////////// mousemove 함수 /////////////////////////
+
+        ///// 드래그 상태 오작동 막기 위해 mouseleave일때 처리////
+        pbar.mouseleave(function(){
+            // 드래그 상태값 변경!
+            tDrag = false;
+        }); ////////////////// mouseleave 함수 /////////////////
 
 
 
