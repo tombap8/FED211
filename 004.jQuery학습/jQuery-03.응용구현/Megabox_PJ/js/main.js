@@ -363,7 +363,12 @@ $(function () { //// jQB2 //////////////////////////
 
             // 퍼센트 진행율
             let percent = ctime / ftime * 100;
-            console.log("진행율:"+percent);
+            // console.log("진행율:"+percent);
+
+            // 진행바의 width를 %값으로 변경!
+            $(".tBar").css({
+                width: percent + "%"
+            }); ///////// css /////////
 
         } /////////// if문 ////////////////////
 
