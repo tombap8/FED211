@@ -21,12 +21,12 @@ $(function () { //// jQB1 //////////////////
 
         // 0. 클릭된 li순번 구해오기
         let idx = $(this).index();
-        //console.log("순번:" + idx);
+        //// console.log("순번:" + idx);
 
 
         // 1. 하위a요소의 href값 읽어오기
         // let idnm = $("a", this).attr("href");
-        // //console.log("href값:" + idnm);
+        // //// console.log("href값:" + idnm);
 
         // 2. 아이디값에 해당하위 top값 위치구하기
         // top값을 구해서 스크롤 애니메이션 이동에 사용함!
@@ -41,7 +41,7 @@ $(function () { //// jQB1 //////////////////
         ////////////////////////////////////////////////////
         // 새로운 페이지 위치값 : 윈도우 높이값 * 페이지순번 //
         let pos = $(window).height() * idx;
-        //console.log("위치값:" + pos);
+        //// console.log("위치값:" + pos);
         ///////////////////////////////////////////////////
 
         // 3. 스크롤 애니메이션으로 페이지 이동하기
@@ -63,7 +63,7 @@ $(function () { //// jQB1 //////////////////
 
         // 6. li순번과 pno와 일치하기! /////////////////////
         pno = idx;
-        //console.log("페이지번호:" + pno);
+        //// console.log("페이지번호:" + pno);
 
 
     }); ///////////// click ///////////////
@@ -113,7 +113,7 @@ $(function () { //// jQB2 //////////////////////////
         // 하단일 경우 이동버튼 클릭시 동영상 재생!
         if (!autoOK) mvPlay();
 
-        console.log("지우기호출여부:" + autoOK);
+        // console.log("지우기호출여부:" + autoOK);
 
     }); ///////////// click /////////////
 
@@ -140,7 +140,7 @@ $(function () { //// jQB2 //////////////////////////
         if (!autoOK) mvPlay();
 
 
-        console.log("지우기호출여부:" + autoOK);
+        // console.log("지우기호출여부:" + autoOK);
 
     }); ///////////// click ////////////////
 
@@ -149,7 +149,7 @@ $(function () { //// jQB2 //////////////////////////
         // 1. 가운데 오는 동영상 정보읽기
         let center =
             "mv/" + gbx.find("img").eq(2).attr("data-mv");
-        // console.log(center);
+        // // console.log(center);
         // 2. 동영상 src 변경하기
         mv.attr("src", center);
         // 3. 동영상 재생하기
@@ -193,7 +193,7 @@ $(function () { //// jQB2 //////////////////////////
 
         // 0. 이미지 포스터 순번
         let idx = $(this).index();
-        console.log("포순:" + idx);
+        // console.log("포순:" + idx);
 
         // 0.1. 보이지 않는 0번째,4번째 포스터는 실행안되게!
         if (idx === 0 || idx === 4) return; // 돌아가!
@@ -225,7 +225,7 @@ $(function () { //// jQB2 //////////////////////////
         // -> 하나더! 이동버튼 클릭시 자동호출지우기 실행안되게
         // autoOK 상태값 0으로 변경하기!!!
         autoOK = 0; // 이래야 버튼 클릭시 호출하지 않는다!
-        console.log("지우기호출여부:" + autoOK);
+        // console.log("지우기호출여부:" + autoOK);
 
         // 3. 동영상 재생하기!
 
@@ -263,7 +263,7 @@ $(function () { //// jQB2 //////////////////////////
             let csrc = $(this).attr("src");
             // 이미지 경로 변경하기 : .png -> -1.png
             csrc = csrc.replace(".png", "-1.png");
-            console.log(csrc);
+            // console.log(csrc);
             // 이미지 실제로 변경하기
             $(this).attr("src", csrc);
         },
@@ -272,7 +272,7 @@ $(function () { //// jQB2 //////////////////////////
             let csrc = $(this).attr("src");
             // 이미지 경로 변경하기 : -1.png -> .png
             csrc = csrc.replace("-1.png", ".png");
-            console.log(csrc);
+            // console.log(csrc);
             // 이미지 실제로 변경하기
             $(this).attr("src", csrc);
         }); /////////// hover ////////////////
@@ -285,7 +285,7 @@ $(function () { //// jQB2 //////////////////////////
             // 동영상 멈춤상태 알아내기 - paused 속성으로 알아냄
             // 결과: true - 멈춤, false - 멈춤아님
             let paused_sts = mv.get(0).paused;
-            console.log("비디오가 멈췄냐?"+paused_sts);
+            // console.log("비디오가 멈췄냐?"+paused_sts);
 
             // 1. 멈춤아님(false)이면 동영상 멈추기!
             if(!paused_sts){
@@ -316,7 +316,7 @@ $(function () { //// jQB2 //////////////////////////
         // 동영상 소리 안남여부 속성 -> muted
         // muted는 상태값을 읽어오기 / 상태설정하기 모두 됨!
         let sound = mv.get(0).muted;
-        console.log("소리안나냐?"+sound);
+        // console.log("소리안나냐?"+sound);
 
         // 2. 만약 소리가 안나면 나게/ 나면 안나게하기
         mv.get(0).muted = !sound;
@@ -346,7 +346,12 @@ $(function () { //// jQB2 //////////////////////////
         let ctime = mv[0].currentTime;
         // mv[0] === mv.get(0)
         // currentTime 속성 : 비디오의 현재시간
-        console.log("현재시간:"+ctime);
+        // console.log("현재시간:"+ctime);
+
+        // 2. 비디오 전체재생시간 가져오기
+        let ftime = mv[0].duration;
+        // duration 속성: 비디오 전체시간(초)
+        console.log("전체시간:"+ftime);
 
     }); //////////////// timeupdate //////////////////
     //////////////////////////////////////////////////
