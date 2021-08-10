@@ -418,3 +418,13 @@ h3 {
 .pBar:hover .tBar::after{
     transform: scale(1);
 }
+
+/* 동영상 시간표시 */
+.ctime {
+    position: absolute;
+    bottom: 6%;
+    right: 4%;
+    font: 10px Verdana;
+    color: #fff;
+    text-shadow: 0 0 5px #777;
+}
