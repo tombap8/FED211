@@ -15,6 +15,11 @@
     .btna{
         display: none;
     }
+    /* 배너 블릿 위치이동 */
+    .bindic{
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
 
     /* 3. page의 높이값을 없앰! */
@@ -70,6 +75,19 @@
     #style .pgc>li:first-child {
         top: 50%;
     }
+    #style .pgc>li:nth-child(2) {
+        height: 100%;
+    }
+    #style img {
+        right: 0;
+    }
+    /* 스타일 글자 가로 중앙오기 */
+    .txtc .tm, 
+    .txtc .tw {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
 
     /* 9. 여자패션 페이지 이미지박스 변경 */
     #women .pgc img {
@@ -77,6 +95,21 @@
         width: auto;
         right: -30%;
     }
+
+    /* 10. 회사정보 */
+    #info {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    #info.page::before{
+        display: none;
+    }
+    
+    #info address{
+        transform: none;
+    }
+
 
     
 
