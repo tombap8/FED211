@@ -465,14 +465,36 @@ $(function () { //// jQB2 //////////////////////////
         // 1. timeupdate 이벤트: 비디오 태그가 재생 중 시간변경시 발생
         // 2. loadedmetadata 이벤트: 비디오 기본정보 로딩완료시 발생
 
+        // 전체시간 변수
+        let ftm = $(".duration");
+        // 현재시간 변수
+        let ctm = $(".current");
+
         // 비디오 기본정보 로딩완료시 전체시간 찍기 ////
         mv.on("loadedmetadata",function(){
             // 전체시간
             let ftime = mv[0].duration;
             ftime = Math.floor(ftime);// 소수점 아래 버리기
-            console.log("전체시간:"+ftime);
+            ftime = changeTime(ftime);// 시분초 변환함수 호출!
+            // console.log("전체시간=>"+ftime);
+
+            // 화면에 출력
+            ftm.text(ftime);
 
         }); ///////////// loadedmetadata 함수 //////////////
+
+        // 현재 진행시간 찍기 ////
+        mv.on("timeupdate",function(){
+            // 전체시간
+            let ctime = mv[0].currentTime;
+            ctime = Math.floor(ctime);// 소수점 아래 버리기
+            ctime = changeTime(ctime);// 시분초 변환함수 호출!
+            // console.log("전체시간=>"+ctime);
+
+            // 화면에 출력
+            ctm.text(ctime);
+
+        }); ///////////// timeupdate 함수 //////////////
 
 
 
