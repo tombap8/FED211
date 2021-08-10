@@ -241,7 +241,9 @@ $(function () { //// jQB2 //////////////////////////
         // 3-3. 동영상 재생하기
         // 동영상요소.get(0) -> 미디어컬렉션 get(0) 을 꼭사용!
         // 미디어 재생은 play() 메서드
-        mv.get(0).play();
+        mv.on("canplaythrough",function(){
+            mv.get(0).play();
+        }); ////// canplaythrough //////////
         /* 
             동영상이 로딩되어 준비되기전 play() 명령을 내리면
             에러가 발생한다! (최초에만 에러나고 play는 된다!)
@@ -252,7 +254,7 @@ $(function () { //// jQB2 //////////////////////////
             -> play() 요청은 로드요청에 의해 방해되었다!
 
             이런요청 방해를 없애려면 이벤트체크를 하나 해준다!
-            canplaythrough 이벤트
+            [ canplaythrough 이벤트 ]
             -> user agent가 media를 재생할 수 있을때 발생함!
             따라서 이 이벤트가 발생할때 play()를 하면 된다!
         */
