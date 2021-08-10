@@ -404,19 +404,27 @@ $(function () { //// jQB2 //////////////////////////
         let pbar = $(".pBar");
 
         ///// 마우스 왼쪽버튼을 누를때 : 드래그 시작! ///////////
-        pbar.mousedown(function(){
+        pbar.mousedown(function(e){ // e - 이벤트 전달함수
 
             // 마우스 다운 즉, "딸" 하는 순간 드래그 시작!
             tDrag = true; // 드래그 상태값 변경(true-드래그중)
 
+            // 드래그함수 호출!
+            updateBar(e.offsetX);
+            // e.offsetX - 현재 클릭된 마우스 포인터 x좌표값!
+
         }); ///////////// mousedown 함수 /////////////////////
 
         ///// 마우스 왼쪽버튼을 땔때 : 드래그 끝! ///////////
-        pbar.mouseup(function(){
+        pbar.mouseup(function(e){ // e - 이벤트 전달함수
 
             // 마우스 업 즉, "각" 하는 순간 드래그 끝!
             tDrag = false; // 드래그 상태값 변경(false-드래그끝)
 
+             // 드래그함수 호출!
+             updateBar(e.offsetX);
+             // e.offsetX - 현재 클릭된 마우스 포인터 x좌표값!
+             
         }); ///////////// mousedown 함수 /////////////////////
 
 
