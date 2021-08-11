@@ -82,6 +82,8 @@ h3 {
 
 /* 페이지 공통 class */
 .page {
+    position: relative;
+    /* 부모자격 */
     /* 한페이지 보이는 화면 채우기 */
     width: 100%;
     height: 100%;
@@ -531,3 +533,4 @@ css에서 가상요소 첫번째줄만 적용하는 코딩이 필요!*/
     font-size: 40px;
     line-height: 100px;
 }
+
