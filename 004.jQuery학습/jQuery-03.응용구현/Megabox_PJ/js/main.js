@@ -608,6 +608,10 @@ $(function () { //// jQB2 //////////////////////////
     // 처음에 스와이퍼 자동넘김 멈추기
     swiper.autoplay.stop();
 
+    
+    /// 4. 특별관 페이지 - photobox 플러그인 적용하기 ///
+    $("#gallery").photobox();
+
 
 
 
