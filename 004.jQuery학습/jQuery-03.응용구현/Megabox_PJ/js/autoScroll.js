@@ -354,6 +354,8 @@ function pageAction() {
     if (pno !== 0 && autoOK === 0) {
         // 1페이지가 아니고 포스터상태가 내린상태면 멈추기
         mv[0].pause();// 멈추기!
+        // 플레이 버튼 변경하기
+        $(".btnpp img").attr("src","images/vbt2.png");
     } //////// if ////////////////////
 
 
