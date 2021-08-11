@@ -51,7 +51,7 @@ $(function () { //// jQB1 //////////////////
         // -> 범용브라우저에서 사용하는 스크롤대상
         $("html,body").animate({
             scrollTop: pos + "px"
-        }, 1200, "easeOutQuint"); //// animate /////
+        }, 1200, "easeOutQuint",pageAction); //// animate /////
 
 
         // 4. 클릭된 li요소에 class="on" 넣기
@@ -571,6 +571,10 @@ $(function () { //// jQB2 //////////////////////////
 
 
     // 2-6. 리스트 원상복귀 기능
+
+
+
+
 
 
 }); ////////////// jQB2 ///////////////////////////

@@ -309,7 +309,7 @@ $(function () { /// jQB ////////////////////////
 
             $("html,body").stop().animate({
                 scrollTop: pos + "px"
-            }, 1200, "easeOutQuint");
+            }, 1200, "easeOutQuint",pageAction);
 
             ///////////////////////////////////////////////
             // 5. 페이지번호(pno)에 맞는 GNB 메뉴 변경하기 //
