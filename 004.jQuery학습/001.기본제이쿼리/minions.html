@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            background: url(images/bg2.jpg) no-repeat center/cover;
+        }
+
+        .tit {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 50%;
+            white-space: nowrap;
+            padding: 5px 30px;
+            margin: 0;
+            font-size: 5vh;
+            color: rgb(251, 255, 0);
+            text-align: center;
+            border: 5px solid red;
+            border-radius: 50px;
+            background-color: pink;
+            box-shadow: 3px 3px 3px #000;
+            text-shadow: 2px 2px 2px #000;
+
+            z-index: 999999;
+
+        }
+
+        .building {
+            position: absolute;
+            top: 10%;
+            left: 30%;
+            display: flex;
+            flex-wrap: wrap;
+            width: 40%;
+            height: 90%;
+
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background: url(images/bg.jpg) no-repeat 0/100% 100%;
+        }
+
+        .building li {
+            position: relative;
+            width: 50%;
+            height: 20%;
+            box-sizing: border-box;
+            border: 5px solid #cc2900;
+            text-align: center;
+            line-height: 16vh;
+            font-size: 7vh;
+            color: #ff0;
+            text-shadow: 2px 2px 2px #000;
+        }
+
+        .mi {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            height: 20%;
+            z-index: 999;
+        }
+
+        .mi img {
+            height: 100%;
+            animation: runMi .3s linear infinite alternate;
+        }
+
+        .msg {
+            position: absolute;
+            top: 0;
+            left: 90%;
+            min-width: 120px;
+            padding: 5px;
+            border: 2px solid #00f;
+            background-color: #fff;
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 20px;
+
+        }
+
+        @keyframes runMi {
+            from {
+                transform: rotate(-10deg);
+            }
+
+            to {
+                transform: rotate(10deg);
+            }
+        }
+
+        .mz {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            animation: runMi .1s infinite alternate;
+        }
+
+        .inj{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+        }
+
+
+        .btns {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .btns>button {
+            padding: 20px;
+            background-color: rgb(255, 182, 239);
+            font-size: 3vh;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .btns>button:hover {
+            animation: ovBtn .3s ease-in-out infinite alternate;
+        }
+
+        @keyframes ovBtn {
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        /* 키프레임 */
+
+        .heli{
+            position: absolute;
+            top: 0;
+            left: -50%;
+            z-index: 9999999;
+            width: 30%;
+
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //////////////// 로드구역 /////////////////////////
+        $(function () { // jQB ///////////////////////////
+
+            /// 1. 대상선정 변수할당 ///////////////////
+
+            // 대상1: 버튼 - .btns button
+            let btns = $(".btns button");
+
+            // 대상2: 미니언즈 - .mi
+            let mi = $(".mi");
+
+            // 대상3: 빌딩 - .building li
+            let bd = $(".building li");
+
+            // 대상4: 메시지 - .msg
+            let msg = $(".msg");
+
+            // 가로보정사이즈
+            let win5 = $(window).width() * 0.05;
+
+            // 좀비
+            let mz1 = '<img src="images/mz1.png" alt="미니언즈" class="mz">';
+            let mz2 = '<img src="images/mz2.png" alt="미니언즈" class="mz">';
+            let zom = '<img src="images/zom.png" alt="좀비들" class="mz">';
+
+            // 주사기
+            let inj = '<img src="images/inj.png" alt="주사기" class="inj">';
+
+
+
+            /// 2. 초기화 셋팅 ////////////////////////
+
+            // 2-1. 모든버튼 숨기고 첫번째만 보이기
+            btns.hide().first().show();
+
+            // 2-2. 모든 빌딩 li 순서대로 순번넣기 + 좀비넣기
+            bd.each((idx, ele) => {
+                $(ele).text(idx);
+
+                if (idx === 9)
+                    $(ele).append(mz1);
+                else if (idx === 7)
+                    $(ele).append(mz2);
+                else if (idx === 2)
+                    $(ele).append(inj);
+                else if (idx === 1)
+                    $(ele).append(zom);
+            }); //////// each /////////////
+
+            // 2-3. 모든 좀비 숨기기
+            $(".mz").hide();
+
+
+
+            // 3. 버튼별 순서대로 클릭 이벤트 함수만들기 //////////
+
+            // 3-1. '들어가기' 버튼
+            btns.first().click(function () {
+
+                // 버튼지우기
+                $(this).hide();
+
+                // 메시지지우기
+                msg.fadeOut(200);
+
+                let tg = bd.eq(8);
+                let tval = tg.offset().top;
+                let lval = tg.offset().left + win5;
+                console.log(tval + "/" + lval);
+
+                mi.animate({
+                    top: tval + "px",
+                    left: lval + "px"
+                }, 1000, () => {
+                   
+                    // 메시지보이기
+                    setTimeout(() => {
+                        msg.text("와~! 아늑하다! 옆방으로 가보자!");
+                        msg.fadeIn(200,()=>{
+                            btns.first().hide().next().show();
+                        });
+                    }, 200);
+                });
+
+
+            }); /////////// click /////////
+
+            // 3-2. '옆방으로!' 버튼
+            btns.eq(1).click(function () {
+                
+                // 버튼지우기
+                $(this).hide();
+
+                // 메시지지우기
+                msg.fadeOut(200);
+
+                let tg = bd.eq(9);
+                let tval = tg.offset().top;
+                let lval = tg.offset().left + win5;
+                console.log(tval + "/" + lval);
+
+                mi.animate({
+                    top: tval + "px",
+                    left: lval + "px"
+                }, 1000, () => {
+                    tg.find(".mz").fadeIn(1000);
+                    
+                    // 메시지보이기
+                    setTimeout(() => {
+                        msg.html("악!좀비!;;;<br> 어서피하자!");
+                        msg.css({
+                            left: "-90%"
+                        });
+                        msg.fadeIn(200,()=>{
+                            btns.eq(1).hide().next().show();
+                        });
+                    }, 1000);
+                });
+
+
+            }); /////////// click /////////
+
+            // 3-3. '윗층으로 도망가!' 버튼
+            btns.eq(2).click(function () {
+                
+                // 버튼지우기
+                $(this).hide();
+
+                // 메시지지우기
+                msg.fadeOut(200);
+
+                let tg = bd.eq(7);
+                let tval = tg.offset().top;
+                let lval = tg.offset().left + win5;
+                console.log(tval + "/" + lval);
+
+                mi.animate({
+                    top: tval + "px",
+                    left: lval + "px"
+                }, 1000, function () {
+                    
+                    // 메시지보이기
+                    setTimeout(() => {
+                        msg.text("여긴 없겠지?...");
+                        msg.css({
+                            left: "90%"
+                        });
+                        msg.fadeIn(200);
+                    }, 200);
+                    setTimeout(() => {
+                        tg.find(".mz").fadeIn(500);
+                        msg.text("악! 여기도...!");
+                        btns.eq(2).hide().next().show();
+                    }, 2000);
+                });
+
+
+            }); /////////// click /////////
+
+            // 3-4. '다시옆방으로!' 버튼
+            btns.eq(3).click(function () {
+                
+                // 버튼지우기
+                $(this).hide();
+
+                // 메시지지우기
+                msg.fadeOut(200);
+
+                let tg = bd.eq(6);
+                let tval = tg.offset().top;
+                let lval = tg.offset().left + win5;
+                console.log(tval + "/" + lval);
+
+                mi.animate({
+                    top: tval + "px",
+                    left: lval + "px"
+                }, 1000, function () {
+                    
+                    // 메시지보이기
+                    setTimeout(() => {
+                        msg.text("여긴 없겠지?...");
+                        msg.css({
+                            left: "90%"
+                        });
+                        msg.fadeIn(200);
+                    }, 200);
+                    setTimeout(() => {
+                        msg.html("그래도 무서우니까 윗층으로 가자!");
+                        btns.eq(3).hide().next().show();
+                    }, 1000);
+
+                });
+
+            }); /////////// click /////////
+
+            // 3-5. '무서우니 윗층으로!' 버튼
+            btns.eq(4).click(function () {
+                
+                // 버튼지우기
+                $(this).hide();
+
+                // 메시지지우기
+                msg.fadeOut(200);
+
+                let tg = bd.eq(4);
+                let tval = tg.offset().top;
+                let lval = tg.offset().left + win5;
+                console.log(tval + "/" + lval);
+
+                mi.animate({
+                    top: tval + "px",
+                    left: lval + "px"
+                }, 1000, function () {
+                    
+                    // 메시지보이기
+                    setTimeout(() => {
+                        msg.text("");
+                        msg.css({
+                            left: "90%"
+                        });
+                        msg.fadeIn(200,()=>{msg.text("무.");})
+                        .delay(1500).fadeIn(200,()=>{msg.text("무.서.");})
+                        .delay(1500).fadeIn(200,()=>{msg.text("무.서.워...");});
+                    }, 200);
+
+                    setTimeout(() => {
+                        bd.eq(7).find(".mz").animate({
+                            top: -tg.height() + "px"
+                        },500)
+                        .delay(1000)
+                        .animate({
+                            right: tg.width()*1.3 + "px"
+                        },2000,()=>{
+                            mi.find("img").attr("src","images/mz1.png");
+                            msg.text("나도 좀비! 어서 치료주사를!!!");
+                            btns.eq(4).hide().next().show();
+                        });
+                    }, 5000);
+
+                });
+
+
+            }); /////////// click /////////
+
+            // 3-6. '치료주사방으로!' 버튼
+            btns.eq(5).click(function () {
+                
+                // 버튼지우기
+                $(this).hide();
+
+                // 메시지지우기
+                msg.fadeOut(200);
+
+                let tg = bd.eq(2);
+                let tval = tg.offset().top;
+                let lval = tg.offset().left + win5;
+                console.log(tval + "/" + lval);
+
+                mi.animate({
+                    top: tval + "px",
+                    left: lval + "px"
+                }, 1000, function () {
+                    
+                    // 메시지보이기
+                    setTimeout(() => {
+                        tg.find(".inj")
+                        .css({
+                            transform:"rotate(-150deg)",
+                            transition: "1s",
+                            zIndex:"9999999"
+                        });
+
+                        // 치료후
+                        setTimeout(() => {
+                            tg.find(".inj").fadeOut(500,()=>{
+                                mi.find("img").attr("src","images/m2.png");
+                                msg.text("치료완료!");
+                                msg.fadeIn(200);
+                                setTimeout(() => {
+                                    msg.text("이제, 조금만 더 가면 탈출이닷!");
+                                    btns.eq(5).hide().next().show();
+                                }, 1000);
+                            });
+                        }, 1500);
+                    }, 2000);
+
+
+                });
+
+
+            }); /////////// click /////////
+
+            // 3-7. '3번방으로!' 버튼
+            btns.eq(6).click(function () {
+                
+                // 버튼지우기
+                $(this).hide();
+
+                // 메시지지우기
+                msg.fadeOut(200);
+
+                let tg = bd.eq(3);
+                let tval = tg.offset().top;
+                let lval = tg.offset().left + win5;
+                console.log(tval + "/" + lval);
+
+                mi.animate({
+                    top: tval + "px",
+                    left: lval + "px"
+                }, 1000, function () {
+                    
+                    // 메시지보이기
+                   msg.text("어서 윗층으로 가자!").fadeIn(300,()=>{
+                    btns.eq(6).hide().next().show();
+                   });
+
+                });
+
+
+            }); /////////// click /////////
+
+            // 3-8. '1번방으로!' 버튼
+            btns.eq(7).click(function () {
+                
+                // 버튼지우기
+                $(this).hide();
+
+                // 메시지지우기
+                msg.fadeOut(200);
+
+                let tg = bd.eq(1);
+                let tval = tg.offset().top;
+                let lval = tg.offset().left + win5;
+                console.log(tval + "/" + lval);
+
+                mi.animate({
+                    top: tval + "px",
+                    left: lval + "px"
+                }, 1000, function () {
+                    
+                    // 메시지보이기
+                   msg.text("이제 곧 탈출이닷!").fadeIn(300,()=>{
+                    btns.eq(7).hide().next().show();
+                   });
+
+                });
+
+
+            }); /////////// click /////////
+
+            // 3-9. '헬기를 호출!' 버튼
+            btns.last().click(function () {
+                
+                // 버튼지우기
+                $(this).hide();
+
+                // 메시지지우기
+                msg.fadeOut(200);
+
+                let tg = bd.eq(0);
+                let tval = tg.offset().top;
+                let lval = tg.offset().left + win5;
+                console.log(tval + "/" + lval);
+
+                mi.animate({
+                    top: tval + "px",
+                    left: lval + "px"
+                }, 1000, function () {
+                    
+                    // 메시지보이기
+                   msg.text("도와줘요!").fadeIn(300,
+                   ()=>{
+                        bd.eq(1).find(".mz").fadeIn(200,function(){
+                            $(this).animate({
+                                right: tg.width()*1.3 + "px"
+                            },5000);
+
+                            $(".heli").animate({
+                                left: "20%"
+                            },2000,function(){
+                                $(this).attr("src","images/heli2.png");
+                                mi.hide();
+                            })
+                            .delay(1000)
+                            .animate({
+                                left: "70%"
+                            }, 2000,function(){
+                                $(this).attr("src","images/heli3.png");
+                            })
+                            .animate({
+                                left: "100%"
+                            },5000);
+                        });
+                   });
+
+                });
+
+
+            }); /////////// click /////////
+
+
+
+        }); ///////////// jQB ///////////////////
+    </script>
+</head>
+
+<body>
+    <h1 class="tit">제이쿼리 세계에 오신것을 환영합니다!</h1>
+    <div class="btns">
+        <button>들어가기</button>
+        <button>옆방으로!</button>
+        <button>윗층으로 도망가!</button>
+        <button>다시옆방으로!</button>
+        <button>무서우니 윗층으로!</button>
+        <button>치료주사방으로!</button>
+        <button>3번방으로!</button>
+        <button>1번방으로!</button>
+        <button>헬기를 호출!</button>
+    </div>
+
+    <div class="mi">
+        <img src="images/m1.png" alt="미니언즈">
+        <span class="msg">8번방으로 어서 들어가야지!</span>
+    </div>
+
+    <img src="images/heli1.png" alt="헬기" class="heli">
+
+
+    <ul class="building">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+</body>
+
+</html>
