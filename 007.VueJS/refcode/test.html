@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="my.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ul class="todo-list list" v-if="viewType === 'list'">
+            <li v-for="(item,index) in todos"
+                v-bind:class="[substring(item.deadline, 0, 8) == getTodayDate? 'deadline':'', item.endDate? 'done':'']"
+                v-show="item.filtered!=='y'"
+                v-on:click="checkTodo(index)">
+                <i class="far" v-bind:class="item.endDate? 'fa-check-square':'fa-square'"></i>
+                <span class="title">{{ item.title }}</span>
+            <span class="stars">
+                <i v-for="n in toNumber(item.important)" class="fas fa-star"></i>
+            </span>
+            </li>
+        </ul>
+        <ul class="todo-list thumbnail" v-else>
+            <li v-for="item in todos" v-show="item.filtered!=='y'" v-bind:class="item.endDate? 'done':''">
+                <div class="label">
+                    <span class="category">{{item.category}}</span>
+                    <span class="stars">
+                        <i v-for="n in toNumber(item.important)" class="fas fa-star"></i>
+                    </span>
+                </div>
+                <img v-bind:src="item.thumbnail">
+                <p class="info">
+                    <span class="title">{{ item.title }}</span>
+                    <span class="deadline">
+                        <i class="far" v-bind:class="item.endDate? 'fa-check-square':'fa-square'"></i>
+                        until {{ formatDate(item.deadline) }}
+                        <i v-if="substring(item.deadline, 0, 8) == getTodayDate" class="fas fa-bell"></i>
+                    </span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+      "todos": [{
+                  "thumbnail": "/data/images/vegetables.jpg",
+                  "category": "shopping",
+                  "title": "Buying some healthy food",
+                  "startDate": "20180310152031",
+                  "deadline": "20180314180000",
+                  "endDate": "",
+                  "important": "3",
+                  "filtered": "n"
+            },
+            {
+                  "thumbnail": "/data/images/book.jpg",
+                  "category": "shopping",
+                  "title": "Buying some new books",
+                  "startDate": "20180310152031",
+                  "deadline": "20180317180000",
+                  "endDate": "",
+                  "important": "2",
+                  "filtered": "n"
+            },
+            {
+                  "thumbnail": "/data/images/cleaning.jpg",
+                  "category": "cleaning",
+                  "title": "Spring Cleaning",
+                  "startDate": "20180315120000",
+                  "deadline": "20180317120000",
+                  "endDate": "",
+                  "important": "5",
+                  "filtered": "n"
+            },
+            {
+                  "thumbnail": "/data/images/jogging.jpg",
+                  "category": "exercise",
+                  "title": "Jogging at the park",
+                  "startDate": "20180318093000",
+                  "deadline": "20180318130000",
+                  "endDate": "",
+                  "important": "3",
+                  "filtered": "n"
+            },
+            {
+                  "thumbnail": "/data/images/present.jpg",
+                  "category": "shopping",
+                  "title": "Buying mom's present",
+                  "startDate": "20180317120000",
+                  "deadline": "20180319120000",
+                  "endDate": "",
+                  "important": "4",
+                  "filtered": "n"
+            },
+            {
+                  "thumbnail": "/data/images/yoga.jpg",
+                  "category": "exercise",
+                  "title": "Enroll yoga class",
+                  "startDate": "20180320093000",
+                  "deadline": "20180330130000",
+                  "endDate": "",
+                  "important": "3",
+                  "filtered": "n"
+            }
+      ],
+      "category": ["shopping", "cleaning", "exercise"]
+}

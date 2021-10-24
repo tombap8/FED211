@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBoard</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <ul id="app">
+        <li v-for="(v,i) in items.data" v-if="v.경로===message">
+            {{v.제목}}
+            <ol>
+                <li v-for="(m,i) in v.메뉴" v-if="v.메뉴!=='없음'">{{m}}</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+    <script>
+
+        let cat = "shopping";
+
+
+        let app = new Vue({ 
+            el: '#app',
+            data: {
+                items: {},
+                message: cat
+            },
+            mounted: function () {
+                axios.get("./real.json").then(response => (this.items = response))
+            }
+        })
+    </script>
+</body>
+
+</html>
